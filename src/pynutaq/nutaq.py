@@ -417,8 +417,7 @@ class Nutaq(Device):
             print e
             self.set_state(DevState.FAULT)
 
-    @staticmethod
-    def read_angle(address):
+    def read_angle(self, address):
         # =IF(P6>32767;(P6-65536)/32767*180;P6/32767*180)
 
         ret = eapi.memory_write_send(self._board_state, 0x70000044, address)
@@ -431,8 +430,7 @@ class Nutaq(Device):
 
         return angle
 
-    @staticmethod
-    def write_angle(value, address):
+    def write_angle(self, value, address):
         """=ROUND(IF(
                      E6<0; E6/180*32767+65536;
                      IF(E6<=180; E6/180*32767;
@@ -463,7 +461,7 @@ class Nutaq(Device):
         milis = value * 1000 / 32767 * 1.6467602581
         return milis
 
-    def write_milivolts(self, milivolts):
+    def write_milivolts(self, milivolts, address):
         """
             This method converts the value from milivolts to bit to be written in the register usign the following
             formula:
@@ -533,7 +531,7 @@ class Nutaq(Device):
     @DebugIt()
     def get_phase_ref_in(self):
         address = 20
-        return self.read_angle(value, address)
+        return self.read_angle(address)
 
     @DebugIt()
     def set_phase_ref_in(self, phase_ref_in):
@@ -684,7 +682,6 @@ class Nutaq(Device):
 
         self.end_reading_diagnostics()
 
-    @staticmethod
     def start_reading_diagnostics(self):
         value = 1 << 16
         ret = eapi.memory_write_send(self._board_state, 0x70000048, value)
@@ -693,7 +690,6 @@ class Nutaq(Device):
         #lets continue
         ret = eapi.memory_write_send(self._board_state, 0x70000048, value)
 
-    @staticmethod
     def end_reading_diagnostics(self):
         value = 1 << 16
         ret = eapi.memory_write_send(self._board_state, 0x70000048, value)
