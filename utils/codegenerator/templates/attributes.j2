@@ -1,0 +1,46 @@
+{% extends "direct_code.j2" %}
+{% block attrs_definition %}
+{% for attribute in attributes %}
+    {{attribute.name}} = attribute(label='{{attribute.name}}',
+                                   dtype={{attribute.dtype}},
+                                   display_level='DispLevel.OPERATOR',
+                                   {% if attribute.access == 'read_write' %}
+                                   access="AttrWriteType.READ_WRITE",
+                                   {% elif attribute.access == 'read' %}
+                                   access="AttrWriteType.READ",
+                                   {% endif %}
+                                   {% if attribute.type == 'mv' %}
+                                   unit='mV',
+                                   {% elif attribute.type == 'angle' %}
+                                   unit='degrees',
+                                   {% else %}
+                                   unit='',
+                                   {% endif %}
+                                   format='6.4f',
+                                   min_value={{attribute.min_value}}, max_value={{attribute.max_value}},
+                                   fget="get_{{attribute.name}}",
+                                   fset="set_{{attribute.name}}",
+                                   doc=""
+                                   )
+
+{% endfor %}
+{% endblock %}
+{% block diag_attrs_definition %}
+{% for attr in diags_attributes %}
+    {{attr.name}} = attribute(label='{{attr.name}}',
+                                   dtype={{attr.dtype}},
+                                   display_level='DispLevel.OPERATOR',
+                                   access="AttrWriteType.READ",
+                                   {% if attr.type == 'mv' %}
+                                   unit='mV',
+                                   {% elif attr.type == 'angle' %}
+                                   unit='degrees',
+                                   {% else %}
+                                   unit='',
+                                   {% endif %}
+                                   format='6.4f',
+                                   doc=""
+                                   )
+
+{% endfor %}
+{% endblock %}

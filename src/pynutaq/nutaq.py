@@ -15,6 +15,7 @@ from nutaqattributes import attributes_dict
 from nutaqdefs import *
 from perseusdefs import *
 from perseusloops import PerseusLoops
+from perseussimulated import PerseusSimulated
 
 
 class Nutaq(Device):
@@ -85,6 +86,7 @@ class Nutaq(Device):
     phase_spare = attributes_dict['phase_spare']
 
     ipAddress = device_property(dtype=str)
+    isSimulated = device_property(dtype=bool, default_value=False)
 
     # def __init__(self):
     #
@@ -115,7 +117,10 @@ class Nutaq(Device):
 
     def init_device(self):
         try:
-            self.perseus = PerseusLoops()
+            if self.isSimulated:
+                self.perseus = PerseusSimulated()
+            else:
+                self.perseus = PerseusLoops()
             self.set_state(DevState.ON)
         except Exception, e:
             print e

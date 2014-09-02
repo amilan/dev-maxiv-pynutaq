@@ -1,0 +1,74 @@
+{% extends "attributes.j2" %}
+{% block methods %}
+{% for attribute in attributes %}
+{% if attribute.type == "mv" %}
+    @DebugIt()
+    def get_{{attribute.name}}(self):
+        return self.read_milivolts({{attribute.address}})
+
+    {% if attribute.read_write == "read_write" %}
+    @DebugIt()
+    def set_{{attribute.name}}(self, {{attribute.name}}):
+        self.write_milivolts({{attribute.name}}, {{attribute.address}})
+    {% endif %}
+
+{% elif attribute.type == "angle" %}
+    @DebugIt()
+    def get_{{attribute.name}}(self):
+        return self.read_angle({{attribute.address}})
+
+    {% if attribute.read_write == "read_write" %}
+    @DebugIt()
+    def set_{{attribute.name}}(self, {{attribute.name}}):
+        self.write_angle({{attribute.name}}, {{attribute.address}})
+    {% endif %}
+
+{% elif attribute.type == "direct" %}
+    @DebugIt()
+    def get_{{attribute.name}}(self):
+        return self.read_direct({{attribute.address}})
+
+    {% if attribute.read_write == "read_write" %}
+    @DebugIt()
+    def set_{{attribute.name}}(self, {{attribute.name}}):
+        self.write_direct({{attribute.name}}, {{attribute.address}})
+    {% endif %}
+
+{% else %}
+    @DebugIt()
+    def get_{{attribute.name}}(self):
+        #@todo: insert here your code ...
+        pass
+
+    {% if attribute.read_write == "read_write" %}
+    @DebugIt()
+    def set_{{attribute.name}}(self, {{attribute.name}}):
+        #@todo: insert here your code ...
+        pass
+    {% endif %}
+
+{% endif %}
+{% endfor %}
+{% endblock %}
+
+{% block diag_methods %}
+{% for attribute in diags_attributes %}
+    @DebugIt()
+    def read_{{attribute.name}}(self):
+        return self._{{attribute.name}}
+
+{% endfor %}
+    @command
+    def read_diagnostics(self):
+        self.start_reading_diagnostics()
+
+{% for attribute in diags_attributes %}
+        {% if attribute.type == 'mv' %}
+        self._{{attribute.name}} = self.read_diag_milivolts({{attribute.address}})
+        {% elif attribute.type == 'angle' %}
+        self._{{attribute.name}} = self.read_diag_angle({{attribute.address}})
+        {% elif attribute.type == 'bool' %}
+        self._{{attribute.name}} = self.read_direct({{attribute.address}})
+        {% endif %}
+{% endfor %}
+{% endblock %}

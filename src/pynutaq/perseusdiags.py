@@ -7,32 +7,18 @@ from mi125 import Mi125
 from adp_exception import *
 from perseusdecorators import ensure_read_method, ensure_write_method
 
-MO1000_BOARD_NUMBER = 1
-MI125_BOARD_NUMBER = 2
+MI125_BOARD_NUMBER = 1
 
-class PerseusLoops(object):
+class PerseusDiags(object):
 
     def __init__(self):
             eapi.eapi_init()
             self._board_state = eapi.connection_state()
             self.connect()
 
-            self.custom_write(4, 1)
-
-            print "MO1000 1 initialization..."
-            self.mo1000 = Mo1000(self._board_state, MO1000_BOARD_NUMBER)
-
             print "Mi125 2 initialization..."
             self.mi125 = Mi125(self._board_state, MI125_BOARD_NUMBER)
             print "DONE"
-
-            self.mo1000.enable_dac_outputs()
-
-            print "Remove reset MI125 - MO1000 intercore fifo"
-            self.custom_write(4, 0)
-            print "DONE"
-
-            self.mo1000.display_dac_error()
 
             self.configure_gpio_inputs_outputs()
 
@@ -44,7 +30,7 @@ class PerseusLoops(object):
 
     @ensure_write_method
     def connect(self):
-        eapi.connect_cce(PERSEUS_LOOP_IP, self._board_state)
+        eapi.connect_cce(PERSEUS_DIAG_IP, self._board_state)
 
     @ensure_write_method
     def custom_write(self, register, data):
@@ -76,7 +62,7 @@ class PerseusLoops(object):
         for value in values:
             self.custom_write(register, value)
 
-    def configure_loops_registers(self):
+    def configure_diags_registers(self):
         print "configuring Loops Board registers"
         values = [0x00000000, 0x00020001, 0x00040000, 0x00060000, 0x00080000, 0x000A0000,
                   0x000C3FFF, 0x000E0000, 0x00100000, 0x00120000, 0x00140000, 0x00160000,

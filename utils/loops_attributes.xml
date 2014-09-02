@@ -1,0 +1,1437 @@
+<?xml version="1.0"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:o="urn:schemas-microsoft-com:office:office"
+ xmlns:x="urn:schemas-microsoft-com:office:excel"
+ xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:html="http://www.w3.org/TR/REC-html40">
+ <DocumentProperties xmlns="urn:schemas-microsoft-com:office:office">
+  <Author>Antonio Milán Otero</Author>
+  <LastAuthor>Antonio Milán Otero</LastAuthor>
+  <Created>2014-09-02T14:24:41Z</Created>
+  <LastSaved>2014-09-02T16:01:45Z</LastSaved>
+  <Company>MAX IV Laboratory</Company>
+  <Version>14.0</Version>
+ </DocumentProperties>
+ <OfficeDocumentSettings xmlns="urn:schemas-microsoft-com:office:office">
+  <AllowPNG/>
+ </OfficeDocumentSettings>
+ <ExcelWorkbook xmlns="urn:schemas-microsoft-com:office:excel">
+  <WindowHeight>11720</WindowHeight>
+  <WindowWidth>14640</WindowWidth>
+  <WindowTopX>11660</WindowTopX>
+  <WindowTopY>0</WindowTopY>
+  <ProtectStructure>False</ProtectStructure>
+  <ProtectWindows>False</ProtectWindows>
+ </ExcelWorkbook>
+ <Styles>
+  <Style ss:ID="Default" ss:Name="Normal">
+   <Alignment ss:Vertical="Bottom"/>
+   <Borders/>
+   <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="12" ss:Color="#000000"/>
+   <Interior/>
+   <NumberFormat/>
+   <Protection/>
+  </Style>
+  <Style ss:ID="s174">
+   <Alignment ss:Vertical="Bottom" ss:WrapText="1"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="2"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <Font ss:FontName="Calibri" ss:Size="12"/>
+   <Interior/>
+  </Style>
+  <Style ss:ID="s175">
+   <Alignment ss:Vertical="Bottom" ss:WrapText="1"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <Font ss:FontName="Calibri" ss:Size="12"/>
+   <Interior/>
+  </Style>
+  <Style ss:ID="s178">
+   <Alignment ss:Vertical="Bottom" ss:WrapText="1"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="2"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <Font x:Family="Swiss"/>
+   <Interior/>
+  </Style>
+  <Style ss:ID="s179">
+   <Alignment ss:Vertical="Bottom" ss:WrapText="1"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <Font x:Family="Swiss"/>
+   <Interior/>
+  </Style>
+  <Style ss:ID="s181">
+   <Alignment ss:Vertical="Bottom" ss:WrapText="1"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#000000"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="2"
+     ss:Color="#000000"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#000000"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="2"
+     ss:Color="#000000"/>
+   </Borders>
+   <Font x:Family="Swiss"/>
+   <Interior/>
+  </Style>
+  <Style ss:ID="s182">
+   <Alignment ss:Vertical="Bottom" ss:WrapText="1"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#000000"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#000000"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#000000"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="2"
+     ss:Color="#000000"/>
+   </Borders>
+   <Font x:Family="Swiss"/>
+   <Interior/>
+  </Style>
+  <Style ss:ID="s183">
+   <Alignment ss:Vertical="Bottom" ss:WrapText="1"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#000000"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="2"
+     ss:Color="#000000"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#000000"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#000000"/>
+   </Borders>
+   <Font x:Family="Swiss"/>
+   <Interior/>
+  </Style>
+  <Style ss:ID="s184">
+   <Alignment ss:Vertical="Bottom" ss:WrapText="1"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#000000"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#000000"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#000000"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#000000"/>
+   </Borders>
+   <Font x:Family="Swiss"/>
+   <Interior/>
+  </Style>
+  <Style ss:ID="s186">
+   <Alignment ss:Vertical="Bottom" ss:WrapText="1"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="2"
+     ss:Color="#000000"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="2"
+     ss:Color="#000000"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#000000"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#000000"/>
+   </Borders>
+   <Font x:Family="Swiss"/>
+   <Interior/>
+  </Style>
+  <Style ss:ID="s187">
+   <Alignment ss:Vertical="Bottom" ss:WrapText="1"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="2"
+     ss:Color="#000000"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#000000"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#000000"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#000000"/>
+   </Borders>
+   <Font x:Family="Swiss"/>
+   <Interior/>
+  </Style>
+  <Style ss:ID="s189">
+   <Alignment ss:Vertical="Bottom" ss:WrapText="1"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#000000"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#000000"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#000000"/>
+   </Borders>
+   <Font x:Family="Swiss"/>
+   <Interior/>
+  </Style>
+  <Style ss:ID="s191">
+   <Alignment ss:Vertical="Bottom" ss:WrapText="1"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="2"
+     ss:Color="#000000"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#000000"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#000000"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#000000"/>
+   </Borders>
+   <Font ss:FontName="Calibri" ss:Size="12"/>
+   <Interior/>
+  </Style>
+  <Style ss:ID="s192">
+   <Alignment ss:Vertical="Bottom" ss:WrapText="1"/>
+   <Borders/>
+   <Font x:Family="Swiss"/>
+   <Interior/>
+  </Style>
+  <Style ss:ID="s193">
+   <Alignment ss:Vertical="Bottom" ss:WrapText="1"/>
+   <Borders/>
+   <Font ss:FontName="Calibri" ss:Size="12"/>
+   <Interior/>
+  </Style>
+  <Style ss:ID="s194">
+   <Alignment ss:Vertical="Bottom" ss:WrapText="1"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#000000"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#000000"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#000000"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="2"
+     ss:Color="#000000"/>
+   </Borders>
+   <Font ss:FontName="Calibri" ss:Size="12"/>
+   <Interior/>
+  </Style>
+  <Style ss:ID="s195">
+   <Alignment ss:Vertical="Bottom" ss:WrapText="1"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#000000"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="2"
+     ss:Color="#000000"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#000000"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#000000"/>
+   </Borders>
+   <Font ss:FontName="Calibri" ss:Size="12"/>
+   <Interior/>
+  </Style>
+  <Style ss:ID="s196">
+   <Alignment ss:Vertical="Bottom" ss:WrapText="1"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#000000"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#000000"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#000000"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#000000"/>
+   </Borders>
+   <Font ss:FontName="Calibri" ss:Size="12"/>
+   <Interior/>
+  </Style>
+  <Style ss:ID="s199">
+   <Alignment ss:Vertical="Bottom" ss:WrapText="1"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="2"
+     ss:Color="#000000"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="2"
+     ss:Color="#000000"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#000000"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#000000"/>
+   </Borders>
+   <Font ss:FontName="Calibri" ss:Size="12"/>
+   <Interior/>
+  </Style>
+  <Style ss:ID="s201">
+   <Alignment ss:Vertical="Bottom" ss:WrapText="1"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#000000"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="2"
+     ss:Color="#000000"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#000000"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="2"
+     ss:Color="#000000"/>
+   </Borders>
+   <Font ss:FontName="Calibri" ss:Size="12"/>
+   <Interior/>
+  </Style>
+  <Style ss:ID="s206">
+   <Alignment ss:Vertical="Bottom" ss:WrapText="1"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#000000"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="2"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#000000"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="2"/>
+   </Borders>
+   <Font x:Family="Swiss"/>
+   <Interior/>
+  </Style>
+  <Style ss:ID="s207">
+   <Alignment ss:Vertical="Bottom" ss:WrapText="1"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#000000"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#000000"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#000000"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="2"/>
+   </Borders>
+   <Font x:Family="Swiss"/>
+   <Interior/>
+  </Style>
+  <Style ss:ID="s209">
+   <Alignment ss:Vertical="Bottom" ss:WrapText="1"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#000000"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="2"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#000000"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#000000"/>
+   </Borders>
+   <Font x:Family="Swiss"/>
+   <Interior/>
+  </Style>
+  <Style ss:ID="s216">
+   <Alignment ss:Vertical="Bottom" ss:WrapText="1"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#000000"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="2"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="2"/>
+   </Borders>
+   <Font ss:FontName="Calibri" ss:Size="12"/>
+   <Interior/>
+  </Style>
+  <Style ss:ID="s217">
+   <Alignment ss:Vertical="Bottom" ss:WrapText="1"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="2"/>
+   </Borders>
+   <Font ss:FontName="Calibri" ss:Size="12"/>
+   <Interior/>
+  </Style>
+  <Style ss:ID="s219">
+   <Alignment ss:Vertical="Bottom" ss:WrapText="1"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#000000"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="2"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#000000"/>
+   </Borders>
+   <Font ss:FontName="Calibri" ss:Size="12"/>
+   <Interior/>
+  </Style>
+  <Style ss:ID="s221">
+   <Alignment ss:Vertical="Bottom" ss:WrapText="1"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="2"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="2"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#000000"/>
+   </Borders>
+   <Font ss:FontName="Calibri" ss:Size="12"/>
+   <Interior/>
+  </Style>
+  <Style ss:ID="s222">
+   <Alignment ss:Vertical="Bottom" ss:WrapText="1"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="2"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <Font ss:FontName="Calibri" ss:Size="12"/>
+   <Interior/>
+  </Style>
+  <Style ss:ID="s256">
+   <Alignment ss:Vertical="Bottom" ss:WrapText="1"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="2"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="2"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#000000"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#000000"/>
+   </Borders>
+   <Font x:Family="Swiss"/>
+   <Interior/>
+  </Style>
+  <Style ss:ID="s257">
+   <Alignment ss:Vertical="Bottom" ss:WrapText="1"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="2"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#000000"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#000000"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#000000"/>
+   </Borders>
+   <Font x:Family="Swiss"/>
+   <Interior/>
+  </Style>
+  <Style ss:ID="s258">
+   <Alignment ss:Vertical="Bottom" ss:WrapText="1"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="2"
+     ss:Color="#000000"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="2"
+     ss:Color="#000000"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#000000"/>
+   </Borders>
+   <Font x:Family="Swiss"/>
+   <Interior/>
+  </Style>
+  <Style ss:ID="s263">
+   <Alignment ss:Vertical="Bottom" ss:WrapText="1"/>
+   <Borders>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <Font ss:FontName="Calibri" ss:Size="12"/>
+   <Interior/>
+  </Style>
+  <Style ss:ID="s264">
+   <Alignment ss:Vertical="Bottom" ss:WrapText="1"/>
+   <Borders>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <Font x:Family="Swiss"/>
+   <Interior/>
+  </Style>
+  <Style ss:ID="s265">
+   <Alignment ss:Vertical="Bottom" ss:WrapText="1"/>
+   <Borders>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <Font ss:FontName="Calibri" ss:Size="12"/>
+   <Interior/>
+  </Style>
+ </Styles>
+ <Worksheet ss:Name="loops_attributes.csv">
+  <Table ss:ExpandedColumnCount="7" ss:ExpandedRowCount="107" x:FullColumns="1"
+   x:FullRows="1" ss:DefaultColumnWidth="65" ss:DefaultRowHeight="15">
+   <Column ss:Width="47"/>
+   <Column ss:AutoFitWidth="0" ss:Width="135"/>
+   <Column ss:AutoFitWidth="0" ss:Width="70"/>
+   <Row>
+    <Cell><Data ss:Type="String">Address</Data></Cell>
+    <Cell><Data ss:Type="String">Name</Data></Cell>
+    <Cell><Data ss:Type="String">read_write</Data></Cell>
+    <Cell><Data ss:Type="String">attr_type</Data></Cell>
+    <Cell><Data ss:Type="String">llrf_type</Data></Cell>
+    <Cell><Data ss:Type="String">Min</Data></Cell>
+    <Cell><Data ss:Type="String">Max</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s174"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s175"><Data ss:Type="String">kp A</Data></Cell>
+    <Cell ss:StyleID="s175"><Data ss:Type="String">read_write</Data></Cell>
+    <Cell ss:StyleID="s263"><Data ss:Type="String">float</Data></Cell>
+    <Cell ss:StyleID="s263"><Data ss:Type="String">direct</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">10</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s174"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s175"><Data ss:Type="String">ki A</Data></Cell>
+    <Cell ss:StyleID="s175"><Data ss:Type="String">read_write</Data></Cell>
+    <Cell ss:StyleID="s263"><Data ss:Type="String">float</Data></Cell>
+    <Cell ss:StyleID="s263"><Data ss:Type="String">direct</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">32767</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s178"><Data ss:Type="Number">2</Data></Cell>
+    <Cell ss:StyleID="s179"><Data ss:Type="String">Phase Shift Cav</Data></Cell>
+    <Cell ss:StyleID="s175"><Data ss:Type="String">read_write</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">float</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">angle</Data></Cell>
+    <Cell><Data ss:Type="Number">-180</Data></Cell>
+    <Cell><Data ss:Type="Number">360</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s178"><Data ss:Type="Number">3</Data></Cell>
+    <Cell ss:StyleID="s179"><Data ss:Type="String">Phase Shift FwCav</Data></Cell>
+    <Cell ss:StyleID="s175"><Data ss:Type="String">read_write</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">float</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">angle</Data></Cell>
+    <Cell><Data ss:Type="Number">-180</Data></Cell>
+    <Cell><Data ss:Type="Number">360</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s178"><Data ss:Type="Number">4</Data></Cell>
+    <Cell ss:StyleID="s179"><Data ss:Type="String">Phase Shift FwTet1</Data></Cell>
+    <Cell ss:StyleID="s175"><Data ss:Type="String">read_write</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">float</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">angle</Data></Cell>
+    <Cell><Data ss:Type="Number">-180</Data></Cell>
+    <Cell><Data ss:Type="Number">360</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s178"><Data ss:Type="Number">5</Data></Cell>
+    <Cell ss:StyleID="s179"><Data ss:Type="String">Phase Shift FwTet2</Data></Cell>
+    <Cell ss:StyleID="s175"><Data ss:Type="String">read_write</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">float</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">angle</Data></Cell>
+    <Cell><Data ss:Type="Number">-180</Data></Cell>
+    <Cell><Data ss:Type="Number">360</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s174"><Data ss:Type="Number">6</Data></Cell>
+    <Cell ss:StyleID="s175"><Data ss:Type="String">PILimit A</Data></Cell>
+    <Cell ss:StyleID="s175"><Data ss:Type="String">read_write</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">float</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">mv</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">1000</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s174"><Data ss:Type="Number">7</Data></Cell>
+    <Cell ss:StyleID="s175"><Data ss:Type="String"># samples to average</Data></Cell>
+    <Cell ss:StyleID="s175"><Data ss:Type="String">read_write</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">int</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">direct</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">7</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s174"><Data ss:Type="Number">8</Data></Cell>
+    <Cell ss:StyleID="s175"><Data ss:Type="String">filter stages</Data></Cell>
+    <Cell ss:StyleID="s175"><Data ss:Type="String">read_write</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">int</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">direct</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">3</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s178"><Data ss:Type="Number">9</Data></Cell>
+    <Cell ss:StyleID="s179"><Data ss:Type="String">Phase Shift FwCircIn</Data></Cell>
+    <Cell ss:StyleID="s175"><Data ss:Type="String">read_write</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">float</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">angle</Data></Cell>
+    <Cell><Data ss:Type="Number">-180</Data></Cell>
+    <Cell><Data ss:Type="Number">360</Data></Cell>
+   </Row>
+   <Row ss:Height="25">
+    <Cell ss:StyleID="s178"><Data ss:Type="Number">10</Data></Cell>
+    <Cell ss:StyleID="s179"><Data ss:Type="String">Phase Shift Control Signal Tet1</Data></Cell>
+    <Cell ss:StyleID="s175"><Data ss:Type="String">read_write</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">float</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">angle</Data></Cell>
+    <Cell><Data ss:Type="Number">-180</Data></Cell>
+    <Cell><Data ss:Type="Number">360</Data></Cell>
+   </Row>
+   <Row ss:Height="25">
+    <Cell ss:StyleID="s178"><Data ss:Type="Number">11</Data></Cell>
+    <Cell ss:StyleID="s179"><Data ss:Type="String">Phase Shift Control Signal Tet2</Data></Cell>
+    <Cell ss:StyleID="s175"><Data ss:Type="String">read_write</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">float</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">angle</Data></Cell>
+    <Cell><Data ss:Type="Number">-180</Data></Cell>
+    <Cell><Data ss:Type="Number">360</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s174"><Data ss:Type="Number">13</Data></Cell>
+    <Cell ss:StyleID="s179"><Data ss:Type="String">Gain Tetrode1</Data></Cell>
+    <Cell ss:StyleID="s175"><Data ss:Type="String">read_write</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">float</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">special</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">0.1</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s178"><Data ss:Type="Number">14</Data></Cell>
+    <Cell ss:StyleID="s179"><Data ss:Type="String">Gain Tetrode2</Data></Cell>
+    <Cell ss:StyleID="s175"><Data ss:Type="String">read_write</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">float</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">special</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">0.1</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s178"><Data ss:Type="Number">15</Data></Cell>
+    <Cell ss:StyleID="s179"><Data ss:Type="String">Automatic Startup Enable</Data></Cell>
+    <Cell ss:StyleID="s175"><Data ss:Type="String">read_write</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">bool</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">direct</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s178"><Data ss:Type="Number">16</Data></Cell>
+    <Cell ss:StyleID="s179"><Data ss:Type="String">Command Start</Data></Cell>
+    <Cell ss:StyleID="s175"><Data ss:Type="String">read_write</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">int</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">direct</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">7</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s178"><Data ss:Type="Number">19</Data></Cell>
+    <Cell ss:StyleID="s179"><Data ss:Type="String">AmpRefIn</Data></Cell>
+    <Cell ss:StyleID="s175"><Data ss:Type="String">read_write</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">float</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">mv</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">1000</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s178"><Data ss:Type="Number">20</Data></Cell>
+    <Cell ss:StyleID="s179"><Data ss:Type="String">PhRefIn</Data></Cell>
+    <Cell ss:StyleID="s175"><Data ss:Type="String">read_write</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">float</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">angle</Data></Cell>
+    <Cell><Data ss:Type="Number">-180</Data></Cell>
+    <Cell><Data ss:Type="Number">360</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s178"><Data ss:Type="Number">21</Data></Cell>
+    <Cell ss:StyleID="s179"><Data ss:Type="String">ampRefMin</Data></Cell>
+    <Cell ss:StyleID="s175"><Data ss:Type="String">read_write</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">float</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">mv</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">1000</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s178"><Data ss:Type="Number">22</Data></Cell>
+    <Cell ss:StyleID="s179"><Data ss:Type="String">PhRefMin</Data></Cell>
+    <Cell ss:StyleID="s175"><Data ss:Type="String">read_write</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">float</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">angle</Data></Cell>
+    <Cell><Data ss:Type="Number">-180</Data></Cell>
+    <Cell><Data ss:Type="Number">360</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s178"><Data ss:Type="Number">23</Data></Cell>
+    <Cell ss:StyleID="s179"><Data ss:Type="String">Phase increase rate</Data></Cell>
+    <Cell ss:StyleID="s175"><Data ss:Type="String">read_write</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">int</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">direct</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">7</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s174"><Data ss:Type="Number">25</Data></Cell>
+    <Cell ss:StyleID="s175"><Data ss:Type="String">Gain OL = K · CL</Data></Cell>
+    <Cell ss:StyleID="s175"><Data ss:Type="String">read_write</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">float</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">special</Data></Cell>
+    <Cell ss:StyleID="s265"><Data ss:Type="String">0.5</Data></Cell>
+    <Cell><Data ss:Type="Number">2</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s174"><Data ss:Type="Number">28</Data></Cell>
+    <Cell ss:StyleID="s175"><Data ss:Type="String">Spare GPIO Output 01</Data></Cell>
+    <Cell ss:StyleID="s175"><Data ss:Type="String">read_write</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">bool</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">direct</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s174"><Data ss:Type="Number">29</Data></Cell>
+    <Cell ss:StyleID="s175"><Data ss:Type="String">Spare GPIO Output 02</Data></Cell>
+    <Cell ss:StyleID="s175"><Data ss:Type="String">read_write</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">bool</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">direct</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s174"><Data ss:Type="Number">30</Data></Cell>
+    <Cell ss:StyleID="s175"><Data ss:Type="String">Spare GPIO Output 03</Data></Cell>
+    <Cell ss:StyleID="s175"><Data ss:Type="String">read_write</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">bool</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">direct</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s174"><Data ss:Type="Number">31</Data></Cell>
+    <Cell ss:StyleID="s175"><Data ss:Type="String">Spare GPIO Output 04</Data></Cell>
+    <Cell ss:StyleID="s175"><Data ss:Type="String">read_write</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">bool</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">direct</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+   </Row>
+   <Row ss:Height="16">
+    <Cell ss:StyleID="s178"><Data ss:Type="Number">32</Data></Cell>
+    <Cell ss:StyleID="s179"><Data ss:Type="String">FDL Sw Trigger</Data></Cell>
+    <Cell ss:StyleID="s175"><Data ss:Type="String">read_write</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">bool</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">direct</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s181"><Data ss:Type="Number">50</Data></Cell>
+    <Cell ss:StyleID="s182"><Data ss:Type="String">Ramping Enable</Data></Cell>
+    <Cell ss:StyleID="s175"><Data ss:Type="String">read_write</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">bool</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">direct</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s183"><Data ss:Type="Number">51</Data></Cell>
+    <Cell ss:StyleID="s184"><Data ss:Type="String">Ramp Up</Data></Cell>
+    <Cell ss:StyleID="s175"><Data ss:Type="String">read_write</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">bool</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">direct</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s183"><Data ss:Type="Number">52</Data></Cell>
+    <Cell ss:StyleID="s184"><Data ss:Type="String">Ramp Down</Data></Cell>
+    <Cell ss:StyleID="s175"><Data ss:Type="String">read_write</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">bool</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">direct</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s183"><Data ss:Type="Number">53</Data></Cell>
+    <Cell ss:StyleID="s184"><Data ss:Type="String">I Ramp Init</Data></Cell>
+    <Cell ss:StyleID="s175"><Data ss:Type="String">read_write</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">float</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">mv</Data></Cell>
+    <Cell><Data ss:Type="Number">-1000</Data></Cell>
+    <Cell><Data ss:Type="Number">1000</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s183"><Data ss:Type="Number">54</Data></Cell>
+    <Cell ss:StyleID="s184"><Data ss:Type="String">Q Ramp Init</Data></Cell>
+    <Cell ss:StyleID="s175"><Data ss:Type="String">read_write</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">float</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">mv</Data></Cell>
+    <Cell><Data ss:Type="Number">-1000</Data></Cell>
+    <Cell><Data ss:Type="Number">1000</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s183"><Data ss:Type="Number">55</Data></Cell>
+    <Cell ss:StyleID="s184"><Data ss:Type="String">I Ramp End</Data></Cell>
+    <Cell ss:StyleID="s175"><Data ss:Type="String">read_write</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">float</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">mv</Data></Cell>
+    <Cell><Data ss:Type="Number">-1000</Data></Cell>
+    <Cell><Data ss:Type="Number">1000</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s183"><Data ss:Type="Number">56</Data></Cell>
+    <Cell ss:StyleID="s184"><Data ss:Type="String">Q Ramp End</Data></Cell>
+    <Cell ss:StyleID="s175"><Data ss:Type="String">read_write</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">float</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">mv</Data></Cell>
+    <Cell><Data ss:Type="Number">-1000</Data></Cell>
+    <Cell><Data ss:Type="Number">1000</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s183"><Data ss:Type="Number">57</Data></Cell>
+    <Cell ss:StyleID="s184"><Data ss:Type="String">SlopeRampUp I</Data></Cell>
+    <Cell ss:StyleID="s175"><Data ss:Type="String">read_write</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">float</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">mv</Data></Cell>
+    <Cell><Data ss:Type="Number">-1000</Data></Cell>
+    <Cell><Data ss:Type="Number">1000</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s183"><Data ss:Type="Number">58</Data></Cell>
+    <Cell ss:StyleID="s184"><Data ss:Type="String">SlopeRampUp Q</Data></Cell>
+    <Cell ss:StyleID="s175"><Data ss:Type="String">read_write</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">float</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">mv</Data></Cell>
+    <Cell><Data ss:Type="Number">-1000</Data></Cell>
+    <Cell><Data ss:Type="Number">1000</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s183"><Data ss:Type="Number">59</Data></Cell>
+    <Cell ss:StyleID="s184"><Data ss:Type="String">SlopeRampDown I</Data></Cell>
+    <Cell ss:StyleID="s175"><Data ss:Type="String">read_write</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">float</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">mv</Data></Cell>
+    <Cell><Data ss:Type="Number">-1000</Data></Cell>
+    <Cell><Data ss:Type="Number">1000</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s183"><Data ss:Type="Number">60</Data></Cell>
+    <Cell ss:StyleID="s184"><Data ss:Type="String">SlopeRampDown Q</Data></Cell>
+    <Cell ss:StyleID="s175"><Data ss:Type="String">read_write</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">float</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">mv</Data></Cell>
+    <Cell><Data ss:Type="Number">-1000</Data></Cell>
+    <Cell><Data ss:Type="Number">1000</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s183"><Data ss:Type="Number">61</Data></Cell>
+    <Cell ss:StyleID="s184"><Data ss:Type="String">Amp Ramp Init</Data></Cell>
+    <Cell ss:StyleID="s175"><Data ss:Type="String">read_write</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">float</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">mv</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">1000</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s183"><Data ss:Type="Number">62</Data></Cell>
+    <Cell ss:StyleID="s184"><Data ss:Type="String">Amp Ramp end</Data></Cell>
+    <Cell ss:StyleID="s175"><Data ss:Type="String">read_write</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">float</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">mv</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">1000</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s183"><Data ss:Type="Number">63</Data></Cell>
+    <Cell ss:StyleID="s184"><Data ss:Type="String">Phase Ramp Init</Data></Cell>
+    <Cell ss:StyleID="s175"><Data ss:Type="String">read_write</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">float</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">angle</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">360</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s183"><Data ss:Type="Number">64</Data></Cell>
+    <Cell ss:StyleID="s184"><Data ss:Type="String">Phase Ramp End</Data></Cell>
+    <Cell ss:StyleID="s175"><Data ss:Type="String">read_write</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">float</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">angle</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">360</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s183"><Data ss:Type="Number">65</Data></Cell>
+    <Cell ss:StyleID="s184"><Data ss:Type="String">AmpRampUPSlope</Data></Cell>
+    <Cell ss:StyleID="s175"><Data ss:Type="String">read_write</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">float</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">mv</Data></Cell>
+    <Cell><Data ss:Type="Number">-1000</Data></Cell>
+    <Cell><Data ss:Type="Number">1000</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s183"><Data ss:Type="Number">66</Data></Cell>
+    <Cell ss:StyleID="s184"><Data ss:Type="String">AmpRampDownSlope</Data></Cell>
+    <Cell ss:StyleID="s175"><Data ss:Type="String">read_write</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">float</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">mv</Data></Cell>
+    <Cell><Data ss:Type="Number">-1000</Data></Cell>
+    <Cell><Data ss:Type="Number">1000</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s183"><Data ss:Type="Number">67</Data></Cell>
+    <Cell ss:StyleID="s184"><Data ss:Type="String">PhRampUpSlope</Data></Cell>
+    <Cell ss:StyleID="s175"><Data ss:Type="String">read_write</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">float</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">angle</Data></Cell>
+    <Cell><Data ss:Type="Number">-180</Data></Cell>
+    <Cell><Data ss:Type="Number">360</Data></Cell>
+   </Row>
+   <Row ss:Height="16">
+    <Cell ss:StyleID="s186"><Data ss:Type="Number">68</Data></Cell>
+    <Cell ss:StyleID="s187"><Data ss:Type="String">PhRampDownSlope</Data></Cell>
+    <Cell ss:StyleID="s175"><Data ss:Type="String">read_write</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">float</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">angle</Data></Cell>
+    <Cell><Data ss:Type="Number">-180</Data></Cell>
+    <Cell><Data ss:Type="Number">360</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s178"><Data ss:Type="Number">100</Data></Cell>
+    <Cell ss:StyleID="s179"><Data ss:Type="String">loop enable A</Data></Cell>
+    <Cell ss:StyleID="s175"><Data ss:Type="String">read_write</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">bool</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">direct</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s195"><Data ss:Type="Number">101</Data></Cell>
+    <Cell ss:StyleID="s196"><Data ss:Type="String">ADCs PhaseShift Enable A</Data></Cell>
+    <Cell ss:StyleID="s175"><Data ss:Type="String">read_write</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">bool</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">direct</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s195"><Data ss:Type="Number">102</Data></Cell>
+    <Cell ss:StyleID="s196"><Data ss:Type="String">DACs Phase Shift Enable A</Data></Cell>
+    <Cell ss:StyleID="s175"><Data ss:Type="String">read_write</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">bool</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">direct</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s195"><Data ss:Type="Number">103</Data></Cell>
+    <Cell ss:StyleID="s196"><Data ss:Type="String">SquareRef enable A</Data></Cell>
+    <Cell ss:StyleID="s175"><Data ss:Type="String">read_write</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">bool</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">direct</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s195"><Data ss:Type="Number">104</Data></Cell>
+    <Cell ss:StyleID="s196"><Data ss:Type="String">FreqSquare A</Data></Cell>
+    <Cell ss:StyleID="s175"><Data ss:Type="String">read_write</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">float</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">special</Data></Cell>
+    <Cell><Data ss:Type="Number">3</Data></Cell>
+    <Cell><Data ss:Type="Number">1000</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s195"><Data ss:Type="Number">105</Data></Cell>
+    <Cell ss:StyleID="s196"><Data ss:Type="String">ResetKi A</Data></Cell>
+    <Cell ss:StyleID="s175"><Data ss:Type="String">read_write</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">bool</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">direct</Data></Cell>
+    <Cell ss:StyleID="s193"><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s195"><Data ss:Type="Number">106</Data></Cell>
+    <Cell ss:StyleID="s196"><Data ss:Type="String">Look ref A</Data></Cell>
+    <Cell ss:StyleID="s175"><Data ss:Type="String">read_write</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">bool</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">direct</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s195"><Data ss:Type="Number">107</Data></Cell>
+    <Cell ss:StyleID="s196"><Data ss:Type="String">Quadrant Selection A</Data></Cell>
+    <Cell ss:StyleID="s175"><Data ss:Type="String">read_write</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">int</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">direct</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">3</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s195"><Data ss:Type="Number">110</Data></Cell>
+    <Cell ss:StyleID="s196"><Data ss:Type="String">Voltage Rate Increase A</Data></Cell>
+    <Cell ss:StyleID="s175"><Data ss:Type="String">read_write</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">int</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">direct</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">7</Data></Cell>
+   </Row>
+   <Row ss:Height="16">
+    <Cell ss:StyleID="s199"><Data ss:Type="Number">112</Data></Cell>
+    <Cell ss:StyleID="s187"><Data ss:Type="String">Loop Input Selection</Data></Cell>
+    <Cell ss:StyleID="s175"><Data ss:Type="String">read_write</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">int</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">direct</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">4</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s201"><Data ss:Type="Number">200</Data></Cell>
+    <Cell ss:StyleID="s194"><Data ss:Type="String">Pulse Mode Enable A</Data></Cell>
+    <Cell ss:StyleID="s175"><Data ss:Type="String">read_write</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">bool</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">direct</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+   </Row>
+   <Row ss:Height="30">
+    <Cell ss:StyleID="s195"><Data ss:Type="Number">201</Data></Cell>
+    <Cell ss:StyleID="s196"><Data ss:Type="String">Automatic Conditioning enable A</Data></Cell>
+    <Cell ss:StyleID="s175"><Data ss:Type="String">read_write</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">bool</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">direct</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s183"><Data ss:Type="Number">202</Data></Cell>
+    <Cell ss:StyleID="s184"><Data ss:Type="String">ConditioningDuty Cicle A</Data></Cell>
+    <Cell ss:StyleID="s175"><Data ss:Type="String">read_write</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">float</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">special</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">100</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s178"><Data ss:Type="Number">300</Data></Cell>
+    <Cell ss:StyleID="s179"><Data ss:Type="String">Tuning Enable A</Data></Cell>
+    <Cell ss:StyleID="s175"><Data ss:Type="String">read_write</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">bool</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">direct</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s183"><Data ss:Type="Number">301</Data></Cell>
+    <Cell ss:StyleID="s184"><Data ss:Type="String">Tuning Pos En A</Data></Cell>
+    <Cell ss:StyleID="s175"><Data ss:Type="String">read_write</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">bool</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">direct</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s178"><Data ss:Type="Number">302</Data></Cell>
+    <Cell ss:StyleID="s179"><Data ss:Type="String">Num Steps A</Data></Cell>
+    <Cell ss:StyleID="s175"><Data ss:Type="String">read_write</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">float</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">direct</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">65535</Data></Cell>
+   </Row>
+   <Row ss:Height="30">
+    <Cell ss:StyleID="s195"><Data ss:Type="Number">303</Data></Cell>
+    <Cell ss:StyleID="s196"><Data ss:Type="String">Pulses Frequency (CLK Per Pulse) A</Data></Cell>
+    <Cell ss:StyleID="s175"><Data ss:Type="String">read_write</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">int</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">direct</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">7</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s178"><Data ss:Type="Number">304</Data></Cell>
+    <Cell ss:StyleID="s179"><Data ss:Type="String">Phase Offset A</Data></Cell>
+    <Cell ss:StyleID="s175"><Data ss:Type="String">read_write</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">float</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">angle</Data></Cell>
+    <Cell><Data ss:Type="Number">-180</Data></Cell>
+    <Cell><Data ss:Type="Number">180</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s178"><Data ss:Type="Number">305</Data></Cell>
+    <Cell ss:StyleID="s179"><Data ss:Type="String">Move A</Data></Cell>
+    <Cell ss:StyleID="s175"><Data ss:Type="String">read_write</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">bool</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">direct</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s178"><Data ss:Type="Number">306</Data></Cell>
+    <Cell ss:StyleID="s179"><Data ss:Type="String">MoveUp A</Data></Cell>
+    <Cell ss:StyleID="s175"><Data ss:Type="String">read_write</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">bool</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">direct</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s178"><Data ss:Type="Number">307</Data></Cell>
+    <Cell ss:StyleID="s179"><Data ss:Type="String">TuningReset A</Data></Cell>
+    <Cell ss:StyleID="s175"><Data ss:Type="String">read_write</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">bool</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">direct</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s195"><Data ss:Type="Number">308</Data></Cell>
+    <Cell ss:StyleID="s196"><Data ss:Type="String">FwMin (mV) A</Data></Cell>
+    <Cell ss:StyleID="s175"><Data ss:Type="String">read_write</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">float</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">direct</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">1000</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s183"><Data ss:Type="Number">309</Data></Cell>
+    <Cell ss:StyleID="s184"><Data ss:Type="String">MarginUp A</Data></Cell>
+    <Cell ss:StyleID="s175"><Data ss:Type="String">read_write</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">float</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">special</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">10</Data></Cell>
+   </Row>
+   <Row ss:Height="16">
+    <Cell ss:StyleID="s186"><Data ss:Type="Number">310</Data></Cell>
+    <Cell ss:StyleID="s187"><Data ss:Type="String">MarginLow A</Data></Cell>
+    <Cell ss:StyleID="s175"><Data ss:Type="String">read_write</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">float</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">special</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">5</Data></Cell>
+   </Row>
+   <Row ss:Height="30">
+    <Cell ss:StyleID="s201"><Data ss:Type="Number">400</Data></Cell>
+    <Cell ss:StyleID="s194"><Data ss:Type="String">Frequency Tuning Enable A</Data></Cell>
+    <Cell ss:StyleID="s175"><Data ss:Type="String">read_write</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">bool</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">direct</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+   </Row>
+   <Row ss:Height="30">
+    <Cell ss:StyleID="s195"><Data ss:Type="Number">401</Data></Cell>
+    <Cell ss:StyleID="s196"><Data ss:Type="String">Frequency Tuning Pos En A</Data></Cell>
+    <Cell ss:StyleID="s175"><Data ss:Type="String">read_write</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">bool</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">direct</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s195"><Data ss:Type="Number">402</Data></Cell>
+    <Cell ss:StyleID="s196"><Data ss:Type="String">1/Ki of frequency loop</Data></Cell>
+    <Cell ss:StyleID="s175"><Data ss:Type="String">read_write</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">float</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">direct</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">32767</Data></Cell>
+   </Row>
+   <Row ss:Height="16">
+    <Cell ss:StyleID="s199"><Data ss:Type="Number">403</Data></Cell>
+    <Cell ss:StyleID="s191"><Data ss:Type="String">PILimit of Frequency Loop</Data></Cell>
+    <Cell ss:StyleID="s175"><Data ss:Type="String">read_write</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">float</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">direct</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">1000</Data></Cell>
+   </Row>
+   <Row ss:Height="30">
+    <Cell ss:StyleID="s201"><Data ss:Type="Number">450</Data></Cell>
+    <Cell ss:StyleID="s194"><Data ss:Type="String">Manual Frequency tuning Enable A</Data></Cell>
+    <Cell ss:StyleID="s175"><Data ss:Type="String">read_write</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">bool</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">direct</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+   </Row>
+   <Row ss:Height="31">
+    <Cell ss:StyleID="s199"><Data ss:Type="Number">451</Data></Cell>
+    <Cell ss:StyleID="s191"><Data ss:Type="String">Frequency Action [-1000, 1000] mV</Data></Cell>
+    <Cell ss:StyleID="s175"><Data ss:Type="String">read_write</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">float</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">mv</Data></Cell>
+    <Cell><Data ss:Type="Number">-1000</Data></Cell>
+    <Cell><Data ss:Type="Number">1000</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s201"><Data ss:Type="Number">400</Data></Cell>
+    <Cell ss:StyleID="s194"><Data ss:Type="String">EPS ITCK Disable</Data></Cell>
+    <Cell ss:StyleID="s175"><Data ss:Type="String">read_write</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">bool</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">direct</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+   </Row>
+   <Row ss:Height="16">
+    <Cell ss:StyleID="s199"><Data ss:Type="Number">401</Data></Cell>
+    <Cell ss:StyleID="s191"><Data ss:Type="String">FIM ITCK Disable</Data></Cell>
+    <Cell ss:StyleID="s175"><Data ss:Type="String">read_write</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">bool</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">direct</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s201"><Data ss:Type="Number">500</Data></Cell>
+    <Cell ss:StyleID="s194"><Data ss:Type="String">M Divider (ref)</Data></Cell>
+    <Cell ss:StyleID="s175"><Data ss:Type="String">read_write</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">float</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">special</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">128</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s195"><Data ss:Type="Number">501</Data></Cell>
+    <Cell ss:StyleID="s196"><Data ss:Type="String">N divider (VCXO)</Data></Cell>
+    <Cell ss:StyleID="s175"><Data ss:Type="String">read_write</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">float</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">special</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">128</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s195"><Data ss:Type="Number">502</Data></Cell>
+    <Cell ss:StyleID="s196"><Data ss:Type="String">MuxSel</Data></Cell>
+    <Cell ss:StyleID="s175"><Data ss:Type="String">read_write</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">int</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">direct</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">4</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s195"><Data ss:Type="Number">503</Data></Cell>
+    <Cell ss:StyleID="s196"><Data ss:Type="String">Mux0 Divider</Data></Cell>
+    <Cell ss:StyleID="s175"><Data ss:Type="String">read_write</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">int</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">direct</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">4</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s195"><Data ss:Type="Number">504</Data></Cell>
+    <Cell ss:StyleID="s196"><Data ss:Type="String">Mux1 Divider</Data></Cell>
+    <Cell ss:StyleID="s175"><Data ss:Type="String">read_write</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">int</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">direct</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">4</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s195"><Data ss:Type="Number">505</Data></Cell>
+    <Cell ss:StyleID="s196"><Data ss:Type="String">Mux2 Divider</Data></Cell>
+    <Cell ss:StyleID="s175"><Data ss:Type="String">read_write</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">int</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">direct</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">4</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s195"><Data ss:Type="Number">506</Data></Cell>
+    <Cell ss:StyleID="s196"><Data ss:Type="String">Mux3 Divider</Data></Cell>
+    <Cell ss:StyleID="s175"><Data ss:Type="String">read_write</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">int</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">direct</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">4</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s195"><Data ss:Type="Number">507</Data></Cell>
+    <Cell ss:StyleID="s196"><Data ss:Type="String">Mux4 Divider</Data></Cell>
+    <Cell ss:StyleID="s175"><Data ss:Type="String">read_write</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">int</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">direct</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">4</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s195"><Data ss:Type="Number">508</Data></Cell>
+    <Cell ss:StyleID="s196"><Data ss:Type="String">Send Word</Data></Cell>
+    <Cell ss:StyleID="s175"><Data ss:Type="String">read_write</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">bool</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">direct</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s195"><Data ss:Type="Number">509</Data></Cell>
+    <Cell ss:StyleID="s196"><Data ss:Type="String">CP_Dir</Data></Cell>
+    <Cell ss:StyleID="s175"><Data ss:Type="String">read_write</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">bool</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">direct</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+   </Row>
+   <Row ss:Height="16">
+    <Cell ss:StyleID="s186"><Data ss:Type="Number">510</Data></Cell>
+    <Cell ss:StyleID="s187"><Data ss:Type="String">VCXO Output inversion</Data></Cell>
+    <Cell ss:StyleID="s175"><Data ss:Type="String">read_write</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">bool</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">direct</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s206"><Data ss:Type="Number">600</Data></Cell>
+    <Cell ss:StyleID="s207"><Data ss:Type="String">FDL trigger delay</Data></Cell>
+    <Cell ss:StyleID="s175"><Data ss:Type="String">read_write</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">float</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">special</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">400</Data></Cell>
+   </Row>
+   <Row ss:Height="25">
+    <Cell ss:StyleID="s209"><Data ss:Type="Number">601</Data></Cell>
+    <Cell ss:StyleID="s184"><Data ss:Type="String">Soft FDL Trigger – formerly reg4</Data></Cell>
+    <Cell ss:StyleID="s175"><Data ss:Type="String">read_write</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">bool</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">direct</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+   </Row>
+   <Row ss:Height="25">
+    <Cell ss:StyleID="s209"><Data ss:Type="Number">602</Data></Cell>
+    <Cell ss:StyleID="s184"><Data ss:Type="String">Channel Source RF chain A – formerly reg 4</Data></Cell>
+    <Cell ss:StyleID="s175"><Data ss:Type="String">read_write</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">int</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">direct</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="Number">16</Data></Cell>
+   </Row>
+   <Row ss:Height="25">
+    <Cell ss:StyleID="s209"><Data ss:Type="Number">603</Data></Cell>
+    <Cell ss:StyleID="s184"><Data ss:Type="String">Channel Source RF chain B – formerly reg 4</Data></Cell>
+    <Cell ss:StyleID="s175"><Data ss:Type="String">read_write</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">int</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">direct</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="Number">16</Data></Cell>
+   </Row>
+   <Row ss:Height="25">
+    <Cell ss:StyleID="s209"><Data ss:Type="Number">604</Data></Cell>
+    <Cell ss:StyleID="s184"><Data ss:Type="String">Start/Stop FDL – formerly reg 4</Data></Cell>
+    <Cell ss:StyleID="s175"><Data ss:Type="String">read_write</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">bool</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">direct</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+   </Row>
+   <Row ss:Height="25">
+    <Cell ss:StyleID="s209"><Data ss:Type="Number">605</Data></Cell>
+    <Cell ss:StyleID="s184"><Data ss:Type="String">Trigger State – formerly reg 4</Data></Cell>
+    <Cell ss:StyleID="s175"><Data ss:Type="String">read</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">bool</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">direct</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+   </Row>
+   <Row ss:Height="25">
+    <Cell ss:StyleID="s209"><Data ss:Type="Number">606</Data></Cell>
+    <Cell ss:StyleID="s184"><Data ss:Type="String">Trigger type selection – 0 SW – 1 HW</Data></Cell>
+    <Cell ss:StyleID="s175"><Data ss:Type="String">read_write</Data></Cell>
+    <Cell ss:StyleID="s192"><Data ss:Type="String">bool</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">direct</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+   </Row>
+   <Row ss:Height="16">
+    <Cell ss:StyleID="s256"><Data ss:Type="Number">607</Data></Cell>
+    <Cell ss:StyleID="s257"><Data ss:Type="String">Clear trigger</Data></Cell>
+    <Cell ss:StyleID="s175"><Data ss:Type="String">read_write</Data></Cell>
+    <Cell ss:StyleID="s192"><Data ss:Type="String">bool</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">direct</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+   </Row>
+   <Row ss:Height="26">
+    <Cell ss:StyleID="s258"><Data ss:Type="Number">608</Data></Cell>
+    <Cell ss:StyleID="s189"><Data ss:Type="String">FDL_settings_write_enable_through_reg_1</Data></Cell>
+    <Cell ss:StyleID="s175"><Data ss:Type="String">read_write</Data></Cell>
+    <Cell ss:StyleID="s192"><Data ss:Type="String">bool</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">direct</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+   </Row>
+   <Row ss:Height="30">
+    <Cell ss:StyleID="s216"><Data ss:Type="Number">700</Data></Cell>
+    <Cell ss:StyleID="s217"><Data ss:Type="String">Diagnostics Interface Selection - Channel 01</Data></Cell>
+    <Cell ss:StyleID="s175"><Data ss:Type="String">read_write</Data></Cell>
+    <Cell ss:StyleID="s192"><Data ss:Type="String">int</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">direct</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">12</Data></Cell>
+   </Row>
+   <Row ss:Height="30">
+    <Cell ss:StyleID="s219"><Data ss:Type="Number">701</Data></Cell>
+    <Cell ss:StyleID="s175"><Data ss:Type="String">Diagnostics Interface Selection - Channel 02</Data></Cell>
+    <Cell ss:StyleID="s175"><Data ss:Type="String">read_write</Data></Cell>
+    <Cell ss:StyleID="s192"><Data ss:Type="String">int</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">direct</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">12</Data></Cell>
+   </Row>
+   <Row ss:Height="30">
+    <Cell ss:StyleID="s219"><Data ss:Type="Number">702</Data></Cell>
+    <Cell ss:StyleID="s175"><Data ss:Type="String">Diagnostics Interface Selection - Channel 03</Data></Cell>
+    <Cell ss:StyleID="s175"><Data ss:Type="String">read_write</Data></Cell>
+    <Cell ss:StyleID="s192"><Data ss:Type="String">int</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">direct</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">12</Data></Cell>
+   </Row>
+   <Row ss:Height="30">
+    <Cell ss:StyleID="s219"><Data ss:Type="Number">703</Data></Cell>
+    <Cell ss:StyleID="s175"><Data ss:Type="String">Diagnostics Interface Selection - Channel 04</Data></Cell>
+    <Cell ss:StyleID="s175"><Data ss:Type="String">read_write</Data></Cell>
+    <Cell ss:StyleID="s192"><Data ss:Type="String">int</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">direct</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">12</Data></Cell>
+   </Row>
+   <Row ss:Height="30">
+    <Cell ss:StyleID="s219"><Data ss:Type="Number">704</Data></Cell>
+    <Cell ss:StyleID="s175"><Data ss:Type="String">Diagnostics Interface Selection - Channel 05</Data></Cell>
+    <Cell ss:StyleID="s175"><Data ss:Type="String">read_write</Data></Cell>
+    <Cell ss:StyleID="s192"><Data ss:Type="String">int</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">direct</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">12</Data></Cell>
+   </Row>
+   <Row ss:Height="30">
+    <Cell ss:StyleID="s219"><Data ss:Type="Number">705</Data></Cell>
+    <Cell ss:StyleID="s175"><Data ss:Type="String">Diagnostics Interface Selection - Channel 06</Data></Cell>
+    <Cell ss:StyleID="s175"><Data ss:Type="String">read_write</Data></Cell>
+    <Cell ss:StyleID="s192"><Data ss:Type="String">int</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">direct</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">12</Data></Cell>
+   </Row>
+   <Row ss:Height="30">
+    <Cell ss:StyleID="s219"><Data ss:Type="Number">706</Data></Cell>
+    <Cell ss:StyleID="s175"><Data ss:Type="String">Diagnostics Interface Selection - Channel 07</Data></Cell>
+    <Cell ss:StyleID="s175"><Data ss:Type="String">read_write</Data></Cell>
+    <Cell ss:StyleID="s192"><Data ss:Type="String">int</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">direct</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">12</Data></Cell>
+   </Row>
+   <Row ss:Height="31">
+    <Cell ss:StyleID="s221"><Data ss:Type="Number">707</Data></Cell>
+    <Cell ss:StyleID="s222"><Data ss:Type="String">Diagnostics Interface Selection - Channel 08</Data></Cell>
+    <Cell ss:StyleID="s175"><Data ss:Type="String">read_write</Data></Cell>
+    <Cell ss:StyleID="s192"><Data ss:Type="String">int</Data></Cell>
+    <Cell ss:StyleID="s264"><Data ss:Type="String">direct</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">12</Data></Cell>
+   </Row>
+  </Table>
+  <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+   <Print>
+    <ValidPrinterInfo/>
+    <PaperSizeIndex>9</PaperSizeIndex>
+    <HorizontalResolution>-4</HorizontalResolution>
+    <VerticalResolution>-4</VerticalResolution>
+   </Print>
+   <PageLayoutZoom>0</PageLayoutZoom>
+   <Selected/>
+   <Panes>
+    <Pane>
+     <Number>3</Number>
+     <ActiveCol>3</ActiveCol>
+     <RangeSelection>C4</RangeSelection>
+    </Pane>
+   </Panes>
+   <ProtectObjects>False</ProtectObjects>
+   <ProtectScenarios>False</ProtectScenarios>
+  </WorksheetOptions>
+ </Worksheet>
+</Workbook>
