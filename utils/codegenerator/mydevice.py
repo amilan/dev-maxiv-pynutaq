@@ -21,195 +21,195 @@ from perseussimulated import PerseusSimulated
 class Nutaq(Device):
     __metaclass__ = DeviceMeta
 
-    Kpa = attribute(label='Kpa',
+    KpA = attribute(label='KpA',
                                    dtype=float,
                                    display_level='DispLevel.OPERATOR',
                                    access="AttrWriteType.READ_WRITE",
                                    unit='',
                                    format='6.4f',
                                    min_value=0, max_value=10,
-                                   fget="get_Kpa",
-                                   fset="set_Kpa",
+                                   fget="get_KpA",
+                                   fset="set_KpA",
                                    doc=""
                                    )
 
-    Kia = attribute(label='Kia',
+    KiA = attribute(label='KiA',
                                    dtype=float,
                                    display_level='DispLevel.OPERATOR',
                                    access="AttrWriteType.READ_WRITE",
                                    unit='',
                                    format='6.4f',
                                    min_value=0, max_value=32767,
-                                   fget="get_Kia",
-                                   fset="set_Kia",
+                                   fget="get_KiA",
+                                   fset="set_KiA",
                                    doc=""
                                    )
 
-    Phaseshiftcav = attribute(label='Phaseshiftcav',
+    PhaseShiftCav = attribute(label='PhaseShiftCav',
                                    dtype=float,
                                    display_level='DispLevel.OPERATOR',
                                    access="AttrWriteType.READ_WRITE",
                                    unit='degrees',
                                    format='6.4f',
                                    min_value=-180, max_value=360,
-                                   fget="get_Phaseshiftcav",
-                                   fset="set_Phaseshiftcav",
+                                   fget="get_PhaseShiftCav",
+                                   fset="set_PhaseShiftCav",
                                    doc=""
                                    )
 
-    Phaseshiftfwcav = attribute(label='Phaseshiftfwcav',
+    PhaseShiftFwcav = attribute(label='PhaseShiftFwcav',
                                    dtype=float,
                                    display_level='DispLevel.OPERATOR',
                                    access="AttrWriteType.READ_WRITE",
                                    unit='degrees',
                                    format='6.4f',
                                    min_value=-180, max_value=360,
-                                   fget="get_Phaseshiftfwcav",
-                                   fset="set_Phaseshiftfwcav",
+                                   fget="get_PhaseShiftFwcav",
+                                   fset="set_PhaseShiftFwcav",
                                    doc=""
                                    )
 
-    Phaseshiftfwtet1 = attribute(label='Phaseshiftfwtet1',
+    PhaseShiftFwtet1 = attribute(label='PhaseShiftFwtet1',
                                    dtype=float,
                                    display_level='DispLevel.OPERATOR',
                                    access="AttrWriteType.READ_WRITE",
                                    unit='degrees',
                                    format='6.4f',
                                    min_value=-180, max_value=360,
-                                   fget="get_Phaseshiftfwtet1",
-                                   fset="set_Phaseshiftfwtet1",
+                                   fget="get_PhaseShiftFwtet1",
+                                   fset="set_PhaseShiftFwtet1",
                                    doc=""
                                    )
 
-    Phaseshiftfwtet2 = attribute(label='Phaseshiftfwtet2',
+    PhaseShiftFwtet2 = attribute(label='PhaseShiftFwtet2',
                                    dtype=float,
                                    display_level='DispLevel.OPERATOR',
                                    access="AttrWriteType.READ_WRITE",
                                    unit='degrees',
                                    format='6.4f',
                                    min_value=-180, max_value=360,
-                                   fget="get_Phaseshiftfwtet2",
-                                   fset="set_Phaseshiftfwtet2",
+                                   fget="get_PhaseShiftFwtet2",
+                                   fset="set_PhaseShiftFwtet2",
                                    doc=""
                                    )
 
-    Pilimita = attribute(label='Pilimita',
+    PilimitA = attribute(label='PilimitA',
                                    dtype=float,
                                    display_level='DispLevel.OPERATOR',
                                    access="AttrWriteType.READ_WRITE",
                                    unit='mV',
                                    format='6.4f',
                                    min_value=0, max_value=1000,
-                                   fget="get_Pilimita",
-                                   fset="set_Pilimita",
+                                   fget="get_PilimitA",
+                                   fset="set_PilimitA",
                                    doc=""
                                    )
 
-    Samplestoaverage = attribute(label='Samplestoaverage',
+    SamplesToAverage = attribute(label='SamplesToAverage',
                                    dtype=int,
                                    display_level='DispLevel.OPERATOR',
                                    access="AttrWriteType.READ_WRITE",
                                    unit='',
                                    format='6.4f',
                                    min_value=0, max_value=7,
-                                   fget="get_Samplestoaverage",
-                                   fset="set_Samplestoaverage",
+                                   fget="get_SamplesToAverage",
+                                   fset="set_SamplesToAverage",
                                    doc=""
                                    )
 
-    Filterstages = attribute(label='Filterstages',
+    FilterStages = attribute(label='FilterStages',
                                    dtype=int,
                                    display_level='DispLevel.OPERATOR',
                                    access="AttrWriteType.READ_WRITE",
                                    unit='',
                                    format='6.4f',
                                    min_value=0, max_value=3,
-                                   fget="get_Filterstages",
-                                   fset="set_Filterstages",
+                                   fget="get_FilterStages",
+                                   fset="set_FilterStages",
                                    doc=""
                                    )
 
-    Phaseshiftfwcircin = attribute(label='Phaseshiftfwcircin',
+    PhaseShiftFwcircin = attribute(label='PhaseShiftFwcircin',
                                    dtype=float,
                                    display_level='DispLevel.OPERATOR',
                                    access="AttrWriteType.READ_WRITE",
                                    unit='degrees',
                                    format='6.4f',
                                    min_value=-180, max_value=360,
-                                   fget="get_Phaseshiftfwcircin",
-                                   fset="set_Phaseshiftfwcircin",
+                                   fget="get_PhaseShiftFwcircin",
+                                   fset="set_PhaseShiftFwcircin",
                                    doc=""
                                    )
 
-    Phaseshiftcontrolsignaltet1 = attribute(label='Phaseshiftcontrolsignaltet1',
+    PhaseShiftControlSignalTet1 = attribute(label='PhaseShiftControlSignalTet1',
                                    dtype=float,
                                    display_level='DispLevel.OPERATOR',
                                    access="AttrWriteType.READ_WRITE",
                                    unit='degrees',
                                    format='6.4f',
                                    min_value=-180, max_value=360,
-                                   fget="get_Phaseshiftcontrolsignaltet1",
-                                   fset="set_Phaseshiftcontrolsignaltet1",
+                                   fget="get_PhaseShiftControlSignalTet1",
+                                   fset="set_PhaseShiftControlSignalTet1",
                                    doc=""
                                    )
 
-    Phaseshiftcontrolsignaltet2 = attribute(label='Phaseshiftcontrolsignaltet2',
+    PhaseShiftControlSignalTet2 = attribute(label='PhaseShiftControlSignalTet2',
                                    dtype=float,
                                    display_level='DispLevel.OPERATOR',
                                    access="AttrWriteType.READ_WRITE",
                                    unit='degrees',
                                    format='6.4f',
                                    min_value=-180, max_value=360,
-                                   fget="get_Phaseshiftcontrolsignaltet2",
-                                   fset="set_Phaseshiftcontrolsignaltet2",
+                                   fget="get_PhaseShiftControlSignalTet2",
+                                   fset="set_PhaseShiftControlSignalTet2",
                                    doc=""
                                    )
 
-    Gaintetrode1 = attribute(label='Gaintetrode1',
+    GainTetrode1 = attribute(label='GainTetrode1',
                                    dtype=float,
                                    display_level='DispLevel.OPERATOR',
                                    access="AttrWriteType.READ_WRITE",
                                    unit='',
                                    format='6.4f',
                                    min_value=0.1, max_value=1,
-                                   fget="get_Gaintetrode1",
-                                   fset="set_Gaintetrode1",
+                                   fget="get_GainTetrode1",
+                                   fset="set_GainTetrode1",
                                    doc=""
                                    )
 
-    Gaintetrode2 = attribute(label='Gaintetrode2',
+    GainTetrode2 = attribute(label='GainTetrode2',
                                    dtype=float,
                                    display_level='DispLevel.OPERATOR',
                                    access="AttrWriteType.READ_WRITE",
                                    unit='',
                                    format='6.4f',
                                    min_value=0.1, max_value=1,
-                                   fget="get_Gaintetrode2",
-                                   fset="set_Gaintetrode2",
+                                   fget="get_GainTetrode2",
+                                   fset="set_GainTetrode2",
                                    doc=""
                                    )
 
-    Automaticstartupenable = attribute(label='Automaticstartupenable',
+    AutomaticStartupEnable = attribute(label='AutomaticStartupEnable',
                                    dtype=bool,
                                    display_level='DispLevel.OPERATOR',
                                    access="AttrWriteType.READ_WRITE",
                                    unit='',
                                    format='6.4f',
                                    min_value=0, max_value=1,
-                                   fget="get_Automaticstartupenable",
-                                   fset="set_Automaticstartupenable",
+                                   fget="get_AutomaticStartupEnable",
+                                   fset="set_AutomaticStartupEnable",
                                    doc=""
                                    )
 
-    Commandstart = attribute(label='Commandstart',
+    CommandStart = attribute(label='CommandStart',
                                    dtype=int,
                                    display_level='DispLevel.OPERATOR',
                                    access="AttrWriteType.READ_WRITE",
                                    unit='',
                                    format='6.4f',
                                    min_value=0, max_value=7,
-                                   fget="get_Commandstart",
-                                   fset="set_Commandstart",
+                                   fget="get_CommandStart",
+                                   fset="set_CommandStart",
                                    doc=""
                                    )
 
@@ -261,339 +261,339 @@ class Nutaq(Device):
                                    doc=""
                                    )
 
-    Phaseincreaserate = attribute(label='Phaseincreaserate',
+    PhaseIncreaseRate = attribute(label='PhaseIncreaseRate',
                                    dtype=int,
                                    display_level='DispLevel.OPERATOR',
                                    access="AttrWriteType.READ_WRITE",
                                    unit='',
                                    format='6.4f',
                                    min_value=0, max_value=7,
-                                   fget="get_Phaseincreaserate",
-                                   fset="set_Phaseincreaserate",
+                                   fget="get_PhaseIncreaseRate",
+                                   fset="set_PhaseIncreaseRate",
                                    doc=""
                                    )
 
-    Gainol = attribute(label='Gainol',
+    GainOl = attribute(label='GainOl',
                                    dtype=float,
                                    display_level='DispLevel.OPERATOR',
                                    access="AttrWriteType.READ_WRITE",
                                    unit='',
                                    format='6.4f',
                                    min_value=0.5, max_value=2,
-                                   fget="get_Gainol",
-                                   fset="set_Gainol",
+                                   fget="get_GainOl",
+                                   fset="set_GainOl",
                                    doc=""
                                    )
 
-    Sparegpiooutput01 = attribute(label='Sparegpiooutput01',
+    SpareGpioOutput01 = attribute(label='SpareGpioOutput01',
                                    dtype=bool,
                                    display_level='DispLevel.OPERATOR',
                                    access="AttrWriteType.READ_WRITE",
                                    unit='',
                                    format='6.4f',
                                    min_value=0, max_value=1,
-                                   fget="get_Sparegpiooutput01",
-                                   fset="set_Sparegpiooutput01",
+                                   fget="get_SpareGpioOutput01",
+                                   fset="set_SpareGpioOutput01",
                                    doc=""
                                    )
 
-    Sparegpiooutput02 = attribute(label='Sparegpiooutput02',
+    SpareGpioOutput02 = attribute(label='SpareGpioOutput02',
                                    dtype=bool,
                                    display_level='DispLevel.OPERATOR',
                                    access="AttrWriteType.READ_WRITE",
                                    unit='',
                                    format='6.4f',
                                    min_value=0, max_value=1,
-                                   fget="get_Sparegpiooutput02",
-                                   fset="set_Sparegpiooutput02",
+                                   fget="get_SpareGpioOutput02",
+                                   fset="set_SpareGpioOutput02",
                                    doc=""
                                    )
 
-    Sparegpiooutput03 = attribute(label='Sparegpiooutput03',
+    SpareGpioOutput03 = attribute(label='SpareGpioOutput03',
                                    dtype=bool,
                                    display_level='DispLevel.OPERATOR',
                                    access="AttrWriteType.READ_WRITE",
                                    unit='',
                                    format='6.4f',
                                    min_value=0, max_value=1,
-                                   fget="get_Sparegpiooutput03",
-                                   fset="set_Sparegpiooutput03",
+                                   fget="get_SpareGpioOutput03",
+                                   fset="set_SpareGpioOutput03",
                                    doc=""
                                    )
 
-    Sparegpiooutput04 = attribute(label='Sparegpiooutput04',
+    SpareGpioOutput04 = attribute(label='SpareGpioOutput04',
                                    dtype=bool,
                                    display_level='DispLevel.OPERATOR',
                                    access="AttrWriteType.READ_WRITE",
                                    unit='',
                                    format='6.4f',
                                    min_value=0, max_value=1,
-                                   fget="get_Sparegpiooutput04",
-                                   fset="set_Sparegpiooutput04",
+                                   fget="get_SpareGpioOutput04",
+                                   fset="set_SpareGpioOutput04",
                                    doc=""
                                    )
 
-    Fdlswtrigger = attribute(label='Fdlswtrigger',
+    FdlSwTrigger = attribute(label='FdlSwTrigger',
                                    dtype=bool,
                                    display_level='DispLevel.OPERATOR',
                                    access="AttrWriteType.READ_WRITE",
                                    unit='',
                                    format='6.4f',
                                    min_value=0, max_value=1,
-                                   fget="get_Fdlswtrigger",
-                                   fset="set_Fdlswtrigger",
+                                   fget="get_FdlSwTrigger",
+                                   fset="set_FdlSwTrigger",
                                    doc=""
                                    )
 
-    Loopenablea = attribute(label='Loopenablea',
+    LoopEnableA = attribute(label='LoopEnableA',
                                    dtype=bool,
                                    display_level='DispLevel.OPERATOR',
                                    access="AttrWriteType.READ_WRITE",
                                    unit='',
                                    format='6.4f',
                                    min_value=0, max_value=1,
-                                   fget="get_Loopenablea",
-                                   fset="set_Loopenablea",
+                                   fget="get_LoopEnableA",
+                                   fset="set_LoopEnableA",
                                    doc=""
                                    )
 
-    Adcsphaseshiftenablea = attribute(label='Adcsphaseshiftenablea',
+    AdcsPhaseshiftEnableA = attribute(label='AdcsPhaseshiftEnableA',
                                    dtype=bool,
                                    display_level='DispLevel.OPERATOR',
                                    access="AttrWriteType.READ_WRITE",
                                    unit='',
                                    format='6.4f',
                                    min_value=0, max_value=1,
-                                   fget="get_Adcsphaseshiftenablea",
-                                   fset="set_Adcsphaseshiftenablea",
+                                   fget="get_AdcsPhaseshiftEnableA",
+                                   fset="set_AdcsPhaseshiftEnableA",
                                    doc=""
                                    )
 
-    Dacsphaseshiftenablea = attribute(label='Dacsphaseshiftenablea',
+    DacsPhaseShiftEnableA = attribute(label='DacsPhaseShiftEnableA',
                                    dtype=bool,
                                    display_level='DispLevel.OPERATOR',
                                    access="AttrWriteType.READ_WRITE",
                                    unit='',
                                    format='6.4f',
                                    min_value=0, max_value=1,
-                                   fget="get_Dacsphaseshiftenablea",
-                                   fset="set_Dacsphaseshiftenablea",
+                                   fget="get_DacsPhaseShiftEnableA",
+                                   fset="set_DacsPhaseShiftEnableA",
                                    doc=""
                                    )
 
-    Squarerefenablea = attribute(label='Squarerefenablea',
+    SquarerefEnableA = attribute(label='SquarerefEnableA',
                                    dtype=bool,
                                    display_level='DispLevel.OPERATOR',
                                    access="AttrWriteType.READ_WRITE",
                                    unit='',
                                    format='6.4f',
                                    min_value=0, max_value=1,
-                                   fget="get_Squarerefenablea",
-                                   fset="set_Squarerefenablea",
+                                   fget="get_SquarerefEnableA",
+                                   fset="set_SquarerefEnableA",
                                    doc=""
                                    )
 
-    Freqsquarea = attribute(label='Freqsquarea',
+    FreqsquareA = attribute(label='FreqsquareA',
                                    dtype=float,
                                    display_level='DispLevel.OPERATOR',
                                    access="AttrWriteType.READ_WRITE",
                                    unit='',
                                    format='6.4f',
                                    min_value=3, max_value=1000,
-                                   fget="get_Freqsquarea",
-                                   fset="set_Freqsquarea",
+                                   fget="get_FreqsquareA",
+                                   fset="set_FreqsquareA",
                                    doc=""
                                    )
 
-    Resetkia = attribute(label='Resetkia',
+    ResetkiA = attribute(label='ResetkiA',
                                    dtype=bool,
                                    display_level='DispLevel.OPERATOR',
                                    access="AttrWriteType.READ_WRITE",
                                    unit='',
                                    format='6.4f',
                                    min_value=0, max_value=1,
-                                   fget="get_Resetkia",
-                                   fset="set_Resetkia",
+                                   fget="get_ResetkiA",
+                                   fset="set_ResetkiA",
                                    doc=""
                                    )
 
-    Lookrefa = attribute(label='Lookrefa',
+    LookRefA = attribute(label='LookRefA',
                                    dtype=bool,
                                    display_level='DispLevel.OPERATOR',
                                    access="AttrWriteType.READ_WRITE",
                                    unit='',
                                    format='6.4f',
                                    min_value=0, max_value=1,
-                                   fget="get_Lookrefa",
-                                   fset="set_Lookrefa",
+                                   fget="get_LookRefA",
+                                   fset="set_LookRefA",
                                    doc=""
                                    )
 
-    Quadrantselectiona = attribute(label='Quadrantselectiona',
+    QuadrantSelectionA = attribute(label='QuadrantSelectionA',
                                    dtype=int,
                                    display_level='DispLevel.OPERATOR',
                                    access="AttrWriteType.READ_WRITE",
                                    unit='',
                                    format='6.4f',
                                    min_value=0, max_value=3,
-                                   fget="get_Quadrantselectiona",
-                                   fset="set_Quadrantselectiona",
+                                   fget="get_QuadrantSelectionA",
+                                   fset="set_QuadrantSelectionA",
                                    doc=""
                                    )
 
-    Voltagerateincreasea = attribute(label='Voltagerateincreasea',
+    VoltageRateIncreaseA = attribute(label='VoltageRateIncreaseA',
                                    dtype=int,
                                    display_level='DispLevel.OPERATOR',
                                    access="AttrWriteType.READ_WRITE",
                                    unit='',
                                    format='6.4f',
                                    min_value=0, max_value=7,
-                                   fget="get_Voltagerateincreasea",
-                                   fset="set_Voltagerateincreasea",
+                                   fget="get_VoltageRateIncreaseA",
+                                   fset="set_VoltageRateIncreaseA",
                                    doc=""
                                    )
 
-    Loopinputselection = attribute(label='Loopinputselection',
+    LoopInputSelection = attribute(label='LoopInputSelection',
                                    dtype=int,
                                    display_level='DispLevel.OPERATOR',
                                    access="AttrWriteType.READ_WRITE",
                                    unit='',
                                    format='6.4f',
                                    min_value=0, max_value=4,
-                                   fget="get_Loopinputselection",
-                                   fset="set_Loopinputselection",
+                                   fget="get_LoopInputSelection",
+                                   fset="set_LoopInputSelection",
                                    doc=""
                                    )
 
-    Pulsemodeenablea = attribute(label='Pulsemodeenablea',
+    PulseModeEnableA = attribute(label='PulseModeEnableA',
                                    dtype=bool,
                                    display_level='DispLevel.OPERATOR',
                                    access="AttrWriteType.READ_WRITE",
                                    unit='',
                                    format='6.4f',
                                    min_value=0, max_value=1,
-                                   fget="get_Pulsemodeenablea",
-                                   fset="set_Pulsemodeenablea",
+                                   fget="get_PulseModeEnableA",
+                                   fset="set_PulseModeEnableA",
                                    doc=""
                                    )
 
-    Automaticconditioningenablea = attribute(label='Automaticconditioningenablea',
+    AutomaticConditioningEnableA = attribute(label='AutomaticConditioningEnableA',
                                    dtype=bool,
                                    display_level='DispLevel.OPERATOR',
                                    access="AttrWriteType.READ_WRITE",
                                    unit='',
                                    format='6.4f',
                                    min_value=0, max_value=1,
-                                   fget="get_Automaticconditioningenablea",
-                                   fset="set_Automaticconditioningenablea",
+                                   fget="get_AutomaticConditioningEnableA",
+                                   fset="set_AutomaticConditioningEnableA",
                                    doc=""
                                    )
 
-    Conditioningdutyciclea = attribute(label='Conditioningdutyciclea',
+    ConditioningdutyCicleA = attribute(label='ConditioningdutyCicleA',
                                    dtype=float,
                                    display_level='DispLevel.OPERATOR',
                                    access="AttrWriteType.READ_WRITE",
                                    unit='',
                                    format='6.4f',
                                    min_value=0, max_value=100,
-                                   fget="get_Conditioningdutyciclea",
-                                   fset="set_Conditioningdutyciclea",
+                                   fget="get_ConditioningdutyCicleA",
+                                   fset="set_ConditioningdutyCicleA",
                                    doc=""
                                    )
 
-    Tuningenablea = attribute(label='Tuningenablea',
+    TuningEnableA = attribute(label='TuningEnableA',
                                    dtype=bool,
                                    display_level='DispLevel.OPERATOR',
                                    access="AttrWriteType.READ_WRITE",
                                    unit='',
                                    format='6.4f',
                                    min_value=0, max_value=1,
-                                   fget="get_Tuningenablea",
-                                   fset="set_Tuningenablea",
+                                   fget="get_TuningEnableA",
+                                   fset="set_TuningEnableA",
                                    doc=""
                                    )
 
-    Tuningposena = attribute(label='Tuningposena',
+    TuningPosEnA = attribute(label='TuningPosEnA',
                                    dtype=bool,
                                    display_level='DispLevel.OPERATOR',
                                    access="AttrWriteType.READ_WRITE",
                                    unit='',
                                    format='6.4f',
                                    min_value=0, max_value=1,
-                                   fget="get_Tuningposena",
-                                   fset="set_Tuningposena",
+                                   fget="get_TuningPosEnA",
+                                   fset="set_TuningPosEnA",
                                    doc=""
                                    )
 
-    Numstepsa = attribute(label='Numstepsa',
+    NumStepsA = attribute(label='NumStepsA',
                                    dtype=float,
                                    display_level='DispLevel.OPERATOR',
                                    access="AttrWriteType.READ_WRITE",
                                    unit='',
                                    format='6.4f',
                                    min_value=0, max_value=65535,
-                                   fget="get_Numstepsa",
-                                   fset="set_Numstepsa",
+                                   fget="get_NumStepsA",
+                                   fset="set_NumStepsA",
                                    doc=""
                                    )
 
-    Pulsesfrequency = attribute(label='Pulsesfrequency',
+    PulsesFrequency = attribute(label='PulsesFrequency',
                                    dtype=int,
                                    display_level='DispLevel.OPERATOR',
                                    access="AttrWriteType.READ_WRITE",
                                    unit='',
                                    format='6.4f',
                                    min_value=0, max_value=7,
-                                   fget="get_Pulsesfrequency",
-                                   fset="set_Pulsesfrequency",
+                                   fget="get_PulsesFrequency",
+                                   fset="set_PulsesFrequency",
                                    doc=""
                                    )
 
-    Phaseoffseta = attribute(label='Phaseoffseta',
+    PhaseOffsetA = attribute(label='PhaseOffsetA',
                                    dtype=float,
                                    display_level='DispLevel.OPERATOR',
                                    access="AttrWriteType.READ_WRITE",
                                    unit='degrees',
                                    format='6.4f',
                                    min_value=-180, max_value=180,
-                                   fget="get_Phaseoffseta",
-                                   fset="set_Phaseoffseta",
+                                   fget="get_PhaseOffsetA",
+                                   fset="set_PhaseOffsetA",
                                    doc=""
                                    )
 
-    Movea = attribute(label='Movea',
+    MoveA = attribute(label='MoveA',
                                    dtype=bool,
                                    display_level='DispLevel.OPERATOR',
                                    access="AttrWriteType.READ_WRITE",
                                    unit='',
                                    format='6.4f',
                                    min_value=0, max_value=1,
-                                   fget="get_Movea",
-                                   fset="set_Movea",
+                                   fget="get_MoveA",
+                                   fset="set_MoveA",
                                    doc=""
                                    )
 
-    Moveupa = attribute(label='Moveupa',
+    MoveupA = attribute(label='MoveupA',
                                    dtype=bool,
                                    display_level='DispLevel.OPERATOR',
                                    access="AttrWriteType.READ_WRITE",
                                    unit='',
                                    format='6.4f',
                                    min_value=0, max_value=1,
-                                   fget="get_Moveupa",
-                                   fset="set_Moveupa",
+                                   fget="get_MoveupA",
+                                   fset="set_MoveupA",
                                    doc=""
                                    )
 
-    Tuningreseta = attribute(label='Tuningreseta',
+    TuningresetA = attribute(label='TuningresetA',
                                    dtype=bool,
                                    display_level='DispLevel.OPERATOR',
                                    access="AttrWriteType.READ_WRITE",
                                    unit='',
                                    format='6.4f',
                                    min_value=0, max_value=1,
-                                   fget="get_Tuningreseta",
-                                   fset="set_Tuningreseta",
+                                   fget="get_TuningresetA",
+                                   fset="set_TuningresetA",
                                    doc=""
                                    )
 
@@ -609,75 +609,75 @@ class Nutaq(Device):
                                    doc=""
                                    )
 
-    Marginupa = attribute(label='Marginupa',
+    MarginupA = attribute(label='MarginupA',
                                    dtype=float,
                                    display_level='DispLevel.OPERATOR',
                                    access="AttrWriteType.READ_WRITE",
                                    unit='',
                                    format='6.4f',
                                    min_value=0, max_value=10,
-                                   fget="get_Marginupa",
-                                   fset="set_Marginupa",
+                                   fget="get_MarginupA",
+                                   fset="set_MarginupA",
                                    doc=""
                                    )
 
-    Marginlowa = attribute(label='Marginlowa',
+    MarginlowA = attribute(label='MarginlowA',
                                    dtype=float,
                                    display_level='DispLevel.OPERATOR',
                                    access="AttrWriteType.READ_WRITE",
                                    unit='',
                                    format='6.4f',
                                    min_value=0, max_value=5,
-                                   fget="get_Marginlowa",
-                                   fset="set_Marginlowa",
+                                   fget="get_MarginlowA",
+                                   fset="set_MarginlowA",
                                    doc=""
                                    )
 
-    Epsitckdisable = attribute(label='Epsitckdisable',
+    EpsItckDisable = attribute(label='EpsItckDisable',
                                    dtype=bool,
                                    display_level='DispLevel.OPERATOR',
                                    access="AttrWriteType.READ_WRITE",
                                    unit='',
                                    format='6.4f',
                                    min_value=0, max_value=1,
-                                   fget="get_Epsitckdisable",
-                                   fset="set_Epsitckdisable",
+                                   fget="get_EpsItckDisable",
+                                   fset="set_EpsItckDisable",
                                    doc=""
                                    )
 
-    Fimitckdisable = attribute(label='Fimitckdisable',
+    FimItckDisable = attribute(label='FimItckDisable',
                                    dtype=bool,
                                    display_level='DispLevel.OPERATOR',
                                    access="AttrWriteType.READ_WRITE",
                                    unit='',
                                    format='6.4f',
                                    min_value=0, max_value=1,
-                                   fget="get_Fimitckdisable",
-                                   fset="set_Fimitckdisable",
+                                   fget="get_FimItckDisable",
+                                   fset="set_FimItckDisable",
                                    doc=""
                                    )
 
-    Mdivider = attribute(label='Mdivider',
+    MDivider = attribute(label='MDivider',
                                    dtype=float,
                                    display_level='DispLevel.OPERATOR',
                                    access="AttrWriteType.READ_WRITE",
                                    unit='',
                                    format='6.4f',
                                    min_value=0, max_value=128,
-                                   fget="get_Mdivider",
-                                   fset="set_Mdivider",
+                                   fget="get_MDivider",
+                                   fset="set_MDivider",
                                    doc=""
                                    )
 
-    Ndivider = attribute(label='Ndivider',
+    NDivider = attribute(label='NDivider',
                                    dtype=float,
                                    display_level='DispLevel.OPERATOR',
                                    access="AttrWriteType.READ_WRITE",
                                    unit='',
                                    format='6.4f',
                                    min_value=0, max_value=128,
-                                   fget="get_Ndivider",
-                                   fset="set_Ndivider",
+                                   fget="get_NDivider",
+                                   fset="set_NDivider",
                                    doc=""
                                    )
 
@@ -693,75 +693,75 @@ class Nutaq(Device):
                                    doc=""
                                    )
 
-    Mux0divider = attribute(label='Mux0divider',
+    Mux0Divider = attribute(label='Mux0Divider',
                                    dtype=int,
                                    display_level='DispLevel.OPERATOR',
                                    access="AttrWriteType.READ_WRITE",
                                    unit='',
                                    format='6.4f',
                                    min_value=0, max_value=4,
-                                   fget="get_Mux0divider",
-                                   fset="set_Mux0divider",
+                                   fget="get_Mux0Divider",
+                                   fset="set_Mux0Divider",
                                    doc=""
                                    )
 
-    Mux1divider = attribute(label='Mux1divider',
+    Mux1Divider = attribute(label='Mux1Divider',
                                    dtype=int,
                                    display_level='DispLevel.OPERATOR',
                                    access="AttrWriteType.READ_WRITE",
                                    unit='',
                                    format='6.4f',
                                    min_value=0, max_value=4,
-                                   fget="get_Mux1divider",
-                                   fset="set_Mux1divider",
+                                   fget="get_Mux1Divider",
+                                   fset="set_Mux1Divider",
                                    doc=""
                                    )
 
-    Mux2divider = attribute(label='Mux2divider',
+    Mux2Divider = attribute(label='Mux2Divider',
                                    dtype=int,
                                    display_level='DispLevel.OPERATOR',
                                    access="AttrWriteType.READ_WRITE",
                                    unit='',
                                    format='6.4f',
                                    min_value=0, max_value=4,
-                                   fget="get_Mux2divider",
-                                   fset="set_Mux2divider",
+                                   fget="get_Mux2Divider",
+                                   fset="set_Mux2Divider",
                                    doc=""
                                    )
 
-    Mux3divider = attribute(label='Mux3divider',
+    Mux3Divider = attribute(label='Mux3Divider',
                                    dtype=int,
                                    display_level='DispLevel.OPERATOR',
                                    access="AttrWriteType.READ_WRITE",
                                    unit='',
                                    format='6.4f',
                                    min_value=0, max_value=4,
-                                   fget="get_Mux3divider",
-                                   fset="set_Mux3divider",
+                                   fget="get_Mux3Divider",
+                                   fset="set_Mux3Divider",
                                    doc=""
                                    )
 
-    Mux4divider = attribute(label='Mux4divider',
+    Mux4Divider = attribute(label='Mux4Divider',
                                    dtype=int,
                                    display_level='DispLevel.OPERATOR',
                                    access="AttrWriteType.READ_WRITE",
                                    unit='',
                                    format='6.4f',
                                    min_value=0, max_value=4,
-                                   fget="get_Mux4divider",
-                                   fset="set_Mux4divider",
+                                   fget="get_Mux4Divider",
+                                   fset="set_Mux4Divider",
                                    doc=""
                                    )
 
-    Sendword = attribute(label='Sendword',
+    SendWord = attribute(label='SendWord',
                                    dtype=bool,
                                    display_level='DispLevel.OPERATOR',
                                    access="AttrWriteType.READ_WRITE",
                                    unit='',
                                    format='6.4f',
                                    min_value=0, max_value=1,
-                                   fget="get_Sendword",
-                                   fset="set_Sendword",
+                                   fget="get_SendWord",
+                                   fset="set_SendWord",
                                    doc=""
                                    )
 
@@ -777,15 +777,15 @@ class Nutaq(Device):
                                    doc=""
                                    )
 
-    Vcxooutputinversion = attribute(label='Vcxooutputinversion',
+    VcxoOutputInversion = attribute(label='VcxoOutputInversion',
                                    dtype=bool,
                                    display_level='DispLevel.OPERATOR',
                                    access="AttrWriteType.READ_WRITE",
                                    unit='',
                                    format='6.4f',
                                    min_value=0, max_value=1,
-                                   fget="get_Vcxooutputinversion",
-                                   fset="set_Vcxooutputinversion",
+                                   fget="get_VcxoOutputInversion",
+                                   fset="set_VcxoOutputInversion",
                                    doc=""
                                    )
 
@@ -915,7 +915,7 @@ class Nutaq(Device):
                                    doc=""
                                    )
 
-    IfwcavLoops = attribute(label='IfwcavLoops',
+    IFwCavLoops = attribute(label='IFwCavLoops',
                                    dtype=float,
                                    display_level='DispLevel.OPERATOR',
                                    access="AttrWriteType.READ",
@@ -924,7 +924,7 @@ class Nutaq(Device):
                                    doc=""
                                    )
 
-    QfwcavLoops = attribute(label='QfwcavLoops',
+    QFwCavLoops = attribute(label='QFwCavLoops',
                                    dtype=float,
                                    display_level='DispLevel.OPERATOR',
                                    access="AttrWriteType.READ",
@@ -933,7 +933,7 @@ class Nutaq(Device):
                                    doc=""
                                    )
 
-    Ifwtet1Loops = attribute(label='Ifwtet1Loops',
+    IFwTet1Loops = attribute(label='IFwTet1Loops',
                                    dtype=float,
                                    display_level='DispLevel.OPERATOR',
                                    access="AttrWriteType.READ",
@@ -942,7 +942,7 @@ class Nutaq(Device):
                                    doc=""
                                    )
 
-    Qfwtet1Loops = attribute(label='Qfwtet1Loops',
+    QFwTet1Loops = attribute(label='QFwTet1Loops',
                                    dtype=float,
                                    display_level='DispLevel.OPERATOR',
                                    access="AttrWriteType.READ",
@@ -951,7 +951,7 @@ class Nutaq(Device):
                                    doc=""
                                    )
 
-    Ifwtet2Loops = attribute(label='Ifwtet2Loops',
+    IFwTet2Loops = attribute(label='IFwTet2Loops',
                                    dtype=float,
                                    display_level='DispLevel.OPERATOR',
                                    access="AttrWriteType.READ",
@@ -960,7 +960,7 @@ class Nutaq(Device):
                                    doc=""
                                    )
 
-    Qfwtet2Loops = attribute(label='Qfwtet2Loops',
+    QFwTet2Loops = attribute(label='QFwTet2Loops',
                                    dtype=float,
                                    display_level='DispLevel.OPERATOR',
                                    access="AttrWriteType.READ",
@@ -969,7 +969,7 @@ class Nutaq(Device):
                                    doc=""
                                    )
 
-    IfwcircinLoops = attribute(label='IfwcircinLoops',
+    IFwCircInLoops = attribute(label='IFwCircInLoops',
                                    dtype=float,
                                    display_level='DispLevel.OPERATOR',
                                    access="AttrWriteType.READ",
@@ -978,7 +978,7 @@ class Nutaq(Device):
                                    doc=""
                                    )
 
-    QfwcircinLoops = attribute(label='QfwcircinLoops',
+    QFwCircInLoops = attribute(label='QFwCircInLoops',
                                    dtype=float,
                                    display_level='DispLevel.OPERATOR',
                                    access="AttrWriteType.READ",
@@ -1041,7 +1041,7 @@ class Nutaq(Device):
                                    doc=""
                                    )
 
-    Imuxcav = attribute(label='Imuxcav',
+    IMuxCav = attribute(label='IMuxCav',
                                    dtype=float,
                                    display_level='DispLevel.OPERATOR',
                                    access="AttrWriteType.READ",
@@ -1050,7 +1050,7 @@ class Nutaq(Device):
                                    doc=""
                                    )
 
-    Qmuxcav = attribute(label='Qmuxcav',
+    QMuxCav = attribute(label='QMuxCav',
                                    dtype=float,
                                    display_level='DispLevel.OPERATOR',
                                    access="AttrWriteType.READ",
@@ -1059,7 +1059,7 @@ class Nutaq(Device):
                                    doc=""
                                    )
 
-    Imuxfwcav = attribute(label='Imuxfwcav',
+    IMuxFwCav = attribute(label='IMuxFwCav',
                                    dtype=float,
                                    display_level='DispLevel.OPERATOR',
                                    access="AttrWriteType.READ",
@@ -1068,7 +1068,7 @@ class Nutaq(Device):
                                    doc=""
                                    )
 
-    Qmuxfwcav = attribute(label='Qmuxfwcav',
+    QMuxFwCav = attribute(label='QMuxFwCav',
                                    dtype=float,
                                    display_level='DispLevel.OPERATOR',
                                    access="AttrWriteType.READ",
@@ -1077,7 +1077,7 @@ class Nutaq(Device):
                                    doc=""
                                    )
 
-    Imuxfwtet1 = attribute(label='Imuxfwtet1',
+    IMuxFwTet1 = attribute(label='IMuxFwTet1',
                                    dtype=float,
                                    display_level='DispLevel.OPERATOR',
                                    access="AttrWriteType.READ",
@@ -1086,7 +1086,7 @@ class Nutaq(Device):
                                    doc=""
                                    )
 
-    Qmuxfwtet1 = attribute(label='Qmuxfwtet1',
+    QMuxFwTet1 = attribute(label='QMuxFwTet1',
                                    dtype=float,
                                    display_level='DispLevel.OPERATOR',
                                    access="AttrWriteType.READ",
@@ -1095,7 +1095,7 @@ class Nutaq(Device):
                                    doc=""
                                    )
 
-    Imuxfwtet2 = attribute(label='Imuxfwtet2',
+    IMuxFwTet2 = attribute(label='IMuxFwTet2',
                                    dtype=float,
                                    display_level='DispLevel.OPERATOR',
                                    access="AttrWriteType.READ",
@@ -1104,7 +1104,7 @@ class Nutaq(Device):
                                    doc=""
                                    )
 
-    Qmuxfwtet2 = attribute(label='Qmuxfwtet2',
+    QMuxFwTet2 = attribute(label='QMuxFwTet2',
                                    dtype=float,
                                    display_level='DispLevel.OPERATOR',
                                    access="AttrWriteType.READ",
@@ -1113,7 +1113,7 @@ class Nutaq(Device):
                                    doc=""
                                    )
 
-    Imuxfwcircin = attribute(label='Imuxfwcircin',
+    IMuxFwCircIn = attribute(label='IMuxFwCircIn',
                                    dtype=float,
                                    display_level='DispLevel.OPERATOR',
                                    access="AttrWriteType.READ",
@@ -1122,7 +1122,7 @@ class Nutaq(Device):
                                    doc=""
                                    )
 
-    Qmuxfwcircin = attribute(label='Qmuxfwcircin',
+    QMuxFwCircIn = attribute(label='QMuxFwCircIn',
                                    dtype=float,
                                    display_level='DispLevel.OPERATOR',
                                    access="AttrWriteType.READ",
@@ -1131,7 +1131,7 @@ class Nutaq(Device):
                                    doc=""
                                    )
 
-    Ampcav = attribute(label='Ampcav',
+    AmpCav = attribute(label='AmpCav',
                                    dtype=float,
                                    display_level='DispLevel.OPERATOR',
                                    access="AttrWriteType.READ",
@@ -1140,7 +1140,7 @@ class Nutaq(Device):
                                    doc=""
                                    )
 
-    Ampfw = attribute(label='Ampfw',
+    AmpFw = attribute(label='AmpFw',
                                    dtype=float,
                                    display_level='DispLevel.OPERATOR',
                                    access="AttrWriteType.READ",
@@ -1149,7 +1149,7 @@ class Nutaq(Device):
                                    doc=""
                                    )
 
-    Angcavfw = attribute(label='Angcavfw',
+    AngCavFw = attribute(label='AngCavFw',
                                    dtype=float,
                                    display_level='DispLevel.OPERATOR',
                                    access="AttrWriteType.READ",
@@ -1158,7 +1158,7 @@ class Nutaq(Device):
                                    doc=""
                                    )
 
-    Angcavl = attribute(label='Angcavl',
+    AngCavL = attribute(label='AngCavL',
                                    dtype=float,
                                    display_level='DispLevel.OPERATOR',
                                    access="AttrWriteType.READ",
@@ -1167,7 +1167,7 @@ class Nutaq(Device):
                                    doc=""
                                    )
 
-    Angfwl = attribute(label='Angfwl',
+    AngFwL = attribute(label='AngFwL',
                                    dtype=float,
                                    display_level='DispLevel.OPERATOR',
                                    access="AttrWriteType.READ",
@@ -1221,7 +1221,7 @@ class Nutaq(Device):
                                    doc=""
                                    )
 
-    Vcxocabledisconnected = attribute(label='Vcxocabledisconnected',
+    VcxoCableDisconnected = attribute(label='VcxoCableDisconnected',
                                    dtype=float,
                                    display_level='DispLevel.OPERATOR',
                                    access="AttrWriteType.READ",
@@ -1230,7 +1230,7 @@ class Nutaq(Device):
                                    doc=""
                                    )
 
-    Tuningon = attribute(label='Tuningon',
+    TuningOn = attribute(label='TuningOn',
                                    dtype=float,
                                    display_level='DispLevel.OPERATOR',
                                    access="AttrWriteType.READ",
@@ -1239,7 +1239,7 @@ class Nutaq(Device):
                                    doc=""
                                    )
 
-    Tuningonfwmintuningenablelatch = attribute(label='Tuningonfwmintuningenablelatch',
+    TuningOnFwMinTuningEnableLatch = attribute(label='TuningOnFwMinTuningEnableLatch',
                                    dtype=float,
                                    display_level='DispLevel.OPERATOR',
                                    access="AttrWriteType.READ",
@@ -1248,7 +1248,7 @@ class Nutaq(Device):
                                    doc=""
                                    )
 
-    Frequp = attribute(label='Frequp',
+    FreqUp = attribute(label='FreqUp',
                                    dtype=float,
                                    display_level='DispLevel.OPERATOR',
                                    access="AttrWriteType.READ",
@@ -1257,7 +1257,7 @@ class Nutaq(Device):
                                    doc=""
                                    )
 
-    Manualtuningon = attribute(label='Manualtuningon',
+    ManualTuningOn = attribute(label='ManualTuningOn',
                                    dtype=float,
                                    display_level='DispLevel.OPERATOR',
                                    access="AttrWriteType.READ",
@@ -1266,7 +1266,7 @@ class Nutaq(Device):
                                    doc=""
                                    )
 
-    Manualtuningfrequp = attribute(label='Manualtuningfrequp',
+    ManualTuningFreqUp = attribute(label='ManualTuningFreqUp',
                                    dtype=float,
                                    display_level='DispLevel.OPERATOR',
                                    access="AttrWriteType.READ",
@@ -1426,84 +1426,84 @@ class Nutaq(Device):
 
 
     @DebugIt()
-    def get_Kpa(self):
+    def get_KpA(self):
         return self.read_direct(0)
 
 
     @DebugIt()
-    def get_Kia(self):
+    def get_KiA(self):
         return self.read_direct(1)
 
 
     @DebugIt()
-    def get_Phaseshiftcav(self):
+    def get_PhaseShiftCav(self):
         return self.read_angle(2)
 
 
     @DebugIt()
-    def get_Phaseshiftfwcav(self):
+    def get_PhaseShiftFwcav(self):
         return self.read_angle(3)
 
 
     @DebugIt()
-    def get_Phaseshiftfwtet1(self):
+    def get_PhaseShiftFwtet1(self):
         return self.read_angle(4)
 
 
     @DebugIt()
-    def get_Phaseshiftfwtet2(self):
+    def get_PhaseShiftFwtet2(self):
         return self.read_angle(5)
 
 
     @DebugIt()
-    def get_Pilimita(self):
+    def get_PilimitA(self):
         return self.read_milivolts(6)
 
 
     @DebugIt()
-    def get_Samplestoaverage(self):
+    def get_SamplesToAverage(self):
         return self.read_direct(7)
 
 
     @DebugIt()
-    def get_Filterstages(self):
+    def get_FilterStages(self):
         return self.read_direct(8)
 
 
     @DebugIt()
-    def get_Phaseshiftfwcircin(self):
+    def get_PhaseShiftFwcircin(self):
         return self.read_angle(9)
 
 
     @DebugIt()
-    def get_Phaseshiftcontrolsignaltet1(self):
+    def get_PhaseShiftControlSignalTet1(self):
         return self.read_angle(10)
 
 
     @DebugIt()
-    def get_Phaseshiftcontrolsignaltet2(self):
+    def get_PhaseShiftControlSignalTet2(self):
         return self.read_angle(11)
 
 
     @DebugIt()
-    def get_Gaintetrode1(self):
+    def get_GainTetrode1(self):
         #@todo: insert here your code ...
         pass
 
 
     @DebugIt()
-    def get_Gaintetrode2(self):
+    def get_GainTetrode2(self):
         #@todo: insert here your code ...
         pass
 
 
     @DebugIt()
-    def get_Automaticstartupenable(self):
+    def get_AutomaticStartupEnable(self):
         return self.read_direct(15)
 
 
     @DebugIt()
-    def get_Commandstart(self):
+    def get_CommandStart(self):
         return self.read_direct(16)
 
 
@@ -1528,145 +1528,145 @@ class Nutaq(Device):
 
 
     @DebugIt()
-    def get_Phaseincreaserate(self):
+    def get_PhaseIncreaseRate(self):
         return self.read_direct(23)
 
 
     @DebugIt()
-    def get_Gainol(self):
+    def get_GainOl(self):
         #@todo: insert here your code ...
         pass
 
 
     @DebugIt()
-    def get_Sparegpiooutput01(self):
+    def get_SpareGpioOutput01(self):
         return self.read_direct(28)
 
 
     @DebugIt()
-    def get_Sparegpiooutput02(self):
+    def get_SpareGpioOutput02(self):
         return self.read_direct(29)
 
 
     @DebugIt()
-    def get_Sparegpiooutput03(self):
+    def get_SpareGpioOutput03(self):
         return self.read_direct(30)
 
 
     @DebugIt()
-    def get_Sparegpiooutput04(self):
+    def get_SpareGpioOutput04(self):
         return self.read_direct(31)
 
 
     @DebugIt()
-    def get_Fdlswtrigger(self):
+    def get_FdlSwTrigger(self):
         return self.read_direct(32)
 
 
     @DebugIt()
-    def get_Loopenablea(self):
+    def get_LoopEnableA(self):
         return self.read_direct(100)
 
 
     @DebugIt()
-    def get_Adcsphaseshiftenablea(self):
+    def get_AdcsPhaseshiftEnableA(self):
         return self.read_direct(101)
 
 
     @DebugIt()
-    def get_Dacsphaseshiftenablea(self):
+    def get_DacsPhaseShiftEnableA(self):
         return self.read_direct(102)
 
 
     @DebugIt()
-    def get_Squarerefenablea(self):
+    def get_SquarerefEnableA(self):
         return self.read_direct(103)
 
 
     @DebugIt()
-    def get_Freqsquarea(self):
+    def get_FreqsquareA(self):
         #@todo: insert here your code ...
         pass
 
 
     @DebugIt()
-    def get_Resetkia(self):
+    def get_ResetkiA(self):
         return self.read_direct(105)
 
 
     @DebugIt()
-    def get_Lookrefa(self):
+    def get_LookRefA(self):
         return self.read_direct(106)
 
 
     @DebugIt()
-    def get_Quadrantselectiona(self):
+    def get_QuadrantSelectionA(self):
         return self.read_direct(107)
 
 
     @DebugIt()
-    def get_Voltagerateincreasea(self):
+    def get_VoltageRateIncreaseA(self):
         return self.read_direct(110)
 
 
     @DebugIt()
-    def get_Loopinputselection(self):
+    def get_LoopInputSelection(self):
         return self.read_direct(112)
 
 
     @DebugIt()
-    def get_Pulsemodeenablea(self):
+    def get_PulseModeEnableA(self):
         return self.read_direct(200)
 
 
     @DebugIt()
-    def get_Automaticconditioningenablea(self):
+    def get_AutomaticConditioningEnableA(self):
         return self.read_direct(201)
 
 
     @DebugIt()
-    def get_Conditioningdutyciclea(self):
+    def get_ConditioningdutyCicleA(self):
         #@todo: insert here your code ...
         pass
 
 
     @DebugIt()
-    def get_Tuningenablea(self):
+    def get_TuningEnableA(self):
         return self.read_direct(300)
 
 
     @DebugIt()
-    def get_Tuningposena(self):
+    def get_TuningPosEnA(self):
         return self.read_direct(301)
 
 
     @DebugIt()
-    def get_Numstepsa(self):
+    def get_NumStepsA(self):
         return self.read_direct(302)
 
 
     @DebugIt()
-    def get_Pulsesfrequency(self):
+    def get_PulsesFrequency(self):
         return self.read_direct(303)
 
 
     @DebugIt()
-    def get_Phaseoffseta(self):
+    def get_PhaseOffsetA(self):
         return self.read_angle(304)
 
 
     @DebugIt()
-    def get_Movea(self):
+    def get_MoveA(self):
         return self.read_direct(305)
 
 
     @DebugIt()
-    def get_Moveupa(self):
+    def get_MoveupA(self):
         return self.read_direct(306)
 
 
     @DebugIt()
-    def get_Tuningreseta(self):
+    def get_TuningresetA(self):
         return self.read_direct(307)
 
 
@@ -1676,35 +1676,35 @@ class Nutaq(Device):
 
 
     @DebugIt()
-    def get_Marginupa(self):
+    def get_MarginupA(self):
         #@todo: insert here your code ...
         pass
 
 
     @DebugIt()
-    def get_Marginlowa(self):
+    def get_MarginlowA(self):
         #@todo: insert here your code ...
         pass
 
 
     @DebugIt()
-    def get_Epsitckdisable(self):
+    def get_EpsItckDisable(self):
         return self.read_direct(400)
 
 
     @DebugIt()
-    def get_Fimitckdisable(self):
+    def get_FimItckDisable(self):
         return self.read_direct(401)
 
 
     @DebugIt()
-    def get_Mdivider(self):
+    def get_MDivider(self):
         #@todo: insert here your code ...
         pass
 
 
     @DebugIt()
-    def get_Ndivider(self):
+    def get_NDivider(self):
         #@todo: insert here your code ...
         pass
 
@@ -1715,32 +1715,32 @@ class Nutaq(Device):
 
 
     @DebugIt()
-    def get_Mux0divider(self):
+    def get_Mux0Divider(self):
         return self.read_direct(503)
 
 
     @DebugIt()
-    def get_Mux1divider(self):
+    def get_Mux1Divider(self):
         return self.read_direct(504)
 
 
     @DebugIt()
-    def get_Mux2divider(self):
+    def get_Mux2Divider(self):
         return self.read_direct(505)
 
 
     @DebugIt()
-    def get_Mux3divider(self):
+    def get_Mux3Divider(self):
         return self.read_direct(506)
 
 
     @DebugIt()
-    def get_Mux4divider(self):
+    def get_Mux4Divider(self):
         return self.read_direct(507)
 
 
     @DebugIt()
-    def get_Sendword(self):
+    def get_SendWord(self):
         return self.read_direct(508)
 
 
@@ -1750,7 +1750,7 @@ class Nutaq(Device):
 
 
     @DebugIt()
-    def get_Vcxooutputinversion(self):
+    def get_VcxoOutputInversion(self):
         return self.read_direct(510)
 
 
@@ -1811,36 +1811,36 @@ class Nutaq(Device):
         return self._Qref
 
     @DebugIt()
-    def read_IfwcavLoops(self):
-        return self._IfwcavLoops
+    def read_IFwCavLoops(self):
+        return self._IFwCavLoops
 
     @DebugIt()
-    def read_QfwcavLoops(self):
-        return self._QfwcavLoops
+    def read_QFwCavLoops(self):
+        return self._QFwCavLoops
 
     @DebugIt()
-    def read_Ifwtet1Loops(self):
-        return self._Ifwtet1Loops
+    def read_IFwTet1Loops(self):
+        return self._IFwTet1Loops
 
     @DebugIt()
-    def read_Qfwtet1Loops(self):
-        return self._Qfwtet1Loops
+    def read_QFwTet1Loops(self):
+        return self._QFwTet1Loops
 
     @DebugIt()
-    def read_Ifwtet2Loops(self):
-        return self._Ifwtet2Loops
+    def read_IFwTet2Loops(self):
+        return self._IFwTet2Loops
 
     @DebugIt()
-    def read_Qfwtet2Loops(self):
-        return self._Qfwtet2Loops
+    def read_QFwTet2Loops(self):
+        return self._QFwTet2Loops
 
     @DebugIt()
-    def read_IfwcircinLoops(self):
-        return self._IfwcircinLoops
+    def read_IFwCircInLoops(self):
+        return self._IFwCircInLoops
 
     @DebugIt()
-    def read_QfwcircinLoops(self):
-        return self._QfwcircinLoops
+    def read_QFwCircInLoops(self):
+        return self._QFwCircInLoops
 
     @DebugIt()
     def read_Imo(self):
@@ -1867,64 +1867,64 @@ class Nutaq(Device):
         return self._Qspare2
 
     @DebugIt()
-    def read_Imuxcav(self):
-        return self._Imuxcav
+    def read_IMuxCav(self):
+        return self._IMuxCav
 
     @DebugIt()
-    def read_Qmuxcav(self):
-        return self._Qmuxcav
+    def read_QMuxCav(self):
+        return self._QMuxCav
 
     @DebugIt()
-    def read_Imuxfwcav(self):
-        return self._Imuxfwcav
+    def read_IMuxFwCav(self):
+        return self._IMuxFwCav
 
     @DebugIt()
-    def read_Qmuxfwcav(self):
-        return self._Qmuxfwcav
+    def read_QMuxFwCav(self):
+        return self._QMuxFwCav
 
     @DebugIt()
-    def read_Imuxfwtet1(self):
-        return self._Imuxfwtet1
+    def read_IMuxFwTet1(self):
+        return self._IMuxFwTet1
 
     @DebugIt()
-    def read_Qmuxfwtet1(self):
-        return self._Qmuxfwtet1
+    def read_QMuxFwTet1(self):
+        return self._QMuxFwTet1
 
     @DebugIt()
-    def read_Imuxfwtet2(self):
-        return self._Imuxfwtet2
+    def read_IMuxFwTet2(self):
+        return self._IMuxFwTet2
 
     @DebugIt()
-    def read_Qmuxfwtet2(self):
-        return self._Qmuxfwtet2
+    def read_QMuxFwTet2(self):
+        return self._QMuxFwTet2
 
     @DebugIt()
-    def read_Imuxfwcircin(self):
-        return self._Imuxfwcircin
+    def read_IMuxFwCircIn(self):
+        return self._IMuxFwCircIn
 
     @DebugIt()
-    def read_Qmuxfwcircin(self):
-        return self._Qmuxfwcircin
+    def read_QMuxFwCircIn(self):
+        return self._QMuxFwCircIn
 
     @DebugIt()
-    def read_Ampcav(self):
-        return self._Ampcav
+    def read_AmpCav(self):
+        return self._AmpCav
 
     @DebugIt()
-    def read_Ampfw(self):
-        return self._Ampfw
+    def read_AmpFw(self):
+        return self._AmpFw
 
     @DebugIt()
-    def read_Angcavfw(self):
-        return self._Angcavfw
+    def read_AngCavFw(self):
+        return self._AngCavFw
 
     @DebugIt()
-    def read_Angcavl(self):
-        return self._Angcavl
+    def read_AngCavL(self):
+        return self._AngCavL
 
     @DebugIt()
-    def read_Angfwl(self):
-        return self._Angfwl
+    def read_AngFwL(self):
+        return self._AngFwL
 
     @DebugIt()
     def read_Vaccum1(self):
@@ -1947,28 +1947,28 @@ class Nutaq(Device):
         return self._VcxoLocked
 
     @DebugIt()
-    def read_Vcxocabledisconnected(self):
-        return self._Vcxocabledisconnected
+    def read_VcxoCableDisconnected(self):
+        return self._VcxoCableDisconnected
 
     @DebugIt()
-    def read_Tuningon(self):
-        return self._Tuningon
+    def read_TuningOn(self):
+        return self._TuningOn
 
     @DebugIt()
-    def read_Tuningonfwmintuningenablelatch(self):
-        return self._Tuningonfwmintuningenablelatch
+    def read_TuningOnFwMinTuningEnableLatch(self):
+        return self._TuningOnFwMinTuningEnableLatch
 
     @DebugIt()
-    def read_Frequp(self):
-        return self._Frequp
+    def read_FreqUp(self):
+        return self._FreqUp
 
     @DebugIt()
-    def read_Manualtuningon(self):
-        return self._Manualtuningon
+    def read_ManualTuningOn(self):
+        return self._ManualTuningOn
 
     @DebugIt()
-    def read_Manualtuningfrequp(self):
-        return self._Manualtuningfrequp
+    def read_ManualTuningFreqUp(self):
+        return self._ManualTuningFreqUp
 
     @DebugIt()
     def read_EpsItckDelay(self):
@@ -2004,46 +2004,46 @@ class Nutaq(Device):
         self._Qerroraccum = self.read_diag_milivolts(11)
         self._Iref = self.read_diag_milivolts(12)
         self._Qref = self.read_diag_milivolts(13)
-        self._IfwcavLoops = self.read_diag_milivolts(14)
-        self._QfwcavLoops = self.read_diag_milivolts(15)
-        self._Ifwtet1Loops = self.read_diag_milivolts(16)
-        self._Qfwtet1Loops = self.read_diag_milivolts(17)
-        self._Ifwtet2Loops = self.read_diag_milivolts(18)
-        self._Qfwtet2Loops = self.read_diag_milivolts(19)
-        self._IfwcircinLoops = self.read_diag_milivolts(20)
-        self._QfwcircinLoops = self.read_diag_milivolts(21)
+        self._IFwCavLoops = self.read_diag_milivolts(14)
+        self._QFwCavLoops = self.read_diag_milivolts(15)
+        self._IFwTet1Loops = self.read_diag_milivolts(16)
+        self._QFwTet1Loops = self.read_diag_milivolts(17)
+        self._IFwTet2Loops = self.read_diag_milivolts(18)
+        self._QFwTet2Loops = self.read_diag_milivolts(19)
+        self._IFwCircInLoops = self.read_diag_milivolts(20)
+        self._QFwCircInLoops = self.read_diag_milivolts(21)
         self._Imo = self.read_diag_milivolts(22)
         self._Qmo = self.read_diag_milivolts(23)
         self._Ispare1 = self.read_diag_milivolts(24)
         self._Qspare1 = self.read_diag_milivolts(25)
         self._Ispare2 = self.read_diag_milivolts(26)
         self._Qspare2 = self.read_diag_milivolts(27)
-        self._Imuxcav = self.read_diag_milivolts(28)
-        self._Qmuxcav = self.read_diag_milivolts(29)
-        self._Imuxfwcav = self.read_diag_milivolts(30)
-        self._Qmuxfwcav = self.read_diag_milivolts(31)
-        self._Imuxfwtet1 = self.read_diag_milivolts(32)
-        self._Qmuxfwtet1 = self.read_diag_milivolts(33)
-        self._Imuxfwtet2 = self.read_diag_milivolts(34)
-        self._Qmuxfwtet2 = self.read_diag_milivolts(35)
-        self._Imuxfwcircin = self.read_diag_milivolts(36)
-        self._Qmuxfwcircin = self.read_diag_milivolts(37)
-        self._Ampcav = self.read_diag_milivolts(38)
-        self._Ampfw = self.read_diag_milivolts(39)
-        self._Angcavfw = self.read_diag_angle(40)
-        self._Angcavl = self.read_diag_angle(41)
-        self._Angfwl = self.read_diag_angle(42)
+        self._IMuxCav = self.read_diag_milivolts(28)
+        self._QMuxCav = self.read_diag_milivolts(29)
+        self._IMuxFwCav = self.read_diag_milivolts(30)
+        self._QMuxFwCav = self.read_diag_milivolts(31)
+        self._IMuxFwTet1 = self.read_diag_milivolts(32)
+        self._QMuxFwTet1 = self.read_diag_milivolts(33)
+        self._IMuxFwTet2 = self.read_diag_milivolts(34)
+        self._QMuxFwTet2 = self.read_diag_milivolts(35)
+        self._IMuxFwCircIn = self.read_diag_milivolts(36)
+        self._QMuxFwCircIn = self.read_diag_milivolts(37)
+        self._AmpCav = self.read_diag_milivolts(38)
+        self._AmpFw = self.read_diag_milivolts(39)
+        self._AngCavFw = self.read_diag_angle(40)
+        self._AngCavL = self.read_diag_angle(41)
+        self._AngFwL = self.read_diag_angle(42)
         self._Vaccum1 = self.read_direct(43)
         self._Vaccum2 = self.read_direct(44)
         self._VcxoPowered = self.read_direct(50)
         self._VcxoRef = self.read_direct(51)
         self._VcxoLocked = self.read_direct(52)
-        self._Vcxocabledisconnected = self.read_direct(53)
-        self._Tuningon = self.read_direct(299)
-        self._Tuningonfwmintuningenablelatch = self.read_direct(300)
-        self._Frequp = self.read_direct(301)
-        self._Manualtuningon = self.read_direct(302)
-        self._Manualtuningfrequp = self.read_direct(303)
+        self._VcxoCableDisconnected = self.read_direct(53)
+        self._TuningOn = self.read_direct(299)
+        self._TuningOnFwMinTuningEnableLatch = self.read_direct(300)
+        self._FreqUp = self.read_direct(301)
+        self._ManualTuningOn = self.read_direct(302)
+        self._ManualTuningFreqUp = self.read_direct(303)
         self._EpsItckDelay = self.read_direct(400)
         self._FimItckDelay = self.read_direct(401)
         self._FdlTrigHwInput = self.read_direct(402)

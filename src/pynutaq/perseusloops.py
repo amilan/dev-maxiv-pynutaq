@@ -5,7 +5,7 @@ from perseusdefs import *
 from mo1000 import Mo1000
 from mi125 import Mi125
 from adp_exception import *
-from perseusdecorators import ensure_read_method, ensure_write_method
+from perseusdecorators import ensure_read_method, ensure_write_method, ensure_connect_method
 
 MO1000_BOARD_NUMBER = 1
 MI125_BOARD_NUMBER = 2
@@ -42,7 +42,7 @@ class PerseusLoops(object):
 
             print "Init DONE"
 
-    @ensure_write_method
+    @ensure_connect_method
     def connect(self):
         eapi.connect_cce(PERSEUS_LOOP_IP, self._board_state)
 

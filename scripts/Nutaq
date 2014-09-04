@@ -1,0 +1,6 @@
+#!/bin/bash
+
+cd /opt/dev-maxiv-pynutaq/src/pynutaq
+
+python nutaq.py $*
+

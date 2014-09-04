@@ -5,7 +5,7 @@ from perseusdefs import *
 from mo1000 import Mo1000
 from mi125 import Mi125
 from adp_exception import *
-from perseusdecorators import ensure_read_method, ensure_write_method
+from perseusdecorators import ensure_read_method, ensure_write_method, ensure_connect_method
 
 MI125_BOARD_NUMBER = 1
 
@@ -20,15 +20,15 @@ class PerseusDiags(object):
             self.mi125 = Mi125(self._board_state, MI125_BOARD_NUMBER)
             print "DONE"
 
-            self.configure_gpio_inputs_outputs()
-
-            self.configure_vcxo()
-
-            self.configure_loops_registers()
+            # self.configure_gpio_inputs_outputs()
+            #
+            # self.configure_vcxo()
+            #
+            # self.configure_loops_registers()
 
             print "Init DONE"
 
-    @ensure_write_method
+    @ensure_connect_method
     def connect(self):
         eapi.connect_cce(PERSEUS_DIAG_IP, self._board_state)
 

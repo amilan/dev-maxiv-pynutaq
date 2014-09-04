@@ -16,8 +16,8 @@ from PyTango.server import device_property
 from nutaqattributes import attributes_dict
 from nutaqdefs import *
 from perseusdefs import *
-from perseusloops import PerseusLoops
-from perseussimulated import PerseusSimulated
+
+from perseus import Perseus
 
 
 class Nutaq(Device):
@@ -26,14 +26,12 @@ class Nutaq(Device):
 {% endblock %}
 
 {% block static_methods %}
-    isSimulated = device_property(dtype=bool, default_value=False)
+    perseusType = device_property(dtype=str, default_value='simulated')
 
     def init_device(self):
+        Device.init_device(self)
         try:
-            if self.isSimulated:
-                self.perseus = PerseusSimulated()
-            else:
-                self.perseus = PerseusLoops()
+            self.perseus = Perseus().new_perseus(self.perseusType)
             self.set_state(DevState.ON)
         except Exception, e:
             print e

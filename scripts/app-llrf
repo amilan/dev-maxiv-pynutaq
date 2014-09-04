@@ -1,0 +1,9 @@
+#!/bin/bash
+
+echo "The number of arguments is: $#"
+if [[ $# -eq 1 ]]; then
+taurusgui tgconf_llrfgui --taurus-polling-period $*
+else
+taurusgui tgconf_llrfgui $*
+fi
+

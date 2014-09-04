@@ -3,11 +3,11 @@
 {% for attribute in attributes %}
     {{attribute.name}} = attribute(label='{{attribute.name}}',
                                    dtype={{attribute.dtype}},
-                                   display_level='DispLevel.OPERATOR',
+                                   display_level=DispLevel.OPERATOR,
                                    {% if attribute.access == 'read_write' %}
-                                   access="AttrWriteType.READ_WRITE",
+                                   access=AttrWriteType.READ_WRITE,
                                    {% elif attribute.access == 'read' %}
-                                   access="AttrWriteType.READ",
+                                   access=AttrWriteType.READ,
                                    {% endif %}
                                    {% if attribute.type == 'mv' %}
                                    unit='mV',
@@ -17,7 +17,9 @@
                                    unit='',
                                    {% endif %}
                                    format='6.4f',
+                                   {% if attribute.dtype != 'bool' %}
                                    min_value={{attribute.min_value}}, max_value={{attribute.max_value}},
+                                   {% endif %}
                                    fget="get_{{attribute.name}}",
                                    fset="set_{{attribute.name}}",
                                    doc=""
@@ -27,10 +29,10 @@
 {% endblock %}
 {% block diag_attrs_definition %}
 {% for attr in diags_attributes %}
-    {{attr.name}} = attribute(label='{{attr.name}}',
+    Diag_{{attr.name}} = attribute(label='Diag_{{attr.name}}',
                                    dtype={{attr.dtype}},
-                                   display_level='DispLevel.OPERATOR',
-                                   access="AttrWriteType.READ",
+                                   display_level=DispLevel.OPERATOR,
+                                   access=AttrWriteType.READ,
                                    {% if attr.type == 'mv' %}
                                    unit='mV',
                                    {% elif attr.type == 'angle' %}
