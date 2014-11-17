@@ -1148,6 +1148,11 @@ class NutaqDiags(Device):
 
     perseusType = device_property(dtype=str, default_value='simulated')
 
+    # start protected zone ====
+    def init_itck_matrix(self):
+        pass
+    # end protected zone ====
+
     def init_device(self):
         Device.init_device(self)
         try:
