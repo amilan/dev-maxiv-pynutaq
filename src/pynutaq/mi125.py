@@ -25,7 +25,7 @@ class Mi125(object):
 
     @ensure_write_method
     def reset(self):
-        return ret = eapi.MI125_mi125_reset_send(self._board_state, self.board_number)
+        return eapi.MI125_mi125_reset_send(self._board_state, self.board_number)
 
     def read_temperature(self):
         # tempmode = "templc"
@@ -49,7 +49,8 @@ class Mi125(object):
         return eapi.MI125_mi125_set_config_send(self._board_state, self.board_number, groupch, lvds, randmode, binmode)
 
     def set_clock_source(self):
-        clksrc = "BOTTOMFMC"
+        #clksrc = "BOTTOMFMC"
+        clksrc = "EXT"
         clksrc = getattr(eapi, "MI125_CLKSRC" + clksrc.upper())
         self._set_clock_source(clksrc)
         ret, channellanecalib, channelcalibstatus = eapi.MI125_mi125_get_channelcalibstatus_send(self._board_state,
@@ -57,4 +58,4 @@ class Mi125(object):
 
     @ensure_write_method
     def _set_clock_source(self, clksrc):
-        return ret = eapi.MI125_mi125_set_clksrc_send(self._board_state, self.board_number, clksrc)
+        return eapi.MI125_mi125_set_clksrc_send(self._board_state, self.board_number, clksrc)
