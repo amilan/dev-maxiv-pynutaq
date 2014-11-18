@@ -44,27 +44,27 @@ class PerseusLoops(object):
 
     @ensure_connect_method
     def connect(self):
-        eapi.connect_cce(PERSEUS_LOOP_IP, self._board_state)
+        return eapi.connect_cce(PERSEUS_LOOP_IP, self._board_state)
 
     @ensure_write_method
     def custom_write(self, register, data):
         """
            @todo: this method should be merge with self.write when it will be supported in all platforms.
         """
-        eapi.custom_register_write_send(self._board_state, register, data)
+        return eapi.custom_register_write_send(self._board_state, register, data)
 
     @ensure_write_method
     def write(self, address, value):
-        eapi.memory_write_send(self._board_state, address, value)
+        return eapi.memory_write_send(self._board_state, address, value)
 
     @ensure_read_method
     def read(self, address):
-        eapi.memory_read_send(self._board_state, address)
+        return eapi.memory_read_send(self._board_state, address)
 
     def configure_gpio_inputs_outputs(self):
         print "configuring GPIO inputs/outputs"
         register = 13
-        values = [0x1, 0x0, 0x1ffff, 0x20000, 0x30001, 0x30001, 0x40001, 0x40000]
+        values = [0x1, 0x0, 0x1ffff, 0x20000, 0x30000, 0x30001, 0x40001, 0x40000]
         for value in values:
             self.custom_write(register, value)
 
