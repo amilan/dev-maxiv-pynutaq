@@ -18,7 +18,7 @@ from perseusdefs import *
 from perseus import Perseus
 
 
-class NutaqDiags(Device):
+class NutaqDiag(Device):
     __metaclass__ = DeviceMeta
 
     Rvtet1 = attribute(label='Rvtet1',
@@ -1100,7 +1100,7 @@ class NutaqDiags(Device):
                                    doc=""
                                    )
 
-    Diag_LandayMovingUpLed = attribute(label='Diag_LandayMovingUpLed',
+    Diag_LandauMovingUpLed = attribute(label='Diag_LandauMovingUpLed',
                                    dtype=float,
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
@@ -1879,8 +1879,8 @@ class NutaqDiags(Device):
         return self._Diag_LandauDirMotor
 
     @DebugIt()
-    def read_Diag_LandayMovingUpLed(self):
-        return self._Diag_LandayMovingUpLed
+    def read_Diag_LandauMovingUpLed(self):
+        return self._Diag_LandauMovingUpLed
 
     @DebugIt()
     def read_Diag_FdlTriggerForDiagnosticsPurposes(self):
