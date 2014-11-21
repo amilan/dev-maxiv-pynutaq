@@ -9,6 +9,7 @@ from perseusdecorators import ensure_read_method, ensure_write_method, ensure_co
 
 MO1000_BOARD_NUMBER = 1
 MI125_BOARD_NUMBER = 2
+MI125_CLK_SRC = "bottomfmc"
 
 class PerseusLoops(object):
 
@@ -23,7 +24,7 @@ class PerseusLoops(object):
             self.mo1000 = Mo1000(self._board_state, MO1000_BOARD_NUMBER)
 
             print "Mi125 2 initialization..."
-            self.mi125 = Mi125(self._board_state, MI125_BOARD_NUMBER)
+            self.mi125 = Mi125(self._board_state, MI125_BOARD_NUMBER, MI125_CLK_SRC)
             print "DONE"
 
             self.mo1000.enable_dac_outputs()

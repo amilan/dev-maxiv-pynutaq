@@ -8,6 +8,7 @@ from adp_exception import *
 from perseusdecorators import ensure_read_method, ensure_write_method, ensure_connect_method
 
 MI125_BOARD_NUMBER = 1
+MI125_CLK_SRC = "ext"
 
 class PerseusDiags(object):
 
@@ -17,7 +18,7 @@ class PerseusDiags(object):
             self.connect()
 
             print "Mi125 2 initialization..."
-            self.mi125 = Mi125(self._board_state, MI125_BOARD_NUMBER)
+            self.mi125 = Mi125(self._board_state, MI125_BOARD_NUMBER, MI125_CLK_SRC)
             print "DONE"
 
             # self.configure_gpio_inputs_outputs()

@@ -18,7 +18,7 @@ from perseusdefs import *
 from perseus import Perseus
 
 
-class NutaqDiag(Device):
+class NutaqDiags(Device):
     __metaclass__ = DeviceMeta
 
     Rvtet1 = attribute(label='Rvtet1',

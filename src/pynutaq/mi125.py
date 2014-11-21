@@ -17,7 +17,7 @@ class Mi125(object):
         self.read_temperature()
         self.m125_configure()
 
-        self.set_clock_source()
+        self.set_clock_source(clksrc)
 
     @ensure_write_method
     def power_up(self):
@@ -48,9 +48,11 @@ class Mi125(object):
     def _set_config(self, groupch, lvds, randmode, binmode):
         return eapi.MI125_mi125_set_config_send(self._board_state, self.board_number, groupch, lvds, randmode, binmode)
 
-    def set_clock_source(self):
-        #clksrc = "BOTTOMFMC"
-        clksrc = "EXT"
+    def set_clock_source(self, clksrc):
+        if clksrc.lower() == 'bottomfmc':
+            clksrc = "BOTTOMFMC"
+        elif clksrc.lower() == 'ext':
+            clksrc = "EXT"
         clksrc = getattr(eapi, "MI125_CLKSRC" + clksrc.upper())
         self._set_clock_source(clksrc)
         ret, channellanecalib, channelcalibstatus = eapi.MI125_mi125_get_channelcalibstatus_send(self._board_state,
