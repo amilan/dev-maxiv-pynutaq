@@ -5,7 +5,7 @@ from perseusdecorators import ensure_write_method
 
 class Mi125(object):
 
-    def __init__(self, board_state, board_number):
+    def __init__(self, board_state, board_number, clksrc):
 
         self._board_state = board_state
         self.board_number = board_number
