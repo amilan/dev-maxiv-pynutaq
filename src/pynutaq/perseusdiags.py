@@ -51,7 +51,7 @@ class PerseusDiags(object):
     def configure_gpio_inputs_outputs(self):
         print "configuring GPIO inputs/outputs"
         register = 13
-        values = [0x1, 0x0, 0x1ffff, 0x20000, 0x30000, 0x30001, 0x40001, 0x40000]
+        values = [0x1, 0x0, 0x1ffff, 0x20000, 0x30001, 0x30000, 0x40001, 0x40000]
         for value in values:
             self.custom_write(register, value)
 
