@@ -3,7 +3,7 @@
 #!/usr/bin/env python
 
 ###############################################################################
-##     Nutaq device server. 
+##     NutaqDiags device server. 
 ##
 ##     Copyright (C) 2013  Max IV Laboratory, Lund Sweden
 ##
@@ -36,7 +36,7 @@ from perseusdefs import *
 from perseus import Perseus
 
 
-class Nutaq(Device):
+class NutaqDiags(Device):
     __metaclass__ = DeviceMeta
 
 {% endblock %}
@@ -173,5 +173,5 @@ class Nutaq(Device):
         self.perseus.write(DIAGNOSTICS_OFFSET, value)
 
 if __name__ == "__main__":
-    run([Nutaq])
+    run([NutaqDiags])
 {% endblock %}
