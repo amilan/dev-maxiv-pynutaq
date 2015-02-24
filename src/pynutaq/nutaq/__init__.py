@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 ###############################################################################
-##     PyNutaq device server. 
+##     Nutaq module include the implementation of the nutaq device servers
 ##
 ##     Copyright (C) 2013  Max IV Laboratory, Lund Sweden
 ##
@@ -19,8 +19,7 @@
 ##     along with this program.  If not, see [http://www.gnu.org/licenses/].
 ###############################################################################
 
-from boards import *
-from extra import *
 from nutaq import *
-from perseus import *
+from nutaqdiags import *
+from nutaqdefs import *
 

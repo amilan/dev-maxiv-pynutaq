@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 ###############################################################################
-##     PyNutaq device server. 
+##     Perseus constanst.
 ##
 ##     Copyright (C) 2013  Max IV Laboratory, Lund Sweden
 ##
@@ -19,8 +19,11 @@
 ##     along with this program.  If not, see [http://www.gnu.org/licenses/].
 ###############################################################################
 
-from boards import *
-from extra import *
-from nutaq import *
-from perseus import *
+__author__ = 'antmil'
 
+PERSEUS_LOOP_IP = '192.168.0.101'
+PERSEUS_DIAG_IP = '192.168.0.102'
+
+SETTINGS_WRITE_OFFSET = 0x70000040
+SETTINGS_READ_OFFSET = 0x70000044
+DIAGNOSTICS_OFFSET = 0x70000048
