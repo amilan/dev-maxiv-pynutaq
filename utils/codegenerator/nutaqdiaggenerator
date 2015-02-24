@@ -1,0 +1,11 @@
+#!/bin/bash
+
+CSVPATH="/home/antmil/Dropbox/0.- Lyrtech Registers Calculation and other excel files/CSVs Perseus Advanced"
+LOOPSFILENAME=settings_diags.csv
+DIAGSFILENAME=diags_diags.csv
+OUTPUTPATH=./build
+OUTPUTFILENAME=nutaqdiags.py
+
+mkdir -p $OUTPUTPATH
+python codegenerator.py "$CSVPATH/$LOOPSFILENAME" "$CSVPATH/$DIAGSFILENAME" $OUTPUTPATH/$OUTPUTFILENAME
+

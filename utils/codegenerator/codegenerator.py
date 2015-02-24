@@ -17,7 +17,7 @@ def generate_code(input_filename_loops, input_filename_diags, output_filename):
             attributes_list = list(csv.DictReader(fd, delimiter=';'))
 
         for attr in attributes_list:
-            attr['name'] = ''.join([a.capitalize() for a in attr['name'].replace('_', ' ').split()])
+            attr['name'] = ''.join([a.capitalize() for a in attr['name'].replace('_', ' ').replace('-',' ').split()])
 
         #for attr in attributes_list:
         #    attr['name'] = ''.join([a.capitalize() for a in attr['name'].split('_')])

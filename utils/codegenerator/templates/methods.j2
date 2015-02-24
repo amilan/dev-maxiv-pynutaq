@@ -37,14 +37,16 @@
 {% else %}
     @DebugIt()
     def get_{{attribute.name}}(self):
-        #@todo: insert here your code ...
-        pass
+        address = {{attribute.address}}
+        #@todo: add this method to special methods library ...
+        utils.get_{{attribute.name}}(self.perseus, address)
 
     {% if attribute.access == "read_write" %}
     @DebugIt()
     def set_{{attribute.name}}(self, {{attribute.name}}):
-        #@todo: insert here your code ...
-        pass
+        address = {{attribute.address}}
+        #@todo: add this method to special methods library ...
+        utils.get_{{attribute.name}}(self.perseus, {{attribute.name}}, address)
     {% endif %}
 
 {% endif %}

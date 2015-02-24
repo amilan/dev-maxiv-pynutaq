@@ -2032,7 +2032,7 @@ class Nutaq(Device):
     @DebugIt()
     def set_GainOl(self, GainOl):
         # start protected zone ====
-        value = 25 << 17 | int(value)
+        value = 25 << 17 | int(GainOl)
         self.perseus.write(SETTINGS_WRITE_OFFSET, value)
         # end protected zone ====
 
