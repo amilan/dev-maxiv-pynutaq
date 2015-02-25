@@ -2480,7 +2480,7 @@ class Nutaq(Device):
     def set_NDivider(self, NDivider):
         # start protected zone ====
         address = 501
-        value = MDivider - 1
+        value = NDivider - 1
         self.write_direct(value, address)
         # end protected zone ====
 

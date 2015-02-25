@@ -127,7 +127,7 @@ def get_NDivider(perseus, address):
 
 def set_NDivider(perseus, NDivider, address):
     try:
-        value = MDivider - 1
+        value = NDivider - 1
         write_direct(value, address)
     except Exception, e:
         raise e
