@@ -1,7 +1,23 @@
 #!/usr/bin/env python
-# -*- coding: utf-8 -*-
 
-"""Prototype for a LLRF python device server based on the Nutaq platform"""
+###############################################################################
+##     Nutaq device server in charge of the diagnostics for the LLRF system.
+##
+##     Copyright (C) 2013  Max IV Laboratory, Lund Sweden
+##
+##     This program is free software: you can redistribute it and/or modify
+##     it under the terms of the GNU General Public License as published by
+##     the Free Software Foundation, either version 3 of the License, or
+##     (at your option) any later version.
+##
+##     This program is distributed in the hope that it will be useful,
+##     but WITHOUT ANY WARRANTY; without even the implied warranty of
+##     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+##     GNU General Public License for more details.
+##
+##     You should have received a copy of the GNU General Public License
+##     along with this program.  If not, see [http://www.gnu.org/licenses/].
+###############################################################################
 
 import time
 import numpy
@@ -1100,7 +1116,7 @@ class NutaqDiags(Device):
                                    doc=""
                                    )
 
-    Diag_LandayMovingUpLed = attribute(label='Diag_LandayMovingUpLed',
+    Diag_LandauMovingUpLed = attribute(label='Diag_LandauMovingUpLed',
                                    dtype=float,
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
@@ -1147,6 +1163,11 @@ class NutaqDiags(Device):
 
 
     perseusType = device_property(dtype=str, default_value='simulated')
+
+    # start protected zone ====
+    def init_itck_matrix(self):
+        pass
+    # end protected zone ====
 
     def init_device(self):
         Device.init_device(self)
@@ -1874,8 +1895,8 @@ class NutaqDiags(Device):
         return self._Diag_LandauDirMotor
 
     @DebugIt()
-    def read_Diag_LandayMovingUpLed(self):
-        return self._Diag_LandayMovingUpLed
+    def read_Diag_LandauMovingUpLed(self):
+        return self._Diag_LandauMovingUpLed
 
     @DebugIt()
     def read_Diag_FdlTriggerForDiagnosticsPurposes(self):

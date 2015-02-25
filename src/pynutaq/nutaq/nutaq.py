@@ -1,7 +1,23 @@
 #!/usr/bin/env python
-# -*- coding: utf-8 -*-
 
-"""Prototype for a LLRF python device server based on the Nutaq platform"""
+###############################################################################
+##     Nutaq device server in charge of the loops for the LLRF system.
+##
+##     Copyright (C) 2013  Max IV Laboratory, Lund Sweden
+##
+##     This program is free software: you can redistribute it and/or modify
+##     it under the terms of the GNU General Public License as published by
+##     the Free Software Foundation, either version 3 of the License, or
+##     (at your option) any later version.
+##
+##     This program is distributed in the hope that it will be useful,
+##     but WITHOUT ANY WARRANTY; without even the implied warranty of
+##     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+##     GNU General Public License for more details.
+##
+##     You should have received a copy of the GNU General Public License
+##     along with this program.  If not, see [http://www.gnu.org/licenses/].
+###############################################################################
 
 import time
 import numpy
@@ -97,7 +113,7 @@ class Nutaq(Device):
                                    dtype=float,
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ_WRITE,
-                                   unit='mV',
+                                   unit='',
                                    format='6.4f',
                                    min_value=0, max_value=1000,
                                    fget="get_PilimitA",
@@ -272,15 +288,15 @@ class Nutaq(Device):
                                    doc=""
                                    )
 
-    VoltageRateIncrease = attribute(label='VoltageRateIncrease',
+    VoltageIncreaseRate = attribute(label='VoltageIncreaseRate',
                                    dtype=int,
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ_WRITE,
                                    unit='',
                                    format='6.4f',
                                    min_value=0, max_value=7,
-                                   fget="get_VoltageRateIncrease",
-                                   fset="set_VoltageRateIncrease",
+                                   fget="get_VoltageIncreaseRate",
+                                   fset="set_VoltageIncreaseRate",
                                    doc=""
                                    )
 
@@ -351,14 +367,14 @@ class Nutaq(Device):
                                    doc=""
                                    )
 
-    LoopEnableA = attribute(label='LoopEnableA',
+    SlowIqLoopEnable = attribute(label='SlowIqLoopEnable',
                                    dtype=bool,
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ_WRITE,
                                    unit='',
                                    format='6.4f',
-                                   fget="get_LoopEnableA",
-                                   fset="set_LoopEnableA",
+                                   fget="get_SlowIqLoopEnable",
+                                   fset="set_SlowIqLoopEnable",
                                    doc=""
                                    )
 
@@ -489,14 +505,14 @@ class Nutaq(Device):
                                    doc=""
                                    )
 
-    LoopsInputs = attribute(label='LoopsInputs',
+    PolarLoopsEnable = attribute(label='PolarLoopsEnable',
                                    dtype=bool,
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ_WRITE,
                                    unit='',
                                    format='6.4f',
-                                   fget="get_LoopsInputs",
-                                   fset="set_LoopsInputs",
+                                   fget="get_PolarLoopsEnable",
+                                   fset="set_PolarLoopsEnable",
                                    doc=""
                                    )
 
@@ -539,7 +555,7 @@ class Nutaq(Device):
                                    access=AttrWriteType.READ_WRITE,
                                    unit='',
                                    format='6.4f',
-                                   min_value=0, max_value=10,
+                                   min_value=0, max_value=32767,
                                    fget="get_KpFastIqLoop",
                                    fset="set_KpFastIqLoop",
                                    doc=""
@@ -563,7 +579,7 @@ class Nutaq(Device):
                                    access=AttrWriteType.READ_WRITE,
                                    unit='',
                                    format='6.4f',
-                                   min_value=0, max_value=10,
+                                   min_value=0, max_value=32767,
                                    fget="get_KpAmpLoop",
                                    fset="set_KpAmpLoop",
                                    doc=""
@@ -587,7 +603,7 @@ class Nutaq(Device):
                                    access=AttrWriteType.READ_WRITE,
                                    unit='',
                                    format='6.4f',
-                                   min_value=0, max_value=10,
+                                   min_value=0, max_value=32767,
                                    fget="get_KpPhaseLoop",
                                    fset="set_KpPhaseLoop",
                                    doc=""
@@ -611,7 +627,7 @@ class Nutaq(Device):
                                    access=AttrWriteType.READ_WRITE,
                                    unit='mV',
                                    format='6.4f',
-                                   min_value=0, max_value=100,
+                                   min_value=0, max_value=1000,
                                    fget="get_PiLimitFastPiIq",
                                    fset="set_PiLimitFastPiIq",
                                    doc=""
@@ -703,7 +719,7 @@ class Nutaq(Device):
                                    access=AttrWriteType.READ_WRITE,
                                    unit='degrees',
                                    format='6.4f',
-                                   min_value=-180, max_value=180,
+                                   min_value=-180, max_value=360,
                                    fget="get_PhaseOffsetA",
                                    fset="set_PhaseOffsetA",
                                    doc=""
@@ -758,7 +774,7 @@ class Nutaq(Device):
                                    dtype=float,
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ_WRITE,
-                                   unit='',
+                                   unit='degrees',
                                    format='6.4f',
                                    min_value=0, max_value=10,
                                    fget="get_MarginupA",
@@ -770,11 +786,45 @@ class Nutaq(Device):
                                    dtype=float,
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ_WRITE,
-                                   unit='',
+                                   unit='degrees',
                                    format='6.4f',
                                    min_value=0, max_value=5,
                                    fget="get_MarginlowA",
                                    fset="set_MarginlowA",
+                                   doc=""
+                                   )
+
+    Tuningdelay = attribute(label='Tuningdelay',
+                                   dtype=float,
+                                   display_level=DispLevel.OPERATOR,
+                                   access=AttrWriteType.READ_WRITE,
+                                   unit='',
+                                   format='6.4f',
+                                   min_value=0, max_value=3,
+                                   fget="get_Tuningdelay",
+                                   fset="set_Tuningdelay",
+                                   doc=""
+                                   )
+
+    Tuningfilterenable = attribute(label='Tuningfilterenable',
+                                   dtype=bool,
+                                   display_level=DispLevel.OPERATOR,
+                                   access=AttrWriteType.READ_WRITE,
+                                   unit='',
+                                   format='6.4f',
+                                   fget="get_Tuningfilterenable",
+                                   fset="set_Tuningfilterenable",
+                                   doc=""
+                                   )
+
+    Tuningtriggerenable = attribute(label='Tuningtriggerenable',
+                                   dtype=bool,
+                                   display_level=DispLevel.OPERATOR,
+                                   access=AttrWriteType.READ_WRITE,
+                                   unit='',
+                                   format='6.4f',
+                                   fget="get_Tuningtriggerenable",
+                                   fset="set_Tuningtriggerenable",
                                    doc=""
                                    )
 
@@ -1334,6 +1384,42 @@ class Nutaq(Device):
                                    doc=""
                                    )
 
+    Diag_IcontrolSlowpi = attribute(label='Diag_IcontrolSlowpi',
+                                   dtype=float,
+                                   display_level=DispLevel.OPERATOR,
+                                   access=AttrWriteType.READ,
+                                   unit='mV',
+                                   format='6.4f',
+                                   doc=""
+                                   )
+
+    Diag_QcontrolSlowpi = attribute(label='Diag_QcontrolSlowpi',
+                                   dtype=float,
+                                   display_level=DispLevel.OPERATOR,
+                                   access=AttrWriteType.READ,
+                                   unit='mV',
+                                   format='6.4f',
+                                   doc=""
+                                   )
+
+    Diag_IcontrolFastpi = attribute(label='Diag_IcontrolFastpi',
+                                   dtype=float,
+                                   display_level=DispLevel.OPERATOR,
+                                   access=AttrWriteType.READ,
+                                   unit='mV',
+                                   format='6.4f',
+                                   doc=""
+                                   )
+
+    Diag_QcontrolFastpi = attribute(label='Diag_QcontrolFastpi',
+                                   dtype=float,
+                                   display_level=DispLevel.OPERATOR,
+                                   access=AttrWriteType.READ,
+                                   unit='mV',
+                                   format='6.4f',
+                                   doc=""
+                                   )
+
     Diag_VcxoPowered = attribute(label='Diag_VcxoPowered',
                                    dtype=float,
                                    display_level=DispLevel.OPERATOR,
@@ -1370,7 +1456,205 @@ class Nutaq(Device):
                                    doc=""
                                    )
 
-    Diag_TuningOn = attribute(label='Diag_TuningOn',
+    Diag_IpolarForAmplitudeLoop = attribute(label='Diag_IpolarForAmplitudeLoop',
+                                   dtype=float,
+                                   display_level=DispLevel.OPERATOR,
+                                   access=AttrWriteType.READ,
+                                   unit='mV',
+                                   format='6.4f',
+                                   doc=""
+                                   )
+
+    Diag_QpolarForAmplitudeLoop = attribute(label='Diag_QpolarForAmplitudeLoop',
+                                   dtype=float,
+                                   display_level=DispLevel.OPERATOR,
+                                   access=AttrWriteType.READ,
+                                   unit='mV',
+                                   format='6.4f',
+                                   doc=""
+                                   )
+
+    Diag_IPolarForPhaseLoop = attribute(label='Diag_IPolarForPhaseLoop',
+                                   dtype=float,
+                                   display_level=DispLevel.OPERATOR,
+                                   access=AttrWriteType.READ,
+                                   unit='mV',
+                                   format='6.4f',
+                                   doc=""
+                                   )
+
+    Diag_QpolarForPhaseLoop = attribute(label='Diag_QpolarForPhaseLoop',
+                                   dtype=float,
+                                   display_level=DispLevel.OPERATOR,
+                                   access=AttrWriteType.READ,
+                                   unit='mV',
+                                   format='6.4f',
+                                   doc=""
+                                   )
+
+    Diag_AmpInputOfAmpLoop = attribute(label='Diag_AmpInputOfAmpLoop',
+                                   dtype=float,
+                                   display_level=DispLevel.OPERATOR,
+                                   access=AttrWriteType.READ,
+                                   unit='mV',
+                                   format='6.4f',
+                                   doc=""
+                                   )
+
+    Diag_PaseInputOfAmpLoop = attribute(label='Diag_PaseInputOfAmpLoop',
+                                   dtype=float,
+                                   display_level=DispLevel.OPERATOR,
+                                   access=AttrWriteType.READ,
+                                   unit='mV',
+                                   format='6.4f',
+                                   doc=""
+                                   )
+
+    Diag_AmpInputOfPhaseLoop = attribute(label='Diag_AmpInputOfPhaseLoop',
+                                   dtype=float,
+                                   display_level=DispLevel.OPERATOR,
+                                   access=AttrWriteType.READ,
+                                   unit='mV',
+                                   format='6.4f',
+                                   doc=""
+                                   )
+
+    Diag_PhInputOfPhaseLoop = attribute(label='Diag_PhInputOfPhaseLoop',
+                                   dtype=float,
+                                   display_level=DispLevel.OPERATOR,
+                                   access=AttrWriteType.READ,
+                                   unit='mV',
+                                   format='6.4f',
+                                   doc=""
+                                   )
+
+    Diag_AmpLoopControlOutput = attribute(label='Diag_AmpLoopControlOutput',
+                                   dtype=float,
+                                   display_level=DispLevel.OPERATOR,
+                                   access=AttrWriteType.READ,
+                                   unit='mV',
+                                   format='6.4f',
+                                   doc=""
+                                   )
+
+    Diag_AmpLoopError = attribute(label='Diag_AmpLoopError',
+                                   dtype=float,
+                                   display_level=DispLevel.OPERATOR,
+                                   access=AttrWriteType.READ,
+                                   unit='mV',
+                                   format='6.4f',
+                                   doc=""
+                                   )
+
+    Diag_AmpLoopErrorAccum = attribute(label='Diag_AmpLoopErrorAccum',
+                                   dtype=float,
+                                   display_level=DispLevel.OPERATOR,
+                                   access=AttrWriteType.READ,
+                                   unit='mV',
+                                   format='6.4f',
+                                   doc=""
+                                   )
+
+    Diag_PhLoopControlOutput = attribute(label='Diag_PhLoopControlOutput',
+                                   dtype=float,
+                                   display_level=DispLevel.OPERATOR,
+                                   access=AttrWriteType.READ,
+                                   unit='mV',
+                                   format='6.4f',
+                                   doc=""
+                                   )
+
+    Diag_PhLoopError = attribute(label='Diag_PhLoopError',
+                                   dtype=float,
+                                   display_level=DispLevel.OPERATOR,
+                                   access=AttrWriteType.READ,
+                                   unit='mV',
+                                   format='6.4f',
+                                   doc=""
+                                   )
+
+    Diag_PhLoopErrorAccum = attribute(label='Diag_PhLoopErrorAccum',
+                                   dtype=float,
+                                   display_level=DispLevel.OPERATOR,
+                                   access=AttrWriteType.READ,
+                                   unit='mV',
+                                   format='6.4f',
+                                   doc=""
+                                   )
+
+    Diag_IpolarControlOutput = attribute(label='Diag_IpolarControlOutput',
+                                   dtype=float,
+                                   display_level=DispLevel.OPERATOR,
+                                   access=AttrWriteType.READ,
+                                   unit='mV',
+                                   format='6.4f',
+                                   doc=""
+                                   )
+
+    Diag_QpolarControlOutput = attribute(label='Diag_QpolarControlOutput',
+                                   dtype=float,
+                                   display_level=DispLevel.OPERATOR,
+                                   access=AttrWriteType.READ,
+                                   unit='mV',
+                                   format='6.4f',
+                                   doc=""
+                                   )
+
+    Diag_IcontrolSlowpiIq = attribute(label='Diag_IcontrolSlowpiIq',
+                                   dtype=float,
+                                   display_level=DispLevel.OPERATOR,
+                                   access=AttrWriteType.READ,
+                                   unit='mV',
+                                   format='6.4f',
+                                   doc=""
+                                   )
+
+    Diag_QcontrolSlowpiq = attribute(label='Diag_QcontrolSlowpiq',
+                                   dtype=float,
+                                   display_level=DispLevel.OPERATOR,
+                                   access=AttrWriteType.READ,
+                                   unit='mV',
+                                   format='6.4f',
+                                   doc=""
+                                   )
+
+    Diag_IcontrolFastpiIq = attribute(label='Diag_IcontrolFastpiIq',
+                                   dtype=float,
+                                   display_level=DispLevel.OPERATOR,
+                                   access=AttrWriteType.READ,
+                                   unit='mV',
+                                   format='6.4f',
+                                   doc=""
+                                   )
+
+    Diag_QcontrolFastpiIq = attribute(label='Diag_QcontrolFastpiIq',
+                                   dtype=float,
+                                   display_level=DispLevel.OPERATOR,
+                                   access=AttrWriteType.READ,
+                                   unit='mV',
+                                   format='6.4f',
+                                   doc=""
+                                   )
+
+    Diag_IloopinputSlowpiIq = attribute(label='Diag_IloopinputSlowpiIq',
+                                   dtype=float,
+                                   display_level=DispLevel.OPERATOR,
+                                   access=AttrWriteType.READ,
+                                   unit='mV',
+                                   format='6.4f',
+                                   doc=""
+                                   )
+
+    Diag_IloopinputSlowpiIq = attribute(label='Diag_IloopinputSlowpiIq',
+                                   dtype=float,
+                                   display_level=DispLevel.OPERATOR,
+                                   access=AttrWriteType.READ,
+                                   unit='mV',
+                                   format='6.4f',
+                                   doc=""
+                                   )
+
+    Diag_Fwmin = attribute(label='Diag_Fwmin',
                                    dtype=float,
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
@@ -1379,7 +1663,7 @@ class Nutaq(Device):
                                    doc=""
                                    )
 
-    Diag_TuningOnFwMinTuningEnableLatch = attribute(label='Diag_TuningOnFwMinTuningEnableLatch',
+    Diag_MovingPlungerAuto = attribute(label='Diag_MovingPlungerAuto',
                                    dtype=float,
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
@@ -1661,23 +1945,33 @@ class Nutaq(Device):
 
     @DebugIt()
     def get_GainTetrode1(self):
-        #@todo: insert here your code ...
-        pass
+        #start protected zone ====
+        self.perseus.write(SETTINGS_READ_OFFSET, 13)
+        value = self.perseus.read(SETTINGS_READ_OFFSET) / 19898.0
+        return value
+        #end protected zone ====
 
     @DebugIt()
     def set_GainTetrode1(self, GainTetrode1):
-        #@todo: insert here your code ...
-        pass
+        #start protected zone ====
+        value = 13 << 17 | (int(GainTetrode1) * 19898)
+        self.perseus.write(SETTINGS_WRITE_OFFSET, value)
+        #end protected zone ====
 
     @DebugIt()
     def get_GainTetrode2(self):
-        #@todo: insert here your code ...
-        pass
+        #start protected zone ====
+        self.perseus.write(SETTINGS_READ_OFFSET, 14)
+        value = self.perseus.read(SETTINGS_READ_OFFSET) / 19898.0
+        return value
+        #end protected zone ====
 
     @DebugIt()
     def set_GainTetrode2(self, GainTetrode2):
-        #@todo: insert here your code ...
-        pass
+        #start protected zone ====
+        value = 14 << 17 | (int(GainTetrode2) * 19898)
+        self.perseus.write(SETTINGS_WRITE_OFFSET, value)
+        #end protected zone ====
 
     @DebugIt()
     def get_AutomaticStartupEnable(self):
@@ -1736,22 +2030,27 @@ class Nutaq(Device):
         self.write_direct(PhaseIncreaseRate, 23)
 
     @DebugIt()
-    def get_VoltageRateIncrease(self):
+    def get_VoltageIncreaseRate(self):
         return self.read_direct(24)
 
     @DebugIt()
-    def set_VoltageRateIncrease(self, VoltageRateIncrease):
-        self.write_direct(VoltageRateIncrease, 24)
+    def set_VoltageIncreaseRate(self, VoltageIncreaseRate):
+        self.write_direct(VoltageIncreaseRate, 24)
 
     @DebugIt()
     def get_GainOl(self):
-        #@todo: insert here your code ...
-        pass
+        # start protected zone ====
+        self.perseus.write(SETTINGS_READ_OFFSET, 25)
+        value = self.perseus.read(SETTINGS_READ_OFFSET)
+        return value
+        # end protected zone ====
 
     @DebugIt()
     def set_GainOl(self, GainOl):
-        #@todo: insert here your code ...
-        pass
+        # start protected zone ====
+        value = 25 << 17 | int(GainOl)
+        self.perseus.write(SETTINGS_WRITE_OFFSET, value)
+        # end protected zone ====
 
     @DebugIt()
     def get_SpareGpioOutput01(self):
@@ -1794,12 +2093,12 @@ class Nutaq(Device):
         self.write_direct(FdlSwTrigger, 32)
 
     @DebugIt()
-    def get_LoopEnableA(self):
+    def get_SlowIqLoopEnable(self):
         return self.read_direct(100)
 
     @DebugIt()
-    def set_LoopEnableA(self, LoopEnableA):
-        self.write_direct(LoopEnableA, 100)
+    def set_SlowIqLoopEnable(self, SlowIqLoopEnable):
+        self.write_direct(SlowIqLoopEnable, 100)
 
     @DebugIt()
     def get_AdcsPhaseshiftEnableA(self):
@@ -1827,13 +2126,22 @@ class Nutaq(Device):
 
     @DebugIt()
     def get_FreqsquareA(self):
-        #@todo: insert here your code ...
-        pass
+        # start protected zone ====
+        #@warning: read direct??
+        address = 104
+        self.perseus.write(SETTINGS_READ_OFFSET, address)
+        value = self.perseus.read(SETTINGS_READ_OFFSET)
+        return value
+        # end protected zone ====
 
     @DebugIt()
     def set_FreqsquareA(self, FreqsquareA):
-        #@todo: insert here your code ...
-        pass
+        # start protected zone ====
+        address = 104
+        value = ((1 / FreqsquareA) * 1000000) / 12.5
+        value = address << 17 | int(value)
+        self.perseus.write(SETTINGS_WRITE_OFFSET, value)
+        # end protected zone ====
 
     @DebugIt()
     def get_ResetkiA(self):
@@ -1892,12 +2200,12 @@ class Nutaq(Device):
         self.write_direct(PhaseLoopInputSelection, 113)
 
     @DebugIt()
-    def get_LoopsInputs(self):
+    def get_PolarLoopsEnable(self):
         return self.read_direct(114)
 
     @DebugIt()
-    def set_LoopsInputs(self, LoopsInputs):
-        self.write_direct(LoopsInputs, 114)
+    def set_PolarLoopsEnable(self, PolarLoopsEnable):
+        self.write_direct(PolarLoopsEnable, 114)
 
     @DebugIt()
     def get_FastIqLoopEnable(self):
@@ -1997,12 +2305,17 @@ class Nutaq(Device):
 
     @DebugIt()
     def get_ConditioningdutyCicleA(self):
-        #@todo: insert here your code ...
-        pass
+        # start protected zone ====
+        value = self.read_direct(202)
+        value = (value / 8000000) * 2562 * 100
+        return value
+        # end protected zone ====
 
     @DebugIt()
     def set_ConditioningdutyCicleA(self, ConditioningdutyCicleA):
-        #@todo: insert here your code ...
+        # start protected zone ====
+        value = ((ConditioningdutyCicleA * 8000000) / 100.0) / 256
+        self.write_direct(value, 202)
         pass
 
     @DebugIt()
@@ -2071,31 +2384,55 @@ class Nutaq(Device):
 
     @DebugIt()
     def get_Fwmina(self):
-        return self.read_direct(308)
+        #@todo: insert here your code ...
+        pass
 
     @DebugIt()
     def set_Fwmina(self, Fwmina):
-        self.write_direct(Fwmina, 308)
+        #@todo: insert here your code ...
+        pass
 
     @DebugIt()
     def get_MarginupA(self):
-        #@todo: insert here your code ...
-        pass
+        return self.read_angle(309)
 
     @DebugIt()
     def set_MarginupA(self, MarginupA):
-        #@todo: insert here your code ...
-        pass
+        self.write_angle(MarginupA, 309)
 
     @DebugIt()
     def get_MarginlowA(self):
+        return self.read_angle(310)
+
+    @DebugIt()
+    def set_MarginlowA(self, MarginlowA):
+        self.write_angle(MarginlowA, 310)
+
+    @DebugIt()
+    def get_Tuningdelay(self):
         #@todo: insert here your code ...
         pass
 
     @DebugIt()
-    def set_MarginlowA(self, MarginlowA):
+    def set_Tuningdelay(self, Tuningdelay):
         #@todo: insert here your code ...
         pass
+
+    @DebugIt()
+    def get_Tuningfilterenable(self):
+        return self.read_direct(312)
+
+    @DebugIt()
+    def set_Tuningfilterenable(self, Tuningfilterenable):
+        self.write_direct(Tuningfilterenable, 312)
+
+    @DebugIt()
+    def get_Tuningtriggerenable(self):
+        return self.read_direct(313)
+
+    @DebugIt()
+    def set_Tuningtriggerenable(self, Tuningtriggerenable):
+        self.write_direct(Tuningtriggerenable, 313)
 
     @DebugIt()
     def get_EpsItckDisable(self):
@@ -2115,23 +2452,37 @@ class Nutaq(Device):
 
     @DebugIt()
     def get_MDivider(self):
-        #@todo: insert here your code ...
-        pass
+        # start protected zone ====
+        address = 500
+        value = self.read_direct(address) + 1
+        #@warning: read_direct?? or +1
+        return value
+        # end protected zone ====
 
     @DebugIt()
     def set_MDivider(self, MDivider):
-        #@todo: insert here your code ...
-        pass
+        # start protected zone ====
+        address = 500
+        value = MDivider - 1
+        self.write_direct(value, address)
+        # end protected zone ====
 
     @DebugIt()
     def get_NDivider(self):
-        #@todo: insert here your code ...
-        pass
+        # start protected zone ====
+        address = 501
+        value = self.read_direct(address) + 1
+        #@warning: read_direct?? or +1
+        return value
+        # end protected zone ====
 
     @DebugIt()
     def set_NDivider(self, NDivider):
-        #@todo: insert here your code ...
-        pass
+        # start protected zone ====
+        address = 501
+        value = MDivider - 1
+        self.write_direct(value, address)
+        # end protected zone ====
 
     @DebugIt()
     def get_Muxsel(self):
@@ -2386,6 +2737,22 @@ class Nutaq(Device):
         return self._Diag_Vaccum2
 
     @DebugIt()
+    def read_Diag_IcontrolSlowpi(self):
+        return self._Diag_IcontrolSlowpi
+
+    @DebugIt()
+    def read_Diag_QcontrolSlowpi(self):
+        return self._Diag_QcontrolSlowpi
+
+    @DebugIt()
+    def read_Diag_IcontrolFastpi(self):
+        return self._Diag_IcontrolFastpi
+
+    @DebugIt()
+    def read_Diag_QcontrolFastpi(self):
+        return self._Diag_QcontrolFastpi
+
+    @DebugIt()
     def read_Diag_VcxoPowered(self):
         return self._Diag_VcxoPowered
 
@@ -2402,12 +2769,100 @@ class Nutaq(Device):
         return self._Diag_VcxoCableDisconnected
 
     @DebugIt()
-    def read_Diag_TuningOn(self):
-        return self._Diag_TuningOn
+    def read_Diag_IpolarForAmplitudeLoop(self):
+        return self._Diag_IpolarForAmplitudeLoop
 
     @DebugIt()
-    def read_Diag_TuningOnFwMinTuningEnableLatch(self):
-        return self._Diag_TuningOnFwMinTuningEnableLatch
+    def read_Diag_QpolarForAmplitudeLoop(self):
+        return self._Diag_QpolarForAmplitudeLoop
+
+    @DebugIt()
+    def read_Diag_IPolarForPhaseLoop(self):
+        return self._Diag_IPolarForPhaseLoop
+
+    @DebugIt()
+    def read_Diag_QpolarForPhaseLoop(self):
+        return self._Diag_QpolarForPhaseLoop
+
+    @DebugIt()
+    def read_Diag_AmpInputOfAmpLoop(self):
+        return self._Diag_AmpInputOfAmpLoop
+
+    @DebugIt()
+    def read_Diag_PaseInputOfAmpLoop(self):
+        return self._Diag_PaseInputOfAmpLoop
+
+    @DebugIt()
+    def read_Diag_AmpInputOfPhaseLoop(self):
+        return self._Diag_AmpInputOfPhaseLoop
+
+    @DebugIt()
+    def read_Diag_PhInputOfPhaseLoop(self):
+        return self._Diag_PhInputOfPhaseLoop
+
+    @DebugIt()
+    def read_Diag_AmpLoopControlOutput(self):
+        return self._Diag_AmpLoopControlOutput
+
+    @DebugIt()
+    def read_Diag_AmpLoopError(self):
+        return self._Diag_AmpLoopError
+
+    @DebugIt()
+    def read_Diag_AmpLoopErrorAccum(self):
+        return self._Diag_AmpLoopErrorAccum
+
+    @DebugIt()
+    def read_Diag_PhLoopControlOutput(self):
+        return self._Diag_PhLoopControlOutput
+
+    @DebugIt()
+    def read_Diag_PhLoopError(self):
+        return self._Diag_PhLoopError
+
+    @DebugIt()
+    def read_Diag_PhLoopErrorAccum(self):
+        return self._Diag_PhLoopErrorAccum
+
+    @DebugIt()
+    def read_Diag_IpolarControlOutput(self):
+        return self._Diag_IpolarControlOutput
+
+    @DebugIt()
+    def read_Diag_QpolarControlOutput(self):
+        return self._Diag_QpolarControlOutput
+
+    @DebugIt()
+    def read_Diag_IcontrolSlowpiIq(self):
+        return self._Diag_IcontrolSlowpiIq
+
+    @DebugIt()
+    def read_Diag_QcontrolSlowpiq(self):
+        return self._Diag_QcontrolSlowpiq
+
+    @DebugIt()
+    def read_Diag_IcontrolFastpiIq(self):
+        return self._Diag_IcontrolFastpiIq
+
+    @DebugIt()
+    def read_Diag_QcontrolFastpiIq(self):
+        return self._Diag_QcontrolFastpiIq
+
+    @DebugIt()
+    def read_Diag_IloopinputSlowpiIq(self):
+        return self._Diag_IloopinputSlowpiIq
+
+    @DebugIt()
+    def read_Diag_IloopinputSlowpiIq(self):
+        return self._Diag_IloopinputSlowpiIq
+
+    @DebugIt()
+    def read_Diag_Fwmin(self):
+        return self._Diag_Fwmin
+
+    @DebugIt()
+    def read_Diag_MovingPlungerAuto(self):
+        return self._Diag_MovingPlungerAuto
 
     @DebugIt()
     def read_Diag_FreqUp(self):
@@ -2486,12 +2941,38 @@ class Nutaq(Device):
         self._Diag_AngFwL = self.read_diag_angle(42)
         self._Diag_Vaccum1 = self.read_direct(43)
         self._Diag_Vaccum2 = self.read_direct(44)
+        self._Diag_IcontrolSlowpi = self.read_diag_milivolts(45)
+        self._Diag_QcontrolSlowpi = self.read_diag_milivolts(46)
+        self._Diag_IcontrolFastpi = self.read_diag_milivolts(47)
+        self._Diag_QcontrolFastpi = self.read_diag_milivolts(48)
         self._Diag_VcxoPowered = self.read_direct(50)
         self._Diag_VcxoRef = self.read_direct(51)
         self._Diag_VcxoLocked = self.read_direct(52)
         self._Diag_VcxoCableDisconnected = self.read_direct(53)
-        self._Diag_TuningOn = self.read_direct(299)
-        self._Diag_TuningOnFwMinTuningEnableLatch = self.read_direct(300)
+        self._Diag_IpolarForAmplitudeLoop = self.read_diag_milivolts(100)
+        self._Diag_QpolarForAmplitudeLoop = self.read_diag_milivolts(101)
+        self._Diag_IPolarForPhaseLoop = self.read_diag_milivolts(102)
+        self._Diag_QpolarForPhaseLoop = self.read_diag_milivolts(103)
+        self._Diag_AmpInputOfAmpLoop = self.read_diag_milivolts(104)
+        self._Diag_PaseInputOfAmpLoop = self.read_diag_milivolts(105)
+        self._Diag_AmpInputOfPhaseLoop = self.read_diag_milivolts(106)
+        self._Diag_PhInputOfPhaseLoop = self.read_diag_milivolts(107)
+        self._Diag_AmpLoopControlOutput = self.read_diag_milivolts(108)
+        self._Diag_AmpLoopError = self.read_diag_milivolts(109)
+        self._Diag_AmpLoopErrorAccum = self.read_diag_milivolts(110)
+        self._Diag_PhLoopControlOutput = self.read_diag_milivolts(111)
+        self._Diag_PhLoopError = self.read_diag_milivolts(112)
+        self._Diag_PhLoopErrorAccum = self.read_diag_milivolts(113)
+        self._Diag_IpolarControlOutput = self.read_diag_milivolts(114)
+        self._Diag_QpolarControlOutput = self.read_diag_milivolts(115)
+        self._Diag_IcontrolSlowpiIq = self.read_diag_milivolts(116)
+        self._Diag_QcontrolSlowpiq = self.read_diag_milivolts(117)
+        self._Diag_IcontrolFastpiIq = self.read_diag_milivolts(118)
+        self._Diag_QcontrolFastpiIq = self.read_diag_milivolts(119)
+        self._Diag_IloopinputSlowpiIq = self.read_diag_milivolts(120)
+        self._Diag_IloopinputSlowpiIq = self.read_diag_milivolts(121)
+        self._Diag_Fwmin = self.read_direct(299)
+        self._Diag_MovingPlungerAuto = self.read_direct(300)
         self._Diag_FreqUp = self.read_direct(301)
         self._Diag_ManualTuningOn = self.read_direct(302)
         self._Diag_ManualTuningFreqUp = self.read_direct(303)

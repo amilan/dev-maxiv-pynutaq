@@ -1,4 +1,8 @@
+{% if nutaq_type == 'loops' %}
 {% extends "direct_code.j2" %}
+{% elif nutaq_type == 'diags' %}
+{% extends "direct_code_diags.j2" %}
+{% endif %}
 {% block attrs_definition %}
 {% for attribute in attributes %}
     {{attribute.name}} = attribute(label='{{attribute.name}}',

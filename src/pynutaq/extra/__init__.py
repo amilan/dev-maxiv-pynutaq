@@ -1,7 +1,8 @@
 #!/usr/bin/env python
 
 ###############################################################################
-##     PyNutaq device server. 
+##     Utils module contains the extra methods to be used by the special 
+##     attributes.
 ##
 ##     Copyright (C) 2013  Max IV Laboratory, Lund Sweden
 ##
@@ -19,8 +20,5 @@
 ##     along with this program.  If not, see [http://www.gnu.org/licenses/].
 ###############################################################################
 
-from boards import *
 from extra import *
-from nutaq import *
-from perseus import *
 

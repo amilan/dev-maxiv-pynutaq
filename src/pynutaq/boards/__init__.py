@@ -1,7 +1,8 @@
 #!/usr/bin/env python
 
 ###############################################################################
-##     PyNutaq device server. 
+##     Boards module: Implementation of the communication with the different
+##     boards included in the system.
 ##
 ##     Copyright (C) 2013  Max IV Laboratory, Lund Sweden
 ##
@@ -19,8 +20,6 @@
 ##     along with this program.  If not, see [http://www.gnu.org/licenses/].
 ###############################################################################
 
-from boards import *
-from extra import *
-from nutaq import *
-from perseus import *
+from mi125 import *
+from mo1000 import *
 

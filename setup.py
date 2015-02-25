@@ -1,9 +1,9 @@
 #!/usr/bin/env python
 
 ###############################################################################
-##     PyNutaq device server. 
+##     PyNutaq device server
 ##
-##     Copyright (C) 2013  Max IV Laboratory, Lund Sweden
+##     Copyright (C) 2013  MAX IV Laboratory, Lund Sweden.
 ##
 ##     This program is free software: you can redistribute it and/or modify
 ##     it under the terms of the GNU General Public License as published by
@@ -19,8 +19,19 @@
 ##     along with this program.  If not, see [http://www.gnu.org/licenses/].
 ###############################################################################
 
-from boards import *
-from extra import *
-from nutaq import *
-from perseus import *
+
+from setuptools import setup
+
+setup(name = "tangods-pynutaq",
+      version = "0.0.3",
+      description = "Device server for the Nutaq platform.",
+      author = "Antonio Milan Otero",
+      author_email = "antonio.milan_otero@maxlab.lu.se",
+      license = "GPLv3",
+      url = "http://www.maxlab.lu.se",
+      package_dir = {'':'src'},
+      packages = ['boards', 'extra', 'nutaq', 'perseus'],
+      scripts = ['scripts/Nutaq',
+                 'scripts/NutaqDiags']
+     )
 

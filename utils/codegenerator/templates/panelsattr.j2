@@ -1,21 +1,24 @@
 {% extends "gui.j2" %}
 {% block settingspanel %}
-settings_loops = PanelDescription('SettingsLoops',
+{% for widget in widgets_loops %}
+{{widget}} = PanelDescription('{{widget}}',
                         classname = 'TaurusForm',
                         model = [
-                        {% for attribute in attributes %}
+                        {% for attribute in widgets_loops[widget] %}
                                  'ws/rf/pynutaq-1/{{attribute.name}}',
                         {% endfor %}
                         ])
-
+{% endfor %}
 {% endblock %}
 {% block diagspanel %}
-diags_loops = PanelDescription('DiagsLoops',
+{% for widget in widgets_diags %}
+{{widget}} = PanelDescription('{{widget}}',
                         classname = 'TaurusForm',
                         model = [
-                        {% for attr in diags_attributes %}
+                        {% for attr in widgets_diags[widget] %}
                                  'ws/rf/pynutaq-1/Diag_{{attr.name}}',
                         {% endfor %}
                         ])
 
+{% endfor %}
 {% endblock %}
