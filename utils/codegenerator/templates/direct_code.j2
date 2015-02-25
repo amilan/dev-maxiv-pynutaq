@@ -30,10 +30,11 @@ from PyTango.server import Device, DeviceMeta, attribute, command, run
 from PyTango.server import device_property
 
 #from nutaqattributes import attributes_dict
-from nutaqdefs import *
-from perseusdefs import *
+from nutaq.nutaqdefs import *
+from perseus.perseusdefs import *
 
-from perseus import Perseus
+from perseus.perseusfactory import Perseus
+from extra import *
 
 
 class Nutaq(Device):

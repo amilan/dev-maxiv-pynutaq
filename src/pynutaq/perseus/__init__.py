@@ -23,6 +23,6 @@ from perseusdecorators import *
 from perseusdefs import *
 from perseusdiags import *
 from perseusloops import *
-from perseus import *
+from perseusfactory import *
 from perseussimulated import *
 
