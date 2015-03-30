@@ -24,7 +24,7 @@ __author__ = 'antmil'
 import time
 import eapi
 from adp_exception import *
-from perseusdecorators import ensure_write_method
+from pynutaq.perseus.perseusdecorators import ensure_write_method
 
 
 class Mo1000(object):

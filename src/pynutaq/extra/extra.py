@@ -20,10 +20,22 @@
 ##     along with this program.  If not, see [http://www.gnu.org/licenses/].
 ###############################################################################
 
-__author__ = "amilan"
+__author__ = "antmil"
 
-from perseusdefs import *
-from utils import read_direct, write_direct
+try:
+
+    from pynutaq.perseus.perseusdefs import *
+
+#    from perseus.perseusfactory import Perseus
+
+except Exception,e:
+    print "#############################################"
+    print "It's not possible to import perseus classes. "
+    print "This device can run only in simulated mode.  "
+    print "#############################################"
+
+#from perseusdefs import *
+from pynutaq.utils.utils import read_direct, write_direct
 
 def get_GainTetrode1(perseus, address):
     try:

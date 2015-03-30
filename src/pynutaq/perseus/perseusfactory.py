@@ -22,11 +22,11 @@
 __author__ = 'antmil'
 
 try:
-    from perseusloops import PerseusLoops
-    from perseusdiags import PerseusDiags
+    from pynutaq.perseus.perseusloops import PerseusLoops
+    from pynutaq.perseus.perseusdiags import PerseusDiags
 except Exception, e:
     print e
-from perseussimulated import PerseusSimulated
+from pynutaq.perseus.perseussimulated import PerseusSimulated
 
 
 class Perseus(object):

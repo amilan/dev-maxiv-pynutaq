@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 ###############################################################################
-##     Utils module contains the extra methods to be used by the special 
+##     Extra module contains the extra methods to be used by the special 
 ##     attributes.
 ##
 ##     Copyright (C) 2013  Max IV Laboratory, Lund Sweden

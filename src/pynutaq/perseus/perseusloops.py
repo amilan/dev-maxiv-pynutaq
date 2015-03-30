@@ -22,11 +22,11 @@
 __author__ = 'antmil'
 
 import eapi
-from perseusdefs import *
-from boards.mo1000 import Mo1000
-from boards.mi125 import Mi125
+from pynutaq.perseus.perseusdefs import *
+from pynutaq.boards.mo1000 import Mo1000
+from pynutaq.boards.mi125 import Mi125
 from adp_exception import *
-from perseusdecorators import ensure_read_method, ensure_write_method, ensure_connect_method
+from pynutaq.perseus.perseusdecorators import ensure_read_method, ensure_write_method, ensure_connect_method
 
 MO1000_BOARD_NUMBER = 1
 MI125_BOARD_NUMBER = 2

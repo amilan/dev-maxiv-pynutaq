@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 ###############################################################################
-##     Nutaq device server in charge of the loops for the LLRF system.
+##     Nutaq device server. 
 ##
 ##     Copyright (C) 2013  Max IV Laboratory, Lund Sweden
 ##
@@ -27,12 +27,25 @@ from PyTango import AttrQuality, AttrWriteType, DispLevel, DevState, DebugIt
 from PyTango.server import Device, DeviceMeta, attribute, command, run
 from PyTango.server import device_property
 
-from nutaqattributes import attributes_dict
+#from nutaqattributes import attributes_dict
 from nutaqdefs import *
-from perseusdefs import *
 
-from perseus import Perseus
+try:
 
+    from pynutaq.perseus.perseusdefs import *
+
+    from pynutaq.perseus.perseusfactory import Perseus
+
+except Exception,e:
+    print "#############################################"
+    print "                 WARNING"
+    print "#############################################"
+    print "It's not possible to import perseus classes. "
+    print "This device can run only in simulated mode.  "
+    print "#############################################\n"
+
+# from extra import *
+from pynutaq.extra import *
 
 class Nutaq(Device):
     __metaclass__ = DeviceMeta
@@ -1897,11 +1910,15 @@ class Nutaq(Device):
 
     @DebugIt()
     def get_PilimitA(self):
-        return self.read_milivolts(6)
+        address = 6
+        #@todo: add this method to special methods library ...
+        utils.get_PilimitA(self.perseus, address)
 
     @DebugIt()
     def set_PilimitA(self, PilimitA):
-        self.write_milivolts(PilimitA, 6)
+        address = 6
+        #@todo: add this method to special methods library ...
+        utils.get_PilimitA(self.perseus, PilimitA, address)
 
     @DebugIt()
     def get_SamplesToAverage(self):
@@ -1945,33 +1962,27 @@ class Nutaq(Device):
 
     @DebugIt()
     def get_GainTetrode1(self):
-        #start protected zone ====
-        self.perseus.write(SETTINGS_READ_OFFSET, 13)
-        value = self.perseus.read(SETTINGS_READ_OFFSET) / 19898.0
-        return value
-        #end protected zone ====
+        address = 13
+        #@todo: add this method to special methods library ...
+        utils.get_GainTetrode1(self.perseus, address)
 
     @DebugIt()
     def set_GainTetrode1(self, GainTetrode1):
-        #start protected zone ====
-        value = 13 << 17 | (int(GainTetrode1) * 19898)
-        self.perseus.write(SETTINGS_WRITE_OFFSET, value)
-        #end protected zone ====
+        address = 13
+        #@todo: add this method to special methods library ...
+        utils.get_GainTetrode1(self.perseus, GainTetrode1, address)
 
     @DebugIt()
     def get_GainTetrode2(self):
-        #start protected zone ====
-        self.perseus.write(SETTINGS_READ_OFFSET, 14)
-        value = self.perseus.read(SETTINGS_READ_OFFSET) / 19898.0
-        return value
-        #end protected zone ====
+        address = 14
+        #@todo: add this method to special methods library ...
+        utils.get_GainTetrode2(self.perseus, address)
 
     @DebugIt()
     def set_GainTetrode2(self, GainTetrode2):
-        #start protected zone ====
-        value = 14 << 17 | (int(GainTetrode2) * 19898)
-        self.perseus.write(SETTINGS_WRITE_OFFSET, value)
-        #end protected zone ====
+        address = 14
+        #@todo: add this method to special methods library ...
+        utils.get_GainTetrode2(self.perseus, GainTetrode2, address)
 
     @DebugIt()
     def get_AutomaticStartupEnable(self):
@@ -2039,18 +2050,15 @@ class Nutaq(Device):
 
     @DebugIt()
     def get_GainOl(self):
-        # start protected zone ====
-        self.perseus.write(SETTINGS_READ_OFFSET, 25)
-        value = self.perseus.read(SETTINGS_READ_OFFSET)
-        return value
-        # end protected zone ====
+        address = 25
+        #@todo: add this method to special methods library ...
+        utils.get_GainOl(self.perseus, address)
 
     @DebugIt()
     def set_GainOl(self, GainOl):
-        # start protected zone ====
-        value = 25 << 17 | int(GainOl)
-        self.perseus.write(SETTINGS_WRITE_OFFSET, value)
-        # end protected zone ====
+        address = 25
+        #@todo: add this method to special methods library ...
+        utils.get_GainOl(self.perseus, GainOl, address)
 
     @DebugIt()
     def get_SpareGpioOutput01(self):
@@ -2126,22 +2134,15 @@ class Nutaq(Device):
 
     @DebugIt()
     def get_FreqsquareA(self):
-        # start protected zone ====
-        #@warning: read direct??
         address = 104
-        self.perseus.write(SETTINGS_READ_OFFSET, address)
-        value = self.perseus.read(SETTINGS_READ_OFFSET)
-        return value
-        # end protected zone ====
+        #@todo: add this method to special methods library ...
+        utils.get_FreqsquareA(self.perseus, address)
 
     @DebugIt()
     def set_FreqsquareA(self, FreqsquareA):
-        # start protected zone ====
         address = 104
-        value = ((1 / FreqsquareA) * 1000000) / 12.5
-        value = address << 17 | int(value)
-        self.perseus.write(SETTINGS_WRITE_OFFSET, value)
-        # end protected zone ====
+        #@todo: add this method to special methods library ...
+        utils.get_FreqsquareA(self.perseus, FreqsquareA, address)
 
     @DebugIt()
     def get_ResetkiA(self):
@@ -2305,18 +2306,15 @@ class Nutaq(Device):
 
     @DebugIt()
     def get_ConditioningdutyCicleA(self):
-        # start protected zone ====
-        value = self.read_direct(202)
-        value = (value / 8000000) * 2562 * 100
-        return value
-        # end protected zone ====
+        address = 202
+        #@todo: add this method to special methods library ...
+        utils.get_ConditioningdutyCicleA(self.perseus, address)
 
     @DebugIt()
     def set_ConditioningdutyCicleA(self, ConditioningdutyCicleA):
-        # start protected zone ====
-        value = ((ConditioningdutyCicleA * 8000000) / 100.0) / 256
-        self.write_direct(value, 202)
-        pass
+        address = 202
+        #@todo: add this method to special methods library ...
+        utils.get_ConditioningdutyCicleA(self.perseus, ConditioningdutyCicleA, address)
 
     @DebugIt()
     def get_TuningEnableA(self):
@@ -2384,13 +2382,15 @@ class Nutaq(Device):
 
     @DebugIt()
     def get_Fwmina(self):
-        #@todo: insert here your code ...
-        pass
+        address = 308
+        #@todo: add this method to special methods library ...
+        utils.get_Fwmina(self.perseus, address)
 
     @DebugIt()
     def set_Fwmina(self, Fwmina):
-        #@todo: insert here your code ...
-        pass
+        address = 308
+        #@todo: add this method to special methods library ...
+        utils.get_Fwmina(self.perseus, Fwmina, address)
 
     @DebugIt()
     def get_MarginupA(self):
@@ -2410,13 +2410,15 @@ class Nutaq(Device):
 
     @DebugIt()
     def get_Tuningdelay(self):
-        #@todo: insert here your code ...
-        pass
+        address = 311
+        #@todo: add this method to special methods library ...
+        utils.get_Tuningdelay(self.perseus, address)
 
     @DebugIt()
     def set_Tuningdelay(self, Tuningdelay):
-        #@todo: insert here your code ...
-        pass
+        address = 311
+        #@todo: add this method to special methods library ...
+        utils.get_Tuningdelay(self.perseus, Tuningdelay, address)
 
     @DebugIt()
     def get_Tuningfilterenable(self):
@@ -2452,37 +2454,27 @@ class Nutaq(Device):
 
     @DebugIt()
     def get_MDivider(self):
-        # start protected zone ====
         address = 500
-        value = self.read_direct(address) + 1
-        #@warning: read_direct?? or +1
-        return value
-        # end protected zone ====
+        #@todo: add this method to special methods library ...
+        utils.get_MDivider(self.perseus, address)
 
     @DebugIt()
     def set_MDivider(self, MDivider):
-        # start protected zone ====
         address = 500
-        value = MDivider - 1
-        self.write_direct(value, address)
-        # end protected zone ====
+        #@todo: add this method to special methods library ...
+        utils.get_MDivider(self.perseus, MDivider, address)
 
     @DebugIt()
     def get_NDivider(self):
-        # start protected zone ====
         address = 501
-        value = self.read_direct(address) + 1
-        #@warning: read_direct?? or +1
-        return value
-        # end protected zone ====
+        #@todo: add this method to special methods library ...
+        utils.get_NDivider(self.perseus, address)
 
     @DebugIt()
     def set_NDivider(self, NDivider):
-        # start protected zone ====
         address = 501
-        value = NDivider - 1
-        self.write_direct(value, address)
-        # end protected zone ====
+        #@todo: add this method to special methods library ...
+        utils.get_NDivider(self.perseus, NDivider, address)
 
     @DebugIt()
     def get_Muxsel(self):
