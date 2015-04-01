@@ -21,11 +21,16 @@
 
 __author__ = 'antmil'
 
-import eapi
+try:
+    import eapi
+    from adp_exception import *
+except ImportError, e:
+    print e
+    raise
+
 from pynutaq.perseus.perseusdefs import *
 from pynutaq.boards.mo1000 import Mo1000
 from pynutaq.boards.mi125 import Mi125
-from adp_exception import *
 from pynutaq.perseus.perseusdecorators import ensure_read_method, ensure_write_method, ensure_connect_method
 
 MO1000_BOARD_NUMBER = 1

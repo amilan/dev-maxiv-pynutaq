@@ -1,0 +1,73 @@
+{% extends "base.j2" %}
+{% block defines %}
+#!/usr/bin/env python
+
+###############################################################################
+#     Nutaq device server.
+#
+#     Copyright (C) 2013  Max IV Laboratory, Lund Sweden
+#
+#     This program is free software: you can redistribute it and/or modify
+#     it under the terms of the GNU General Public License as published by
+#     the Free Software Foundation, either version 3 of the License, or
+#     (at your option) any later version.
+#
+#     This program is distributed in the hope that it will be useful,
+#     but WITHOUT ANY WARRANTY; without even the implied warranty of
+#     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#     GNU General Public License for more details.
+#
+#     You should have received a copy of the GNU General Public License
+#     along with this program.  If not, see [http://www.gnu.org/licenses/].
+###############################################################################
+
+import time
+import numpy
+import math
+
+from PyTango import AttrQuality, AttrWriteType, DispLevel, DevState, DebugIt
+from PyTango.server import Device, DeviceMeta, attribute, command, run
+from PyTango.server import device_property
+
+from pynutaq.nutaq.nutaqdefs import *
+from pynutaq.extra import *
+
+from pynutaq.perseus.perseusextra import *
+
+try:
+    from pynutaq.perseus.perseusdefs import *
+    from pynutaq.perseus.perseusfactory import Perseus
+except ImportError, e:
+    print e
+    raise
+
+
+class Nutaq(Device):
+    __metaclass__ = DeviceMeta
+
+{% endblock %}
+
+{% block static_methods %}
+    perseusType = device_property(dtype=str, default_value='simulated')
+
+    def init_device(self):
+        Device.init_device(self)
+        try:
+            self.perseus = Perseus().new_perseus(self.perseusType)
+            self.set_state(DevState.ON)
+        except Exception, e:
+            print e
+            self.set_state(DevState.FAULT)
+
+{% endblock %}
+
+{% block end_code %}
+    @command
+    def tuning_reset(self):
+        self.write_direct(True, TUNING_RESET_ADDRESS)
+        self.write_direct(False, TUNING_RESET_ADDRESS)
+
+
+if __name__ == "__main__":
+    run([Nutaq])
+{% endblock %}

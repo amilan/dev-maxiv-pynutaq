@@ -1,23 +1,23 @@
 #!/usr/bin/env python
 
 ###############################################################################
-##     Extra methods to be used by the special attributes in pynutaq device
-##     server.
-##
-##     Copyright (C) 2013  Max IV Laboratory, Lund Sweden
-##
-##     This program is free software: you can redistribute it and/or modify
-##     it under the terms of the GNU General Public License as published by
-##     the Free Software Foundation, either version 3 of the License, or
-##     (at your option) any later version.
-##
-##     This program is distributed in the hope that it will be useful,
-##     but WITHOUT ANY WARRANTY; without even the implied warranty of
-##     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-##     GNU General Public License for more details.
-##
-##     You should have received a copy of the GNU General Public License
-##     along with this program.  If not, see [http://www.gnu.org/licenses/].
+#     Extra methods to be used by the special attributes in pynutaq device
+#     server.
+#
+#     Copyright (C) 2013  Max IV Laboratory, Lund Sweden
+#
+#     This program is free software: you can redistribute it and/or modify
+#     it under the terms of the GNU General Public License as published by
+#     the Free Software Foundation, either version 3 of the License, or
+#     (at your option) any later version.
+#
+#     This program is distributed in the hope that it will be useful,
+#     but WITHOUT ANY WARRANTY; without even the implied warranty of
+#     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#     GNU General Public License for more details.
+#
+#     You should have received a copy of the GNU General Public License
+#     along with this program.  If not, see [http://www.gnu.org/licenses/].
 ###############################################################################
 
 __author__ = "antmil"
@@ -26,16 +26,14 @@ try:
 
     from pynutaq.perseus.perseusdefs import *
 
-#    from perseus.perseusfactory import Perseus
-
-except Exception,e:
+except ImportError, e:
     print "#############################################"
     print "It's not possible to import perseus classes. "
     print "This device can run only in simulated mode.  "
     print "#############################################"
+    raise
 
-#from perseusdefs import *
-from pynutaq.utils.utils import read_direct, write_direct
+from pynutaq.perseus.perseusextra import read_direct, write_direct
 
 def get_GainTetrode1(perseus, address):
     try:
@@ -60,7 +58,7 @@ def get_GainTetrode2(perseus):
     except Exception, e:
         raise e
 
-def set_GainTetrode2(perseus, GainTetrode2i, address):
+def set_GainTetrode2(perseus, GainTetrode2, address):
     try:
         value = address << 17 | (int(GainTetrode2) * 19898)
         perseus.write(SETTINGS_WRITE_OFFSET, value)
@@ -84,14 +82,14 @@ def set_GainOl(perseus, GainOl, address):
 
 def get_FreqsquareA(perseus, address):
     try:
-        #@warning: read direct??
+        # @warning: read direct??
         perseus.write(SETTINGS_READ_OFFSET, address)
         value = perseus.read(SETTINGS_READ_OFFSET)
         return value
     except Exception, e:
         raise e
 
-def set_FreqsquareA(perseus, FreqsquareA):
+def set_FreqsquareA(perseus, FreqsquareA, address):
     try:
         value = ((1 / FreqsquareA) * 1000000) / 12.5
         value = address << 17 | int(value)
@@ -99,9 +97,9 @@ def set_FreqsquareA(perseus, FreqsquareA):
     except Exception, e:
         raise e
 
-def get_ConditioningdutyCicleA(self, address):
+def get_ConditioningdutyCicleA(perseus, address):
     try:
-        value = self.read_direct(address)
+        value = read_direct(perseus, address)
         value = (value / 8000000) * 2562 * 100
         return value
     except Exception, e:
@@ -110,14 +108,14 @@ def get_ConditioningdutyCicleA(self, address):
 def set_ConditioningdutyCicleA(perseus, ConditioningdutyCicleA, address):
     try:
         value = ((ConditioningdutyCicleA * 8000000) / 100.0) / 256
-        self.write_direct(value, address)
+        write_direct(perseus, value, address)
     except Exception, e:
         raise e
 
 def get_MDivider(perseus, address):
     try:
-        value = read_direct(address) + 1
-        #@warning: read_direct?? or +1
+        value = read_direct(perseus, address) + 1
+        # @warning: read_direct?? or +1
         return value
     except Exception, e:
         raise e
@@ -125,14 +123,14 @@ def get_MDivider(perseus, address):
 def set_MDivider(perseus, MDivider, address):
     try:
         value = MDivider - 1
-        write_direct(value, address)
+        write_direct(perseus, value, address)
     except Exception, e:
         raise e
 
 def get_NDivider(perseus, address):
     try:
-        value = read_direct(address) + 1
-        #@warning: read_direct?? or +1
+        value = read_direct(perseus, address) + 1
+        # @warning: read_direct?? or +1
         return value
     except Exception, e:
         raise e
@@ -140,7 +138,7 @@ def get_NDivider(perseus, address):
 def set_NDivider(perseus, NDivider, address):
     try:
         value = NDivider - 1
-        write_direct(value, address)
+        write_direct(perseus, value, address)
     except Exception, e:
         raise e
 

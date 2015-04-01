@@ -62,7 +62,7 @@
 {% endfor %}
     @command
     def read_diagnostics(self):
-        self.start_reading_diagnostics()
+        start_reading_diagnostics(self.perseus)
 
 {% for attribute in diags_attributes %}
         {% if attribute.type == 'mv' %}

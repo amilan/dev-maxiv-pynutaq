@@ -23,13 +23,14 @@ __author__ = 'antmil'
 
 try:
     import eapi
-except Exception,e:
+except ImportError, e:
     print "#############################################"
     print "                 WARNING"
     print "#############################################"
     print "It's not possible to import perseus eapi. "
     print "This device can run only in simulated mode.  "
     print "#############################################\n"
+    raise
 
 from pynutaq.perseus.perseusdecorators import ensure_write_method
 

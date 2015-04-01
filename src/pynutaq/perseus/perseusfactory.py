@@ -24,8 +24,9 @@ __author__ = 'antmil'
 try:
     from pynutaq.perseus.perseusloops import PerseusLoops
     from pynutaq.perseus.perseusdiags import PerseusDiags
-except Exception, e:
+except ImportError, e:
     print e
+    raise
 from pynutaq.perseus.perseussimulated import PerseusSimulated
 
 

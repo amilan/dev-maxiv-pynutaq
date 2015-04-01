@@ -22,8 +22,13 @@
 __author__ = 'antmil'
 
 import time
-import eapi
-from adp_exception import *
+try:
+    import eapi
+    from adp_exception import *
+except ImportError, e:
+    print e
+    raise
+
 from pynutaq.perseus.perseusdecorators import ensure_write_method
 
 

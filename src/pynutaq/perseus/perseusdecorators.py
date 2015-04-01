@@ -21,8 +21,12 @@
 
 __author__ = 'antmil'
 
-from adp_exception import *
-import eapi
+try:
+    import eapi
+    from adp_exception import *
+except ImportError, e:
+    print e
+    raise
 
 def ensure_write_method(meth):
     def _ensure_this_method(self, *args, **kwargs):
