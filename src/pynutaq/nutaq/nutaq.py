@@ -43,6 +43,7 @@ except Exception,e:
     print "It's not possible to import perseus classes. "
     print "This device can run only in simulated mode.  "
     print "#############################################\n"
+    print e
 
 # from extra import *
 from pynutaq.extra import *

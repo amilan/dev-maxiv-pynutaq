@@ -1,25 +1,32 @@
 #!/usr/bin/env python
 
 ###############################################################################
-##     Perseus module to handle the loops boards.
-##
-##     Copyright (C) 2013  Max IV Laboratory, Lund Sweden
-##
-##     This program is free software: you can redistribute it and/or modify
-##     it under the terms of the GNU General Public License as published by
-##     the Free Software Foundation, either version 3 of the License, or
-##     (at your option) any later version.
-##
-##     This program is distributed in the hope that it will be useful,
-##     but WITHOUT ANY WARRANTY; without even the implied warranty of
-##     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-##     GNU General Public License for more details.
-##
-##     You should have received a copy of the GNU General Public License
-##     along with this program.  If not, see [http://www.gnu.org/licenses/].
+#     Perseus module to handle the loops boards.
+#
+#     Copyright (C) 2013  Max IV Laboratory, Lund Sweden
+#
+#     This program is free software: you can redistribute it and/or modify
+#     it under the terms of the GNU General Public License as published by
+#     the Free Software Foundation, either version 3 of the License, or
+#     (at your option) any later version.
+#
+#     This program is distributed in the hope that it will be useful,
+#     but WITHOUT ANY WARRANTY; without even the implied warranty of
+#     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#     GNU General Public License for more details.
+#
+#     You should have received a copy of the GNU General Public License
+#     along with this program.  If not, see [http://www.gnu.org/licenses/].
 ###############################################################################
 
+"""This module contains the main class for the perseus loops.
+"""
+
+__all__ = ["PerseusLoops"]
+
 __author__ = 'antmil'
+
+__docformat__ = 'restructuredtext'
 
 try:
     import eapi
@@ -39,39 +46,44 @@ MI125_CLK_SRC = "bottomfmc"
 
 class PerseusLoops(object):
 
-    def __init__(self):
-            eapi.eapi_init()
-            self._board_state = eapi.connection_state()
-            self.connect()
+    def __init__(self, perseus_ip=PERSEUS_LOOP_IP):
+        if perseus_ip is None:
+            self.perseus_ip = PERSEUS_LOOP_IP
+        else:
+            self.perseus_ip = perseus_ip
 
-            self.custom_write(4, 1)
+        eapi.eapi_init()
+        self._board_state = eapi.connection_state()
+        self.connect()
 
-            print "MO1000 1 initialization..."
-            self.mo1000 = Mo1000(self._board_state, MO1000_BOARD_NUMBER)
+        self.custom_write(4, 1)
 
-            print "Mi125 2 initialization..."
-            self.mi125 = Mi125(self._board_state, MI125_BOARD_NUMBER, MI125_CLK_SRC)
-            print "DONE"
+        print "MO1000 1 initialization..."
+        self.mo1000 = Mo1000(self._board_state, MO1000_BOARD_NUMBER)
 
-            self.mo1000.enable_dac_outputs()
+        print "Mi125 2 initialization..."
+        self.mi125 = Mi125(self._board_state, MI125_BOARD_NUMBER, MI125_CLK_SRC)
+        print "DONE"
 
-            print "Remove reset MI125 - MO1000 intercore fifo"
-            self.custom_write(4, 0)
-            print "DONE"
+        self.mo1000.enable_dac_outputs()
 
-            self.mo1000.display_dac_error()
+        print "Remove reset MI125 - MO1000 intercore fifo"
+        self.custom_write(4, 0)
+        print "DONE"
 
-            self.configure_gpio_inputs_outputs()
+        self.mo1000.display_dac_error()
 
-            self.configure_vcxo()
+        self.configure_gpio_inputs_outputs()
 
-            self.configure_loops_registers()
+        self.configure_vcxo()
 
-            print "Init DONE"
+        self.configure_loops_registers()
+
+        print "Init DONE"
 
     @ensure_connect_method
     def connect(self):
-        return eapi.connect_cce(PERSEUS_LOOP_IP, self._board_state)
+        return eapi.connect_cce(self.perseus_ip, self._board_state)
 
     @ensure_write_method
     def custom_write(self, register, data):

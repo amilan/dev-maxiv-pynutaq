@@ -20,7 +20,13 @@
 #     along with this program.  If not, see [http://www.gnu.org/licenses/].
 ###############################################################################
 
-__author__ = "antmil"
+"""This module defines the extra methods used for the special attributes in the
+device servers
+"""
+
+__author__ = 'antmil'
+
+__docformat__ = 'restructuredtext'
 
 try:
 
@@ -28,7 +34,7 @@ try:
 
 except ImportError, e:
     print "#############################################"
-    print "It's not possible to import perseus classes. "
+    print "It's not possible to import perseusdefs. "
     print "This device can run only in simulated mode.  "
     print "#############################################"
     raise

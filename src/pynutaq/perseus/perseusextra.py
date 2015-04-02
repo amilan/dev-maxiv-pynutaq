@@ -19,7 +19,12 @@
 #     along with this program.  If not, see [http://www.gnu.org/licenses/].
 ###############################################################################
 
+"""This module contains useful functions to be used in the devices.
+"""
+
 __author__ = 'antmil'
+
+__docformat__ = 'restructuredtext'
 
 import math
 from pynutaq.perseus.perseusdefs import *

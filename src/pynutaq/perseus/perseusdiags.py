@@ -1,25 +1,32 @@
 #!/usr/bin/env python
 
 ###############################################################################
-##     Perseus module to manage the diagnostics boards.
-##
-##     Copyright (C) 2013  Max IV Laboratory, Lund Sweden
-##
-##     This program is free software: you can redistribute it and/or modify
-##     it under the terms of the GNU General Public License as published by
-##     the Free Software Foundation, either version 3 of the License, or
-##     (at your option) any later version.
-##
-##     This program is distributed in the hope that it will be useful,
-##     but WITHOUT ANY WARRANTY; without even the implied warranty of
-##     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-##     GNU General Public License for more details.
-##
-##     You should have received a copy of the GNU General Public License
-##     along with this program.  If not, see [http://www.gnu.org/licenses/].
+#     Perseus module to manage the diagnostics boards.
+#
+#     Copyright (C) 2013  Max IV Laboratory, Lund Sweden
+#
+#     This program is free software: you can redistribute it and/or modify
+#     it under the terms of the GNU General Public License as published by
+#     the Free Software Foundation, either version 3 of the License, or
+#     (at your option) any later version.
+#
+#     This program is distributed in the hope that it will be useful,
+#     but WITHOUT ANY WARRANTY; without even the implied warranty of
+#     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#     GNU General Public License for more details.
+#
+#     You should have received a copy of the GNU General Public License
+#     along with this program.  If not, see [http://www.gnu.org/licenses/].
 ###############################################################################
 
+"""This module contains the main class for the perseus diagnostics.
+"""
+
+__all__ = ["PerseusDiags"]
+
 __author__ = 'antmil'
+
+__docformat__ = 'restructuredtext'
 
 try:
     import eapi
@@ -38,26 +45,31 @@ MI125_CLK_SRC = "ext"
 
 class PerseusDiags(object):
 
-    def __init__(self):
-            eapi.eapi_init()
-            self._board_state = eapi.connection_state()
-            self.connect()
+    def __init__(self, perseus_ip=PERSEUS_DIAG_IP):
+        if perseus_ip is None:
+            self.perseus_ip = PERSEUS_DIAG_IP
+        else:
+            self.perseus_ip = perseus_ip
 
-            print "Mi125 2 initialization..."
-            self.mi125 = Mi125(self._board_state, MI125_BOARD_NUMBER, MI125_CLK_SRC)
-            print "DONE"
+        eapi.eapi_init()
+        self._board_state = eapi.connection_state()
+        self.connect()
 
-            # self.configure_gpio_inputs_outputs()
-            #
-            # self.configure_vcxo()
-            #
-            # self.configure_loops_registers()
+        print "Mi125 2 initialization..."
+        self.mi125 = Mi125(self._board_state, MI125_BOARD_NUMBER, MI125_CLK_SRC)
+        print "DONE"
 
-            print "Init DONE"
+        # self.configure_gpio_inputs_outputs()
+        #
+        # self.configure_vcxo()
+        #
+        # self.configure_loops_registers()
+
+        print "Init DONE"
 
     @ensure_connect_method
     def connect(self):
-        return eapi.connect_cce(PERSEUS_DIAG_IP, self._board_state)
+        return eapi.connect_cce(self.perseus_ip, self._board_state)
 
     @ensure_write_method
     def custom_write(self, register, data):

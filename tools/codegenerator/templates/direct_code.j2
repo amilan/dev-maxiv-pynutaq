@@ -21,14 +21,26 @@
 #     along with this program.  If not, see [http://www.gnu.org/licenses/].
 ###############################################################################
 
+"""This module contains the Nutaq device server for loops.
+"""
+
+__all__ = ["Nutaq", "run"]
+
+__author__ = 'antmil'
+
+__docformat__ = 'restructuredtext'
+
+# standard library imports
 import time
 import numpy
 import math
 
+# 3rd party imports
 from PyTango import AttrQuality, AttrWriteType, DispLevel, DevState, DebugIt
 from PyTango.server import Device, DeviceMeta, attribute, command, run
 from PyTango.server import device_property
 
+# local imports
 from pynutaq.nutaq.nutaqdefs import *
 from pynutaq.extra import *
 
@@ -49,11 +61,12 @@ class Nutaq(Device):
 
 {% block static_methods %}
     perseusType = device_property(dtype=str, default_value='simulated')
+    perseusIp = device_property(dtype=str, default_value='127.0.0.1')
 
     def init_device(self):
         Device.init_device(self)
         try:
-            self.perseus = Perseus().new_perseus(self.perseusType)
+            self.perseus = Perseus().new_perseus(self.perseusType, self.perseusIp)
             self.set_state(DevState.ON)
         except Exception, e:
             print e

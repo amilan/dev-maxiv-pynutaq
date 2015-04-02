@@ -1,25 +1,35 @@
 #!/usr/bin/env python
 
 ###############################################################################
-##     Perseus decorators to be used to ensure communications with the boards.
-##
-##     Copyright (C) 2013  Max IV Laboratory, Lund Sweden
-##
-##     This program is free software: you can redistribute it and/or modify
-##     it under the terms of the GNU General Public License as published by
-##     the Free Software Foundation, either version 3 of the License, or
-##     (at your option) any later version.
-##
-##     This program is distributed in the hope that it will be useful,
-##     but WITHOUT ANY WARRANTY; without even the implied warranty of
-##     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-##     GNU General Public License for more details.
-##
-##     You should have received a copy of the GNU General Public License
-##     along with this program.  If not, see [http://www.gnu.org/licenses/].
+#     Perseus decorators to be used to ensure communications with the boards.
+#
+#     Copyright (C) 2013  Max IV Laboratory, Lund Sweden
+#
+#     This program is free software: you can redistribute it and/or modify
+#     it under the terms of the GNU General Public License as published by
+#     the Free Software Foundation, either version 3 of the License, or
+#     (at your option) any later version.
+#
+#     This program is distributed in the hope that it will be useful,
+#     but WITHOUT ANY WARRANTY; without even the implied warranty of
+#     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#     GNU General Public License for more details.
+#
+#     You should have received a copy of the GNU General Public License
+#     along with this program.  If not, see [http://www.gnu.org/licenses/].
 ###############################################################################
 
+"""This module defines decorators to ensure communications with the boards.
+"""
+
+__all__ = ["ensure_write_method",
+           "ensure_read_method",
+           "ensure_connect_method"
+]
+
 __author__ = 'antmil'
+
+__docformat__ = 'restructuredtext'
 
 try:
     import eapi
