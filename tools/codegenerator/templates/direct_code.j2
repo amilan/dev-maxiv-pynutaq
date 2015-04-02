@@ -68,6 +68,9 @@ class Nutaq(Device):
         self.write_direct(False, TUNING_RESET_ADDRESS)
 
 
-if __name__ == "__main__":
+def run():
     run([Nutaq])
+
+if __name__ == "__main__":
+    run()
 {% endblock %}

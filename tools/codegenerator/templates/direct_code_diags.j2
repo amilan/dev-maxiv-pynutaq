@@ -68,7 +68,9 @@ class NutaqDiags(Device):
         self.write_direct(True, TUNING_RESET_ADDRESS)
         self.write_direct(False, TUNING_RESET_ADDRESS)
 
+def run():
+    run([NutaqDiags])
 
 if __name__ == "__main__":
-    run([NutaqDiags])
+    run()
 {% endblock %}
