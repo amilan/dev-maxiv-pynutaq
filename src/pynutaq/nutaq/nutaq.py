@@ -1,52 +1,57 @@
 #!/usr/bin/env python
 
 ###############################################################################
-##     Nutaq device server. 
-##
-##     Copyright (C) 2013  Max IV Laboratory, Lund Sweden
-##
-##     This program is free software: you can redistribute it and/or modify
-##     it under the terms of the GNU General Public License as published by
-##     the Free Software Foundation, either version 3 of the License, or
-##     (at your option) any later version.
-##
-##     This program is distributed in the hope that it will be useful,
-##     but WITHOUT ANY WARRANTY; without even the implied warranty of
-##     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-##     GNU General Public License for more details.
-##
-##     You should have received a copy of the GNU General Public License
-##     along with this program.  If not, see [http://www.gnu.org/licenses/].
+#     Nutaq device server.
+#
+#     Copyright (C) 2013  Max IV Laboratory, Lund Sweden
+#
+#     This program is free software: you can redistribute it and/or modify
+#     it under the terms of the GNU General Public License as published by
+#     the Free Software Foundation, either version 3 of the License, or
+#     (at your option) any later version.
+#
+#     This program is distributed in the hope that it will be useful,
+#     but WITHOUT ANY WARRANTY; without even the implied warranty of
+#     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#     GNU General Public License for more details.
+#
+#     You should have received a copy of the GNU General Public License
+#     along with this program.  If not, see [http://www.gnu.org/licenses/].
 ###############################################################################
 
+"""This module contains the Nutaq device server for loops.
+"""
+
+__all__ = ["Nutaq", "run"]
+
+__author__ = 'antmil'
+
+__docformat__ = 'restructuredtext'
+
+# standard library imports
 import time
 import numpy
 import math
 
+# 3rd party imports
 from PyTango import AttrQuality, AttrWriteType, DispLevel, DevState, DebugIt
 from PyTango.server import Device, DeviceMeta, attribute, command, run
 from PyTango.server import device_property
 
-#from nutaqattributes import attributes_dict
-from nutaqdefs import *
+# local imports
+from pynutaq.nutaq.nutaqdefs import *
+
+import pynutaq.extra as extra_func
+
+import pynutaq.perseus.perseusutils as perseus_utils
 
 try:
-
     from pynutaq.perseus.perseusdefs import *
-
     from pynutaq.perseus.perseusfactory import Perseus
-
-except Exception,e:
-    print "#############################################"
-    print "                 WARNING"
-    print "#############################################"
-    print "It's not possible to import perseus classes. "
-    print "This device can run only in simulated mode.  "
-    print "#############################################\n"
+except ImportError, e:
     print e
+    raise
 
-# from extra import *
-from pynutaq.extra import *
 
 class Nutaq(Device):
     __metaclass__ = DeviceMeta
@@ -1751,803 +1756,705 @@ class Nutaq(Device):
 
 
     perseusType = device_property(dtype=str, default_value='simulated')
+    perseusIp = device_property(dtype=str, default_value='127.0.0.1')
 
     def init_device(self):
         Device.init_device(self)
         try:
-            self.perseus = Perseus().new_perseus(self.perseusType)
+            self.perseus = Perseus().new_perseus(self.perseusType, self.perseusIp)
             self.set_state(DevState.ON)
         except Exception, e:
             print e
             self.set_state(DevState.FAULT)
 
-    def read_angle(self, address):
-        # =IF(P6>32767;(P6-65536)/32767*180;P6/32767*180)
-
-        self.perseus.write(SETTINGS_READ_OFFSET, address)
-        value = self.perseus.read(SETTINGS_READ_OFFSET)
-
-        if value > 32767:
-            angle = (value - 65536) * 180.0 / 32767
-        else:
-            angle = (value * 180.0) / 32767
-
-        return angle
-
-    def write_angle(self, value, address):
-        """=ROUND(IF(
-                     E6<0; E6/180*32767+65536;
-                     IF(E6<=180; E6/180*32767;
-                       (E6-360)/180*32767+65536)
-                    );0
-                )
-        """
-        if value < 0:
-            angle = (value * 32767 / 180.0) + 65536
-        elif value <= 180.0:
-            angle = (value * 32767) / 180.0
-        else:
-            angle = ((value - 360) * 32767 / 180.0) + 65536
-
-        value = address << 17 | int(angle)
-        self.perseus.write(SETTINGS_WRITE_OFFSET, value)
-
-    def read_milivolts(self, address):
-        """
-            This method converts the value readed from a register in milivolts usign the following formula:
-            VALUE = ROUND(P23*1000/32767*1,6467602581;0)
-        :param value: value read from a register.
-        :return: value converted in milivolts
-        """
-        self.perseus.write(SETTINGS_READ_OFFSET, address)
-        value = self.perseus.read(SETTINGS_READ_OFFSET)
-
-        milis = value * 1000.0 / 32767 * 1.6467602581
-        return milis
-
-    def write_milivolts(self, milivolts, address):
-        """
-            This method converts the value from milivolts to bit to be written in the register usign the following
-            formula:
-            VALUE =ROUND(E23/1000*32767/1,6467602581;0)
-        :param value: value to be converted.
-        :return: value to write in the register.
-        """
-        value = (milivolts * 32767 / 1.6467602581) / 1000.0
-
-        value = address << 17 | int(value)
-        self.perseus.write(SETTINGS_WRITE_OFFSET, value)
-
-    def read_direct(self, address):
-        self.perseus.write(SETTINGS_READ_OFFSET, address)
-        value = self.perseus.read(SETTINGS_READ_OFFSET)
-        return value
-
-    def write_direct(self, value, address):
-        value = address << 17 | int(value)
-        self.perseus.write(SETTINGS_WRITE_OFFSET, value)
-
-    def read_diag_angle(self, address):
-        self.perseus.write(DIAGNOSTICS_OFFSET, address)
-        value = self.perseus.read(DIAGNOSTICS_OFFSET)
-        # =IF(D49>32767;
-        #    (D49-65536)/32767*180;
-        #     D49/32767*180)
-        if value > 32767:
-            angle = (value - (1 << 16)) * 180.0 / 32767
-        else:
-            angle = value * 180.0 / 32767
-        return angle
-
-    def read_diag_milivolts(self, address):
-        self.perseus.write(DIAGNOSTICS_OFFSET, address)
-        value = self.perseus.read(DIAGNOSTICS_OFFSET)
-        #and now convert the value
-        #=IF(D9<32768;
-        #    D9/32767*1000;
-        #   (D9-2^16)/32767*1000)
-        if value < 32768:
-            milis = value * 1000.0 / 32767
-        else:
-            milis = ((value - (1 << 16)) * 1000.0) / 32767
-        return milis
-
-    def calc_amplitude(self, ivalue, qvalue):
-        amplitude = math.sqrt((ivalue**2) + (qvalue**2))
-        return amplitude
-
-    def calc_phase(self, ivalue, qvalue):
-        phase = math.atan2(qvalue, ivalue)
-        return phase
-
 
     @DebugIt()
     def get_KpA(self):
-        return self.read_direct(0)
+        return perseus_utils.read_direct(self.perseus, 0)
 
     @DebugIt()
     def set_KpA(self, KpA):
-        self.write_direct(KpA, 0)
+        perseus_utils.write_direct(self.perseus, KpA, 0)
 
     @DebugIt()
     def get_KiA(self):
-        return self.read_direct(1)
+        return perseus_utils.read_direct(self.perseus, 1)
 
     @DebugIt()
     def set_KiA(self, KiA):
-        self.write_direct(KiA, 1)
+        perseus_utils.write_direct(self.perseus, KiA, 1)
 
     @DebugIt()
     def get_PhaseShiftCav(self):
-        return self.read_angle(2)
+        return perseus_utils.read_angle(self.perseus, 2)
 
     @DebugIt()
     def set_PhaseShiftCav(self, PhaseShiftCav):
-        self.write_angle(PhaseShiftCav, 2)
+        perseus_utils.write_angle(self.perseus, PhaseShiftCav, 2)
 
     @DebugIt()
     def get_PhaseShiftFwcav(self):
-        return self.read_angle(3)
+        return perseus_utils.read_angle(self.perseus, 3)
 
     @DebugIt()
     def set_PhaseShiftFwcav(self, PhaseShiftFwcav):
-        self.write_angle(PhaseShiftFwcav, 3)
+        perseus_utils.write_angle(self.perseus, PhaseShiftFwcav, 3)
 
     @DebugIt()
     def get_PhaseShiftFwtet1(self):
-        return self.read_angle(4)
+        return perseus_utils.read_angle(self.perseus, 4)
 
     @DebugIt()
     def set_PhaseShiftFwtet1(self, PhaseShiftFwtet1):
-        self.write_angle(PhaseShiftFwtet1, 4)
+        perseus_utils.write_angle(self.perseus, PhaseShiftFwtet1, 4)
 
     @DebugIt()
     def get_PhaseShiftFwtet2(self):
-        return self.read_angle(5)
+        return perseus_utils.read_angle(self.perseus, 5)
 
     @DebugIt()
     def set_PhaseShiftFwtet2(self, PhaseShiftFwtet2):
-        self.write_angle(PhaseShiftFwtet2, 5)
+        perseus_utils.write_angle(self.perseus, PhaseShiftFwtet2, 5)
 
     @DebugIt()
     def get_PilimitA(self):
         address = 6
         #@todo: add this method to special methods library ...
-        utils.get_PilimitA(self.perseus, address)
+        extra_func.get_PilimitA(self.perseus, address)
 
     @DebugIt()
     def set_PilimitA(self, PilimitA):
         address = 6
         #@todo: add this method to special methods library ...
-        utils.get_PilimitA(self.perseus, PilimitA, address)
+        extra_func.get_PilimitA(self.perseus, PilimitA, address)
 
     @DebugIt()
     def get_SamplesToAverage(self):
-        return self.read_direct(7)
+        return perseus_utils.read_direct(self.perseus, 7)
 
     @DebugIt()
     def set_SamplesToAverage(self, SamplesToAverage):
-        self.write_direct(SamplesToAverage, 7)
+        perseus_utils.write_direct(self.perseus, SamplesToAverage, 7)
 
     @DebugIt()
     def get_FilterStages(self):
-        return self.read_direct(8)
+        return perseus_utils.read_direct(self.perseus, 8)
 
     @DebugIt()
     def set_FilterStages(self, FilterStages):
-        self.write_direct(FilterStages, 8)
+        perseus_utils.write_direct(self.perseus, FilterStages, 8)
 
     @DebugIt()
     def get_PhaseShiftFwcircin(self):
-        return self.read_angle(9)
+        return perseus_utils.read_angle(self.perseus, 9)
 
     @DebugIt()
     def set_PhaseShiftFwcircin(self, PhaseShiftFwcircin):
-        self.write_angle(PhaseShiftFwcircin, 9)
+        perseus_utils.write_angle(self.perseus, PhaseShiftFwcircin, 9)
 
     @DebugIt()
     def get_PhaseShiftControlSignalTet1(self):
-        return self.read_angle(10)
+        return perseus_utils.read_angle(self.perseus, 10)
 
     @DebugIt()
     def set_PhaseShiftControlSignalTet1(self, PhaseShiftControlSignalTet1):
-        self.write_angle(PhaseShiftControlSignalTet1, 10)
+        perseus_utils.write_angle(self.perseus, PhaseShiftControlSignalTet1, 10)
 
     @DebugIt()
     def get_PhaseShiftControlSignalTet2(self):
-        return self.read_angle(11)
+        return perseus_utils.read_angle(self.perseus, 11)
 
     @DebugIt()
     def set_PhaseShiftControlSignalTet2(self, PhaseShiftControlSignalTet2):
-        self.write_angle(PhaseShiftControlSignalTet2, 11)
+        perseus_utils.write_angle(self.perseus, PhaseShiftControlSignalTet2, 11)
 
     @DebugIt()
     def get_GainTetrode1(self):
         address = 13
         #@todo: add this method to special methods library ...
-        utils.get_GainTetrode1(self.perseus, address)
+        extra_func.get_GainTetrode1(self.perseus, address)
 
     @DebugIt()
     def set_GainTetrode1(self, GainTetrode1):
         address = 13
         #@todo: add this method to special methods library ...
-        utils.get_GainTetrode1(self.perseus, GainTetrode1, address)
+        extra_func.get_GainTetrode1(self.perseus, GainTetrode1, address)
 
     @DebugIt()
     def get_GainTetrode2(self):
         address = 14
         #@todo: add this method to special methods library ...
-        utils.get_GainTetrode2(self.perseus, address)
+        extra_func.get_GainTetrode2(self.perseus, address)
 
     @DebugIt()
     def set_GainTetrode2(self, GainTetrode2):
         address = 14
         #@todo: add this method to special methods library ...
-        utils.get_GainTetrode2(self.perseus, GainTetrode2, address)
+        extra_func.get_GainTetrode2(self.perseus, GainTetrode2, address)
 
     @DebugIt()
     def get_AutomaticStartupEnable(self):
-        return self.read_direct(15)
+        return perseus_utils.read_direct(self.perseus, 15)
 
     @DebugIt()
     def set_AutomaticStartupEnable(self, AutomaticStartupEnable):
-        self.write_direct(AutomaticStartupEnable, 15)
+        perseus_utils.write_direct(self.perseus, AutomaticStartupEnable, 15)
 
     @DebugIt()
     def get_CommandStart(self):
-        return self.read_direct(16)
+        return perseus_utils.read_direct(self.perseus, 16)
 
     @DebugIt()
     def set_CommandStart(self, CommandStart):
-        self.write_direct(CommandStart, 16)
+        perseus_utils.write_direct(self.perseus, CommandStart, 16)
 
     @DebugIt()
     def get_Amprefin(self):
-        return self.read_milivolts(19)
+        return perseus_utils.read_milivolts(self.perseus, 19)
 
     @DebugIt()
     def set_Amprefin(self, Amprefin):
-        self.write_milivolts(Amprefin, 19)
+        perseus_utils.write_milivolts(self.perseus, Amprefin, 19)
 
     @DebugIt()
     def get_Phrefin(self):
-        return self.read_angle(20)
+        return perseus_utils.read_angle(self.perseus, 20)
 
     @DebugIt()
     def set_Phrefin(self, Phrefin):
-        self.write_angle(Phrefin, 20)
+        perseus_utils.write_angle(self.perseus, Phrefin, 20)
 
     @DebugIt()
     def get_Amprefmin(self):
-        return self.read_milivolts(21)
+        return perseus_utils.read_milivolts(self.perseus, 21)
 
     @DebugIt()
     def set_Amprefmin(self, Amprefmin):
-        self.write_milivolts(Amprefmin, 21)
+        perseus_utils.write_milivolts(self.perseus, Amprefmin, 21)
 
     @DebugIt()
     def get_Phrefmin(self):
-        return self.read_angle(22)
+        return perseus_utils.read_angle(self.perseus, 22)
 
     @DebugIt()
     def set_Phrefmin(self, Phrefmin):
-        self.write_angle(Phrefmin, 22)
+        perseus_utils.write_angle(self.perseus, Phrefmin, 22)
 
     @DebugIt()
     def get_PhaseIncreaseRate(self):
-        return self.read_direct(23)
+        return perseus_utils.read_direct(self.perseus, 23)
 
     @DebugIt()
     def set_PhaseIncreaseRate(self, PhaseIncreaseRate):
-        self.write_direct(PhaseIncreaseRate, 23)
+        perseus_utils.write_direct(self.perseus, PhaseIncreaseRate, 23)
 
     @DebugIt()
     def get_VoltageIncreaseRate(self):
-        return self.read_direct(24)
+        return perseus_utils.read_direct(self.perseus, 24)
 
     @DebugIt()
     def set_VoltageIncreaseRate(self, VoltageIncreaseRate):
-        self.write_direct(VoltageIncreaseRate, 24)
+        perseus_utils.write_direct(self.perseus, VoltageIncreaseRate, 24)
 
     @DebugIt()
     def get_GainOl(self):
         address = 25
         #@todo: add this method to special methods library ...
-        utils.get_GainOl(self.perseus, address)
+        extra_func.get_GainOl(self.perseus, address)
 
     @DebugIt()
     def set_GainOl(self, GainOl):
         address = 25
         #@todo: add this method to special methods library ...
-        utils.get_GainOl(self.perseus, GainOl, address)
+        extra_func.get_GainOl(self.perseus, GainOl, address)
 
     @DebugIt()
     def get_SpareGpioOutput01(self):
-        return self.read_direct(28)
+        return perseus_utils.read_direct(self.perseus, 28)
 
     @DebugIt()
     def set_SpareGpioOutput01(self, SpareGpioOutput01):
-        self.write_direct(SpareGpioOutput01, 28)
+        perseus_utils.write_direct(self.perseus, SpareGpioOutput01, 28)
 
     @DebugIt()
     def get_SpareGpioOutput02(self):
-        return self.read_direct(29)
+        return perseus_utils.read_direct(self.perseus, 29)
 
     @DebugIt()
     def set_SpareGpioOutput02(self, SpareGpioOutput02):
-        self.write_direct(SpareGpioOutput02, 29)
+        perseus_utils.write_direct(self.perseus, SpareGpioOutput02, 29)
 
     @DebugIt()
     def get_SpareGpioOutput03(self):
-        return self.read_direct(30)
+        return perseus_utils.read_direct(self.perseus, 30)
 
     @DebugIt()
     def set_SpareGpioOutput03(self, SpareGpioOutput03):
-        self.write_direct(SpareGpioOutput03, 30)
+        perseus_utils.write_direct(self.perseus, SpareGpioOutput03, 30)
 
     @DebugIt()
     def get_SpareGpioOutput04(self):
-        return self.read_direct(31)
+        return perseus_utils.read_direct(self.perseus, 31)
 
     @DebugIt()
     def set_SpareGpioOutput04(self, SpareGpioOutput04):
-        self.write_direct(SpareGpioOutput04, 31)
+        perseus_utils.write_direct(self.perseus, SpareGpioOutput04, 31)
 
     @DebugIt()
     def get_FdlSwTrigger(self):
-        return self.read_direct(32)
+        return perseus_utils.read_direct(self.perseus, 32)
 
     @DebugIt()
     def set_FdlSwTrigger(self, FdlSwTrigger):
-        self.write_direct(FdlSwTrigger, 32)
+        perseus_utils.write_direct(self.perseus, FdlSwTrigger, 32)
 
     @DebugIt()
     def get_SlowIqLoopEnable(self):
-        return self.read_direct(100)
+        return perseus_utils.read_direct(self.perseus, 100)
 
     @DebugIt()
     def set_SlowIqLoopEnable(self, SlowIqLoopEnable):
-        self.write_direct(SlowIqLoopEnable, 100)
+        perseus_utils.write_direct(self.perseus, SlowIqLoopEnable, 100)
 
     @DebugIt()
     def get_AdcsPhaseshiftEnableA(self):
-        return self.read_direct(101)
+        return perseus_utils.read_direct(self.perseus, 101)
 
     @DebugIt()
     def set_AdcsPhaseshiftEnableA(self, AdcsPhaseshiftEnableA):
-        self.write_direct(AdcsPhaseshiftEnableA, 101)
+        perseus_utils.write_direct(self.perseus, AdcsPhaseshiftEnableA, 101)
 
     @DebugIt()
     def get_DacsPhaseShiftEnableA(self):
-        return self.read_direct(102)
+        return perseus_utils.read_direct(self.perseus, 102)
 
     @DebugIt()
     def set_DacsPhaseShiftEnableA(self, DacsPhaseShiftEnableA):
-        self.write_direct(DacsPhaseShiftEnableA, 102)
+        perseus_utils.write_direct(self.perseus, DacsPhaseShiftEnableA, 102)
 
     @DebugIt()
     def get_SquarerefEnableA(self):
-        return self.read_direct(103)
+        return perseus_utils.read_direct(self.perseus, 103)
 
     @DebugIt()
     def set_SquarerefEnableA(self, SquarerefEnableA):
-        self.write_direct(SquarerefEnableA, 103)
+        perseus_utils.write_direct(self.perseus, SquarerefEnableA, 103)
 
     @DebugIt()
     def get_FreqsquareA(self):
         address = 104
         #@todo: add this method to special methods library ...
-        utils.get_FreqsquareA(self.perseus, address)
+        extra_func.get_FreqsquareA(self.perseus, address)
 
     @DebugIt()
     def set_FreqsquareA(self, FreqsquareA):
         address = 104
         #@todo: add this method to special methods library ...
-        utils.get_FreqsquareA(self.perseus, FreqsquareA, address)
+        extra_func.get_FreqsquareA(self.perseus, FreqsquareA, address)
 
     @DebugIt()
     def get_ResetkiA(self):
-        return self.read_direct(105)
+        return perseus_utils.read_direct(self.perseus, 105)
 
     @DebugIt()
     def set_ResetkiA(self, ResetkiA):
-        self.write_direct(ResetkiA, 105)
+        perseus_utils.write_direct(self.perseus, ResetkiA, 105)
 
     @DebugIt()
     def get_LookRefA(self):
-        return self.read_direct(106)
+        return perseus_utils.read_direct(self.perseus, 106)
 
     @DebugIt()
     def set_LookRefA(self, LookRefA):
-        self.write_direct(LookRefA, 106)
+        perseus_utils.write_direct(self.perseus, LookRefA, 106)
 
     @DebugIt()
     def get_QuadrantSelectionA(self):
-        return self.read_direct(107)
+        return perseus_utils.read_direct(self.perseus, 107)
 
     @DebugIt()
     def set_QuadrantSelectionA(self, QuadrantSelectionA):
-        self.write_direct(QuadrantSelectionA, 107)
+        perseus_utils.write_direct(self.perseus, QuadrantSelectionA, 107)
 
     @DebugIt()
     def get_SlowIqLoopInputSelection(self):
-        return self.read_direct(110)
+        return perseus_utils.read_direct(self.perseus, 110)
 
     @DebugIt()
     def set_SlowIqLoopInputSelection(self, SlowIqLoopInputSelection):
-        self.write_direct(SlowIqLoopInputSelection, 110)
+        perseus_utils.write_direct(self.perseus, SlowIqLoopInputSelection, 110)
 
     @DebugIt()
     def get_FastIqLoopInputSelection(self):
-        return self.read_direct(111)
+        return perseus_utils.read_direct(self.perseus, 111)
 
     @DebugIt()
     def set_FastIqLoopInputSelection(self, FastIqLoopInputSelection):
-        self.write_direct(FastIqLoopInputSelection, 111)
+        perseus_utils.write_direct(self.perseus, FastIqLoopInputSelection, 111)
 
     @DebugIt()
     def get_AmplitudeLoopInputSelection(self):
-        return self.read_direct(112)
+        return perseus_utils.read_direct(self.perseus, 112)
 
     @DebugIt()
     def set_AmplitudeLoopInputSelection(self, AmplitudeLoopInputSelection):
-        self.write_direct(AmplitudeLoopInputSelection, 112)
+        perseus_utils.write_direct(self.perseus, AmplitudeLoopInputSelection, 112)
 
     @DebugIt()
     def get_PhaseLoopInputSelection(self):
-        return self.read_direct(113)
+        return perseus_utils.read_direct(self.perseus, 113)
 
     @DebugIt()
     def set_PhaseLoopInputSelection(self, PhaseLoopInputSelection):
-        self.write_direct(PhaseLoopInputSelection, 113)
+        perseus_utils.write_direct(self.perseus, PhaseLoopInputSelection, 113)
 
     @DebugIt()
     def get_PolarLoopsEnable(self):
-        return self.read_direct(114)
+        return perseus_utils.read_direct(self.perseus, 114)
 
     @DebugIt()
     def set_PolarLoopsEnable(self, PolarLoopsEnable):
-        self.write_direct(PolarLoopsEnable, 114)
+        perseus_utils.write_direct(self.perseus, PolarLoopsEnable, 114)
 
     @DebugIt()
     def get_FastIqLoopEnable(self):
-        return self.read_direct(115)
+        return perseus_utils.read_direct(self.perseus, 115)
 
     @DebugIt()
     def set_FastIqLoopEnable(self, FastIqLoopEnable):
-        self.write_direct(FastIqLoopEnable, 115)
+        perseus_utils.write_direct(self.perseus, FastIqLoopEnable, 115)
 
     @DebugIt()
     def get_AmplitudeLoopEnable(self):
-        return self.read_direct(116)
+        return perseus_utils.read_direct(self.perseus, 116)
 
     @DebugIt()
     def set_AmplitudeLoopEnable(self, AmplitudeLoopEnable):
-        self.write_direct(AmplitudeLoopEnable, 116)
+        perseus_utils.write_direct(self.perseus, AmplitudeLoopEnable, 116)
 
     @DebugIt()
     def get_PhaseLoopEnable(self):
-        return self.read_direct(117)
+        return perseus_utils.read_direct(self.perseus, 117)
 
     @DebugIt()
     def set_PhaseLoopEnable(self, PhaseLoopEnable):
-        self.write_direct(PhaseLoopEnable, 117)
+        perseus_utils.write_direct(self.perseus, PhaseLoopEnable, 117)
 
     @DebugIt()
     def get_KpFastIqLoop(self):
-        return self.read_direct(118)
+        return perseus_utils.read_direct(self.perseus, 118)
 
     @DebugIt()
     def set_KpFastIqLoop(self, KpFastIqLoop):
-        self.write_direct(KpFastIqLoop, 118)
+        perseus_utils.write_direct(self.perseus, KpFastIqLoop, 118)
 
     @DebugIt()
     def get_KiFastIqLoop(self):
-        return self.read_direct(119)
+        return perseus_utils.read_direct(self.perseus, 119)
 
     @DebugIt()
     def set_KiFastIqLoop(self, KiFastIqLoop):
-        self.write_direct(KiFastIqLoop, 119)
+        perseus_utils.write_direct(self.perseus, KiFastIqLoop, 119)
 
     @DebugIt()
     def get_KpAmpLoop(self):
-        return self.read_direct(120)
+        return perseus_utils.read_direct(self.perseus, 120)
 
     @DebugIt()
     def set_KpAmpLoop(self, KpAmpLoop):
-        self.write_direct(KpAmpLoop, 120)
+        perseus_utils.write_direct(self.perseus, KpAmpLoop, 120)
 
     @DebugIt()
     def get_KiAmpLoop(self):
-        return self.read_direct(121)
+        return perseus_utils.read_direct(self.perseus, 121)
 
     @DebugIt()
     def set_KiAmpLoop(self, KiAmpLoop):
-        self.write_direct(KiAmpLoop, 121)
+        perseus_utils.write_direct(self.perseus, KiAmpLoop, 121)
 
     @DebugIt()
     def get_KpPhaseLoop(self):
-        return self.read_direct(122)
+        return perseus_utils.read_direct(self.perseus, 122)
 
     @DebugIt()
     def set_KpPhaseLoop(self, KpPhaseLoop):
-        self.write_direct(KpPhaseLoop, 122)
+        perseus_utils.write_direct(self.perseus, KpPhaseLoop, 122)
 
     @DebugIt()
     def get_KiPhaseLoop(self):
-        return self.read_direct(123)
+        return perseus_utils.read_direct(self.perseus, 123)
 
     @DebugIt()
     def set_KiPhaseLoop(self, KiPhaseLoop):
-        self.write_direct(KiPhaseLoop, 123)
+        perseus_utils.write_direct(self.perseus, KiPhaseLoop, 123)
 
     @DebugIt()
     def get_PiLimitFastPiIq(self):
-        return self.read_milivolts(124)
+        return perseus_utils.read_milivolts(self.perseus, 124)
 
     @DebugIt()
     def set_PiLimitFastPiIq(self, PiLimitFastPiIq):
-        self.write_milivolts(PiLimitFastPiIq, 124)
+        perseus_utils.write_milivolts(self.perseus, PiLimitFastPiIq, 124)
 
     @DebugIt()
     def get_PulseModeEnableA(self):
-        return self.read_direct(200)
+        return perseus_utils.read_direct(self.perseus, 200)
 
     @DebugIt()
     def set_PulseModeEnableA(self, PulseModeEnableA):
-        self.write_direct(PulseModeEnableA, 200)
+        perseus_utils.write_direct(self.perseus, PulseModeEnableA, 200)
 
     @DebugIt()
     def get_AutomaticConditioningEnableA(self):
-        return self.read_direct(201)
+        return perseus_utils.read_direct(self.perseus, 201)
 
     @DebugIt()
     def set_AutomaticConditioningEnableA(self, AutomaticConditioningEnableA):
-        self.write_direct(AutomaticConditioningEnableA, 201)
+        perseus_utils.write_direct(self.perseus, AutomaticConditioningEnableA, 201)
 
     @DebugIt()
     def get_ConditioningdutyCicleA(self):
         address = 202
         #@todo: add this method to special methods library ...
-        utils.get_ConditioningdutyCicleA(self.perseus, address)
+        extra_func.get_ConditioningdutyCicleA(self.perseus, address)
 
     @DebugIt()
     def set_ConditioningdutyCicleA(self, ConditioningdutyCicleA):
         address = 202
         #@todo: add this method to special methods library ...
-        utils.get_ConditioningdutyCicleA(self.perseus, ConditioningdutyCicleA, address)
+        extra_func.get_ConditioningdutyCicleA(self.perseus, ConditioningdutyCicleA, address)
 
     @DebugIt()
     def get_TuningEnableA(self):
-        return self.read_direct(300)
+        return perseus_utils.read_direct(self.perseus, 300)
 
     @DebugIt()
     def set_TuningEnableA(self, TuningEnableA):
-        self.write_direct(TuningEnableA, 300)
+        perseus_utils.write_direct(self.perseus, TuningEnableA, 300)
 
     @DebugIt()
     def get_TuningPosEnA(self):
-        return self.read_direct(301)
+        return perseus_utils.read_direct(self.perseus, 301)
 
     @DebugIt()
     def set_TuningPosEnA(self, TuningPosEnA):
-        self.write_direct(TuningPosEnA, 301)
+        perseus_utils.write_direct(self.perseus, TuningPosEnA, 301)
 
     @DebugIt()
     def get_NumStepsA(self):
-        return self.read_direct(302)
+        return perseus_utils.read_direct(self.perseus, 302)
 
     @DebugIt()
     def set_NumStepsA(self, NumStepsA):
-        self.write_direct(NumStepsA, 302)
+        perseus_utils.write_direct(self.perseus, NumStepsA, 302)
 
     @DebugIt()
     def get_PulsesFrequency(self):
-        return self.read_direct(303)
+        return perseus_utils.read_direct(self.perseus, 303)
 
     @DebugIt()
     def set_PulsesFrequency(self, PulsesFrequency):
-        self.write_direct(PulsesFrequency, 303)
+        perseus_utils.write_direct(self.perseus, PulsesFrequency, 303)
 
     @DebugIt()
     def get_PhaseOffsetA(self):
-        return self.read_angle(304)
+        return perseus_utils.read_angle(self.perseus, 304)
 
     @DebugIt()
     def set_PhaseOffsetA(self, PhaseOffsetA):
-        self.write_angle(PhaseOffsetA, 304)
+        perseus_utils.write_angle(self.perseus, PhaseOffsetA, 304)
 
     @DebugIt()
     def get_MoveA(self):
-        return self.read_direct(305)
+        return perseus_utils.read_direct(self.perseus, 305)
 
     @DebugIt()
     def set_MoveA(self, MoveA):
-        self.write_direct(MoveA, 305)
+        perseus_utils.write_direct(self.perseus, MoveA, 305)
 
     @DebugIt()
     def get_MoveupA(self):
-        return self.read_direct(306)
+        return perseus_utils.read_direct(self.perseus, 306)
 
     @DebugIt()
     def set_MoveupA(self, MoveupA):
-        self.write_direct(MoveupA, 306)
+        perseus_utils.write_direct(self.perseus, MoveupA, 306)
 
     @DebugIt()
     def get_TuningresetA(self):
-        return self.read_direct(307)
+        return perseus_utils.read_direct(self.perseus, 307)
 
     @DebugIt()
     def set_TuningresetA(self, TuningresetA):
-        self.write_direct(TuningresetA, 307)
+        perseus_utils.write_direct(self.perseus, TuningresetA, 307)
 
     @DebugIt()
     def get_Fwmina(self):
         address = 308
         #@todo: add this method to special methods library ...
-        utils.get_Fwmina(self.perseus, address)
+        extra_func.get_Fwmina(self.perseus, address)
 
     @DebugIt()
     def set_Fwmina(self, Fwmina):
         address = 308
         #@todo: add this method to special methods library ...
-        utils.get_Fwmina(self.perseus, Fwmina, address)
+        extra_func.get_Fwmina(self.perseus, Fwmina, address)
 
     @DebugIt()
     def get_MarginupA(self):
-        return self.read_angle(309)
+        return perseus_utils.read_angle(self.perseus, 309)
 
     @DebugIt()
     def set_MarginupA(self, MarginupA):
-        self.write_angle(MarginupA, 309)
+        perseus_utils.write_angle(self.perseus, MarginupA, 309)
 
     @DebugIt()
     def get_MarginlowA(self):
-        return self.read_angle(310)
+        return perseus_utils.read_angle(self.perseus, 310)
 
     @DebugIt()
     def set_MarginlowA(self, MarginlowA):
-        self.write_angle(MarginlowA, 310)
+        perseus_utils.write_angle(self.perseus, MarginlowA, 310)
 
     @DebugIt()
     def get_Tuningdelay(self):
         address = 311
         #@todo: add this method to special methods library ...
-        utils.get_Tuningdelay(self.perseus, address)
+        extra_func.get_Tuningdelay(self.perseus, address)
 
     @DebugIt()
     def set_Tuningdelay(self, Tuningdelay):
         address = 311
         #@todo: add this method to special methods library ...
-        utils.get_Tuningdelay(self.perseus, Tuningdelay, address)
+        extra_func.get_Tuningdelay(self.perseus, Tuningdelay, address)
 
     @DebugIt()
     def get_Tuningfilterenable(self):
-        return self.read_direct(312)
+        return perseus_utils.read_direct(self.perseus, 312)
 
     @DebugIt()
     def set_Tuningfilterenable(self, Tuningfilterenable):
-        self.write_direct(Tuningfilterenable, 312)
+        perseus_utils.write_direct(self.perseus, Tuningfilterenable, 312)
 
     @DebugIt()
     def get_Tuningtriggerenable(self):
-        return self.read_direct(313)
+        return perseus_utils.read_direct(self.perseus, 313)
 
     @DebugIt()
     def set_Tuningtriggerenable(self, Tuningtriggerenable):
-        self.write_direct(Tuningtriggerenable, 313)
+        perseus_utils.write_direct(self.perseus, Tuningtriggerenable, 313)
 
     @DebugIt()
     def get_EpsItckDisable(self):
-        return self.read_direct(400)
+        return perseus_utils.read_direct(self.perseus, 400)
 
     @DebugIt()
     def set_EpsItckDisable(self, EpsItckDisable):
-        self.write_direct(EpsItckDisable, 400)
+        perseus_utils.write_direct(self.perseus, EpsItckDisable, 400)
 
     @DebugIt()
     def get_FimItckDisable(self):
-        return self.read_direct(401)
+        return perseus_utils.read_direct(self.perseus, 401)
 
     @DebugIt()
     def set_FimItckDisable(self, FimItckDisable):
-        self.write_direct(FimItckDisable, 401)
+        perseus_utils.write_direct(self.perseus, FimItckDisable, 401)
 
     @DebugIt()
     def get_MDivider(self):
         address = 500
         #@todo: add this method to special methods library ...
-        utils.get_MDivider(self.perseus, address)
+        extra_func.get_MDivider(self.perseus, address)
 
     @DebugIt()
     def set_MDivider(self, MDivider):
         address = 500
         #@todo: add this method to special methods library ...
-        utils.get_MDivider(self.perseus, MDivider, address)
+        extra_func.get_MDivider(self.perseus, MDivider, address)
 
     @DebugIt()
     def get_NDivider(self):
         address = 501
         #@todo: add this method to special methods library ...
-        utils.get_NDivider(self.perseus, address)
+        extra_func.get_NDivider(self.perseus, address)
 
     @DebugIt()
     def set_NDivider(self, NDivider):
         address = 501
         #@todo: add this method to special methods library ...
-        utils.get_NDivider(self.perseus, NDivider, address)
+        extra_func.get_NDivider(self.perseus, NDivider, address)
 
     @DebugIt()
     def get_Muxsel(self):
-        return self.read_direct(502)
+        return perseus_utils.read_direct(self.perseus, 502)
 
     @DebugIt()
     def set_Muxsel(self, Muxsel):
-        self.write_direct(Muxsel, 502)
+        perseus_utils.write_direct(self.perseus, Muxsel, 502)
 
     @DebugIt()
     def get_Mux0Divider(self):
-        return self.read_direct(503)
+        return perseus_utils.read_direct(self.perseus, 503)
 
     @DebugIt()
     def set_Mux0Divider(self, Mux0Divider):
-        self.write_direct(Mux0Divider, 503)
+        perseus_utils.write_direct(self.perseus, Mux0Divider, 503)
 
     @DebugIt()
     def get_Mux1Divider(self):
-        return self.read_direct(504)
+        return perseus_utils.read_direct(self.perseus, 504)
 
     @DebugIt()
     def set_Mux1Divider(self, Mux1Divider):
-        self.write_direct(Mux1Divider, 504)
+        perseus_utils.write_direct(self.perseus, Mux1Divider, 504)
 
     @DebugIt()
     def get_Mux2Divider(self):
-        return self.read_direct(505)
+        return perseus_utils.read_direct(self.perseus, 505)
 
     @DebugIt()
     def set_Mux2Divider(self, Mux2Divider):
-        self.write_direct(Mux2Divider, 505)
+        perseus_utils.write_direct(self.perseus, Mux2Divider, 505)
 
     @DebugIt()
     def get_Mux3Divider(self):
-        return self.read_direct(506)
+        return perseus_utils.read_direct(self.perseus, 506)
 
     @DebugIt()
     def set_Mux3Divider(self, Mux3Divider):
-        self.write_direct(Mux3Divider, 506)
+        perseus_utils.write_direct(self.perseus, Mux3Divider, 506)
 
     @DebugIt()
     def get_Mux4Divider(self):
-        return self.read_direct(507)
+        return perseus_utils.read_direct(self.perseus, 507)
 
     @DebugIt()
     def set_Mux4Divider(self, Mux4Divider):
-        self.write_direct(Mux4Divider, 507)
+        perseus_utils.write_direct(self.perseus, Mux4Divider, 507)
 
     @DebugIt()
     def get_SendWord(self):
-        return self.read_direct(508)
+        return perseus_utils.read_direct(self.perseus, 508)
 
     @DebugIt()
     def set_SendWord(self, SendWord):
-        self.write_direct(SendWord, 508)
+        perseus_utils.write_direct(self.perseus, SendWord, 508)
 
     @DebugIt()
     def get_Cpdir(self):
-        return self.read_direct(509)
+        return perseus_utils.read_direct(self.perseus, 509)
 
     @DebugIt()
     def set_Cpdir(self, Cpdir):
-        self.write_direct(Cpdir, 509)
+        perseus_utils.write_direct(self.perseus, Cpdir, 509)
 
     @DebugIt()
     def get_VcxoOutputInversion(self):
-        return self.read_direct(510)
+        return perseus_utils.read_direct(self.perseus, 510)
 
     @DebugIt()
     def set_VcxoOutputInversion(self, VcxoOutputInversion):
-        self.write_direct(VcxoOutputInversion, 510)
+        perseus_utils.write_direct(self.perseus, VcxoOutputInversion, 510)
 
     @DebugIt()
     def read_Diag_IcavLoops(self):
@@ -2887,109 +2794,100 @@ class Nutaq(Device):
 
     @command
     def read_diagnostics(self):
-        self.start_reading_diagnostics()
+        perseus_utils.start_reading_diagnostics(self.perseus)
 
-        self._Diag_IcavLoops = self.read_diag_milivolts(0)
-        self._Diag_QcavLoops = self.read_diag_milivolts(1)
-        self._Diag_Icontrol = self.read_diag_milivolts(2)
-        self._Diag_Qcontrol = self.read_diag_milivolts(3)
-        self._Diag_Icontrol1 = self.read_diag_milivolts(4)
-        self._Diag_Qcontrol1 = self.read_diag_milivolts(5)
-        self._Diag_Icontrol2 = self.read_diag_milivolts(6)
-        self._Diag_Qcontrol2 = self.read_diag_milivolts(7)
-        self._Diag_Ierror = self.read_diag_milivolts(8)
-        self._Diag_Qerror = self.read_diag_milivolts(9)
-        self._Diag_Ierroraccum = self.read_diag_milivolts(10)
-        self._Diag_Qerroraccum = self.read_diag_milivolts(11)
-        self._Diag_Iref = self.read_diag_milivolts(12)
-        self._Diag_Qref = self.read_diag_milivolts(13)
-        self._Diag_IFwCavLoops = self.read_diag_milivolts(14)
-        self._Diag_QFwCavLoops = self.read_diag_milivolts(15)
-        self._Diag_IFwTet1Loops = self.read_diag_milivolts(16)
-        self._Diag_QFwTet1Loops = self.read_diag_milivolts(17)
-        self._Diag_IFwTet2Loops = self.read_diag_milivolts(18)
-        self._Diag_QFwTet2Loops = self.read_diag_milivolts(19)
-        self._Diag_IFwCircInLoops = self.read_diag_milivolts(20)
-        self._Diag_QFwCircInLoops = self.read_diag_milivolts(21)
-        self._Diag_Imo = self.read_diag_milivolts(22)
-        self._Diag_Qmo = self.read_diag_milivolts(23)
-        self._Diag_Ispare1 = self.read_diag_milivolts(24)
-        self._Diag_Qspare1 = self.read_diag_milivolts(25)
-        self._Diag_Ispare2 = self.read_diag_milivolts(26)
-        self._Diag_Qspare2 = self.read_diag_milivolts(27)
-        self._Diag_IMuxCav = self.read_diag_milivolts(28)
-        self._Diag_QMuxCav = self.read_diag_milivolts(29)
-        self._Diag_IMuxFwCav = self.read_diag_milivolts(30)
-        self._Diag_QMuxFwCav = self.read_diag_milivolts(31)
-        self._Diag_IMuxFwTet1 = self.read_diag_milivolts(32)
-        self._Diag_QMuxFwTet1 = self.read_diag_milivolts(33)
-        self._Diag_IMuxFwTet2 = self.read_diag_milivolts(34)
-        self._Diag_QMuxFwTet2 = self.read_diag_milivolts(35)
-        self._Diag_IMuxFwCircIn = self.read_diag_milivolts(36)
-        self._Diag_QMuxFwCircIn = self.read_diag_milivolts(37)
-        self._Diag_AmpCav = self.read_diag_milivolts(38)
-        self._Diag_AmpFw = self.read_diag_milivolts(39)
-        self._Diag_AngCavFw = self.read_diag_angle(40)
-        self._Diag_AngCavL = self.read_diag_angle(41)
-        self._Diag_AngFwL = self.read_diag_angle(42)
-        self._Diag_Vaccum1 = self.read_direct(43)
-        self._Diag_Vaccum2 = self.read_direct(44)
-        self._Diag_IcontrolSlowpi = self.read_diag_milivolts(45)
-        self._Diag_QcontrolSlowpi = self.read_diag_milivolts(46)
-        self._Diag_IcontrolFastpi = self.read_diag_milivolts(47)
-        self._Diag_QcontrolFastpi = self.read_diag_milivolts(48)
-        self._Diag_VcxoPowered = self.read_direct(50)
-        self._Diag_VcxoRef = self.read_direct(51)
-        self._Diag_VcxoLocked = self.read_direct(52)
-        self._Diag_VcxoCableDisconnected = self.read_direct(53)
-        self._Diag_IpolarForAmplitudeLoop = self.read_diag_milivolts(100)
-        self._Diag_QpolarForAmplitudeLoop = self.read_diag_milivolts(101)
-        self._Diag_IPolarForPhaseLoop = self.read_diag_milivolts(102)
-        self._Diag_QpolarForPhaseLoop = self.read_diag_milivolts(103)
-        self._Diag_AmpInputOfAmpLoop = self.read_diag_milivolts(104)
-        self._Diag_PaseInputOfAmpLoop = self.read_diag_milivolts(105)
-        self._Diag_AmpInputOfPhaseLoop = self.read_diag_milivolts(106)
-        self._Diag_PhInputOfPhaseLoop = self.read_diag_milivolts(107)
-        self._Diag_AmpLoopControlOutput = self.read_diag_milivolts(108)
-        self._Diag_AmpLoopError = self.read_diag_milivolts(109)
-        self._Diag_AmpLoopErrorAccum = self.read_diag_milivolts(110)
-        self._Diag_PhLoopControlOutput = self.read_diag_milivolts(111)
-        self._Diag_PhLoopError = self.read_diag_milivolts(112)
-        self._Diag_PhLoopErrorAccum = self.read_diag_milivolts(113)
-        self._Diag_IpolarControlOutput = self.read_diag_milivolts(114)
-        self._Diag_QpolarControlOutput = self.read_diag_milivolts(115)
-        self._Diag_IcontrolSlowpiIq = self.read_diag_milivolts(116)
-        self._Diag_QcontrolSlowpiq = self.read_diag_milivolts(117)
-        self._Diag_IcontrolFastpiIq = self.read_diag_milivolts(118)
-        self._Diag_QcontrolFastpiIq = self.read_diag_milivolts(119)
-        self._Diag_IloopinputSlowpiIq = self.read_diag_milivolts(120)
-        self._Diag_IloopinputSlowpiIq = self.read_diag_milivolts(121)
-        self._Diag_Fwmin = self.read_direct(299)
-        self._Diag_MovingPlungerAuto = self.read_direct(300)
-        self._Diag_FreqUp = self.read_direct(301)
-        self._Diag_ManualTuningOn = self.read_direct(302)
-        self._Diag_ManualTuningFreqUp = self.read_direct(303)
-        self._Diag_EpsItckDelay = self.read_direct(400)
-        self._Diag_FimItckDelay = self.read_direct(401)
-        self._Diag_FdlTrigHwInput = self.read_direct(402)
-        self._Diag_FdlTrigSwInput = self.read_direct(403)
+        self._Diag_IcavLoops = perseus_utils.read_diag_milivolts(self.perseus, 0)
+        self._Diag_QcavLoops = perseus_utils.read_diag_milivolts(self.perseus, 1)
+        self._Diag_Icontrol = perseus_utils.read_diag_milivolts(self.perseus, 2)
+        self._Diag_Qcontrol = perseus_utils.read_diag_milivolts(self.perseus, 3)
+        self._Diag_Icontrol1 = perseus_utils.read_diag_milivolts(self.perseus, 4)
+        self._Diag_Qcontrol1 = perseus_utils.read_diag_milivolts(self.perseus, 5)
+        self._Diag_Icontrol2 = perseus_utils.read_diag_milivolts(self.perseus, 6)
+        self._Diag_Qcontrol2 = perseus_utils.read_diag_milivolts(self.perseus, 7)
+        self._Diag_Ierror = perseus_utils.read_diag_milivolts(self.perseus, 8)
+        self._Diag_Qerror = perseus_utils.read_diag_milivolts(self.perseus, 9)
+        self._Diag_Ierroraccum = perseus_utils.read_diag_milivolts(self.perseus, 10)
+        self._Diag_Qerroraccum = perseus_utils.read_diag_milivolts(self.perseus, 11)
+        self._Diag_Iref = perseus_utils.read_diag_milivolts(self.perseus, 12)
+        self._Diag_Qref = perseus_utils.read_diag_milivolts(self.perseus, 13)
+        self._Diag_IFwCavLoops = perseus_utils.read_diag_milivolts(self.perseus, 14)
+        self._Diag_QFwCavLoops = perseus_utils.read_diag_milivolts(self.perseus, 15)
+        self._Diag_IFwTet1Loops = perseus_utils.read_diag_milivolts(self.perseus, 16)
+        self._Diag_QFwTet1Loops = perseus_utils.read_diag_milivolts(self.perseus, 17)
+        self._Diag_IFwTet2Loops = perseus_utils.read_diag_milivolts(self.perseus, 18)
+        self._Diag_QFwTet2Loops = perseus_utils.read_diag_milivolts(self.perseus, 19)
+        self._Diag_IFwCircInLoops = perseus_utils.read_diag_milivolts(self.perseus, 20)
+        self._Diag_QFwCircInLoops = perseus_utils.read_diag_milivolts(self.perseus, 21)
+        self._Diag_Imo = perseus_utils.read_diag_milivolts(self.perseus, 22)
+        self._Diag_Qmo = perseus_utils.read_diag_milivolts(self.perseus, 23)
+        self._Diag_Ispare1 = perseus_utils.read_diag_milivolts(self.perseus, 24)
+        self._Diag_Qspare1 = perseus_utils.read_diag_milivolts(self.perseus, 25)
+        self._Diag_Ispare2 = perseus_utils.read_diag_milivolts(self.perseus, 26)
+        self._Diag_Qspare2 = perseus_utils.read_diag_milivolts(self.perseus, 27)
+        self._Diag_IMuxCav = perseus_utils.read_diag_milivolts(self.perseus, 28)
+        self._Diag_QMuxCav = perseus_utils.read_diag_milivolts(self.perseus, 29)
+        self._Diag_IMuxFwCav = perseus_utils.read_diag_milivolts(self.perseus, 30)
+        self._Diag_QMuxFwCav = perseus_utils.read_diag_milivolts(self.perseus, 31)
+        self._Diag_IMuxFwTet1 = perseus_utils.read_diag_milivolts(self.perseus, 32)
+        self._Diag_QMuxFwTet1 = perseus_utils.read_diag_milivolts(self.perseus, 33)
+        self._Diag_IMuxFwTet2 = perseus_utils.read_diag_milivolts(self.perseus, 34)
+        self._Diag_QMuxFwTet2 = perseus_utils.read_diag_milivolts(self.perseus, 35)
+        self._Diag_IMuxFwCircIn = perseus_utils.read_diag_milivolts(self.perseus, 36)
+        self._Diag_QMuxFwCircIn = perseus_utils.read_diag_milivolts(self.perseus, 37)
+        self._Diag_AmpCav = perseus_utils.read_diag_milivolts(self.perseus, 38)
+        self._Diag_AmpFw = perseus_utils.read_diag_milivolts(self.perseus, 39)
+        self._Diag_AngCavFw = perseus_utils.read_diag_angle(self.perseus, 40)
+        self._Diag_AngCavL = perseus_utils.read_diag_angle(self.perseus, 41)
+        self._Diag_AngFwL = perseus_utils.read_diag_angle(self.perseus, 42)
+        self._Diag_Vaccum1 = perseus_utils.read_direct(self.perseus, 43)
+        self._Diag_Vaccum2 = perseus_utils.read_direct(self.perseus, 44)
+        self._Diag_IcontrolSlowpi = perseus_utils.read_diag_milivolts(self.perseus, 45)
+        self._Diag_QcontrolSlowpi = perseus_utils.read_diag_milivolts(self.perseus, 46)
+        self._Diag_IcontrolFastpi = perseus_utils.read_diag_milivolts(self.perseus, 47)
+        self._Diag_QcontrolFastpi = perseus_utils.read_diag_milivolts(self.perseus, 48)
+        self._Diag_VcxoPowered = perseus_utils.read_direct(self.perseus, 50)
+        self._Diag_VcxoRef = perseus_utils.read_direct(self.perseus, 51)
+        self._Diag_VcxoLocked = perseus_utils.read_direct(self.perseus, 52)
+        self._Diag_VcxoCableDisconnected = perseus_utils.read_direct(self.perseus, 53)
+        self._Diag_IpolarForAmplitudeLoop = perseus_utils.read_diag_milivolts(self.perseus, 100)
+        self._Diag_QpolarForAmplitudeLoop = perseus_utils.read_diag_milivolts(self.perseus, 101)
+        self._Diag_IPolarForPhaseLoop = perseus_utils.read_diag_milivolts(self.perseus, 102)
+        self._Diag_QpolarForPhaseLoop = perseus_utils.read_diag_milivolts(self.perseus, 103)
+        self._Diag_AmpInputOfAmpLoop = perseus_utils.read_diag_milivolts(self.perseus, 104)
+        self._Diag_PaseInputOfAmpLoop = perseus_utils.read_diag_milivolts(self.perseus, 105)
+        self._Diag_AmpInputOfPhaseLoop = perseus_utils.read_diag_milivolts(self.perseus, 106)
+        self._Diag_PhInputOfPhaseLoop = perseus_utils.read_diag_milivolts(self.perseus, 107)
+        self._Diag_AmpLoopControlOutput = perseus_utils.read_diag_milivolts(self.perseus, 108)
+        self._Diag_AmpLoopError = perseus_utils.read_diag_milivolts(self.perseus, 109)
+        self._Diag_AmpLoopErrorAccum = perseus_utils.read_diag_milivolts(self.perseus, 110)
+        self._Diag_PhLoopControlOutput = perseus_utils.read_diag_milivolts(self.perseus, 111)
+        self._Diag_PhLoopError = perseus_utils.read_diag_milivolts(self.perseus, 112)
+        self._Diag_PhLoopErrorAccum = perseus_utils.read_diag_milivolts(self.perseus, 113)
+        self._Diag_IpolarControlOutput = perseus_utils.read_diag_milivolts(self.perseus, 114)
+        self._Diag_QpolarControlOutput = perseus_utils.read_diag_milivolts(self.perseus, 115)
+        self._Diag_IcontrolSlowpiIq = perseus_utils.read_diag_milivolts(self.perseus, 116)
+        self._Diag_QcontrolSlowpiq = perseus_utils.read_diag_milivolts(self.perseus, 117)
+        self._Diag_IcontrolFastpiIq = perseus_utils.read_diag_milivolts(self.perseus, 118)
+        self._Diag_QcontrolFastpiIq = perseus_utils.read_diag_milivolts(self.perseus, 119)
+        self._Diag_IloopinputSlowpiIq = perseus_utils.read_diag_milivolts(self.perseus, 120)
+        self._Diag_IloopinputSlowpiIq = perseus_utils.read_diag_milivolts(self.perseus, 121)
+        self._Diag_Fwmin = perseus_utils.read_direct(self.perseus, 299)
+        self._Diag_MovingPlungerAuto = perseus_utils.read_direct(self.perseus, 300)
+        self._Diag_FreqUp = perseus_utils.read_direct(self.perseus, 301)
+        self._Diag_ManualTuningOn = perseus_utils.read_direct(self.perseus, 302)
+        self._Diag_ManualTuningFreqUp = perseus_utils.read_direct(self.perseus, 303)
+        self._Diag_EpsItckDelay = perseus_utils.read_direct(self.perseus, 400)
+        self._Diag_FimItckDelay = perseus_utils.read_direct(self.perseus, 401)
+        self._Diag_FdlTrigHwInput = perseus_utils.read_direct(self.perseus, 402)
+        self._Diag_FdlTrigSwInput = perseus_utils.read_direct(self.perseus, 403)
 
     @command
     def tuning_reset(self):
-        self.write_direct(True, TUNING_RESET_ADDRESS)
-        self.write_direct(False, TUNING_RESET_ADDRESS)
+        perseus_utils.write_direct(True, TUNING_RESET_ADDRESS)
+        perseus_utils.write_direct(False, TUNING_RESET_ADDRESS)
 
-    def start_reading_diagnostics(self):
-        value = 1 << 16
-        self.perseus.write(DIAGNOSTICS_OFFSET, value)
-        #@warning: I know ... this is not needed
-        value = 0 << 16
-        #lets continue
-        self.perseus.write(DIAGNOSTICS_OFFSET, value)
-
-    def end_reading_diagnostics(self):
-        value = 1 << 16
-        self.perseus.write(DIAGNOSTICS_OFFSET, value)
+def run_device():
+    run([Nutaq])
 
 if __name__ == "__main__":
-    run([Nutaq])
+    run_device()

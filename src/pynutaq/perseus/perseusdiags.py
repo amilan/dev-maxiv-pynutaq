@@ -33,7 +33,7 @@ try:
     from adp_exception import *
 except ImportError, e:
     print e
-    raise
+    #raise
 
 from pynutaq.perseus.perseusdefs import *
 from pynutaq.boards.mo1000 import Mo1000

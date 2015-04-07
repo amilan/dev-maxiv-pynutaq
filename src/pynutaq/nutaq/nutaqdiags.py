@@ -1,38 +1,58 @@
 #!/usr/bin/env python
 
 ###############################################################################
-##     NutaqDiags device server. 
-##
-##     Copyright (C) 2013  Max IV Laboratory, Lund Sweden
-##
-##     This program is free software: you can redistribute it and/or modify
-##     it under the terms of the GNU General Public License as published by
-##     the Free Software Foundation, either version 3 of the License, or
-##     (at your option) any later version.
-##
-##     This program is distributed in the hope that it will be useful,
-##     but WITHOUT ANY WARRANTY; without even the implied warranty of
-##     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-##     GNU General Public License for more details.
-##
-##     You should have received a copy of the GNU General Public License
-##     along with this program.  If not, see [http://www.gnu.org/licenses/].
+#     NutaqDiags device server.
+#
+#     Copyright (C) 2013  Max IV Laboratory, Lund Sweden
+#
+#     This program is free software: you can redistribute it and/or modify
+#     it under the terms of the GNU General Public License as published by
+#     the Free Software Foundation, either version 3 of the License, or
+#     (at your option) any later version.
+#
+#     This program is distributed in the hope that it will be useful,
+#     but WITHOUT ANY WARRANTY; without even the implied warranty of
+#     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#     GNU General Public License for more details.
+#
+#     You should have received a copy of the GNU General Public License
+#     along with this program.  If not, see [http://www.gnu.org/licenses/].
 ###############################################################################
 
+"""This module contains the Nutaq device server for diagnostics.
+"""
+
+__all__ = ["NutaqDiags", "run"]
+
+__author__ = 'antmil'
+
+__docformat__ = 'restructuredtext'
+
+# standard library imports
 import time
 import numpy
 import math
 
+# 3rd party imports
 from PyTango import AttrQuality, AttrWriteType, DispLevel, DevState, DebugIt
 from PyTango.server import Device, DeviceMeta, attribute, command, run
 from PyTango.server import device_property
 
-#from nutaqattributes import attributes_dict
+# local imports
+#from pynutaq.nutaqattributes import attributes_dict
 from pynutaq.nutaq.nutaqdefs import *
-from pynutaq.perseus.perseusdefs import *
 
-from pynutaq.perseus.perseusfactory import Perseus
-from pynutaq.extra import *
+import pynutaq.extra as extra_func
+
+import pynutaq.perseus.perseusutils as perseus_utils
+
+try:
+    from pynutaq.perseus.perseusdefs import *
+    from pynutaq.perseus.perseusfactory import Perseus
+except ImportError, e:
+    print e
+    raise
+
 
 class NutaqDiags(Device):
     __metaclass__ = DeviceMeta
@@ -1161,1538 +1181,386 @@ class NutaqDiags(Device):
                                    doc=""
                                    )
 
-    Diag_ = attribute(label='Diag_',
-                                   dtype=,
-                                   display_level=DispLevel.OPERATOR,
-                                   access=AttrWriteType.READ,
-                                   unit='',
-                                   format='6.4f',
-                                   doc=""
-                                   )
-
-    Diag_ = attribute(label='Diag_',
-                                   dtype=,
-                                   display_level=DispLevel.OPERATOR,
-                                   access=AttrWriteType.READ,
-                                   unit='',
-                                   format='6.4f',
-                                   doc=""
-                                   )
-
-    Diag_ = attribute(label='Diag_',
-                                   dtype=,
-                                   display_level=DispLevel.OPERATOR,
-                                   access=AttrWriteType.READ,
-                                   unit='',
-                                   format='6.4f',
-                                   doc=""
-                                   )
-
-    Diag_ = attribute(label='Diag_',
-                                   dtype=,
-                                   display_level=DispLevel.OPERATOR,
-                                   access=AttrWriteType.READ,
-                                   unit='',
-                                   format='6.4f',
-                                   doc=""
-                                   )
-
-    Diag_ = attribute(label='Diag_',
-                                   dtype=,
-                                   display_level=DispLevel.OPERATOR,
-                                   access=AttrWriteType.READ,
-                                   unit='',
-                                   format='6.4f',
-                                   doc=""
-                                   )
-
-    Diag_ = attribute(label='Diag_',
-                                   dtype=,
-                                   display_level=DispLevel.OPERATOR,
-                                   access=AttrWriteType.READ,
-                                   unit='',
-                                   format='6.4f',
-                                   doc=""
-                                   )
-
-    Diag_ = attribute(label='Diag_',
-                                   dtype=,
-                                   display_level=DispLevel.OPERATOR,
-                                   access=AttrWriteType.READ,
-                                   unit='',
-                                   format='6.4f',
-                                   doc=""
-                                   )
-
-    Diag_ = attribute(label='Diag_',
-                                   dtype=,
-                                   display_level=DispLevel.OPERATOR,
-                                   access=AttrWriteType.READ,
-                                   unit='',
-                                   format='6.4f',
-                                   doc=""
-                                   )
-
-    Diag_ = attribute(label='Diag_',
-                                   dtype=,
-                                   display_level=DispLevel.OPERATOR,
-                                   access=AttrWriteType.READ,
-                                   unit='',
-                                   format='6.4f',
-                                   doc=""
-                                   )
-
-    Diag_ = attribute(label='Diag_',
-                                   dtype=,
-                                   display_level=DispLevel.OPERATOR,
-                                   access=AttrWriteType.READ,
-                                   unit='',
-                                   format='6.4f',
-                                   doc=""
-                                   )
-
-    Diag_ = attribute(label='Diag_',
-                                   dtype=,
-                                   display_level=DispLevel.OPERATOR,
-                                   access=AttrWriteType.READ,
-                                   unit='',
-                                   format='6.4f',
-                                   doc=""
-                                   )
-
-    Diag_ = attribute(label='Diag_',
-                                   dtype=,
-                                   display_level=DispLevel.OPERATOR,
-                                   access=AttrWriteType.READ,
-                                   unit='',
-                                   format='6.4f',
-                                   doc=""
-                                   )
-
-    Diag_ = attribute(label='Diag_',
-                                   dtype=,
-                                   display_level=DispLevel.OPERATOR,
-                                   access=AttrWriteType.READ,
-                                   unit='',
-                                   format='6.4f',
-                                   doc=""
-                                   )
-
-    Diag_ = attribute(label='Diag_',
-                                   dtype=,
-                                   display_level=DispLevel.OPERATOR,
-                                   access=AttrWriteType.READ,
-                                   unit='',
-                                   format='6.4f',
-                                   doc=""
-                                   )
-
-    Diag_ = attribute(label='Diag_',
-                                   dtype=,
-                                   display_level=DispLevel.OPERATOR,
-                                   access=AttrWriteType.READ,
-                                   unit='',
-                                   format='6.4f',
-                                   doc=""
-                                   )
-
-    Diag_ = attribute(label='Diag_',
-                                   dtype=,
-                                   display_level=DispLevel.OPERATOR,
-                                   access=AttrWriteType.READ,
-                                   unit='',
-                                   format='6.4f',
-                                   doc=""
-                                   )
-
-    Diag_ = attribute(label='Diag_',
-                                   dtype=,
-                                   display_level=DispLevel.OPERATOR,
-                                   access=AttrWriteType.READ,
-                                   unit='',
-                                   format='6.4f',
-                                   doc=""
-                                   )
-
-    Diag_ = attribute(label='Diag_',
-                                   dtype=,
-                                   display_level=DispLevel.OPERATOR,
-                                   access=AttrWriteType.READ,
-                                   unit='',
-                                   format='6.4f',
-                                   doc=""
-                                   )
-
-    Diag_ = attribute(label='Diag_',
-                                   dtype=,
-                                   display_level=DispLevel.OPERATOR,
-                                   access=AttrWriteType.READ,
-                                   unit='',
-                                   format='6.4f',
-                                   doc=""
-                                   )
-
-    Diag_ = attribute(label='Diag_',
-                                   dtype=,
-                                   display_level=DispLevel.OPERATOR,
-                                   access=AttrWriteType.READ,
-                                   unit='',
-                                   format='6.4f',
-                                   doc=""
-                                   )
-
-    Diag_ = attribute(label='Diag_',
-                                   dtype=,
-                                   display_level=DispLevel.OPERATOR,
-                                   access=AttrWriteType.READ,
-                                   unit='',
-                                   format='6.4f',
-                                   doc=""
-                                   )
-
-    Diag_ = attribute(label='Diag_',
-                                   dtype=,
-                                   display_level=DispLevel.OPERATOR,
-                                   access=AttrWriteType.READ,
-                                   unit='',
-                                   format='6.4f',
-                                   doc=""
-                                   )
-
-    Diag_ = attribute(label='Diag_',
-                                   dtype=,
-                                   display_level=DispLevel.OPERATOR,
-                                   access=AttrWriteType.READ,
-                                   unit='',
-                                   format='6.4f',
-                                   doc=""
-                                   )
-
-    Diag_ = attribute(label='Diag_',
-                                   dtype=,
-                                   display_level=DispLevel.OPERATOR,
-                                   access=AttrWriteType.READ,
-                                   unit='',
-                                   format='6.4f',
-                                   doc=""
-                                   )
-
-    Diag_ = attribute(label='Diag_',
-                                   dtype=,
-                                   display_level=DispLevel.OPERATOR,
-                                   access=AttrWriteType.READ,
-                                   unit='',
-                                   format='6.4f',
-                                   doc=""
-                                   )
-
-    Diag_ = attribute(label='Diag_',
-                                   dtype=,
-                                   display_level=DispLevel.OPERATOR,
-                                   access=AttrWriteType.READ,
-                                   unit='',
-                                   format='6.4f',
-                                   doc=""
-                                   )
-
-    Diag_ = attribute(label='Diag_',
-                                   dtype=,
-                                   display_level=DispLevel.OPERATOR,
-                                   access=AttrWriteType.READ,
-                                   unit='',
-                                   format='6.4f',
-                                   doc=""
-                                   )
-
-    Diag_ = attribute(label='Diag_',
-                                   dtype=,
-                                   display_level=DispLevel.OPERATOR,
-                                   access=AttrWriteType.READ,
-                                   unit='',
-                                   format='6.4f',
-                                   doc=""
-                                   )
-
-    Diag_ = attribute(label='Diag_',
-                                   dtype=,
-                                   display_level=DispLevel.OPERATOR,
-                                   access=AttrWriteType.READ,
-                                   unit='',
-                                   format='6.4f',
-                                   doc=""
-                                   )
-
-    Diag_ = attribute(label='Diag_',
-                                   dtype=,
-                                   display_level=DispLevel.OPERATOR,
-                                   access=AttrWriteType.READ,
-                                   unit='',
-                                   format='6.4f',
-                                   doc=""
-                                   )
-
-    Diag_ = attribute(label='Diag_',
-                                   dtype=,
-                                   display_level=DispLevel.OPERATOR,
-                                   access=AttrWriteType.READ,
-                                   unit='',
-                                   format='6.4f',
-                                   doc=""
-                                   )
-
-    Diag_ = attribute(label='Diag_',
-                                   dtype=,
-                                   display_level=DispLevel.OPERATOR,
-                                   access=AttrWriteType.READ,
-                                   unit='',
-                                   format='6.4f',
-                                   doc=""
-                                   )
-
-    Diag_ = attribute(label='Diag_',
-                                   dtype=,
-                                   display_level=DispLevel.OPERATOR,
-                                   access=AttrWriteType.READ,
-                                   unit='',
-                                   format='6.4f',
-                                   doc=""
-                                   )
-
-    Diag_ = attribute(label='Diag_',
-                                   dtype=,
-                                   display_level=DispLevel.OPERATOR,
-                                   access=AttrWriteType.READ,
-                                   unit='',
-                                   format='6.4f',
-                                   doc=""
-                                   )
-
-    Diag_ = attribute(label='Diag_',
-                                   dtype=,
-                                   display_level=DispLevel.OPERATOR,
-                                   access=AttrWriteType.READ,
-                                   unit='',
-                                   format='6.4f',
-                                   doc=""
-                                   )
-
-    Diag_ = attribute(label='Diag_',
-                                   dtype=,
-                                   display_level=DispLevel.OPERATOR,
-                                   access=AttrWriteType.READ,
-                                   unit='',
-                                   format='6.4f',
-                                   doc=""
-                                   )
-
-    Diag_ = attribute(label='Diag_',
-                                   dtype=,
-                                   display_level=DispLevel.OPERATOR,
-                                   access=AttrWriteType.READ,
-                                   unit='',
-                                   format='6.4f',
-                                   doc=""
-                                   )
-
-    Diag_ = attribute(label='Diag_',
-                                   dtype=,
-                                   display_level=DispLevel.OPERATOR,
-                                   access=AttrWriteType.READ,
-                                   unit='',
-                                   format='6.4f',
-                                   doc=""
-                                   )
-
-    Diag_ = attribute(label='Diag_',
-                                   dtype=,
-                                   display_level=DispLevel.OPERATOR,
-                                   access=AttrWriteType.READ,
-                                   unit='',
-                                   format='6.4f',
-                                   doc=""
-                                   )
-
-    Diag_ = attribute(label='Diag_',
-                                   dtype=,
-                                   display_level=DispLevel.OPERATOR,
-                                   access=AttrWriteType.READ,
-                                   unit='',
-                                   format='6.4f',
-                                   doc=""
-                                   )
-
-    Diag_ = attribute(label='Diag_',
-                                   dtype=,
-                                   display_level=DispLevel.OPERATOR,
-                                   access=AttrWriteType.READ,
-                                   unit='',
-                                   format='6.4f',
-                                   doc=""
-                                   )
-
-    Diag_ = attribute(label='Diag_',
-                                   dtype=,
-                                   display_level=DispLevel.OPERATOR,
-                                   access=AttrWriteType.READ,
-                                   unit='',
-                                   format='6.4f',
-                                   doc=""
-                                   )
-
-    Diag_ = attribute(label='Diag_',
-                                   dtype=,
-                                   display_level=DispLevel.OPERATOR,
-                                   access=AttrWriteType.READ,
-                                   unit='',
-                                   format='6.4f',
-                                   doc=""
-                                   )
-
-    Diag_ = attribute(label='Diag_',
-                                   dtype=,
-                                   display_level=DispLevel.OPERATOR,
-                                   access=AttrWriteType.READ,
-                                   unit='',
-                                   format='6.4f',
-                                   doc=""
-                                   )
-
-    Diag_ = attribute(label='Diag_',
-                                   dtype=,
-                                   display_level=DispLevel.OPERATOR,
-                                   access=AttrWriteType.READ,
-                                   unit='',
-                                   format='6.4f',
-                                   doc=""
-                                   )
-
-    Diag_ = attribute(label='Diag_',
-                                   dtype=,
-                                   display_level=DispLevel.OPERATOR,
-                                   access=AttrWriteType.READ,
-                                   unit='',
-                                   format='6.4f',
-                                   doc=""
-                                   )
-
-    Diag_ = attribute(label='Diag_',
-                                   dtype=,
-                                   display_level=DispLevel.OPERATOR,
-                                   access=AttrWriteType.READ,
-                                   unit='',
-                                   format='6.4f',
-                                   doc=""
-                                   )
-
-    Diag_ = attribute(label='Diag_',
-                                   dtype=,
-                                   display_level=DispLevel.OPERATOR,
-                                   access=AttrWriteType.READ,
-                                   unit='',
-                                   format='6.4f',
-                                   doc=""
-                                   )
-
-    Diag_ = attribute(label='Diag_',
-                                   dtype=,
-                                   display_level=DispLevel.OPERATOR,
-                                   access=AttrWriteType.READ,
-                                   unit='',
-                                   format='6.4f',
-                                   doc=""
-                                   )
-
-    Diag_ = attribute(label='Diag_',
-                                   dtype=,
-                                   display_level=DispLevel.OPERATOR,
-                                   access=AttrWriteType.READ,
-                                   unit='',
-                                   format='6.4f',
-                                   doc=""
-                                   )
-
-    Diag_ = attribute(label='Diag_',
-                                   dtype=,
-                                   display_level=DispLevel.OPERATOR,
-                                   access=AttrWriteType.READ,
-                                   unit='',
-                                   format='6.4f',
-                                   doc=""
-                                   )
-
-    Diag_ = attribute(label='Diag_',
-                                   dtype=,
-                                   display_level=DispLevel.OPERATOR,
-                                   access=AttrWriteType.READ,
-                                   unit='',
-                                   format='6.4f',
-                                   doc=""
-                                   )
-
-    Diag_ = attribute(label='Diag_',
-                                   dtype=,
-                                   display_level=DispLevel.OPERATOR,
-                                   access=AttrWriteType.READ,
-                                   unit='',
-                                   format='6.4f',
-                                   doc=""
-                                   )
-
-    Diag_ = attribute(label='Diag_',
-                                   dtype=,
-                                   display_level=DispLevel.OPERATOR,
-                                   access=AttrWriteType.READ,
-                                   unit='',
-                                   format='6.4f',
-                                   doc=""
-                                   )
-
-    Diag_ = attribute(label='Diag_',
-                                   dtype=,
-                                   display_level=DispLevel.OPERATOR,
-                                   access=AttrWriteType.READ,
-                                   unit='',
-                                   format='6.4f',
-                                   doc=""
-                                   )
-
-    Diag_ = attribute(label='Diag_',
-                                   dtype=,
-                                   display_level=DispLevel.OPERATOR,
-                                   access=AttrWriteType.READ,
-                                   unit='',
-                                   format='6.4f',
-                                   doc=""
-                                   )
-
-    Diag_ = attribute(label='Diag_',
-                                   dtype=,
-                                   display_level=DispLevel.OPERATOR,
-                                   access=AttrWriteType.READ,
-                                   unit='',
-                                   format='6.4f',
-                                   doc=""
-                                   )
-
-    Diag_ = attribute(label='Diag_',
-                                   dtype=,
-                                   display_level=DispLevel.OPERATOR,
-                                   access=AttrWriteType.READ,
-                                   unit='',
-                                   format='6.4f',
-                                   doc=""
-                                   )
-
-    Diag_ = attribute(label='Diag_',
-                                   dtype=,
-                                   display_level=DispLevel.OPERATOR,
-                                   access=AttrWriteType.READ,
-                                   unit='',
-                                   format='6.4f',
-                                   doc=""
-                                   )
-
-    Diag_ = attribute(label='Diag_',
-                                   dtype=,
-                                   display_level=DispLevel.OPERATOR,
-                                   access=AttrWriteType.READ,
-                                   unit='',
-                                   format='6.4f',
-                                   doc=""
-                                   )
-
-    Diag_ = attribute(label='Diag_',
-                                   dtype=,
-                                   display_level=DispLevel.OPERATOR,
-                                   access=AttrWriteType.READ,
-                                   unit='',
-                                   format='6.4f',
-                                   doc=""
-                                   )
-
-    Diag_ = attribute(label='Diag_',
-                                   dtype=,
-                                   display_level=DispLevel.OPERATOR,
-                                   access=AttrWriteType.READ,
-                                   unit='',
-                                   format='6.4f',
-                                   doc=""
-                                   )
-
-    Diag_ = attribute(label='Diag_',
-                                   dtype=,
-                                   display_level=DispLevel.OPERATOR,
-                                   access=AttrWriteType.READ,
-                                   unit='',
-                                   format='6.4f',
-                                   doc=""
-                                   )
-
-    Diag_ = attribute(label='Diag_',
-                                   dtype=,
-                                   display_level=DispLevel.OPERATOR,
-                                   access=AttrWriteType.READ,
-                                   unit='',
-                                   format='6.4f',
-                                   doc=""
-                                   )
-
-    Diag_ = attribute(label='Diag_',
-                                   dtype=,
-                                   display_level=DispLevel.OPERATOR,
-                                   access=AttrWriteType.READ,
-                                   unit='',
-                                   format='6.4f',
-                                   doc=""
-                                   )
-
-    Diag_ = attribute(label='Diag_',
-                                   dtype=,
-                                   display_level=DispLevel.OPERATOR,
-                                   access=AttrWriteType.READ,
-                                   unit='',
-                                   format='6.4f',
-                                   doc=""
-                                   )
-
-    Diag_ = attribute(label='Diag_',
-                                   dtype=,
-                                   display_level=DispLevel.OPERATOR,
-                                   access=AttrWriteType.READ,
-                                   unit='',
-                                   format='6.4f',
-                                   doc=""
-                                   )
-
-    Diag_ = attribute(label='Diag_',
-                                   dtype=,
-                                   display_level=DispLevel.OPERATOR,
-                                   access=AttrWriteType.READ,
-                                   unit='',
-                                   format='6.4f',
-                                   doc=""
-                                   )
-
-    Diag_ = attribute(label='Diag_',
-                                   dtype=,
-                                   display_level=DispLevel.OPERATOR,
-                                   access=AttrWriteType.READ,
-                                   unit='',
-                                   format='6.4f',
-                                   doc=""
-                                   )
-
-    Diag_ = attribute(label='Diag_',
-                                   dtype=,
-                                   display_level=DispLevel.OPERATOR,
-                                   access=AttrWriteType.READ,
-                                   unit='',
-                                   format='6.4f',
-                                   doc=""
-                                   )
-
-    Diag_ = attribute(label='Diag_',
-                                   dtype=,
-                                   display_level=DispLevel.OPERATOR,
-                                   access=AttrWriteType.READ,
-                                   unit='',
-                                   format='6.4f',
-                                   doc=""
-                                   )
-
-    Diag_ = attribute(label='Diag_',
-                                   dtype=,
-                                   display_level=DispLevel.OPERATOR,
-                                   access=AttrWriteType.READ,
-                                   unit='',
-                                   format='6.4f',
-                                   doc=""
-                                   )
-
-    Diag_ = attribute(label='Diag_',
-                                   dtype=,
-                                   display_level=DispLevel.OPERATOR,
-                                   access=AttrWriteType.READ,
-                                   unit='',
-                                   format='6.4f',
-                                   doc=""
-                                   )
-
-    Diag_ = attribute(label='Diag_',
-                                   dtype=,
-                                   display_level=DispLevel.OPERATOR,
-                                   access=AttrWriteType.READ,
-                                   unit='',
-                                   format='6.4f',
-                                   doc=""
-                                   )
-
-    Diag_ = attribute(label='Diag_',
-                                   dtype=,
-                                   display_level=DispLevel.OPERATOR,
-                                   access=AttrWriteType.READ,
-                                   unit='',
-                                   format='6.4f',
-                                   doc=""
-                                   )
-
-    Diag_ = attribute(label='Diag_',
-                                   dtype=,
-                                   display_level=DispLevel.OPERATOR,
-                                   access=AttrWriteType.READ,
-                                   unit='',
-                                   format='6.4f',
-                                   doc=""
-                                   )
-
-    Diag_ = attribute(label='Diag_',
-                                   dtype=,
-                                   display_level=DispLevel.OPERATOR,
-                                   access=AttrWriteType.READ,
-                                   unit='',
-                                   format='6.4f',
-                                   doc=""
-                                   )
-
-    Diag_ = attribute(label='Diag_',
-                                   dtype=,
-                                   display_level=DispLevel.OPERATOR,
-                                   access=AttrWriteType.READ,
-                                   unit='',
-                                   format='6.4f',
-                                   doc=""
-                                   )
-
-    Diag_ = attribute(label='Diag_',
-                                   dtype=,
-                                   display_level=DispLevel.OPERATOR,
-                                   access=AttrWriteType.READ,
-                                   unit='',
-                                   format='6.4f',
-                                   doc=""
-                                   )
-
-    Diag_ = attribute(label='Diag_',
-                                   dtype=,
-                                   display_level=DispLevel.OPERATOR,
-                                   access=AttrWriteType.READ,
-                                   unit='',
-                                   format='6.4f',
-                                   doc=""
-                                   )
-
-    Diag_ = attribute(label='Diag_',
-                                   dtype=,
-                                   display_level=DispLevel.OPERATOR,
-                                   access=AttrWriteType.READ,
-                                   unit='',
-                                   format='6.4f',
-                                   doc=""
-                                   )
-
-    Diag_ = attribute(label='Diag_',
-                                   dtype=,
-                                   display_level=DispLevel.OPERATOR,
-                                   access=AttrWriteType.READ,
-                                   unit='',
-                                   format='6.4f',
-                                   doc=""
-                                   )
-
-    Diag_ = attribute(label='Diag_',
-                                   dtype=,
-                                   display_level=DispLevel.OPERATOR,
-                                   access=AttrWriteType.READ,
-                                   unit='',
-                                   format='6.4f',
-                                   doc=""
-                                   )
-
-    Diag_ = attribute(label='Diag_',
-                                   dtype=,
-                                   display_level=DispLevel.OPERATOR,
-                                   access=AttrWriteType.READ,
-                                   unit='',
-                                   format='6.4f',
-                                   doc=""
-                                   )
-
-    Diag_ = attribute(label='Diag_',
-                                   dtype=,
-                                   display_level=DispLevel.OPERATOR,
-                                   access=AttrWriteType.READ,
-                                   unit='',
-                                   format='6.4f',
-                                   doc=""
-                                   )
-
-    Diag_ = attribute(label='Diag_',
-                                   dtype=,
-                                   display_level=DispLevel.OPERATOR,
-                                   access=AttrWriteType.READ,
-                                   unit='',
-                                   format='6.4f',
-                                   doc=""
-                                   )
-
-    Diag_ = attribute(label='Diag_',
-                                   dtype=,
-                                   display_level=DispLevel.OPERATOR,
-                                   access=AttrWriteType.READ,
-                                   unit='',
-                                   format='6.4f',
-                                   doc=""
-                                   )
-
-    Diag_ = attribute(label='Diag_',
-                                   dtype=,
-                                   display_level=DispLevel.OPERATOR,
-                                   access=AttrWriteType.READ,
-                                   unit='',
-                                   format='6.4f',
-                                   doc=""
-                                   )
-
-    Diag_ = attribute(label='Diag_',
-                                   dtype=,
-                                   display_level=DispLevel.OPERATOR,
-                                   access=AttrWriteType.READ,
-                                   unit='',
-                                   format='6.4f',
-                                   doc=""
-                                   )
-
-    Diag_ = attribute(label='Diag_',
-                                   dtype=,
-                                   display_level=DispLevel.OPERATOR,
-                                   access=AttrWriteType.READ,
-                                   unit='',
-                                   format='6.4f',
-                                   doc=""
-                                   )
-
-    Diag_ = attribute(label='Diag_',
-                                   dtype=,
-                                   display_level=DispLevel.OPERATOR,
-                                   access=AttrWriteType.READ,
-                                   unit='',
-                                   format='6.4f',
-                                   doc=""
-                                   )
-
-    Diag_ = attribute(label='Diag_',
-                                   dtype=,
-                                   display_level=DispLevel.OPERATOR,
-                                   access=AttrWriteType.READ,
-                                   unit='',
-                                   format='6.4f',
-                                   doc=""
-                                   )
-
-    Diag_ = attribute(label='Diag_',
-                                   dtype=,
-                                   display_level=DispLevel.OPERATOR,
-                                   access=AttrWriteType.READ,
-                                   unit='',
-                                   format='6.4f',
-                                   doc=""
-                                   )
-
-    Diag_ = attribute(label='Diag_',
-                                   dtype=,
-                                   display_level=DispLevel.OPERATOR,
-                                   access=AttrWriteType.READ,
-                                   unit='',
-                                   format='6.4f',
-                                   doc=""
-                                   )
-
-    Diag_ = attribute(label='Diag_',
-                                   dtype=,
-                                   display_level=DispLevel.OPERATOR,
-                                   access=AttrWriteType.READ,
-                                   unit='',
-                                   format='6.4f',
-                                   doc=""
-                                   )
-
-    Diag_ = attribute(label='Diag_',
-                                   dtype=,
-                                   display_level=DispLevel.OPERATOR,
-                                   access=AttrWriteType.READ,
-                                   unit='',
-                                   format='6.4f',
-                                   doc=""
-                                   )
-
-    Diag_ = attribute(label='Diag_',
-                                   dtype=,
-                                   display_level=DispLevel.OPERATOR,
-                                   access=AttrWriteType.READ,
-                                   unit='',
-                                   format='6.4f',
-                                   doc=""
-                                   )
-
-    Diag_ = attribute(label='Diag_',
-                                   dtype=,
-                                   display_level=DispLevel.OPERATOR,
-                                   access=AttrWriteType.READ,
-                                   unit='',
-                                   format='6.4f',
-                                   doc=""
-                                   )
-
-    Diag_ = attribute(label='Diag_',
-                                   dtype=,
-                                   display_level=DispLevel.OPERATOR,
-                                   access=AttrWriteType.READ,
-                                   unit='',
-                                   format='6.4f',
-                                   doc=""
-                                   )
-
-    Diag_ = attribute(label='Diag_',
-                                   dtype=,
-                                   display_level=DispLevel.OPERATOR,
-                                   access=AttrWriteType.READ,
-                                   unit='',
-                                   format='6.4f',
-                                   doc=""
-                                   )
-
-    Diag_ = attribute(label='Diag_',
-                                   dtype=,
-                                   display_level=DispLevel.OPERATOR,
-                                   access=AttrWriteType.READ,
-                                   unit='',
-                                   format='6.4f',
-                                   doc=""
-                                   )
-
-    Diag_ = attribute(label='Diag_',
-                                   dtype=,
-                                   display_level=DispLevel.OPERATOR,
-                                   access=AttrWriteType.READ,
-                                   unit='',
-                                   format='6.4f',
-                                   doc=""
-                                   )
-
-    Diag_ = attribute(label='Diag_',
-                                   dtype=,
-                                   display_level=DispLevel.OPERATOR,
-                                   access=AttrWriteType.READ,
-                                   unit='',
-                                   format='6.4f',
-                                   doc=""
-                                   )
-
-    Diag_ = attribute(label='Diag_',
-                                   dtype=,
-                                   display_level=DispLevel.OPERATOR,
-                                   access=AttrWriteType.READ,
-                                   unit='',
-                                   format='6.4f',
-                                   doc=""
-                                   )
-
-    Diag_ = attribute(label='Diag_',
-                                   dtype=,
-                                   display_level=DispLevel.OPERATOR,
-                                   access=AttrWriteType.READ,
-                                   unit='',
-                                   format='6.4f',
-                                   doc=""
-                                   )
-
-    Diag_ = attribute(label='Diag_',
-                                   dtype=,
-                                   display_level=DispLevel.OPERATOR,
-                                   access=AttrWriteType.READ,
-                                   unit='',
-                                   format='6.4f',
-                                   doc=""
-                                   )
-
-    Diag_ = attribute(label='Diag_',
-                                   dtype=,
-                                   display_level=DispLevel.OPERATOR,
-                                   access=AttrWriteType.READ,
-                                   unit='',
-                                   format='6.4f',
-                                   doc=""
-                                   )
-
-    Diag_ = attribute(label='Diag_',
-                                   dtype=,
-                                   display_level=DispLevel.OPERATOR,
-                                   access=AttrWriteType.READ,
-                                   unit='',
-                                   format='6.4f',
-                                   doc=""
-                                   )
-
-    Diag_ = attribute(label='Diag_',
-                                   dtype=,
-                                   display_level=DispLevel.OPERATOR,
-                                   access=AttrWriteType.READ,
-                                   unit='',
-                                   format='6.4f',
-                                   doc=""
-                                   )
-
-    Diag_ = attribute(label='Diag_',
-                                   dtype=,
-                                   display_level=DispLevel.OPERATOR,
-                                   access=AttrWriteType.READ,
-                                   unit='',
-                                   format='6.4f',
-                                   doc=""
-                                   )
-
-    Diag_ = attribute(label='Diag_',
-                                   dtype=,
-                                   display_level=DispLevel.OPERATOR,
-                                   access=AttrWriteType.READ,
-                                   unit='',
-                                   format='6.4f',
-                                   doc=""
-                                   )
-
-    Diag_ = attribute(label='Diag_',
-                                   dtype=,
-                                   display_level=DispLevel.OPERATOR,
-                                   access=AttrWriteType.READ,
-                                   unit='',
-                                   format='6.4f',
-                                   doc=""
-                                   )
-
-    Diag_ = attribute(label='Diag_',
-                                   dtype=,
-                                   display_level=DispLevel.OPERATOR,
-                                   access=AttrWriteType.READ,
-                                   unit='',
-                                   format='6.4f',
-                                   doc=""
-                                   )
-
-    Diag_ = attribute(label='Diag_',
-                                   dtype=,
-                                   display_level=DispLevel.OPERATOR,
-                                   access=AttrWriteType.READ,
-                                   unit='',
-                                   format='6.4f',
-                                   doc=""
-                                   )
-
-    Diag_ = attribute(label='Diag_',
-                                   dtype=,
-                                   display_level=DispLevel.OPERATOR,
-                                   access=AttrWriteType.READ,
-                                   unit='',
-                                   format='6.4f',
-                                   doc=""
-                                   )
-
-    Diag_ = attribute(label='Diag_',
-                                   dtype=,
-                                   display_level=DispLevel.OPERATOR,
-                                   access=AttrWriteType.READ,
-                                   unit='',
-                                   format='6.4f',
-                                   doc=""
-                                   )
-
-    Diag_ = attribute(label='Diag_',
-                                   dtype=,
-                                   display_level=DispLevel.OPERATOR,
-                                   access=AttrWriteType.READ,
-                                   unit='',
-                                   format='6.4f',
-                                   doc=""
-                                   )
-
-
     perseusType = device_property(dtype=str, default_value='simulated')
+    perseusIp = device_property(dtype=str, default_value='127.0.0.1')
 
     def init_device(self):
         Device.init_device(self)
         try:
-            self.perseus = Perseus().new_perseus(self.perseusType)
+            self.perseus = Perseus().new_perseus(self.perseusType, self.perseusIp)
             self.set_state(DevState.ON)
         except Exception, e:
             print e
             self.set_state(DevState.FAULT)
 
-    def read_angle(self, address):
-        # =IF(P6>32767;(P6-65536)/32767*180;P6/32767*180)
-
-        self.perseus.write(SETTINGS_READ_OFFSET, address)
-        value = self.perseus.read(SETTINGS_READ_OFFSET)
-
-        if value > 32767:
-            angle = (value - 65536) * 180.0 / 32767
-        else:
-            angle = (value * 180.0) / 32767
-
-        return angle
-
-    def write_angle(self, value, address):
-        """=ROUND(IF(
-                     E6<0; E6/180*32767+65536;
-                     IF(E6<=180; E6/180*32767;
-                       (E6-360)/180*32767+65536)
-                    );0
-                )
-        """
-        if value < 0:
-            angle = (value * 32767 / 180.0) + 65536
-        elif value <= 180.0:
-            angle = (value * 32767) / 180.0
-        else:
-            angle = ((value - 360) * 32767 / 180.0) + 65536
-
-        value = address << 17 | int(angle)
-        self.perseus.write(SETTINGS_WRITE_OFFSET, value)
-
-    def read_milivolts(self, address):
-        """
-            This method converts the value readed from a register in milivolts usign the following formula:
-            VALUE = ROUND(P23*1000/32767*1,6467602581;0)
-        :param value: value read from a register.
-        :return: value converted in milivolts
-        """
-        self.perseus.write(SETTINGS_READ_OFFSET, address)
-        value = self.perseus.read(SETTINGS_READ_OFFSET)
-
-        milis = value * 1000.0 / 32767 * 1.6467602581
-        return milis
-
-    def write_milivolts(self, milivolts, address):
-        """
-            This method converts the value from milivolts to bit to be written in the register usign the following
-            formula:
-            VALUE =ROUND(E23/1000*32767/1,6467602581;0)
-        :param value: value to be converted.
-        :return: value to write in the register.
-        """
-        value = (milivolts * 32767 / 1.6467602581) / 1000.0
-
-        value = address << 17 | int(value)
-        self.perseus.write(SETTINGS_WRITE_OFFSET, value)
-
-    def read_direct(self, address):
-        self.perseus.write(SETTINGS_READ_OFFSET, address)
-        value = self.perseus.read(SETTINGS_READ_OFFSET)
-        return value
-
-    def write_direct(self, value, address):
-        value = address << 17 | int(value)
-        self.perseus.write(SETTINGS_WRITE_OFFSET, value)
-
-    def read_diag_angle(self, address):
-        self.perseus.write(DIAGNOSTICS_OFFSET, address)
-        value = self.perseus.read(DIAGNOSTICS_OFFSET)
-        # =IF(D49>32767;
-        #    (D49-65536)/32767*180;
-        #     D49/32767*180)
-        if value > 32767:
-            angle = (value - (1 << 16)) * 180.0 / 32767
-        else:
-            angle = value * 180.0 / 32767
-        return angle
-
-    def read_diag_milivolts(self, address):
-        self.perseus.write(DIAGNOSTICS_OFFSET, address)
-        value = self.perseus.read(DIAGNOSTICS_OFFSET)
-        #and now convert the value
-        #=IF(D9<32768;
-        #    D9/32767*1000;
-        #   (D9-2^16)/32767*1000)
-        if value < 32768:
-            milis = value * 1000.0 / 32767
-        else:
-            milis = ((value - (1 << 16)) * 1000.0) / 32767
-        return milis
-
-    def calc_amplitude(self, ivalue, qvalue):
-        amplitude = math.sqrt((ivalue**2) + (qvalue**2))
-        return amplitude
-
-    def calc_phase(self, ivalue, qvalue):
-        phase = math.atan2(qvalue, ivalue)
-        return phase
-
 
     @DebugIt()
     def get_Rvtet1(self):
-        return self.read_milivolts(0)
+        return perseus_utils.read_milivolts(self.perseus, 0)
 
     @DebugIt()
     def set_Rvtet1(self, Rvtet1):
-        self.write_milivolts(Rvtet1, 0)
+        perseus_utils.write_milivolts(self.perseus, Rvtet1, 0)
 
     @DebugIt()
     def get_Rvtet2(self):
-        return self.read_milivolts(1)
+        return perseus_utils.read_milivolts(self.perseus, 1)
 
     @DebugIt()
     def set_Rvtet2(self, Rvtet2):
-        self.write_milivolts(Rvtet2, 1)
+        perseus_utils.write_milivolts(self.perseus, Rvtet2, 1)
 
     @DebugIt()
     def get_Rvcirc(self):
-        return self.read_milivolts(2)
+        return perseus_utils.read_milivolts(self.perseus, 2)
 
     @DebugIt()
     def set_Rvcirc(self, Rvcirc):
-        self.write_milivolts(Rvcirc, 2)
+        perseus_utils.write_milivolts(self.perseus, Rvcirc, 2)
 
     @DebugIt()
     def get_Fwload(self):
-        return self.read_milivolts(3)
+        return perseus_utils.read_milivolts(self.perseus, 3)
 
     @DebugIt()
     def set_Fwload(self, Fwload):
-        self.write_milivolts(Fwload, 3)
+        perseus_utils.write_milivolts(self.perseus, Fwload, 3)
 
     @DebugIt()
     def get_Fwhybload(self):
-        return self.read_milivolts(4)
+        return perseus_utils.read_milivolts(self.perseus, 4)
 
     @DebugIt()
     def set_Fwhybload(self, Fwhybload):
-        self.write_milivolts(Fwhybload, 4)
+        perseus_utils.write_milivolts(self.perseus, Fwhybload, 4)
 
     @DebugIt()
     def get_Rvcav(self):
-        return self.read_milivolts(5)
+        return perseus_utils.read_milivolts(self.perseus, 5)
 
     @DebugIt()
     def set_Rvcav(self, Rvcav):
-        self.write_milivolts(Rvcav, 5)
+        perseus_utils.write_milivolts(self.perseus, Rvcav, 5)
 
     @DebugIt()
     def get_ManualInterlock(self):
-        return self.read_direct(6)
+        return perseus_utils.read_direct(self.perseus, 6)
 
     @DebugIt()
     def set_ManualInterlock(self, ManualInterlock):
-        self.write_direct(ManualInterlock, 6)
+        perseus_utils.write_direct(self.perseus, ManualInterlock, 6)
 
     @DebugIt()
     def get_DisableItckRvtet1(self):
         address = 7
         #@todo: add this method to special methods library ...
-        utils.get_DisableItckRvtet1(self.perseus, address)
+        extra_func.get_DisableItckRvtet1(self.perseus, address)
 
     @DebugIt()
     def set_DisableItckRvtet1(self, DisableItckRvtet1):
         address = 7
         #@todo: add this method to special methods library ...
-        utils.get_DisableItckRvtet1(self.perseus, DisableItckRvtet1, address)
+        extra_func.get_DisableItckRvtet1(self.perseus, DisableItckRvtet1, address)
 
     @DebugIt()
     def get_DisableItckRvtet2(self):
         address = 8
         #@todo: add this method to special methods library ...
-        utils.get_DisableItckRvtet2(self.perseus, address)
+        extra_func.get_DisableItckRvtet2(self.perseus, address)
 
     @DebugIt()
     def set_DisableItckRvtet2(self, DisableItckRvtet2):
         address = 8
         #@todo: add this method to special methods library ...
-        utils.get_DisableItckRvtet2(self.perseus, DisableItckRvtet2, address)
+        extra_func.get_DisableItckRvtet2(self.perseus, DisableItckRvtet2, address)
 
     @DebugIt()
     def get_DisableItckRvcirc(self):
         address = 9
         #@todo: add this method to special methods library ...
-        utils.get_DisableItckRvcirc(self.perseus, address)
+        extra_func.get_DisableItckRvcirc(self.perseus, address)
 
     @DebugIt()
     def set_DisableItckRvcirc(self, DisableItckRvcirc):
         address = 9
         #@todo: add this method to special methods library ...
-        utils.get_DisableItckRvcirc(self.perseus, DisableItckRvcirc, address)
+        extra_func.get_DisableItckRvcirc(self.perseus, DisableItckRvcirc, address)
 
     @DebugIt()
     def get_DisableItckFwload(self):
         address = 10
         #@todo: add this method to special methods library ...
-        utils.get_DisableItckFwload(self.perseus, address)
+        extra_func.get_DisableItckFwload(self.perseus, address)
 
     @DebugIt()
     def set_DisableItckFwload(self, DisableItckFwload):
         address = 10
         #@todo: add this method to special methods library ...
-        utils.get_DisableItckFwload(self.perseus, DisableItckFwload, address)
+        extra_func.get_DisableItckFwload(self.perseus, DisableItckFwload, address)
 
     @DebugIt()
     def get_DisableItckFwhybload(self):
         address = 11
         #@todo: add this method to special methods library ...
-        utils.get_DisableItckFwhybload(self.perseus, address)
+        extra_func.get_DisableItckFwhybload(self.perseus, address)
 
     @DebugIt()
     def set_DisableItckFwhybload(self, DisableItckFwhybload):
         address = 11
         #@todo: add this method to special methods library ...
-        utils.get_DisableItckFwhybload(self.perseus, DisableItckFwhybload, address)
+        extra_func.get_DisableItckFwhybload(self.perseus, DisableItckFwhybload, address)
 
     @DebugIt()
     def get_DisableItckRvcav(self):
         address = 12
         #@todo: add this method to special methods library ...
-        utils.get_DisableItckRvcav(self.perseus, address)
+        extra_func.get_DisableItckRvcav(self.perseus, address)
 
     @DebugIt()
     def set_DisableItckRvcav(self, DisableItckRvcav):
         address = 12
         #@todo: add this method to special methods library ...
-        utils.get_DisableItckRvcav(self.perseus, DisableItckRvcav, address)
+        extra_func.get_DisableItckRvcav(self.perseus, DisableItckRvcav, address)
 
     @DebugIt()
     def get_DisableItckArcs(self):
         address = 13
         #@todo: add this method to special methods library ...
-        utils.get_DisableItckArcs(self.perseus, address)
+        extra_func.get_DisableItckArcs(self.perseus, address)
 
     @DebugIt()
     def set_DisableItckArcs(self, DisableItckArcs):
         address = 13
         #@todo: add this method to special methods library ...
-        utils.get_DisableItckArcs(self.perseus, DisableItckArcs, address)
+        extra_func.get_DisableItckArcs(self.perseus, DisableItckArcs, address)
 
     @DebugIt()
     def get_DisableItckVaccum(self):
         address = 14
         #@todo: add this method to special methods library ...
-        utils.get_DisableItckVaccum(self.perseus, address)
+        extra_func.get_DisableItckVaccum(self.perseus, address)
 
     @DebugIt()
     def set_DisableItckVaccum(self, DisableItckVaccum):
         address = 14
         #@todo: add this method to special methods library ...
-        utils.get_DisableItckVaccum(self.perseus, DisableItckVaccum, address)
+        extra_func.get_DisableItckVaccum(self.perseus, DisableItckVaccum, address)
 
     @DebugIt()
     def get_DisableItckManualInterlock(self):
         address = 15
         #@todo: add this method to special methods library ...
-        utils.get_DisableItckManualInterlock(self.perseus, address)
+        extra_func.get_DisableItckManualInterlock(self.perseus, address)
 
     @DebugIt()
     def set_DisableItckManualInterlock(self, DisableItckManualInterlock):
         address = 15
         #@todo: add this method to special methods library ...
-        utils.get_DisableItckManualInterlock(self.perseus, DisableItckManualInterlock, address)
+        extra_func.get_DisableItckManualInterlock(self.perseus, DisableItckManualInterlock, address)
 
     @DebugIt()
     def get_DisableItckPlungerEndSwitchesUp(self):
         address = 16
         #@todo: add this method to special methods library ...
-        utils.get_DisableItckPlungerEndSwitchesUp(self.perseus, address)
+        extra_func.get_DisableItckPlungerEndSwitchesUp(self.perseus, address)
 
     @DebugIt()
     def set_DisableItckPlungerEndSwitchesUp(self, DisableItckPlungerEndSwitchesUp):
         address = 16
         #@todo: add this method to special methods library ...
-        utils.get_DisableItckPlungerEndSwitchesUp(self.perseus, DisableItckPlungerEndSwitchesUp, address)
+        extra_func.get_DisableItckPlungerEndSwitchesUp(self.perseus, DisableItckPlungerEndSwitchesUp, address)
 
     @DebugIt()
     def get_DisableItckPlungerEndSwitchesDown(self):
         address = 17
         #@todo: add this method to special methods library ...
-        utils.get_DisableItckPlungerEndSwitchesDown(self.perseus, address)
+        extra_func.get_DisableItckPlungerEndSwitchesDown(self.perseus, address)
 
     @DebugIt()
     def set_DisableItckPlungerEndSwitchesDown(self, DisableItckPlungerEndSwitchesDown):
         address = 17
         #@todo: add this method to special methods library ...
-        utils.get_DisableItckPlungerEndSwitchesDown(self.perseus, DisableItckPlungerEndSwitchesDown, address)
+        extra_func.get_DisableItckPlungerEndSwitchesDown(self.perseus, DisableItckPlungerEndSwitchesDown, address)
 
     @DebugIt()
     def get_DisableItckMps(self):
         address = 18
         #@todo: add this method to special methods library ...
-        utils.get_DisableItckMps(self.perseus, address)
+        extra_func.get_DisableItckMps(self.perseus, address)
 
     @DebugIt()
     def set_DisableItckMps(self, DisableItckMps):
         address = 18
         #@todo: add this method to special methods library ...
-        utils.get_DisableItckMps(self.perseus, DisableItckMps, address)
+        extra_func.get_DisableItckMps(self.perseus, DisableItckMps, address)
 
     @DebugIt()
     def get_SamplesToAverage(self):
-        return self.read_direct(19)
+        return perseus_utils.read_direct(self.perseus, 19)
 
     @DebugIt()
     def set_SamplesToAverage(self, SamplesToAverage):
-        self.write_direct(SamplesToAverage, 19)
+        perseus_utils.write_direct(self.perseus, SamplesToAverage, 19)
 
     @DebugIt()
     def get_PulseupLogicInversion(self):
-        return self.read_direct(20)
+        return perseus_utils.read_direct(self.perseus, 20)
 
     @DebugIt()
     def set_PulseupLogicInversion(self, PulseupLogicInversion):
-        self.write_direct(PulseupLogicInversion, 20)
+        perseus_utils.write_direct(self.perseus, PulseupLogicInversion, 20)
 
     @DebugIt()
     def get_EndSwitchesConnectedToNoNcContact(self):
-        return self.read_direct(21)
+        return perseus_utils.read_direct(self.perseus, 21)
 
     @DebugIt()
     def set_EndSwitchesConnectedToNoNcContact(self, EndSwitchesConnectedToNoNcContact):
-        self.write_direct(EndSwitchesConnectedToNoNcContact, 21)
+        perseus_utils.write_direct(self.perseus, EndSwitchesConnectedToNoNcContact, 21)
 
     @DebugIt()
     def get_Lookref(self):
-        return self.read_direct(22)
+        return perseus_utils.read_direct(self.perseus, 22)
 
     @DebugIt()
     def set_Lookref(self, Lookref):
-        self.write_direct(Lookref, 22)
+        perseus_utils.write_direct(self.perseus, Lookref, 22)
 
     @DebugIt()
     def get_Quadref(self):
-        return self.read_direct(23)
+        return perseus_utils.read_direct(self.perseus, 23)
 
     @DebugIt()
     def set_Quadref(self, Quadref):
-        self.write_direct(Quadref, 23)
+        perseus_utils.write_direct(self.perseus, Quadref, 23)
 
     @DebugIt()
     def get_SpareDo1(self):
-        return self.read_direct(24)
+        return perseus_utils.read_direct(self.perseus, 24)
 
     @DebugIt()
     def set_SpareDo1(self, SpareDo1):
-        self.write_direct(SpareDo1, 24)
+        perseus_utils.write_direct(self.perseus, SpareDo1, 24)
 
     @DebugIt()
     def get_SpareDo2(self):
-        return self.read_direct(25)
+        return perseus_utils.read_direct(self.perseus, 25)
 
     @DebugIt()
     def set_SpareDo2(self, SpareDo2):
-        self.write_direct(SpareDo2, 25)
+        perseus_utils.write_direct(self.perseus, SpareDo2, 25)
 
     @DebugIt()
     def get_SpareDo3(self):
-        return self.read_direct(26)
+        return perseus_utils.read_direct(self.perseus, 26)
 
     @DebugIt()
     def set_SpareDo3(self, SpareDo3):
-        self.write_direct(SpareDo3, 26)
+        perseus_utils.write_direct(self.perseus, SpareDo3, 26)
 
     @DebugIt()
     def get_FdlSwTrigger(self):
-        return self.read_direct(27)
+        return perseus_utils.read_direct(self.perseus, 27)
 
     @DebugIt()
     def set_FdlSwTrigger(self, FdlSwTrigger):
-        self.write_direct(FdlSwTrigger, 27)
+        perseus_utils.write_direct(self.perseus, FdlSwTrigger, 27)
 
     @DebugIt()
     def get_ResetInterlocksCavA(self):
-        return self.read_direct(100)
+        return perseus_utils.read_direct(self.perseus, 100)
 
     @DebugIt()
     def set_ResetInterlocksCavA(self, ResetInterlocksCavA):
-        self.write_direct(ResetInterlocksCavA, 100)
+        perseus_utils.write_direct(self.perseus, ResetInterlocksCavA, 100)
 
     @DebugIt()
     def get_Landautuningenable(self):
-        return self.read_direct(200)
+        return perseus_utils.read_direct(self.perseus, 200)
 
     @DebugIt()
     def set_Landautuningenable(self, Landautuningenable):
-        self.write_direct(Landautuningenable, 200)
+        perseus_utils.write_direct(self.perseus, Landautuningenable, 200)
 
     @DebugIt()
     def get_Landautuningreset(self):
-        return self.read_direct(201)
+        return perseus_utils.read_direct(self.perseus, 201)
 
     @DebugIt()
     def set_Landautuningreset(self, Landautuningreset):
-        self.write_direct(Landautuningreset, 201)
+        perseus_utils.write_direct(self.perseus, Landautuningreset, 201)
 
     @DebugIt()
     def get_Movelandauup(self):
-        return self.read_direct(202)
+        return perseus_utils.read_direct(self.perseus, 202)
 
     @DebugIt()
     def set_Movelandauup(self, Movelandauup):
-        self.write_direct(Movelandauup, 202)
+        perseus_utils.write_direct(self.perseus, Movelandauup, 202)
 
     @DebugIt()
     def get_Movelandauplg(self):
-        return self.read_direct(203)
+        return perseus_utils.read_direct(self.perseus, 203)
 
     @DebugIt()
     def set_Movelandauplg(self, Movelandauplg):
-        self.write_direct(Movelandauplg, 203)
+        perseus_utils.write_direct(self.perseus, Movelandauplg, 203)
 
     @DebugIt()
     def get_Numsteps(self):
-        return self.read_milivolts(204)
+        return perseus_utils.read_milivolts(self.perseus, 204)
 
     @DebugIt()
     def set_Numsteps(self, Numsteps):
-        self.write_milivolts(Numsteps, 204)
+        perseus_utils.write_milivolts(self.perseus, Numsteps, 204)
 
     @DebugIt()
     def get_Landauphaseoffset(self):
-        return self.read_angle(205)
+        return perseus_utils.read_angle(self.perseus, 205)
 
     @DebugIt()
     def set_Landauphaseoffset(self, Landauphaseoffset):
-        self.write_angle(Landauphaseoffset, 205)
+        perseus_utils.write_angle(self.perseus, Landauphaseoffset, 205)
 
     @DebugIt()
     def get_Landaumarginup(self):
-        return self.read_milivolts(206)
+        return perseus_utils.read_milivolts(self.perseus, 206)
 
     @DebugIt()
     def set_Landaumarginup(self, Landaumarginup):
-        self.write_milivolts(Landaumarginup, 206)
+        perseus_utils.write_milivolts(self.perseus, Landaumarginup, 206)
 
     @DebugIt()
     def get_LandauMarginLow(self):
-        return self.read_milivolts(207)
+        return perseus_utils.read_milivolts(self.perseus, 207)
 
     @DebugIt()
     def set_LandauMarginLow(self, LandauMarginLow):
-        self.write_milivolts(LandauMarginLow, 207)
+        perseus_utils.write_milivolts(self.perseus, LandauMarginLow, 207)
 
     @DebugIt()
     def get_MinimumLandauAmplitude(self):
-        return self.read_milivolts(208)
+        return perseus_utils.read_milivolts(self.perseus, 208)
 
     @DebugIt()
     def set_MinimumLandauAmplitude(self, MinimumLandauAmplitude):
-        self.write_milivolts(MinimumLandauAmplitude, 208)
+        perseus_utils.write_milivolts(self.perseus, MinimumLandauAmplitude, 208)
 
     @DebugIt()
     def get_LandauPositiveEnable(self):
-        return self.read_direct(209)
+        return perseus_utils.read_direct(self.perseus, 209)
 
     @DebugIt()
     def set_LandauPositiveEnable(self, LandauPositiveEnable):
-        self.write_direct(LandauPositiveEnable, 209)
+        perseus_utils.write_direct(self.perseus, LandauPositiveEnable, 209)
 
     @DebugIt()
     def get_Landauampsetting(self):
-        return self.read_milivolts(210)
+        return perseus_utils.read_milivolts(self.perseus, 210)
 
     @DebugIt()
     def set_Landauampsetting(self, Landauampsetting):
-        self.write_milivolts(Landauampsetting, 210)
+        perseus_utils.write_milivolts(self.perseus, Landauampsetting, 210)
 
     @DebugIt()
     def read_Diag_Irvtet1(self):
@@ -2986,532 +1854,55 @@ class NutaqDiags(Device):
     def read_Diag_SpareDo03(self):
         return self._Diag_SpareDo03
 
-    @DebugIt()
-    def read_Diag_(self):
-        return self._Diag_
-
-    @DebugIt()
-    def read_Diag_(self):
-        return self._Diag_
-
-    @DebugIt()
-    def read_Diag_(self):
-        return self._Diag_
-
-    @DebugIt()
-    def read_Diag_(self):
-        return self._Diag_
-
-    @DebugIt()
-    def read_Diag_(self):
-        return self._Diag_
-
-    @DebugIt()
-    def read_Diag_(self):
-        return self._Diag_
-
-    @DebugIt()
-    def read_Diag_(self):
-        return self._Diag_
-
-    @DebugIt()
-    def read_Diag_(self):
-        return self._Diag_
-
-    @DebugIt()
-    def read_Diag_(self):
-        return self._Diag_
-
-    @DebugIt()
-    def read_Diag_(self):
-        return self._Diag_
-
-    @DebugIt()
-    def read_Diag_(self):
-        return self._Diag_
-
-    @DebugIt()
-    def read_Diag_(self):
-        return self._Diag_
-
-    @DebugIt()
-    def read_Diag_(self):
-        return self._Diag_
-
-    @DebugIt()
-    def read_Diag_(self):
-        return self._Diag_
-
-    @DebugIt()
-    def read_Diag_(self):
-        return self._Diag_
-
-    @DebugIt()
-    def read_Diag_(self):
-        return self._Diag_
-
-    @DebugIt()
-    def read_Diag_(self):
-        return self._Diag_
-
-    @DebugIt()
-    def read_Diag_(self):
-        return self._Diag_
-
-    @DebugIt()
-    def read_Diag_(self):
-        return self._Diag_
-
-    @DebugIt()
-    def read_Diag_(self):
-        return self._Diag_
-
-    @DebugIt()
-    def read_Diag_(self):
-        return self._Diag_
-
-    @DebugIt()
-    def read_Diag_(self):
-        return self._Diag_
-
-    @DebugIt()
-    def read_Diag_(self):
-        return self._Diag_
-
-    @DebugIt()
-    def read_Diag_(self):
-        return self._Diag_
-
-    @DebugIt()
-    def read_Diag_(self):
-        return self._Diag_
-
-    @DebugIt()
-    def read_Diag_(self):
-        return self._Diag_
-
-    @DebugIt()
-    def read_Diag_(self):
-        return self._Diag_
-
-    @DebugIt()
-    def read_Diag_(self):
-        return self._Diag_
-
-    @DebugIt()
-    def read_Diag_(self):
-        return self._Diag_
-
-    @DebugIt()
-    def read_Diag_(self):
-        return self._Diag_
-
-    @DebugIt()
-    def read_Diag_(self):
-        return self._Diag_
-
-    @DebugIt()
-    def read_Diag_(self):
-        return self._Diag_
-
-    @DebugIt()
-    def read_Diag_(self):
-        return self._Diag_
-
-    @DebugIt()
-    def read_Diag_(self):
-        return self._Diag_
-
-    @DebugIt()
-    def read_Diag_(self):
-        return self._Diag_
-
-    @DebugIt()
-    def read_Diag_(self):
-        return self._Diag_
-
-    @DebugIt()
-    def read_Diag_(self):
-        return self._Diag_
-
-    @DebugIt()
-    def read_Diag_(self):
-        return self._Diag_
-
-    @DebugIt()
-    def read_Diag_(self):
-        return self._Diag_
-
-    @DebugIt()
-    def read_Diag_(self):
-        return self._Diag_
-
-    @DebugIt()
-    def read_Diag_(self):
-        return self._Diag_
-
-    @DebugIt()
-    def read_Diag_(self):
-        return self._Diag_
-
-    @DebugIt()
-    def read_Diag_(self):
-        return self._Diag_
-
-    @DebugIt()
-    def read_Diag_(self):
-        return self._Diag_
-
-    @DebugIt()
-    def read_Diag_(self):
-        return self._Diag_
-
-    @DebugIt()
-    def read_Diag_(self):
-        return self._Diag_
-
-    @DebugIt()
-    def read_Diag_(self):
-        return self._Diag_
-
-    @DebugIt()
-    def read_Diag_(self):
-        return self._Diag_
-
-    @DebugIt()
-    def read_Diag_(self):
-        return self._Diag_
-
-    @DebugIt()
-    def read_Diag_(self):
-        return self._Diag_
-
-    @DebugIt()
-    def read_Diag_(self):
-        return self._Diag_
-
-    @DebugIt()
-    def read_Diag_(self):
-        return self._Diag_
-
-    @DebugIt()
-    def read_Diag_(self):
-        return self._Diag_
-
-    @DebugIt()
-    def read_Diag_(self):
-        return self._Diag_
-
-    @DebugIt()
-    def read_Diag_(self):
-        return self._Diag_
-
-    @DebugIt()
-    def read_Diag_(self):
-        return self._Diag_
-
-    @DebugIt()
-    def read_Diag_(self):
-        return self._Diag_
-
-    @DebugIt()
-    def read_Diag_(self):
-        return self._Diag_
-
-    @DebugIt()
-    def read_Diag_(self):
-        return self._Diag_
-
-    @DebugIt()
-    def read_Diag_(self):
-        return self._Diag_
-
-    @DebugIt()
-    def read_Diag_(self):
-        return self._Diag_
-
-    @DebugIt()
-    def read_Diag_(self):
-        return self._Diag_
-
-    @DebugIt()
-    def read_Diag_(self):
-        return self._Diag_
-
-    @DebugIt()
-    def read_Diag_(self):
-        return self._Diag_
-
-    @DebugIt()
-    def read_Diag_(self):
-        return self._Diag_
-
-    @DebugIt()
-    def read_Diag_(self):
-        return self._Diag_
-
-    @DebugIt()
-    def read_Diag_(self):
-        return self._Diag_
-
-    @DebugIt()
-    def read_Diag_(self):
-        return self._Diag_
-
-    @DebugIt()
-    def read_Diag_(self):
-        return self._Diag_
-
-    @DebugIt()
-    def read_Diag_(self):
-        return self._Diag_
-
-    @DebugIt()
-    def read_Diag_(self):
-        return self._Diag_
-
-    @DebugIt()
-    def read_Diag_(self):
-        return self._Diag_
-
-    @DebugIt()
-    def read_Diag_(self):
-        return self._Diag_
-
-    @DebugIt()
-    def read_Diag_(self):
-        return self._Diag_
-
-    @DebugIt()
-    def read_Diag_(self):
-        return self._Diag_
-
-    @DebugIt()
-    def read_Diag_(self):
-        return self._Diag_
-
-    @DebugIt()
-    def read_Diag_(self):
-        return self._Diag_
-
-    @DebugIt()
-    def read_Diag_(self):
-        return self._Diag_
-
-    @DebugIt()
-    def read_Diag_(self):
-        return self._Diag_
-
-    @DebugIt()
-    def read_Diag_(self):
-        return self._Diag_
-
-    @DebugIt()
-    def read_Diag_(self):
-        return self._Diag_
-
-    @DebugIt()
-    def read_Diag_(self):
-        return self._Diag_
-
-    @DebugIt()
-    def read_Diag_(self):
-        return self._Diag_
-
-    @DebugIt()
-    def read_Diag_(self):
-        return self._Diag_
-
-    @DebugIt()
-    def read_Diag_(self):
-        return self._Diag_
-
-    @DebugIt()
-    def read_Diag_(self):
-        return self._Diag_
-
-    @DebugIt()
-    def read_Diag_(self):
-        return self._Diag_
-
-    @DebugIt()
-    def read_Diag_(self):
-        return self._Diag_
-
-    @DebugIt()
-    def read_Diag_(self):
-        return self._Diag_
-
-    @DebugIt()
-    def read_Diag_(self):
-        return self._Diag_
-
-    @DebugIt()
-    def read_Diag_(self):
-        return self._Diag_
-
-    @DebugIt()
-    def read_Diag_(self):
-        return self._Diag_
-
-    @DebugIt()
-    def read_Diag_(self):
-        return self._Diag_
-
-    @DebugIt()
-    def read_Diag_(self):
-        return self._Diag_
-
-    @DebugIt()
-    def read_Diag_(self):
-        return self._Diag_
-
-    @DebugIt()
-    def read_Diag_(self):
-        return self._Diag_
-
-    @DebugIt()
-    def read_Diag_(self):
-        return self._Diag_
-
-    @DebugIt()
-    def read_Diag_(self):
-        return self._Diag_
-
-    @DebugIt()
-    def read_Diag_(self):
-        return self._Diag_
-
-    @DebugIt()
-    def read_Diag_(self):
-        return self._Diag_
-
-    @DebugIt()
-    def read_Diag_(self):
-        return self._Diag_
-
-    @DebugIt()
-    def read_Diag_(self):
-        return self._Diag_
-
-    @DebugIt()
-    def read_Diag_(self):
-        return self._Diag_
-
-    @DebugIt()
-    def read_Diag_(self):
-        return self._Diag_
-
-    @DebugIt()
-    def read_Diag_(self):
-        return self._Diag_
-
-    @DebugIt()
-    def read_Diag_(self):
-        return self._Diag_
-
-    @DebugIt()
-    def read_Diag_(self):
-        return self._Diag_
-
-    @DebugIt()
-    def read_Diag_(self):
-        return self._Diag_
-
-    @DebugIt()
-    def read_Diag_(self):
-        return self._Diag_
-
-    @DebugIt()
-    def read_Diag_(self):
-        return self._Diag_
-
-    @DebugIt()
-    def read_Diag_(self):
-        return self._Diag_
-
-    @DebugIt()
-    def read_Diag_(self):
-        return self._Diag_
-
-    @DebugIt()
-    def read_Diag_(self):
-        return self._Diag_
-
-    @DebugIt()
-    def read_Diag_(self):
-        return self._Diag_
-
-    @DebugIt()
-    def read_Diag_(self):
-        return self._Diag_
-
-    @DebugIt()
-    def read_Diag_(self):
-        return self._Diag_
-
-    @DebugIt()
-    def read_Diag_(self):
-        return self._Diag_
-
     @command
     def read_diagnostics(self):
-        self.start_reading_diagnostics()
+        perseus_utils.start_reading_diagnostics(self.perseus)
 
-        self._Diag_Irvtet1 = self.read_diag_milivolts(0)
-        self._Diag_Qrvtet1 = self.read_diag_milivolts(1)
-        self._Diag_Amprvtet1 = self.read_diag_milivolts(2)
-        self._Diag_Phrvtet1 = self.read_diag_angle(3)
-        self._Diag_Irvtet2 = self.read_diag_milivolts(4)
-        self._Diag_Qrvtet2 = self.read_diag_milivolts(5)
-        self._Diag_Amprvtet2 = self.read_diag_milivolts(6)
-        self._Diag_Phrvtet2 = self.read_diag_angle(7)
-        self._Diag_Ifwcirc = self.read_diag_milivolts(8)
-        self._Diag_Qfwcirc = self.read_diag_milivolts(9)
-        self._Diag_Ampfwcirc = self.read_diag_milivolts(10)
-        self._Diag_Phfwcirc = self.read_diag_angle(11)
-        self._Diag_Irvcirc = self.read_diag_milivolts(12)
-        self._Diag_Qrvcirc = self.read_diag_milivolts(13)
-        self._Diag_Amprvcirc = self.read_diag_milivolts(14)
-        self._Diag_Phrvcirc = self.read_diag_angle(15)
-        self._Diag_Ifwload = self.read_diag_milivolts(16)
-        self._Diag_Qfwload = self.read_diag_milivolts(17)
-        self._Diag_Ampfwload = self.read_diag_milivolts(18)
-        self._Diag_Phfwload = self.read_diag_angle(19)
-        self._Diag_Ifwhybload = self.read_diag_milivolts(20)
-        self._Diag_Qfwhybload = self.read_diag_milivolts(21)
-        self._Diag_Ampfwhybload = self.read_diag_milivolts(22)
-        self._Diag_Phfwhybload = self.read_diag_angle(23)
-        self._Diag_Irvcav = self.read_diag_milivolts(24)
-        self._Diag_Qrvcav = self.read_diag_milivolts(25)
-        self._Diag_Amprvcav = self.read_diag_milivolts(26)
-        self._Diag_Phrvcav = self.read_diag_angle(27)
-        self._Diag_Imo = self.read_diag_milivolts(28)
-        self._Diag_Qmo = self.read_diag_milivolts(29)
-        self._Diag_Ampmo = self.read_diag_milivolts(30)
-        self._Diag_Phmo = self.read_diag_angle(31)
-        self._Diag_Ilandau = self.read_diag_milivolts(32)
-        self._Diag_Qlandadu = self.read_diag_milivolts(33)
-        self._Diag_Amplandadu = self.read_diag_milivolts(34)
-        self._Diag_Phlandadu = self.read_diag_angle(35)
-        self._Diag_DephaseMoLandau = self.read_diag_angle(64)
+        self._Diag_Irvtet1 = perseus_utils.read_diag_milivolts(self.perseus, 0)
+        self._Diag_Qrvtet1 = perseus_utils.read_diag_milivolts(self.perseus, 1)
+        self._Diag_Amprvtet1 = perseus_utils.read_diag_milivolts(self.perseus, 2)
+        self._Diag_Phrvtet1 = perseus_utils.read_diag_angle(self.perseus, 3)
+        self._Diag_Irvtet2 = perseus_utils.read_diag_milivolts(self.perseus, 4)
+        self._Diag_Qrvtet2 = perseus_utils.read_diag_milivolts(self.perseus, 5)
+        self._Diag_Amprvtet2 = perseus_utils.read_diag_milivolts(self.perseus, 6)
+        self._Diag_Phrvtet2 = perseus_utils.read_diag_angle(self.perseus, 7)
+        self._Diag_Ifwcirc = perseus_utils.read_diag_milivolts(self.perseus, 8)
+        self._Diag_Qfwcirc = perseus_utils.read_diag_milivolts(self.perseus, 9)
+        self._Diag_Ampfwcirc = perseus_utils.read_diag_milivolts(self.perseus, 10)
+        self._Diag_Phfwcirc = perseus_utils.read_diag_angle(self.perseus, 11)
+        self._Diag_Irvcirc = perseus_utils.read_diag_milivolts(self.perseus, 12)
+        self._Diag_Qrvcirc = perseus_utils.read_diag_milivolts(self.perseus, 13)
+        self._Diag_Amprvcirc = perseus_utils.read_diag_milivolts(self.perseus, 14)
+        self._Diag_Phrvcirc = perseus_utils.read_diag_angle(self.perseus, 15)
+        self._Diag_Ifwload = perseus_utils.read_diag_milivolts(self.perseus, 16)
+        self._Diag_Qfwload = perseus_utils.read_diag_milivolts(self.perseus, 17)
+        self._Diag_Ampfwload = perseus_utils.read_diag_milivolts(self.perseus, 18)
+        self._Diag_Phfwload = perseus_utils.read_diag_angle(self.perseus, 19)
+        self._Diag_Ifwhybload = perseus_utils.read_diag_milivolts(self.perseus, 20)
+        self._Diag_Qfwhybload = perseus_utils.read_diag_milivolts(self.perseus, 21)
+        self._Diag_Ampfwhybload = perseus_utils.read_diag_milivolts(self.perseus, 22)
+        self._Diag_Phfwhybload = perseus_utils.read_diag_angle(self.perseus, 23)
+        self._Diag_Irvcav = perseus_utils.read_diag_milivolts(self.perseus, 24)
+        self._Diag_Qrvcav = perseus_utils.read_diag_milivolts(self.perseus, 25)
+        self._Diag_Amprvcav = perseus_utils.read_diag_milivolts(self.perseus, 26)
+        self._Diag_Phrvcav = perseus_utils.read_diag_angle(self.perseus, 27)
+        self._Diag_Imo = perseus_utils.read_diag_milivolts(self.perseus, 28)
+        self._Diag_Qmo = perseus_utils.read_diag_milivolts(self.perseus, 29)
+        self._Diag_Ampmo = perseus_utils.read_diag_milivolts(self.perseus, 30)
+        self._Diag_Phmo = perseus_utils.read_diag_angle(self.perseus, 31)
+        self._Diag_Ilandau = perseus_utils.read_diag_milivolts(self.perseus, 32)
+        self._Diag_Qlandadu = perseus_utils.read_diag_milivolts(self.perseus, 33)
+        self._Diag_Amplandadu = perseus_utils.read_diag_milivolts(self.perseus, 34)
+        self._Diag_Phlandadu = perseus_utils.read_diag_angle(self.perseus, 35)
+        self._Diag_DephaseMoLandau = perseus_utils.read_diag_angle(self.perseus, 64)
 
     @command
     def tuning_reset(self):
-        self.write_direct(True, TUNING_RESET_ADDRESS)
-        self.write_direct(False, TUNING_RESET_ADDRESS)
+        perseus_utils.write_direct(True, TUNING_RESET_ADDRESS)
+        perseus_utils.write_direct(False, TUNING_RESET_ADDRESS)
 
-    def start_reading_diagnostics(self):
-        value = 1 << 16
-        self.perseus.write(DIAGNOSTICS_OFFSET, value)
-        #@warning: I know ... this is not needed
-        value = 0 << 16
-        #lets continue
-        self.perseus.write(DIAGNOSTICS_OFFSET, value)
-
-    def end_reading_diagnostics(self):
-        value = 1 << 16
-        self.perseus.write(DIAGNOSTICS_OFFSET, value)
+def run_device():
+    run([NutaqDiags])
 
 if __name__ == "__main__":
-    run([NutaqDiags])
+    run_device()

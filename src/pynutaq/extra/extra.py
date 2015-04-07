@@ -39,7 +39,7 @@ except ImportError, e:
     print "#############################################"
     raise
 
-from pynutaq.perseus.perseusextra import read_direct, write_direct
+from pynutaq.perseus.perseusutils import read_direct, write_direct
 
 def get_GainTetrode1(perseus, address):
     try:

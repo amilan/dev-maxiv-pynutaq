@@ -22,11 +22,12 @@
 """This is the main module for the pynutaq device servers.
 """
 
+#__all__ = ["nutaqdefs"]
+
 __author__ = 'antmil'
 
 __docformat__ = 'restructuredtext'
 
 # from nutaq import *
 # from nutaqdiags import *
-# from nutaqdefs import *
-
+#from nutaqdefs import *

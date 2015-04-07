@@ -4,34 +4,34 @@
 {% if attribute.type == "mv" %}
     @DebugIt()
     def get_{{attribute.name}}(self):
-        return self.read_milivolts({{attribute.address}})
+        return perseus_utils.read_milivolts(self.perseus, {{attribute.address}})
 
     {% if attribute.access == "read_write" %}
     @DebugIt()
     def set_{{attribute.name}}(self, {{attribute.name}}):
-        self.write_milivolts({{attribute.name}}, {{attribute.address}})
+        perseus_utils.write_milivolts(self.perseus, {{attribute.name}}, {{attribute.address}})
     {% endif %}
 
 {% elif attribute.type == "angle" %}
     @DebugIt()
     def get_{{attribute.name}}(self):
-        return self.read_angle({{attribute.address}})
+        return perseus_utils.read_angle(self.perseus, {{attribute.address}})
 
     {% if attribute.access == "read_write" %}
     @DebugIt()
     def set_{{attribute.name}}(self, {{attribute.name}}):
-        self.write_angle({{attribute.name}}, {{attribute.address}})
+        perseus_utils.write_angle(self.perseus, {{attribute.name}}, {{attribute.address}})
     {% endif %}
 
 {% elif attribute.type == "direct" %}
     @DebugIt()
     def get_{{attribute.name}}(self):
-        return self.read_direct({{attribute.address}})
+        return perseus_utils.read_direct(self.perseus, {{attribute.address}})
 
     {% if attribute.access == "read_write" %}
     @DebugIt()
     def set_{{attribute.name}}(self, {{attribute.name}}):
-        self.write_direct({{attribute.name}}, {{attribute.address}})
+        perseus_utils.write_direct(self.perseus, {{attribute.name}}, {{attribute.address}})
     {% endif %}
 
 {% else %}
@@ -39,14 +39,14 @@
     def get_{{attribute.name}}(self):
         address = {{attribute.address}}
         #@todo: add this method to special methods library ...
-        utils.get_{{attribute.name}}(self.perseus, address)
+        extra_func.get_{{attribute.name}}(self.perseus, address)
 
     {% if attribute.access == "read_write" %}
     @DebugIt()
     def set_{{attribute.name}}(self, {{attribute.name}}):
         address = {{attribute.address}}
         #@todo: add this method to special methods library ...
-        utils.get_{{attribute.name}}(self.perseus, {{attribute.name}}, address)
+        extra_func.get_{{attribute.name}}(self.perseus, {{attribute.name}}, address)
     {% endif %}
 
 {% endif %}
@@ -62,15 +62,15 @@
 {% endfor %}
     @command
     def read_diagnostics(self):
-        start_reading_diagnostics(self.perseus)
+        perseus_utils.start_reading_diagnostics(self.perseus)
 
 {% for attribute in diags_attributes %}
         {% if attribute.type == 'mv' %}
-        self._Diag_{{attribute.name}} = self.read_diag_milivolts({{attribute.address}})
+        self._Diag_{{attribute.name}} = perseus_utils.read_diag_milivolts(self.perseus, {{attribute.address}})
         {% elif attribute.type == 'angle' %}
-        self._Diag_{{attribute.name}} = self.read_diag_angle({{attribute.address}})
+        self._Diag_{{attribute.name}} = perseus_utils.read_diag_angle(self.perseus, {{attribute.address}})
         {% elif attribute.type == 'bool' %}
-        self._Diag_{{attribute.name}} = self.read_direct({{attribute.address}})
+        self._Diag_{{attribute.name}} = perseus_utils.read_direct(self.perseus, {{attribute.address}})
         {% endif %}
 {% endfor %}
 {% endblock %}

@@ -42,9 +42,10 @@ from PyTango.server import device_property
 
 # local imports
 from pynutaq.nutaq.nutaqdefs import *
-from pynutaq.extra import *
 
-from pynutaq.perseus.perseusextra import *
+import pynutaq.extra as extra_func
+
+import pynutaq.perseus.perseusutils as perseus_utils
 
 try:
     from pynutaq.perseus.perseusdefs import *
@@ -77,13 +78,12 @@ class Nutaq(Device):
 {% block end_code %}
     @command
     def tuning_reset(self):
-        self.write_direct(True, TUNING_RESET_ADDRESS)
-        self.write_direct(False, TUNING_RESET_ADDRESS)
+        perseus_utils.write_direct(True, TUNING_RESET_ADDRESS)
+        perseus_utils.write_direct(False, TUNING_RESET_ADDRESS)
 
-
-def run():
+def run_device():
     run([Nutaq])
 
 if __name__ == "__main__":
-    run()
+    run_device()
 {% endblock %}

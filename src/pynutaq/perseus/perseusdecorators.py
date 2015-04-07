@@ -36,7 +36,7 @@ try:
     from adp_exception import *
 except ImportError, e:
     print e
-    raise
+    #raise
 
 def ensure_write_method(meth):
     def _ensure_this_method(self, *args, **kwargs):

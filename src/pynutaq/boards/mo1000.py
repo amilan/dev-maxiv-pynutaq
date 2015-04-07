@@ -34,7 +34,7 @@ try:
     from adp_exception import *
 except ImportError, e:
     print e
-    raise
+    #raise
 
 from pynutaq.perseus.perseusdecorators import ensure_write_method
 

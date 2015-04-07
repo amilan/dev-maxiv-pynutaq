@@ -37,7 +37,7 @@ except ImportError, e:
     print "It's not possible to import perseus eapi. "
     print "This device can run only in simulated mode.  "
     print "#############################################\n"
-    raise
+    #raise
 
 from pynutaq.perseus.perseusdecorators import ensure_write_method
 
