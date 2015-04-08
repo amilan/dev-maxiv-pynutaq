@@ -22,6 +22,8 @@
 
 """This is the module for the available types of boards. """
 
+__author__ = 'antmil'
+
 __docformat__ = 'restructuredtext'
 
 # from mi125 import *
