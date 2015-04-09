@@ -25,7 +25,7 @@ from setuptools import setup
 def main():
     name = "tangods-pynutaq"
 
-    version = "0.1.0"
+    version = "0.1.1"
 
     description = "Device server for the Nutaq platform."
 

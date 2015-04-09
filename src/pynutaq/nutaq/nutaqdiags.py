@@ -22,7 +22,7 @@
 """This module contains the Nutaq device server for diagnostics.
 """
 
-__all__ = ["NutaqDiags", "run"]
+__all__ = ["NutaqDiags", "run_device"]
 
 __author__ = 'antmil'
 
