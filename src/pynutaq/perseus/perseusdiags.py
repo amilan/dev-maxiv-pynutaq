@@ -45,11 +45,8 @@ MI125_CLK_SRC = "ext"
 
 class PerseusDiags(object):
 
-    def __init__(self, perseus_ip=PERSEUS_DIAG_IP):
-        if perseus_ip is None:
-            self.perseus_ip = PERSEUS_DIAG_IP
-        else:
-            self.perseus_ip = perseus_ip
+    def __init__(self):
+        self.perseus_ip = PERSEUS_DIAG_IP
 
         eapi.eapi_init()
         self._board_state = eapi.connection_state()

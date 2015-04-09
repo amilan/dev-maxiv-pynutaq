@@ -46,11 +46,8 @@ MI125_CLK_SRC = "bottomfmc"
 
 class PerseusLoops(object):
 
-    def __init__(self, perseus_ip=PERSEUS_LOOP_IP):
-        if perseus_ip is None:
-            self.perseus_ip = PERSEUS_LOOP_IP
-        else:
-            self.perseus_ip = perseus_ip
+    def __init__(self):
+        self.perseus_ip = PERSEUS_LOOP_IP
 
         eapi.eapi_init()
         self._board_state = eapi.connection_state()
@@ -84,6 +81,10 @@ class PerseusLoops(object):
     @ensure_connect_method
     def connect(self):
         return eapi.connect_cce(self.perseus_ip, self._board_state)
+
+    @ensure_read_method
+    def custom_read(self, register):
+        return eapi.custom_register_read_send(self._board_state, register)
 
     @ensure_write_method
     def custom_write(self, register, data):
@@ -127,3 +128,74 @@ class PerseusLoops(object):
 
         for i, value in enumerate(values):
             self.write(SETTINGS_WRITE_OFFSET, value)
+
+    @ensure_read_method
+    def init_fast_data_logger(self):
+        """Initialize ram"""
+        eapi.ram_init(self._board_state)
+
+        # set 10ms delay to continue recording data after a trigger
+        self.write(RAM_INIT_OFFSET, RAM_INIT_VALUE)
+
+    @ensure_read_method
+    def start_recording_data_in_ram(self, size=65536, triggersource=0):
+        """Start recording data in RAM"""
+        eapi.recplay_record(self._board_state, size, triggersource)
+
+    @ensure_read_method
+    def get_ram_data(self, filename, channel=0, bufsize=65536, framesize=1024, framegap=200):
+        if channel < 0 or channel > 7:
+            print 'ERROR: channel must be in range [0,7]!'
+            raise ValueError
+        if framesize < 4 or framesize > 4294967295:
+            print 'ERROR: frame size (32 bits) must be greater than 4 bytes!'
+            raise ValueError
+        if (bufsize <= 0) or (int(bufsize / 64) * 64) != bufsize or (bufsize > 4294967295):
+            print 'ERROR: transfer size (32 bits) must be a positive multiple of 64 bytes!'
+            raise ValueError
+        if (int(bufsize / framesize) * framesize) != bufsize:
+            print 'ERROR: transfer size must be a multiple of frame size!'
+            raise ValueError
+        if framegap < 0 or framegap > 4294967295:
+            print 'ERROR: frame gap must be a positive value and fit on 32 bits!'
+            raise ValueError
+
+        # try:
+        #     useoffset = 0
+        #     startaddr = int(args[5], 0)
+        # except IndexError:
+        #     try:
+        #        startaddr = self.trigaddr
+        #        useoffset = self.trigoffset
+        #        print 'INFO: using last recorded memory address: ', startaddr
+        #        print '      using last recorded bytes offset: ', useoffset
+        #     except AttributeError:
+        #        startaddr = 0
+        #        useoffset = 0
+        #        print 'INFO: using default memory address: ', startaddr
+        # if (startaddr < 0) or (int(startaddr / 8) * 8) != startaddr or (startaddr > 4294967295):
+        #     print 'ERROR: memory address (32 bits) must be a positive multiple of 8 bytes!'
+        #     raise ValueError
+        # if useoffset != 0:
+        #     addbytes = framesize / self.gcd(64,framesize) * 64
+        #     if (4294967295 < addbytes):
+        #         print 'ERROR: additionnal transfer size bytes to offset does not fit on 32 bits: ', addbytes
+        #         raise ValueError
+        #     if (4294967295 - addbytes) < bufsize:
+        #         print 'ERROR: transfer size + offset needed does not fit on 32 bits. Max size: ', (4294967295 - addbytes)
+        #         raise ValueError
+        #     neededsize = bufsize + addbytes
+        # else:
+        #     neededsize = bufsize
+
+        # Assuming default values for useoffset and startaddr
+        startaddr = 0
+        useoffset = 0
+        neededsize = bufsize
+
+        eapi.ram_get(self._board_state, channel, startaddr, useoffset,
+                     neededsize, framesize, framegap, filename)
+
+    @ensure_read_method
+    def get_transfer_over_register(self):
+        return self.custom_read(RAM_TRANSFER_REGISTER)

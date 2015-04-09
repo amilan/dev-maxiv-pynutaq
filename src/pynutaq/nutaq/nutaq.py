@@ -32,6 +32,7 @@ __docformat__ = 'restructuredtext'
 import time
 import numpy
 import math
+import datetime
 
 # 3rd party imports
 from PyTango import AttrQuality, AttrWriteType, DispLevel, DevState, DebugIt
@@ -50,7 +51,6 @@ try:
     from pynutaq.perseus.perseusfactory import Perseus
 except ImportError, e:
     print e
-    raise
 
 
 class Nutaq(Device):
@@ -1756,12 +1756,12 @@ class Nutaq(Device):
 
 
     perseusType = device_property(dtype=str, default_value='simulated')
-    perseusIp = device_property(dtype=str, default_value='127.0.0.1')
+    FDLPath = device_property(dtype=str, default_value='/tmp')
 
     def init_device(self):
         Device.init_device(self)
         try:
-            self.perseus = Perseus().new_perseus(self.perseusType, self.perseusIp)
+            self.perseus = Perseus().new_perseus(self.perseusType)
             self.set_state(DevState.ON)
         except Exception, e:
             print e
@@ -2885,6 +2885,34 @@ class Nutaq(Device):
     def tuning_reset(self):
         perseus_utils.write_direct(True, TUNING_RESET_ADDRESS)
         perseus_utils.write_direct(False, TUNING_RESET_ADDRESS)
+
+    @command
+    def sw_fast_data_logger(self):
+        # Ram init ... probably this should be done in init_device
+        # but for the moment ...
+        self.perseus.init_fast_data_logger()
+
+        # Start recording data
+        self.perseus.start_recording_data_in_ram()
+
+        # Check status of external trigger when HWTrigger
+        # Not needed right now
+
+        # Transfer data from loops board RAM to Host PC
+        now = datetime.datetime.now()
+        filename = now.strftime("{0}/%Y_%m_%d__%H_%M_%S_loops_data.bin").format(self.FDLPath)
+        self.perseus.get_ram_data(filename)
+
+        # Check transfer data complete
+        while self.perseus.get_transfer_over_register() is not RAM_TRANSFER_OVER:
+            time.sleep(0.1) # @warning: super dangerous way of checking it ... who restarts the register?
+
+        # Clear FDL trigger attribute
+        # ... but ... HOW?
+
+        # Restart RAM
+        self.perseus.init_fast_data_logger()
+
 
 def run_device():
     run([Nutaq])
