@@ -39,7 +39,7 @@
     def get_{{attribute.name}}(self):
         address = {{attribute.address}}
         #@todo: add this method to special methods library ...
-        extra_func.get_{{attribute.name}}(self.perseus, address)
+        return extra_func.get_{{attribute.name}}(self.perseus, address)
 
     {% if attribute.access == "read_write" %}
     @DebugIt()

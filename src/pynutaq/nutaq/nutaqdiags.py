@@ -1417,7 +1417,7 @@ class NutaqDiags(Device):
     def get_DisableItckRvtet1(self):
         address = 7
         #@todo: add this method to special methods library ...
-        extra_func.get_DisableItckRvtet1(self.perseus, address)
+        return extra_func.get_DisableItckRvtet1(self.perseus, address)
 
     @DebugIt()
     def set_DisableItckRvtet1(self, DisableItckRvtet1):
@@ -1429,7 +1429,7 @@ class NutaqDiags(Device):
     def get_DisableItckRvtet2(self):
         address = 8
         #@todo: add this method to special methods library ...
-        extra_func.get_DisableItckRvtet2(self.perseus, address)
+        return extra_func.get_DisableItckRvtet2(self.perseus, address)
 
     @DebugIt()
     def set_DisableItckRvtet2(self, DisableItckRvtet2):
@@ -1441,7 +1441,7 @@ class NutaqDiags(Device):
     def get_DisableItckRvcirc(self):
         address = 9
         #@todo: add this method to special methods library ...
-        extra_func.get_DisableItckRvcirc(self.perseus, address)
+        return extra_func.get_DisableItckRvcirc(self.perseus, address)
 
     @DebugIt()
     def set_DisableItckRvcirc(self, DisableItckRvcirc):
@@ -1453,7 +1453,7 @@ class NutaqDiags(Device):
     def get_DisableItckFwload(self):
         address = 10
         #@todo: add this method to special methods library ...
-        extra_func.get_DisableItckFwload(self.perseus, address)
+        return extra_func.get_DisableItckFwload(self.perseus, address)
 
     @DebugIt()
     def set_DisableItckFwload(self, DisableItckFwload):
@@ -1465,7 +1465,7 @@ class NutaqDiags(Device):
     def get_DisableItckFwhybload(self):
         address = 11
         #@todo: add this method to special methods library ...
-        extra_func.get_DisableItckFwhybload(self.perseus, address)
+        return extra_func.get_DisableItckFwhybload(self.perseus, address)
 
     @DebugIt()
     def set_DisableItckFwhybload(self, DisableItckFwhybload):
@@ -1477,7 +1477,7 @@ class NutaqDiags(Device):
     def get_DisableItckRvcav(self):
         address = 12
         #@todo: add this method to special methods library ...
-        extra_func.get_DisableItckRvcav(self.perseus, address)
+        return extra_func.get_DisableItckRvcav(self.perseus, address)
 
     @DebugIt()
     def set_DisableItckRvcav(self, DisableItckRvcav):
@@ -1489,7 +1489,7 @@ class NutaqDiags(Device):
     def get_DisableItckArcs(self):
         address = 13
         #@todo: add this method to special methods library ...
-        extra_func.get_DisableItckArcs(self.perseus, address)
+        return extra_func.get_DisableItckArcs(self.perseus, address)
 
     @DebugIt()
     def set_DisableItckArcs(self, DisableItckArcs):
@@ -1501,7 +1501,7 @@ class NutaqDiags(Device):
     def get_DisableItckVaccum(self):
         address = 14
         #@todo: add this method to special methods library ...
-        extra_func.get_DisableItckVaccum(self.perseus, address)
+        return extra_func.get_DisableItckVaccum(self.perseus, address)
 
     @DebugIt()
     def set_DisableItckVaccum(self, DisableItckVaccum):
@@ -1513,7 +1513,7 @@ class NutaqDiags(Device):
     def get_DisableItckManualInterlock(self):
         address = 15
         #@todo: add this method to special methods library ...
-        extra_func.get_DisableItckManualInterlock(self.perseus, address)
+        return extra_func.get_DisableItckManualInterlock(self.perseus, address)
 
     @DebugIt()
     def set_DisableItckManualInterlock(self, DisableItckManualInterlock):
@@ -1525,7 +1525,7 @@ class NutaqDiags(Device):
     def get_DisableItckPlungerEndSwitchesUp(self):
         address = 16
         #@todo: add this method to special methods library ...
-        extra_func.get_DisableItckPlungerEndSwitchesUp(self.perseus, address)
+        return extra_func.get_DisableItckPlungerEndSwitchesUp(self.perseus, address)
 
     @DebugIt()
     def set_DisableItckPlungerEndSwitchesUp(self, DisableItckPlungerEndSwitchesUp):
@@ -1537,7 +1537,7 @@ class NutaqDiags(Device):
     def get_DisableItckPlungerEndSwitchesDown(self):
         address = 17
         #@todo: add this method to special methods library ...
-        extra_func.get_DisableItckPlungerEndSwitchesDown(self.perseus, address)
+        return extra_func.get_DisableItckPlungerEndSwitchesDown(self.perseus, address)
 
     @DebugIt()
     def set_DisableItckPlungerEndSwitchesDown(self, DisableItckPlungerEndSwitchesDown):
@@ -1549,7 +1549,7 @@ class NutaqDiags(Device):
     def get_DisableItckMps(self):
         address = 18
         #@todo: add this method to special methods library ...
-        extra_func.get_DisableItckMps(self.perseus, address)
+        return extra_func.get_DisableItckMps(self.perseus, address)
 
     @DebugIt()
     def set_DisableItckMps(self, DisableItckMps):

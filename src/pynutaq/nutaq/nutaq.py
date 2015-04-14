@@ -2252,7 +2252,7 @@ class Nutaq(Device):
     def get_PilimitA(self):
         address = 6
         #@todo: add this method to special methods library ...
-        extra_func.get_PilimitA(self.perseus, address)
+        return extra_func.get_PilimitA(self.perseus, address)
 
     @DebugIt()
     def set_PilimitA(self, PilimitA):
@@ -2304,7 +2304,7 @@ class Nutaq(Device):
     def get_GainTetrode1(self):
         address = 13
         #@todo: add this method to special methods library ...
-        extra_func.get_GainTetrode1(self.perseus, address)
+        return extra_func.get_GainTetrode1(self.perseus, address)
 
     @DebugIt()
     def set_GainTetrode1(self, GainTetrode1):
@@ -2316,7 +2316,7 @@ class Nutaq(Device):
     def get_GainTetrode2(self):
         address = 14
         #@todo: add this method to special methods library ...
-        extra_func.get_GainTetrode2(self.perseus, address)
+        return extra_func.get_GainTetrode2(self.perseus, address)
 
     @DebugIt()
     def set_GainTetrode2(self, GainTetrode2):
@@ -2392,7 +2392,7 @@ class Nutaq(Device):
     def get_GainOl(self):
         address = 25
         #@todo: add this method to special methods library ...
-        extra_func.get_GainOl(self.perseus, address)
+        return extra_func.get_GainOl(self.perseus, address)
 
     @DebugIt()
     def set_GainOl(self, GainOl):
@@ -2476,7 +2476,7 @@ class Nutaq(Device):
     def get_FreqsquareA(self):
         address = 104
         #@todo: add this method to special methods library ...
-        extra_func.get_FreqsquareA(self.perseus, address)
+        return extra_func.get_FreqsquareA(self.perseus, address)
 
     @DebugIt()
     def set_FreqsquareA(self, FreqsquareA):
@@ -2648,7 +2648,7 @@ class Nutaq(Device):
     def get_ConditioningdutyCicleA(self):
         address = 202
         #@todo: add this method to special methods library ...
-        extra_func.get_ConditioningdutyCicleA(self.perseus, address)
+        return extra_func.get_ConditioningdutyCicleA(self.perseus, address)
 
     @DebugIt()
     def set_ConditioningdutyCicleA(self, ConditioningdutyCicleA):
@@ -2724,7 +2724,7 @@ class Nutaq(Device):
     def get_Fwmina(self):
         address = 308
         #@todo: add this method to special methods library ...
-        extra_func.get_Fwmina(self.perseus, address)
+        return extra_func.get_Fwmina(self.perseus, address)
 
     @DebugIt()
     def set_Fwmina(self, Fwmina):
@@ -2752,7 +2752,7 @@ class Nutaq(Device):
     def get_Tuningdelay(self):
         address = 311
         #@todo: add this method to special methods library ...
-        extra_func.get_Tuningdelay(self.perseus, address)
+        return extra_func.get_Tuningdelay(self.perseus, address)
 
     @DebugIt()
     def set_Tuningdelay(self, Tuningdelay):
@@ -2796,7 +2796,7 @@ class Nutaq(Device):
     def get_MDivider(self):
         address = 500
         #@todo: add this method to special methods library ...
-        extra_func.get_MDivider(self.perseus, address)
+        return extra_func.get_MDivider(self.perseus, address)
 
     @DebugIt()
     def set_MDivider(self, MDivider):
@@ -2808,7 +2808,7 @@ class Nutaq(Device):
     def get_NDivider(self):
         address = 501
         #@todo: add this method to special methods library ...
-        extra_func.get_NDivider(self.perseus, address)
+        return extra_func.get_NDivider(self.perseus, address)
 
     @DebugIt()
     def set_NDivider(self, NDivider):
