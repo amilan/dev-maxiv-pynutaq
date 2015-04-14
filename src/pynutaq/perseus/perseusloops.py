@@ -111,7 +111,7 @@ class PerseusLoops(object):
     def configure_vcxo(self):
         print "configuring VCXO"
         register = 10
-        values = [0x3e80009, 0x3eA0007, 0x3eC0000, 0x3eE0000, 0x3f00000,
+        values = [0x3e80009, 0x3eA0001, 0x3eC0001, 0x3eE0000, 0x3f00002,
                   0x3f20000, 0x3f40000, 0x3f60000, 0x3FA0001, 0x3F80000, 0x3F80001]
         for value in values:
             self.custom_write(register, value)
