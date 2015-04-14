@@ -51,7 +51,7 @@ def get_GainTetrode1(perseus, address):
 
 def set_GainTetrode1(perseus, GainTetrode1, address):
     try:
-        value = address << 17 | (int(GainTetrode1) * 19898)
+        value = address << 17 | (int(GainTetrode1) * 19898.0)
         perseus.write(SETTINGS_WRITE_OFFSET, value)
     except Exception, e:
         raise e
@@ -66,7 +66,7 @@ def get_GainTetrode2(perseus):
 
 def set_GainTetrode2(perseus, GainTetrode2, address):
     try:
-        value = address << 17 | (int(GainTetrode2) * 19898)
+        value = address << 17 | (int(GainTetrode2) * 19898.0)
         perseus.write(SETTINGS_WRITE_OFFSET, value)
     except Exception, e:
         raise e
@@ -97,7 +97,7 @@ def get_FreqsquareA(perseus, address):
 
 def set_FreqsquareA(perseus, FreqsquareA, address):
     try:
-        value = ((1 / FreqsquareA) * 1000000) / 12.5
+        value = ((1 / FreqsquareA) * 1000000.0) / 12.5
         value = address << 17 | int(value)
         perseus.write(SETTINGS_WRITE_OFFSET, value)
     except Exception, e:
@@ -106,14 +106,14 @@ def set_FreqsquareA(perseus, FreqsquareA, address):
 def get_ConditioningdutyCicleA(perseus, address):
     try:
         value = read_direct(perseus, address)
-        value = (value / 8000000) * 2562 * 100
+        value = (value / 8000000.0) * 2562 * 100.0
         return value
     except Exception, e:
         raise e
 
 def set_ConditioningdutyCicleA(perseus, ConditioningdutyCicleA, address):
     try:
-        value = ((ConditioningdutyCicleA * 8000000) / 100.0) / 256
+        value = ((ConditioningdutyCicleA * 8000000.0) / 100.0) / 256
         write_direct(perseus, value, address)
     except Exception, e:
         raise e
@@ -151,14 +151,14 @@ def set_NDivider(perseus, NDivider, address):
 def get_PilimitA(perseus, address):
     try:
         value = read_direct(perseus, address)
-        value = (value/32767) * 1000
+        value = (value/32767) * 1000.0
         return  value
     except Exception, e:
         raise e
 
 def set_PilimitA(perseus, PiLimitA, address):
     try:
-        value = (PiLimitA/1000) * 32767
+        value = (PiLimitA/1000.0) * 32767
         write_direct(perseus, value, address)
     except Exception, e:
         raise e
@@ -166,14 +166,14 @@ def set_PilimitA(perseus, PiLimitA, address):
 def get_Fwmina(perseus, address):
     try:
         value = read_direct(perseus, address)
-        value = (value/32767) * 1000
+        value = (value/32767) * 1000.0
         return  value
     except Exception, e:
         raise e
 
 def set_Fwmina(perseus, Fwmina, address):
     try:
-        value = (Fwmina/1000) * 32767
+        value = (Fwmina/1000.0) * 32767
         write_direct(perseus, value, address)
     except Exception, e:
         raise e
@@ -182,7 +182,7 @@ def get_Tuningdelay(perseus, address):
     try:
         # P100/80000000*2^12
         value = read_direct(perseus, address)
-        value = (value/80000000) * (2**12)
+        value = (value/80000000.0) * (2**12)
         return  value
     except Exception, e:
         raise e
@@ -190,7 +190,7 @@ def get_Tuningdelay(perseus, address):
 def set_Tuningdelay(perseus, TuningDelay, address):
     try:
         # E100*80000000/2^12
-        value = (TuningDelay*80000000) / (2**12)
+        value = (TuningDelay*80000000.0) / (2**12)
         write_direct(perseus, value, address)
     except Exception, e:
         raise e
