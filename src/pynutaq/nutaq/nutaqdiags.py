@@ -2160,6 +2160,9 @@ class NutaqDiags(Device):
         # but for the moment ...
         self.perseus.init_fast_data_logger()
 
+        # Write delay
+        self.perseus.write_fast_data_logger_delay()
+
         # Start recording data
         self.perseus.start_recording_data_in_ram()
 

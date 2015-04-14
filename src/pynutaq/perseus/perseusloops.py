@@ -132,15 +132,16 @@ class PerseusLoops(object):
     @ensure_read_method
     def init_fast_data_logger(self):
         """Initialize ram"""
-        eapi.ram_init(self._board_state)
+        return eapi.ram_init(self._board_state)
 
+    def write_fast_data_logger_delay(self):
         # set 10ms delay to continue recording data after a trigger
         self.write(RAM_INIT_OFFSET, RAM_INIT_VALUE)
 
     @ensure_read_method
     def start_recording_data_in_ram(self, size=65536, triggersource=0):
         """Start recording data in RAM"""
-        eapi.recplay_record(self._board_state, size, triggersource)
+        return eapi.recplay_record(self._board_state, size, triggersource)
 
     @ensure_read_method
     def get_ram_data(self, filename, channel=0, bufsize=65536, framesize=1024, framegap=200):
