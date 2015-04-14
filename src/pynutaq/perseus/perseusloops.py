@@ -129,7 +129,7 @@ class PerseusLoops(object):
         for i, value in enumerate(values):
             self.write(SETTINGS_WRITE_OFFSET, value)
 
-    @ensure_read_method
+    @ensure_write_method
     def init_fast_data_logger(self):
         """Initialize ram"""
         return eapi.ram_init(self._board_state)
@@ -138,7 +138,7 @@ class PerseusLoops(object):
         # set 10ms delay to continue recording data after a trigger
         self.write(RAM_INIT_OFFSET, RAM_INIT_VALUE)
 
-    @ensure_read_method
+    @ensure_write_method
     def start_recording_data_in_ram(self, size=65536, triggersource=0):
         """Start recording data in RAM"""
         return eapi.recplay_record(self._board_state, size, triggersource)
@@ -194,8 +194,8 @@ class PerseusLoops(object):
         useoffset = 0
         neededsize = bufsize
 
-        eapi.ram_get(self._board_state, channel, startaddr, useoffset,
-                     neededsize, framesize, framegap, filename)
+        return eapi.ram_get(self._board_state, channel, startaddr, useoffset,
+                            neededsize, framesize, framegap, filename)
 
     @ensure_read_method
     def get_transfer_over_register(self):
