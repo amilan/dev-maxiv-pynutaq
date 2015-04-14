@@ -46,7 +46,7 @@
     def set_{{attribute.name}}(self, {{attribute.name}}):
         address = {{attribute.address}}
         #@todo: add this method to special methods library ...
-        extra_func.get_{{attribute.name}}(self.perseus, {{attribute.name}}, address)
+        extra_func.set_{{attribute.name}}(self.perseus, {{attribute.name}}, address)
     {% endif %}
 
 {% endif %}
@@ -72,9 +72,9 @@
         {% elif attribute.type == 'bool' %}
         self._Diag_{{attribute.name}} = perseus_utils.read_direct(self.perseus, {{attribute.address}})
         {% elif attribute.type == 'mv' and attribute.access == 'read_diag_amp' %}
-        self._Diag_{{attribute.name}} == math.sqrt((self._Diag_{{attribute.i_parent}}**2) + (self._Diag_{{attribute.q_parent}}**2))
+        self._Diag_{{attribute.name}} = math.sqrt((self._Diag_{{attribute.i_parent}}**2) + (self._Diag_{{attribute.q_parent}}**2))
         {% elif attribute.type == 'angle' and attribute.access == 'read_diag_ph' %}
-        self._Diag_{{attribute.name}} == math.atan2(self._Diag_{{attribute.q_parent}}, self._Diag_{{attribute.i_parent}})
+        self._Diag_{{attribute.name}} = math.atan2(self._Diag_{{attribute.q_parent}}, self._Diag_{{attribute.i_parent}})
         {% endif %}
 {% endfor %}
 {% endblock %}

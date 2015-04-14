@@ -2258,7 +2258,7 @@ class Nutaq(Device):
     def set_PilimitA(self, PilimitA):
         address = 6
         #@todo: add this method to special methods library ...
-        extra_func.get_PilimitA(self.perseus, PilimitA, address)
+        extra_func.set_PilimitA(self.perseus, PilimitA, address)
 
     @DebugIt()
     def get_SamplesToAverage(self):
@@ -2310,7 +2310,7 @@ class Nutaq(Device):
     def set_GainTetrode1(self, GainTetrode1):
         address = 13
         #@todo: add this method to special methods library ...
-        extra_func.get_GainTetrode1(self.perseus, GainTetrode1, address)
+        extra_func.set_GainTetrode1(self.perseus, GainTetrode1, address)
 
     @DebugIt()
     def get_GainTetrode2(self):
@@ -2322,7 +2322,7 @@ class Nutaq(Device):
     def set_GainTetrode2(self, GainTetrode2):
         address = 14
         #@todo: add this method to special methods library ...
-        extra_func.get_GainTetrode2(self.perseus, GainTetrode2, address)
+        extra_func.set_GainTetrode2(self.perseus, GainTetrode2, address)
 
     @DebugIt()
     def get_AutomaticStartupEnable(self):
@@ -2398,7 +2398,7 @@ class Nutaq(Device):
     def set_GainOl(self, GainOl):
         address = 25
         #@todo: add this method to special methods library ...
-        extra_func.get_GainOl(self.perseus, GainOl, address)
+        extra_func.set_GainOl(self.perseus, GainOl, address)
 
     @DebugIt()
     def get_SpareGpioOutput01(self):
@@ -2482,7 +2482,7 @@ class Nutaq(Device):
     def set_FreqsquareA(self, FreqsquareA):
         address = 104
         #@todo: add this method to special methods library ...
-        extra_func.get_FreqsquareA(self.perseus, FreqsquareA, address)
+        extra_func.set_FreqsquareA(self.perseus, FreqsquareA, address)
 
     @DebugIt()
     def get_ResetkiA(self):
@@ -2654,7 +2654,7 @@ class Nutaq(Device):
     def set_ConditioningdutyCicleA(self, ConditioningdutyCicleA):
         address = 202
         #@todo: add this method to special methods library ...
-        extra_func.get_ConditioningdutyCicleA(self.perseus, ConditioningdutyCicleA, address)
+        extra_func.set_ConditioningdutyCicleA(self.perseus, ConditioningdutyCicleA, address)
 
     @DebugIt()
     def get_TuningEnableA(self):
@@ -2730,7 +2730,7 @@ class Nutaq(Device):
     def set_Fwmina(self, Fwmina):
         address = 308
         #@todo: add this method to special methods library ...
-        extra_func.get_Fwmina(self.perseus, Fwmina, address)
+        extra_func.set_Fwmina(self.perseus, Fwmina, address)
 
     @DebugIt()
     def get_MarginupA(self):
@@ -2758,7 +2758,7 @@ class Nutaq(Device):
     def set_Tuningdelay(self, Tuningdelay):
         address = 311
         #@todo: add this method to special methods library ...
-        extra_func.get_Tuningdelay(self.perseus, Tuningdelay, address)
+        extra_func.set_Tuningdelay(self.perseus, Tuningdelay, address)
 
     @DebugIt()
     def get_Tuningfilterenable(self):
@@ -2802,7 +2802,7 @@ class Nutaq(Device):
     def set_MDivider(self, MDivider):
         address = 500
         #@todo: add this method to special methods library ...
-        extra_func.get_MDivider(self.perseus, MDivider, address)
+        extra_func.set_MDivider(self.perseus, MDivider, address)
 
     @DebugIt()
     def get_NDivider(self):
@@ -2814,7 +2814,7 @@ class Nutaq(Device):
     def set_NDivider(self, NDivider):
         address = 501
         #@todo: add this method to special methods library ...
-        extra_func.get_NDivider(self.perseus, NDivider, address)
+        extra_func.set_NDivider(self.perseus, NDivider, address)
 
     @DebugIt()
     def get_Muxsel(self):
@@ -3504,54 +3504,54 @@ class Nutaq(Device):
         self._Diag_FimItckDelay = perseus_utils.read_direct(self.perseus, 401)
         self._Diag_FdlTrigHwInput = perseus_utils.read_direct(self.perseus, 402)
         self._Diag_FdlTrigSwInput = perseus_utils.read_direct(self.perseus, 403)
-        self._Diag_AmpControl == math.sqrt((self._Diag_Icontrol**2) + (self._Diag_Qcontrol**2))
-        self._Diag_AmpSpare1 == math.sqrt((self._Diag_Ispare1**2) + (self._Diag_Qspare1**2))
-        self._Diag_AmpSpare2 == math.sqrt((self._Diag_Ispare2**2) + (self._Diag_Qspare2**2))
-        self._Diag_AmpCavloops == math.sqrt((self._Diag_IcavLoops**2) + (self._Diag_QcavLoops**2))
-        self._Diag_AmpControlfastpi == math.sqrt((self._Diag_IcontrolFastpi**2) + (self._Diag_QcontrolFastpi**2))
-        self._Diag_AmpPolarcontroloutput == math.sqrt((self._Diag_IpolarControlOutput**2) + (self._Diag_QpolarControlOutput**2))
-        self._Diag_AmpMuxfwcircin == math.sqrt((self._Diag_IMuxFwCircIn**2) + (self._Diag_QMuxFwCircIn**2))
-        self._Diag_AmpMuxfwcav == math.sqrt((self._Diag_IMuxFwCav**2) + (self._Diag_QMuxFwCav**2))
-        self._Diag_AmpRef == math.sqrt((self._Diag_Iref**2) + (self._Diag_Qref**2))
-        self._Diag_AmpMuxcav == math.sqrt((self._Diag_IMuxCav**2) + (self._Diag_QMuxCav**2))
-        self._Diag_AmpLoopinputslowpiiq == math.sqrt((self._Diag_IloopinputSlowpiIq**2) + (self._Diag_QloopinputSlowpiIq**2))
-        self._Diag_AmpFwtet2loops == math.sqrt((self._Diag_IFwTet2Loops**2) + (self._Diag_QFwTet2Loops**2))
-        self._Diag_AmpFwtet1loops == math.sqrt((self._Diag_IFwTet1Loops**2) + (self._Diag_QFwTet1Loops**2))
-        self._Diag_AmpErroraccum == math.sqrt((self._Diag_Ierroraccum**2) + (self._Diag_Qerroraccum**2))
-        self._Diag_AmpControlslowpi == math.sqrt((self._Diag_IcontrolSlowpi**2) + (self._Diag_QcontrolSlowpi**2))
-        self._Diag_AmpFwcavloops == math.sqrt((self._Diag_IFwCavLoops**2) + (self._Diag_QFwCavLoops**2))
-        self._Diag_AmpControlfastpiiq == math.sqrt((self._Diag_IcontrolFastpiIq**2) + (self._Diag_QcontrolFastpiIq**2))
-        self._Diag_AmpFwcircinloops == math.sqrt((self._Diag_IFwCircInLoops**2) + (self._Diag_QFwCircInLoops**2))
-        self._Diag_AmpMo == math.sqrt((self._Diag_Imo**2) + (self._Diag_Qmo**2))
-        self._Diag_AmpControl1 == math.sqrt((self._Diag_Icontrol1**2) + (self._Diag_Qcontrol1**2))
-        self._Diag_AmpMuxfwtet2 == math.sqrt((self._Diag_IMuxFwTet2**2) + (self._Diag_QMuxFwTet2**2))
-        self._Diag_AmpMuxfwtet1 == math.sqrt((self._Diag_IMuxFwTet1**2) + (self._Diag_QMuxFwTet1**2))
-        self._Diag_AmpControl2 == math.sqrt((self._Diag_Icontrol2**2) + (self._Diag_Qcontrol2**2))
-        self._Diag_AmpError == math.sqrt((self._Diag_Ierror**2) + (self._Diag_Qerror**2))
-        self._Diag_PhControl == math.atan2(self._Diag_Qcontrol, self._Diag_Icontrol)
-        self._Diag_PhSpare1 == math.atan2(self._Diag_Qspare1, self._Diag_Ispare1)
-        self._Diag_PhSpare2 == math.atan2(self._Diag_Qspare2, self._Diag_Ispare2)
-        self._Diag_PhCavloops == math.atan2(self._Diag_QcavLoops, self._Diag_IcavLoops)
-        self._Diag_PhControlfastpi == math.atan2(self._Diag_QcontrolFastpi, self._Diag_IcontrolFastpi)
-        self._Diag_PhPolarcontroloutput == math.atan2(self._Diag_QpolarControlOutput, self._Diag_IpolarControlOutput)
-        self._Diag_PhMuxfwcircin == math.atan2(self._Diag_QMuxFwCircIn, self._Diag_IMuxFwCircIn)
-        self._Diag_PhMuxfwcav == math.atan2(self._Diag_QMuxFwCav, self._Diag_IMuxFwCav)
-        self._Diag_PhRef == math.atan2(self._Diag_Qref, self._Diag_Iref)
-        self._Diag_PhMuxcav == math.atan2(self._Diag_QMuxCav, self._Diag_IMuxCav)
-        self._Diag_PhLoopinputslowpiiq == math.atan2(self._Diag_QloopinputSlowpiIq, self._Diag_IloopinputSlowpiIq)
-        self._Diag_PhFwtet2loops == math.atan2(self._Diag_QFwTet2Loops, self._Diag_IFwTet2Loops)
-        self._Diag_PhFwtet1loops == math.atan2(self._Diag_QFwTet1Loops, self._Diag_IFwTet1Loops)
-        self._Diag_PhErroraccum == math.atan2(self._Diag_Qerroraccum, self._Diag_Ierroraccum)
-        self._Diag_PhControlslowpi == math.atan2(self._Diag_QcontrolSlowpi, self._Diag_IcontrolSlowpi)
-        self._Diag_PhFwcavloops == math.atan2(self._Diag_QFwCavLoops, self._Diag_IFwCavLoops)
-        self._Diag_PhControlfastpiiq == math.atan2(self._Diag_QcontrolFastpiIq, self._Diag_IcontrolFastpiIq)
-        self._Diag_PhFwcircinloops == math.atan2(self._Diag_QFwCircInLoops, self._Diag_IFwCircInLoops)
-        self._Diag_PhMo == math.atan2(self._Diag_Qmo, self._Diag_Imo)
-        self._Diag_PhControl1 == math.atan2(self._Diag_Qcontrol1, self._Diag_Icontrol1)
-        self._Diag_PhMuxfwtet2 == math.atan2(self._Diag_QMuxFwTet2, self._Diag_IMuxFwTet2)
-        self._Diag_PhMuxfwtet1 == math.atan2(self._Diag_QMuxFwTet1, self._Diag_IMuxFwTet1)
-        self._Diag_PhControl2 == math.atan2(self._Diag_Qcontrol2, self._Diag_Icontrol2)
-        self._Diag_PhError == math.atan2(self._Diag_Qerror, self._Diag_Ierror)
+        self._Diag_AmpControl = math.sqrt((self._Diag_Icontrol**2) + (self._Diag_Qcontrol**2))
+        self._Diag_AmpSpare1 = math.sqrt((self._Diag_Ispare1**2) + (self._Diag_Qspare1**2))
+        self._Diag_AmpSpare2 = math.sqrt((self._Diag_Ispare2**2) + (self._Diag_Qspare2**2))
+        self._Diag_AmpCavloops = math.sqrt((self._Diag_IcavLoops**2) + (self._Diag_QcavLoops**2))
+        self._Diag_AmpControlfastpi = math.sqrt((self._Diag_IcontrolFastpi**2) + (self._Diag_QcontrolFastpi**2))
+        self._Diag_AmpPolarcontroloutput = math.sqrt((self._Diag_IpolarControlOutput**2) + (self._Diag_QpolarControlOutput**2))
+        self._Diag_AmpMuxfwcircin = math.sqrt((self._Diag_IMuxFwCircIn**2) + (self._Diag_QMuxFwCircIn**2))
+        self._Diag_AmpMuxfwcav = math.sqrt((self._Diag_IMuxFwCav**2) + (self._Diag_QMuxFwCav**2))
+        self._Diag_AmpRef = math.sqrt((self._Diag_Iref**2) + (self._Diag_Qref**2))
+        self._Diag_AmpMuxcav = math.sqrt((self._Diag_IMuxCav**2) + (self._Diag_QMuxCav**2))
+        self._Diag_AmpLoopinputslowpiiq = math.sqrt((self._Diag_IloopinputSlowpiIq**2) + (self._Diag_QloopinputSlowpiIq**2))
+        self._Diag_AmpFwtet2loops = math.sqrt((self._Diag_IFwTet2Loops**2) + (self._Diag_QFwTet2Loops**2))
+        self._Diag_AmpFwtet1loops = math.sqrt((self._Diag_IFwTet1Loops**2) + (self._Diag_QFwTet1Loops**2))
+        self._Diag_AmpErroraccum = math.sqrt((self._Diag_Ierroraccum**2) + (self._Diag_Qerroraccum**2))
+        self._Diag_AmpControlslowpi = math.sqrt((self._Diag_IcontrolSlowpi**2) + (self._Diag_QcontrolSlowpi**2))
+        self._Diag_AmpFwcavloops = math.sqrt((self._Diag_IFwCavLoops**2) + (self._Diag_QFwCavLoops**2))
+        self._Diag_AmpControlfastpiiq = math.sqrt((self._Diag_IcontrolFastpiIq**2) + (self._Diag_QcontrolFastpiIq**2))
+        self._Diag_AmpFwcircinloops = math.sqrt((self._Diag_IFwCircInLoops**2) + (self._Diag_QFwCircInLoops**2))
+        self._Diag_AmpMo = math.sqrt((self._Diag_Imo**2) + (self._Diag_Qmo**2))
+        self._Diag_AmpControl1 = math.sqrt((self._Diag_Icontrol1**2) + (self._Diag_Qcontrol1**2))
+        self._Diag_AmpMuxfwtet2 = math.sqrt((self._Diag_IMuxFwTet2**2) + (self._Diag_QMuxFwTet2**2))
+        self._Diag_AmpMuxfwtet1 = math.sqrt((self._Diag_IMuxFwTet1**2) + (self._Diag_QMuxFwTet1**2))
+        self._Diag_AmpControl2 = math.sqrt((self._Diag_Icontrol2**2) + (self._Diag_Qcontrol2**2))
+        self._Diag_AmpError = math.sqrt((self._Diag_Ierror**2) + (self._Diag_Qerror**2))
+        self._Diag_PhControl = math.atan2(self._Diag_Qcontrol, self._Diag_Icontrol)
+        self._Diag_PhSpare1 = math.atan2(self._Diag_Qspare1, self._Diag_Ispare1)
+        self._Diag_PhSpare2 = math.atan2(self._Diag_Qspare2, self._Diag_Ispare2)
+        self._Diag_PhCavloops = math.atan2(self._Diag_QcavLoops, self._Diag_IcavLoops)
+        self._Diag_PhControlfastpi = math.atan2(self._Diag_QcontrolFastpi, self._Diag_IcontrolFastpi)
+        self._Diag_PhPolarcontroloutput = math.atan2(self._Diag_QpolarControlOutput, self._Diag_IpolarControlOutput)
+        self._Diag_PhMuxfwcircin = math.atan2(self._Diag_QMuxFwCircIn, self._Diag_IMuxFwCircIn)
+        self._Diag_PhMuxfwcav = math.atan2(self._Diag_QMuxFwCav, self._Diag_IMuxFwCav)
+        self._Diag_PhRef = math.atan2(self._Diag_Qref, self._Diag_Iref)
+        self._Diag_PhMuxcav = math.atan2(self._Diag_QMuxCav, self._Diag_IMuxCav)
+        self._Diag_PhLoopinputslowpiiq = math.atan2(self._Diag_QloopinputSlowpiIq, self._Diag_IloopinputSlowpiIq)
+        self._Diag_PhFwtet2loops = math.atan2(self._Diag_QFwTet2Loops, self._Diag_IFwTet2Loops)
+        self._Diag_PhFwtet1loops = math.atan2(self._Diag_QFwTet1Loops, self._Diag_IFwTet1Loops)
+        self._Diag_PhErroraccum = math.atan2(self._Diag_Qerroraccum, self._Diag_Ierroraccum)
+        self._Diag_PhControlslowpi = math.atan2(self._Diag_QcontrolSlowpi, self._Diag_IcontrolSlowpi)
+        self._Diag_PhFwcavloops = math.atan2(self._Diag_QFwCavLoops, self._Diag_IFwCavLoops)
+        self._Diag_PhControlfastpiiq = math.atan2(self._Diag_QcontrolFastpiIq, self._Diag_IcontrolFastpiIq)
+        self._Diag_PhFwcircinloops = math.atan2(self._Diag_QFwCircInLoops, self._Diag_IFwCircInLoops)
+        self._Diag_PhMo = math.atan2(self._Diag_Qmo, self._Diag_Imo)
+        self._Diag_PhControl1 = math.atan2(self._Diag_Qcontrol1, self._Diag_Icontrol1)
+        self._Diag_PhMuxfwtet2 = math.atan2(self._Diag_QMuxFwTet2, self._Diag_IMuxFwTet2)
+        self._Diag_PhMuxfwtet1 = math.atan2(self._Diag_QMuxFwTet1, self._Diag_IMuxFwTet1)
+        self._Diag_PhControl2 = math.atan2(self._Diag_Qcontrol2, self._Diag_Icontrol2)
+        self._Diag_PhError = math.atan2(self._Diag_Qerror, self._Diag_Ierror)
 
     @command
     def tuning_reset(self):

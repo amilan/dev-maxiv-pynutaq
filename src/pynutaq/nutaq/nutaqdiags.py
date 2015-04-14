@@ -1423,7 +1423,7 @@ class NutaqDiags(Device):
     def set_DisableItckRvtet1(self, DisableItckRvtet1):
         address = 7
         #@todo: add this method to special methods library ...
-        extra_func.get_DisableItckRvtet1(self.perseus, DisableItckRvtet1, address)
+        extra_func.set_DisableItckRvtet1(self.perseus, DisableItckRvtet1, address)
 
     @DebugIt()
     def get_DisableItckRvtet2(self):
@@ -1435,7 +1435,7 @@ class NutaqDiags(Device):
     def set_DisableItckRvtet2(self, DisableItckRvtet2):
         address = 8
         #@todo: add this method to special methods library ...
-        extra_func.get_DisableItckRvtet2(self.perseus, DisableItckRvtet2, address)
+        extra_func.set_DisableItckRvtet2(self.perseus, DisableItckRvtet2, address)
 
     @DebugIt()
     def get_DisableItckRvcirc(self):
@@ -1447,7 +1447,7 @@ class NutaqDiags(Device):
     def set_DisableItckRvcirc(self, DisableItckRvcirc):
         address = 9
         #@todo: add this method to special methods library ...
-        extra_func.get_DisableItckRvcirc(self.perseus, DisableItckRvcirc, address)
+        extra_func.set_DisableItckRvcirc(self.perseus, DisableItckRvcirc, address)
 
     @DebugIt()
     def get_DisableItckFwload(self):
@@ -1459,7 +1459,7 @@ class NutaqDiags(Device):
     def set_DisableItckFwload(self, DisableItckFwload):
         address = 10
         #@todo: add this method to special methods library ...
-        extra_func.get_DisableItckFwload(self.perseus, DisableItckFwload, address)
+        extra_func.set_DisableItckFwload(self.perseus, DisableItckFwload, address)
 
     @DebugIt()
     def get_DisableItckFwhybload(self):
@@ -1471,7 +1471,7 @@ class NutaqDiags(Device):
     def set_DisableItckFwhybload(self, DisableItckFwhybload):
         address = 11
         #@todo: add this method to special methods library ...
-        extra_func.get_DisableItckFwhybload(self.perseus, DisableItckFwhybload, address)
+        extra_func.set_DisableItckFwhybload(self.perseus, DisableItckFwhybload, address)
 
     @DebugIt()
     def get_DisableItckRvcav(self):
@@ -1483,7 +1483,7 @@ class NutaqDiags(Device):
     def set_DisableItckRvcav(self, DisableItckRvcav):
         address = 12
         #@todo: add this method to special methods library ...
-        extra_func.get_DisableItckRvcav(self.perseus, DisableItckRvcav, address)
+        extra_func.set_DisableItckRvcav(self.perseus, DisableItckRvcav, address)
 
     @DebugIt()
     def get_DisableItckArcs(self):
@@ -1495,7 +1495,7 @@ class NutaqDiags(Device):
     def set_DisableItckArcs(self, DisableItckArcs):
         address = 13
         #@todo: add this method to special methods library ...
-        extra_func.get_DisableItckArcs(self.perseus, DisableItckArcs, address)
+        extra_func.set_DisableItckArcs(self.perseus, DisableItckArcs, address)
 
     @DebugIt()
     def get_DisableItckVaccum(self):
@@ -1507,7 +1507,7 @@ class NutaqDiags(Device):
     def set_DisableItckVaccum(self, DisableItckVaccum):
         address = 14
         #@todo: add this method to special methods library ...
-        extra_func.get_DisableItckVaccum(self.perseus, DisableItckVaccum, address)
+        extra_func.set_DisableItckVaccum(self.perseus, DisableItckVaccum, address)
 
     @DebugIt()
     def get_DisableItckManualInterlock(self):
@@ -1519,7 +1519,7 @@ class NutaqDiags(Device):
     def set_DisableItckManualInterlock(self, DisableItckManualInterlock):
         address = 15
         #@todo: add this method to special methods library ...
-        extra_func.get_DisableItckManualInterlock(self.perseus, DisableItckManualInterlock, address)
+        extra_func.set_DisableItckManualInterlock(self.perseus, DisableItckManualInterlock, address)
 
     @DebugIt()
     def get_DisableItckPlungerEndSwitchesUp(self):
@@ -1531,7 +1531,7 @@ class NutaqDiags(Device):
     def set_DisableItckPlungerEndSwitchesUp(self, DisableItckPlungerEndSwitchesUp):
         address = 16
         #@todo: add this method to special methods library ...
-        extra_func.get_DisableItckPlungerEndSwitchesUp(self.perseus, DisableItckPlungerEndSwitchesUp, address)
+        extra_func.set_DisableItckPlungerEndSwitchesUp(self.perseus, DisableItckPlungerEndSwitchesUp, address)
 
     @DebugIt()
     def get_DisableItckPlungerEndSwitchesDown(self):
@@ -1543,7 +1543,7 @@ class NutaqDiags(Device):
     def set_DisableItckPlungerEndSwitchesDown(self, DisableItckPlungerEndSwitchesDown):
         address = 17
         #@todo: add this method to special methods library ...
-        extra_func.get_DisableItckPlungerEndSwitchesDown(self.perseus, DisableItckPlungerEndSwitchesDown, address)
+        extra_func.set_DisableItckPlungerEndSwitchesDown(self.perseus, DisableItckPlungerEndSwitchesDown, address)
 
     @DebugIt()
     def get_DisableItckMps(self):
@@ -1555,7 +1555,7 @@ class NutaqDiags(Device):
     def set_DisableItckMps(self, DisableItckMps):
         address = 18
         #@todo: add this method to special methods library ...
-        extra_func.get_DisableItckMps(self.perseus, DisableItckMps, address)
+        extra_func.set_DisableItckMps(self.perseus, DisableItckMps, address)
 
     @DebugIt()
     def get_SamplesToAverage(self):
@@ -2130,24 +2130,24 @@ class NutaqDiags(Device):
         self._Diag_Amplandau = perseus_utils.read_diag_milivolts(self.perseus, 34)
         self._Diag_Phlandau = perseus_utils.read_diag_angle(self.perseus, 35)
         self._Diag_DephaseMoLandau = perseus_utils.read_diag_angle(self.perseus, 64)
-        self._Diag_AmpRvtet2 == math.sqrt((self._Diag_Irvtet2**2) + (self._Diag_Qrvtet2**2))
-        self._Diag_AmpRvtet1 == math.sqrt((self._Diag_Irvtet1**2) + (self._Diag_Qrvtet1**2))
-        self._Diag_AmpRvcav == math.sqrt((self._Diag_Irvcav**2) + (self._Diag_Qrvcav**2))
-        self._Diag_AmpLandau == math.sqrt((self._Diag_Ilandau**2) + (self._Diag_Qlandau**2))
-        self._Diag_AmpRvcirc == math.sqrt((self._Diag_Irvcirc**2) + (self._Diag_Qrvcirc**2))
-        self._Diag_AmpFwhybload == math.sqrt((self._Diag_Ifwhybload**2) + (self._Diag_Qfwhybload**2))
-        self._Diag_AmpFwcirc == math.sqrt((self._Diag_Ifwcirc**2) + (self._Diag_Qfwcirc**2))
-        self._Diag_AmpFwload == math.sqrt((self._Diag_Ifwload**2) + (self._Diag_Qfwload**2))
-        self._Diag_AmpMo == math.sqrt((self._Diag_Imo**2) + (self._Diag_Qmo**2))
-        self._Diag_PhRvtet2 == math.atan2(self._Diag_Qrvtet2, self._Diag_Irvtet2)
-        self._Diag_PhRvtet1 == math.atan2(self._Diag_Qrvtet1, self._Diag_Irvtet1)
-        self._Diag_PhRvcav == math.atan2(self._Diag_Qrvcav, self._Diag_Irvcav)
-        self._Diag_PhLandau == math.atan2(self._Diag_Qlandau, self._Diag_Ilandau)
-        self._Diag_PhRvcirc == math.atan2(self._Diag_Qrvcirc, self._Diag_Irvcirc)
-        self._Diag_PhFwhybload == math.atan2(self._Diag_Qfwhybload, self._Diag_Ifwhybload)
-        self._Diag_PhFwcirc == math.atan2(self._Diag_Qfwcirc, self._Diag_Ifwcirc)
-        self._Diag_PhFwload == math.atan2(self._Diag_Qfwload, self._Diag_Ifwload)
-        self._Diag_PhMo == math.atan2(self._Diag_Qmo, self._Diag_Imo)
+        self._Diag_AmpRvtet2 = math.sqrt((self._Diag_Irvtet2**2) + (self._Diag_Qrvtet2**2))
+        self._Diag_AmpRvtet1 = math.sqrt((self._Diag_Irvtet1**2) + (self._Diag_Qrvtet1**2))
+        self._Diag_AmpRvcav = math.sqrt((self._Diag_Irvcav**2) + (self._Diag_Qrvcav**2))
+        self._Diag_AmpLandau = math.sqrt((self._Diag_Ilandau**2) + (self._Diag_Qlandau**2))
+        self._Diag_AmpRvcirc = math.sqrt((self._Diag_Irvcirc**2) + (self._Diag_Qrvcirc**2))
+        self._Diag_AmpFwhybload = math.sqrt((self._Diag_Ifwhybload**2) + (self._Diag_Qfwhybload**2))
+        self._Diag_AmpFwcirc = math.sqrt((self._Diag_Ifwcirc**2) + (self._Diag_Qfwcirc**2))
+        self._Diag_AmpFwload = math.sqrt((self._Diag_Ifwload**2) + (self._Diag_Qfwload**2))
+        self._Diag_AmpMo = math.sqrt((self._Diag_Imo**2) + (self._Diag_Qmo**2))
+        self._Diag_PhRvtet2 = math.atan2(self._Diag_Qrvtet2, self._Diag_Irvtet2)
+        self._Diag_PhRvtet1 = math.atan2(self._Diag_Qrvtet1, self._Diag_Irvtet1)
+        self._Diag_PhRvcav = math.atan2(self._Diag_Qrvcav, self._Diag_Irvcav)
+        self._Diag_PhLandau = math.atan2(self._Diag_Qlandau, self._Diag_Ilandau)
+        self._Diag_PhRvcirc = math.atan2(self._Diag_Qrvcirc, self._Diag_Irvcirc)
+        self._Diag_PhFwhybload = math.atan2(self._Diag_Qfwhybload, self._Diag_Ifwhybload)
+        self._Diag_PhFwcirc = math.atan2(self._Diag_Qfwcirc, self._Diag_Ifwcirc)
+        self._Diag_PhFwload = math.atan2(self._Diag_Qfwload, self._Diag_Ifwload)
+        self._Diag_PhMo = math.atan2(self._Diag_Qmo, self._Diag_Imo)
 
     @command
     def tuning_reset(self):

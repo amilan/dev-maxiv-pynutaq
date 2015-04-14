@@ -148,3 +148,49 @@ def set_NDivider(perseus, NDivider, address):
     except Exception, e:
         raise e
 
+def get_PiLimitA(perseus, address):
+    try:
+        value = read_direct(perseus, address)
+        value = (value/32767) * 1000
+        return  value
+    except Exception, e:
+        raise e
+
+def set_PiLimitA(perseus, PiLimitA, address):
+    try:
+        value = (PiLimitA/1000) * 32767
+        write_direct(perseus, value, address)
+    except Exception, e:
+        raise e
+
+def get_Fwmina(perseus, address):
+    try:
+        value = read_direct(perseus, address)
+        value = (value/32767) * 1000
+        return  value
+    except Exception, e:
+        raise e
+
+def aet_Fwmina(perseus, Fwmina, address):
+    try:
+        value = (Fwmina/1000) * 32767
+        write_direct(perseus, value, address)
+    except Exception, e:
+        raise e
+
+def get_Tuningdelay(perseus, address):
+    try:
+        # P100/80000000*2^12
+        value = read_direct(perseus, address)
+        value = (value/80000000) * (2**12)
+        return  value
+    except Exception, e:
+        raise e
+
+def aet_Tuningdelay(perseus, TuningDelay, address):
+    try:
+        # E100*80000000/2^12
+        value = (TuningDelay*80000000) / (2**12)
+        write_direct(perseus, value, address)
+    except Exception, e:
+        raise e
