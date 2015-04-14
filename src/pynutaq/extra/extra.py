@@ -171,7 +171,7 @@ def get_Fwmina(perseus, address):
     except Exception, e:
         raise e
 
-def aet_Fwmina(perseus, Fwmina, address):
+def set_Fwmina(perseus, Fwmina, address):
     try:
         value = (Fwmina/1000) * 32767
         write_direct(perseus, value, address)
@@ -187,7 +187,7 @@ def get_Tuningdelay(perseus, address):
     except Exception, e:
         raise e
 
-def aet_Tuningdelay(perseus, TuningDelay, address):
+def set_Tuningdelay(perseus, TuningDelay, address):
     try:
         # E100*80000000/2^12
         value = (TuningDelay*80000000) / (2**12)
