@@ -148,7 +148,7 @@ def set_NDivider(perseus, NDivider, address):
     except Exception, e:
         raise e
 
-def get_PiLimitA(perseus, address):
+def get_PilimitA(perseus, address):
     try:
         value = read_direct(perseus, address)
         value = (value/32767) * 1000
@@ -156,7 +156,7 @@ def get_PiLimitA(perseus, address):
     except Exception, e:
         raise e
 
-def set_PiLimitA(perseus, PiLimitA, address):
+def set_PilimitA(perseus, PiLimitA, address):
     try:
         value = (PiLimitA/1000) * 32767
         write_direct(perseus, value, address)
