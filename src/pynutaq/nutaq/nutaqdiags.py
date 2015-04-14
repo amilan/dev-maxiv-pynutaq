@@ -821,7 +821,7 @@ class NutaqDiags(Device):
                                    doc=""
                                    )
 
-    Diag_Qlandadu = attribute(label='Diag_Qlandadu',
+    Diag_Qlandau = attribute(label='Diag_Qlandau',
                                    dtype=float,
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
@@ -830,7 +830,7 @@ class NutaqDiags(Device):
                                    doc=""
                                    )
 
-    Diag_Amplandadu = attribute(label='Diag_Amplandadu',
+    Diag_Amplandau = attribute(label='Diag_Amplandau',
                                    dtype=float,
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
@@ -839,7 +839,7 @@ class NutaqDiags(Device):
                                    doc=""
                                    )
 
-    Diag_Phlandadu = attribute(label='Diag_Phlandadu',
+    Diag_Phlandau = attribute(label='Diag_Phlandau',
                                    dtype=float,
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
@@ -1177,6 +1177,168 @@ class NutaqDiags(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='',
+                                   format='6.4f',
+                                   doc=""
+                                   )
+
+    Diag_AmpRvtet2 = attribute(label='Diag_AmpRvtet2',
+                                   dtype=float,
+                                   display_level=DispLevel.OPERATOR,
+                                   access=AttrWriteType.READ,
+                                   unit='mV',
+                                   format='6.4f',
+                                   doc=""
+                                   )
+
+    Diag_AmpRvtet1 = attribute(label='Diag_AmpRvtet1',
+                                   dtype=float,
+                                   display_level=DispLevel.OPERATOR,
+                                   access=AttrWriteType.READ,
+                                   unit='mV',
+                                   format='6.4f',
+                                   doc=""
+                                   )
+
+    Diag_AmpRvcav = attribute(label='Diag_AmpRvcav',
+                                   dtype=float,
+                                   display_level=DispLevel.OPERATOR,
+                                   access=AttrWriteType.READ,
+                                   unit='mV',
+                                   format='6.4f',
+                                   doc=""
+                                   )
+
+    Diag_AmpLandau = attribute(label='Diag_AmpLandau',
+                                   dtype=float,
+                                   display_level=DispLevel.OPERATOR,
+                                   access=AttrWriteType.READ,
+                                   unit='mV',
+                                   format='6.4f',
+                                   doc=""
+                                   )
+
+    Diag_AmpRvcirc = attribute(label='Diag_AmpRvcirc',
+                                   dtype=float,
+                                   display_level=DispLevel.OPERATOR,
+                                   access=AttrWriteType.READ,
+                                   unit='mV',
+                                   format='6.4f',
+                                   doc=""
+                                   )
+
+    Diag_AmpFwhybload = attribute(label='Diag_AmpFwhybload',
+                                   dtype=float,
+                                   display_level=DispLevel.OPERATOR,
+                                   access=AttrWriteType.READ,
+                                   unit='mV',
+                                   format='6.4f',
+                                   doc=""
+                                   )
+
+    Diag_AmpFwcirc = attribute(label='Diag_AmpFwcirc',
+                                   dtype=float,
+                                   display_level=DispLevel.OPERATOR,
+                                   access=AttrWriteType.READ,
+                                   unit='mV',
+                                   format='6.4f',
+                                   doc=""
+                                   )
+
+    Diag_AmpFwload = attribute(label='Diag_AmpFwload',
+                                   dtype=float,
+                                   display_level=DispLevel.OPERATOR,
+                                   access=AttrWriteType.READ,
+                                   unit='mV',
+                                   format='6.4f',
+                                   doc=""
+                                   )
+
+    Diag_AmpMo = attribute(label='Diag_AmpMo',
+                                   dtype=float,
+                                   display_level=DispLevel.OPERATOR,
+                                   access=AttrWriteType.READ,
+                                   unit='mV',
+                                   format='6.4f',
+                                   doc=""
+                                   )
+
+    Diag_PhRvtet2 = attribute(label='Diag_PhRvtet2',
+                                   dtype=float,
+                                   display_level=DispLevel.OPERATOR,
+                                   access=AttrWriteType.READ,
+                                   unit='degrees',
+                                   format='6.4f',
+                                   doc=""
+                                   )
+
+    Diag_PhRvtet1 = attribute(label='Diag_PhRvtet1',
+                                   dtype=float,
+                                   display_level=DispLevel.OPERATOR,
+                                   access=AttrWriteType.READ,
+                                   unit='degrees',
+                                   format='6.4f',
+                                   doc=""
+                                   )
+
+    Diag_PhRvcav = attribute(label='Diag_PhRvcav',
+                                   dtype=float,
+                                   display_level=DispLevel.OPERATOR,
+                                   access=AttrWriteType.READ,
+                                   unit='degrees',
+                                   format='6.4f',
+                                   doc=""
+                                   )
+
+    Diag_PhLandau = attribute(label='Diag_PhLandau',
+                                   dtype=float,
+                                   display_level=DispLevel.OPERATOR,
+                                   access=AttrWriteType.READ,
+                                   unit='degrees',
+                                   format='6.4f',
+                                   doc=""
+                                   )
+
+    Diag_PhRvcirc = attribute(label='Diag_PhRvcirc',
+                                   dtype=float,
+                                   display_level=DispLevel.OPERATOR,
+                                   access=AttrWriteType.READ,
+                                   unit='degrees',
+                                   format='6.4f',
+                                   doc=""
+                                   )
+
+    Diag_PhFwhybload = attribute(label='Diag_PhFwhybload',
+                                   dtype=float,
+                                   display_level=DispLevel.OPERATOR,
+                                   access=AttrWriteType.READ,
+                                   unit='degrees',
+                                   format='6.4f',
+                                   doc=""
+                                   )
+
+    Diag_PhFwcirc = attribute(label='Diag_PhFwcirc',
+                                   dtype=float,
+                                   display_level=DispLevel.OPERATOR,
+                                   access=AttrWriteType.READ,
+                                   unit='degrees',
+                                   format='6.4f',
+                                   doc=""
+                                   )
+
+    Diag_PhFwload = attribute(label='Diag_PhFwload',
+                                   dtype=float,
+                                   display_level=DispLevel.OPERATOR,
+                                   access=AttrWriteType.READ,
+                                   unit='degrees',
+                                   format='6.4f',
+                                   doc=""
+                                   )
+
+    Diag_PhMo = attribute(label='Diag_PhMo',
+                                   dtype=float,
+                                   display_level=DispLevel.OPERATOR,
+                                   access=AttrWriteType.READ,
+                                   unit='degrees',
                                    format='6.4f',
                                    doc=""
                                    )
@@ -1696,16 +1858,16 @@ class NutaqDiags(Device):
         return self._Diag_Ilandau
 
     @DebugIt()
-    def read_Diag_Qlandadu(self):
-        return self._Diag_Qlandadu
+    def read_Diag_Qlandau(self):
+        return self._Diag_Qlandau
 
     @DebugIt()
-    def read_Diag_Amplandadu(self):
-        return self._Diag_Amplandadu
+    def read_Diag_Amplandau(self):
+        return self._Diag_Amplandau
 
     @DebugIt()
-    def read_Diag_Phlandadu(self):
-        return self._Diag_Phlandadu
+    def read_Diag_Phlandau(self):
+        return self._Diag_Phlandau
 
     @DebugIt()
     def read_Diag_PlungerMovingManualTuning(self):
@@ -1855,6 +2017,78 @@ class NutaqDiags(Device):
     def read_Diag_SpareDo03(self):
         return self._Diag_SpareDo03
 
+    @DebugIt()
+    def read_Diag_AmpRvtet2(self):
+        return self._Diag_AmpRvtet2
+
+    @DebugIt()
+    def read_Diag_AmpRvtet1(self):
+        return self._Diag_AmpRvtet1
+
+    @DebugIt()
+    def read_Diag_AmpRvcav(self):
+        return self._Diag_AmpRvcav
+
+    @DebugIt()
+    def read_Diag_AmpLandau(self):
+        return self._Diag_AmpLandau
+
+    @DebugIt()
+    def read_Diag_AmpRvcirc(self):
+        return self._Diag_AmpRvcirc
+
+    @DebugIt()
+    def read_Diag_AmpFwhybload(self):
+        return self._Diag_AmpFwhybload
+
+    @DebugIt()
+    def read_Diag_AmpFwcirc(self):
+        return self._Diag_AmpFwcirc
+
+    @DebugIt()
+    def read_Diag_AmpFwload(self):
+        return self._Diag_AmpFwload
+
+    @DebugIt()
+    def read_Diag_AmpMo(self):
+        return self._Diag_AmpMo
+
+    @DebugIt()
+    def read_Diag_PhRvtet2(self):
+        return self._Diag_PhRvtet2
+
+    @DebugIt()
+    def read_Diag_PhRvtet1(self):
+        return self._Diag_PhRvtet1
+
+    @DebugIt()
+    def read_Diag_PhRvcav(self):
+        return self._Diag_PhRvcav
+
+    @DebugIt()
+    def read_Diag_PhLandau(self):
+        return self._Diag_PhLandau
+
+    @DebugIt()
+    def read_Diag_PhRvcirc(self):
+        return self._Diag_PhRvcirc
+
+    @DebugIt()
+    def read_Diag_PhFwhybload(self):
+        return self._Diag_PhFwhybload
+
+    @DebugIt()
+    def read_Diag_PhFwcirc(self):
+        return self._Diag_PhFwcirc
+
+    @DebugIt()
+    def read_Diag_PhFwload(self):
+        return self._Diag_PhFwload
+
+    @DebugIt()
+    def read_Diag_PhMo(self):
+        return self._Diag_PhMo
+
     @command
     def read_diagnostics(self):
         perseus_utils.start_reading_diagnostics(self.perseus)
@@ -1892,10 +2126,28 @@ class NutaqDiags(Device):
         self._Diag_Ampmo = perseus_utils.read_diag_milivolts(self.perseus, 30)
         self._Diag_Phmo = perseus_utils.read_diag_angle(self.perseus, 31)
         self._Diag_Ilandau = perseus_utils.read_diag_milivolts(self.perseus, 32)
-        self._Diag_Qlandadu = perseus_utils.read_diag_milivolts(self.perseus, 33)
-        self._Diag_Amplandadu = perseus_utils.read_diag_milivolts(self.perseus, 34)
-        self._Diag_Phlandadu = perseus_utils.read_diag_angle(self.perseus, 35)
+        self._Diag_Qlandau = perseus_utils.read_diag_milivolts(self.perseus, 33)
+        self._Diag_Amplandau = perseus_utils.read_diag_milivolts(self.perseus, 34)
+        self._Diag_Phlandau = perseus_utils.read_diag_angle(self.perseus, 35)
         self._Diag_DephaseMoLandau = perseus_utils.read_diag_angle(self.perseus, 64)
+        self._Diag_AmpRvtet2 == math.sqrt((self._Diag_Irvtet2**2) + (self._Diag_Qrvtet2**2))
+        self._Diag_AmpRvtet1 == math.sqrt((self._Diag_Irvtet1**2) + (self._Diag_Qrvtet1**2))
+        self._Diag_AmpRvcav == math.sqrt((self._Diag_Irvcav**2) + (self._Diag_Qrvcav**2))
+        self._Diag_AmpLandau == math.sqrt((self._Diag_Ilandau**2) + (self._Diag_Qlandau**2))
+        self._Diag_AmpRvcirc == math.sqrt((self._Diag_Irvcirc**2) + (self._Diag_Qrvcirc**2))
+        self._Diag_AmpFwhybload == math.sqrt((self._Diag_Ifwhybload**2) + (self._Diag_Qfwhybload**2))
+        self._Diag_AmpFwcirc == math.sqrt((self._Diag_Ifwcirc**2) + (self._Diag_Qfwcirc**2))
+        self._Diag_AmpFwload == math.sqrt((self._Diag_Ifwload**2) + (self._Diag_Qfwload**2))
+        self._Diag_AmpMo == math.sqrt((self._Diag_Imo**2) + (self._Diag_Qmo**2))
+        self._Diag_PhRvtet2 == math.atan2(self._Diag_Qrvtet2, self._Diag_Irvtet2)
+        self._Diag_PhRvtet1 == math.atan2(self._Diag_Qrvtet1, self._Diag_Irvtet1)
+        self._Diag_PhRvcav == math.atan2(self._Diag_Qrvcav, self._Diag_Irvcav)
+        self._Diag_PhLandau == math.atan2(self._Diag_Qlandau, self._Diag_Ilandau)
+        self._Diag_PhRvcirc == math.atan2(self._Diag_Qrvcirc, self._Diag_Irvcirc)
+        self._Diag_PhFwhybload == math.atan2(self._Diag_Qfwhybload, self._Diag_Ifwhybload)
+        self._Diag_PhFwcirc == math.atan2(self._Diag_Qfwcirc, self._Diag_Ifwcirc)
+        self._Diag_PhFwload == math.atan2(self._Diag_Qfwload, self._Diag_Ifwload)
+        self._Diag_PhMo == math.atan2(self._Diag_Qmo, self._Diag_Imo)
 
     @command
     def tuning_reset(self):

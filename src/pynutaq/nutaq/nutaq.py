@@ -1754,6 +1754,438 @@ class Nutaq(Device):
                                    doc=""
                                    )
 
+    Diag_AmpControl = attribute(label='Diag_AmpControl',
+                                   dtype=float,
+                                   display_level=DispLevel.OPERATOR,
+                                   access=AttrWriteType.READ,
+                                   unit='mV',
+                                   format='6.4f',
+                                   doc=""
+                                   )
+
+    Diag_AmpSpare1 = attribute(label='Diag_AmpSpare1',
+                                   dtype=float,
+                                   display_level=DispLevel.OPERATOR,
+                                   access=AttrWriteType.READ,
+                                   unit='mV',
+                                   format='6.4f',
+                                   doc=""
+                                   )
+
+    Diag_AmpSpare2 = attribute(label='Diag_AmpSpare2',
+                                   dtype=float,
+                                   display_level=DispLevel.OPERATOR,
+                                   access=AttrWriteType.READ,
+                                   unit='mV',
+                                   format='6.4f',
+                                   doc=""
+                                   )
+
+    Diag_AmpCavloops = attribute(label='Diag_AmpCavloops',
+                                   dtype=float,
+                                   display_level=DispLevel.OPERATOR,
+                                   access=AttrWriteType.READ,
+                                   unit='mV',
+                                   format='6.4f',
+                                   doc=""
+                                   )
+
+    Diag_AmpControlfastpi = attribute(label='Diag_AmpControlfastpi',
+                                   dtype=float,
+                                   display_level=DispLevel.OPERATOR,
+                                   access=AttrWriteType.READ,
+                                   unit='mV',
+                                   format='6.4f',
+                                   doc=""
+                                   )
+
+    Diag_AmpPolarcontroloutput = attribute(label='Diag_AmpPolarcontroloutput',
+                                   dtype=float,
+                                   display_level=DispLevel.OPERATOR,
+                                   access=AttrWriteType.READ,
+                                   unit='mV',
+                                   format='6.4f',
+                                   doc=""
+                                   )
+
+    Diag_AmpMuxfwcircin = attribute(label='Diag_AmpMuxfwcircin',
+                                   dtype=float,
+                                   display_level=DispLevel.OPERATOR,
+                                   access=AttrWriteType.READ,
+                                   unit='mV',
+                                   format='6.4f',
+                                   doc=""
+                                   )
+
+    Diag_AmpMuxfwcav = attribute(label='Diag_AmpMuxfwcav',
+                                   dtype=float,
+                                   display_level=DispLevel.OPERATOR,
+                                   access=AttrWriteType.READ,
+                                   unit='mV',
+                                   format='6.4f',
+                                   doc=""
+                                   )
+
+    Diag_AmpRef = attribute(label='Diag_AmpRef',
+                                   dtype=float,
+                                   display_level=DispLevel.OPERATOR,
+                                   access=AttrWriteType.READ,
+                                   unit='mV',
+                                   format='6.4f',
+                                   doc=""
+                                   )
+
+    Diag_AmpMuxcav = attribute(label='Diag_AmpMuxcav',
+                                   dtype=float,
+                                   display_level=DispLevel.OPERATOR,
+                                   access=AttrWriteType.READ,
+                                   unit='mV',
+                                   format='6.4f',
+                                   doc=""
+                                   )
+
+    Diag_AmpLoopinputslowpiiq = attribute(label='Diag_AmpLoopinputslowpiiq',
+                                   dtype=float,
+                                   display_level=DispLevel.OPERATOR,
+                                   access=AttrWriteType.READ,
+                                   unit='mV',
+                                   format='6.4f',
+                                   doc=""
+                                   )
+
+    Diag_AmpFwtet2loops = attribute(label='Diag_AmpFwtet2loops',
+                                   dtype=float,
+                                   display_level=DispLevel.OPERATOR,
+                                   access=AttrWriteType.READ,
+                                   unit='mV',
+                                   format='6.4f',
+                                   doc=""
+                                   )
+
+    Diag_AmpFwtet1loops = attribute(label='Diag_AmpFwtet1loops',
+                                   dtype=float,
+                                   display_level=DispLevel.OPERATOR,
+                                   access=AttrWriteType.READ,
+                                   unit='mV',
+                                   format='6.4f',
+                                   doc=""
+                                   )
+
+    Diag_AmpErroraccum = attribute(label='Diag_AmpErroraccum',
+                                   dtype=float,
+                                   display_level=DispLevel.OPERATOR,
+                                   access=AttrWriteType.READ,
+                                   unit='mV',
+                                   format='6.4f',
+                                   doc=""
+                                   )
+
+    Diag_AmpControlslowpi = attribute(label='Diag_AmpControlslowpi',
+                                   dtype=float,
+                                   display_level=DispLevel.OPERATOR,
+                                   access=AttrWriteType.READ,
+                                   unit='mV',
+                                   format='6.4f',
+                                   doc=""
+                                   )
+
+    Diag_AmpFwcavloops = attribute(label='Diag_AmpFwcavloops',
+                                   dtype=float,
+                                   display_level=DispLevel.OPERATOR,
+                                   access=AttrWriteType.READ,
+                                   unit='mV',
+                                   format='6.4f',
+                                   doc=""
+                                   )
+
+    Diag_AmpControlfastpiiq = attribute(label='Diag_AmpControlfastpiiq',
+                                   dtype=float,
+                                   display_level=DispLevel.OPERATOR,
+                                   access=AttrWriteType.READ,
+                                   unit='mV',
+                                   format='6.4f',
+                                   doc=""
+                                   )
+
+    Diag_AmpFwcircinloops = attribute(label='Diag_AmpFwcircinloops',
+                                   dtype=float,
+                                   display_level=DispLevel.OPERATOR,
+                                   access=AttrWriteType.READ,
+                                   unit='mV',
+                                   format='6.4f',
+                                   doc=""
+                                   )
+
+    Diag_AmpMo = attribute(label='Diag_AmpMo',
+                                   dtype=float,
+                                   display_level=DispLevel.OPERATOR,
+                                   access=AttrWriteType.READ,
+                                   unit='mV',
+                                   format='6.4f',
+                                   doc=""
+                                   )
+
+    Diag_AmpControl1 = attribute(label='Diag_AmpControl1',
+                                   dtype=float,
+                                   display_level=DispLevel.OPERATOR,
+                                   access=AttrWriteType.READ,
+                                   unit='mV',
+                                   format='6.4f',
+                                   doc=""
+                                   )
+
+    Diag_AmpMuxfwtet2 = attribute(label='Diag_AmpMuxfwtet2',
+                                   dtype=float,
+                                   display_level=DispLevel.OPERATOR,
+                                   access=AttrWriteType.READ,
+                                   unit='mV',
+                                   format='6.4f',
+                                   doc=""
+                                   )
+
+    Diag_AmpMuxfwtet1 = attribute(label='Diag_AmpMuxfwtet1',
+                                   dtype=float,
+                                   display_level=DispLevel.OPERATOR,
+                                   access=AttrWriteType.READ,
+                                   unit='mV',
+                                   format='6.4f',
+                                   doc=""
+                                   )
+
+    Diag_AmpControl2 = attribute(label='Diag_AmpControl2',
+                                   dtype=float,
+                                   display_level=DispLevel.OPERATOR,
+                                   access=AttrWriteType.READ,
+                                   unit='mV',
+                                   format='6.4f',
+                                   doc=""
+                                   )
+
+    Diag_AmpError = attribute(label='Diag_AmpError',
+                                   dtype=float,
+                                   display_level=DispLevel.OPERATOR,
+                                   access=AttrWriteType.READ,
+                                   unit='mV',
+                                   format='6.4f',
+                                   doc=""
+                                   )
+
+    Diag_PhControl = attribute(label='Diag_PhControl',
+                                   dtype=float,
+                                   display_level=DispLevel.OPERATOR,
+                                   access=AttrWriteType.READ,
+                                   unit='degrees',
+                                   format='6.4f',
+                                   doc=""
+                                   )
+
+    Diag_PhSpare1 = attribute(label='Diag_PhSpare1',
+                                   dtype=float,
+                                   display_level=DispLevel.OPERATOR,
+                                   access=AttrWriteType.READ,
+                                   unit='degrees',
+                                   format='6.4f',
+                                   doc=""
+                                   )
+
+    Diag_PhSpare2 = attribute(label='Diag_PhSpare2',
+                                   dtype=float,
+                                   display_level=DispLevel.OPERATOR,
+                                   access=AttrWriteType.READ,
+                                   unit='degrees',
+                                   format='6.4f',
+                                   doc=""
+                                   )
+
+    Diag_PhCavloops = attribute(label='Diag_PhCavloops',
+                                   dtype=float,
+                                   display_level=DispLevel.OPERATOR,
+                                   access=AttrWriteType.READ,
+                                   unit='degrees',
+                                   format='6.4f',
+                                   doc=""
+                                   )
+
+    Diag_PhControlfastpi = attribute(label='Diag_PhControlfastpi',
+                                   dtype=float,
+                                   display_level=DispLevel.OPERATOR,
+                                   access=AttrWriteType.READ,
+                                   unit='degrees',
+                                   format='6.4f',
+                                   doc=""
+                                   )
+
+    Diag_PhPolarcontroloutput = attribute(label='Diag_PhPolarcontroloutput',
+                                   dtype=float,
+                                   display_level=DispLevel.OPERATOR,
+                                   access=AttrWriteType.READ,
+                                   unit='degrees',
+                                   format='6.4f',
+                                   doc=""
+                                   )
+
+    Diag_PhMuxfwcircin = attribute(label='Diag_PhMuxfwcircin',
+                                   dtype=float,
+                                   display_level=DispLevel.OPERATOR,
+                                   access=AttrWriteType.READ,
+                                   unit='degrees',
+                                   format='6.4f',
+                                   doc=""
+                                   )
+
+    Diag_PhMuxfwcav = attribute(label='Diag_PhMuxfwcav',
+                                   dtype=float,
+                                   display_level=DispLevel.OPERATOR,
+                                   access=AttrWriteType.READ,
+                                   unit='degrees',
+                                   format='6.4f',
+                                   doc=""
+                                   )
+
+    Diag_PhRef = attribute(label='Diag_PhRef',
+                                   dtype=float,
+                                   display_level=DispLevel.OPERATOR,
+                                   access=AttrWriteType.READ,
+                                   unit='degrees',
+                                   format='6.4f',
+                                   doc=""
+                                   )
+
+    Diag_PhMuxcav = attribute(label='Diag_PhMuxcav',
+                                   dtype=float,
+                                   display_level=DispLevel.OPERATOR,
+                                   access=AttrWriteType.READ,
+                                   unit='degrees',
+                                   format='6.4f',
+                                   doc=""
+                                   )
+
+    Diag_PhLoopinputslowpiiq = attribute(label='Diag_PhLoopinputslowpiiq',
+                                   dtype=float,
+                                   display_level=DispLevel.OPERATOR,
+                                   access=AttrWriteType.READ,
+                                   unit='degrees',
+                                   format='6.4f',
+                                   doc=""
+                                   )
+
+    Diag_PhFwtet2loops = attribute(label='Diag_PhFwtet2loops',
+                                   dtype=float,
+                                   display_level=DispLevel.OPERATOR,
+                                   access=AttrWriteType.READ,
+                                   unit='degrees',
+                                   format='6.4f',
+                                   doc=""
+                                   )
+
+    Diag_PhFwtet1loops = attribute(label='Diag_PhFwtet1loops',
+                                   dtype=float,
+                                   display_level=DispLevel.OPERATOR,
+                                   access=AttrWriteType.READ,
+                                   unit='degrees',
+                                   format='6.4f',
+                                   doc=""
+                                   )
+
+    Diag_PhErroraccum = attribute(label='Diag_PhErroraccum',
+                                   dtype=float,
+                                   display_level=DispLevel.OPERATOR,
+                                   access=AttrWriteType.READ,
+                                   unit='degrees',
+                                   format='6.4f',
+                                   doc=""
+                                   )
+
+    Diag_PhControlslowpi = attribute(label='Diag_PhControlslowpi',
+                                   dtype=float,
+                                   display_level=DispLevel.OPERATOR,
+                                   access=AttrWriteType.READ,
+                                   unit='degrees',
+                                   format='6.4f',
+                                   doc=""
+                                   )
+
+    Diag_PhFwcavloops = attribute(label='Diag_PhFwcavloops',
+                                   dtype=float,
+                                   display_level=DispLevel.OPERATOR,
+                                   access=AttrWriteType.READ,
+                                   unit='degrees',
+                                   format='6.4f',
+                                   doc=""
+                                   )
+
+    Diag_PhControlfastpiiq = attribute(label='Diag_PhControlfastpiiq',
+                                   dtype=float,
+                                   display_level=DispLevel.OPERATOR,
+                                   access=AttrWriteType.READ,
+                                   unit='degrees',
+                                   format='6.4f',
+                                   doc=""
+                                   )
+
+    Diag_PhFwcircinloops = attribute(label='Diag_PhFwcircinloops',
+                                   dtype=float,
+                                   display_level=DispLevel.OPERATOR,
+                                   access=AttrWriteType.READ,
+                                   unit='degrees',
+                                   format='6.4f',
+                                   doc=""
+                                   )
+
+    Diag_PhMo = attribute(label='Diag_PhMo',
+                                   dtype=float,
+                                   display_level=DispLevel.OPERATOR,
+                                   access=AttrWriteType.READ,
+                                   unit='degrees',
+                                   format='6.4f',
+                                   doc=""
+                                   )
+
+    Diag_PhControl1 = attribute(label='Diag_PhControl1',
+                                   dtype=float,
+                                   display_level=DispLevel.OPERATOR,
+                                   access=AttrWriteType.READ,
+                                   unit='degrees',
+                                   format='6.4f',
+                                   doc=""
+                                   )
+
+    Diag_PhMuxfwtet2 = attribute(label='Diag_PhMuxfwtet2',
+                                   dtype=float,
+                                   display_level=DispLevel.OPERATOR,
+                                   access=AttrWriteType.READ,
+                                   unit='degrees',
+                                   format='6.4f',
+                                   doc=""
+                                   )
+
+    Diag_PhMuxfwtet1 = attribute(label='Diag_PhMuxfwtet1',
+                                   dtype=float,
+                                   display_level=DispLevel.OPERATOR,
+                                   access=AttrWriteType.READ,
+                                   unit='degrees',
+                                   format='6.4f',
+                                   doc=""
+                                   )
+
+    Diag_PhControl2 = attribute(label='Diag_PhControl2',
+                                   dtype=float,
+                                   display_level=DispLevel.OPERATOR,
+                                   access=AttrWriteType.READ,
+                                   unit='degrees',
+                                   format='6.4f',
+                                   doc=""
+                                   )
+
+    Diag_PhError = attribute(label='Diag_PhError',
+                                   dtype=float,
+                                   display_level=DispLevel.OPERATOR,
+                                   access=AttrWriteType.READ,
+                                   unit='degrees',
+                                   format='6.4f',
+                                   doc=""
+                                   )
+
 
     perseusType = device_property(dtype=str, default_value='simulated')
     FDLPath = device_property(dtype=str, default_value='/tmp')
@@ -2792,6 +3224,198 @@ class Nutaq(Device):
     def read_Diag_FdlTrigSwInput(self):
         return self._Diag_FdlTrigSwInput
 
+    @DebugIt()
+    def read_Diag_AmpControl(self):
+        return self._Diag_AmpControl
+
+    @DebugIt()
+    def read_Diag_AmpSpare1(self):
+        return self._Diag_AmpSpare1
+
+    @DebugIt()
+    def read_Diag_AmpSpare2(self):
+        return self._Diag_AmpSpare2
+
+    @DebugIt()
+    def read_Diag_AmpCavloops(self):
+        return self._Diag_AmpCavloops
+
+    @DebugIt()
+    def read_Diag_AmpControlfastpi(self):
+        return self._Diag_AmpControlfastpi
+
+    @DebugIt()
+    def read_Diag_AmpPolarcontroloutput(self):
+        return self._Diag_AmpPolarcontroloutput
+
+    @DebugIt()
+    def read_Diag_AmpMuxfwcircin(self):
+        return self._Diag_AmpMuxfwcircin
+
+    @DebugIt()
+    def read_Diag_AmpMuxfwcav(self):
+        return self._Diag_AmpMuxfwcav
+
+    @DebugIt()
+    def read_Diag_AmpRef(self):
+        return self._Diag_AmpRef
+
+    @DebugIt()
+    def read_Diag_AmpMuxcav(self):
+        return self._Diag_AmpMuxcav
+
+    @DebugIt()
+    def read_Diag_AmpLoopinputslowpiiq(self):
+        return self._Diag_AmpLoopinputslowpiiq
+
+    @DebugIt()
+    def read_Diag_AmpFwtet2loops(self):
+        return self._Diag_AmpFwtet2loops
+
+    @DebugIt()
+    def read_Diag_AmpFwtet1loops(self):
+        return self._Diag_AmpFwtet1loops
+
+    @DebugIt()
+    def read_Diag_AmpErroraccum(self):
+        return self._Diag_AmpErroraccum
+
+    @DebugIt()
+    def read_Diag_AmpControlslowpi(self):
+        return self._Diag_AmpControlslowpi
+
+    @DebugIt()
+    def read_Diag_AmpFwcavloops(self):
+        return self._Diag_AmpFwcavloops
+
+    @DebugIt()
+    def read_Diag_AmpControlfastpiiq(self):
+        return self._Diag_AmpControlfastpiiq
+
+    @DebugIt()
+    def read_Diag_AmpFwcircinloops(self):
+        return self._Diag_AmpFwcircinloops
+
+    @DebugIt()
+    def read_Diag_AmpMo(self):
+        return self._Diag_AmpMo
+
+    @DebugIt()
+    def read_Diag_AmpControl1(self):
+        return self._Diag_AmpControl1
+
+    @DebugIt()
+    def read_Diag_AmpMuxfwtet2(self):
+        return self._Diag_AmpMuxfwtet2
+
+    @DebugIt()
+    def read_Diag_AmpMuxfwtet1(self):
+        return self._Diag_AmpMuxfwtet1
+
+    @DebugIt()
+    def read_Diag_AmpControl2(self):
+        return self._Diag_AmpControl2
+
+    @DebugIt()
+    def read_Diag_AmpError(self):
+        return self._Diag_AmpError
+
+    @DebugIt()
+    def read_Diag_PhControl(self):
+        return self._Diag_PhControl
+
+    @DebugIt()
+    def read_Diag_PhSpare1(self):
+        return self._Diag_PhSpare1
+
+    @DebugIt()
+    def read_Diag_PhSpare2(self):
+        return self._Diag_PhSpare2
+
+    @DebugIt()
+    def read_Diag_PhCavloops(self):
+        return self._Diag_PhCavloops
+
+    @DebugIt()
+    def read_Diag_PhControlfastpi(self):
+        return self._Diag_PhControlfastpi
+
+    @DebugIt()
+    def read_Diag_PhPolarcontroloutput(self):
+        return self._Diag_PhPolarcontroloutput
+
+    @DebugIt()
+    def read_Diag_PhMuxfwcircin(self):
+        return self._Diag_PhMuxfwcircin
+
+    @DebugIt()
+    def read_Diag_PhMuxfwcav(self):
+        return self._Diag_PhMuxfwcav
+
+    @DebugIt()
+    def read_Diag_PhRef(self):
+        return self._Diag_PhRef
+
+    @DebugIt()
+    def read_Diag_PhMuxcav(self):
+        return self._Diag_PhMuxcav
+
+    @DebugIt()
+    def read_Diag_PhLoopinputslowpiiq(self):
+        return self._Diag_PhLoopinputslowpiiq
+
+    @DebugIt()
+    def read_Diag_PhFwtet2loops(self):
+        return self._Diag_PhFwtet2loops
+
+    @DebugIt()
+    def read_Diag_PhFwtet1loops(self):
+        return self._Diag_PhFwtet1loops
+
+    @DebugIt()
+    def read_Diag_PhErroraccum(self):
+        return self._Diag_PhErroraccum
+
+    @DebugIt()
+    def read_Diag_PhControlslowpi(self):
+        return self._Diag_PhControlslowpi
+
+    @DebugIt()
+    def read_Diag_PhFwcavloops(self):
+        return self._Diag_PhFwcavloops
+
+    @DebugIt()
+    def read_Diag_PhControlfastpiiq(self):
+        return self._Diag_PhControlfastpiiq
+
+    @DebugIt()
+    def read_Diag_PhFwcircinloops(self):
+        return self._Diag_PhFwcircinloops
+
+    @DebugIt()
+    def read_Diag_PhMo(self):
+        return self._Diag_PhMo
+
+    @DebugIt()
+    def read_Diag_PhControl1(self):
+        return self._Diag_PhControl1
+
+    @DebugIt()
+    def read_Diag_PhMuxfwtet2(self):
+        return self._Diag_PhMuxfwtet2
+
+    @DebugIt()
+    def read_Diag_PhMuxfwtet1(self):
+        return self._Diag_PhMuxfwtet1
+
+    @DebugIt()
+    def read_Diag_PhControl2(self):
+        return self._Diag_PhControl2
+
+    @DebugIt()
+    def read_Diag_PhError(self):
+        return self._Diag_PhError
+
     @command
     def read_diagnostics(self):
         perseus_utils.start_reading_diagnostics(self.perseus)
@@ -2880,6 +3504,54 @@ class Nutaq(Device):
         self._Diag_FimItckDelay = perseus_utils.read_direct(self.perseus, 401)
         self._Diag_FdlTrigHwInput = perseus_utils.read_direct(self.perseus, 402)
         self._Diag_FdlTrigSwInput = perseus_utils.read_direct(self.perseus, 403)
+        self._Diag_AmpControl == math.sqrt((self._Diag_Icontrol**2) + (self._Diag_Qcontrol**2))
+        self._Diag_AmpSpare1 == math.sqrt((self._Diag_Ispare1**2) + (self._Diag_Qspare1**2))
+        self._Diag_AmpSpare2 == math.sqrt((self._Diag_Ispare2**2) + (self._Diag_Qspare2**2))
+        self._Diag_AmpCavloops == math.sqrt((self._Diag_IcavLoops**2) + (self._Diag_QcavLoops**2))
+        self._Diag_AmpControlfastpi == math.sqrt((self._Diag_IcontrolFastpi**2) + (self._Diag_QcontrolFastpi**2))
+        self._Diag_AmpPolarcontroloutput == math.sqrt((self._Diag_IpolarControlOutput**2) + (self._Diag_QpolarControlOutput**2))
+        self._Diag_AmpMuxfwcircin == math.sqrt((self._Diag_IMuxFwCircIn**2) + (self._Diag_QMuxFwCircIn**2))
+        self._Diag_AmpMuxfwcav == math.sqrt((self._Diag_IMuxFwCav**2) + (self._Diag_QMuxFwCav**2))
+        self._Diag_AmpRef == math.sqrt((self._Diag_Iref**2) + (self._Diag_Qref**2))
+        self._Diag_AmpMuxcav == math.sqrt((self._Diag_IMuxCav**2) + (self._Diag_QMuxCav**2))
+        self._Diag_AmpLoopinputslowpiiq == math.sqrt((self._Diag_IloopinputSlowpiIq**2) + (self._Diag_QloopinputSlowpiIq**2))
+        self._Diag_AmpFwtet2loops == math.sqrt((self._Diag_IFwTet2Loops**2) + (self._Diag_QFwTet2Loops**2))
+        self._Diag_AmpFwtet1loops == math.sqrt((self._Diag_IFwTet1Loops**2) + (self._Diag_QFwTet1Loops**2))
+        self._Diag_AmpErroraccum == math.sqrt((self._Diag_Ierroraccum**2) + (self._Diag_Qerroraccum**2))
+        self._Diag_AmpControlslowpi == math.sqrt((self._Diag_IcontrolSlowpi**2) + (self._Diag_QcontrolSlowpi**2))
+        self._Diag_AmpFwcavloops == math.sqrt((self._Diag_IFwCavLoops**2) + (self._Diag_QFwCavLoops**2))
+        self._Diag_AmpControlfastpiiq == math.sqrt((self._Diag_IcontrolFastpiIq**2) + (self._Diag_QcontrolFastpiIq**2))
+        self._Diag_AmpFwcircinloops == math.sqrt((self._Diag_IFwCircInLoops**2) + (self._Diag_QFwCircInLoops**2))
+        self._Diag_AmpMo == math.sqrt((self._Diag_Imo**2) + (self._Diag_Qmo**2))
+        self._Diag_AmpControl1 == math.sqrt((self._Diag_Icontrol1**2) + (self._Diag_Qcontrol1**2))
+        self._Diag_AmpMuxfwtet2 == math.sqrt((self._Diag_IMuxFwTet2**2) + (self._Diag_QMuxFwTet2**2))
+        self._Diag_AmpMuxfwtet1 == math.sqrt((self._Diag_IMuxFwTet1**2) + (self._Diag_QMuxFwTet1**2))
+        self._Diag_AmpControl2 == math.sqrt((self._Diag_Icontrol2**2) + (self._Diag_Qcontrol2**2))
+        self._Diag_AmpError == math.sqrt((self._Diag_Ierror**2) + (self._Diag_Qerror**2))
+        self._Diag_PhControl == math.atan2(self._Diag_Qcontrol, self._Diag_Icontrol)
+        self._Diag_PhSpare1 == math.atan2(self._Diag_Qspare1, self._Diag_Ispare1)
+        self._Diag_PhSpare2 == math.atan2(self._Diag_Qspare2, self._Diag_Ispare2)
+        self._Diag_PhCavloops == math.atan2(self._Diag_QcavLoops, self._Diag_IcavLoops)
+        self._Diag_PhControlfastpi == math.atan2(self._Diag_QcontrolFastpi, self._Diag_IcontrolFastpi)
+        self._Diag_PhPolarcontroloutput == math.atan2(self._Diag_QpolarControlOutput, self._Diag_IpolarControlOutput)
+        self._Diag_PhMuxfwcircin == math.atan2(self._Diag_QMuxFwCircIn, self._Diag_IMuxFwCircIn)
+        self._Diag_PhMuxfwcav == math.atan2(self._Diag_QMuxFwCav, self._Diag_IMuxFwCav)
+        self._Diag_PhRef == math.atan2(self._Diag_Qref, self._Diag_Iref)
+        self._Diag_PhMuxcav == math.atan2(self._Diag_QMuxCav, self._Diag_IMuxCav)
+        self._Diag_PhLoopinputslowpiiq == math.atan2(self._Diag_QloopinputSlowpiIq, self._Diag_IloopinputSlowpiIq)
+        self._Diag_PhFwtet2loops == math.atan2(self._Diag_QFwTet2Loops, self._Diag_IFwTet2Loops)
+        self._Diag_PhFwtet1loops == math.atan2(self._Diag_QFwTet1Loops, self._Diag_IFwTet1Loops)
+        self._Diag_PhErroraccum == math.atan2(self._Diag_Qerroraccum, self._Diag_Ierroraccum)
+        self._Diag_PhControlslowpi == math.atan2(self._Diag_QcontrolSlowpi, self._Diag_IcontrolSlowpi)
+        self._Diag_PhFwcavloops == math.atan2(self._Diag_QFwCavLoops, self._Diag_IFwCavLoops)
+        self._Diag_PhControlfastpiiq == math.atan2(self._Diag_QcontrolFastpiIq, self._Diag_IcontrolFastpiIq)
+        self._Diag_PhFwcircinloops == math.atan2(self._Diag_QFwCircInLoops, self._Diag_IFwCircInLoops)
+        self._Diag_PhMo == math.atan2(self._Diag_Qmo, self._Diag_Imo)
+        self._Diag_PhControl1 == math.atan2(self._Diag_Qcontrol1, self._Diag_Icontrol1)
+        self._Diag_PhMuxfwtet2 == math.atan2(self._Diag_QMuxFwTet2, self._Diag_IMuxFwTet2)
+        self._Diag_PhMuxfwtet1 == math.atan2(self._Diag_QMuxFwTet1, self._Diag_IMuxFwTet1)
+        self._Diag_PhControl2 == math.atan2(self._Diag_Qcontrol2, self._Diag_Icontrol2)
+        self._Diag_PhError == math.atan2(self._Diag_Qerror, self._Diag_Ierror)
 
     @command
     def tuning_reset(self):
