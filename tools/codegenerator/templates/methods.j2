@@ -65,12 +65,16 @@
         perseus_utils.start_reading_diagnostics(self.perseus)
 
 {% for attribute in diags_attributes %}
-        {% if attribute.type == 'mv' %}
+        {% if attribute.type == 'mv' and attribute.access != 'read_diag_amp' %}
         self._Diag_{{attribute.name}} = perseus_utils.read_diag_milivolts(self.perseus, {{attribute.address}})
-        {% elif attribute.type == 'angle' %}
+        {% elif attribute.type == 'angle' and attribute.access != 'read_diag_ph' %}
         self._Diag_{{attribute.name}} = perseus_utils.read_diag_angle(self.perseus, {{attribute.address}})
         {% elif attribute.type == 'bool' %}
         self._Diag_{{attribute.name}} = perseus_utils.read_direct(self.perseus, {{attribute.address}})
+        {% elif attribute.type == 'mv' and attribute.access == 'read_diag_amp' %}
+        self._Diag_{{attribute.name}} == math.sqrt((self._Diag_{{attribute.i_parent}}**2) + (self._Diag_{{attribute.q_parent}}**2))
+        {% elif attribute.type == 'angle' and attribute.access == 'read_diag_ph' %}
+        self._Diag_{{attribute.name}} == math.atan2(self._Diag_{{attribute.q_parent}}, self._Diag_{{attribute.i_parent}})
         {% endif %}
 {% endfor %}
 {% endblock %}
