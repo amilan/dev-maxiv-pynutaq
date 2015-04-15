@@ -143,7 +143,7 @@ class PerseusLoops(object):
         """Start recording data in RAM"""
         return eapi.recplay_record(self._board_state, size, triggersource)
 
-    @ensure_read_method
+    # @ensure_read_method
     def get_ram_data(self, filename, channel=0, bufsize=65536, framesize=1024, framegap=200):
         if channel < 0 or channel > 7:
             print 'ERROR: channel must be in range [0,7]!'
@@ -194,8 +194,28 @@ class PerseusLoops(object):
         useoffset = 0
         neededsize = bufsize
 
-        return eapi.ram_get(self._board_state, channel, startaddr, useoffset,
-                            neededsize, framesize, framegap, filename)
+        # This is for the new API
+        # return eapi.ram_get(self._board_state, channel, startaddr, useoffset,
+        #                    neededsize, framesize, framegap, filename)
+
+        # Back to the old API ... @todo: to be remove
+        with open(filename, 'wb') as file:
+            ret, rsize, data = eapi.ram_get(self._board_state, channel, startaddr, neededsize, framesize, framegap)
+            if ret<0:
+                raise adp_exception(ret)
+            if (neededsize != bufsize):
+                if (bufsize + useoffset) > rsize:
+                    print 'WARNING: not enough data in buffer to offset correctly, offset: ', useoffset
+                    print '         buffer read size: ', rsize
+                    print '         expected minimum read size: ', (bufsize + useoffset)
+                mdata = data[useoffset : (bufsize + useoffset)]
+                file.write(mdata)
+            else:
+                file.write(data)
+            file.close()
+            if rsize != neededsize:
+                lostsize = neededsize - rsize
+                print 'WARNING: transfer data bytes lost: ', lostsize
 
     @ensure_read_method
     def get_transfer_over_register(self):
