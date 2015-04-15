@@ -51,14 +51,14 @@ def get_GainTetrode1(perseus, address):
 
 def set_GainTetrode1(perseus, GainTetrode1, address):
     try:
-        value = address << 17 | (int(GainTetrode1) * 19898.0)
+        value = address << 17 | (int(GainTetrode1 * 19898.0))
         perseus.write(SETTINGS_WRITE_OFFSET, value)
     except Exception, e:
         raise e
 
-def get_GainTetrode2(perseus):
+def get_GainTetrode2(perseus, address):
     try:
-        perseus.write(SETTINGS_READ_OFFSET, 14)
+        perseus.write(SETTINGS_READ_OFFSET, address)
         value = perseus.read(SETTINGS_READ_OFFSET) / 19898.0
         return value
     except Exception, e:
@@ -66,7 +66,7 @@ def get_GainTetrode2(perseus):
 
 def set_GainTetrode2(perseus, GainTetrode2, address):
     try:
-        value = address << 17 | (int(GainTetrode2) * 19898.0)
+        value = address << 17 | (int(GainTetrode2 * 19898.0))
         perseus.write(SETTINGS_WRITE_OFFSET, value)
     except Exception, e:
         raise e
