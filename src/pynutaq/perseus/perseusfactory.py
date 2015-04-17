@@ -38,10 +38,10 @@ from pynutaq.perseus.perseussimulated import PerseusSimulated
 
 
 class Perseus(object):
-    def new_perseus(self, perseus_type):
+    def new_perseus(self, perseus_type, perseus_ip):
         if perseus_type.lower() == 'simulated':
             return PerseusSimulated()
         elif perseus_type.lower() == 'loops':
-            return PerseusLoops()
+            return PerseusLoops(perseus_ip)
         elif perseus_type.lower() == 'diags':
-            return PerseusDiags()
+            return PerseusDiags(perseus_ip)

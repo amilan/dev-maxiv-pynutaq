@@ -61,7 +61,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ_WRITE,
                                    unit='',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    min_value=0, max_value=10,
                                    fget="get_KpA",
                                    fset="set_KpA",
@@ -73,7 +73,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ_WRITE,
                                    unit='',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    min_value=0, max_value=32767,
                                    fget="get_KiA",
                                    fset="set_KiA",
@@ -85,7 +85,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ_WRITE,
                                    unit='degrees',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    min_value=-180, max_value=360,
                                    fget="get_PhaseShiftCav",
                                    fset="set_PhaseShiftCav",
@@ -97,7 +97,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ_WRITE,
                                    unit='degrees',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    min_value=-180, max_value=360,
                                    fget="get_PhaseShiftFwcav",
                                    fset="set_PhaseShiftFwcav",
@@ -109,7 +109,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ_WRITE,
                                    unit='degrees',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    min_value=-180, max_value=360,
                                    fget="get_PhaseShiftFwtet1",
                                    fset="set_PhaseShiftFwtet1",
@@ -121,7 +121,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ_WRITE,
                                    unit='degrees',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    min_value=-180, max_value=360,
                                    fget="get_PhaseShiftFwtet2",
                                    fset="set_PhaseShiftFwtet2",
@@ -133,7 +133,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ_WRITE,
                                    unit='',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    min_value=0, max_value=1000,
                                    fget="get_PilimitA",
                                    fset="set_PilimitA",
@@ -145,7 +145,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ_WRITE,
                                    unit='',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    min_value=0, max_value=7,
                                    fget="get_SamplesToAverage",
                                    fset="set_SamplesToAverage",
@@ -157,7 +157,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ_WRITE,
                                    unit='',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    min_value=0, max_value=3,
                                    fget="get_FilterStages",
                                    fset="set_FilterStages",
@@ -169,7 +169,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ_WRITE,
                                    unit='degrees',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    min_value=-180, max_value=360,
                                    fget="get_PhaseShiftFwcircin",
                                    fset="set_PhaseShiftFwcircin",
@@ -181,7 +181,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ_WRITE,
                                    unit='degrees',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    min_value=-180, max_value=360,
                                    fget="get_PhaseShiftControlSignalTet1",
                                    fset="set_PhaseShiftControlSignalTet1",
@@ -193,7 +193,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ_WRITE,
                                    unit='degrees',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    min_value=-180, max_value=360,
                                    fget="get_PhaseShiftControlSignalTet2",
                                    fset="set_PhaseShiftControlSignalTet2",
@@ -205,7 +205,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ_WRITE,
                                    unit='',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    min_value=0.1, max_value=1,
                                    fget="get_GainTetrode1",
                                    fset="set_GainTetrode1",
@@ -217,7 +217,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ_WRITE,
                                    unit='',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    min_value=0.1, max_value=1,
                                    fget="get_GainTetrode2",
                                    fset="set_GainTetrode2",
@@ -229,7 +229,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ_WRITE,
                                    unit='',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    fget="get_AutomaticStartupEnable",
                                    fset="set_AutomaticStartupEnable",
                                    doc=""
@@ -240,7 +240,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ_WRITE,
                                    unit='',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    min_value=0, max_value=7,
                                    fget="get_CommandStart",
                                    fset="set_CommandStart",
@@ -252,7 +252,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ_WRITE,
                                    unit='mV',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    min_value=0, max_value=1000,
                                    fget="get_Amprefin",
                                    fset="set_Amprefin",
@@ -264,7 +264,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ_WRITE,
                                    unit='degrees',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    min_value=-180, max_value=360,
                                    fget="get_Phrefin",
                                    fset="set_Phrefin",
@@ -276,7 +276,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ_WRITE,
                                    unit='mV',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    min_value=0, max_value=1000,
                                    fget="get_Amprefmin",
                                    fset="set_Amprefmin",
@@ -288,7 +288,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ_WRITE,
                                    unit='degrees',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    min_value=-180, max_value=360,
                                    fget="get_Phrefmin",
                                    fset="set_Phrefmin",
@@ -300,7 +300,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ_WRITE,
                                    unit='',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    min_value=0, max_value=7,
                                    fget="get_PhaseIncreaseRate",
                                    fset="set_PhaseIncreaseRate",
@@ -312,7 +312,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ_WRITE,
                                    unit='',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    min_value=0, max_value=7,
                                    fget="get_VoltageIncreaseRate",
                                    fset="set_VoltageIncreaseRate",
@@ -324,7 +324,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ_WRITE,
                                    unit='',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    min_value=0.5, max_value=2,
                                    fget="get_GainOl",
                                    fset="set_GainOl",
@@ -336,7 +336,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ_WRITE,
                                    unit='',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    fget="get_SpareGpioOutput01",
                                    fset="set_SpareGpioOutput01",
                                    doc=""
@@ -347,7 +347,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ_WRITE,
                                    unit='',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    fget="get_SpareGpioOutput02",
                                    fset="set_SpareGpioOutput02",
                                    doc=""
@@ -358,7 +358,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ_WRITE,
                                    unit='',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    fget="get_SpareGpioOutput03",
                                    fset="set_SpareGpioOutput03",
                                    doc=""
@@ -369,7 +369,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ_WRITE,
                                    unit='',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    fget="get_SpareGpioOutput04",
                                    fset="set_SpareGpioOutput04",
                                    doc=""
@@ -380,7 +380,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ_WRITE,
                                    unit='',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    fget="get_FdlSwTrigger",
                                    fset="set_FdlSwTrigger",
                                    doc=""
@@ -391,7 +391,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ_WRITE,
                                    unit='',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    fget="get_SlowIqLoopEnable",
                                    fset="set_SlowIqLoopEnable",
                                    doc=""
@@ -402,7 +402,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ_WRITE,
                                    unit='',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    fget="get_AdcsPhaseshiftEnableA",
                                    fset="set_AdcsPhaseshiftEnableA",
                                    doc=""
@@ -413,7 +413,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ_WRITE,
                                    unit='',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    fget="get_DacsPhaseShiftEnableA",
                                    fset="set_DacsPhaseShiftEnableA",
                                    doc=""
@@ -424,7 +424,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ_WRITE,
                                    unit='',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    fget="get_SquarerefEnableA",
                                    fset="set_SquarerefEnableA",
                                    doc=""
@@ -435,21 +435,10 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ_WRITE,
                                    unit='',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    min_value=3, max_value=1000,
                                    fget="get_FreqsquareA",
                                    fset="set_FreqsquareA",
-                                   doc=""
-                                   )
-
-    ResetkiA = attribute(label='ResetkiA',
-                                   dtype=bool,
-                                   display_level=DispLevel.OPERATOR,
-                                   access=AttrWriteType.READ_WRITE,
-                                   unit='',
-                                   format='6.4f',
-                                   fget="get_ResetkiA",
-                                   fset="set_ResetkiA",
                                    doc=""
                                    )
 
@@ -458,7 +447,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ_WRITE,
                                    unit='',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    fget="get_LookRefA",
                                    fset="set_LookRefA",
                                    doc=""
@@ -469,7 +458,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ_WRITE,
                                    unit='',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    min_value=0, max_value=3,
                                    fget="get_QuadrantSelectionA",
                                    fset="set_QuadrantSelectionA",
@@ -481,7 +470,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ_WRITE,
                                    unit='',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    min_value=0, max_value=4,
                                    fget="get_SlowIqLoopInputSelection",
                                    fset="set_SlowIqLoopInputSelection",
@@ -493,7 +482,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ_WRITE,
                                    unit='',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    min_value=0, max_value=3,
                                    fget="get_FastIqLoopInputSelection",
                                    fset="set_FastIqLoopInputSelection",
@@ -505,7 +494,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ_WRITE,
                                    unit='',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    min_value=0, max_value=4,
                                    fget="get_AmplitudeLoopInputSelection",
                                    fset="set_AmplitudeLoopInputSelection",
@@ -517,7 +506,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ_WRITE,
                                    unit='',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    min_value=0, max_value=4,
                                    fget="get_PhaseLoopInputSelection",
                                    fset="set_PhaseLoopInputSelection",
@@ -529,7 +518,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ_WRITE,
                                    unit='',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    fget="get_PolarLoopsEnable",
                                    fset="set_PolarLoopsEnable",
                                    doc=""
@@ -540,7 +529,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ_WRITE,
                                    unit='',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    fget="get_FastIqLoopEnable",
                                    fset="set_FastIqLoopEnable",
                                    doc=""
@@ -551,7 +540,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ_WRITE,
                                    unit='',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    fget="get_AmplitudeLoopEnable",
                                    fset="set_AmplitudeLoopEnable",
                                    doc=""
@@ -562,7 +551,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ_WRITE,
                                    unit='',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    fget="get_PhaseLoopEnable",
                                    fset="set_PhaseLoopEnable",
                                    doc=""
@@ -573,7 +562,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ_WRITE,
                                    unit='',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    min_value=0, max_value=32767,
                                    fget="get_KpFastIqLoop",
                                    fset="set_KpFastIqLoop",
@@ -585,7 +574,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ_WRITE,
                                    unit='',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    min_value=0, max_value=32767,
                                    fget="get_KiFastIqLoop",
                                    fset="set_KiFastIqLoop",
@@ -597,7 +586,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ_WRITE,
                                    unit='',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    min_value=0, max_value=32767,
                                    fget="get_KpAmpLoop",
                                    fset="set_KpAmpLoop",
@@ -609,7 +598,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ_WRITE,
                                    unit='',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    min_value=0, max_value=32767,
                                    fget="get_KiAmpLoop",
                                    fset="set_KiAmpLoop",
@@ -621,7 +610,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ_WRITE,
                                    unit='',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    min_value=0, max_value=32767,
                                    fget="get_KpPhaseLoop",
                                    fset="set_KpPhaseLoop",
@@ -633,7 +622,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ_WRITE,
                                    unit='',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    min_value=0, max_value=32767,
                                    fget="get_KiPhaseLoop",
                                    fset="set_KiPhaseLoop",
@@ -645,7 +634,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ_WRITE,
                                    unit='mV',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    min_value=0, max_value=1000,
                                    fget="get_PiLimitFastPiIq",
                                    fset="set_PiLimitFastPiIq",
@@ -657,7 +646,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ_WRITE,
                                    unit='',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    fget="get_PulseModeEnableA",
                                    fset="set_PulseModeEnableA",
                                    doc=""
@@ -668,7 +657,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ_WRITE,
                                    unit='',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    fget="get_AutomaticConditioningEnableA",
                                    fset="set_AutomaticConditioningEnableA",
                                    doc=""
@@ -679,7 +668,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ_WRITE,
                                    unit='',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    min_value=0, max_value=100,
                                    fget="get_ConditioningdutyCicleA",
                                    fset="set_ConditioningdutyCicleA",
@@ -691,7 +680,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ_WRITE,
                                    unit='',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    fget="get_TuningEnableA",
                                    fset="set_TuningEnableA",
                                    doc=""
@@ -702,7 +691,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ_WRITE,
                                    unit='',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    fget="get_TuningPosEnA",
                                    fset="set_TuningPosEnA",
                                    doc=""
@@ -713,7 +702,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ_WRITE,
                                    unit='',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    min_value=0, max_value=65535,
                                    fget="get_NumStepsA",
                                    fset="set_NumStepsA",
@@ -725,7 +714,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ_WRITE,
                                    unit='',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    min_value=0, max_value=7,
                                    fget="get_PulsesFrequency",
                                    fset="set_PulsesFrequency",
@@ -737,7 +726,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ_WRITE,
                                    unit='degrees',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    min_value=-180, max_value=360,
                                    fget="get_PhaseOffsetA",
                                    fset="set_PhaseOffsetA",
@@ -749,7 +738,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ_WRITE,
                                    unit='',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    fget="get_MoveA",
                                    fset="set_MoveA",
                                    doc=""
@@ -760,7 +749,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ_WRITE,
                                    unit='',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    fget="get_MoveupA",
                                    fset="set_MoveupA",
                                    doc=""
@@ -771,7 +760,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ_WRITE,
                                    unit='',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    fget="get_TuningresetA",
                                    fset="set_TuningresetA",
                                    doc=""
@@ -782,7 +771,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ_WRITE,
                                    unit='',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    min_value=0, max_value=1000,
                                    fget="get_Fwmina",
                                    fset="set_Fwmina",
@@ -794,7 +783,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ_WRITE,
                                    unit='degrees',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    min_value=0, max_value=10,
                                    fget="get_MarginupA",
                                    fset="set_MarginupA",
@@ -806,7 +795,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ_WRITE,
                                    unit='degrees',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    min_value=0, max_value=5,
                                    fget="get_MarginlowA",
                                    fset="set_MarginlowA",
@@ -818,7 +807,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ_WRITE,
                                    unit='',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    min_value=0, max_value=3,
                                    fget="get_Tuningdelay",
                                    fset="set_Tuningdelay",
@@ -830,7 +819,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ_WRITE,
                                    unit='',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    fget="get_Tuningfilterenable",
                                    fset="set_Tuningfilterenable",
                                    doc=""
@@ -841,7 +830,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ_WRITE,
                                    unit='',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    fget="get_Tuningtriggerenable",
                                    fset="set_Tuningtriggerenable",
                                    doc=""
@@ -852,7 +841,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ_WRITE,
                                    unit='',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    fget="get_EpsItckDisable",
                                    fset="set_EpsItckDisable",
                                    doc=""
@@ -863,7 +852,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ_WRITE,
                                    unit='',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    fget="get_FimItckDisable",
                                    fset="set_FimItckDisable",
                                    doc=""
@@ -874,7 +863,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ_WRITE,
                                    unit='',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    min_value=0, max_value=128,
                                    fget="get_MDivider",
                                    fset="set_MDivider",
@@ -886,7 +875,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ_WRITE,
                                    unit='',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    min_value=0, max_value=128,
                                    fget="get_NDivider",
                                    fset="set_NDivider",
@@ -898,7 +887,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ_WRITE,
                                    unit='',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    min_value=0, max_value=4,
                                    fget="get_Muxsel",
                                    fset="set_Muxsel",
@@ -910,7 +899,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ_WRITE,
                                    unit='',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    min_value=0, max_value=4,
                                    fget="get_Mux0Divider",
                                    fset="set_Mux0Divider",
@@ -922,7 +911,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ_WRITE,
                                    unit='',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    min_value=0, max_value=4,
                                    fget="get_Mux1Divider",
                                    fset="set_Mux1Divider",
@@ -934,7 +923,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ_WRITE,
                                    unit='',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    min_value=0, max_value=4,
                                    fget="get_Mux2Divider",
                                    fset="set_Mux2Divider",
@@ -946,7 +935,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ_WRITE,
                                    unit='',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    min_value=0, max_value=4,
                                    fget="get_Mux3Divider",
                                    fset="set_Mux3Divider",
@@ -958,7 +947,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ_WRITE,
                                    unit='',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    min_value=0, max_value=4,
                                    fget="get_Mux4Divider",
                                    fset="set_Mux4Divider",
@@ -970,7 +959,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ_WRITE,
                                    unit='',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    fget="get_SendWord",
                                    fset="set_SendWord",
                                    doc=""
@@ -981,7 +970,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ_WRITE,
                                    unit='',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    fget="get_Cpdir",
                                    fset="set_Cpdir",
                                    doc=""
@@ -992,7 +981,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ_WRITE,
                                    unit='',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    fget="get_VcxoOutputInversion",
                                    fset="set_VcxoOutputInversion",
                                    doc=""
@@ -1003,7 +992,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    doc=""
                                    )
 
@@ -1012,7 +1001,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    doc=""
                                    )
 
@@ -1021,7 +1010,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    doc=""
                                    )
 
@@ -1030,7 +1019,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    doc=""
                                    )
 
@@ -1039,7 +1028,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    doc=""
                                    )
 
@@ -1048,7 +1037,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    doc=""
                                    )
 
@@ -1057,7 +1046,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    doc=""
                                    )
 
@@ -1066,7 +1055,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    doc=""
                                    )
 
@@ -1075,7 +1064,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    doc=""
                                    )
 
@@ -1084,7 +1073,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    doc=""
                                    )
 
@@ -1093,7 +1082,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    doc=""
                                    )
 
@@ -1102,7 +1091,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    doc=""
                                    )
 
@@ -1111,7 +1100,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    doc=""
                                    )
 
@@ -1120,7 +1109,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    doc=""
                                    )
 
@@ -1129,7 +1118,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    doc=""
                                    )
 
@@ -1138,7 +1127,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    doc=""
                                    )
 
@@ -1147,7 +1136,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    doc=""
                                    )
 
@@ -1156,7 +1145,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    doc=""
                                    )
 
@@ -1165,7 +1154,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    doc=""
                                    )
 
@@ -1174,7 +1163,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    doc=""
                                    )
 
@@ -1183,7 +1172,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    doc=""
                                    )
 
@@ -1192,7 +1181,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    doc=""
                                    )
 
@@ -1201,7 +1190,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    doc=""
                                    )
 
@@ -1210,7 +1199,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    doc=""
                                    )
 
@@ -1219,7 +1208,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    doc=""
                                    )
 
@@ -1228,7 +1217,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    doc=""
                                    )
 
@@ -1237,7 +1226,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    doc=""
                                    )
 
@@ -1246,7 +1235,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    doc=""
                                    )
 
@@ -1255,7 +1244,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    doc=""
                                    )
 
@@ -1264,7 +1253,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    doc=""
                                    )
 
@@ -1273,7 +1262,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    doc=""
                                    )
 
@@ -1282,7 +1271,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    doc=""
                                    )
 
@@ -1291,7 +1280,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    doc=""
                                    )
 
@@ -1300,7 +1289,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    doc=""
                                    )
 
@@ -1309,7 +1298,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    doc=""
                                    )
 
@@ -1318,7 +1307,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    doc=""
                                    )
 
@@ -1327,7 +1316,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    doc=""
                                    )
 
@@ -1336,7 +1325,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    doc=""
                                    )
 
@@ -1345,7 +1334,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    doc=""
                                    )
 
@@ -1354,7 +1343,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    doc=""
                                    )
 
@@ -1363,7 +1352,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='degrees',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    doc=""
                                    )
 
@@ -1372,7 +1361,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='degrees',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    doc=""
                                    )
 
@@ -1381,25 +1370,25 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='degrees',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    doc=""
                                    )
 
     Diag_Vaccum1 = attribute(label='Diag_Vaccum1',
-                                   dtype=float,
+                                   dtype=bool,
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    doc=""
                                    )
 
     Diag_Vaccum2 = attribute(label='Diag_Vaccum2',
-                                   dtype=float,
+                                   dtype=bool,
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    doc=""
                                    )
 
@@ -1408,7 +1397,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    doc=""
                                    )
 
@@ -1417,7 +1406,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    doc=""
                                    )
 
@@ -1426,7 +1415,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    doc=""
                                    )
 
@@ -1435,43 +1424,43 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    doc=""
                                    )
 
     Diag_VcxoPowered = attribute(label='Diag_VcxoPowered',
-                                   dtype=float,
+                                   dtype=bool,
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    doc=""
                                    )
 
     Diag_VcxoRef = attribute(label='Diag_VcxoRef',
-                                   dtype=float,
+                                   dtype=bool,
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    doc=""
                                    )
 
     Diag_VcxoLocked = attribute(label='Diag_VcxoLocked',
-                                   dtype=float,
+                                   dtype=bool,
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    doc=""
                                    )
 
     Diag_VcxoCableDisconnected = attribute(label='Diag_VcxoCableDisconnected',
-                                   dtype=float,
+                                   dtype=bool,
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    doc=""
                                    )
 
@@ -1480,7 +1469,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    doc=""
                                    )
 
@@ -1489,7 +1478,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    doc=""
                                    )
 
@@ -1498,7 +1487,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    doc=""
                                    )
 
@@ -1507,7 +1496,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    doc=""
                                    )
 
@@ -1516,7 +1505,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    doc=""
                                    )
 
@@ -1525,7 +1514,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    doc=""
                                    )
 
@@ -1534,7 +1523,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    doc=""
                                    )
 
@@ -1543,7 +1532,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    doc=""
                                    )
 
@@ -1552,7 +1541,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    doc=""
                                    )
 
@@ -1561,7 +1550,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    doc=""
                                    )
 
@@ -1570,7 +1559,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    doc=""
                                    )
 
@@ -1579,7 +1568,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    doc=""
                                    )
 
@@ -1588,7 +1577,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    doc=""
                                    )
 
@@ -1597,7 +1586,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    doc=""
                                    )
 
@@ -1606,7 +1595,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    doc=""
                                    )
 
@@ -1615,7 +1604,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    doc=""
                                    )
 
@@ -1624,7 +1613,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    doc=""
                                    )
 
@@ -1633,7 +1622,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    doc=""
                                    )
 
@@ -1642,7 +1631,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    doc=""
                                    )
 
@@ -1651,7 +1640,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    doc=""
                                    )
 
@@ -1660,97 +1649,97 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    doc=""
                                    )
 
-    Diag_IloopinputSlowpiIq = attribute(label='Diag_IloopinputSlowpiIq',
+    Diag_QloopinputSlowpiIq = attribute(label='Diag_QloopinputSlowpiIq',
                                    dtype=float,
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
-                                   format='6.4f',
-                                   doc=""
-                                   )
-
-    Diag_Fwmin = attribute(label='Diag_Fwmin',
-                                   dtype=float,
-                                   display_level=DispLevel.OPERATOR,
-                                   access=AttrWriteType.READ,
-                                   unit='',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    doc=""
                                    )
 
     Diag_MovingPlungerAuto = attribute(label='Diag_MovingPlungerAuto',
-                                   dtype=float,
+                                   dtype=bool,
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    doc=""
                                    )
 
     Diag_FreqUp = attribute(label='Diag_FreqUp',
-                                   dtype=float,
+                                   dtype=bool,
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    doc=""
                                    )
 
     Diag_ManualTuningOn = attribute(label='Diag_ManualTuningOn',
-                                   dtype=float,
+                                   dtype=bool,
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    doc=""
                                    )
 
     Diag_ManualTuningFreqUp = attribute(label='Diag_ManualTuningFreqUp',
-                                   dtype=float,
+                                   dtype=bool,
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='',
-                                   format='6.4f',
+                                   format='%6.2f',
+                                   doc=""
+                                   )
+
+    Diag_Fwmin = attribute(label='Diag_Fwmin',
+                                   dtype=bool,
+                                   display_level=DispLevel.OPERATOR,
+                                   access=AttrWriteType.READ,
+                                   unit='',
+                                   format='%6.2f',
                                    doc=""
                                    )
 
     Diag_EpsItckDelay = attribute(label='Diag_EpsItckDelay',
-                                   dtype=float,
+                                   dtype=bool,
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    doc=""
                                    )
 
     Diag_FimItckDelay = attribute(label='Diag_FimItckDelay',
-                                   dtype=float,
+                                   dtype=bool,
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    doc=""
                                    )
 
     Diag_FdlTrigHwInput = attribute(label='Diag_FdlTrigHwInput',
-                                   dtype=float,
+                                   dtype=bool,
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    doc=""
                                    )
 
     Diag_FdlTrigSwInput = attribute(label='Diag_FdlTrigSwInput',
-                                   dtype=float,
+                                   dtype=bool,
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    doc=""
                                    )
 
@@ -1759,7 +1748,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    doc=""
                                    )
 
@@ -1768,7 +1757,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    doc=""
                                    )
 
@@ -1777,7 +1766,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    doc=""
                                    )
 
@@ -1786,7 +1775,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    doc=""
                                    )
 
@@ -1795,7 +1784,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    doc=""
                                    )
 
@@ -1804,7 +1793,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    doc=""
                                    )
 
@@ -1813,7 +1802,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    doc=""
                                    )
 
@@ -1822,7 +1811,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    doc=""
                                    )
 
@@ -1831,7 +1820,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    doc=""
                                    )
 
@@ -1840,7 +1829,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    doc=""
                                    )
 
@@ -1849,7 +1838,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    doc=""
                                    )
 
@@ -1858,7 +1847,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    doc=""
                                    )
 
@@ -1867,7 +1856,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    doc=""
                                    )
 
@@ -1876,7 +1865,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    doc=""
                                    )
 
@@ -1885,7 +1874,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    doc=""
                                    )
 
@@ -1894,7 +1883,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    doc=""
                                    )
 
@@ -1903,7 +1892,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    doc=""
                                    )
 
@@ -1912,7 +1901,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    doc=""
                                    )
 
@@ -1921,7 +1910,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    doc=""
                                    )
 
@@ -1930,7 +1919,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    doc=""
                                    )
 
@@ -1939,7 +1928,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    doc=""
                                    )
 
@@ -1948,7 +1937,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    doc=""
                                    )
 
@@ -1957,7 +1946,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    doc=""
                                    )
 
@@ -1966,7 +1955,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    doc=""
                                    )
 
@@ -1975,7 +1964,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='degrees',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    doc=""
                                    )
 
@@ -1984,7 +1973,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='degrees',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    doc=""
                                    )
 
@@ -1993,7 +1982,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='degrees',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    doc=""
                                    )
 
@@ -2002,7 +1991,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='degrees',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    doc=""
                                    )
 
@@ -2011,7 +2000,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='degrees',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    doc=""
                                    )
 
@@ -2020,7 +2009,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='degrees',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    doc=""
                                    )
 
@@ -2029,7 +2018,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='degrees',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    doc=""
                                    )
 
@@ -2038,7 +2027,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='degrees',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    doc=""
                                    )
 
@@ -2047,7 +2036,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='degrees',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    doc=""
                                    )
 
@@ -2056,7 +2045,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='degrees',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    doc=""
                                    )
 
@@ -2065,7 +2054,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='degrees',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    doc=""
                                    )
 
@@ -2074,7 +2063,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='degrees',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    doc=""
                                    )
 
@@ -2083,7 +2072,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='degrees',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    doc=""
                                    )
 
@@ -2092,7 +2081,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='degrees',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    doc=""
                                    )
 
@@ -2101,7 +2090,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='degrees',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    doc=""
                                    )
 
@@ -2110,7 +2099,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='degrees',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    doc=""
                                    )
 
@@ -2119,7 +2108,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='degrees',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    doc=""
                                    )
 
@@ -2128,7 +2117,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='degrees',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    doc=""
                                    )
 
@@ -2137,7 +2126,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='degrees',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    doc=""
                                    )
 
@@ -2146,7 +2135,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='degrees',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    doc=""
                                    )
 
@@ -2155,7 +2144,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='degrees',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    doc=""
                                    )
 
@@ -2164,7 +2153,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='degrees',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    doc=""
                                    )
 
@@ -2173,7 +2162,7 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='degrees',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    doc=""
                                    )
 
@@ -2182,18 +2171,19 @@ class Nutaq(Device):
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='degrees',
-                                   format='6.4f',
+                                   format='%6.2f',
                                    doc=""
                                    )
 
 
     perseusType = device_property(dtype=str, default_value='simulated')
+    perseusIp = device_property(dtype=str, default_value='192.168.0.141')
     FDLPath = device_property(dtype=str, default_value='/tmp')
 
     def init_device(self):
         Device.init_device(self)
         try:
-            self.perseus = Perseus().new_perseus(self.perseusType)
+            self.perseus = Perseus().new_perseus(self.perseusType, self.perseusIp)
             self.set_state(DevState.ON)
         except Exception, e:
             print e
@@ -2483,14 +2473,6 @@ class Nutaq(Device):
         address = 104
         #@todo: add this method to special methods library ...
         extra_func.set_FreqsquareA(self.perseus, FreqsquareA, address)
-
-    @DebugIt()
-    def get_ResetkiA(self):
-        return perseus_utils.read_direct(self.perseus, 105)
-
-    @DebugIt()
-    def set_ResetkiA(self, ResetkiA):
-        perseus_utils.write_direct(self.perseus, ResetkiA, 105)
 
     @DebugIt()
     def get_LookRefA(self):
@@ -3185,12 +3167,8 @@ class Nutaq(Device):
         return self._Diag_IloopinputSlowpiIq
 
     @DebugIt()
-    def read_Diag_IloopinputSlowpiIq(self):
-        return self._Diag_IloopinputSlowpiIq
-
-    @DebugIt()
-    def read_Diag_Fwmin(self):
-        return self._Diag_Fwmin
+    def read_Diag_QloopinputSlowpiIq(self):
+        return self._Diag_QloopinputSlowpiIq
 
     @DebugIt()
     def read_Diag_MovingPlungerAuto(self):
@@ -3207,6 +3185,10 @@ class Nutaq(Device):
     @DebugIt()
     def read_Diag_ManualTuningFreqUp(self):
         return self._Diag_ManualTuningFreqUp
+
+    @DebugIt()
+    def read_Diag_Fwmin(self):
+        return self._Diag_Fwmin
 
     @DebugIt()
     def read_Diag_EpsItckDelay(self):
@@ -3463,16 +3445,16 @@ class Nutaq(Device):
         self._Diag_AngCavFw = perseus_utils.read_diag_angle(self.perseus, 40)
         self._Diag_AngCavL = perseus_utils.read_diag_angle(self.perseus, 41)
         self._Diag_AngFwL = perseus_utils.read_diag_angle(self.perseus, 42)
-        self._Diag_Vaccum1 = perseus_utils.read_direct(self.perseus, 43)
-        self._Diag_Vaccum2 = perseus_utils.read_direct(self.perseus, 44)
+        self._Diag_Vaccum1 = bool(perseus_utils.read_diag_direct(self.perseus, 43))
+        self._Diag_Vaccum2 = bool(perseus_utils.read_diag_direct(self.perseus, 44))
         self._Diag_IcontrolSlowpi = perseus_utils.read_diag_milivolts(self.perseus, 45)
         self._Diag_QcontrolSlowpi = perseus_utils.read_diag_milivolts(self.perseus, 46)
         self._Diag_IcontrolFastpi = perseus_utils.read_diag_milivolts(self.perseus, 47)
         self._Diag_QcontrolFastpi = perseus_utils.read_diag_milivolts(self.perseus, 48)
-        self._Diag_VcxoPowered = perseus_utils.read_direct(self.perseus, 50)
-        self._Diag_VcxoRef = perseus_utils.read_direct(self.perseus, 51)
-        self._Diag_VcxoLocked = perseus_utils.read_direct(self.perseus, 52)
-        self._Diag_VcxoCableDisconnected = perseus_utils.read_direct(self.perseus, 53)
+        self._Diag_VcxoPowered = bool(perseus_utils.read_diag_direct(self.perseus, 50))
+        self._Diag_VcxoRef = bool(perseus_utils.read_diag_direct(self.perseus, 51))
+        self._Diag_VcxoLocked = bool(perseus_utils.read_diag_direct(self.perseus, 52))
+        self._Diag_VcxoCableDisconnected = bool(perseus_utils.read_diag_direct(self.perseus, 53))
         self._Diag_IpolarForAmplitudeLoop = perseus_utils.read_diag_milivolts(self.perseus, 100)
         self._Diag_QpolarForAmplitudeLoop = perseus_utils.read_diag_milivolts(self.perseus, 101)
         self._Diag_IPolarForPhaseLoop = perseus_utils.read_diag_milivolts(self.perseus, 102)
@@ -3494,16 +3476,16 @@ class Nutaq(Device):
         self._Diag_IcontrolFastpiIq = perseus_utils.read_diag_milivolts(self.perseus, 118)
         self._Diag_QcontrolFastpiIq = perseus_utils.read_diag_milivolts(self.perseus, 119)
         self._Diag_IloopinputSlowpiIq = perseus_utils.read_diag_milivolts(self.perseus, 120)
-        self._Diag_IloopinputSlowpiIq = perseus_utils.read_diag_milivolts(self.perseus, 121)
-        self._Diag_Fwmin = perseus_utils.read_direct(self.perseus, 299)
-        self._Diag_MovingPlungerAuto = perseus_utils.read_direct(self.perseus, 300)
-        self._Diag_FreqUp = perseus_utils.read_direct(self.perseus, 301)
-        self._Diag_ManualTuningOn = perseus_utils.read_direct(self.perseus, 302)
-        self._Diag_ManualTuningFreqUp = perseus_utils.read_direct(self.perseus, 303)
-        self._Diag_EpsItckDelay = perseus_utils.read_direct(self.perseus, 400)
-        self._Diag_FimItckDelay = perseus_utils.read_direct(self.perseus, 401)
-        self._Diag_FdlTrigHwInput = perseus_utils.read_direct(self.perseus, 402)
-        self._Diag_FdlTrigSwInput = perseus_utils.read_direct(self.perseus, 403)
+        self._Diag_QloopinputSlowpiIq = perseus_utils.read_diag_milivolts(self.perseus, 121)
+        self._Diag_MovingPlungerAuto = bool(perseus_utils.read_diag_direct(self.perseus, 300))
+        self._Diag_FreqUp = bool(perseus_utils.read_diag_direct(self.perseus, 301))
+        self._Diag_ManualTuningOn = bool(perseus_utils.read_diag_direct(self.perseus, 302))
+        self._Diag_ManualTuningFreqUp = bool(perseus_utils.read_diag_direct(self.perseus, 303))
+        self._Diag_Fwmin = bool(perseus_utils.read_diag_direct(self.perseus, 307))
+        self._Diag_EpsItckDelay = bool(perseus_utils.read_diag_direct(self.perseus, 400))
+        self._Diag_FimItckDelay = bool(perseus_utils.read_diag_direct(self.perseus, 401))
+        self._Diag_FdlTrigHwInput = bool(perseus_utils.read_diag_direct(self.perseus, 402))
+        self._Diag_FdlTrigSwInput = bool(perseus_utils.read_diag_direct(self.perseus, 403))
         self._Diag_AmpControl = math.sqrt((self._Diag_Icontrol**2) + (self._Diag_Qcontrol**2))
         self._Diag_AmpSpare1 = math.sqrt((self._Diag_Ispare1**2) + (self._Diag_Qspare1**2))
         self._Diag_AmpSpare2 = math.sqrt((self._Diag_Ispare2**2) + (self._Diag_Qspare2**2))
@@ -3528,35 +3510,35 @@ class Nutaq(Device):
         self._Diag_AmpMuxfwtet1 = math.sqrt((self._Diag_IMuxFwTet1**2) + (self._Diag_QMuxFwTet1**2))
         self._Diag_AmpControl2 = math.sqrt((self._Diag_Icontrol2**2) + (self._Diag_Qcontrol2**2))
         self._Diag_AmpError = math.sqrt((self._Diag_Ierror**2) + (self._Diag_Qerror**2))
-        self._Diag_PhControl = math.atan2(self._Diag_Qcontrol, self._Diag_Icontrol)
-        self._Diag_PhSpare1 = math.atan2(self._Diag_Qspare1, self._Diag_Ispare1)
-        self._Diag_PhSpare2 = math.atan2(self._Diag_Qspare2, self._Diag_Ispare2)
-        self._Diag_PhCavloops = math.atan2(self._Diag_QcavLoops, self._Diag_IcavLoops)
-        self._Diag_PhControlfastpi = math.atan2(self._Diag_QcontrolFastpi, self._Diag_IcontrolFastpi)
-        self._Diag_PhPolarcontroloutput = math.atan2(self._Diag_QpolarControlOutput, self._Diag_IpolarControlOutput)
-        self._Diag_PhMuxfwcircin = math.atan2(self._Diag_QMuxFwCircIn, self._Diag_IMuxFwCircIn)
-        self._Diag_PhMuxfwcav = math.atan2(self._Diag_QMuxFwCav, self._Diag_IMuxFwCav)
-        self._Diag_PhRef = math.atan2(self._Diag_Qref, self._Diag_Iref)
-        self._Diag_PhMuxcav = math.atan2(self._Diag_QMuxCav, self._Diag_IMuxCav)
-        self._Diag_PhLoopinputslowpiiq = math.atan2(self._Diag_QloopinputSlowpiIq, self._Diag_IloopinputSlowpiIq)
-        self._Diag_PhFwtet2loops = math.atan2(self._Diag_QFwTet2Loops, self._Diag_IFwTet2Loops)
-        self._Diag_PhFwtet1loops = math.atan2(self._Diag_QFwTet1Loops, self._Diag_IFwTet1Loops)
-        self._Diag_PhErroraccum = math.atan2(self._Diag_Qerroraccum, self._Diag_Ierroraccum)
-        self._Diag_PhControlslowpi = math.atan2(self._Diag_QcontrolSlowpi, self._Diag_IcontrolSlowpi)
-        self._Diag_PhFwcavloops = math.atan2(self._Diag_QFwCavLoops, self._Diag_IFwCavLoops)
-        self._Diag_PhControlfastpiiq = math.atan2(self._Diag_QcontrolFastpiIq, self._Diag_IcontrolFastpiIq)
-        self._Diag_PhFwcircinloops = math.atan2(self._Diag_QFwCircInLoops, self._Diag_IFwCircInLoops)
-        self._Diag_PhMo = math.atan2(self._Diag_Qmo, self._Diag_Imo)
-        self._Diag_PhControl1 = math.atan2(self._Diag_Qcontrol1, self._Diag_Icontrol1)
-        self._Diag_PhMuxfwtet2 = math.atan2(self._Diag_QMuxFwTet2, self._Diag_IMuxFwTet2)
-        self._Diag_PhMuxfwtet1 = math.atan2(self._Diag_QMuxFwTet1, self._Diag_IMuxFwTet1)
-        self._Diag_PhControl2 = math.atan2(self._Diag_Qcontrol2, self._Diag_Icontrol2)
-        self._Diag_PhError = math.atan2(self._Diag_Qerror, self._Diag_Ierror)
+        self._Diag_PhControl = math.degrees(math.atan2(self._Diag_Qcontrol, self._Diag_Icontrol))
+        self._Diag_PhSpare1 = math.degrees(math.atan2(self._Diag_Qspare1, self._Diag_Ispare1))
+        self._Diag_PhSpare2 = math.degrees(math.atan2(self._Diag_Qspare2, self._Diag_Ispare2))
+        self._Diag_PhCavloops = math.degrees(math.atan2(self._Diag_QcavLoops, self._Diag_IcavLoops))
+        self._Diag_PhControlfastpi = math.degrees(math.atan2(self._Diag_QcontrolFastpi, self._Diag_IcontrolFastpi))
+        self._Diag_PhPolarcontroloutput = math.degrees(math.atan2(self._Diag_QpolarControlOutput, self._Diag_IpolarControlOutput))
+        self._Diag_PhMuxfwcircin = math.degrees(math.atan2(self._Diag_QMuxFwCircIn, self._Diag_IMuxFwCircIn))
+        self._Diag_PhMuxfwcav = math.degrees(math.atan2(self._Diag_QMuxFwCav, self._Diag_IMuxFwCav))
+        self._Diag_PhRef = math.degrees(math.atan2(self._Diag_Qref, self._Diag_Iref))
+        self._Diag_PhMuxcav = math.degrees(math.atan2(self._Diag_QMuxCav, self._Diag_IMuxCav))
+        self._Diag_PhLoopinputslowpiiq = math.degrees(math.atan2(self._Diag_QloopinputSlowpiIq, self._Diag_IloopinputSlowpiIq))
+        self._Diag_PhFwtet2loops = math.degrees(math.atan2(self._Diag_QFwTet2Loops, self._Diag_IFwTet2Loops))
+        self._Diag_PhFwtet1loops = math.degrees(math.atan2(self._Diag_QFwTet1Loops, self._Diag_IFwTet1Loops))
+        self._Diag_PhErroraccum = math.degrees(math.atan2(self._Diag_Qerroraccum, self._Diag_Ierroraccum))
+        self._Diag_PhControlslowpi = math.degrees(math.atan2(self._Diag_QcontrolSlowpi, self._Diag_IcontrolSlowpi))
+        self._Diag_PhFwcavloops = math.degrees(math.atan2(self._Diag_QFwCavLoops, self._Diag_IFwCavLoops))
+        self._Diag_PhControlfastpiiq = math.degrees(math.atan2(self._Diag_QcontrolFastpiIq, self._Diag_IcontrolFastpiIq))
+        self._Diag_PhFwcircinloops = math.degrees(math.atan2(self._Diag_QFwCircInLoops, self._Diag_IFwCircInLoops))
+        self._Diag_PhMo = math.degrees(math.atan2(self._Diag_Qmo, self._Diag_Imo))
+        self._Diag_PhControl1 = math.degrees(math.atan2(self._Diag_Qcontrol1, self._Diag_Icontrol1))
+        self._Diag_PhMuxfwtet2 = math.degrees(math.atan2(self._Diag_QMuxFwTet2, self._Diag_IMuxFwTet2))
+        self._Diag_PhMuxfwtet1 = math.degrees(math.atan2(self._Diag_QMuxFwTet1, self._Diag_IMuxFwTet1))
+        self._Diag_PhControl2 = math.degrees(math.atan2(self._Diag_Qcontrol2, self._Diag_Icontrol2))
+        self._Diag_PhError = math.degrees(math.atan2(self._Diag_Qerror, self._Diag_Ierror))
 
     @command
     def tuning_reset(self):
-        perseus_utils.write_direct(True, TUNING_RESET_ADDRESS)
-        perseus_utils.write_direct(False, TUNING_RESET_ADDRESS)
+        perseus_utils.write_direct(self.perseus, True, TUNING_RESET_ADDRESS)
+        perseus_utils.write_direct(self.perseus, False, TUNING_RESET_ADDRESS)
 
     @command
     def sw_fast_data_logger(self):

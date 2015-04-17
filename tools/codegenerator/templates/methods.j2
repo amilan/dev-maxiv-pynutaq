@@ -12,6 +12,28 @@
         perseus_utils.write_milivolts(self.perseus, {{attribute.name}}, {{attribute.address}})
     {% endif %}
 
+{% elif attribute.type == "dmv" %}
+    @DebugIt()
+    def get_{{attribute.name}}(self):
+        return perseus_utils.read_settings_diag_milivolts(self.perseus, {{attribute.address}})
+
+    {% if attribute.access == "read_write" %}
+    @DebugIt()
+    def set_{{attribute.name}}(self, {{attribute.name}}):
+        perseus_utils.write_settings_diag_milivolts(self.perseus, {{attribute.name}}, {{attribute.address}})
+    {% endif %}
+
+{% elif attribute.type == "percentage" %}
+    @DebugIt()
+    def get_{{attribute.name}}(self):
+        return perseus_utils.read_settings_diag_percentage(self.perseus, {{attribute.address}})
+
+    {% if attribute.access == "read_write" %}
+    @DebugIt()
+    def set_{{attribute.name}}(self, {{attribute.name}}):
+        perseus_utils.write_settings_diag_percentage(self.perseus, {{attribute.name}}, {{attribute.address}})
+    {% endif %}
+
 {% elif attribute.type == "angle" %}
     @DebugIt()
     def get_{{attribute.name}}(self):
@@ -32,6 +54,20 @@
     @DebugIt()
     def set_{{attribute.name}}(self, {{attribute.name}}):
         perseus_utils.write_direct(self.perseus, {{attribute.name}}, {{attribute.address}})
+    {% endif %}
+
+{% elif attribute.type == "special_fim" %}
+    @DebugIt()
+    def get_{{attribute.name}}(self):
+        value = perseus_utils.read_direct(self.perseus,{{attribute.address}})
+        self._{{attribute.name}} = (value >> {{attribute.pos}}) & 1
+        return self._{{attribute.name}}
+
+    {% if attribute.access == "read_write" %}
+    @DebugIt()
+    def set_{{attribute.name}}(self, {{attribute.name}}):
+        self._{{attribute.name}} = {{attribute.name}}
+        self.update_fim()
     {% endif %}
 
 {% else %}
@@ -55,9 +91,28 @@
 
 {% block diag_methods %}
 {% for attribute in diags_attributes %}
+{% if attribute.type == "special_itck" %}
+    @DebugIt()
+    def read_Diag_{{attribute.name}}(self):
+        address = {{attribute.address}}
+        position = {{attribute.pos}}
+        if self._itck_number == 0:
+            address = 150
+        else:
+            address = address + self._itck_number
+        return extra_func.read_diag_bit_direct(self.perseus, address, position)
+
+{% elif attribute.type == "special_itck_out" %}
+    @DebugIt()
+    def read_Diag_{{attribute.name}}(self):
+        address = {{attribute.address}}
+        return extra_func.read_diag_bit_direct(self.perseus, address, {{attribute.pos}})
+
+{% else %}
     @DebugIt()
     def read_Diag_{{attribute.name}}(self):
         return self._Diag_{{attribute.name}}
+{% endif %}
 
 {% endfor %}
     @command
@@ -65,16 +120,16 @@
         perseus_utils.start_reading_diagnostics(self.perseus)
 
 {% for attribute in diags_attributes %}
-        {% if attribute.type == 'mv' and attribute.access != 'read_diag_amp' %}
+        {% if attribute.type == 'bool' %}
+        self._Diag_{{attribute.name}} = bool(perseus_utils.read_diag_direct(self.perseus, {{attribute.address}}))
+        {% elif attribute.type == 'mv' and attribute.access != 'read_diag_amp' %}
         self._Diag_{{attribute.name}} = perseus_utils.read_diag_milivolts(self.perseus, {{attribute.address}})
         {% elif attribute.type == 'angle' and attribute.access != 'read_diag_ph' %}
         self._Diag_{{attribute.name}} = perseus_utils.read_diag_angle(self.perseus, {{attribute.address}})
-        {% elif attribute.type == 'bool' %}
-        self._Diag_{{attribute.name}} = perseus_utils.read_direct(self.perseus, {{attribute.address}})
         {% elif attribute.type == 'mv' and attribute.access == 'read_diag_amp' %}
         self._Diag_{{attribute.name}} = math.sqrt((self._Diag_{{attribute.i_parent}}**2) + (self._Diag_{{attribute.q_parent}}**2))
         {% elif attribute.type == 'angle' and attribute.access == 'read_diag_ph' %}
-        self._Diag_{{attribute.name}} = math.atan2(self._Diag_{{attribute.q_parent}}, self._Diag_{{attribute.i_parent}})
+        self._Diag_{{attribute.name}} = math.degrees(math.atan2(self._Diag_{{attribute.q_parent}}, self._Diag_{{attribute.i_parent}}))
         {% endif %}
 {% endfor %}
 {% endblock %}

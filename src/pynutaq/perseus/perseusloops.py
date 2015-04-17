@@ -46,8 +46,8 @@ MI125_CLK_SRC = "bottomfmc"
 
 class PerseusLoops(object):
 
-    def __init__(self):
-        self.perseus_ip = PERSEUS_LOOP_IP
+    def __init__(self, perseus_ip=PERSEUS_LOOP_IP):
+        self.perseus_ip = perseus_ip
 
         eapi.eapi_init()
         self._board_state = eapi.connection_state()
@@ -201,8 +201,8 @@ class PerseusLoops(object):
         # Back to the old API ... @todo: to be remove
         with open(filename, 'wb') as file:
             ret, rsize, data = eapi.ram_get(self._board_state, channel, startaddr, neededsize, framesize, framegap)
-            if ret<0:
-                raise adp_exception(ret)
+            # if ret<0:
+            #     raise adp_exception(ret)
             if (neededsize != bufsize):
                 if (bufsize + useoffset) > rsize:
                     print 'WARNING: not enough data in buffer to offset correctly, offset: ', useoffset

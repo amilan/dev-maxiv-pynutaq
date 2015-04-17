@@ -62,25 +62,58 @@ class NutaqDiags(Device):
 {% endblock %}
 
 {% block static_methods %}
+    ItckNumber = attribute(label='ItckNumber',
+                       dtype=int,
+                       display_level=DispLevel.OPERATOR,
+                       access=AttrWriteType.READ_WRITE,
+                       unit='',
+                       format='%6.2f',
+                       min_value=0, max_value=7,
+                       fget="get_ItckNumber",
+                       fset="set_ItckNumber",
+                       doc=""
+                       )
+
     perseusType = device_property(dtype=str, default_value='simulated')
+    perseusIp = device_property(dtype=str, default_value='192.168.0.142')
     FDLPath = device_property(dtype=str, default_value='/tmp')
 
     def init_device(self):
+        self._itck_number = 0
         Device.init_device(self)
         try:
-            self.perseus = Perseus().new_perseus(self.perseusType)
+            self.perseus = Perseus().new_perseus(self.perseusType, self.perseusIp)
             self.set_state(DevState.ON)
         except Exception, e:
             print e
             self.set_state(DevState.FAULT)
+
+    @DebugIt()
+    def get_ItckNumber(self):
+        return self._itck_number
+
+    @DebugIt()
+    def set_ItckNumber(self, ItckNumber):
+        self._itck_number = ItckNumber
 
 {% endblock %}
 
 {% block end_code %}
     @command
     def tuning_reset(self):
-        perseus_utils.write_direct(True, TUNING_RESET_ADDRESS)
-        perseus_utils.write_direct(False, TUNING_RESET_ADDRESS)
+        perseus_utils.write_direct(self.perseus, True, DIAG_TUNING_RESET_ADDRESS)
+        perseus_utils.write_direct(self.perseus, False, DIAG_TUNING_RESET_ADDRESS)
+
+    @command
+    def reset_manual_itck(self):
+        perseus_utils.write_direct(self.perseus, True, RESET_MANUAL_ITCK_ADDRESS)
+        perseus_utils.write_direct(self.perseus, False, RESET_MANUAL_ITCK_ADDRESS)
+
+    @command
+    def reset_itck(self):
+        perseus_utils.write_direct(self.perseus, True, RESET_ITCK_ADDRESS)
+        perseus_utils.write_direct(self.perseus, False, RESET_ITCK_ADDRESS)
+
 
     @command
     def sw_fast_data_logger(self):
@@ -112,6 +145,139 @@ class NutaqDiags(Device):
         # Restart RAM
         self.perseus.init_fast_data_logger()
 
+    def update_fim(self):
+        self.update_RvTet1()
+        self.update_RvTet2()
+        self.update_RvCircIn()
+        self.update_FwLoad()
+        self.update_FwHybLoad()
+        self.update_RvCav()
+        self.update_Arc()
+        self.update_Vacuum()
+        self.update_Manual()
+        self.update_EndSwUp()
+        self.update_EndSwDown()
+        self.update_Mps()
+
+    def update_RvTet1(self):
+        bit0=self._DisitckRvtet1Dacsoffloopsstby
+        bit1=self._DisitckRvtet1Pindiodeswitch
+        bit2=self._DisitckRvtet1Fdltrg
+        bit3=self._DisitckRvtet1Plctxoff
+        bit4=self._DisitckRvtet1Mps
+        bit5=self._DisitckRvtet1Diag
+        value = (bit5 << 5) | (bit4 << 4) | (bit3 << 3) | (bit2 << 2) | (bit1 << 1) | (bit0 << 0)
+        perseus_utils.write_direct(self.perseus, value, 7)
+
+    def update_RvTet2(self):
+        bit0=self._DisitckRvtet2Dacsoffloopsstby
+        bit1=self._DisitckRvtet2Pindiodeswitch
+        bit2=self._DisitckRvtet2Fdltrg
+        bit3=self._DisitckRvtet2Plctxoff
+        bit4=self._DisitckRvtet2Mps
+        bit5=self._DisitckRvtet2Diag
+        value = (bit5 << 5) | (bit4 << 4) | (bit3 << 3) | (bit2 << 2) | (bit1 << 1) | (bit0 << 0)
+        perseus_utils.write_direct(self.perseus, value, 8)
+
+    def update_RvCircIn(self):
+        bit0=self._DisitckRvcircDacsoffloopsstby
+        bit1=self._DisitckRvcircPindiodeswitch
+        bit2=self._DisitckRvcircFdltrg
+        bit3=self._DisitckRvcircPlctxoff
+        bit4=self._DisitckRvcircMps
+        bit5=self._DisitckRvcircDiag
+        value = (bit5 << 5) | (bit4 << 4) | (bit3 << 3) | (bit2 << 2) | (bit1 << 1) | (bit0 << 0)
+        perseus_utils.write_direct(self.perseus, value, 9)
+
+    def update_FwLoad(self):
+        bit0=self._DisitckFwloadDacsoffloopsstby
+        bit1=self._DisitckFwloadPindiodeswitch
+        bit2=self._DisitckFwloadFdltrg
+        bit3=self._DisitckFwloadPlctxoff
+        bit4=self._DisitckFwloadMps
+        bit5=self._DisitckFwloadDiag
+        value = (bit5 << 5) | (bit4 << 4) | (bit3 << 3) | (bit2 << 2) | (bit1 << 1) | (bit0 << 0)
+        perseus_utils.write_direct(self.perseus, value, 10)
+
+    def update_FwHybLoad(self):
+        bit0=self._DisitckFwhybloadDacsoffloopsstby
+        bit1=self._DisitckFwhybloadPindiodeswitch
+        bit2=self._DisitckFwhybloadFdltrg
+        bit3=self._DisitckFwhybloadPlctxoff
+        bit4=self._DisitckFwhybloadMps
+        bit5=self._DisitckFwhybloadDiag
+        value = (bit5 << 5) | (bit4 << 4) | (bit3 << 3) | (bit2 << 2) | (bit1 << 1) | (bit0 << 0)
+        perseus_utils.write_direct(self.perseus, value, 11)
+
+    def update_RvCav(self):
+        bit0=self._DisitckRvcavDacsoffloopsstby
+        bit1=self._DisitckRvcavPindiodeswitch
+        bit2=self._DisitckRvcavFdltrg
+        bit3=self._DisitckRvcavPlctxoff
+        bit4=self._DisitckRvcavMps
+        bit5=self._DisitckRvcavDiag
+        value = (bit5 << 5) | (bit4 << 4) | (bit3 << 3) | (bit2 << 2) | (bit1 << 1) | (bit0 << 0)
+        perseus_utils.write_direct(self.perseus, value, 12)
+
+    def update_Arc(self):
+        bit0=self._DisitckArcsDacsoffloopsstby
+        bit1=self._DisitckArcsPindiodeswitch
+        bit2=self._DisitckArcsFdltrg
+        bit3=self._DisitckArcsPlctxoff
+        bit4=self._DisitckArcsMps
+        bit5=self._DisitckArcsDiag
+        value = (bit5 << 5) | (bit4 << 4) | (bit3 << 3) | (bit2 << 2) | (bit1 << 1) | (bit0 << 0)
+        perseus_utils.write_direct(self.perseus, value, 13)
+
+    def update_Vacuum(self):
+        bit0=self._DisitckVacuumDacsoffloopsstby
+        bit1=self._DisitckVacuumPindiodeswitch
+        bit2=self._DisitckVacuumFdltrg
+        bit3=self._DisitckVacuumPlctxoff
+        bit4=self._DisitckVacuumMps
+        bit5=self._DisitckVacuumDiag
+        value = (bit5 << 5) | (bit4 << 4) | (bit3 << 3) | (bit2 << 2) | (bit1 << 1) | (bit0 << 0)
+        perseus_utils.write_direct(self.perseus, value, 14)
+
+    def update_Manual(self):
+        bit0=self._DisitckManualInterlockDacsoffloopsstby
+        bit1=self._DisitckManualInterlockPindiodeswitch
+        bit2=self._DisitckManualInterlockFdltrg
+        bit3=self._DisitckManualInterlockPlctxoff
+        bit4=self._DisitckManualInterlockMps
+        bit5=self._DisitckManualInterlockDiag
+        value = (bit5 << 5) | (bit4 << 4) | (bit3 << 3) | (bit2 << 2) | (bit1 << 1) | (bit0 << 0)
+        perseus_utils.write_direct(self.perseus, value, 15)
+
+    def update_EndSwUp(self):
+        bit0=self._DisitckPlungerEndSwitchesUpDacsoffloopsstby
+        bit1=self._DisitckPlungerEndSwitchesUpPindiodeswitch
+        bit2=self._DisitckPlungerEndSwitchesUpFdltrg
+        bit3=self._DisitckPlungerEndSwitchesUpPlctxoff
+        bit4=self._DisitckPlungerEndSwitchesUpMps
+        bit5=self._DisitckPlungerEndSwitchesUpDiag
+        value = (bit5 << 5) | (bit4 << 4) | (bit3 << 3) | (bit2 << 2) | (bit1 << 1) | (bit0 << 0)
+        perseus_utils.write_direct(self.perseus, value, 16)
+
+    def update_EndSwDown(self):
+        bit0=self._DisitckPlungerEndSwitchesDownDacsoffloopsstby
+        bit1=self._DisitckPlungerEndSwitchesDownPindiodeswitch
+        bit2=self._DisitckPlungerEndSwitchesDownFdltrg
+        bit3=self._DisitckPlungerEndSwitchesDownPlctxoff
+        bit4=self._DisitckPlungerEndSwitchesDownMps
+        bit5=self._DisitckPlungerEndSwitchesDownDiag
+        value = (bit5 << 5) | (bit4 << 4) | (bit3 << 3) | (bit2 << 2) | (bit1 << 1) | (bit0 << 0)
+        perseus_utils.write_direct(self.perseus, value, 17)
+
+    def update_Mps(self):
+        bit0=self._DisitckMpsDacsoffloopsstby
+        bit1=self._DisitckMpsPindiodeswitch
+        bit2=self._DisitckMpsFdltrg
+        bit3=self._DisitckMpsPlctxoff
+        bit4=self._DisitckMpsMps
+        bit5=self._DisitckMpsDiag
+        value = (bit5 << 5) | (bit4 << 4) | (bit3 << 3) | (bit2 << 2) | (bit1 << 1) | (bit0 << 0)
+        perseus_utils.write_direct(self.perseus, value, 18)
 
 def run_device():
     run([NutaqDiags])

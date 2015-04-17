@@ -62,12 +62,13 @@ class Nutaq(Device):
 
 {% block static_methods %}
     perseusType = device_property(dtype=str, default_value='simulated')
+    perseusIp = device_property(dtype=str, default_value='192.168.0.141')
     FDLPath = device_property(dtype=str, default_value='/tmp')
 
     def init_device(self):
         Device.init_device(self)
         try:
-            self.perseus = Perseus().new_perseus(self.perseusType)
+            self.perseus = Perseus().new_perseus(self.perseusType, self.perseusIp)
             self.set_state(DevState.ON)
         except Exception, e:
             print e
@@ -78,8 +79,8 @@ class Nutaq(Device):
 {% block end_code %}
     @command
     def tuning_reset(self):
-        perseus_utils.write_direct(True, TUNING_RESET_ADDRESS)
-        perseus_utils.write_direct(False, TUNING_RESET_ADDRESS)
+        perseus_utils.write_direct(self.perseus, True, TUNING_RESET_ADDRESS)
+        perseus_utils.write_direct(self.perseus, False, TUNING_RESET_ADDRESS)
 
     @command
     def sw_fast_data_logger(self):

@@ -85,6 +85,58 @@ def write_milivolts(perseus, milivolts, address):
     value = address << 17 | int(value)
     perseus.write(SETTINGS_WRITE_OFFSET, value)
 
+def read_settings_diag_milivolts(perseus, address):
+    """
+        This method converts the value readed from a register in milivolts usign the following formula:
+        VALUE = ROUND(P23*1000/32767*1,6467602581;0)
+    :param value: value read from a register.
+    :return: value converted in milivolts
+    """
+    perseus.write(SETTINGS_READ_OFFSET, address)
+    value = perseus.read(SETTINGS_READ_OFFSET)
+
+    milis = value * 1000.0 / 32767
+    return milis
+
+def write_settings_diag_milivolts(perseus, milivolts, address):
+    """
+        This method converts the value from milivolts to bit to be written in the register usign the following
+        formula:
+        VALUE =ROUND(E23/1000*32767/1,6467602581;0)
+    :param value: value to be converted.
+    :return: value to write in the register.
+    """
+    value = (milivolts / 1000.0) * 32767
+
+    value = address << 17 | int(value)
+    perseus.write(SETTINGS_WRITE_OFFSET, value)
+
+def read_settings_diag_percentage(perseus, address):
+    """
+        This method converts the value readed from a register in milivolts usign the following formula:
+        VALUE = ROUND(P23*1000/32767*1,6467602581;0)
+    :param value: value read from a register.
+    :return: value converted in milivolts
+    """
+    perseus.write(SETTINGS_READ_OFFSET, address)
+    value = perseus.read(SETTINGS_READ_OFFSET)
+
+    percentage = value * 100.0 / 32767
+    return percentage
+
+def write_settings_diag_percentage(perseus, percentage, address):
+    """
+        This method converts the value from milivolts to bit to be written in the register usign the following
+        formula:
+        VALUE =ROUND(E23/1000*32767/1,6467602581;0)
+    :param value: value to be converted.
+    :return: value to write in the register.
+    """
+    value = (percentage / 100.0) * 32767
+
+    value = address << 17 | int(value)
+    perseus.write(SETTINGS_WRITE_OFFSET, value)
+
 def read_direct(perseus, address):
     perseus.write(SETTINGS_READ_OFFSET, address)
     value = perseus.read(SETTINGS_READ_OFFSET)
@@ -105,6 +157,11 @@ def read_diag_angle(perseus, address):
     else:
         angle = value * 180.0 / 32767
     return angle
+
+def read_diag_direct(perseus, address):
+    perseus.write(DIAGNOSTICS_OFFSET, address)
+    value = perseus.read(DIAGNOSTICS_OFFSET)
+    return value
 
 def read_diag_milivolts(perseus, address):
     perseus.write(DIAGNOSTICS_OFFSET, address)
