@@ -52,7 +52,7 @@ class Mo1000(object):
 
         print "DONE"
 
-        self.configure_800MHZ()
+        # self.configure_800MHZ()
 
         self.configure_dacs()
 
@@ -60,11 +60,11 @@ class Mo1000(object):
 
         self.configure_ports()
 
-        self.pll_calibration()
+        # self.pll_calibration()
 
-        self.pll_sync()
+        # self.pll_sync()
 
-        self.get_status()
+        # self.get_status()
 
         self.calibration()
 
@@ -86,7 +86,8 @@ class Mo1000(object):
 
     @ensure_write_method
     def write(self, board_number, device, address, value):
-        return eapi.Mo1000_WriteReg_send(self._board_state, board_number, device, address, value)
+        # return eapi.Mo1000_WriteReg_send(self._board_state, board_number, device, address, value)
+        return eapi.Mo1000_WriteClockConfig_send(self._board_state, board_number)
 
     def configure_800MHZ(self):
         print "MO1000 1 configure 80MHz ext (DAC 80MSPS 1X)..."
@@ -106,11 +107,12 @@ class Mo1000(object):
 
     def configure_clock(self):
         print "MO1000 1 clock configuration (ignore mmcm lock error from here)"
-        src_clk = "125mhz"
+        src_clk = "ext"
         src_clk = getattr(eapi, "eMo1000ClkSrc" + src_clk.capitalize())
         master_clk_mode = "manual"
         master_clk_mode = getattr(eapi, "eMo1000MasterClk" + master_clk_mode.capitalize())
-        ret = eapi.Mo1000_SetClockConfig_send(self._board_state,1, src_clk, 0, 80000000, master_clk_mode, 80000000)
+        ret = eapi.Mo1000_SetClockConfig_send(self._board_state,1, src_clk, 80000000, 80000000, master_clk_mode, 80000000)
+        ret = eapi.Mo1000_WriteClockConfig_send(self._board_state, self._board_number)
         print "DONE (end ignore mmcm lock error)"
 
     def configure_ports(self):
@@ -148,8 +150,8 @@ class Mo1000(object):
         print "MO1000 1 calibration"
         ret = eapi.Mo1000_DoDacCalibration_send(self._board_state, self._board_number)
         print "DONE"
-        ret, uChannelLaneCalib, uChannelFrameCalib, uChannelSyncCalib, uCalibStatus = eapi.Mo1000_GetChannelCalibStatus_send(
-            self._board_state, self._board_number)
+        # ret, uChannelLaneCalib, uChannelFrameCalib, uChannelSyncCalib, uCalibStatus = eapi.Mo1000_GetChannelCalibStatus_send(
+        #    self._board_state, self._board_number)
 
     def enable_dac_outputs(self):
         print "MO1000 1 enable dac outputs"
