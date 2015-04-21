@@ -19,12 +19,13 @@
 #     along with this program.  If not, see [http://www.gnu.org/licenses/].
 ###############################################################################
 
-from pynutaq.nutaq.nutaq import run_device
 import sys
 
-NUTAQPATH = '/opt/Nutaq/ADP6/ADP_MicroTCA/sdk/bin'
+NUTAQPATH = ["/opt/Nutaq/ADP6/ADP_MicroTCA/sdk/bin"]
 
-sys.path.append(NUTAQPATH)
+sys.path.extend(NUTAQPATH)
+
+from pynutaq.nutaq.nutaq import run_device
 
 run_device()
 
