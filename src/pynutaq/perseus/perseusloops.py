@@ -220,3 +220,24 @@ class PerseusLoops(object):
     @ensure_read_method
     def get_transfer_over_register(self):
         return self.custom_read(RAM_TRANSFER_REGISTER)
+
+    def check_transfer_done(self, timeout):
+        ret, addr, trigoffset = eapi.recplay_record_check_transfer_done(self._board_state, timeout)
+
+    def fast_data_logger(self, filename):
+        print "# Ram init"
+        self.init_fast_data_logger()
+
+        print "# record data at 125Mhz/sec for 2944000 bytes ..."
+        self.start_recording_data_in_ram(2944000, 1)
+
+        print "# Wait for trigger and record data ready"
+        self.write(0x70000040, 0x400000)
+        self.write(0x70000040, 0x400001)
+        self.write(0x70000040, 0x400000)
+
+        print "# Waiting for transfer done"
+        self.check_transfer_done(200)
+
+        print "# Get ram data to host"
+        self.get_ram_data(filename, 0, 65536, 1024, 50000)
