@@ -45,8 +45,8 @@ from pynutaq.perseus.perseusutils import read_direct, write_direct, read_diag_di
 
 def get_GainTetrode1(perseus, address):
     try:
-        perseus.write(SETTINGS_READ_OFFSET, address)
-        value = perseus.read(SETTINGS_READ_OFFSET) / 19898.0
+        perseus.write(SETTINGS_READ_OFFSET_A, address)
+        value = perseus.read(SETTINGS_READ_OFFSET_A) / 19898.0
         return value
     except Exception, e:
         raise e
@@ -54,14 +54,14 @@ def get_GainTetrode1(perseus, address):
 def set_GainTetrode1(perseus, GainTetrode1, address):
     try:
         value = address << 17 | (int(GainTetrode1 * 19898.0))
-        perseus.write(SETTINGS_WRITE_OFFSET, value)
+        perseus.write(SETTINGS_WRITE_OFFSET_A, value)
     except Exception, e:
         raise e
 
 def get_GainTetrode2(perseus, address):
     try:
-        perseus.write(SETTINGS_READ_OFFSET, address)
-        value = perseus.read(SETTINGS_READ_OFFSET) / 19898.0
+        perseus.write(SETTINGS_READ_OFFSET_A, address)
+        value = perseus.read(SETTINGS_READ_OFFSET_A) / 19898.0
         return value
     except Exception, e:
         raise e
@@ -69,14 +69,14 @@ def get_GainTetrode2(perseus, address):
 def set_GainTetrode2(perseus, GainTetrode2, address):
     try:
         value = address << 17 | (int(GainTetrode2 * 19898.0))
-        perseus.write(SETTINGS_WRITE_OFFSET, value)
+        perseus.write(SETTINGS_WRITE_OFFSET_A, value)
     except Exception, e:
         raise e
 
 def get_GainOl(perseus, address):
     try:
-        perseus.write(SETTINGS_READ_OFFSET, address)
-        value = perseus.read(SETTINGS_READ_OFFSET)
+        perseus.write(SETTINGS_READ_OFFSET_A, address)
+        value = perseus.read(SETTINGS_READ_OFFSET_A)
         # value = math.floor((value * 2.0) / 127)
         value = (value * 2.0) / 127
         return value
@@ -87,15 +87,15 @@ def set_GainOl(perseus, GainOl, address):
     try:
         value = math.ceil((GainOl/2.0) * 127)
         value = address << 17 | int(value)
-        perseus.write(SETTINGS_WRITE_OFFSET, value)
+        perseus.write(SETTINGS_WRITE_OFFSET_A, value)
     except Exception, e:
         raise e
 
 def get_FreqsquareA(perseus, address):
     try:
         # @warning: read direct??
-        perseus.write(SETTINGS_READ_OFFSET, address)
-        value = perseus.read(SETTINGS_READ_OFFSET) / 80000.0
+        perseus.write(SETTINGS_READ_OFFSET_A, address)
+        value = perseus.read(SETTINGS_READ_OFFSET_A) / 80000.0
         return value
     except Exception, e:
         raise e
@@ -104,7 +104,7 @@ def set_FreqsquareA(perseus, FreqsquareA, address):
     try:
         value = ((1 / FreqsquareA) * 1000000.0) / 12.5
         value = address << 17 | int(value)
-        perseus.write(SETTINGS_WRITE_OFFSET, value)
+        perseus.write(SETTINGS_WRITE_OFFSET_A, value)
     except Exception, e:
         raise e
 

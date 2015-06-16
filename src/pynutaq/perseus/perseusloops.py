@@ -127,7 +127,7 @@ class PerseusLoops(object):
                   0x025A0001, 0x026A0222, 0x026C00B6, 0x03220001]
 
         for i, value in enumerate(values):
-            self.write(SETTINGS_WRITE_OFFSET, value)
+            self.write(SETTINGS_WRITE_OFFSET_A, value)
 
     @ensure_write_method
     def init_fast_data_logger(self):

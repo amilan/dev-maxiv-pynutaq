@@ -32,8 +32,8 @@ from pynutaq.perseus.perseusdefs import *
 def read_angle(perseus, address):
     # =IF(P6>32767;(P6-65536)/32767*180;P6/32767*180)
 
-    perseus.write(SETTINGS_READ_OFFSET, address)
-    value = perseus.read(SETTINGS_READ_OFFSET)
+    perseus.write(SETTINGS_READ_OFFSET_A, address)
+    value = perseus.read(SETTINGS_READ_OFFSET_A)
 
     if value > 32767:
         angle = (value - 65536) * 180.0 / 32767
@@ -57,7 +57,7 @@ def write_angle(perseus, value, address):
         angle = ((value - 360) * 32767 / 180.0) + 65536
 
     value = address << 17 | int(angle)
-    perseus.write(SETTINGS_WRITE_OFFSET, value)
+    perseus.write(SETTINGS_WRITE_OFFSET_A, value)
 
 def read_milivolts(perseus, address):
     """
@@ -66,8 +66,8 @@ def read_milivolts(perseus, address):
     :param value: value read from a register.
     :return: value converted in milivolts
     """
-    perseus.write(SETTINGS_READ_OFFSET, address)
-    value = perseus.read(SETTINGS_READ_OFFSET)
+    perseus.write(SETTINGS_READ_OFFSET_A, address)
+    value = perseus.read(SETTINGS_READ_OFFSET_A)
 
     milis = value * 1000.0 / 32767 * 1.6467602581
     return milis
@@ -83,7 +83,7 @@ def write_milivolts(perseus, milivolts, address):
     value = (milivolts * 32767 / 1.6467602581) / 1000.0
 
     value = address << 17 | int(value)
-    perseus.write(SETTINGS_WRITE_OFFSET, value)
+    perseus.write(SETTINGS_WRITE_OFFSET_A, value)
 
 def read_settings_diag_milivolts(perseus, address):
     """
@@ -92,8 +92,8 @@ def read_settings_diag_milivolts(perseus, address):
     :param value: value read from a register.
     :return: value converted in milivolts
     """
-    perseus.write(SETTINGS_READ_OFFSET, address)
-    value = perseus.read(SETTINGS_READ_OFFSET)
+    perseus.write(SETTINGS_READ_OFFSET_A, address)
+    value = perseus.read(SETTINGS_READ_OFFSET_A)
 
     milis = value * 1000.0 / 32767
     return milis
@@ -109,7 +109,7 @@ def write_settings_diag_milivolts(perseus, milivolts, address):
     value = (milivolts / 1000.0) * 32767
 
     value = address << 17 | int(value)
-    perseus.write(SETTINGS_WRITE_OFFSET, value)
+    perseus.write(SETTINGS_WRITE_OFFSET_A, value)
 
 def read_settings_diag_percentage(perseus, address):
     """
@@ -118,8 +118,8 @@ def read_settings_diag_percentage(perseus, address):
     :param value: value read from a register.
     :return: value converted in milivolts
     """
-    perseus.write(SETTINGS_READ_OFFSET, address)
-    value = perseus.read(SETTINGS_READ_OFFSET)
+    perseus.write(SETTINGS_READ_OFFSET_A, address)
+    value = perseus.read(SETTINGS_READ_OFFSET_A)
 
     percentage = value * 100.0 / 32767
     return percentage
@@ -135,20 +135,20 @@ def write_settings_diag_percentage(perseus, percentage, address):
     value = (percentage / 100.0) * 32767
 
     value = address << 17 | int(value)
-    perseus.write(SETTINGS_WRITE_OFFSET, value)
+    perseus.write(SETTINGS_WRITE_OFFSET_A, value)
 
 def read_direct(perseus, address):
-    perseus.write(SETTINGS_READ_OFFSET, address)
-    value = perseus.read(SETTINGS_READ_OFFSET)
+    perseus.write(SETTINGS_READ_OFFSET_A, address)
+    value = perseus.read(SETTINGS_READ_OFFSET_A)
     return value
 
 def write_direct(perseus, value, address):
     value = address << 17 | int(value)
-    perseus.write(SETTINGS_WRITE_OFFSET, value)
+    perseus.write(SETTINGS_WRITE_OFFSET_A, value)
 
 def read_diag_angle(perseus, address):
-    perseus.write(DIAGNOSTICS_OFFSET, address)
-    value = perseus.read(DIAGNOSTICS_OFFSET)
+    perseus.write(DIAGNOSTICS_OFFSET_A, address)
+    value = perseus.read(DIAGNOSTICS_OFFSET_A)
     # =IF(D49>32767;
     #    (D49-65536)/32767*180;
     #     D49/32767*180)
@@ -159,13 +159,13 @@ def read_diag_angle(perseus, address):
     return angle
 
 def read_diag_direct(perseus, address):
-    perseus.write(DIAGNOSTICS_OFFSET, address)
-    value = perseus.read(DIAGNOSTICS_OFFSET)
+    perseus.write(DIAGNOSTICS_OFFSET_A, address)
+    value = perseus.read(DIAGNOSTICS_OFFSET_A)
     return value
 
 def read_diag_milivolts(perseus, address):
-    perseus.write(DIAGNOSTICS_OFFSET, address)
-    value = perseus.read(DIAGNOSTICS_OFFSET)
+    perseus.write(DIAGNOSTICS_OFFSET_A, address)
+    value = perseus.read(DIAGNOSTICS_OFFSET_A)
     #and now convert the value
     #=IF(D9<32768;
     #    D9/32767*1000;
@@ -187,12 +187,12 @@ def calc_phase(perseus, ivalue, qvalue):
 
 def start_reading_diagnostics(perseus):
     value = 1 << 16
-    perseus.write(DIAGNOSTICS_OFFSET, value)
+    perseus.write(DIAGNOSTICS_OFFSET_A, value)
     #@warning: I know ... this is not needed
     value = 0 << 16
     #lets continue
-    perseus.write(DIAGNOSTICS_OFFSET, value)
+    perseus.write(DIAGNOSTICS_OFFSET_A, value)
 
 def end_reading_diagnostics(perseus):
     value = 1 << 16
-    perseus.write(DIAGNOSTICS_OFFSET, value)
+    perseus.write(DIAGNOSTICS_OFFSET_A, value)
