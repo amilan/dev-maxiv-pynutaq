@@ -10,6 +10,7 @@
                                    display_level=DispLevel.OPERATOR,
                                    {% if attribute.access == 'read_write' %}
                                    access=AttrWriteType.READ_WRITE,
+                                   memorized=True,
                                    {% elif attribute.access == 'read' %}
                                    access=AttrWriteType.READ,
                                    {% endif %}
