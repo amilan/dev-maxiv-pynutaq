@@ -7441,7 +7441,8 @@ class NutaqDiags(Device):
 
     @command
     def read_diagnostics(self):
-        perseus_utils.start_reading_diagnostics(self.perseus)
+        perseus_utils.start_reading_diagnostics(self.perseus, 'A')
+        perseus_utils.start_reading_diagnostics(self.perseus, 'B')
 
         self._Diag_Irvtet1A = perseus_utils.read_diag_milivolts(self.perseus, 0, 'A')
         self._Diag_Irvtet1B = perseus_utils.read_diag_milivolts(self.perseus, 0, 'B')

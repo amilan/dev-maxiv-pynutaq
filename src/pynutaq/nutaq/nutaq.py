@@ -868,7 +868,7 @@ class Nutaq(Device):
                                    doc=""
                                    )
 
-    FreqsquareAA = attribute(label='FreqsquareAA',
+    FreqsquareA = attribute(label='FreqsquareA',
                                    dtype=float,
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ_WRITE,
@@ -876,12 +876,12 @@ class Nutaq(Device):
                                    unit='',
                                    format='%6.2f',
                                    min_value=3, max_value=1000,
-                                   fget="get_FreqsquareAA",
-                                   fset="set_FreqsquareAA",
+                                   fget="get_FreqsquareA",
+                                   fset="set_FreqsquareA",
                                    doc=""
                                    )
 
-    FreqsquareAB = attribute(label='FreqsquareAB',
+    FreqsquareB = attribute(label='FreqsquareB',
                                    dtype=float,
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ_WRITE,
@@ -889,8 +889,8 @@ class Nutaq(Device):
                                    unit='',
                                    format='%6.2f',
                                    min_value=3, max_value=1000,
-                                   fget="get_FreqsquareAB",
-                                   fset="set_FreqsquareAB",
+                                   fget="get_FreqsquareB",
+                                   fset="set_FreqsquareB",
                                    doc=""
                                    )
 
@@ -5246,32 +5246,32 @@ class Nutaq(Device):
         perseus_utils.write_direct(self.perseus, SquarerefEnableB, 103, 'B')
 
     @DebugIt()
-    def get_FreqsquareAA(self):
+    def get_FreqsquareA(self):
         address = 104
         cavity = 'A'
         #@todo: add this method to special methods library ...
-        return extra_func.get_FreqsquareA(self.perseus, address, cavity)
+        return extra_func.get_Freqsquare(self.perseus, address, cavity)
 
     @DebugIt()
-    def set_FreqsquareAA(self, FreqsquareAA):
+    def set_FreqsquareA(self, FreqsquareA):
         address = 104
         cavity = 'A'
         #@todo: add this method to special methods library ...
-        extra_func.set_FreqsquareA(self.perseus, FreqsquareAA, address, cavity)
+        extra_func.set_Freqsquare(self.perseus, FreqsquareA, address, cavity)
 
     @DebugIt()
-    def get_FreqsquareAB(self):
+    def get_FreqsquareB(self):
         address = 104
         cavity = 'B'
         #@todo: add this method to special methods library ...
-        return extra_func.get_FreqsquareA(self.perseus, address, cavity)
+        return extra_func.get_Freqsquare(self.perseus, address, cavity)
 
     @DebugIt()
-    def set_FreqsquareAB(self, FreqsquareAB):
+    def set_FreqsquareB(self, FreqsquareB):
         address = 104
         cavity = 'B'
         #@todo: add this method to special methods library ...
-        extra_func.set_FreqsquareA(self.perseus, FreqsquareAB, address, cavity)
+        extra_func.set_Freqsquare(self.perseus, FreqsquareB, address, cavity)
 
     @DebugIt()
     def get_LookRefA(self):
@@ -7239,7 +7239,8 @@ class Nutaq(Device):
 
     @command
     def read_diagnostics(self):
-        perseus_utils.start_reading_diagnostics(self.perseus)
+        perseus_utils.start_reading_diagnostics(self.perseus, 'A')
+        perseus_utils.start_reading_diagnostics(self.perseus, 'B')
 
         self._Diag_IcavLoopsA = perseus_utils.read_diag_milivolts(self.perseus, 0, 'A')
         self._Diag_IcavLoopsB = perseus_utils.read_diag_milivolts(self.perseus, 0, 'B')
