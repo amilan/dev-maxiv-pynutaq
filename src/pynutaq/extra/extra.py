@@ -52,152 +52,159 @@ def get_GainTetrode1(perseus, address, cavity):
     except Exception, e:
         raise e
 
-def set_GainTetrode1(perseus, GainTetrode1, address):
+def set_GainTetrode1(perseus, GainTetrode1, address, cavity):
     try:
+        offset = get_offset('write', cavity)
         value = address << 17 | (int(GainTetrode1 * 19898.0))
-        perseus.write(SETTINGS_WRITE_OFFSET_A, value)
+        perseus.write(offset, value)
     except Exception, e:
         raise e
 
-def get_GainTetrode2(perseus, address):
+def get_GainTetrode2(perseus, address, cavity):
     try:
-        perseus.write(SETTINGS_READ_OFFSET_A, address)
-        value = perseus.read(SETTINGS_READ_OFFSET_A) / 19898.0
+        offset = get_offset('read', cavity)
+        perseus.write(offset, address)
+        value = perseus.read(offset) / 19898.0
         return value
     except Exception, e:
         raise e
 
-def set_GainTetrode2(perseus, GainTetrode2, address):
+def set_GainTetrode2(perseus, GainTetrode2, address, cavity):
     try:
+        offset = get_offset('write', cavity)
         value = address << 17 | (int(GainTetrode2 * 19898.0))
-        perseus.write(SETTINGS_WRITE_OFFSET_A, value)
+        perseus.write(offset, value)
     except Exception, e:
         raise e
 
-def get_GainOl(perseus, address):
+def get_GainOl(perseus, address, cavity):
     try:
-        perseus.write(SETTINGS_READ_OFFSET_A, address)
-        value = perseus.read(SETTINGS_READ_OFFSET_A)
+        offset = get_offset('read', cavity)
+        perseus.write(offset, address)
+        value = perseus.read(offset)
         # value = math.floor((value * 2.0) / 127)
         value = (value * 2.0) / 127
         return value
     except Exception, e:
         raise e
 
-def set_GainOl(perseus, GainOl, address):
+def set_GainOl(perseus, GainOl, address, cavity):
     try:
+        offset = get_offset('write', cavity)
         value = math.ceil((GainOl/2.0) * 127)
         value = address << 17 | int(value)
-        perseus.write(SETTINGS_WRITE_OFFSET_A, value)
+        perseus.write(offset, value)
     except Exception, e:
         raise e
 
-def get_Freqsquare(perseus, address):
+def get_Freqsquare(perseus, address, cavity):
     try:
+        offset = get_offset('read', cavity)
         # @warning: read direct??
-        perseus.write(SETTINGS_READ_OFFSET_A, address)
-        value = perseus.read(SETTINGS_READ_OFFSET_A) / 80000.0
+        perseus.write(offset, address)
+        value = perseus.read(offset) / 80000.0
         return value
     except Exception, e:
         raise e
 
-def set_Freqsquare(perseus, FreqsquareA, address):
+def set_Freqsquare(perseus, FreqsquareA, address, cavity):
     try:
+        offset = get_offset('write', cavity)
         value = ((1 / FreqsquareA) * 1000000.0) / 12.5
         value = address << 17 | int(value)
-        perseus.write(SETTINGS_WRITE_OFFSET_A, value)
+        perseus.write(offset, value)
     except Exception, e:
         raise e
 
-def get_ConditioningdutyCicle(perseus, address):
+def get_ConditioningdutyCicle(perseus, address, cavity):
     try:
-        value = read_direct(perseus, address)
+        value = read_direct(perseus, address, cavity)
         value = (value / 8000000.0) * 256 * 100.0
         return value
     except Exception, e:
         raise e
 
-def set_ConditioningdutyCicle(perseus, ConditioningdutyCicleA, address):
+def set_ConditioningdutyCicle(perseus, ConditioningdutyCicleA, address, cavity):
     try:
         value = ((ConditioningdutyCicleA * 8000000.0) / 100.0) / 256
-        write_direct(perseus, value, address)
+        write_direct(perseus, value, address, cavity)
     except Exception, e:
         raise e
 
-def get_MDivider(perseus, address):
+def get_MDivider(perseus, address, cavity):
     try:
-        value = read_direct(perseus, address) + 1
+        value = read_direct(perseus, address, cavity) + 1
         # @warning: read_direct?? or +1
         return value
     except Exception, e:
         raise e
 
-def set_MDivider(perseus, MDivider, address):
+def set_MDivider(perseus, MDivider, address, cavity):
     try:
         value = MDivider - 1
-        write_direct(perseus, value, address)
+        write_direct(perseus, value, address, cavity)
     except Exception, e:
         raise e
 
-def get_NDivider(perseus, address):
+def get_NDivider(perseus, address, cavity):
     try:
-        value = read_direct(perseus, address) + 1
+        value = read_direct(perseus, address, cavity) + 1
         # @warning: read_direct?? or +1
         return value
     except Exception, e:
         raise e
 
-def set_NDivider(perseus, NDivider, address):
+def set_NDivider(perseus, NDivider, address, cavity):
     try:
         value = NDivider - 1
-        write_direct(perseus, value, address)
+        write_direct(perseus, value, address, cavity)
     except Exception, e:
         raise e
 
-def get_Pilimit(perseus, address):
+def get_Pilimit(perseus, address, cavity):
     try:
-        value = read_direct(perseus, address)
+        value = read_direct(perseus, address, cavity)
         value = (value* 1000.0) / 32767
         return  value
     except Exception, e:
         raise e
 
-def set_Pilimit(perseus, PiLimitA, address):
+def set_Pilimit(perseus, PiLimitA, address, cavity):
     try:
         value = (PiLimitA/1000.0) * 32767
-        write_direct(perseus, value, address)
+        write_direct(perseus, value, address, cavity)
     except Exception, e:
         raise e
 
-def get_Fwmin(perseus, address):
+def get_Fwmin(perseus, address, cavity):
     try:
-        value = read_direct(perseus, address)
+        value = read_direct(perseus, address, cavity)
         value = (value* 1000.0) / 32767
         return  value
     except Exception, e:
         raise e
 
-def set_Fwmin(perseus, Fwmina, address):
+def set_Fwmin(perseus, Fwmina, address, cavity):
     try:
         value = (Fwmina/1000.0) * 32767
-        write_direct(perseus, value, address)
+        write_direct(perseus, value, address, cavity)
     except Exception, e:
         raise e
 
-def get_Tuningdelay(perseus, address):
+def get_Tuningdelay(perseus, address, cavity):
     try:
         # P100/80000000*2^12
-        value = read_direct(perseus, address)
+        value = read_direct(perseus, address, cavity)
         value = (value/80000000.0) * (2**12)
         return  value
     except Exception, e:
         raise e
 
-def set_Tuningdelay(perseus, TuningDelay, address):
+def set_Tuningdelay(perseus, TuningDelay, address, cavity):
     try:
         # E100*80000000/2^12
         value = (TuningDelay*80000000.0) / (2**12)
-        write_direct(perseus, value, address)
+        write_direct(perseus, value, address, cavity)
     except Exception, e:
         raise e
 
@@ -334,16 +341,16 @@ def set_Tuningdelay(perseus, TuningDelay, address):
 #     except Exception, e:
 #         raise e
 
-def read_bit_direct(perseus, address, position):
+def read_bit_direct(perseus, address, position, cavity):
     try:
-        value = read_direct(perseus, address)
+        value = read_direct(perseus, address, cavity)
         return bool((value >> position) & 1)
     except Exception, e:
         raise e
 
-def read_diag_bit_direct(perseus, address, position):
+def read_diag_bit_direct(perseus, address, position, cavity):
     try:
-        value = read_diag_direct(perseus, address)
+        value = read_diag_direct(perseus, address, cavity)
         return bool((value >> position) & 1)
     except Exception, e:
         raise e

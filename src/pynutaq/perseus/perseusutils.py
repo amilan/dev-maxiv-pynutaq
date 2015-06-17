@@ -199,7 +199,7 @@ def read_diag_angle(perseus, address, cavity):
 
     offset = get_offset('diag', cavity)
 
-    perseus.write(offset, address, cavity)
+    perseus.write(offset, address)
     value = perseus.read(offset)
     # =IF(D49>32767;
     #    (D49-65536)/32767*180;
@@ -214,7 +214,7 @@ def read_diag_direct(perseus, address, cavity):
 
     offset = get_offset('diag', cavity)
 
-    perseus.write(offset, address, cavity)
+    perseus.write(offset, address)
     value = perseus.read(offset)
     return value
 

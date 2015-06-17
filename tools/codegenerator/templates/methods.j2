@@ -121,7 +121,8 @@
 {% endfor %}
     @command
     def read_diagnostics(self):
-        perseus_utils.start_reading_diagnostics(self.perseus)
+        perseus_utils.start_reading_diagnostics(self.perseus, 'A')
+        perseus_utils.start_reading_diagnostics(self.perseus, 'B')
 
 {% for attribute in diags_attributes %}
         {% if attribute.type == 'bool' %}
