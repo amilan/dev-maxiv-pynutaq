@@ -4315,7 +4315,7 @@ class NutaqDiags(Device):
         Device.init_device(self)
         try:
             self.perseus = Perseus().new_perseus(self.perseusType, self.perseusIp)
-            self.set_state(DevState.ON)
+            self.set_state(DevState.STANDBY)
         except Exception, e:
             print e
             self.set_state(DevState.FAULT)
@@ -7561,6 +7561,15 @@ class NutaqDiags(Device):
         self._Diag_PhFwhybloadb = math.degrees(math.atan2(self._Diag_QfwhybloadB, self._Diag_IfwhybloadB))
         self._Diag_PhFwhybloada = math.degrees(math.atan2(self._Diag_QfwhybloadA, self._Diag_IfwhybloadA))
         self._Diag_PhLandaub = math.degrees(math.atan2(self._Diag_QlandauB, self._Diag_IlandauB))
+
+    @command
+    def init_hardware(self):
+        try:
+            self.perseus.init_hardware()
+            self.set_state(DevState.ON)
+        except Exception, e:
+            print e
+            self.set_state(DevState.FAULT)
 
     @command
     def tuning_reset(self):

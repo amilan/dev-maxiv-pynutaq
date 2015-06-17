@@ -52,6 +52,8 @@ class PerseusDiags(object):
         self._board_state = eapi.connection_state()
         self.connect()
 
+    def init_hardware(self):
+
         print "Mi125 2 initialization..."
         self.mi125 = Mi125(self._board_state, MI125_BOARD_NUMBER, MI125_CLK_SRC)
         print "DONE"

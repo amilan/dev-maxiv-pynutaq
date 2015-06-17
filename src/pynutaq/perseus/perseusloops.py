@@ -53,6 +53,7 @@ class PerseusLoops(object):
         self._board_state = eapi.connection_state()
         self.connect()
 
+    def init_hardware(self):
         self.custom_write(4, 1)
 
         print "MO1000 1 initialization..."
