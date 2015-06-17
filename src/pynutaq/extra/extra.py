@@ -41,12 +41,13 @@ except ImportError, e:
     print "#############################################"
     raise
 
-from pynutaq.perseus.perseusutils import read_direct, write_direct, read_diag_direct
+from pynutaq.perseus.perseusutils import read_direct, write_direct, read_diag_direct, get_offset
 
-def get_GainTetrode1(perseus, address):
+def get_GainTetrode1(perseus, address, cavity):
     try:
-        perseus.write(SETTINGS_READ_OFFSET_A, address)
-        value = perseus.read(SETTINGS_READ_OFFSET_A) / 19898.0
+        offset = get_offset('read', cavity)
+        perseus.write(offset, address)
+        value = perseus.read(offset) / 19898.0
         return value
     except Exception, e:
         raise e
@@ -91,7 +92,7 @@ def set_GainOl(perseus, GainOl, address):
     except Exception, e:
         raise e
 
-def get_FreqsquareA(perseus, address):
+def get_Freqsquare(perseus, address):
     try:
         # @warning: read direct??
         perseus.write(SETTINGS_READ_OFFSET_A, address)
@@ -100,7 +101,7 @@ def get_FreqsquareA(perseus, address):
     except Exception, e:
         raise e
 
-def set_FreqsquareA(perseus, FreqsquareA, address):
+def set_Freqsquare(perseus, FreqsquareA, address):
     try:
         value = ((1 / FreqsquareA) * 1000000.0) / 12.5
         value = address << 17 | int(value)
@@ -108,7 +109,7 @@ def set_FreqsquareA(perseus, FreqsquareA, address):
     except Exception, e:
         raise e
 
-def get_ConditioningdutyCicleA(perseus, address):
+def get_ConditioningdutyCicle(perseus, address):
     try:
         value = read_direct(perseus, address)
         value = (value / 8000000.0) * 256 * 100.0
@@ -116,7 +117,7 @@ def get_ConditioningdutyCicleA(perseus, address):
     except Exception, e:
         raise e
 
-def set_ConditioningdutyCicleA(perseus, ConditioningdutyCicleA, address):
+def set_ConditioningdutyCicle(perseus, ConditioningdutyCicleA, address):
     try:
         value = ((ConditioningdutyCicleA * 8000000.0) / 100.0) / 256
         write_direct(perseus, value, address)
@@ -153,7 +154,7 @@ def set_NDivider(perseus, NDivider, address):
     except Exception, e:
         raise e
 
-def get_PilimitA(perseus, address):
+def get_Pilimit(perseus, address):
     try:
         value = read_direct(perseus, address)
         value = (value* 1000.0) / 32767
@@ -161,14 +162,14 @@ def get_PilimitA(perseus, address):
     except Exception, e:
         raise e
 
-def set_PilimitA(perseus, PiLimitA, address):
+def set_Pilimit(perseus, PiLimitA, address):
     try:
         value = (PiLimitA/1000.0) * 32767
         write_direct(perseus, value, address)
     except Exception, e:
         raise e
 
-def get_Fwmina(perseus, address):
+def get_Fwmin(perseus, address):
     try:
         value = read_direct(perseus, address)
         value = (value* 1000.0) / 32767
@@ -176,7 +177,7 @@ def get_Fwmina(perseus, address):
     except Exception, e:
         raise e
 
-def set_Fwmina(perseus, Fwmina, address):
+def set_Fwmin(perseus, Fwmina, address):
     try:
         value = (Fwmina/1000.0) * 32767
         write_direct(perseus, value, address)

@@ -94,6 +94,21 @@ def get_extended_list_of_attributes(attributes_list):
     return new_attributes_extended_list
 
 
+def _create_attributes_for_both_cavities(attributes_list):
+    final_attributes_list = []
+    for attr in attributes_list:
+        temp_attr = attr.copy()
+        temp_attr['name'] = attr['name']+'B'
+        temp_attr['cavity'] = 'B'
+
+        attr['name'] += 'A'
+        attr['cavity'] = 'A'
+
+        final_attributes_list.append(attr)
+        final_attributes_list.append(temp_attr)
+
+    return final_attributes_list
+
 def generate_code(input_filename_loops, input_filename_diags, output_filename, nutaq_type):
 
     def _extract_data_from_csv(input_filename):
@@ -110,6 +125,10 @@ def generate_code(input_filename_loops, input_filename_diags, output_filename, n
     # Extract data from csv
     attributes_loops = _extract_data_from_csv(input_filename_loops)
     attributes_diags = _extract_data_from_csv(input_filename_diags)
+
+    # Get attributes for cavity A and cavity B
+    attributes_loops = _create_attributes_for_both_cavities(attributes_loops)
+    attributes_diags = _create_attributes_for_both_cavities(attributes_diags)
 
     # Extend list of attributes
     attributes_diags = get_extended_list_of_attributes(attributes_diags)

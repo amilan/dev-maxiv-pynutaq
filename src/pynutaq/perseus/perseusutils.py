@@ -29,11 +29,39 @@ __docformat__ = 'restructuredtext'
 import math
 from pynutaq.perseus.perseusdefs import *
 
-def read_angle(perseus, address):
+def get_offset(type, cavity):
+    if type == 'read':
+        if cavity == 'A':
+            return SETTINGS_READ_OFFSET_A
+        elif cavity == 'B':
+            return SETTINGS_READ_OFFSET_B
+        else:
+            raise 'Unknown cavity. Must be A or B.'
+    elif type == 'write':
+        if cavity == 'A':
+            return SETTINGS_WRITE_OFFSET_A
+        elif cavity == 'B':
+            return SETTINGS_WRITE_OFFSET_B
+        else:
+            raise 'Unknown cavity. Must be A or B.'
+    elif type == 'diag':
+        if cavity == 'A':
+            return DIAGNOSTICS_OFFSET_A
+        elif cavity == 'B':
+            return DIAGNOSTICS_OFFSET_B
+        else:
+            raise 'Unknown cavity. Must be A or B.'
+    else:
+        raise 'Wrong type of offset!'
+
+
+def read_angle(perseus, address, cavity):
     # =IF(P6>32767;(P6-65536)/32767*180;P6/32767*180)
 
-    perseus.write(SETTINGS_READ_OFFSET_A, address)
-    value = perseus.read(SETTINGS_READ_OFFSET_A)
+    offset = get_offset('read', cavity)
+
+    perseus.write(offset, address)
+    value = perseus.read(offset)
 
     if value > 32767:
         angle = (value - 65536) * 180.0 / 32767
@@ -41,7 +69,7 @@ def read_angle(perseus, address):
         angle = (value * 180.0) / 32767
     return angle
 
-def write_angle(perseus, value, address):
+def write_angle(perseus, value, address, cavity):
     """=ROUND(IF(
                  E6<0; E6/180*32767+65536;
                  IF(E6<=180; E6/180*32767;
@@ -57,22 +85,26 @@ def write_angle(perseus, value, address):
         angle = ((value - 360) * 32767 / 180.0) + 65536
 
     value = address << 17 | int(angle)
-    perseus.write(SETTINGS_WRITE_OFFSET_A, value)
 
-def read_milivolts(perseus, address):
+    offset = get_offset('write', cavity)
+    perseus.write(offset, value)
+
+def read_milivolts(perseus, address, cavity):
     """
         This method converts the value readed from a register in milivolts usign the following formula:
         VALUE = ROUND(P23*1000/32767*1,6467602581;0)
     :param value: value read from a register.
     :return: value converted in milivolts
     """
-    perseus.write(SETTINGS_READ_OFFSET_A, address)
-    value = perseus.read(SETTINGS_READ_OFFSET_A)
+    offset = get_offset('read', cavity)
+
+    perseus.write(offset, address)
+    value = perseus.read(offset)
 
     milis = value * 1000.0 / 32767 * 1.6467602581
     return milis
 
-def write_milivolts(perseus, milivolts, address):
+def write_milivolts(perseus, milivolts, address, cavity):
     """
         This method converts the value from milivolts to bit to be written in the register usign the following
         formula:
@@ -83,22 +115,27 @@ def write_milivolts(perseus, milivolts, address):
     value = (milivolts * 32767 / 1.6467602581) / 1000.0
 
     value = address << 17 | int(value)
-    perseus.write(SETTINGS_WRITE_OFFSET_A, value)
 
-def read_settings_diag_milivolts(perseus, address):
+    offset = get_offset('write', cavity)
+    perseus.write(offset, value)
+
+def read_settings_diag_milivolts(perseus, address, cavity):
     """
         This method converts the value readed from a register in milivolts usign the following formula:
         VALUE = ROUND(P23*1000/32767*1,6467602581;0)
     :param value: value read from a register.
     :return: value converted in milivolts
     """
-    perseus.write(SETTINGS_READ_OFFSET_A, address)
-    value = perseus.read(SETTINGS_READ_OFFSET_A)
+
+    offset = get_offset('read', cavity)
+
+    perseus.write(offset, address)
+    value = perseus.read(offset)
 
     milis = value * 1000.0 / 32767
     return milis
 
-def write_settings_diag_milivolts(perseus, milivolts, address):
+def write_settings_diag_milivolts(perseus, milivolts, address, cavity):
     """
         This method converts the value from milivolts to bit to be written in the register usign the following
         formula:
@@ -109,22 +146,27 @@ def write_settings_diag_milivolts(perseus, milivolts, address):
     value = (milivolts / 1000.0) * 32767
 
     value = address << 17 | int(value)
-    perseus.write(SETTINGS_WRITE_OFFSET_A, value)
 
-def read_settings_diag_percentage(perseus, address):
+    offset = get_offset('write', cavity)
+
+    perseus.write(offset, value)
+
+def read_settings_diag_percentage(perseus, address, cavity):
     """
         This method converts the value readed from a register in milivolts usign the following formula:
         VALUE = ROUND(P23*1000/32767*1,6467602581;0)
     :param value: value read from a register.
     :return: value converted in milivolts
     """
-    perseus.write(SETTINGS_READ_OFFSET_A, address)
-    value = perseus.read(SETTINGS_READ_OFFSET_A)
+
+    offset = get_offset('read', cavity)
+    perseus.write(offset, address)
+    value = perseus.read(offset)
 
     percentage = value * 100.0 / 32767
     return percentage
 
-def write_settings_diag_percentage(perseus, percentage, address):
+def write_settings_diag_percentage(perseus, percentage, address, cavity):
     """
         This method converts the value from milivolts to bit to be written in the register usign the following
         formula:
@@ -135,20 +177,30 @@ def write_settings_diag_percentage(perseus, percentage, address):
     value = (percentage / 100.0) * 32767
 
     value = address << 17 | int(value)
-    perseus.write(SETTINGS_WRITE_OFFSET_A, value)
 
-def read_direct(perseus, address):
-    perseus.write(SETTINGS_READ_OFFSET_A, address)
-    value = perseus.read(SETTINGS_READ_OFFSET_A)
+    offset = get_offset('write', cavity)
+    perseus.write(offset, value)
+
+def read_direct(perseus, address, cavity):
+
+    offset = get_offset('read', cavity)
+
+    perseus.write(offset, address)
+    value = perseus.read(offset)
     return value
 
-def write_direct(perseus, value, address):
+def write_direct(perseus, value, address, cavity):
     value = address << 17 | int(value)
-    perseus.write(SETTINGS_WRITE_OFFSET_A, value)
 
-def read_diag_angle(perseus, address):
-    perseus.write(DIAGNOSTICS_OFFSET_A, address)
-    value = perseus.read(DIAGNOSTICS_OFFSET_A)
+    offset = get_offset('write', cavity)
+    perseus.write(offset, value)
+
+def read_diag_angle(perseus, address, cavity):
+
+    offset = get_offset('diag', cavity)
+
+    perseus.write(offset, address, cavity)
+    value = perseus.read(offset)
     # =IF(D49>32767;
     #    (D49-65536)/32767*180;
     #     D49/32767*180)
@@ -158,14 +210,19 @@ def read_diag_angle(perseus, address):
         angle = value * 180.0 / 32767
     return angle
 
-def read_diag_direct(perseus, address):
-    perseus.write(DIAGNOSTICS_OFFSET_A, address)
-    value = perseus.read(DIAGNOSTICS_OFFSET_A)
+def read_diag_direct(perseus, address, cavity):
+
+    offset = get_offset('diag', cavity)
+
+    perseus.write(offset, address, cavity)
+    value = perseus.read(offset)
     return value
 
-def read_diag_milivolts(perseus, address):
-    perseus.write(DIAGNOSTICS_OFFSET_A, address)
-    value = perseus.read(DIAGNOSTICS_OFFSET_A)
+def read_diag_milivolts(perseus, address, cavity):
+
+    offset = get_offset('diag', cavity)
+    perseus.write(offset, address)
+    value = perseus.read(offset)
     #and now convert the value
     #=IF(D9<32768;
     #    D9/32767*1000;
@@ -185,14 +242,18 @@ def calc_phase(perseus, ivalue, qvalue):
     return phase
 
 
-def start_reading_diagnostics(perseus):
+def start_reading_diagnostics(perseus, cavity):
+
+    offset = get_offset('diag', cavity)
     value = 1 << 16
-    perseus.write(DIAGNOSTICS_OFFSET_A, value)
+    perseus.write(offset, value)
     #@warning: I know ... this is not needed
     value = 0 << 16
     #lets continue
-    perseus.write(DIAGNOSTICS_OFFSET_A, value)
+    perseus.write(offset, value)
 
-def end_reading_diagnostics(perseus):
+def end_reading_diagnostics(perseus, cavity):
+
+    offset = get_offset('diag', cavity)
     value = 1 << 16
-    perseus.write(DIAGNOSTICS_OFFSET_A, value)
+    perseus.write(offset, value)
