@@ -4679,7 +4679,7 @@ class Nutaq(Device):
         Device.init_device(self)
         try:
             self.perseus = Perseus().new_perseus(self.perseusType, self.perseusIp)
-            self.set_state(DevState.STANDBY)
+            self.set_state(DevState.ON)
         except Exception, e:
             print e
             self.set_state(DevState.FAULT)
@@ -7535,7 +7535,7 @@ class Nutaq(Device):
     def init_hardware(self):
         try:
             self.perseus.init_hardware()
-            self.set_state(DevState.ON)
+            self.set_state(DevState.RUNNING)
         except Exception, e:
             print e
             self.set_state(DevState.FAULT)
