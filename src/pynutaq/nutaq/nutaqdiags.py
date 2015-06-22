@@ -7573,20 +7573,34 @@ class NutaqDiags(Device):
             self.set_state(DevState.FAULT)
 
     @command
-    def tuning_reset(self):
-        perseus_utils.write_direct(self.perseus, True, DIAG_TUNING_RESET_ADDRESS)
-        perseus_utils.write_direct(self.perseus, False, DIAG_TUNING_RESET_ADDRESS)
+    def tuning_resetA(self):
+        perseus_utils.write_direct(self.perseus, True, DIAG_TUNING_RESET_ADDRESS, 'A')
+        perseus_utils.write_direct(self.perseus, False, DIAG_TUNING_RESET_ADDRESS, 'A')
 
     @command
-    def reset_manual_itck(self):
-        perseus_utils.write_direct(self.perseus, True, RESET_MANUAL_ITCK_ADDRESS)
-        perseus_utils.write_direct(self.perseus, False, RESET_MANUAL_ITCK_ADDRESS)
+    def reset_manual_itckA(self):
+        perseus_utils.write_direct(self.perseus, True, RESET_MANUAL_ITCK_ADDRESS, 'A')
+        perseus_utils.write_direct(self.perseus, False, RESET_MANUAL_ITCK_ADDRESS, 'A')
 
     @command
-    def reset_itck(self):
-        perseus_utils.write_direct(self.perseus, True, RESET_ITCK_ADDRESS)
-        perseus_utils.write_direct(self.perseus, False, RESET_ITCK_ADDRESS)
+    def reset_itckA(self):
+        perseus_utils.write_direct(self.perseus, True, RESET_ITCK_ADDRESS, 'A')
+        perseus_utils.write_direct(self.perseus, False, RESET_ITCK_ADDRESS, 'A')
 
+    @command
+    def tuning_resetB(self):
+        perseus_utils.write_direct(self.perseus, True, DIAG_TUNING_RESET_ADDRESS, 'B')
+        perseus_utils.write_direct(self.perseus, False, DIAG_TUNING_RESET_ADDRESS, 'B')
+
+    @command
+    def reset_manual_itckB(self):
+        perseus_utils.write_direct(self.perseus, True, RESET_MANUAL_ITCK_ADDRESS, 'B')
+        perseus_utils.write_direct(self.perseus, False, RESET_MANUAL_ITCK_ADDRESS, 'B')
+
+    @command
+    def reset_itckB(self):
+        perseus_utils.write_direct(self.perseus, True, RESET_ITCK_ADDRESS, 'B')
+        perseus_utils.write_direct(self.perseus, False, RESET_ITCK_ADDRESS, 'B')
 
     @command
     def sw_fast_data_logger(self):
