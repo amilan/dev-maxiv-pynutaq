@@ -4971,1587 +4971,1731 @@ class NutaqDiags(Device):
 
     @DebugIt()
     def get_DisitckRvtet1DacsoffloopsstbyA(self):
-        value = perseus_utils.read_direct(self.perseus,7, 'A')
+        value = perseus_utils.read_direct(self.perseus, 7, 'A')
         self._DisitckRvtet1DacsoffloopsstbyA = (value >> 0) & 1
         return self._DisitckRvtet1DacsoffloopsstbyA
 
     @DebugIt()
     def set_DisitckRvtet1DacsoffloopsstbyA(self, DisitckRvtet1DacsoffloopsstbyA):
         self._DisitckRvtet1DacsoffloopsstbyA = DisitckRvtet1DacsoffloopsstbyA
-        self.update_fim()
+        cavity = 'A'
+        self.update_fim(cavity)
 
     @DebugIt()
     def get_DisitckRvtet1DacsoffloopsstbyB(self):
-        value = perseus_utils.read_direct(self.perseus,7, 'B')
+        value = perseus_utils.read_direct(self.perseus, 7, 'B')
         self._DisitckRvtet1DacsoffloopsstbyB = (value >> 0) & 1
         return self._DisitckRvtet1DacsoffloopsstbyB
 
     @DebugIt()
     def set_DisitckRvtet1DacsoffloopsstbyB(self, DisitckRvtet1DacsoffloopsstbyB):
         self._DisitckRvtet1DacsoffloopsstbyB = DisitckRvtet1DacsoffloopsstbyB
-        self.update_fim()
+        cavity = 'B'
+        self.update_fim(cavity)
 
     @DebugIt()
     def get_DisitckRvtet1PindiodeswitchA(self):
-        value = perseus_utils.read_direct(self.perseus,7, 'A')
+        value = perseus_utils.read_direct(self.perseus, 7, 'A')
         self._DisitckRvtet1PindiodeswitchA = (value >> 1) & 1
         return self._DisitckRvtet1PindiodeswitchA
 
     @DebugIt()
     def set_DisitckRvtet1PindiodeswitchA(self, DisitckRvtet1PindiodeswitchA):
         self._DisitckRvtet1PindiodeswitchA = DisitckRvtet1PindiodeswitchA
-        self.update_fim()
+        cavity = 'A'
+        self.update_fim(cavity)
 
     @DebugIt()
     def get_DisitckRvtet1PindiodeswitchB(self):
-        value = perseus_utils.read_direct(self.perseus,7, 'B')
+        value = perseus_utils.read_direct(self.perseus, 7, 'B')
         self._DisitckRvtet1PindiodeswitchB = (value >> 1) & 1
         return self._DisitckRvtet1PindiodeswitchB
 
     @DebugIt()
     def set_DisitckRvtet1PindiodeswitchB(self, DisitckRvtet1PindiodeswitchB):
         self._DisitckRvtet1PindiodeswitchB = DisitckRvtet1PindiodeswitchB
-        self.update_fim()
+        cavity = 'B'
+        self.update_fim(cavity)
 
     @DebugIt()
     def get_DisitckRvtet1FdltrgA(self):
-        value = perseus_utils.read_direct(self.perseus,7, 'A')
+        value = perseus_utils.read_direct(self.perseus, 7, 'A')
         self._DisitckRvtet1FdltrgA = (value >> 2) & 1
         return self._DisitckRvtet1FdltrgA
 
     @DebugIt()
     def set_DisitckRvtet1FdltrgA(self, DisitckRvtet1FdltrgA):
         self._DisitckRvtet1FdltrgA = DisitckRvtet1FdltrgA
-        self.update_fim()
+        cavity = 'A'
+        self.update_fim(cavity)
 
     @DebugIt()
     def get_DisitckRvtet1FdltrgB(self):
-        value = perseus_utils.read_direct(self.perseus,7, 'B')
+        value = perseus_utils.read_direct(self.perseus, 7, 'B')
         self._DisitckRvtet1FdltrgB = (value >> 2) & 1
         return self._DisitckRvtet1FdltrgB
 
     @DebugIt()
     def set_DisitckRvtet1FdltrgB(self, DisitckRvtet1FdltrgB):
         self._DisitckRvtet1FdltrgB = DisitckRvtet1FdltrgB
-        self.update_fim()
+        cavity = 'B'
+        self.update_fim(cavity)
 
     @DebugIt()
     def get_DisitckRvtet1PlctxoffA(self):
-        value = perseus_utils.read_direct(self.perseus,7, 'A')
+        value = perseus_utils.read_direct(self.perseus, 7, 'A')
         self._DisitckRvtet1PlctxoffA = (value >> 3) & 1
         return self._DisitckRvtet1PlctxoffA
 
     @DebugIt()
     def set_DisitckRvtet1PlctxoffA(self, DisitckRvtet1PlctxoffA):
         self._DisitckRvtet1PlctxoffA = DisitckRvtet1PlctxoffA
-        self.update_fim()
+        cavity = 'A'
+        self.update_fim(cavity)
 
     @DebugIt()
     def get_DisitckRvtet1PlctxoffB(self):
-        value = perseus_utils.read_direct(self.perseus,7, 'B')
+        value = perseus_utils.read_direct(self.perseus, 7, 'B')
         self._DisitckRvtet1PlctxoffB = (value >> 3) & 1
         return self._DisitckRvtet1PlctxoffB
 
     @DebugIt()
     def set_DisitckRvtet1PlctxoffB(self, DisitckRvtet1PlctxoffB):
         self._DisitckRvtet1PlctxoffB = DisitckRvtet1PlctxoffB
-        self.update_fim()
+        cavity = 'B'
+        self.update_fim(cavity)
 
     @DebugIt()
     def get_DisitckRvtet1MpsA(self):
-        value = perseus_utils.read_direct(self.perseus,7, 'A')
+        value = perseus_utils.read_direct(self.perseus, 7, 'A')
         self._DisitckRvtet1MpsA = (value >> 4) & 1
         return self._DisitckRvtet1MpsA
 
     @DebugIt()
     def set_DisitckRvtet1MpsA(self, DisitckRvtet1MpsA):
         self._DisitckRvtet1MpsA = DisitckRvtet1MpsA
-        self.update_fim()
+        cavity = 'A'
+        self.update_fim(cavity)
 
     @DebugIt()
     def get_DisitckRvtet1MpsB(self):
-        value = perseus_utils.read_direct(self.perseus,7, 'B')
+        value = perseus_utils.read_direct(self.perseus, 7, 'B')
         self._DisitckRvtet1MpsB = (value >> 4) & 1
         return self._DisitckRvtet1MpsB
 
     @DebugIt()
     def set_DisitckRvtet1MpsB(self, DisitckRvtet1MpsB):
         self._DisitckRvtet1MpsB = DisitckRvtet1MpsB
-        self.update_fim()
+        cavity = 'B'
+        self.update_fim(cavity)
 
     @DebugIt()
     def get_DisitckRvtet1DiagA(self):
-        value = perseus_utils.read_direct(self.perseus,7, 'A')
+        value = perseus_utils.read_direct(self.perseus, 7, 'A')
         self._DisitckRvtet1DiagA = (value >> 5) & 1
         return self._DisitckRvtet1DiagA
 
     @DebugIt()
     def set_DisitckRvtet1DiagA(self, DisitckRvtet1DiagA):
         self._DisitckRvtet1DiagA = DisitckRvtet1DiagA
-        self.update_fim()
+        cavity = 'A'
+        self.update_fim(cavity)
 
     @DebugIt()
     def get_DisitckRvtet1DiagB(self):
-        value = perseus_utils.read_direct(self.perseus,7, 'B')
+        value = perseus_utils.read_direct(self.perseus, 7, 'B')
         self._DisitckRvtet1DiagB = (value >> 5) & 1
         return self._DisitckRvtet1DiagB
 
     @DebugIt()
     def set_DisitckRvtet1DiagB(self, DisitckRvtet1DiagB):
         self._DisitckRvtet1DiagB = DisitckRvtet1DiagB
-        self.update_fim()
+        cavity = 'B'
+        self.update_fim(cavity)
 
     @DebugIt()
     def get_DisitckRvtet2DacsoffloopsstbyA(self):
-        value = perseus_utils.read_direct(self.perseus,8, 'A')
+        value = perseus_utils.read_direct(self.perseus, 8, 'A')
         self._DisitckRvtet2DacsoffloopsstbyA = (value >> 0) & 1
         return self._DisitckRvtet2DacsoffloopsstbyA
 
     @DebugIt()
     def set_DisitckRvtet2DacsoffloopsstbyA(self, DisitckRvtet2DacsoffloopsstbyA):
         self._DisitckRvtet2DacsoffloopsstbyA = DisitckRvtet2DacsoffloopsstbyA
-        self.update_fim()
+        cavity = 'A'
+        self.update_fim(cavity)
 
     @DebugIt()
     def get_DisitckRvtet2DacsoffloopsstbyB(self):
-        value = perseus_utils.read_direct(self.perseus,8, 'B')
+        value = perseus_utils.read_direct(self.perseus, 8, 'B')
         self._DisitckRvtet2DacsoffloopsstbyB = (value >> 0) & 1
         return self._DisitckRvtet2DacsoffloopsstbyB
 
     @DebugIt()
     def set_DisitckRvtet2DacsoffloopsstbyB(self, DisitckRvtet2DacsoffloopsstbyB):
         self._DisitckRvtet2DacsoffloopsstbyB = DisitckRvtet2DacsoffloopsstbyB
-        self.update_fim()
+        cavity = 'B'
+        self.update_fim(cavity)
 
     @DebugIt()
     def get_DisitckRvtet2PindiodeswitchA(self):
-        value = perseus_utils.read_direct(self.perseus,8, 'A')
+        value = perseus_utils.read_direct(self.perseus, 8, 'A')
         self._DisitckRvtet2PindiodeswitchA = (value >> 1) & 1
         return self._DisitckRvtet2PindiodeswitchA
 
     @DebugIt()
     def set_DisitckRvtet2PindiodeswitchA(self, DisitckRvtet2PindiodeswitchA):
         self._DisitckRvtet2PindiodeswitchA = DisitckRvtet2PindiodeswitchA
-        self.update_fim()
+        cavity = 'A'
+        self.update_fim(cavity)
 
     @DebugIt()
     def get_DisitckRvtet2PindiodeswitchB(self):
-        value = perseus_utils.read_direct(self.perseus,8, 'B')
+        value = perseus_utils.read_direct(self.perseus, 8, 'B')
         self._DisitckRvtet2PindiodeswitchB = (value >> 1) & 1
         return self._DisitckRvtet2PindiodeswitchB
 
     @DebugIt()
     def set_DisitckRvtet2PindiodeswitchB(self, DisitckRvtet2PindiodeswitchB):
         self._DisitckRvtet2PindiodeswitchB = DisitckRvtet2PindiodeswitchB
-        self.update_fim()
+        cavity = 'B'
+        self.update_fim(cavity)
 
     @DebugIt()
     def get_DisitckRvtet2FdltrgA(self):
-        value = perseus_utils.read_direct(self.perseus,8, 'A')
+        value = perseus_utils.read_direct(self.perseus, 8, 'A')
         self._DisitckRvtet2FdltrgA = (value >> 2) & 1
         return self._DisitckRvtet2FdltrgA
 
     @DebugIt()
     def set_DisitckRvtet2FdltrgA(self, DisitckRvtet2FdltrgA):
         self._DisitckRvtet2FdltrgA = DisitckRvtet2FdltrgA
-        self.update_fim()
+        cavity = 'A'
+        self.update_fim(cavity)
 
     @DebugIt()
     def get_DisitckRvtet2FdltrgB(self):
-        value = perseus_utils.read_direct(self.perseus,8, 'B')
+        value = perseus_utils.read_direct(self.perseus, 8, 'B')
         self._DisitckRvtet2FdltrgB = (value >> 2) & 1
         return self._DisitckRvtet2FdltrgB
 
     @DebugIt()
     def set_DisitckRvtet2FdltrgB(self, DisitckRvtet2FdltrgB):
         self._DisitckRvtet2FdltrgB = DisitckRvtet2FdltrgB
-        self.update_fim()
+        cavity = 'B'
+        self.update_fim(cavity)
 
     @DebugIt()
     def get_DisitckRvtet2PlctxoffA(self):
-        value = perseus_utils.read_direct(self.perseus,8, 'A')
+        value = perseus_utils.read_direct(self.perseus, 8, 'A')
         self._DisitckRvtet2PlctxoffA = (value >> 3) & 1
         return self._DisitckRvtet2PlctxoffA
 
     @DebugIt()
     def set_DisitckRvtet2PlctxoffA(self, DisitckRvtet2PlctxoffA):
         self._DisitckRvtet2PlctxoffA = DisitckRvtet2PlctxoffA
-        self.update_fim()
+        cavity = 'A'
+        self.update_fim(cavity)
 
     @DebugIt()
     def get_DisitckRvtet2PlctxoffB(self):
-        value = perseus_utils.read_direct(self.perseus,8, 'B')
+        value = perseus_utils.read_direct(self.perseus, 8, 'B')
         self._DisitckRvtet2PlctxoffB = (value >> 3) & 1
         return self._DisitckRvtet2PlctxoffB
 
     @DebugIt()
     def set_DisitckRvtet2PlctxoffB(self, DisitckRvtet2PlctxoffB):
         self._DisitckRvtet2PlctxoffB = DisitckRvtet2PlctxoffB
-        self.update_fim()
+        cavity = 'B'
+        self.update_fim(cavity)
 
     @DebugIt()
     def get_DisitckRvtet2MpsA(self):
-        value = perseus_utils.read_direct(self.perseus,8, 'A')
+        value = perseus_utils.read_direct(self.perseus, 8, 'A')
         self._DisitckRvtet2MpsA = (value >> 4) & 1
         return self._DisitckRvtet2MpsA
 
     @DebugIt()
     def set_DisitckRvtet2MpsA(self, DisitckRvtet2MpsA):
         self._DisitckRvtet2MpsA = DisitckRvtet2MpsA
-        self.update_fim()
+        cavity = 'A'
+        self.update_fim(cavity)
 
     @DebugIt()
     def get_DisitckRvtet2MpsB(self):
-        value = perseus_utils.read_direct(self.perseus,8, 'B')
+        value = perseus_utils.read_direct(self.perseus, 8, 'B')
         self._DisitckRvtet2MpsB = (value >> 4) & 1
         return self._DisitckRvtet2MpsB
 
     @DebugIt()
     def set_DisitckRvtet2MpsB(self, DisitckRvtet2MpsB):
         self._DisitckRvtet2MpsB = DisitckRvtet2MpsB
-        self.update_fim()
+        cavity = 'B'
+        self.update_fim(cavity)
 
     @DebugIt()
     def get_DisitckRvtet2DiagA(self):
-        value = perseus_utils.read_direct(self.perseus,8, 'A')
+        value = perseus_utils.read_direct(self.perseus, 8, 'A')
         self._DisitckRvtet2DiagA = (value >> 5) & 1
         return self._DisitckRvtet2DiagA
 
     @DebugIt()
     def set_DisitckRvtet2DiagA(self, DisitckRvtet2DiagA):
         self._DisitckRvtet2DiagA = DisitckRvtet2DiagA
-        self.update_fim()
+        cavity = 'A'
+        self.update_fim(cavity)
 
     @DebugIt()
     def get_DisitckRvtet2DiagB(self):
-        value = perseus_utils.read_direct(self.perseus,8, 'B')
+        value = perseus_utils.read_direct(self.perseus, 8, 'B')
         self._DisitckRvtet2DiagB = (value >> 5) & 1
         return self._DisitckRvtet2DiagB
 
     @DebugIt()
     def set_DisitckRvtet2DiagB(self, DisitckRvtet2DiagB):
         self._DisitckRvtet2DiagB = DisitckRvtet2DiagB
-        self.update_fim()
+        cavity = 'B'
+        self.update_fim(cavity)
 
     @DebugIt()
     def get_DisitckRvcircDacsoffloopsstbyA(self):
-        value = perseus_utils.read_direct(self.perseus,9, 'A')
+        value = perseus_utils.read_direct(self.perseus, 9, 'A')
         self._DisitckRvcircDacsoffloopsstbyA = (value >> 0) & 1
         return self._DisitckRvcircDacsoffloopsstbyA
 
     @DebugIt()
     def set_DisitckRvcircDacsoffloopsstbyA(self, DisitckRvcircDacsoffloopsstbyA):
         self._DisitckRvcircDacsoffloopsstbyA = DisitckRvcircDacsoffloopsstbyA
-        self.update_fim()
+        cavity = 'A'
+        self.update_fim(cavity)
 
     @DebugIt()
     def get_DisitckRvcircDacsoffloopsstbyB(self):
-        value = perseus_utils.read_direct(self.perseus,9, 'B')
+        value = perseus_utils.read_direct(self.perseus, 9, 'B')
         self._DisitckRvcircDacsoffloopsstbyB = (value >> 0) & 1
         return self._DisitckRvcircDacsoffloopsstbyB
 
     @DebugIt()
     def set_DisitckRvcircDacsoffloopsstbyB(self, DisitckRvcircDacsoffloopsstbyB):
         self._DisitckRvcircDacsoffloopsstbyB = DisitckRvcircDacsoffloopsstbyB
-        self.update_fim()
+        cavity = 'B'
+        self.update_fim(cavity)
 
     @DebugIt()
     def get_DisitckRvcircPindiodeswitchA(self):
-        value = perseus_utils.read_direct(self.perseus,9, 'A')
+        value = perseus_utils.read_direct(self.perseus, 9, 'A')
         self._DisitckRvcircPindiodeswitchA = (value >> 1) & 1
         return self._DisitckRvcircPindiodeswitchA
 
     @DebugIt()
     def set_DisitckRvcircPindiodeswitchA(self, DisitckRvcircPindiodeswitchA):
         self._DisitckRvcircPindiodeswitchA = DisitckRvcircPindiodeswitchA
-        self.update_fim()
+        cavity = 'A'
+        self.update_fim(cavity)
 
     @DebugIt()
     def get_DisitckRvcircPindiodeswitchB(self):
-        value = perseus_utils.read_direct(self.perseus,9, 'B')
+        value = perseus_utils.read_direct(self.perseus, 9, 'B')
         self._DisitckRvcircPindiodeswitchB = (value >> 1) & 1
         return self._DisitckRvcircPindiodeswitchB
 
     @DebugIt()
     def set_DisitckRvcircPindiodeswitchB(self, DisitckRvcircPindiodeswitchB):
         self._DisitckRvcircPindiodeswitchB = DisitckRvcircPindiodeswitchB
-        self.update_fim()
+        cavity = 'B'
+        self.update_fim(cavity)
 
     @DebugIt()
     def get_DisitckRvcircFdltrgA(self):
-        value = perseus_utils.read_direct(self.perseus,9, 'A')
+        value = perseus_utils.read_direct(self.perseus, 9, 'A')
         self._DisitckRvcircFdltrgA = (value >> 2) & 1
         return self._DisitckRvcircFdltrgA
 
     @DebugIt()
     def set_DisitckRvcircFdltrgA(self, DisitckRvcircFdltrgA):
         self._DisitckRvcircFdltrgA = DisitckRvcircFdltrgA
-        self.update_fim()
+        cavity = 'A'
+        self.update_fim(cavity)
 
     @DebugIt()
     def get_DisitckRvcircFdltrgB(self):
-        value = perseus_utils.read_direct(self.perseus,9, 'B')
+        value = perseus_utils.read_direct(self.perseus, 9, 'B')
         self._DisitckRvcircFdltrgB = (value >> 2) & 1
         return self._DisitckRvcircFdltrgB
 
     @DebugIt()
     def set_DisitckRvcircFdltrgB(self, DisitckRvcircFdltrgB):
         self._DisitckRvcircFdltrgB = DisitckRvcircFdltrgB
-        self.update_fim()
+        cavity = 'B'
+        self.update_fim(cavity)
 
     @DebugIt()
     def get_DisitckRvcircPlctxoffA(self):
-        value = perseus_utils.read_direct(self.perseus,9, 'A')
+        value = perseus_utils.read_direct(self.perseus, 9, 'A')
         self._DisitckRvcircPlctxoffA = (value >> 3) & 1
         return self._DisitckRvcircPlctxoffA
 
     @DebugIt()
     def set_DisitckRvcircPlctxoffA(self, DisitckRvcircPlctxoffA):
         self._DisitckRvcircPlctxoffA = DisitckRvcircPlctxoffA
-        self.update_fim()
+        cavity = 'A'
+        self.update_fim(cavity)
 
     @DebugIt()
     def get_DisitckRvcircPlctxoffB(self):
-        value = perseus_utils.read_direct(self.perseus,9, 'B')
+        value = perseus_utils.read_direct(self.perseus, 9, 'B')
         self._DisitckRvcircPlctxoffB = (value >> 3) & 1
         return self._DisitckRvcircPlctxoffB
 
     @DebugIt()
     def set_DisitckRvcircPlctxoffB(self, DisitckRvcircPlctxoffB):
         self._DisitckRvcircPlctxoffB = DisitckRvcircPlctxoffB
-        self.update_fim()
+        cavity = 'B'
+        self.update_fim(cavity)
 
     @DebugIt()
     def get_DisitckRvcircMpsA(self):
-        value = perseus_utils.read_direct(self.perseus,9, 'A')
+        value = perseus_utils.read_direct(self.perseus, 9, 'A')
         self._DisitckRvcircMpsA = (value >> 4) & 1
         return self._DisitckRvcircMpsA
 
     @DebugIt()
     def set_DisitckRvcircMpsA(self, DisitckRvcircMpsA):
         self._DisitckRvcircMpsA = DisitckRvcircMpsA
-        self.update_fim()
+        cavity = 'A'
+        self.update_fim(cavity)
 
     @DebugIt()
     def get_DisitckRvcircMpsB(self):
-        value = perseus_utils.read_direct(self.perseus,9, 'B')
+        value = perseus_utils.read_direct(self.perseus, 9, 'B')
         self._DisitckRvcircMpsB = (value >> 4) & 1
         return self._DisitckRvcircMpsB
 
     @DebugIt()
     def set_DisitckRvcircMpsB(self, DisitckRvcircMpsB):
         self._DisitckRvcircMpsB = DisitckRvcircMpsB
-        self.update_fim()
+        cavity = 'B'
+        self.update_fim(cavity)
 
     @DebugIt()
     def get_DisitckRvcircDiagA(self):
-        value = perseus_utils.read_direct(self.perseus,9, 'A')
+        value = perseus_utils.read_direct(self.perseus, 9, 'A')
         self._DisitckRvcircDiagA = (value >> 5) & 1
         return self._DisitckRvcircDiagA
 
     @DebugIt()
     def set_DisitckRvcircDiagA(self, DisitckRvcircDiagA):
         self._DisitckRvcircDiagA = DisitckRvcircDiagA
-        self.update_fim()
+        cavity = 'A'
+        self.update_fim(cavity)
 
     @DebugIt()
     def get_DisitckRvcircDiagB(self):
-        value = perseus_utils.read_direct(self.perseus,9, 'B')
+        value = perseus_utils.read_direct(self.perseus, 9, 'B')
         self._DisitckRvcircDiagB = (value >> 5) & 1
         return self._DisitckRvcircDiagB
 
     @DebugIt()
     def set_DisitckRvcircDiagB(self, DisitckRvcircDiagB):
         self._DisitckRvcircDiagB = DisitckRvcircDiagB
-        self.update_fim()
+        cavity = 'B'
+        self.update_fim(cavity)
 
     @DebugIt()
     def get_DisitckFwloadDacsoffloopsstbyA(self):
-        value = perseus_utils.read_direct(self.perseus,10, 'A')
+        value = perseus_utils.read_direct(self.perseus, 10, 'A')
         self._DisitckFwloadDacsoffloopsstbyA = (value >> 0) & 1
         return self._DisitckFwloadDacsoffloopsstbyA
 
     @DebugIt()
     def set_DisitckFwloadDacsoffloopsstbyA(self, DisitckFwloadDacsoffloopsstbyA):
         self._DisitckFwloadDacsoffloopsstbyA = DisitckFwloadDacsoffloopsstbyA
-        self.update_fim()
+        cavity = 'A'
+        self.update_fim(cavity)
 
     @DebugIt()
     def get_DisitckFwloadDacsoffloopsstbyB(self):
-        value = perseus_utils.read_direct(self.perseus,10, 'B')
+        value = perseus_utils.read_direct(self.perseus, 10, 'B')
         self._DisitckFwloadDacsoffloopsstbyB = (value >> 0) & 1
         return self._DisitckFwloadDacsoffloopsstbyB
 
     @DebugIt()
     def set_DisitckFwloadDacsoffloopsstbyB(self, DisitckFwloadDacsoffloopsstbyB):
         self._DisitckFwloadDacsoffloopsstbyB = DisitckFwloadDacsoffloopsstbyB
-        self.update_fim()
+        cavity = 'B'
+        self.update_fim(cavity)
 
     @DebugIt()
     def get_DisitckFwloadPindiodeswitchA(self):
-        value = perseus_utils.read_direct(self.perseus,10, 'A')
+        value = perseus_utils.read_direct(self.perseus, 10, 'A')
         self._DisitckFwloadPindiodeswitchA = (value >> 1) & 1
         return self._DisitckFwloadPindiodeswitchA
 
     @DebugIt()
     def set_DisitckFwloadPindiodeswitchA(self, DisitckFwloadPindiodeswitchA):
         self._DisitckFwloadPindiodeswitchA = DisitckFwloadPindiodeswitchA
-        self.update_fim()
+        cavity = 'A'
+        self.update_fim(cavity)
 
     @DebugIt()
     def get_DisitckFwloadPindiodeswitchB(self):
-        value = perseus_utils.read_direct(self.perseus,10, 'B')
+        value = perseus_utils.read_direct(self.perseus, 10, 'B')
         self._DisitckFwloadPindiodeswitchB = (value >> 1) & 1
         return self._DisitckFwloadPindiodeswitchB
 
     @DebugIt()
     def set_DisitckFwloadPindiodeswitchB(self, DisitckFwloadPindiodeswitchB):
         self._DisitckFwloadPindiodeswitchB = DisitckFwloadPindiodeswitchB
-        self.update_fim()
+        cavity = 'B'
+        self.update_fim(cavity)
 
     @DebugIt()
     def get_DisitckFwloadFdltrgA(self):
-        value = perseus_utils.read_direct(self.perseus,10, 'A')
+        value = perseus_utils.read_direct(self.perseus, 10, 'A')
         self._DisitckFwloadFdltrgA = (value >> 2) & 1
         return self._DisitckFwloadFdltrgA
 
     @DebugIt()
     def set_DisitckFwloadFdltrgA(self, DisitckFwloadFdltrgA):
         self._DisitckFwloadFdltrgA = DisitckFwloadFdltrgA
-        self.update_fim()
+        cavity = 'A'
+        self.update_fim(cavity)
 
     @DebugIt()
     def get_DisitckFwloadFdltrgB(self):
-        value = perseus_utils.read_direct(self.perseus,10, 'B')
+        value = perseus_utils.read_direct(self.perseus, 10, 'B')
         self._DisitckFwloadFdltrgB = (value >> 2) & 1
         return self._DisitckFwloadFdltrgB
 
     @DebugIt()
     def set_DisitckFwloadFdltrgB(self, DisitckFwloadFdltrgB):
         self._DisitckFwloadFdltrgB = DisitckFwloadFdltrgB
-        self.update_fim()
+        cavity = 'B'
+        self.update_fim(cavity)
 
     @DebugIt()
     def get_DisitckFwloadPlctxoffA(self):
-        value = perseus_utils.read_direct(self.perseus,10, 'A')
+        value = perseus_utils.read_direct(self.perseus, 10, 'A')
         self._DisitckFwloadPlctxoffA = (value >> 3) & 1
         return self._DisitckFwloadPlctxoffA
 
     @DebugIt()
     def set_DisitckFwloadPlctxoffA(self, DisitckFwloadPlctxoffA):
         self._DisitckFwloadPlctxoffA = DisitckFwloadPlctxoffA
-        self.update_fim()
+        cavity = 'A'
+        self.update_fim(cavity)
 
     @DebugIt()
     def get_DisitckFwloadPlctxoffB(self):
-        value = perseus_utils.read_direct(self.perseus,10, 'B')
+        value = perseus_utils.read_direct(self.perseus, 10, 'B')
         self._DisitckFwloadPlctxoffB = (value >> 3) & 1
         return self._DisitckFwloadPlctxoffB
 
     @DebugIt()
     def set_DisitckFwloadPlctxoffB(self, DisitckFwloadPlctxoffB):
         self._DisitckFwloadPlctxoffB = DisitckFwloadPlctxoffB
-        self.update_fim()
+        cavity = 'B'
+        self.update_fim(cavity)
 
     @DebugIt()
     def get_DisitckFwloadMpsA(self):
-        value = perseus_utils.read_direct(self.perseus,10, 'A')
+        value = perseus_utils.read_direct(self.perseus, 10, 'A')
         self._DisitckFwloadMpsA = (value >> 4) & 1
         return self._DisitckFwloadMpsA
 
     @DebugIt()
     def set_DisitckFwloadMpsA(self, DisitckFwloadMpsA):
         self._DisitckFwloadMpsA = DisitckFwloadMpsA
-        self.update_fim()
+        cavity = 'A'
+        self.update_fim(cavity)
 
     @DebugIt()
     def get_DisitckFwloadMpsB(self):
-        value = perseus_utils.read_direct(self.perseus,10, 'B')
+        value = perseus_utils.read_direct(self.perseus, 10, 'B')
         self._DisitckFwloadMpsB = (value >> 4) & 1
         return self._DisitckFwloadMpsB
 
     @DebugIt()
     def set_DisitckFwloadMpsB(self, DisitckFwloadMpsB):
         self._DisitckFwloadMpsB = DisitckFwloadMpsB
-        self.update_fim()
+        cavity = 'B'
+        self.update_fim(cavity)
 
     @DebugIt()
     def get_DisitckFwloadDiagA(self):
-        value = perseus_utils.read_direct(self.perseus,10, 'A')
+        value = perseus_utils.read_direct(self.perseus, 10, 'A')
         self._DisitckFwloadDiagA = (value >> 5) & 1
         return self._DisitckFwloadDiagA
 
     @DebugIt()
     def set_DisitckFwloadDiagA(self, DisitckFwloadDiagA):
         self._DisitckFwloadDiagA = DisitckFwloadDiagA
-        self.update_fim()
+        cavity = 'A'
+        self.update_fim(cavity)
 
     @DebugIt()
     def get_DisitckFwloadDiagB(self):
-        value = perseus_utils.read_direct(self.perseus,10, 'B')
+        value = perseus_utils.read_direct(self.perseus, 10, 'B')
         self._DisitckFwloadDiagB = (value >> 5) & 1
         return self._DisitckFwloadDiagB
 
     @DebugIt()
     def set_DisitckFwloadDiagB(self, DisitckFwloadDiagB):
         self._DisitckFwloadDiagB = DisitckFwloadDiagB
-        self.update_fim()
+        cavity = 'B'
+        self.update_fim(cavity)
 
     @DebugIt()
     def get_DisitckFwhybloadDacsoffloopsstbyA(self):
-        value = perseus_utils.read_direct(self.perseus,11, 'A')
+        value = perseus_utils.read_direct(self.perseus, 11, 'A')
         self._DisitckFwhybloadDacsoffloopsstbyA = (value >> 0) & 1
         return self._DisitckFwhybloadDacsoffloopsstbyA
 
     @DebugIt()
     def set_DisitckFwhybloadDacsoffloopsstbyA(self, DisitckFwhybloadDacsoffloopsstbyA):
         self._DisitckFwhybloadDacsoffloopsstbyA = DisitckFwhybloadDacsoffloopsstbyA
-        self.update_fim()
+        cavity = 'A'
+        self.update_fim(cavity)
 
     @DebugIt()
     def get_DisitckFwhybloadDacsoffloopsstbyB(self):
-        value = perseus_utils.read_direct(self.perseus,11, 'B')
+        value = perseus_utils.read_direct(self.perseus, 11, 'B')
         self._DisitckFwhybloadDacsoffloopsstbyB = (value >> 0) & 1
         return self._DisitckFwhybloadDacsoffloopsstbyB
 
     @DebugIt()
     def set_DisitckFwhybloadDacsoffloopsstbyB(self, DisitckFwhybloadDacsoffloopsstbyB):
         self._DisitckFwhybloadDacsoffloopsstbyB = DisitckFwhybloadDacsoffloopsstbyB
-        self.update_fim()
+        cavity = 'B'
+        self.update_fim(cavity)
 
     @DebugIt()
     def get_DisitckFwhybloadPindiodeswitchA(self):
-        value = perseus_utils.read_direct(self.perseus,11, 'A')
+        value = perseus_utils.read_direct(self.perseus, 11, 'A')
         self._DisitckFwhybloadPindiodeswitchA = (value >> 1) & 1
         return self._DisitckFwhybloadPindiodeswitchA
 
     @DebugIt()
     def set_DisitckFwhybloadPindiodeswitchA(self, DisitckFwhybloadPindiodeswitchA):
         self._DisitckFwhybloadPindiodeswitchA = DisitckFwhybloadPindiodeswitchA
-        self.update_fim()
+        cavity = 'A'
+        self.update_fim(cavity)
 
     @DebugIt()
     def get_DisitckFwhybloadPindiodeswitchB(self):
-        value = perseus_utils.read_direct(self.perseus,11, 'B')
+        value = perseus_utils.read_direct(self.perseus, 11, 'B')
         self._DisitckFwhybloadPindiodeswitchB = (value >> 1) & 1
         return self._DisitckFwhybloadPindiodeswitchB
 
     @DebugIt()
     def set_DisitckFwhybloadPindiodeswitchB(self, DisitckFwhybloadPindiodeswitchB):
         self._DisitckFwhybloadPindiodeswitchB = DisitckFwhybloadPindiodeswitchB
-        self.update_fim()
+        cavity = 'B'
+        self.update_fim(cavity)
 
     @DebugIt()
     def get_DisitckFwhybloadFdltrgA(self):
-        value = perseus_utils.read_direct(self.perseus,11, 'A')
+        value = perseus_utils.read_direct(self.perseus, 11, 'A')
         self._DisitckFwhybloadFdltrgA = (value >> 2) & 1
         return self._DisitckFwhybloadFdltrgA
 
     @DebugIt()
     def set_DisitckFwhybloadFdltrgA(self, DisitckFwhybloadFdltrgA):
         self._DisitckFwhybloadFdltrgA = DisitckFwhybloadFdltrgA
-        self.update_fim()
+        cavity = 'A'
+        self.update_fim(cavity)
 
     @DebugIt()
     def get_DisitckFwhybloadFdltrgB(self):
-        value = perseus_utils.read_direct(self.perseus,11, 'B')
+        value = perseus_utils.read_direct(self.perseus, 11, 'B')
         self._DisitckFwhybloadFdltrgB = (value >> 2) & 1
         return self._DisitckFwhybloadFdltrgB
 
     @DebugIt()
     def set_DisitckFwhybloadFdltrgB(self, DisitckFwhybloadFdltrgB):
         self._DisitckFwhybloadFdltrgB = DisitckFwhybloadFdltrgB
-        self.update_fim()
+        cavity = 'B'
+        self.update_fim(cavity)
 
     @DebugIt()
     def get_DisitckFwhybloadPlctxoffA(self):
-        value = perseus_utils.read_direct(self.perseus,11, 'A')
+        value = perseus_utils.read_direct(self.perseus, 11, 'A')
         self._DisitckFwhybloadPlctxoffA = (value >> 3) & 1
         return self._DisitckFwhybloadPlctxoffA
 
     @DebugIt()
     def set_DisitckFwhybloadPlctxoffA(self, DisitckFwhybloadPlctxoffA):
         self._DisitckFwhybloadPlctxoffA = DisitckFwhybloadPlctxoffA
-        self.update_fim()
+        cavity = 'A'
+        self.update_fim(cavity)
 
     @DebugIt()
     def get_DisitckFwhybloadPlctxoffB(self):
-        value = perseus_utils.read_direct(self.perseus,11, 'B')
+        value = perseus_utils.read_direct(self.perseus, 11, 'B')
         self._DisitckFwhybloadPlctxoffB = (value >> 3) & 1
         return self._DisitckFwhybloadPlctxoffB
 
     @DebugIt()
     def set_DisitckFwhybloadPlctxoffB(self, DisitckFwhybloadPlctxoffB):
         self._DisitckFwhybloadPlctxoffB = DisitckFwhybloadPlctxoffB
-        self.update_fim()
+        cavity = 'B'
+        self.update_fim(cavity)
 
     @DebugIt()
     def get_DisitckFwhybloadMpsA(self):
-        value = perseus_utils.read_direct(self.perseus,11, 'A')
+        value = perseus_utils.read_direct(self.perseus, 11, 'A')
         self._DisitckFwhybloadMpsA = (value >> 4) & 1
         return self._DisitckFwhybloadMpsA
 
     @DebugIt()
     def set_DisitckFwhybloadMpsA(self, DisitckFwhybloadMpsA):
         self._DisitckFwhybloadMpsA = DisitckFwhybloadMpsA
-        self.update_fim()
+        cavity = 'A'
+        self.update_fim(cavity)
 
     @DebugIt()
     def get_DisitckFwhybloadMpsB(self):
-        value = perseus_utils.read_direct(self.perseus,11, 'B')
+        value = perseus_utils.read_direct(self.perseus, 11, 'B')
         self._DisitckFwhybloadMpsB = (value >> 4) & 1
         return self._DisitckFwhybloadMpsB
 
     @DebugIt()
     def set_DisitckFwhybloadMpsB(self, DisitckFwhybloadMpsB):
         self._DisitckFwhybloadMpsB = DisitckFwhybloadMpsB
-        self.update_fim()
+        cavity = 'B'
+        self.update_fim(cavity)
 
     @DebugIt()
     def get_DisitckFwhybloadDiagA(self):
-        value = perseus_utils.read_direct(self.perseus,11, 'A')
+        value = perseus_utils.read_direct(self.perseus, 11, 'A')
         self._DisitckFwhybloadDiagA = (value >> 5) & 1
         return self._DisitckFwhybloadDiagA
 
     @DebugIt()
     def set_DisitckFwhybloadDiagA(self, DisitckFwhybloadDiagA):
         self._DisitckFwhybloadDiagA = DisitckFwhybloadDiagA
-        self.update_fim()
+        cavity = 'A'
+        self.update_fim(cavity)
 
     @DebugIt()
     def get_DisitckFwhybloadDiagB(self):
-        value = perseus_utils.read_direct(self.perseus,11, 'B')
+        value = perseus_utils.read_direct(self.perseus, 11, 'B')
         self._DisitckFwhybloadDiagB = (value >> 5) & 1
         return self._DisitckFwhybloadDiagB
 
     @DebugIt()
     def set_DisitckFwhybloadDiagB(self, DisitckFwhybloadDiagB):
         self._DisitckFwhybloadDiagB = DisitckFwhybloadDiagB
-        self.update_fim()
+        cavity = 'B'
+        self.update_fim(cavity)
 
     @DebugIt()
     def get_DisitckRvcavDacsoffloopsstbyA(self):
-        value = perseus_utils.read_direct(self.perseus,12, 'A')
+        value = perseus_utils.read_direct(self.perseus, 12, 'A')
         self._DisitckRvcavDacsoffloopsstbyA = (value >> 0) & 1
         return self._DisitckRvcavDacsoffloopsstbyA
 
     @DebugIt()
     def set_DisitckRvcavDacsoffloopsstbyA(self, DisitckRvcavDacsoffloopsstbyA):
         self._DisitckRvcavDacsoffloopsstbyA = DisitckRvcavDacsoffloopsstbyA
-        self.update_fim()
+        cavity = 'A'
+        self.update_fim(cavity)
 
     @DebugIt()
     def get_DisitckRvcavDacsoffloopsstbyB(self):
-        value = perseus_utils.read_direct(self.perseus,12, 'B')
+        value = perseus_utils.read_direct(self.perseus, 12, 'B')
         self._DisitckRvcavDacsoffloopsstbyB = (value >> 0) & 1
         return self._DisitckRvcavDacsoffloopsstbyB
 
     @DebugIt()
     def set_DisitckRvcavDacsoffloopsstbyB(self, DisitckRvcavDacsoffloopsstbyB):
         self._DisitckRvcavDacsoffloopsstbyB = DisitckRvcavDacsoffloopsstbyB
-        self.update_fim()
+        cavity = 'B'
+        self.update_fim(cavity)
 
     @DebugIt()
     def get_DisitckRvcavPindiodeswitchA(self):
-        value = perseus_utils.read_direct(self.perseus,12, 'A')
+        value = perseus_utils.read_direct(self.perseus, 12, 'A')
         self._DisitckRvcavPindiodeswitchA = (value >> 1) & 1
         return self._DisitckRvcavPindiodeswitchA
 
     @DebugIt()
     def set_DisitckRvcavPindiodeswitchA(self, DisitckRvcavPindiodeswitchA):
         self._DisitckRvcavPindiodeswitchA = DisitckRvcavPindiodeswitchA
-        self.update_fim()
+        cavity = 'A'
+        self.update_fim(cavity)
 
     @DebugIt()
     def get_DisitckRvcavPindiodeswitchB(self):
-        value = perseus_utils.read_direct(self.perseus,12, 'B')
+        value = perseus_utils.read_direct(self.perseus, 12, 'B')
         self._DisitckRvcavPindiodeswitchB = (value >> 1) & 1
         return self._DisitckRvcavPindiodeswitchB
 
     @DebugIt()
     def set_DisitckRvcavPindiodeswitchB(self, DisitckRvcavPindiodeswitchB):
         self._DisitckRvcavPindiodeswitchB = DisitckRvcavPindiodeswitchB
-        self.update_fim()
+        cavity = 'B'
+        self.update_fim(cavity)
 
     @DebugIt()
     def get_DisitckRvcavFdltrgA(self):
-        value = perseus_utils.read_direct(self.perseus,12, 'A')
+        value = perseus_utils.read_direct(self.perseus, 12, 'A')
         self._DisitckRvcavFdltrgA = (value >> 2) & 1
         return self._DisitckRvcavFdltrgA
 
     @DebugIt()
     def set_DisitckRvcavFdltrgA(self, DisitckRvcavFdltrgA):
         self._DisitckRvcavFdltrgA = DisitckRvcavFdltrgA
-        self.update_fim()
+        cavity = 'A'
+        self.update_fim(cavity)
 
     @DebugIt()
     def get_DisitckRvcavFdltrgB(self):
-        value = perseus_utils.read_direct(self.perseus,12, 'B')
+        value = perseus_utils.read_direct(self.perseus, 12, 'B')
         self._DisitckRvcavFdltrgB = (value >> 2) & 1
         return self._DisitckRvcavFdltrgB
 
     @DebugIt()
     def set_DisitckRvcavFdltrgB(self, DisitckRvcavFdltrgB):
         self._DisitckRvcavFdltrgB = DisitckRvcavFdltrgB
-        self.update_fim()
+        cavity = 'B'
+        self.update_fim(cavity)
 
     @DebugIt()
     def get_DisitckRvcavPlctxoffA(self):
-        value = perseus_utils.read_direct(self.perseus,12, 'A')
+        value = perseus_utils.read_direct(self.perseus, 12, 'A')
         self._DisitckRvcavPlctxoffA = (value >> 3) & 1
         return self._DisitckRvcavPlctxoffA
 
     @DebugIt()
     def set_DisitckRvcavPlctxoffA(self, DisitckRvcavPlctxoffA):
         self._DisitckRvcavPlctxoffA = DisitckRvcavPlctxoffA
-        self.update_fim()
+        cavity = 'A'
+        self.update_fim(cavity)
 
     @DebugIt()
     def get_DisitckRvcavPlctxoffB(self):
-        value = perseus_utils.read_direct(self.perseus,12, 'B')
+        value = perseus_utils.read_direct(self.perseus, 12, 'B')
         self._DisitckRvcavPlctxoffB = (value >> 3) & 1
         return self._DisitckRvcavPlctxoffB
 
     @DebugIt()
     def set_DisitckRvcavPlctxoffB(self, DisitckRvcavPlctxoffB):
         self._DisitckRvcavPlctxoffB = DisitckRvcavPlctxoffB
-        self.update_fim()
+        cavity = 'B'
+        self.update_fim(cavity)
 
     @DebugIt()
     def get_DisitckRvcavMpsA(self):
-        value = perseus_utils.read_direct(self.perseus,12, 'A')
+        value = perseus_utils.read_direct(self.perseus, 12, 'A')
         self._DisitckRvcavMpsA = (value >> 4) & 1
         return self._DisitckRvcavMpsA
 
     @DebugIt()
     def set_DisitckRvcavMpsA(self, DisitckRvcavMpsA):
         self._DisitckRvcavMpsA = DisitckRvcavMpsA
-        self.update_fim()
+        cavity = 'A'
+        self.update_fim(cavity)
 
     @DebugIt()
     def get_DisitckRvcavMpsB(self):
-        value = perseus_utils.read_direct(self.perseus,12, 'B')
+        value = perseus_utils.read_direct(self.perseus, 12, 'B')
         self._DisitckRvcavMpsB = (value >> 4) & 1
         return self._DisitckRvcavMpsB
 
     @DebugIt()
     def set_DisitckRvcavMpsB(self, DisitckRvcavMpsB):
         self._DisitckRvcavMpsB = DisitckRvcavMpsB
-        self.update_fim()
+        cavity = 'B'
+        self.update_fim(cavity)
 
     @DebugIt()
     def get_DisitckRvcavDiagA(self):
-        value = perseus_utils.read_direct(self.perseus,12, 'A')
+        value = perseus_utils.read_direct(self.perseus, 12, 'A')
         self._DisitckRvcavDiagA = (value >> 5) & 1
         return self._DisitckRvcavDiagA
 
     @DebugIt()
     def set_DisitckRvcavDiagA(self, DisitckRvcavDiagA):
         self._DisitckRvcavDiagA = DisitckRvcavDiagA
-        self.update_fim()
+        cavity = 'A'
+        self.update_fim(cavity)
 
     @DebugIt()
     def get_DisitckRvcavDiagB(self):
-        value = perseus_utils.read_direct(self.perseus,12, 'B')
+        value = perseus_utils.read_direct(self.perseus, 12, 'B')
         self._DisitckRvcavDiagB = (value >> 5) & 1
         return self._DisitckRvcavDiagB
 
     @DebugIt()
     def set_DisitckRvcavDiagB(self, DisitckRvcavDiagB):
         self._DisitckRvcavDiagB = DisitckRvcavDiagB
-        self.update_fim()
+        cavity = 'B'
+        self.update_fim(cavity)
 
     @DebugIt()
     def get_DisitckArcsDacsoffloopsstbyA(self):
-        value = perseus_utils.read_direct(self.perseus,13, 'A')
+        value = perseus_utils.read_direct(self.perseus, 13, 'A')
         self._DisitckArcsDacsoffloopsstbyA = (value >> 0) & 1
         return self._DisitckArcsDacsoffloopsstbyA
 
     @DebugIt()
     def set_DisitckArcsDacsoffloopsstbyA(self, DisitckArcsDacsoffloopsstbyA):
         self._DisitckArcsDacsoffloopsstbyA = DisitckArcsDacsoffloopsstbyA
-        self.update_fim()
+        cavity = 'A'
+        self.update_fim(cavity)
 
     @DebugIt()
     def get_DisitckArcsDacsoffloopsstbyB(self):
-        value = perseus_utils.read_direct(self.perseus,13, 'B')
+        value = perseus_utils.read_direct(self.perseus, 13, 'B')
         self._DisitckArcsDacsoffloopsstbyB = (value >> 0) & 1
         return self._DisitckArcsDacsoffloopsstbyB
 
     @DebugIt()
     def set_DisitckArcsDacsoffloopsstbyB(self, DisitckArcsDacsoffloopsstbyB):
         self._DisitckArcsDacsoffloopsstbyB = DisitckArcsDacsoffloopsstbyB
-        self.update_fim()
+        cavity = 'B'
+        self.update_fim(cavity)
 
     @DebugIt()
     def get_DisitckArcsPindiodeswitchA(self):
-        value = perseus_utils.read_direct(self.perseus,13, 'A')
+        value = perseus_utils.read_direct(self.perseus, 13, 'A')
         self._DisitckArcsPindiodeswitchA = (value >> 1) & 1
         return self._DisitckArcsPindiodeswitchA
 
     @DebugIt()
     def set_DisitckArcsPindiodeswitchA(self, DisitckArcsPindiodeswitchA):
         self._DisitckArcsPindiodeswitchA = DisitckArcsPindiodeswitchA
-        self.update_fim()
+        cavity = 'A'
+        self.update_fim(cavity)
 
     @DebugIt()
     def get_DisitckArcsPindiodeswitchB(self):
-        value = perseus_utils.read_direct(self.perseus,13, 'B')
+        value = perseus_utils.read_direct(self.perseus, 13, 'B')
         self._DisitckArcsPindiodeswitchB = (value >> 1) & 1
         return self._DisitckArcsPindiodeswitchB
 
     @DebugIt()
     def set_DisitckArcsPindiodeswitchB(self, DisitckArcsPindiodeswitchB):
         self._DisitckArcsPindiodeswitchB = DisitckArcsPindiodeswitchB
-        self.update_fim()
+        cavity = 'B'
+        self.update_fim(cavity)
 
     @DebugIt()
     def get_DisitckArcsFdltrgA(self):
-        value = perseus_utils.read_direct(self.perseus,13, 'A')
+        value = perseus_utils.read_direct(self.perseus, 13, 'A')
         self._DisitckArcsFdltrgA = (value >> 2) & 1
         return self._DisitckArcsFdltrgA
 
     @DebugIt()
     def set_DisitckArcsFdltrgA(self, DisitckArcsFdltrgA):
         self._DisitckArcsFdltrgA = DisitckArcsFdltrgA
-        self.update_fim()
+        cavity = 'A'
+        self.update_fim(cavity)
 
     @DebugIt()
     def get_DisitckArcsFdltrgB(self):
-        value = perseus_utils.read_direct(self.perseus,13, 'B')
+        value = perseus_utils.read_direct(self.perseus, 13, 'B')
         self._DisitckArcsFdltrgB = (value >> 2) & 1
         return self._DisitckArcsFdltrgB
 
     @DebugIt()
     def set_DisitckArcsFdltrgB(self, DisitckArcsFdltrgB):
         self._DisitckArcsFdltrgB = DisitckArcsFdltrgB
-        self.update_fim()
+        cavity = 'B'
+        self.update_fim(cavity)
 
     @DebugIt()
     def get_DisitckArcsPlctxoffA(self):
-        value = perseus_utils.read_direct(self.perseus,13, 'A')
+        value = perseus_utils.read_direct(self.perseus, 13, 'A')
         self._DisitckArcsPlctxoffA = (value >> 3) & 1
         return self._DisitckArcsPlctxoffA
 
     @DebugIt()
     def set_DisitckArcsPlctxoffA(self, DisitckArcsPlctxoffA):
         self._DisitckArcsPlctxoffA = DisitckArcsPlctxoffA
-        self.update_fim()
+        cavity = 'A'
+        self.update_fim(cavity)
 
     @DebugIt()
     def get_DisitckArcsPlctxoffB(self):
-        value = perseus_utils.read_direct(self.perseus,13, 'B')
+        value = perseus_utils.read_direct(self.perseus, 13, 'B')
         self._DisitckArcsPlctxoffB = (value >> 3) & 1
         return self._DisitckArcsPlctxoffB
 
     @DebugIt()
     def set_DisitckArcsPlctxoffB(self, DisitckArcsPlctxoffB):
         self._DisitckArcsPlctxoffB = DisitckArcsPlctxoffB
-        self.update_fim()
+        cavity = 'B'
+        self.update_fim(cavity)
 
     @DebugIt()
     def get_DisitckArcsMpsA(self):
-        value = perseus_utils.read_direct(self.perseus,13, 'A')
+        value = perseus_utils.read_direct(self.perseus, 13, 'A')
         self._DisitckArcsMpsA = (value >> 4) & 1
         return self._DisitckArcsMpsA
 
     @DebugIt()
     def set_DisitckArcsMpsA(self, DisitckArcsMpsA):
         self._DisitckArcsMpsA = DisitckArcsMpsA
-        self.update_fim()
+        cavity = 'A'
+        self.update_fim(cavity)
 
     @DebugIt()
     def get_DisitckArcsMpsB(self):
-        value = perseus_utils.read_direct(self.perseus,13, 'B')
+        value = perseus_utils.read_direct(self.perseus, 13, 'B')
         self._DisitckArcsMpsB = (value >> 4) & 1
         return self._DisitckArcsMpsB
 
     @DebugIt()
     def set_DisitckArcsMpsB(self, DisitckArcsMpsB):
         self._DisitckArcsMpsB = DisitckArcsMpsB
-        self.update_fim()
+        cavity = 'B'
+        self.update_fim(cavity)
 
     @DebugIt()
     def get_DisitckArcsDiagA(self):
-        value = perseus_utils.read_direct(self.perseus,13, 'A')
+        value = perseus_utils.read_direct(self.perseus, 13, 'A')
         self._DisitckArcsDiagA = (value >> 5) & 1
         return self._DisitckArcsDiagA
 
     @DebugIt()
     def set_DisitckArcsDiagA(self, DisitckArcsDiagA):
         self._DisitckArcsDiagA = DisitckArcsDiagA
-        self.update_fim()
+        cavity = 'A'
+        self.update_fim(cavity)
 
     @DebugIt()
     def get_DisitckArcsDiagB(self):
-        value = perseus_utils.read_direct(self.perseus,13, 'B')
+        value = perseus_utils.read_direct(self.perseus, 13, 'B')
         self._DisitckArcsDiagB = (value >> 5) & 1
         return self._DisitckArcsDiagB
 
     @DebugIt()
     def set_DisitckArcsDiagB(self, DisitckArcsDiagB):
         self._DisitckArcsDiagB = DisitckArcsDiagB
-        self.update_fim()
+        cavity = 'B'
+        self.update_fim(cavity)
 
     @DebugIt()
     def get_DisitckVacuumDacsoffloopsstbyA(self):
-        value = perseus_utils.read_direct(self.perseus,14, 'A')
+        value = perseus_utils.read_direct(self.perseus, 14, 'A')
         self._DisitckVacuumDacsoffloopsstbyA = (value >> 0) & 1
         return self._DisitckVacuumDacsoffloopsstbyA
 
     @DebugIt()
     def set_DisitckVacuumDacsoffloopsstbyA(self, DisitckVacuumDacsoffloopsstbyA):
         self._DisitckVacuumDacsoffloopsstbyA = DisitckVacuumDacsoffloopsstbyA
-        self.update_fim()
+        cavity = 'A'
+        self.update_fim(cavity)
 
     @DebugIt()
     def get_DisitckVacuumDacsoffloopsstbyB(self):
-        value = perseus_utils.read_direct(self.perseus,14, 'B')
+        value = perseus_utils.read_direct(self.perseus, 14, 'B')
         self._DisitckVacuumDacsoffloopsstbyB = (value >> 0) & 1
         return self._DisitckVacuumDacsoffloopsstbyB
 
     @DebugIt()
     def set_DisitckVacuumDacsoffloopsstbyB(self, DisitckVacuumDacsoffloopsstbyB):
         self._DisitckVacuumDacsoffloopsstbyB = DisitckVacuumDacsoffloopsstbyB
-        self.update_fim()
+        cavity = 'B'
+        self.update_fim(cavity)
 
     @DebugIt()
     def get_DisitckVacuumPindiodeswitchA(self):
-        value = perseus_utils.read_direct(self.perseus,14, 'A')
+        value = perseus_utils.read_direct(self.perseus, 14, 'A')
         self._DisitckVacuumPindiodeswitchA = (value >> 1) & 1
         return self._DisitckVacuumPindiodeswitchA
 
     @DebugIt()
     def set_DisitckVacuumPindiodeswitchA(self, DisitckVacuumPindiodeswitchA):
         self._DisitckVacuumPindiodeswitchA = DisitckVacuumPindiodeswitchA
-        self.update_fim()
+        cavity = 'A'
+        self.update_fim(cavity)
 
     @DebugIt()
     def get_DisitckVacuumPindiodeswitchB(self):
-        value = perseus_utils.read_direct(self.perseus,14, 'B')
+        value = perseus_utils.read_direct(self.perseus, 14, 'B')
         self._DisitckVacuumPindiodeswitchB = (value >> 1) & 1
         return self._DisitckVacuumPindiodeswitchB
 
     @DebugIt()
     def set_DisitckVacuumPindiodeswitchB(self, DisitckVacuumPindiodeswitchB):
         self._DisitckVacuumPindiodeswitchB = DisitckVacuumPindiodeswitchB
-        self.update_fim()
+        cavity = 'B'
+        self.update_fim(cavity)
 
     @DebugIt()
     def get_DisitckVacuumFdltrgA(self):
-        value = perseus_utils.read_direct(self.perseus,14, 'A')
+        value = perseus_utils.read_direct(self.perseus, 14, 'A')
         self._DisitckVacuumFdltrgA = (value >> 2) & 1
         return self._DisitckVacuumFdltrgA
 
     @DebugIt()
     def set_DisitckVacuumFdltrgA(self, DisitckVacuumFdltrgA):
         self._DisitckVacuumFdltrgA = DisitckVacuumFdltrgA
-        self.update_fim()
+        cavity = 'A'
+        self.update_fim(cavity)
 
     @DebugIt()
     def get_DisitckVacuumFdltrgB(self):
-        value = perseus_utils.read_direct(self.perseus,14, 'B')
+        value = perseus_utils.read_direct(self.perseus, 14, 'B')
         self._DisitckVacuumFdltrgB = (value >> 2) & 1
         return self._DisitckVacuumFdltrgB
 
     @DebugIt()
     def set_DisitckVacuumFdltrgB(self, DisitckVacuumFdltrgB):
         self._DisitckVacuumFdltrgB = DisitckVacuumFdltrgB
-        self.update_fim()
+        cavity = 'B'
+        self.update_fim(cavity)
 
     @DebugIt()
     def get_DisitckVacuumPlctxoffA(self):
-        value = perseus_utils.read_direct(self.perseus,14, 'A')
+        value = perseus_utils.read_direct(self.perseus, 14, 'A')
         self._DisitckVacuumPlctxoffA = (value >> 3) & 1
         return self._DisitckVacuumPlctxoffA
 
     @DebugIt()
     def set_DisitckVacuumPlctxoffA(self, DisitckVacuumPlctxoffA):
         self._DisitckVacuumPlctxoffA = DisitckVacuumPlctxoffA
-        self.update_fim()
+        cavity = 'A'
+        self.update_fim(cavity)
 
     @DebugIt()
     def get_DisitckVacuumPlctxoffB(self):
-        value = perseus_utils.read_direct(self.perseus,14, 'B')
+        value = perseus_utils.read_direct(self.perseus, 14, 'B')
         self._DisitckVacuumPlctxoffB = (value >> 3) & 1
         return self._DisitckVacuumPlctxoffB
 
     @DebugIt()
     def set_DisitckVacuumPlctxoffB(self, DisitckVacuumPlctxoffB):
         self._DisitckVacuumPlctxoffB = DisitckVacuumPlctxoffB
-        self.update_fim()
+        cavity = 'B'
+        self.update_fim(cavity)
 
     @DebugIt()
     def get_DisitckVacuumMpsA(self):
-        value = perseus_utils.read_direct(self.perseus,14, 'A')
+        value = perseus_utils.read_direct(self.perseus, 14, 'A')
         self._DisitckVacuumMpsA = (value >> 4) & 1
         return self._DisitckVacuumMpsA
 
     @DebugIt()
     def set_DisitckVacuumMpsA(self, DisitckVacuumMpsA):
         self._DisitckVacuumMpsA = DisitckVacuumMpsA
-        self.update_fim()
+        cavity = 'A'
+        self.update_fim(cavity)
 
     @DebugIt()
     def get_DisitckVacuumMpsB(self):
-        value = perseus_utils.read_direct(self.perseus,14, 'B')
+        value = perseus_utils.read_direct(self.perseus, 14, 'B')
         self._DisitckVacuumMpsB = (value >> 4) & 1
         return self._DisitckVacuumMpsB
 
     @DebugIt()
     def set_DisitckVacuumMpsB(self, DisitckVacuumMpsB):
         self._DisitckVacuumMpsB = DisitckVacuumMpsB
-        self.update_fim()
+        cavity = 'B'
+        self.update_fim(cavity)
 
     @DebugIt()
     def get_DisitckVacuumDiagA(self):
-        value = perseus_utils.read_direct(self.perseus,14, 'A')
+        value = perseus_utils.read_direct(self.perseus, 14, 'A')
         self._DisitckVacuumDiagA = (value >> 5) & 1
         return self._DisitckVacuumDiagA
 
     @DebugIt()
     def set_DisitckVacuumDiagA(self, DisitckVacuumDiagA):
         self._DisitckVacuumDiagA = DisitckVacuumDiagA
-        self.update_fim()
+        cavity = 'A'
+        self.update_fim(cavity)
 
     @DebugIt()
     def get_DisitckVacuumDiagB(self):
-        value = perseus_utils.read_direct(self.perseus,14, 'B')
+        value = perseus_utils.read_direct(self.perseus, 14, 'B')
         self._DisitckVacuumDiagB = (value >> 5) & 1
         return self._DisitckVacuumDiagB
 
     @DebugIt()
     def set_DisitckVacuumDiagB(self, DisitckVacuumDiagB):
         self._DisitckVacuumDiagB = DisitckVacuumDiagB
-        self.update_fim()
+        cavity = 'B'
+        self.update_fim(cavity)
 
     @DebugIt()
     def get_DisitckManualInterlockDacsoffloopsstbyA(self):
-        value = perseus_utils.read_direct(self.perseus,15, 'A')
+        value = perseus_utils.read_direct(self.perseus, 15, 'A')
         self._DisitckManualInterlockDacsoffloopsstbyA = (value >> 0) & 1
         return self._DisitckManualInterlockDacsoffloopsstbyA
 
     @DebugIt()
     def set_DisitckManualInterlockDacsoffloopsstbyA(self, DisitckManualInterlockDacsoffloopsstbyA):
         self._DisitckManualInterlockDacsoffloopsstbyA = DisitckManualInterlockDacsoffloopsstbyA
-        self.update_fim()
+        cavity = 'A'
+        self.update_fim(cavity)
 
     @DebugIt()
     def get_DisitckManualInterlockDacsoffloopsstbyB(self):
-        value = perseus_utils.read_direct(self.perseus,15, 'B')
+        value = perseus_utils.read_direct(self.perseus, 15, 'B')
         self._DisitckManualInterlockDacsoffloopsstbyB = (value >> 0) & 1
         return self._DisitckManualInterlockDacsoffloopsstbyB
 
     @DebugIt()
     def set_DisitckManualInterlockDacsoffloopsstbyB(self, DisitckManualInterlockDacsoffloopsstbyB):
         self._DisitckManualInterlockDacsoffloopsstbyB = DisitckManualInterlockDacsoffloopsstbyB
-        self.update_fim()
+        cavity = 'B'
+        self.update_fim(cavity)
 
     @DebugIt()
     def get_DisitckManualInterlockPindiodeswitchA(self):
-        value = perseus_utils.read_direct(self.perseus,15, 'A')
+        value = perseus_utils.read_direct(self.perseus, 15, 'A')
         self._DisitckManualInterlockPindiodeswitchA = (value >> 1) & 1
         return self._DisitckManualInterlockPindiodeswitchA
 
     @DebugIt()
     def set_DisitckManualInterlockPindiodeswitchA(self, DisitckManualInterlockPindiodeswitchA):
         self._DisitckManualInterlockPindiodeswitchA = DisitckManualInterlockPindiodeswitchA
-        self.update_fim()
+        cavity = 'A'
+        self.update_fim(cavity)
 
     @DebugIt()
     def get_DisitckManualInterlockPindiodeswitchB(self):
-        value = perseus_utils.read_direct(self.perseus,15, 'B')
+        value = perseus_utils.read_direct(self.perseus, 15, 'B')
         self._DisitckManualInterlockPindiodeswitchB = (value >> 1) & 1
         return self._DisitckManualInterlockPindiodeswitchB
 
     @DebugIt()
     def set_DisitckManualInterlockPindiodeswitchB(self, DisitckManualInterlockPindiodeswitchB):
         self._DisitckManualInterlockPindiodeswitchB = DisitckManualInterlockPindiodeswitchB
-        self.update_fim()
+        cavity = 'B'
+        self.update_fim(cavity)
 
     @DebugIt()
     def get_DisitckManualInterlockFdltrgA(self):
-        value = perseus_utils.read_direct(self.perseus,15, 'A')
+        value = perseus_utils.read_direct(self.perseus, 15, 'A')
         self._DisitckManualInterlockFdltrgA = (value >> 2) & 1
         return self._DisitckManualInterlockFdltrgA
 
     @DebugIt()
     def set_DisitckManualInterlockFdltrgA(self, DisitckManualInterlockFdltrgA):
         self._DisitckManualInterlockFdltrgA = DisitckManualInterlockFdltrgA
-        self.update_fim()
+        cavity = 'A'
+        self.update_fim(cavity)
 
     @DebugIt()
     def get_DisitckManualInterlockFdltrgB(self):
-        value = perseus_utils.read_direct(self.perseus,15, 'B')
+        value = perseus_utils.read_direct(self.perseus, 15, 'B')
         self._DisitckManualInterlockFdltrgB = (value >> 2) & 1
         return self._DisitckManualInterlockFdltrgB
 
     @DebugIt()
     def set_DisitckManualInterlockFdltrgB(self, DisitckManualInterlockFdltrgB):
         self._DisitckManualInterlockFdltrgB = DisitckManualInterlockFdltrgB
-        self.update_fim()
+        cavity = 'B'
+        self.update_fim(cavity)
 
     @DebugIt()
     def get_DisitckManualInterlockPlctxoffA(self):
-        value = perseus_utils.read_direct(self.perseus,15, 'A')
+        value = perseus_utils.read_direct(self.perseus, 15, 'A')
         self._DisitckManualInterlockPlctxoffA = (value >> 3) & 1
         return self._DisitckManualInterlockPlctxoffA
 
     @DebugIt()
     def set_DisitckManualInterlockPlctxoffA(self, DisitckManualInterlockPlctxoffA):
         self._DisitckManualInterlockPlctxoffA = DisitckManualInterlockPlctxoffA
-        self.update_fim()
+        cavity = 'A'
+        self.update_fim(cavity)
 
     @DebugIt()
     def get_DisitckManualInterlockPlctxoffB(self):
-        value = perseus_utils.read_direct(self.perseus,15, 'B')
+        value = perseus_utils.read_direct(self.perseus, 15, 'B')
         self._DisitckManualInterlockPlctxoffB = (value >> 3) & 1
         return self._DisitckManualInterlockPlctxoffB
 
     @DebugIt()
     def set_DisitckManualInterlockPlctxoffB(self, DisitckManualInterlockPlctxoffB):
         self._DisitckManualInterlockPlctxoffB = DisitckManualInterlockPlctxoffB
-        self.update_fim()
+        cavity = 'B'
+        self.update_fim(cavity)
 
     @DebugIt()
     def get_DisitckManualInterlockMpsA(self):
-        value = perseus_utils.read_direct(self.perseus,15, 'A')
+        value = perseus_utils.read_direct(self.perseus, 15, 'A')
         self._DisitckManualInterlockMpsA = (value >> 4) & 1
         return self._DisitckManualInterlockMpsA
 
     @DebugIt()
     def set_DisitckManualInterlockMpsA(self, DisitckManualInterlockMpsA):
         self._DisitckManualInterlockMpsA = DisitckManualInterlockMpsA
-        self.update_fim()
+        cavity = 'A'
+        self.update_fim(cavity)
 
     @DebugIt()
     def get_DisitckManualInterlockMpsB(self):
-        value = perseus_utils.read_direct(self.perseus,15, 'B')
+        value = perseus_utils.read_direct(self.perseus, 15, 'B')
         self._DisitckManualInterlockMpsB = (value >> 4) & 1
         return self._DisitckManualInterlockMpsB
 
     @DebugIt()
     def set_DisitckManualInterlockMpsB(self, DisitckManualInterlockMpsB):
         self._DisitckManualInterlockMpsB = DisitckManualInterlockMpsB
-        self.update_fim()
+        cavity = 'B'
+        self.update_fim(cavity)
 
     @DebugIt()
     def get_DisitckManualInterlockDiagA(self):
-        value = perseus_utils.read_direct(self.perseus,15, 'A')
+        value = perseus_utils.read_direct(self.perseus, 15, 'A')
         self._DisitckManualInterlockDiagA = (value >> 5) & 1
         return self._DisitckManualInterlockDiagA
 
     @DebugIt()
     def set_DisitckManualInterlockDiagA(self, DisitckManualInterlockDiagA):
         self._DisitckManualInterlockDiagA = DisitckManualInterlockDiagA
-        self.update_fim()
+        cavity = 'A'
+        self.update_fim(cavity)
 
     @DebugIt()
     def get_DisitckManualInterlockDiagB(self):
-        value = perseus_utils.read_direct(self.perseus,15, 'B')
+        value = perseus_utils.read_direct(self.perseus, 15, 'B')
         self._DisitckManualInterlockDiagB = (value >> 5) & 1
         return self._DisitckManualInterlockDiagB
 
     @DebugIt()
     def set_DisitckManualInterlockDiagB(self, DisitckManualInterlockDiagB):
         self._DisitckManualInterlockDiagB = DisitckManualInterlockDiagB
-        self.update_fim()
+        cavity = 'B'
+        self.update_fim(cavity)
 
     @DebugIt()
     def get_DisitckPlungerEndSwitchesUpDacsoffloopsstbyA(self):
-        value = perseus_utils.read_direct(self.perseus,16, 'A')
+        value = perseus_utils.read_direct(self.perseus, 16, 'A')
         self._DisitckPlungerEndSwitchesUpDacsoffloopsstbyA = (value >> 0) & 1
         return self._DisitckPlungerEndSwitchesUpDacsoffloopsstbyA
 
     @DebugIt()
     def set_DisitckPlungerEndSwitchesUpDacsoffloopsstbyA(self, DisitckPlungerEndSwitchesUpDacsoffloopsstbyA):
         self._DisitckPlungerEndSwitchesUpDacsoffloopsstbyA = DisitckPlungerEndSwitchesUpDacsoffloopsstbyA
-        self.update_fim()
+        cavity = 'A'
+        self.update_fim(cavity)
 
     @DebugIt()
     def get_DisitckPlungerEndSwitchesUpDacsoffloopsstbyB(self):
-        value = perseus_utils.read_direct(self.perseus,16, 'B')
+        value = perseus_utils.read_direct(self.perseus, 16, 'B')
         self._DisitckPlungerEndSwitchesUpDacsoffloopsstbyB = (value >> 0) & 1
         return self._DisitckPlungerEndSwitchesUpDacsoffloopsstbyB
 
     @DebugIt()
     def set_DisitckPlungerEndSwitchesUpDacsoffloopsstbyB(self, DisitckPlungerEndSwitchesUpDacsoffloopsstbyB):
         self._DisitckPlungerEndSwitchesUpDacsoffloopsstbyB = DisitckPlungerEndSwitchesUpDacsoffloopsstbyB
-        self.update_fim()
+        cavity = 'B'
+        self.update_fim(cavity)
 
     @DebugIt()
     def get_DisitckPlungerEndSwitchesUpPindiodeswitchA(self):
-        value = perseus_utils.read_direct(self.perseus,16, 'A')
+        value = perseus_utils.read_direct(self.perseus, 16, 'A')
         self._DisitckPlungerEndSwitchesUpPindiodeswitchA = (value >> 1) & 1
         return self._DisitckPlungerEndSwitchesUpPindiodeswitchA
 
     @DebugIt()
     def set_DisitckPlungerEndSwitchesUpPindiodeswitchA(self, DisitckPlungerEndSwitchesUpPindiodeswitchA):
         self._DisitckPlungerEndSwitchesUpPindiodeswitchA = DisitckPlungerEndSwitchesUpPindiodeswitchA
-        self.update_fim()
+        cavity = 'A'
+        self.update_fim(cavity)
 
     @DebugIt()
     def get_DisitckPlungerEndSwitchesUpPindiodeswitchB(self):
-        value = perseus_utils.read_direct(self.perseus,16, 'B')
+        value = perseus_utils.read_direct(self.perseus, 16, 'B')
         self._DisitckPlungerEndSwitchesUpPindiodeswitchB = (value >> 1) & 1
         return self._DisitckPlungerEndSwitchesUpPindiodeswitchB
 
     @DebugIt()
     def set_DisitckPlungerEndSwitchesUpPindiodeswitchB(self, DisitckPlungerEndSwitchesUpPindiodeswitchB):
         self._DisitckPlungerEndSwitchesUpPindiodeswitchB = DisitckPlungerEndSwitchesUpPindiodeswitchB
-        self.update_fim()
+        cavity = 'B'
+        self.update_fim(cavity)
 
     @DebugIt()
     def get_DisitckPlungerEndSwitchesUpFdltrgA(self):
-        value = perseus_utils.read_direct(self.perseus,16, 'A')
+        value = perseus_utils.read_direct(self.perseus, 16, 'A')
         self._DisitckPlungerEndSwitchesUpFdltrgA = (value >> 2) & 1
         return self._DisitckPlungerEndSwitchesUpFdltrgA
 
     @DebugIt()
     def set_DisitckPlungerEndSwitchesUpFdltrgA(self, DisitckPlungerEndSwitchesUpFdltrgA):
         self._DisitckPlungerEndSwitchesUpFdltrgA = DisitckPlungerEndSwitchesUpFdltrgA
-        self.update_fim()
+        cavity = 'A'
+        self.update_fim(cavity)
 
     @DebugIt()
     def get_DisitckPlungerEndSwitchesUpFdltrgB(self):
-        value = perseus_utils.read_direct(self.perseus,16, 'B')
+        value = perseus_utils.read_direct(self.perseus, 16, 'B')
         self._DisitckPlungerEndSwitchesUpFdltrgB = (value >> 2) & 1
         return self._DisitckPlungerEndSwitchesUpFdltrgB
 
     @DebugIt()
     def set_DisitckPlungerEndSwitchesUpFdltrgB(self, DisitckPlungerEndSwitchesUpFdltrgB):
         self._DisitckPlungerEndSwitchesUpFdltrgB = DisitckPlungerEndSwitchesUpFdltrgB
-        self.update_fim()
+        cavity = 'B'
+        self.update_fim(cavity)
 
     @DebugIt()
     def get_DisitckPlungerEndSwitchesUpPlctxoffA(self):
-        value = perseus_utils.read_direct(self.perseus,16, 'A')
+        value = perseus_utils.read_direct(self.perseus, 16, 'A')
         self._DisitckPlungerEndSwitchesUpPlctxoffA = (value >> 3) & 1
         return self._DisitckPlungerEndSwitchesUpPlctxoffA
 
     @DebugIt()
     def set_DisitckPlungerEndSwitchesUpPlctxoffA(self, DisitckPlungerEndSwitchesUpPlctxoffA):
         self._DisitckPlungerEndSwitchesUpPlctxoffA = DisitckPlungerEndSwitchesUpPlctxoffA
-        self.update_fim()
+        cavity = 'A'
+        self.update_fim(cavity)
 
     @DebugIt()
     def get_DisitckPlungerEndSwitchesUpPlctxoffB(self):
-        value = perseus_utils.read_direct(self.perseus,16, 'B')
+        value = perseus_utils.read_direct(self.perseus, 16, 'B')
         self._DisitckPlungerEndSwitchesUpPlctxoffB = (value >> 3) & 1
         return self._DisitckPlungerEndSwitchesUpPlctxoffB
 
     @DebugIt()
     def set_DisitckPlungerEndSwitchesUpPlctxoffB(self, DisitckPlungerEndSwitchesUpPlctxoffB):
         self._DisitckPlungerEndSwitchesUpPlctxoffB = DisitckPlungerEndSwitchesUpPlctxoffB
-        self.update_fim()
+        cavity = 'B'
+        self.update_fim(cavity)
 
     @DebugIt()
     def get_DisitckPlungerEndSwitchesUpMpsA(self):
-        value = perseus_utils.read_direct(self.perseus,16, 'A')
+        value = perseus_utils.read_direct(self.perseus, 16, 'A')
         self._DisitckPlungerEndSwitchesUpMpsA = (value >> 4) & 1
         return self._DisitckPlungerEndSwitchesUpMpsA
 
     @DebugIt()
     def set_DisitckPlungerEndSwitchesUpMpsA(self, DisitckPlungerEndSwitchesUpMpsA):
         self._DisitckPlungerEndSwitchesUpMpsA = DisitckPlungerEndSwitchesUpMpsA
-        self.update_fim()
+        cavity = 'A'
+        self.update_fim(cavity)
 
     @DebugIt()
     def get_DisitckPlungerEndSwitchesUpMpsB(self):
-        value = perseus_utils.read_direct(self.perseus,16, 'B')
+        value = perseus_utils.read_direct(self.perseus, 16, 'B')
         self._DisitckPlungerEndSwitchesUpMpsB = (value >> 4) & 1
         return self._DisitckPlungerEndSwitchesUpMpsB
 
     @DebugIt()
     def set_DisitckPlungerEndSwitchesUpMpsB(self, DisitckPlungerEndSwitchesUpMpsB):
         self._DisitckPlungerEndSwitchesUpMpsB = DisitckPlungerEndSwitchesUpMpsB
-        self.update_fim()
+        cavity = 'B'
+        self.update_fim(cavity)
 
     @DebugIt()
     def get_DisitckPlungerEndSwitchesUpDiagA(self):
-        value = perseus_utils.read_direct(self.perseus,16, 'A')
+        value = perseus_utils.read_direct(self.perseus, 16, 'A')
         self._DisitckPlungerEndSwitchesUpDiagA = (value >> 5) & 1
         return self._DisitckPlungerEndSwitchesUpDiagA
 
     @DebugIt()
     def set_DisitckPlungerEndSwitchesUpDiagA(self, DisitckPlungerEndSwitchesUpDiagA):
         self._DisitckPlungerEndSwitchesUpDiagA = DisitckPlungerEndSwitchesUpDiagA
-        self.update_fim()
+        cavity = 'A'
+        self.update_fim(cavity)
 
     @DebugIt()
     def get_DisitckPlungerEndSwitchesUpDiagB(self):
-        value = perseus_utils.read_direct(self.perseus,16, 'B')
+        value = perseus_utils.read_direct(self.perseus, 16, 'B')
         self._DisitckPlungerEndSwitchesUpDiagB = (value >> 5) & 1
         return self._DisitckPlungerEndSwitchesUpDiagB
 
     @DebugIt()
     def set_DisitckPlungerEndSwitchesUpDiagB(self, DisitckPlungerEndSwitchesUpDiagB):
         self._DisitckPlungerEndSwitchesUpDiagB = DisitckPlungerEndSwitchesUpDiagB
-        self.update_fim()
+        cavity = 'B'
+        self.update_fim(cavity)
 
     @DebugIt()
     def get_DisitckPlungerEndSwitchesDownDacsoffloopsstbyA(self):
-        value = perseus_utils.read_direct(self.perseus,17, 'A')
+        value = perseus_utils.read_direct(self.perseus, 17, 'A')
         self._DisitckPlungerEndSwitchesDownDacsoffloopsstbyA = (value >> 0) & 1
         return self._DisitckPlungerEndSwitchesDownDacsoffloopsstbyA
 
     @DebugIt()
     def set_DisitckPlungerEndSwitchesDownDacsoffloopsstbyA(self, DisitckPlungerEndSwitchesDownDacsoffloopsstbyA):
         self._DisitckPlungerEndSwitchesDownDacsoffloopsstbyA = DisitckPlungerEndSwitchesDownDacsoffloopsstbyA
-        self.update_fim()
+        cavity = 'A'
+        self.update_fim(cavity)
 
     @DebugIt()
     def get_DisitckPlungerEndSwitchesDownDacsoffloopsstbyB(self):
-        value = perseus_utils.read_direct(self.perseus,17, 'B')
+        value = perseus_utils.read_direct(self.perseus, 17, 'B')
         self._DisitckPlungerEndSwitchesDownDacsoffloopsstbyB = (value >> 0) & 1
         return self._DisitckPlungerEndSwitchesDownDacsoffloopsstbyB
 
     @DebugIt()
     def set_DisitckPlungerEndSwitchesDownDacsoffloopsstbyB(self, DisitckPlungerEndSwitchesDownDacsoffloopsstbyB):
         self._DisitckPlungerEndSwitchesDownDacsoffloopsstbyB = DisitckPlungerEndSwitchesDownDacsoffloopsstbyB
-        self.update_fim()
+        cavity = 'B'
+        self.update_fim(cavity)
 
     @DebugIt()
     def get_DisitckPlungerEndSwitchesDownPindiodeswitchA(self):
-        value = perseus_utils.read_direct(self.perseus,17, 'A')
+        value = perseus_utils.read_direct(self.perseus, 17, 'A')
         self._DisitckPlungerEndSwitchesDownPindiodeswitchA = (value >> 1) & 1
         return self._DisitckPlungerEndSwitchesDownPindiodeswitchA
 
     @DebugIt()
     def set_DisitckPlungerEndSwitchesDownPindiodeswitchA(self, DisitckPlungerEndSwitchesDownPindiodeswitchA):
         self._DisitckPlungerEndSwitchesDownPindiodeswitchA = DisitckPlungerEndSwitchesDownPindiodeswitchA
-        self.update_fim()
+        cavity = 'A'
+        self.update_fim(cavity)
 
     @DebugIt()
     def get_DisitckPlungerEndSwitchesDownPindiodeswitchB(self):
-        value = perseus_utils.read_direct(self.perseus,17, 'B')
+        value = perseus_utils.read_direct(self.perseus, 17, 'B')
         self._DisitckPlungerEndSwitchesDownPindiodeswitchB = (value >> 1) & 1
         return self._DisitckPlungerEndSwitchesDownPindiodeswitchB
 
     @DebugIt()
     def set_DisitckPlungerEndSwitchesDownPindiodeswitchB(self, DisitckPlungerEndSwitchesDownPindiodeswitchB):
         self._DisitckPlungerEndSwitchesDownPindiodeswitchB = DisitckPlungerEndSwitchesDownPindiodeswitchB
-        self.update_fim()
+        cavity = 'B'
+        self.update_fim(cavity)
 
     @DebugIt()
     def get_DisitckPlungerEndSwitchesDownFdltrgA(self):
-        value = perseus_utils.read_direct(self.perseus,17, 'A')
+        value = perseus_utils.read_direct(self.perseus, 17, 'A')
         self._DisitckPlungerEndSwitchesDownFdltrgA = (value >> 2) & 1
         return self._DisitckPlungerEndSwitchesDownFdltrgA
 
     @DebugIt()
     def set_DisitckPlungerEndSwitchesDownFdltrgA(self, DisitckPlungerEndSwitchesDownFdltrgA):
         self._DisitckPlungerEndSwitchesDownFdltrgA = DisitckPlungerEndSwitchesDownFdltrgA
-        self.update_fim()
+        cavity = 'A'
+        self.update_fim(cavity)
 
     @DebugIt()
     def get_DisitckPlungerEndSwitchesDownFdltrgB(self):
-        value = perseus_utils.read_direct(self.perseus,17, 'B')
+        value = perseus_utils.read_direct(self.perseus, 17, 'B')
         self._DisitckPlungerEndSwitchesDownFdltrgB = (value >> 2) & 1
         return self._DisitckPlungerEndSwitchesDownFdltrgB
 
     @DebugIt()
     def set_DisitckPlungerEndSwitchesDownFdltrgB(self, DisitckPlungerEndSwitchesDownFdltrgB):
         self._DisitckPlungerEndSwitchesDownFdltrgB = DisitckPlungerEndSwitchesDownFdltrgB
-        self.update_fim()
+        cavity = 'B'
+        self.update_fim(cavity)
 
     @DebugIt()
     def get_DisitckPlungerEndSwitchesDownPlctxoffA(self):
-        value = perseus_utils.read_direct(self.perseus,17, 'A')
+        value = perseus_utils.read_direct(self.perseus, 17, 'A')
         self._DisitckPlungerEndSwitchesDownPlctxoffA = (value >> 3) & 1
         return self._DisitckPlungerEndSwitchesDownPlctxoffA
 
     @DebugIt()
     def set_DisitckPlungerEndSwitchesDownPlctxoffA(self, DisitckPlungerEndSwitchesDownPlctxoffA):
         self._DisitckPlungerEndSwitchesDownPlctxoffA = DisitckPlungerEndSwitchesDownPlctxoffA
-        self.update_fim()
+        cavity = 'A'
+        self.update_fim(cavity)
 
     @DebugIt()
     def get_DisitckPlungerEndSwitchesDownPlctxoffB(self):
-        value = perseus_utils.read_direct(self.perseus,17, 'B')
+        value = perseus_utils.read_direct(self.perseus, 17, 'B')
         self._DisitckPlungerEndSwitchesDownPlctxoffB = (value >> 3) & 1
         return self._DisitckPlungerEndSwitchesDownPlctxoffB
 
     @DebugIt()
     def set_DisitckPlungerEndSwitchesDownPlctxoffB(self, DisitckPlungerEndSwitchesDownPlctxoffB):
         self._DisitckPlungerEndSwitchesDownPlctxoffB = DisitckPlungerEndSwitchesDownPlctxoffB
-        self.update_fim()
+        cavity = 'B'
+        self.update_fim(cavity)
 
     @DebugIt()
     def get_DisitckPlungerEndSwitchesDownMpsA(self):
-        value = perseus_utils.read_direct(self.perseus,17, 'A')
+        value = perseus_utils.read_direct(self.perseus, 17, 'A')
         self._DisitckPlungerEndSwitchesDownMpsA = (value >> 4) & 1
         return self._DisitckPlungerEndSwitchesDownMpsA
 
     @DebugIt()
     def set_DisitckPlungerEndSwitchesDownMpsA(self, DisitckPlungerEndSwitchesDownMpsA):
         self._DisitckPlungerEndSwitchesDownMpsA = DisitckPlungerEndSwitchesDownMpsA
-        self.update_fim()
+        cavity = 'A'
+        self.update_fim(cavity)
 
     @DebugIt()
     def get_DisitckPlungerEndSwitchesDownMpsB(self):
-        value = perseus_utils.read_direct(self.perseus,17, 'B')
+        value = perseus_utils.read_direct(self.perseus, 17, 'B')
         self._DisitckPlungerEndSwitchesDownMpsB = (value >> 4) & 1
         return self._DisitckPlungerEndSwitchesDownMpsB
 
     @DebugIt()
     def set_DisitckPlungerEndSwitchesDownMpsB(self, DisitckPlungerEndSwitchesDownMpsB):
         self._DisitckPlungerEndSwitchesDownMpsB = DisitckPlungerEndSwitchesDownMpsB
-        self.update_fim()
+        cavity = 'B'
+        self.update_fim(cavity)
 
     @DebugIt()
     def get_DisitckPlungerEndSwitchesDownDiagA(self):
-        value = perseus_utils.read_direct(self.perseus,17, 'A')
+        value = perseus_utils.read_direct(self.perseus, 17, 'A')
         self._DisitckPlungerEndSwitchesDownDiagA = (value >> 5) & 1
         return self._DisitckPlungerEndSwitchesDownDiagA
 
     @DebugIt()
     def set_DisitckPlungerEndSwitchesDownDiagA(self, DisitckPlungerEndSwitchesDownDiagA):
         self._DisitckPlungerEndSwitchesDownDiagA = DisitckPlungerEndSwitchesDownDiagA
-        self.update_fim()
+        cavity = 'A'
+        self.update_fim(cavity)
 
     @DebugIt()
     def get_DisitckPlungerEndSwitchesDownDiagB(self):
-        value = perseus_utils.read_direct(self.perseus,17, 'B')
+        value = perseus_utils.read_direct(self.perseus, 17, 'B')
         self._DisitckPlungerEndSwitchesDownDiagB = (value >> 5) & 1
         return self._DisitckPlungerEndSwitchesDownDiagB
 
     @DebugIt()
     def set_DisitckPlungerEndSwitchesDownDiagB(self, DisitckPlungerEndSwitchesDownDiagB):
         self._DisitckPlungerEndSwitchesDownDiagB = DisitckPlungerEndSwitchesDownDiagB
-        self.update_fim()
+        cavity = 'B'
+        self.update_fim(cavity)
 
     @DebugIt()
     def get_DisitckMpsDacsoffloopsstbyA(self):
-        value = perseus_utils.read_direct(self.perseus,18, 'A')
+        value = perseus_utils.read_direct(self.perseus, 18, 'A')
         self._DisitckMpsDacsoffloopsstbyA = (value >> 0) & 1
         return self._DisitckMpsDacsoffloopsstbyA
 
     @DebugIt()
     def set_DisitckMpsDacsoffloopsstbyA(self, DisitckMpsDacsoffloopsstbyA):
         self._DisitckMpsDacsoffloopsstbyA = DisitckMpsDacsoffloopsstbyA
-        self.update_fim()
+        cavity = 'A'
+        self.update_fim(cavity)
 
     @DebugIt()
     def get_DisitckMpsDacsoffloopsstbyB(self):
-        value = perseus_utils.read_direct(self.perseus,18, 'B')
+        value = perseus_utils.read_direct(self.perseus, 18, 'B')
         self._DisitckMpsDacsoffloopsstbyB = (value >> 0) & 1
         return self._DisitckMpsDacsoffloopsstbyB
 
     @DebugIt()
     def set_DisitckMpsDacsoffloopsstbyB(self, DisitckMpsDacsoffloopsstbyB):
         self._DisitckMpsDacsoffloopsstbyB = DisitckMpsDacsoffloopsstbyB
-        self.update_fim()
+        cavity = 'B'
+        self.update_fim(cavity)
 
     @DebugIt()
     def get_DisitckMpsPindiodeswitchA(self):
-        value = perseus_utils.read_direct(self.perseus,18, 'A')
+        value = perseus_utils.read_direct(self.perseus, 18, 'A')
         self._DisitckMpsPindiodeswitchA = (value >> 1) & 1
         return self._DisitckMpsPindiodeswitchA
 
     @DebugIt()
     def set_DisitckMpsPindiodeswitchA(self, DisitckMpsPindiodeswitchA):
         self._DisitckMpsPindiodeswitchA = DisitckMpsPindiodeswitchA
-        self.update_fim()
+        cavity = 'A'
+        self.update_fim(cavity)
 
     @DebugIt()
     def get_DisitckMpsPindiodeswitchB(self):
-        value = perseus_utils.read_direct(self.perseus,18, 'B')
+        value = perseus_utils.read_direct(self.perseus, 18, 'B')
         self._DisitckMpsPindiodeswitchB = (value >> 1) & 1
         return self._DisitckMpsPindiodeswitchB
 
     @DebugIt()
     def set_DisitckMpsPindiodeswitchB(self, DisitckMpsPindiodeswitchB):
         self._DisitckMpsPindiodeswitchB = DisitckMpsPindiodeswitchB
-        self.update_fim()
+        cavity = 'B'
+        self.update_fim(cavity)
 
     @DebugIt()
     def get_DisitckMpsFdltrgA(self):
-        value = perseus_utils.read_direct(self.perseus,18, 'A')
+        value = perseus_utils.read_direct(self.perseus, 18, 'A')
         self._DisitckMpsFdltrgA = (value >> 2) & 1
         return self._DisitckMpsFdltrgA
 
     @DebugIt()
     def set_DisitckMpsFdltrgA(self, DisitckMpsFdltrgA):
         self._DisitckMpsFdltrgA = DisitckMpsFdltrgA
-        self.update_fim()
+        cavity = 'A'
+        self.update_fim(cavity)
 
     @DebugIt()
     def get_DisitckMpsFdltrgB(self):
-        value = perseus_utils.read_direct(self.perseus,18, 'B')
+        value = perseus_utils.read_direct(self.perseus, 18, 'B')
         self._DisitckMpsFdltrgB = (value >> 2) & 1
         return self._DisitckMpsFdltrgB
 
     @DebugIt()
     def set_DisitckMpsFdltrgB(self, DisitckMpsFdltrgB):
         self._DisitckMpsFdltrgB = DisitckMpsFdltrgB
-        self.update_fim()
+        cavity = 'B'
+        self.update_fim(cavity)
 
     @DebugIt()
     def get_DisitckMpsPlctxoffA(self):
-        value = perseus_utils.read_direct(self.perseus,18, 'A')
+        value = perseus_utils.read_direct(self.perseus, 18, 'A')
         self._DisitckMpsPlctxoffA = (value >> 3) & 1
         return self._DisitckMpsPlctxoffA
 
     @DebugIt()
     def set_DisitckMpsPlctxoffA(self, DisitckMpsPlctxoffA):
         self._DisitckMpsPlctxoffA = DisitckMpsPlctxoffA
-        self.update_fim()
+        cavity = 'A'
+        self.update_fim(cavity)
 
     @DebugIt()
     def get_DisitckMpsPlctxoffB(self):
-        value = perseus_utils.read_direct(self.perseus,18, 'B')
+        value = perseus_utils.read_direct(self.perseus, 18, 'B')
         self._DisitckMpsPlctxoffB = (value >> 3) & 1
         return self._DisitckMpsPlctxoffB
 
     @DebugIt()
     def set_DisitckMpsPlctxoffB(self, DisitckMpsPlctxoffB):
         self._DisitckMpsPlctxoffB = DisitckMpsPlctxoffB
-        self.update_fim()
+        cavity = 'B'
+        self.update_fim(cavity)
 
     @DebugIt()
     def get_DisitckMpsMpsA(self):
-        value = perseus_utils.read_direct(self.perseus,18, 'A')
+        value = perseus_utils.read_direct(self.perseus, 18, 'A')
         self._DisitckMpsMpsA = (value >> 4) & 1
         return self._DisitckMpsMpsA
 
     @DebugIt()
     def set_DisitckMpsMpsA(self, DisitckMpsMpsA):
         self._DisitckMpsMpsA = DisitckMpsMpsA
-        self.update_fim()
+        cavity = 'A'
+        self.update_fim(cavity)
 
     @DebugIt()
     def get_DisitckMpsMpsB(self):
-        value = perseus_utils.read_direct(self.perseus,18, 'B')
+        value = perseus_utils.read_direct(self.perseus, 18, 'B')
         self._DisitckMpsMpsB = (value >> 4) & 1
         return self._DisitckMpsMpsB
 
     @DebugIt()
     def set_DisitckMpsMpsB(self, DisitckMpsMpsB):
         self._DisitckMpsMpsB = DisitckMpsMpsB
-        self.update_fim()
+        cavity = 'B'
+        self.update_fim(cavity)
 
     @DebugIt()
     def get_DisitckMpsDiagA(self):
-        value = perseus_utils.read_direct(self.perseus,18, 'A')
+        value = perseus_utils.read_direct(self.perseus, 18, 'A')
         self._DisitckMpsDiagA = (value >> 5) & 1
         return self._DisitckMpsDiagA
 
     @DebugIt()
     def set_DisitckMpsDiagA(self, DisitckMpsDiagA):
         self._DisitckMpsDiagA = DisitckMpsDiagA
-        self.update_fim()
+        cavity = 'A'
+        self.update_fim(cavity)
 
     @DebugIt()
     def get_DisitckMpsDiagB(self):
-        value = perseus_utils.read_direct(self.perseus,18, 'B')
+        value = perseus_utils.read_direct(self.perseus, 18, 'B')
         self._DisitckMpsDiagB = (value >> 5) & 1
         return self._DisitckMpsDiagB
 
     @DebugIt()
     def set_DisitckMpsDiagB(self, DisitckMpsDiagB):
         self._DisitckMpsDiagB = DisitckMpsDiagB
-        self.update_fim()
+        cavity = 'B'
+        self.update_fim(cavity)
 
     @DebugIt()
     def read_Diag_Irvtet1A(self):
@@ -7632,137 +7776,137 @@ class NutaqDiags(Device):
         # Restart RAM
         self.perseus.init_fast_data_logger()
 
-    def update_fim(self):
-        self.update_RvTet1()
-        self.update_RvTet2()
-        self.update_RvCircIn()
-        self.update_FwLoad()
-        self.update_FwHybLoad()
-        self.update_RvCav()
-        self.update_Arc()
-        self.update_Vacuum()
-        self.update_Manual()
-        self.update_EndSwUp()
-        self.update_EndSwDown()
-        self.update_Mps()
+    def update_fim(self, cavity):
+        self.update_RvTet1(cavity)
+        self.update_RvTet2(cavity)
+        self.update_RvCircIn(cavity)
+        self.update_FwLoad(cavity)
+        self.update_FwHybLoad(cavity)
+        self.update_RvCav(cavity)
+        self.update_Arc(cavity)
+        self.update_Vacuum(cavity)
+        self.update_Manual(cavity)
+        self.update_EndSwUp(cavity)
+        self.update_EndSwDown(cavity)
+        self.update_Mps(cavity)
 
-    def update_RvTet1(self):
-        bit0=self._DisitckRvtet1Dacsoffloopsstby
-        bit1=self._DisitckRvtet1Pindiodeswitch
-        bit2=self._DisitckRvtet1Fdltrg
-        bit3=self._DisitckRvtet1Plctxoff
-        bit4=self._DisitckRvtet1Mps
-        bit5=self._DisitckRvtet1Diag
+    def update_RvTet1(self, cavity):
+        bit0=getattr(self, "_DisitckRvtet1Dacsoffloopsstby%s" % cavity)
+        bit1=getattr(self, "_DisitckRvtet1Pindiodeswitch%s" % cavity)
+        bit2=getattr(self, "_DisitckRvtet1Fdltrg%s" % cavity)
+        bit3=getattr(self, "_DisitckRvtet1Plctxoff%s" % cavity)
+        bit4=getattr(self, "_DisitckRvtet1Mps%s" % cavity)
+        bit5=getattr(self, "_DisitckRvtet1Diag%s" % cavity)
         value = (bit5 << 5) | (bit4 << 4) | (bit3 << 3) | (bit2 << 2) | (bit1 << 1) | (bit0 << 0)
         perseus_utils.write_direct(self.perseus, value, 7)
 
-    def update_RvTet2(self):
-        bit0=self._DisitckRvtet2Dacsoffloopsstby
-        bit1=self._DisitckRvtet2Pindiodeswitch
-        bit2=self._DisitckRvtet2Fdltrg
-        bit3=self._DisitckRvtet2Plctxoff
-        bit4=self._DisitckRvtet2Mps
-        bit5=self._DisitckRvtet2Diag
+    def update_RvTet2(self, cavity):
+        bit0=getattr(self, "_DisitckRvtet2Dacsoffloopsstby%s" % cavity)
+        bit1=getattr(self, "_DisitckRvtet2Pindiodeswitch%s" % cavity)
+        bit2=getattr(self, "_DisitckRvtet2Fdltrg%s" % cavity)
+        bit3=getattr(self, "_DisitckRvtet2Plctxoff%s" % cavity)
+        bit4=getattr(self, "_DisitckRvtet2Mps%s" % cavity)
+        bit5=getattr(self, "_DisitckRvtet2Diag%s" % cavity)
         value = (bit5 << 5) | (bit4 << 4) | (bit3 << 3) | (bit2 << 2) | (bit1 << 1) | (bit0 << 0)
         perseus_utils.write_direct(self.perseus, value, 8)
 
-    def update_RvCircIn(self):
-        bit0=self._DisitckRvcircDacsoffloopsstby
-        bit1=self._DisitckRvcircPindiodeswitch
-        bit2=self._DisitckRvcircFdltrg
-        bit3=self._DisitckRvcircPlctxoff
-        bit4=self._DisitckRvcircMps
-        bit5=self._DisitckRvcircDiag
+    def update_RvCircIn(self, cavity):
+        bit0=getattr(self, "_DisitckRvcircDacsoffloopsstby%s" % cavity)
+        bit1=getattr(self, "_DisitckRvcircPindiodeswitch%s" % cavity)
+        bit2=getattr(self, "_DisitckRvcircFdltrg%s" % cavity)
+        bit3=getattr(self, "_DisitckRvcircPlctxoff%s" % cavity)
+        bit4=getattr(self, "_DisitckRvcircMps%s" % cavity)
+        bit5=getattr(self, "_DisitckRvcircDiag%s" % cavity)
         value = (bit5 << 5) | (bit4 << 4) | (bit3 << 3) | (bit2 << 2) | (bit1 << 1) | (bit0 << 0)
         perseus_utils.write_direct(self.perseus, value, 9)
 
-    def update_FwLoad(self):
-        bit0=self._DisitckFwloadDacsoffloopsstby
-        bit1=self._DisitckFwloadPindiodeswitch
-        bit2=self._DisitckFwloadFdltrg
-        bit3=self._DisitckFwloadPlctxoff
-        bit4=self._DisitckFwloadMps
-        bit5=self._DisitckFwloadDiag
+    def update_FwLoad(self, cavity):
+        bit0=getattr(self, "_DisitckFwloadDacsoffloopsstby%s" % cavity)
+        bit1=getattr(self, "_DisitckFwloadPindiodeswitch%s" % cavity)
+        bit2=getattr(self, "_DisitckFwloadFdltrg%s" % cavity)
+        bit3=getattr(self, "_DisitckFwloadPlctxoff%s" % cavity)
+        bit4=getattr(self, "_DisitckFwloadMps%s" % cavity)
+        bit5=getattr(self, "_DisitckFwloadDiag%s" % cavity)
         value = (bit5 << 5) | (bit4 << 4) | (bit3 << 3) | (bit2 << 2) | (bit1 << 1) | (bit0 << 0)
         perseus_utils.write_direct(self.perseus, value, 10)
 
-    def update_FwHybLoad(self):
-        bit0=self._DisitckFwhybloadDacsoffloopsstby
-        bit1=self._DisitckFwhybloadPindiodeswitch
-        bit2=self._DisitckFwhybloadFdltrg
-        bit3=self._DisitckFwhybloadPlctxoff
-        bit4=self._DisitckFwhybloadMps
-        bit5=self._DisitckFwhybloadDiag
+    def update_FwHybLoad(self, cavity):
+        bit0=getattr(self, "_DisitckFwhybloadDacsoffloopsstby%s" % cavity)
+        bit1=getattr(self, "_DisitckFwhybloadPindiodeswitch%s" % cavity)
+        bit2=getattr(self, "_DisitckFwhybloadFdltrg%s" % cavity)
+        bit3=getattr(self, "_DisitckFwhybloadPlctxoff%s" % cavity)
+        bit4=getattr(self, "_DisitckFwhybloadMps%s" % cavity)
+        bit5=getattr(self, "_DisitckFwhybloadDiag%s" % cavity)
         value = (bit5 << 5) | (bit4 << 4) | (bit3 << 3) | (bit2 << 2) | (bit1 << 1) | (bit0 << 0)
         perseus_utils.write_direct(self.perseus, value, 11)
 
-    def update_RvCav(self):
-        bit0=self._DisitckRvcavDacsoffloopsstby
-        bit1=self._DisitckRvcavPindiodeswitch
-        bit2=self._DisitckRvcavFdltrg
-        bit3=self._DisitckRvcavPlctxoff
-        bit4=self._DisitckRvcavMps
-        bit5=self._DisitckRvcavDiag
+    def update_RvCav(self, cavity):
+        bit0=getattr(self, "_DisitckRvcavDacsoffloopsstby%s" % cavity)
+        bit1=getattr(self, "_DisitckRvcavPindiodeswitch%s" % cavity)
+        bit2=getattr(self, "_DisitckRvcavFdltrg%s" % cavity)
+        bit3=getattr(self, "_DisitckRvcavPlctxoff%s" % cavity)
+        bit4=getattr(self, "_DisitckRvcavMps%s" % cavity)
+        bit5=getattr(self, "_DisitckRvcavDiag%s" % cavity)
         value = (bit5 << 5) | (bit4 << 4) | (bit3 << 3) | (bit2 << 2) | (bit1 << 1) | (bit0 << 0)
         perseus_utils.write_direct(self.perseus, value, 12)
 
-    def update_Arc(self):
-        bit0=self._DisitckArcsDacsoffloopsstby
-        bit1=self._DisitckArcsPindiodeswitch
-        bit2=self._DisitckArcsFdltrg
-        bit3=self._DisitckArcsPlctxoff
-        bit4=self._DisitckArcsMps
-        bit5=self._DisitckArcsDiag
+    def update_Arc(self, cavity):
+        bit0=getattr(self, "_DisitckArcsDacsoffloopsstby%s" % cavity)
+        bit1=getattr(self, "_DisitckArcsPindiodeswitch%s" % cavity)
+        bit2=getattr(self, "_DisitckArcsFdltrg%s" % cavity)
+        bit3=getattr(self, "_DisitckArcsPlctxoff%s" % cavity)
+        bit4=getattr(self, "_DisitckArcsMps%s" % cavity)
+        bit5=getattr(self, "_DisitckArcsDiag%s" % cavity)
         value = (bit5 << 5) | (bit4 << 4) | (bit3 << 3) | (bit2 << 2) | (bit1 << 1) | (bit0 << 0)
         perseus_utils.write_direct(self.perseus, value, 13)
 
-    def update_Vacuum(self):
-        bit0=self._DisitckVacuumDacsoffloopsstby
-        bit1=self._DisitckVacuumPindiodeswitch
-        bit2=self._DisitckVacuumFdltrg
-        bit3=self._DisitckVacuumPlctxoff
-        bit4=self._DisitckVacuumMps
-        bit5=self._DisitckVacuumDiag
+    def update_Vacuum(self, cavity):
+        bit0=getattr(self, "_DisitckVacuumDacsoffloopsstby%s" % cavity)
+        bit1=getattr(self, "_DisitckVacuumPindiodeswitch%s" % cavity)
+        bit2=getattr(self, "_DisitckVacuumFdltrg%s" % cavity)
+        bit3=getattr(self, "_DisitckVacuumPlctxoff%s" % cavity)
+        bit4=getattr(self, "_DisitckVacuumMps%s" % cavity)
+        bit5=getattr(self, "_DisitckVacuumDiag%s" % cavity)
         value = (bit5 << 5) | (bit4 << 4) | (bit3 << 3) | (bit2 << 2) | (bit1 << 1) | (bit0 << 0)
         perseus_utils.write_direct(self.perseus, value, 14)
 
-    def update_Manual(self):
-        bit0=self._DisitckManualInterlockDacsoffloopsstby
-        bit1=self._DisitckManualInterlockPindiodeswitch
-        bit2=self._DisitckManualInterlockFdltrg
-        bit3=self._DisitckManualInterlockPlctxoff
-        bit4=self._DisitckManualInterlockMps
-        bit5=self._DisitckManualInterlockDiag
+    def update_Manual(self, cavity):
+        bit0=getattr(self, "_DisitckManualInterlockDacsoffloopsstby%s" % cavity)
+        bit1=getattr(self, "_DisitckManualInterlockPindiodeswitch%s" % cavity)
+        bit2=getattr(self, "_DisitckManualInterlockFdltrg%s" % cavity)
+        bit3=getattr(self, "_DisitckManualInterlockPlctxoff%s" % cavity)
+        bit4=getattr(self, "_DisitckManualInterlockMps%s" % cavity)
+        bit5=getattr(self, "_DisitckManualInterlockDiag%s" % cavity)
         value = (bit5 << 5) | (bit4 << 4) | (bit3 << 3) | (bit2 << 2) | (bit1 << 1) | (bit0 << 0)
         perseus_utils.write_direct(self.perseus, value, 15)
 
-    def update_EndSwUp(self):
-        bit0=self._DisitckPlungerEndSwitchesUpDacsoffloopsstby
-        bit1=self._DisitckPlungerEndSwitchesUpPindiodeswitch
-        bit2=self._DisitckPlungerEndSwitchesUpFdltrg
-        bit3=self._DisitckPlungerEndSwitchesUpPlctxoff
-        bit4=self._DisitckPlungerEndSwitchesUpMps
-        bit5=self._DisitckPlungerEndSwitchesUpDiag
+    def update_EndSwUp(self, cavity):
+        bit0=getattr(self, "_DisitckPlungerEndSwitchesUpDacsoffloopsstby%s" % cavity)
+        bit1=getattr(self, "_DisitckPlungerEndSwitchesUpPindiodeswitch%s" % cavity)
+        bit2=getattr(self, "_DisitckPlungerEndSwitchesUpFdltrg%s" % cavity)
+        bit3=getattr(self, "_DisitckPlungerEndSwitchesUpPlctxoff%s" % cavity)
+        bit4=getattr(self, "_DisitckPlungerEndSwitchesUpMps%s" % cavity)
+        bit5=getattr(self, "_DisitckPlungerEndSwitchesUpDiag%s" % cavity)
         value = (bit5 << 5) | (bit4 << 4) | (bit3 << 3) | (bit2 << 2) | (bit1 << 1) | (bit0 << 0)
         perseus_utils.write_direct(self.perseus, value, 16)
 
-    def update_EndSwDown(self):
-        bit0=self._DisitckPlungerEndSwitchesDownDacsoffloopsstby
-        bit1=self._DisitckPlungerEndSwitchesDownPindiodeswitch
-        bit2=self._DisitckPlungerEndSwitchesDownFdltrg
-        bit3=self._DisitckPlungerEndSwitchesDownPlctxoff
-        bit4=self._DisitckPlungerEndSwitchesDownMps
-        bit5=self._DisitckPlungerEndSwitchesDownDiag
+    def update_EndSwDown(self, cavity):
+        bit0=getattr(self, "_DisitckPlungerEndSwitchesDownDacsoffloopsstby%s" % cavity)
+        bit1=getattr(self, "_DisitckPlungerEndSwitchesDownPindiodeswitch%s" % cavity)
+        bit2=getattr(self, "_DisitckPlungerEndSwitchesDownFdltrg%s" % cavity)
+        bit3=getattr(self, "_DisitckPlungerEndSwitchesDownPlctxoff%s" % cavity)
+        bit4=getattr(self, "_DisitckPlungerEndSwitchesDownMps%s" % cavity)
+        bit5=getattr(self, "_DisitckPlungerEndSwitchesDownDiag%s" % cavity)
         value = (bit5 << 5) | (bit4 << 4) | (bit3 << 3) | (bit2 << 2) | (bit1 << 1) | (bit0 << 0)
         perseus_utils.write_direct(self.perseus, value, 17)
 
-    def update_Mps(self):
-        bit0=self._DisitckMpsDacsoffloopsstby
-        bit1=self._DisitckMpsPindiodeswitch
-        bit2=self._DisitckMpsFdltrg
-        bit3=self._DisitckMpsPlctxoff
-        bit4=self._DisitckMpsMps
-        bit5=self._DisitckMpsDiag
+    def update_Mps(self, cavity):
+        bit0=getattr(self, "_DisitckMpsDacsoffloopsstby%s" % cavity)
+        bit1=getattr(self, "_DisitckMpsPindiodeswitch%s" % cavity)
+        bit2=getattr(self, "_DisitckMpsFdltrg%s" % cavity)
+        bit3=getattr(self, "_DisitckMpsPlctxoff%s" % cavity)
+        bit4=getattr(self, "_DisitckMpsMps%s" % cavity)
+        bit5=getattr(self, "_DisitckMpsDiag%s" % cavity)
         value = (bit5 << 5) | (bit4 << 4) | (bit3 << 3) | (bit2 << 2) | (bit1 << 1) | (bit0 << 0)
         perseus_utils.write_direct(self.perseus, value, 18)
 

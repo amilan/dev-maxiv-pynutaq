@@ -168,137 +168,137 @@ class NutaqDiags(Device):
         # Restart RAM
         self.perseus.init_fast_data_logger()
 
-    def update_fim(self):
-        self.update_RvTet1()
-        self.update_RvTet2()
-        self.update_RvCircIn()
-        self.update_FwLoad()
-        self.update_FwHybLoad()
-        self.update_RvCav()
-        self.update_Arc()
-        self.update_Vacuum()
-        self.update_Manual()
-        self.update_EndSwUp()
-        self.update_EndSwDown()
-        self.update_Mps()
+    def update_fim(self, cavity):
+        self.update_RvTet1(cavity)
+        self.update_RvTet2(cavity)
+        self.update_RvCircIn(cavity)
+        self.update_FwLoad(cavity)
+        self.update_FwHybLoad(cavity)
+        self.update_RvCav(cavity)
+        self.update_Arc(cavity)
+        self.update_Vacuum(cavity)
+        self.update_Manual(cavity)
+        self.update_EndSwUp(cavity)
+        self.update_EndSwDown(cavity)
+        self.update_Mps(cavity)
 
-    def update_RvTet1(self):
-        bit0=self._DisitckRvtet1Dacsoffloopsstby
-        bit1=self._DisitckRvtet1Pindiodeswitch
-        bit2=self._DisitckRvtet1Fdltrg
-        bit3=self._DisitckRvtet1Plctxoff
-        bit4=self._DisitckRvtet1Mps
-        bit5=self._DisitckRvtet1Diag
+    def update_RvTet1(self, cavity):
+        bit0=getattr(self, "_DisitckRvtet1Dacsoffloopsstby%s" % cavity)
+        bit1=getattr(self, "_DisitckRvtet1Pindiodeswitch%s" % cavity)
+        bit2=getattr(self, "_DisitckRvtet1Fdltrg%s" % cavity)
+        bit3=getattr(self, "_DisitckRvtet1Plctxoff%s" % cavity)
+        bit4=getattr(self, "_DisitckRvtet1Mps%s" % cavity)
+        bit5=getattr(self, "_DisitckRvtet1Diag%s" % cavity)
         value = (bit5 << 5) | (bit4 << 4) | (bit3 << 3) | (bit2 << 2) | (bit1 << 1) | (bit0 << 0)
         perseus_utils.write_direct(self.perseus, value, 7)
 
-    def update_RvTet2(self):
-        bit0=self._DisitckRvtet2Dacsoffloopsstby
-        bit1=self._DisitckRvtet2Pindiodeswitch
-        bit2=self._DisitckRvtet2Fdltrg
-        bit3=self._DisitckRvtet2Plctxoff
-        bit4=self._DisitckRvtet2Mps
-        bit5=self._DisitckRvtet2Diag
+    def update_RvTet2(self, cavity):
+        bit0=getattr(self, "_DisitckRvtet2Dacsoffloopsstby%s" % cavity)
+        bit1=getattr(self, "_DisitckRvtet2Pindiodeswitch%s" % cavity)
+        bit2=getattr(self, "_DisitckRvtet2Fdltrg%s" % cavity)
+        bit3=getattr(self, "_DisitckRvtet2Plctxoff%s" % cavity)
+        bit4=getattr(self, "_DisitckRvtet2Mps%s" % cavity)
+        bit5=getattr(self, "_DisitckRvtet2Diag%s" % cavity)
         value = (bit5 << 5) | (bit4 << 4) | (bit3 << 3) | (bit2 << 2) | (bit1 << 1) | (bit0 << 0)
         perseus_utils.write_direct(self.perseus, value, 8)
 
-    def update_RvCircIn(self):
-        bit0=self._DisitckRvcircDacsoffloopsstby
-        bit1=self._DisitckRvcircPindiodeswitch
-        bit2=self._DisitckRvcircFdltrg
-        bit3=self._DisitckRvcircPlctxoff
-        bit4=self._DisitckRvcircMps
-        bit5=self._DisitckRvcircDiag
+    def update_RvCircIn(self, cavity):
+        bit0=getattr(self, "_DisitckRvcircDacsoffloopsstby%s" % cavity)
+        bit1=getattr(self, "_DisitckRvcircPindiodeswitch%s" % cavity)
+        bit2=getattr(self, "_DisitckRvcircFdltrg%s" % cavity)
+        bit3=getattr(self, "_DisitckRvcircPlctxoff%s" % cavity)
+        bit4=getattr(self, "_DisitckRvcircMps%s" % cavity)
+        bit5=getattr(self, "_DisitckRvcircDiag%s" % cavity)
         value = (bit5 << 5) | (bit4 << 4) | (bit3 << 3) | (bit2 << 2) | (bit1 << 1) | (bit0 << 0)
         perseus_utils.write_direct(self.perseus, value, 9)
 
-    def update_FwLoad(self):
-        bit0=self._DisitckFwloadDacsoffloopsstby
-        bit1=self._DisitckFwloadPindiodeswitch
-        bit2=self._DisitckFwloadFdltrg
-        bit3=self._DisitckFwloadPlctxoff
-        bit4=self._DisitckFwloadMps
-        bit5=self._DisitckFwloadDiag
+    def update_FwLoad(self, cavity):
+        bit0=getattr(self, "_DisitckFwloadDacsoffloopsstby%s" % cavity)
+        bit1=getattr(self, "_DisitckFwloadPindiodeswitch%s" % cavity)
+        bit2=getattr(self, "_DisitckFwloadFdltrg%s" % cavity)
+        bit3=getattr(self, "_DisitckFwloadPlctxoff%s" % cavity)
+        bit4=getattr(self, "_DisitckFwloadMps%s" % cavity)
+        bit5=getattr(self, "_DisitckFwloadDiag%s" % cavity)
         value = (bit5 << 5) | (bit4 << 4) | (bit3 << 3) | (bit2 << 2) | (bit1 << 1) | (bit0 << 0)
         perseus_utils.write_direct(self.perseus, value, 10)
 
-    def update_FwHybLoad(self):
-        bit0=self._DisitckFwhybloadDacsoffloopsstby
-        bit1=self._DisitckFwhybloadPindiodeswitch
-        bit2=self._DisitckFwhybloadFdltrg
-        bit3=self._DisitckFwhybloadPlctxoff
-        bit4=self._DisitckFwhybloadMps
-        bit5=self._DisitckFwhybloadDiag
+    def update_FwHybLoad(self, cavity):
+        bit0=getattr(self, "_DisitckFwhybloadDacsoffloopsstby%s" % cavity)
+        bit1=getattr(self, "_DisitckFwhybloadPindiodeswitch%s" % cavity)
+        bit2=getattr(self, "_DisitckFwhybloadFdltrg%s" % cavity)
+        bit3=getattr(self, "_DisitckFwhybloadPlctxoff%s" % cavity)
+        bit4=getattr(self, "_DisitckFwhybloadMps%s" % cavity)
+        bit5=getattr(self, "_DisitckFwhybloadDiag%s" % cavity)
         value = (bit5 << 5) | (bit4 << 4) | (bit3 << 3) | (bit2 << 2) | (bit1 << 1) | (bit0 << 0)
         perseus_utils.write_direct(self.perseus, value, 11)
 
-    def update_RvCav(self):
-        bit0=self._DisitckRvcavDacsoffloopsstby
-        bit1=self._DisitckRvcavPindiodeswitch
-        bit2=self._DisitckRvcavFdltrg
-        bit3=self._DisitckRvcavPlctxoff
-        bit4=self._DisitckRvcavMps
-        bit5=self._DisitckRvcavDiag
+    def update_RvCav(self, cavity):
+        bit0=getattr(self, "_DisitckRvcavDacsoffloopsstby%s" % cavity)
+        bit1=getattr(self, "_DisitckRvcavPindiodeswitch%s" % cavity)
+        bit2=getattr(self, "_DisitckRvcavFdltrg%s" % cavity)
+        bit3=getattr(self, "_DisitckRvcavPlctxoff%s" % cavity)
+        bit4=getattr(self, "_DisitckRvcavMps%s" % cavity)
+        bit5=getattr(self, "_DisitckRvcavDiag%s" % cavity)
         value = (bit5 << 5) | (bit4 << 4) | (bit3 << 3) | (bit2 << 2) | (bit1 << 1) | (bit0 << 0)
         perseus_utils.write_direct(self.perseus, value, 12)
 
-    def update_Arc(self):
-        bit0=self._DisitckArcsDacsoffloopsstby
-        bit1=self._DisitckArcsPindiodeswitch
-        bit2=self._DisitckArcsFdltrg
-        bit3=self._DisitckArcsPlctxoff
-        bit4=self._DisitckArcsMps
-        bit5=self._DisitckArcsDiag
+    def update_Arc(self, cavity):
+        bit0=getattr(self, "_DisitckArcsDacsoffloopsstby%s" % cavity)
+        bit1=getattr(self, "_DisitckArcsPindiodeswitch%s" % cavity)
+        bit2=getattr(self, "_DisitckArcsFdltrg%s" % cavity)
+        bit3=getattr(self, "_DisitckArcsPlctxoff%s" % cavity)
+        bit4=getattr(self, "_DisitckArcsMps%s" % cavity)
+        bit5=getattr(self, "_DisitckArcsDiag%s" % cavity)
         value = (bit5 << 5) | (bit4 << 4) | (bit3 << 3) | (bit2 << 2) | (bit1 << 1) | (bit0 << 0)
         perseus_utils.write_direct(self.perseus, value, 13)
 
-    def update_Vacuum(self):
-        bit0=self._DisitckVacuumDacsoffloopsstby
-        bit1=self._DisitckVacuumPindiodeswitch
-        bit2=self._DisitckVacuumFdltrg
-        bit3=self._DisitckVacuumPlctxoff
-        bit4=self._DisitckVacuumMps
-        bit5=self._DisitckVacuumDiag
+    def update_Vacuum(self, cavity):
+        bit0=getattr(self, "_DisitckVacuumDacsoffloopsstby%s" % cavity)
+        bit1=getattr(self, "_DisitckVacuumPindiodeswitch%s" % cavity)
+        bit2=getattr(self, "_DisitckVacuumFdltrg%s" % cavity)
+        bit3=getattr(self, "_DisitckVacuumPlctxoff%s" % cavity)
+        bit4=getattr(self, "_DisitckVacuumMps%s" % cavity)
+        bit5=getattr(self, "_DisitckVacuumDiag%s" % cavity)
         value = (bit5 << 5) | (bit4 << 4) | (bit3 << 3) | (bit2 << 2) | (bit1 << 1) | (bit0 << 0)
         perseus_utils.write_direct(self.perseus, value, 14)
 
-    def update_Manual(self):
-        bit0=self._DisitckManualInterlockDacsoffloopsstby
-        bit1=self._DisitckManualInterlockPindiodeswitch
-        bit2=self._DisitckManualInterlockFdltrg
-        bit3=self._DisitckManualInterlockPlctxoff
-        bit4=self._DisitckManualInterlockMps
-        bit5=self._DisitckManualInterlockDiag
+    def update_Manual(self, cavity):
+        bit0=getattr(self, "_DisitckManualInterlockDacsoffloopsstby%s" % cavity)
+        bit1=getattr(self, "_DisitckManualInterlockPindiodeswitch%s" % cavity)
+        bit2=getattr(self, "_DisitckManualInterlockFdltrg%s" % cavity)
+        bit3=getattr(self, "_DisitckManualInterlockPlctxoff%s" % cavity)
+        bit4=getattr(self, "_DisitckManualInterlockMps%s" % cavity)
+        bit5=getattr(self, "_DisitckManualInterlockDiag%s" % cavity)
         value = (bit5 << 5) | (bit4 << 4) | (bit3 << 3) | (bit2 << 2) | (bit1 << 1) | (bit0 << 0)
         perseus_utils.write_direct(self.perseus, value, 15)
 
-    def update_EndSwUp(self):
-        bit0=self._DisitckPlungerEndSwitchesUpDacsoffloopsstby
-        bit1=self._DisitckPlungerEndSwitchesUpPindiodeswitch
-        bit2=self._DisitckPlungerEndSwitchesUpFdltrg
-        bit3=self._DisitckPlungerEndSwitchesUpPlctxoff
-        bit4=self._DisitckPlungerEndSwitchesUpMps
-        bit5=self._DisitckPlungerEndSwitchesUpDiag
+    def update_EndSwUp(self, cavity):
+        bit0=getattr(self, "_DisitckPlungerEndSwitchesUpDacsoffloopsstby%s" % cavity)
+        bit1=getattr(self, "_DisitckPlungerEndSwitchesUpPindiodeswitch%s" % cavity)
+        bit2=getattr(self, "_DisitckPlungerEndSwitchesUpFdltrg%s" % cavity)
+        bit3=getattr(self, "_DisitckPlungerEndSwitchesUpPlctxoff%s" % cavity)
+        bit4=getattr(self, "_DisitckPlungerEndSwitchesUpMps%s" % cavity)
+        bit5=getattr(self, "_DisitckPlungerEndSwitchesUpDiag%s" % cavity)
         value = (bit5 << 5) | (bit4 << 4) | (bit3 << 3) | (bit2 << 2) | (bit1 << 1) | (bit0 << 0)
         perseus_utils.write_direct(self.perseus, value, 16)
 
-    def update_EndSwDown(self):
-        bit0=self._DisitckPlungerEndSwitchesDownDacsoffloopsstby
-        bit1=self._DisitckPlungerEndSwitchesDownPindiodeswitch
-        bit2=self._DisitckPlungerEndSwitchesDownFdltrg
-        bit3=self._DisitckPlungerEndSwitchesDownPlctxoff
-        bit4=self._DisitckPlungerEndSwitchesDownMps
-        bit5=self._DisitckPlungerEndSwitchesDownDiag
+    def update_EndSwDown(self, cavity):
+        bit0=getattr(self, "_DisitckPlungerEndSwitchesDownDacsoffloopsstby%s" % cavity)
+        bit1=getattr(self, "_DisitckPlungerEndSwitchesDownPindiodeswitch%s" % cavity)
+        bit2=getattr(self, "_DisitckPlungerEndSwitchesDownFdltrg%s" % cavity)
+        bit3=getattr(self, "_DisitckPlungerEndSwitchesDownPlctxoff%s" % cavity)
+        bit4=getattr(self, "_DisitckPlungerEndSwitchesDownMps%s" % cavity)
+        bit5=getattr(self, "_DisitckPlungerEndSwitchesDownDiag%s" % cavity)
         value = (bit5 << 5) | (bit4 << 4) | (bit3 << 3) | (bit2 << 2) | (bit1 << 1) | (bit0 << 0)
         perseus_utils.write_direct(self.perseus, value, 17)
 
-    def update_Mps(self):
-        bit0=self._DisitckMpsDacsoffloopsstby
-        bit1=self._DisitckMpsPindiodeswitch
-        bit2=self._DisitckMpsFdltrg
-        bit3=self._DisitckMpsPlctxoff
-        bit4=self._DisitckMpsMps
-        bit5=self._DisitckMpsDiag
+    def update_Mps(self, cavity):
+        bit0=getattr(self, "_DisitckMpsDacsoffloopsstby%s" % cavity)
+        bit1=getattr(self, "_DisitckMpsPindiodeswitch%s" % cavity)
+        bit2=getattr(self, "_DisitckMpsFdltrg%s" % cavity)
+        bit3=getattr(self, "_DisitckMpsPlctxoff%s" % cavity)
+        bit4=getattr(self, "_DisitckMpsMps%s" % cavity)
+        bit5=getattr(self, "_DisitckMpsDiag%s" % cavity)
         value = (bit5 << 5) | (bit4 << 4) | (bit3 << 3) | (bit2 << 2) | (bit1 << 1) | (bit0 << 0)
         perseus_utils.write_direct(self.perseus, value, 18)
 

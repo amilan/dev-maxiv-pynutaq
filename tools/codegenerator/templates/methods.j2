@@ -59,7 +59,7 @@
 {% elif attribute.type == "special_fim" %}
     @DebugIt()
     def get_{{attribute.name}}(self):
-        value = perseus_utils.read_direct(self.perseus,{{attribute.address}}, '{{attribute.cavity}}')
+        value = perseus_utils.read_direct(self.perseus, {{attribute.address}}, '{{attribute.cavity}}')
         self._{{attribute.name}} = (value >> {{attribute.pos}}) & 1
         return self._{{attribute.name}}
 
@@ -67,7 +67,8 @@
     @DebugIt()
     def set_{{attribute.name}}(self, {{attribute.name}}):
         self._{{attribute.name}} = {{attribute.name}}
-        self.update_fim()
+        cavity = '{{attribute.cavity}}'
+        self.update_fim(cavity)
     {% endif %}
 
 {% else %}
