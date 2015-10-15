@@ -26,6 +26,9 @@
                                    format='%6.2f',
                                    {% if attribute.dtype != 'bool' %}
                                    min_value={{attribute.min_value}}, max_value={{attribute.max_value}},
+                                   rel_change='0.1',
+                                   {% else %}
+                                   polling_period=1000,
                                    {% endif %}
                                    fget="get_{{attribute.name}}",
                                    fset="set_{{attribute.name}}",
@@ -39,8 +42,10 @@
     Diag_{{attr.name}} = attribute(label='Diag_{{attr.name}}',
                                    {% if attr.type != 'bool' %}
                                    dtype={{attr.dtype}},
+                                   rel_change='0.1',
                                    {% elif attr.type == 'bool' %}
                                    dtype={{attr.type}},
+                                   polling_period=1000,
                                    {% endif %}
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,

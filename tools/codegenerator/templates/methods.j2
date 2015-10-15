@@ -144,6 +144,6 @@
         {% elif attribute.type == 'angle' and attribute.access == 'read_diag_ph' %}
         self._Diag_{{attribute.name}} = math.degrees(math.atan2(self._Diag_{{attribute.q_parent}}, self._Diag_{{attribute.i_parent}}))
         {% endif %}
-        self.push_change_event("Diag_{{attribute.name}}", Diag_{{attribute.name}})
+        self.push_change_event("Diag_{{attribute.name}}", self._Diag_{{attribute.name}})
 {% endfor %}
 {% endblock %}

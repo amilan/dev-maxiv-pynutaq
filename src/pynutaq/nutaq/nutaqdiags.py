@@ -65,6 +65,7 @@ class NutaqDiags(Device):
                                    unit='mV',
                                    format='%6.2f',
                                    min_value=0, max_value=1000,
+                                   rel_change='0.1',
                                    fget="get_Rvtet1A",
                                    fset="set_Rvtet1A",
                                    doc=""
@@ -78,6 +79,7 @@ class NutaqDiags(Device):
                                    unit='mV',
                                    format='%6.2f',
                                    min_value=0, max_value=1000,
+                                   rel_change='0.1',
                                    fget="get_Rvtet1B",
                                    fset="set_Rvtet1B",
                                    doc=""
@@ -91,6 +93,7 @@ class NutaqDiags(Device):
                                    unit='mV',
                                    format='%6.2f',
                                    min_value=0, max_value=1000,
+                                   rel_change='0.1',
                                    fget="get_Rvtet2A",
                                    fset="set_Rvtet2A",
                                    doc=""
@@ -104,6 +107,7 @@ class NutaqDiags(Device):
                                    unit='mV',
                                    format='%6.2f',
                                    min_value=0, max_value=1000,
+                                   rel_change='0.1',
                                    fget="get_Rvtet2B",
                                    fset="set_Rvtet2B",
                                    doc=""
@@ -117,6 +121,7 @@ class NutaqDiags(Device):
                                    unit='mV',
                                    format='%6.2f',
                                    min_value=0, max_value=1000,
+                                   rel_change='0.1',
                                    fget="get_RvcircA",
                                    fset="set_RvcircA",
                                    doc=""
@@ -130,6 +135,7 @@ class NutaqDiags(Device):
                                    unit='mV',
                                    format='%6.2f',
                                    min_value=0, max_value=1000,
+                                   rel_change='0.1',
                                    fget="get_RvcircB",
                                    fset="set_RvcircB",
                                    doc=""
@@ -143,6 +149,7 @@ class NutaqDiags(Device):
                                    unit='mV',
                                    format='%6.2f',
                                    min_value=0, max_value=1000,
+                                   rel_change='0.1',
                                    fget="get_FwloadA",
                                    fset="set_FwloadA",
                                    doc=""
@@ -156,6 +163,7 @@ class NutaqDiags(Device):
                                    unit='mV',
                                    format='%6.2f',
                                    min_value=0, max_value=1000,
+                                   rel_change='0.1',
                                    fget="get_FwloadB",
                                    fset="set_FwloadB",
                                    doc=""
@@ -169,6 +177,7 @@ class NutaqDiags(Device):
                                    unit='mV',
                                    format='%6.2f',
                                    min_value=0, max_value=1000,
+                                   rel_change='0.1',
                                    fget="get_FwhybloadA",
                                    fset="set_FwhybloadA",
                                    doc=""
@@ -182,6 +191,7 @@ class NutaqDiags(Device):
                                    unit='mV',
                                    format='%6.2f',
                                    min_value=0, max_value=1000,
+                                   rel_change='0.1',
                                    fget="get_FwhybloadB",
                                    fset="set_FwhybloadB",
                                    doc=""
@@ -195,6 +205,7 @@ class NutaqDiags(Device):
                                    unit='mV',
                                    format='%6.2f',
                                    min_value=0, max_value=1000,
+                                   rel_change='0.1',
                                    fget="get_RvcavA",
                                    fset="set_RvcavA",
                                    doc=""
@@ -208,6 +219,7 @@ class NutaqDiags(Device):
                                    unit='mV',
                                    format='%6.2f',
                                    min_value=0, max_value=1000,
+                                   rel_change='0.1',
                                    fget="get_RvcavB",
                                    fset="set_RvcavB",
                                    doc=""
@@ -220,6 +232,7 @@ class NutaqDiags(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   polling_period=1000,
                                    fget="get_ManualInterlockA",
                                    fset="set_ManualInterlockA",
                                    doc=""
@@ -232,6 +245,7 @@ class NutaqDiags(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   polling_period=1000,
                                    fget="get_ManualInterlockB",
                                    fset="set_ManualInterlockB",
                                    doc=""
@@ -245,6 +259,7 @@ class NutaqDiags(Device):
                                    unit='',
                                    format='%6.2f',
                                    min_value=0, max_value=63,
+                                   rel_change='0.1',
                                    fget="get_DisableItckRvtet1A",
                                    fset="set_DisableItckRvtet1A",
                                    doc=""
@@ -258,6 +273,7 @@ class NutaqDiags(Device):
                                    unit='',
                                    format='%6.2f',
                                    min_value=0, max_value=63,
+                                   rel_change='0.1',
                                    fget="get_DisableItckRvtet1B",
                                    fset="set_DisableItckRvtet1B",
                                    doc=""
@@ -271,6 +287,7 @@ class NutaqDiags(Device):
                                    unit='',
                                    format='%6.2f',
                                    min_value=0, max_value=63,
+                                   rel_change='0.1',
                                    fget="get_DisableItckRvtet2A",
                                    fset="set_DisableItckRvtet2A",
                                    doc=""
@@ -284,6 +301,7 @@ class NutaqDiags(Device):
                                    unit='',
                                    format='%6.2f',
                                    min_value=0, max_value=63,
+                                   rel_change='0.1',
                                    fget="get_DisableItckRvtet2B",
                                    fset="set_DisableItckRvtet2B",
                                    doc=""
@@ -297,6 +315,7 @@ class NutaqDiags(Device):
                                    unit='',
                                    format='%6.2f',
                                    min_value=0, max_value=63,
+                                   rel_change='0.1',
                                    fget="get_DisableItckRvcircA",
                                    fset="set_DisableItckRvcircA",
                                    doc=""
@@ -310,6 +329,7 @@ class NutaqDiags(Device):
                                    unit='',
                                    format='%6.2f',
                                    min_value=0, max_value=63,
+                                   rel_change='0.1',
                                    fget="get_DisableItckRvcircB",
                                    fset="set_DisableItckRvcircB",
                                    doc=""
@@ -323,6 +343,7 @@ class NutaqDiags(Device):
                                    unit='',
                                    format='%6.2f',
                                    min_value=0, max_value=63,
+                                   rel_change='0.1',
                                    fget="get_DisableItckFwloadA",
                                    fset="set_DisableItckFwloadA",
                                    doc=""
@@ -336,6 +357,7 @@ class NutaqDiags(Device):
                                    unit='',
                                    format='%6.2f',
                                    min_value=0, max_value=63,
+                                   rel_change='0.1',
                                    fget="get_DisableItckFwloadB",
                                    fset="set_DisableItckFwloadB",
                                    doc=""
@@ -349,6 +371,7 @@ class NutaqDiags(Device):
                                    unit='',
                                    format='%6.2f',
                                    min_value=0, max_value=63,
+                                   rel_change='0.1',
                                    fget="get_DisableItckFwhybloadA",
                                    fset="set_DisableItckFwhybloadA",
                                    doc=""
@@ -362,6 +385,7 @@ class NutaqDiags(Device):
                                    unit='',
                                    format='%6.2f',
                                    min_value=0, max_value=63,
+                                   rel_change='0.1',
                                    fget="get_DisableItckFwhybloadB",
                                    fset="set_DisableItckFwhybloadB",
                                    doc=""
@@ -375,6 +399,7 @@ class NutaqDiags(Device):
                                    unit='',
                                    format='%6.2f',
                                    min_value=0, max_value=63,
+                                   rel_change='0.1',
                                    fget="get_DisableItckRvcavA",
                                    fset="set_DisableItckRvcavA",
                                    doc=""
@@ -388,6 +413,7 @@ class NutaqDiags(Device):
                                    unit='',
                                    format='%6.2f',
                                    min_value=0, max_value=63,
+                                   rel_change='0.1',
                                    fget="get_DisableItckRvcavB",
                                    fset="set_DisableItckRvcavB",
                                    doc=""
@@ -401,6 +427,7 @@ class NutaqDiags(Device):
                                    unit='',
                                    format='%6.2f',
                                    min_value=0, max_value=63,
+                                   rel_change='0.1',
                                    fget="get_DisableItckArcsA",
                                    fset="set_DisableItckArcsA",
                                    doc=""
@@ -414,6 +441,7 @@ class NutaqDiags(Device):
                                    unit='',
                                    format='%6.2f',
                                    min_value=0, max_value=63,
+                                   rel_change='0.1',
                                    fget="get_DisableItckArcsB",
                                    fset="set_DisableItckArcsB",
                                    doc=""
@@ -427,6 +455,7 @@ class NutaqDiags(Device):
                                    unit='',
                                    format='%6.2f',
                                    min_value=0, max_value=63,
+                                   rel_change='0.1',
                                    fget="get_DisableItckVaccumA",
                                    fset="set_DisableItckVaccumA",
                                    doc=""
@@ -440,6 +469,7 @@ class NutaqDiags(Device):
                                    unit='',
                                    format='%6.2f',
                                    min_value=0, max_value=63,
+                                   rel_change='0.1',
                                    fget="get_DisableItckVaccumB",
                                    fset="set_DisableItckVaccumB",
                                    doc=""
@@ -453,6 +483,7 @@ class NutaqDiags(Device):
                                    unit='',
                                    format='%6.2f',
                                    min_value=0, max_value=63,
+                                   rel_change='0.1',
                                    fget="get_DisableItckManualInterlockA",
                                    fset="set_DisableItckManualInterlockA",
                                    doc=""
@@ -466,6 +497,7 @@ class NutaqDiags(Device):
                                    unit='',
                                    format='%6.2f',
                                    min_value=0, max_value=63,
+                                   rel_change='0.1',
                                    fget="get_DisableItckManualInterlockB",
                                    fset="set_DisableItckManualInterlockB",
                                    doc=""
@@ -479,6 +511,7 @@ class NutaqDiags(Device):
                                    unit='',
                                    format='%6.2f',
                                    min_value=0, max_value=63,
+                                   rel_change='0.1',
                                    fget="get_DisableItckPlungerEndSwitchesUpA",
                                    fset="set_DisableItckPlungerEndSwitchesUpA",
                                    doc=""
@@ -492,6 +525,7 @@ class NutaqDiags(Device):
                                    unit='',
                                    format='%6.2f',
                                    min_value=0, max_value=63,
+                                   rel_change='0.1',
                                    fget="get_DisableItckPlungerEndSwitchesUpB",
                                    fset="set_DisableItckPlungerEndSwitchesUpB",
                                    doc=""
@@ -505,6 +539,7 @@ class NutaqDiags(Device):
                                    unit='',
                                    format='%6.2f',
                                    min_value=0, max_value=63,
+                                   rel_change='0.1',
                                    fget="get_DisableItckPlungerEndSwitchesDownA",
                                    fset="set_DisableItckPlungerEndSwitchesDownA",
                                    doc=""
@@ -518,6 +553,7 @@ class NutaqDiags(Device):
                                    unit='',
                                    format='%6.2f',
                                    min_value=0, max_value=63,
+                                   rel_change='0.1',
                                    fget="get_DisableItckPlungerEndSwitchesDownB",
                                    fset="set_DisableItckPlungerEndSwitchesDownB",
                                    doc=""
@@ -531,6 +567,7 @@ class NutaqDiags(Device):
                                    unit='',
                                    format='%6.2f',
                                    min_value=0, max_value=63,
+                                   rel_change='0.1',
                                    fget="get_DisableItckMpsA",
                                    fset="set_DisableItckMpsA",
                                    doc=""
@@ -544,6 +581,7 @@ class NutaqDiags(Device):
                                    unit='',
                                    format='%6.2f',
                                    min_value=0, max_value=63,
+                                   rel_change='0.1',
                                    fget="get_DisableItckMpsB",
                                    fset="set_DisableItckMpsB",
                                    doc=""
@@ -557,6 +595,7 @@ class NutaqDiags(Device):
                                    unit='',
                                    format='%6.2f',
                                    min_value=0, max_value=7,
+                                   rel_change='0.1',
                                    fget="get_SamplesToAverageA",
                                    fset="set_SamplesToAverageA",
                                    doc=""
@@ -570,6 +609,7 @@ class NutaqDiags(Device):
                                    unit='',
                                    format='%6.2f',
                                    min_value=0, max_value=7,
+                                   rel_change='0.1',
                                    fget="get_SamplesToAverageB",
                                    fset="set_SamplesToAverageB",
                                    doc=""
@@ -582,6 +622,7 @@ class NutaqDiags(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   polling_period=1000,
                                    fget="get_PulseupLogicInversionA",
                                    fset="set_PulseupLogicInversionA",
                                    doc=""
@@ -594,6 +635,7 @@ class NutaqDiags(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   polling_period=1000,
                                    fget="get_PulseupLogicInversionB",
                                    fset="set_PulseupLogicInversionB",
                                    doc=""
@@ -607,6 +649,7 @@ class NutaqDiags(Device):
                                    unit='',
                                    format='%6.2f',
                                    min_value=0, max_value=1,
+                                   rel_change='0.1',
                                    fget="get_EndSwitchesConnectedToNoNcContactA",
                                    fset="set_EndSwitchesConnectedToNoNcContactA",
                                    doc=""
@@ -620,6 +663,7 @@ class NutaqDiags(Device):
                                    unit='',
                                    format='%6.2f',
                                    min_value=0, max_value=1,
+                                   rel_change='0.1',
                                    fget="get_EndSwitchesConnectedToNoNcContactB",
                                    fset="set_EndSwitchesConnectedToNoNcContactB",
                                    doc=""
@@ -632,6 +676,7 @@ class NutaqDiags(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   polling_period=1000,
                                    fget="get_LookrefA",
                                    fset="set_LookrefA",
                                    doc=""
@@ -644,6 +689,7 @@ class NutaqDiags(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   polling_period=1000,
                                    fget="get_LookrefB",
                                    fset="set_LookrefB",
                                    doc=""
@@ -657,6 +703,7 @@ class NutaqDiags(Device):
                                    unit='',
                                    format='%6.2f',
                                    min_value=0, max_value=3,
+                                   rel_change='0.1',
                                    fget="get_QuadrefA",
                                    fset="set_QuadrefA",
                                    doc=""
@@ -670,6 +717,7 @@ class NutaqDiags(Device):
                                    unit='',
                                    format='%6.2f',
                                    min_value=0, max_value=3,
+                                   rel_change='0.1',
                                    fget="get_QuadrefB",
                                    fset="set_QuadrefB",
                                    doc=""
@@ -682,6 +730,7 @@ class NutaqDiags(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   polling_period=1000,
                                    fget="get_SpareDo1A",
                                    fset="set_SpareDo1A",
                                    doc=""
@@ -694,6 +743,7 @@ class NutaqDiags(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   polling_period=1000,
                                    fget="get_SpareDo1B",
                                    fset="set_SpareDo1B",
                                    doc=""
@@ -706,6 +756,7 @@ class NutaqDiags(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   polling_period=1000,
                                    fget="get_SpareDo2A",
                                    fset="set_SpareDo2A",
                                    doc=""
@@ -718,6 +769,7 @@ class NutaqDiags(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   polling_period=1000,
                                    fget="get_SpareDo2B",
                                    fset="set_SpareDo2B",
                                    doc=""
@@ -730,6 +782,7 @@ class NutaqDiags(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   polling_period=1000,
                                    fget="get_SpareDo3A",
                                    fset="set_SpareDo3A",
                                    doc=""
@@ -742,6 +795,7 @@ class NutaqDiags(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   polling_period=1000,
                                    fget="get_SpareDo3B",
                                    fset="set_SpareDo3B",
                                    doc=""
@@ -754,6 +808,7 @@ class NutaqDiags(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   polling_period=1000,
                                    fget="get_FdlSwTriggerA",
                                    fset="set_FdlSwTriggerA",
                                    doc=""
@@ -766,6 +821,7 @@ class NutaqDiags(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   polling_period=1000,
                                    fget="get_FdlSwTriggerB",
                                    fset="set_FdlSwTriggerB",
                                    doc=""
@@ -778,6 +834,7 @@ class NutaqDiags(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   polling_period=1000,
                                    fget="get_ResetInterlocksCavA",
                                    fset="set_ResetInterlocksCavA",
                                    doc=""
@@ -790,6 +847,7 @@ class NutaqDiags(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   polling_period=1000,
                                    fget="get_ResetInterlocksCavB",
                                    fset="set_ResetInterlocksCavB",
                                    doc=""
@@ -802,6 +860,7 @@ class NutaqDiags(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   polling_period=1000,
                                    fget="get_LandautuningenableA",
                                    fset="set_LandautuningenableA",
                                    doc=""
@@ -814,6 +873,7 @@ class NutaqDiags(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   polling_period=1000,
                                    fget="get_LandautuningenableB",
                                    fset="set_LandautuningenableB",
                                    doc=""
@@ -826,6 +886,7 @@ class NutaqDiags(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   polling_period=1000,
                                    fget="get_LandautuningresetA",
                                    fset="set_LandautuningresetA",
                                    doc=""
@@ -838,6 +899,7 @@ class NutaqDiags(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   polling_period=1000,
                                    fget="get_LandautuningresetB",
                                    fset="set_LandautuningresetB",
                                    doc=""
@@ -850,6 +912,7 @@ class NutaqDiags(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   polling_period=1000,
                                    fget="get_MovelandauupA",
                                    fset="set_MovelandauupA",
                                    doc=""
@@ -862,6 +925,7 @@ class NutaqDiags(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   polling_period=1000,
                                    fget="get_MovelandauupB",
                                    fset="set_MovelandauupB",
                                    doc=""
@@ -874,6 +938,7 @@ class NutaqDiags(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   polling_period=1000,
                                    fget="get_MovelandauplgA",
                                    fset="set_MovelandauplgA",
                                    doc=""
@@ -886,6 +951,7 @@ class NutaqDiags(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   polling_period=1000,
                                    fget="get_MovelandauplgB",
                                    fset="set_MovelandauplgB",
                                    doc=""
@@ -899,6 +965,7 @@ class NutaqDiags(Device):
                                    unit='',
                                    format='%6.2f',
                                    min_value=0, max_value=10000,
+                                   rel_change='0.1',
                                    fget="get_NumstepsA",
                                    fset="set_NumstepsA",
                                    doc=""
@@ -912,6 +979,7 @@ class NutaqDiags(Device):
                                    unit='',
                                    format='%6.2f',
                                    min_value=0, max_value=10000,
+                                   rel_change='0.1',
                                    fget="get_NumstepsB",
                                    fset="set_NumstepsB",
                                    doc=""
@@ -925,6 +993,7 @@ class NutaqDiags(Device):
                                    unit='degrees',
                                    format='%6.2f',
                                    min_value=-180, max_value=180,
+                                   rel_change='0.1',
                                    fget="get_LandauphaseoffsetA",
                                    fset="set_LandauphaseoffsetA",
                                    doc=""
@@ -938,6 +1007,7 @@ class NutaqDiags(Device):
                                    unit='degrees',
                                    format='%6.2f',
                                    min_value=-180, max_value=180,
+                                   rel_change='0.1',
                                    fget="get_LandauphaseoffsetB",
                                    fset="set_LandauphaseoffsetB",
                                    doc=""
@@ -951,6 +1021,7 @@ class NutaqDiags(Device):
                                    unit='',
                                    format='%6.2f',
                                    min_value=0, max_value=50,
+                                   rel_change='0.1',
                                    fget="get_LandaumarginupA",
                                    fset="set_LandaumarginupA",
                                    doc=""
@@ -964,6 +1035,7 @@ class NutaqDiags(Device):
                                    unit='',
                                    format='%6.2f',
                                    min_value=0, max_value=50,
+                                   rel_change='0.1',
                                    fget="get_LandaumarginupB",
                                    fset="set_LandaumarginupB",
                                    doc=""
@@ -977,6 +1049,7 @@ class NutaqDiags(Device):
                                    unit='',
                                    format='%6.2f',
                                    min_value=0, max_value=10,
+                                   rel_change='0.1',
                                    fget="get_LandauMarginLowA",
                                    fset="set_LandauMarginLowA",
                                    doc=""
@@ -990,6 +1063,7 @@ class NutaqDiags(Device):
                                    unit='',
                                    format='%6.2f',
                                    min_value=0, max_value=10,
+                                   rel_change='0.1',
                                    fget="get_LandauMarginLowB",
                                    fset="set_LandauMarginLowB",
                                    doc=""
@@ -1003,6 +1077,7 @@ class NutaqDiags(Device):
                                    unit='mV',
                                    format='%6.2f',
                                    min_value=0, max_value=1000,
+                                   rel_change='0.1',
                                    fget="get_MinimumLandauAmplitudeA",
                                    fset="set_MinimumLandauAmplitudeA",
                                    doc=""
@@ -1016,6 +1091,7 @@ class NutaqDiags(Device):
                                    unit='mV',
                                    format='%6.2f',
                                    min_value=0, max_value=1000,
+                                   rel_change='0.1',
                                    fget="get_MinimumLandauAmplitudeB",
                                    fset="set_MinimumLandauAmplitudeB",
                                    doc=""
@@ -1028,6 +1104,7 @@ class NutaqDiags(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   polling_period=1000,
                                    fget="get_LandauPositiveEnableA",
                                    fset="set_LandauPositiveEnableA",
                                    doc=""
@@ -1040,6 +1117,7 @@ class NutaqDiags(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   polling_period=1000,
                                    fget="get_LandauPositiveEnableB",
                                    fset="set_LandauPositiveEnableB",
                                    doc=""
@@ -1053,6 +1131,7 @@ class NutaqDiags(Device):
                                    unit='mV',
                                    format='%6.2f',
                                    min_value=0, max_value=1000,
+                                   rel_change='0.1',
                                    fget="get_LandauampsettingA",
                                    fset="set_LandauampsettingA",
                                    doc=""
@@ -1066,6 +1145,7 @@ class NutaqDiags(Device):
                                    unit='mV',
                                    format='%6.2f',
                                    min_value=0, max_value=1000,
+                                   rel_change='0.1',
                                    fget="get_LandauampsettingB",
                                    fset="set_LandauampsettingB",
                                    doc=""
@@ -1078,6 +1158,7 @@ class NutaqDiags(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   polling_period=1000,
                                    fget="get_DisitckRvtet1DacsoffloopsstbyA",
                                    fset="set_DisitckRvtet1DacsoffloopsstbyA",
                                    doc=""
@@ -1090,6 +1171,7 @@ class NutaqDiags(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   polling_period=1000,
                                    fget="get_DisitckRvtet1DacsoffloopsstbyB",
                                    fset="set_DisitckRvtet1DacsoffloopsstbyB",
                                    doc=""
@@ -1102,6 +1184,7 @@ class NutaqDiags(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   polling_period=1000,
                                    fget="get_DisitckRvtet1PindiodeswitchA",
                                    fset="set_DisitckRvtet1PindiodeswitchA",
                                    doc=""
@@ -1114,6 +1197,7 @@ class NutaqDiags(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   polling_period=1000,
                                    fget="get_DisitckRvtet1PindiodeswitchB",
                                    fset="set_DisitckRvtet1PindiodeswitchB",
                                    doc=""
@@ -1126,6 +1210,7 @@ class NutaqDiags(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   polling_period=1000,
                                    fget="get_DisitckRvtet1FdltrgA",
                                    fset="set_DisitckRvtet1FdltrgA",
                                    doc=""
@@ -1138,6 +1223,7 @@ class NutaqDiags(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   polling_period=1000,
                                    fget="get_DisitckRvtet1FdltrgB",
                                    fset="set_DisitckRvtet1FdltrgB",
                                    doc=""
@@ -1150,6 +1236,7 @@ class NutaqDiags(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   polling_period=1000,
                                    fget="get_DisitckRvtet1PlctxoffA",
                                    fset="set_DisitckRvtet1PlctxoffA",
                                    doc=""
@@ -1162,6 +1249,7 @@ class NutaqDiags(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   polling_period=1000,
                                    fget="get_DisitckRvtet1PlctxoffB",
                                    fset="set_DisitckRvtet1PlctxoffB",
                                    doc=""
@@ -1174,6 +1262,7 @@ class NutaqDiags(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   polling_period=1000,
                                    fget="get_DisitckRvtet1MpsA",
                                    fset="set_DisitckRvtet1MpsA",
                                    doc=""
@@ -1186,6 +1275,7 @@ class NutaqDiags(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   polling_period=1000,
                                    fget="get_DisitckRvtet1MpsB",
                                    fset="set_DisitckRvtet1MpsB",
                                    doc=""
@@ -1198,6 +1288,7 @@ class NutaqDiags(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   polling_period=1000,
                                    fget="get_DisitckRvtet1DiagA",
                                    fset="set_DisitckRvtet1DiagA",
                                    doc=""
@@ -1210,6 +1301,7 @@ class NutaqDiags(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   polling_period=1000,
                                    fget="get_DisitckRvtet1DiagB",
                                    fset="set_DisitckRvtet1DiagB",
                                    doc=""
@@ -1222,6 +1314,7 @@ class NutaqDiags(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   polling_period=1000,
                                    fget="get_DisitckRvtet2DacsoffloopsstbyA",
                                    fset="set_DisitckRvtet2DacsoffloopsstbyA",
                                    doc=""
@@ -1234,6 +1327,7 @@ class NutaqDiags(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   polling_period=1000,
                                    fget="get_DisitckRvtet2DacsoffloopsstbyB",
                                    fset="set_DisitckRvtet2DacsoffloopsstbyB",
                                    doc=""
@@ -1246,6 +1340,7 @@ class NutaqDiags(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   polling_period=1000,
                                    fget="get_DisitckRvtet2PindiodeswitchA",
                                    fset="set_DisitckRvtet2PindiodeswitchA",
                                    doc=""
@@ -1258,6 +1353,7 @@ class NutaqDiags(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   polling_period=1000,
                                    fget="get_DisitckRvtet2PindiodeswitchB",
                                    fset="set_DisitckRvtet2PindiodeswitchB",
                                    doc=""
@@ -1270,6 +1366,7 @@ class NutaqDiags(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   polling_period=1000,
                                    fget="get_DisitckRvtet2FdltrgA",
                                    fset="set_DisitckRvtet2FdltrgA",
                                    doc=""
@@ -1282,6 +1379,7 @@ class NutaqDiags(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   polling_period=1000,
                                    fget="get_DisitckRvtet2FdltrgB",
                                    fset="set_DisitckRvtet2FdltrgB",
                                    doc=""
@@ -1294,6 +1392,7 @@ class NutaqDiags(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   polling_period=1000,
                                    fget="get_DisitckRvtet2PlctxoffA",
                                    fset="set_DisitckRvtet2PlctxoffA",
                                    doc=""
@@ -1306,6 +1405,7 @@ class NutaqDiags(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   polling_period=1000,
                                    fget="get_DisitckRvtet2PlctxoffB",
                                    fset="set_DisitckRvtet2PlctxoffB",
                                    doc=""
@@ -1318,6 +1418,7 @@ class NutaqDiags(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   polling_period=1000,
                                    fget="get_DisitckRvtet2MpsA",
                                    fset="set_DisitckRvtet2MpsA",
                                    doc=""
@@ -1330,6 +1431,7 @@ class NutaqDiags(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   polling_period=1000,
                                    fget="get_DisitckRvtet2MpsB",
                                    fset="set_DisitckRvtet2MpsB",
                                    doc=""
@@ -1342,6 +1444,7 @@ class NutaqDiags(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   polling_period=1000,
                                    fget="get_DisitckRvtet2DiagA",
                                    fset="set_DisitckRvtet2DiagA",
                                    doc=""
@@ -1354,6 +1457,7 @@ class NutaqDiags(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   polling_period=1000,
                                    fget="get_DisitckRvtet2DiagB",
                                    fset="set_DisitckRvtet2DiagB",
                                    doc=""
@@ -1366,6 +1470,7 @@ class NutaqDiags(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   polling_period=1000,
                                    fget="get_DisitckRvcircDacsoffloopsstbyA",
                                    fset="set_DisitckRvcircDacsoffloopsstbyA",
                                    doc=""
@@ -1378,6 +1483,7 @@ class NutaqDiags(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   polling_period=1000,
                                    fget="get_DisitckRvcircDacsoffloopsstbyB",
                                    fset="set_DisitckRvcircDacsoffloopsstbyB",
                                    doc=""
@@ -1390,6 +1496,7 @@ class NutaqDiags(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   polling_period=1000,
                                    fget="get_DisitckRvcircPindiodeswitchA",
                                    fset="set_DisitckRvcircPindiodeswitchA",
                                    doc=""
@@ -1402,6 +1509,7 @@ class NutaqDiags(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   polling_period=1000,
                                    fget="get_DisitckRvcircPindiodeswitchB",
                                    fset="set_DisitckRvcircPindiodeswitchB",
                                    doc=""
@@ -1414,6 +1522,7 @@ class NutaqDiags(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   polling_period=1000,
                                    fget="get_DisitckRvcircFdltrgA",
                                    fset="set_DisitckRvcircFdltrgA",
                                    doc=""
@@ -1426,6 +1535,7 @@ class NutaqDiags(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   polling_period=1000,
                                    fget="get_DisitckRvcircFdltrgB",
                                    fset="set_DisitckRvcircFdltrgB",
                                    doc=""
@@ -1438,6 +1548,7 @@ class NutaqDiags(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   polling_period=1000,
                                    fget="get_DisitckRvcircPlctxoffA",
                                    fset="set_DisitckRvcircPlctxoffA",
                                    doc=""
@@ -1450,6 +1561,7 @@ class NutaqDiags(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   polling_period=1000,
                                    fget="get_DisitckRvcircPlctxoffB",
                                    fset="set_DisitckRvcircPlctxoffB",
                                    doc=""
@@ -1462,6 +1574,7 @@ class NutaqDiags(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   polling_period=1000,
                                    fget="get_DisitckRvcircMpsA",
                                    fset="set_DisitckRvcircMpsA",
                                    doc=""
@@ -1474,6 +1587,7 @@ class NutaqDiags(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   polling_period=1000,
                                    fget="get_DisitckRvcircMpsB",
                                    fset="set_DisitckRvcircMpsB",
                                    doc=""
@@ -1486,6 +1600,7 @@ class NutaqDiags(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   polling_period=1000,
                                    fget="get_DisitckRvcircDiagA",
                                    fset="set_DisitckRvcircDiagA",
                                    doc=""
@@ -1498,6 +1613,7 @@ class NutaqDiags(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   polling_period=1000,
                                    fget="get_DisitckRvcircDiagB",
                                    fset="set_DisitckRvcircDiagB",
                                    doc=""
@@ -1510,6 +1626,7 @@ class NutaqDiags(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   polling_period=1000,
                                    fget="get_DisitckFwloadDacsoffloopsstbyA",
                                    fset="set_DisitckFwloadDacsoffloopsstbyA",
                                    doc=""
@@ -1522,6 +1639,7 @@ class NutaqDiags(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   polling_period=1000,
                                    fget="get_DisitckFwloadDacsoffloopsstbyB",
                                    fset="set_DisitckFwloadDacsoffloopsstbyB",
                                    doc=""
@@ -1534,6 +1652,7 @@ class NutaqDiags(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   polling_period=1000,
                                    fget="get_DisitckFwloadPindiodeswitchA",
                                    fset="set_DisitckFwloadPindiodeswitchA",
                                    doc=""
@@ -1546,6 +1665,7 @@ class NutaqDiags(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   polling_period=1000,
                                    fget="get_DisitckFwloadPindiodeswitchB",
                                    fset="set_DisitckFwloadPindiodeswitchB",
                                    doc=""
@@ -1558,6 +1678,7 @@ class NutaqDiags(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   polling_period=1000,
                                    fget="get_DisitckFwloadFdltrgA",
                                    fset="set_DisitckFwloadFdltrgA",
                                    doc=""
@@ -1570,6 +1691,7 @@ class NutaqDiags(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   polling_period=1000,
                                    fget="get_DisitckFwloadFdltrgB",
                                    fset="set_DisitckFwloadFdltrgB",
                                    doc=""
@@ -1582,6 +1704,7 @@ class NutaqDiags(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   polling_period=1000,
                                    fget="get_DisitckFwloadPlctxoffA",
                                    fset="set_DisitckFwloadPlctxoffA",
                                    doc=""
@@ -1594,6 +1717,7 @@ class NutaqDiags(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   polling_period=1000,
                                    fget="get_DisitckFwloadPlctxoffB",
                                    fset="set_DisitckFwloadPlctxoffB",
                                    doc=""
@@ -1606,6 +1730,7 @@ class NutaqDiags(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   polling_period=1000,
                                    fget="get_DisitckFwloadMpsA",
                                    fset="set_DisitckFwloadMpsA",
                                    doc=""
@@ -1618,6 +1743,7 @@ class NutaqDiags(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   polling_period=1000,
                                    fget="get_DisitckFwloadMpsB",
                                    fset="set_DisitckFwloadMpsB",
                                    doc=""
@@ -1630,6 +1756,7 @@ class NutaqDiags(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   polling_period=1000,
                                    fget="get_DisitckFwloadDiagA",
                                    fset="set_DisitckFwloadDiagA",
                                    doc=""
@@ -1642,6 +1769,7 @@ class NutaqDiags(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   polling_period=1000,
                                    fget="get_DisitckFwloadDiagB",
                                    fset="set_DisitckFwloadDiagB",
                                    doc=""
@@ -1654,6 +1782,7 @@ class NutaqDiags(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   polling_period=1000,
                                    fget="get_DisitckFwhybloadDacsoffloopsstbyA",
                                    fset="set_DisitckFwhybloadDacsoffloopsstbyA",
                                    doc=""
@@ -1666,6 +1795,7 @@ class NutaqDiags(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   polling_period=1000,
                                    fget="get_DisitckFwhybloadDacsoffloopsstbyB",
                                    fset="set_DisitckFwhybloadDacsoffloopsstbyB",
                                    doc=""
@@ -1678,6 +1808,7 @@ class NutaqDiags(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   polling_period=1000,
                                    fget="get_DisitckFwhybloadPindiodeswitchA",
                                    fset="set_DisitckFwhybloadPindiodeswitchA",
                                    doc=""
@@ -1690,6 +1821,7 @@ class NutaqDiags(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   polling_period=1000,
                                    fget="get_DisitckFwhybloadPindiodeswitchB",
                                    fset="set_DisitckFwhybloadPindiodeswitchB",
                                    doc=""
@@ -1702,6 +1834,7 @@ class NutaqDiags(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   polling_period=1000,
                                    fget="get_DisitckFwhybloadFdltrgA",
                                    fset="set_DisitckFwhybloadFdltrgA",
                                    doc=""
@@ -1714,6 +1847,7 @@ class NutaqDiags(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   polling_period=1000,
                                    fget="get_DisitckFwhybloadFdltrgB",
                                    fset="set_DisitckFwhybloadFdltrgB",
                                    doc=""
@@ -1726,6 +1860,7 @@ class NutaqDiags(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   polling_period=1000,
                                    fget="get_DisitckFwhybloadPlctxoffA",
                                    fset="set_DisitckFwhybloadPlctxoffA",
                                    doc=""
@@ -1738,6 +1873,7 @@ class NutaqDiags(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   polling_period=1000,
                                    fget="get_DisitckFwhybloadPlctxoffB",
                                    fset="set_DisitckFwhybloadPlctxoffB",
                                    doc=""
@@ -1750,6 +1886,7 @@ class NutaqDiags(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   polling_period=1000,
                                    fget="get_DisitckFwhybloadMpsA",
                                    fset="set_DisitckFwhybloadMpsA",
                                    doc=""
@@ -1762,6 +1899,7 @@ class NutaqDiags(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   polling_period=1000,
                                    fget="get_DisitckFwhybloadMpsB",
                                    fset="set_DisitckFwhybloadMpsB",
                                    doc=""
@@ -1774,6 +1912,7 @@ class NutaqDiags(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   polling_period=1000,
                                    fget="get_DisitckFwhybloadDiagA",
                                    fset="set_DisitckFwhybloadDiagA",
                                    doc=""
@@ -1786,6 +1925,7 @@ class NutaqDiags(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   polling_period=1000,
                                    fget="get_DisitckFwhybloadDiagB",
                                    fset="set_DisitckFwhybloadDiagB",
                                    doc=""
@@ -1798,6 +1938,7 @@ class NutaqDiags(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   polling_period=1000,
                                    fget="get_DisitckRvcavDacsoffloopsstbyA",
                                    fset="set_DisitckRvcavDacsoffloopsstbyA",
                                    doc=""
@@ -1810,6 +1951,7 @@ class NutaqDiags(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   polling_period=1000,
                                    fget="get_DisitckRvcavDacsoffloopsstbyB",
                                    fset="set_DisitckRvcavDacsoffloopsstbyB",
                                    doc=""
@@ -1822,6 +1964,7 @@ class NutaqDiags(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   polling_period=1000,
                                    fget="get_DisitckRvcavPindiodeswitchA",
                                    fset="set_DisitckRvcavPindiodeswitchA",
                                    doc=""
@@ -1834,6 +1977,7 @@ class NutaqDiags(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   polling_period=1000,
                                    fget="get_DisitckRvcavPindiodeswitchB",
                                    fset="set_DisitckRvcavPindiodeswitchB",
                                    doc=""
@@ -1846,6 +1990,7 @@ class NutaqDiags(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   polling_period=1000,
                                    fget="get_DisitckRvcavFdltrgA",
                                    fset="set_DisitckRvcavFdltrgA",
                                    doc=""
@@ -1858,6 +2003,7 @@ class NutaqDiags(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   polling_period=1000,
                                    fget="get_DisitckRvcavFdltrgB",
                                    fset="set_DisitckRvcavFdltrgB",
                                    doc=""
@@ -1870,6 +2016,7 @@ class NutaqDiags(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   polling_period=1000,
                                    fget="get_DisitckRvcavPlctxoffA",
                                    fset="set_DisitckRvcavPlctxoffA",
                                    doc=""
@@ -1882,6 +2029,7 @@ class NutaqDiags(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   polling_period=1000,
                                    fget="get_DisitckRvcavPlctxoffB",
                                    fset="set_DisitckRvcavPlctxoffB",
                                    doc=""
@@ -1894,6 +2042,7 @@ class NutaqDiags(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   polling_period=1000,
                                    fget="get_DisitckRvcavMpsA",
                                    fset="set_DisitckRvcavMpsA",
                                    doc=""
@@ -1906,6 +2055,7 @@ class NutaqDiags(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   polling_period=1000,
                                    fget="get_DisitckRvcavMpsB",
                                    fset="set_DisitckRvcavMpsB",
                                    doc=""
@@ -1918,6 +2068,7 @@ class NutaqDiags(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   polling_period=1000,
                                    fget="get_DisitckRvcavDiagA",
                                    fset="set_DisitckRvcavDiagA",
                                    doc=""
@@ -1930,6 +2081,7 @@ class NutaqDiags(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   polling_period=1000,
                                    fget="get_DisitckRvcavDiagB",
                                    fset="set_DisitckRvcavDiagB",
                                    doc=""
@@ -1942,6 +2094,7 @@ class NutaqDiags(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   polling_period=1000,
                                    fget="get_DisitckArcsDacsoffloopsstbyA",
                                    fset="set_DisitckArcsDacsoffloopsstbyA",
                                    doc=""
@@ -1954,6 +2107,7 @@ class NutaqDiags(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   polling_period=1000,
                                    fget="get_DisitckArcsDacsoffloopsstbyB",
                                    fset="set_DisitckArcsDacsoffloopsstbyB",
                                    doc=""
@@ -1966,6 +2120,7 @@ class NutaqDiags(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   polling_period=1000,
                                    fget="get_DisitckArcsPindiodeswitchA",
                                    fset="set_DisitckArcsPindiodeswitchA",
                                    doc=""
@@ -1978,6 +2133,7 @@ class NutaqDiags(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   polling_period=1000,
                                    fget="get_DisitckArcsPindiodeswitchB",
                                    fset="set_DisitckArcsPindiodeswitchB",
                                    doc=""
@@ -1990,6 +2146,7 @@ class NutaqDiags(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   polling_period=1000,
                                    fget="get_DisitckArcsFdltrgA",
                                    fset="set_DisitckArcsFdltrgA",
                                    doc=""
@@ -2002,6 +2159,7 @@ class NutaqDiags(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   polling_period=1000,
                                    fget="get_DisitckArcsFdltrgB",
                                    fset="set_DisitckArcsFdltrgB",
                                    doc=""
@@ -2014,6 +2172,7 @@ class NutaqDiags(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   polling_period=1000,
                                    fget="get_DisitckArcsPlctxoffA",
                                    fset="set_DisitckArcsPlctxoffA",
                                    doc=""
@@ -2026,6 +2185,7 @@ class NutaqDiags(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   polling_period=1000,
                                    fget="get_DisitckArcsPlctxoffB",
                                    fset="set_DisitckArcsPlctxoffB",
                                    doc=""
@@ -2038,6 +2198,7 @@ class NutaqDiags(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   polling_period=1000,
                                    fget="get_DisitckArcsMpsA",
                                    fset="set_DisitckArcsMpsA",
                                    doc=""
@@ -2050,6 +2211,7 @@ class NutaqDiags(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   polling_period=1000,
                                    fget="get_DisitckArcsMpsB",
                                    fset="set_DisitckArcsMpsB",
                                    doc=""
@@ -2062,6 +2224,7 @@ class NutaqDiags(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   polling_period=1000,
                                    fget="get_DisitckArcsDiagA",
                                    fset="set_DisitckArcsDiagA",
                                    doc=""
@@ -2074,6 +2237,7 @@ class NutaqDiags(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   polling_period=1000,
                                    fget="get_DisitckArcsDiagB",
                                    fset="set_DisitckArcsDiagB",
                                    doc=""
@@ -2086,6 +2250,7 @@ class NutaqDiags(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   polling_period=1000,
                                    fget="get_DisitckVacuumDacsoffloopsstbyA",
                                    fset="set_DisitckVacuumDacsoffloopsstbyA",
                                    doc=""
@@ -2098,6 +2263,7 @@ class NutaqDiags(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   polling_period=1000,
                                    fget="get_DisitckVacuumDacsoffloopsstbyB",
                                    fset="set_DisitckVacuumDacsoffloopsstbyB",
                                    doc=""
@@ -2110,6 +2276,7 @@ class NutaqDiags(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   polling_period=1000,
                                    fget="get_DisitckVacuumPindiodeswitchA",
                                    fset="set_DisitckVacuumPindiodeswitchA",
                                    doc=""
@@ -2122,6 +2289,7 @@ class NutaqDiags(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   polling_period=1000,
                                    fget="get_DisitckVacuumPindiodeswitchB",
                                    fset="set_DisitckVacuumPindiodeswitchB",
                                    doc=""
@@ -2134,6 +2302,7 @@ class NutaqDiags(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   polling_period=1000,
                                    fget="get_DisitckVacuumFdltrgA",
                                    fset="set_DisitckVacuumFdltrgA",
                                    doc=""
@@ -2146,6 +2315,7 @@ class NutaqDiags(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   polling_period=1000,
                                    fget="get_DisitckVacuumFdltrgB",
                                    fset="set_DisitckVacuumFdltrgB",
                                    doc=""
@@ -2158,6 +2328,7 @@ class NutaqDiags(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   polling_period=1000,
                                    fget="get_DisitckVacuumPlctxoffA",
                                    fset="set_DisitckVacuumPlctxoffA",
                                    doc=""
@@ -2170,6 +2341,7 @@ class NutaqDiags(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   polling_period=1000,
                                    fget="get_DisitckVacuumPlctxoffB",
                                    fset="set_DisitckVacuumPlctxoffB",
                                    doc=""
@@ -2182,6 +2354,7 @@ class NutaqDiags(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   polling_period=1000,
                                    fget="get_DisitckVacuumMpsA",
                                    fset="set_DisitckVacuumMpsA",
                                    doc=""
@@ -2194,6 +2367,7 @@ class NutaqDiags(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   polling_period=1000,
                                    fget="get_DisitckVacuumMpsB",
                                    fset="set_DisitckVacuumMpsB",
                                    doc=""
@@ -2206,6 +2380,7 @@ class NutaqDiags(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   polling_period=1000,
                                    fget="get_DisitckVacuumDiagA",
                                    fset="set_DisitckVacuumDiagA",
                                    doc=""
@@ -2218,6 +2393,7 @@ class NutaqDiags(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   polling_period=1000,
                                    fget="get_DisitckVacuumDiagB",
                                    fset="set_DisitckVacuumDiagB",
                                    doc=""
@@ -2230,6 +2406,7 @@ class NutaqDiags(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   polling_period=1000,
                                    fget="get_DisitckManualInterlockDacsoffloopsstbyA",
                                    fset="set_DisitckManualInterlockDacsoffloopsstbyA",
                                    doc=""
@@ -2242,6 +2419,7 @@ class NutaqDiags(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   polling_period=1000,
                                    fget="get_DisitckManualInterlockDacsoffloopsstbyB",
                                    fset="set_DisitckManualInterlockDacsoffloopsstbyB",
                                    doc=""
@@ -2254,6 +2432,7 @@ class NutaqDiags(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   polling_period=1000,
                                    fget="get_DisitckManualInterlockPindiodeswitchA",
                                    fset="set_DisitckManualInterlockPindiodeswitchA",
                                    doc=""
@@ -2266,6 +2445,7 @@ class NutaqDiags(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   polling_period=1000,
                                    fget="get_DisitckManualInterlockPindiodeswitchB",
                                    fset="set_DisitckManualInterlockPindiodeswitchB",
                                    doc=""
@@ -2278,6 +2458,7 @@ class NutaqDiags(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   polling_period=1000,
                                    fget="get_DisitckManualInterlockFdltrgA",
                                    fset="set_DisitckManualInterlockFdltrgA",
                                    doc=""
@@ -2290,6 +2471,7 @@ class NutaqDiags(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   polling_period=1000,
                                    fget="get_DisitckManualInterlockFdltrgB",
                                    fset="set_DisitckManualInterlockFdltrgB",
                                    doc=""
@@ -2302,6 +2484,7 @@ class NutaqDiags(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   polling_period=1000,
                                    fget="get_DisitckManualInterlockPlctxoffA",
                                    fset="set_DisitckManualInterlockPlctxoffA",
                                    doc=""
@@ -2314,6 +2497,7 @@ class NutaqDiags(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   polling_period=1000,
                                    fget="get_DisitckManualInterlockPlctxoffB",
                                    fset="set_DisitckManualInterlockPlctxoffB",
                                    doc=""
@@ -2326,6 +2510,7 @@ class NutaqDiags(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   polling_period=1000,
                                    fget="get_DisitckManualInterlockMpsA",
                                    fset="set_DisitckManualInterlockMpsA",
                                    doc=""
@@ -2338,6 +2523,7 @@ class NutaqDiags(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   polling_period=1000,
                                    fget="get_DisitckManualInterlockMpsB",
                                    fset="set_DisitckManualInterlockMpsB",
                                    doc=""
@@ -2350,6 +2536,7 @@ class NutaqDiags(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   polling_period=1000,
                                    fget="get_DisitckManualInterlockDiagA",
                                    fset="set_DisitckManualInterlockDiagA",
                                    doc=""
@@ -2362,6 +2549,7 @@ class NutaqDiags(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   polling_period=1000,
                                    fget="get_DisitckManualInterlockDiagB",
                                    fset="set_DisitckManualInterlockDiagB",
                                    doc=""
@@ -2374,6 +2562,7 @@ class NutaqDiags(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   polling_period=1000,
                                    fget="get_DisitckPlungerEndSwitchesUpDacsoffloopsstbyA",
                                    fset="set_DisitckPlungerEndSwitchesUpDacsoffloopsstbyA",
                                    doc=""
@@ -2386,6 +2575,7 @@ class NutaqDiags(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   polling_period=1000,
                                    fget="get_DisitckPlungerEndSwitchesUpDacsoffloopsstbyB",
                                    fset="set_DisitckPlungerEndSwitchesUpDacsoffloopsstbyB",
                                    doc=""
@@ -2398,6 +2588,7 @@ class NutaqDiags(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   polling_period=1000,
                                    fget="get_DisitckPlungerEndSwitchesUpPindiodeswitchA",
                                    fset="set_DisitckPlungerEndSwitchesUpPindiodeswitchA",
                                    doc=""
@@ -2410,6 +2601,7 @@ class NutaqDiags(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   polling_period=1000,
                                    fget="get_DisitckPlungerEndSwitchesUpPindiodeswitchB",
                                    fset="set_DisitckPlungerEndSwitchesUpPindiodeswitchB",
                                    doc=""
@@ -2422,6 +2614,7 @@ class NutaqDiags(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   polling_period=1000,
                                    fget="get_DisitckPlungerEndSwitchesUpFdltrgA",
                                    fset="set_DisitckPlungerEndSwitchesUpFdltrgA",
                                    doc=""
@@ -2434,6 +2627,7 @@ class NutaqDiags(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   polling_period=1000,
                                    fget="get_DisitckPlungerEndSwitchesUpFdltrgB",
                                    fset="set_DisitckPlungerEndSwitchesUpFdltrgB",
                                    doc=""
@@ -2446,6 +2640,7 @@ class NutaqDiags(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   polling_period=1000,
                                    fget="get_DisitckPlungerEndSwitchesUpPlctxoffA",
                                    fset="set_DisitckPlungerEndSwitchesUpPlctxoffA",
                                    doc=""
@@ -2458,6 +2653,7 @@ class NutaqDiags(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   polling_period=1000,
                                    fget="get_DisitckPlungerEndSwitchesUpPlctxoffB",
                                    fset="set_DisitckPlungerEndSwitchesUpPlctxoffB",
                                    doc=""
@@ -2470,6 +2666,7 @@ class NutaqDiags(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   polling_period=1000,
                                    fget="get_DisitckPlungerEndSwitchesUpMpsA",
                                    fset="set_DisitckPlungerEndSwitchesUpMpsA",
                                    doc=""
@@ -2482,6 +2679,7 @@ class NutaqDiags(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   polling_period=1000,
                                    fget="get_DisitckPlungerEndSwitchesUpMpsB",
                                    fset="set_DisitckPlungerEndSwitchesUpMpsB",
                                    doc=""
@@ -2494,6 +2692,7 @@ class NutaqDiags(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   polling_period=1000,
                                    fget="get_DisitckPlungerEndSwitchesUpDiagA",
                                    fset="set_DisitckPlungerEndSwitchesUpDiagA",
                                    doc=""
@@ -2506,6 +2705,7 @@ class NutaqDiags(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   polling_period=1000,
                                    fget="get_DisitckPlungerEndSwitchesUpDiagB",
                                    fset="set_DisitckPlungerEndSwitchesUpDiagB",
                                    doc=""
@@ -2518,6 +2718,7 @@ class NutaqDiags(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   polling_period=1000,
                                    fget="get_DisitckPlungerEndSwitchesDownDacsoffloopsstbyA",
                                    fset="set_DisitckPlungerEndSwitchesDownDacsoffloopsstbyA",
                                    doc=""
@@ -2530,6 +2731,7 @@ class NutaqDiags(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   polling_period=1000,
                                    fget="get_DisitckPlungerEndSwitchesDownDacsoffloopsstbyB",
                                    fset="set_DisitckPlungerEndSwitchesDownDacsoffloopsstbyB",
                                    doc=""
@@ -2542,6 +2744,7 @@ class NutaqDiags(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   polling_period=1000,
                                    fget="get_DisitckPlungerEndSwitchesDownPindiodeswitchA",
                                    fset="set_DisitckPlungerEndSwitchesDownPindiodeswitchA",
                                    doc=""
@@ -2554,6 +2757,7 @@ class NutaqDiags(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   polling_period=1000,
                                    fget="get_DisitckPlungerEndSwitchesDownPindiodeswitchB",
                                    fset="set_DisitckPlungerEndSwitchesDownPindiodeswitchB",
                                    doc=""
@@ -2566,6 +2770,7 @@ class NutaqDiags(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   polling_period=1000,
                                    fget="get_DisitckPlungerEndSwitchesDownFdltrgA",
                                    fset="set_DisitckPlungerEndSwitchesDownFdltrgA",
                                    doc=""
@@ -2578,6 +2783,7 @@ class NutaqDiags(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   polling_period=1000,
                                    fget="get_DisitckPlungerEndSwitchesDownFdltrgB",
                                    fset="set_DisitckPlungerEndSwitchesDownFdltrgB",
                                    doc=""
@@ -2590,6 +2796,7 @@ class NutaqDiags(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   polling_period=1000,
                                    fget="get_DisitckPlungerEndSwitchesDownPlctxoffA",
                                    fset="set_DisitckPlungerEndSwitchesDownPlctxoffA",
                                    doc=""
@@ -2602,6 +2809,7 @@ class NutaqDiags(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   polling_period=1000,
                                    fget="get_DisitckPlungerEndSwitchesDownPlctxoffB",
                                    fset="set_DisitckPlungerEndSwitchesDownPlctxoffB",
                                    doc=""
@@ -2614,6 +2822,7 @@ class NutaqDiags(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   polling_period=1000,
                                    fget="get_DisitckPlungerEndSwitchesDownMpsA",
                                    fset="set_DisitckPlungerEndSwitchesDownMpsA",
                                    doc=""
@@ -2626,6 +2835,7 @@ class NutaqDiags(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   polling_period=1000,
                                    fget="get_DisitckPlungerEndSwitchesDownMpsB",
                                    fset="set_DisitckPlungerEndSwitchesDownMpsB",
                                    doc=""
@@ -2638,6 +2848,7 @@ class NutaqDiags(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   polling_period=1000,
                                    fget="get_DisitckPlungerEndSwitchesDownDiagA",
                                    fset="set_DisitckPlungerEndSwitchesDownDiagA",
                                    doc=""
@@ -2650,6 +2861,7 @@ class NutaqDiags(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   polling_period=1000,
                                    fget="get_DisitckPlungerEndSwitchesDownDiagB",
                                    fset="set_DisitckPlungerEndSwitchesDownDiagB",
                                    doc=""
@@ -2662,6 +2874,7 @@ class NutaqDiags(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   polling_period=1000,
                                    fget="get_DisitckMpsDacsoffloopsstbyA",
                                    fset="set_DisitckMpsDacsoffloopsstbyA",
                                    doc=""
@@ -2674,6 +2887,7 @@ class NutaqDiags(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   polling_period=1000,
                                    fget="get_DisitckMpsDacsoffloopsstbyB",
                                    fset="set_DisitckMpsDacsoffloopsstbyB",
                                    doc=""
@@ -2686,6 +2900,7 @@ class NutaqDiags(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   polling_period=1000,
                                    fget="get_DisitckMpsPindiodeswitchA",
                                    fset="set_DisitckMpsPindiodeswitchA",
                                    doc=""
@@ -2698,6 +2913,7 @@ class NutaqDiags(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   polling_period=1000,
                                    fget="get_DisitckMpsPindiodeswitchB",
                                    fset="set_DisitckMpsPindiodeswitchB",
                                    doc=""
@@ -2710,6 +2926,7 @@ class NutaqDiags(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   polling_period=1000,
                                    fget="get_DisitckMpsFdltrgA",
                                    fset="set_DisitckMpsFdltrgA",
                                    doc=""
@@ -2722,6 +2939,7 @@ class NutaqDiags(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   polling_period=1000,
                                    fget="get_DisitckMpsFdltrgB",
                                    fset="set_DisitckMpsFdltrgB",
                                    doc=""
@@ -2734,6 +2952,7 @@ class NutaqDiags(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   polling_period=1000,
                                    fget="get_DisitckMpsPlctxoffA",
                                    fset="set_DisitckMpsPlctxoffA",
                                    doc=""
@@ -2746,6 +2965,7 @@ class NutaqDiags(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   polling_period=1000,
                                    fget="get_DisitckMpsPlctxoffB",
                                    fset="set_DisitckMpsPlctxoffB",
                                    doc=""
@@ -2758,6 +2978,7 @@ class NutaqDiags(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   polling_period=1000,
                                    fget="get_DisitckMpsMpsA",
                                    fset="set_DisitckMpsMpsA",
                                    doc=""
@@ -2770,6 +2991,7 @@ class NutaqDiags(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   polling_period=1000,
                                    fget="get_DisitckMpsMpsB",
                                    fset="set_DisitckMpsMpsB",
                                    doc=""
@@ -2782,6 +3004,7 @@ class NutaqDiags(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   polling_period=1000,
                                    fget="get_DisitckMpsDiagA",
                                    fset="set_DisitckMpsDiagA",
                                    doc=""
@@ -2794,6 +3017,7 @@ class NutaqDiags(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   polling_period=1000,
                                    fget="get_DisitckMpsDiagB",
                                    fset="set_DisitckMpsDiagB",
                                    doc=""
@@ -2801,6 +3025,7 @@ class NutaqDiags(Device):
 
     Diag_Irvtet1A = attribute(label='Diag_Irvtet1A',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -2810,6 +3035,7 @@ class NutaqDiags(Device):
 
     Diag_Irvtet1B = attribute(label='Diag_Irvtet1B',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -2819,6 +3045,7 @@ class NutaqDiags(Device):
 
     Diag_Qrvtet1A = attribute(label='Diag_Qrvtet1A',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -2828,6 +3055,7 @@ class NutaqDiags(Device):
 
     Diag_Qrvtet1B = attribute(label='Diag_Qrvtet1B',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -2837,6 +3065,7 @@ class NutaqDiags(Device):
 
     Diag_Amprvtet1A = attribute(label='Diag_Amprvtet1A',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -2846,6 +3075,7 @@ class NutaqDiags(Device):
 
     Diag_Amprvtet1B = attribute(label='Diag_Amprvtet1B',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -2855,6 +3085,7 @@ class NutaqDiags(Device):
 
     Diag_Phrvtet1A = attribute(label='Diag_Phrvtet1A',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='degrees',
@@ -2864,6 +3095,7 @@ class NutaqDiags(Device):
 
     Diag_Phrvtet1B = attribute(label='Diag_Phrvtet1B',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='degrees',
@@ -2873,6 +3105,7 @@ class NutaqDiags(Device):
 
     Diag_Irvtet2A = attribute(label='Diag_Irvtet2A',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -2882,6 +3115,7 @@ class NutaqDiags(Device):
 
     Diag_Irvtet2B = attribute(label='Diag_Irvtet2B',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -2891,6 +3125,7 @@ class NutaqDiags(Device):
 
     Diag_Qrvtet2A = attribute(label='Diag_Qrvtet2A',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -2900,6 +3135,7 @@ class NutaqDiags(Device):
 
     Diag_Qrvtet2B = attribute(label='Diag_Qrvtet2B',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -2909,6 +3145,7 @@ class NutaqDiags(Device):
 
     Diag_Amprvtet2A = attribute(label='Diag_Amprvtet2A',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -2918,6 +3155,7 @@ class NutaqDiags(Device):
 
     Diag_Amprvtet2B = attribute(label='Diag_Amprvtet2B',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -2927,6 +3165,7 @@ class NutaqDiags(Device):
 
     Diag_Phrvtet2A = attribute(label='Diag_Phrvtet2A',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='degrees',
@@ -2936,6 +3175,7 @@ class NutaqDiags(Device):
 
     Diag_Phrvtet2B = attribute(label='Diag_Phrvtet2B',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='degrees',
@@ -2945,6 +3185,7 @@ class NutaqDiags(Device):
 
     Diag_IfwcircA = attribute(label='Diag_IfwcircA',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -2954,6 +3195,7 @@ class NutaqDiags(Device):
 
     Diag_IfwcircB = attribute(label='Diag_IfwcircB',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -2963,6 +3205,7 @@ class NutaqDiags(Device):
 
     Diag_QfwcircA = attribute(label='Diag_QfwcircA',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -2972,6 +3215,7 @@ class NutaqDiags(Device):
 
     Diag_QfwcircB = attribute(label='Diag_QfwcircB',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -2981,6 +3225,7 @@ class NutaqDiags(Device):
 
     Diag_AmpfwcircA = attribute(label='Diag_AmpfwcircA',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -2990,6 +3235,7 @@ class NutaqDiags(Device):
 
     Diag_AmpfwcircB = attribute(label='Diag_AmpfwcircB',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -2999,6 +3245,7 @@ class NutaqDiags(Device):
 
     Diag_PhfwcircA = attribute(label='Diag_PhfwcircA',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='degrees',
@@ -3008,6 +3255,7 @@ class NutaqDiags(Device):
 
     Diag_PhfwcircB = attribute(label='Diag_PhfwcircB',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='degrees',
@@ -3017,6 +3265,7 @@ class NutaqDiags(Device):
 
     Diag_IrvcircA = attribute(label='Diag_IrvcircA',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -3026,6 +3275,7 @@ class NutaqDiags(Device):
 
     Diag_IrvcircB = attribute(label='Diag_IrvcircB',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -3035,6 +3285,7 @@ class NutaqDiags(Device):
 
     Diag_QrvcircA = attribute(label='Diag_QrvcircA',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -3044,6 +3295,7 @@ class NutaqDiags(Device):
 
     Diag_QrvcircB = attribute(label='Diag_QrvcircB',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -3053,6 +3305,7 @@ class NutaqDiags(Device):
 
     Diag_AmprvcircA = attribute(label='Diag_AmprvcircA',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -3062,6 +3315,7 @@ class NutaqDiags(Device):
 
     Diag_AmprvcircB = attribute(label='Diag_AmprvcircB',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -3071,6 +3325,7 @@ class NutaqDiags(Device):
 
     Diag_PhrvcircA = attribute(label='Diag_PhrvcircA',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='degrees',
@@ -3080,6 +3335,7 @@ class NutaqDiags(Device):
 
     Diag_PhrvcircB = attribute(label='Diag_PhrvcircB',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='degrees',
@@ -3089,6 +3345,7 @@ class NutaqDiags(Device):
 
     Diag_IfwloadA = attribute(label='Diag_IfwloadA',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -3098,6 +3355,7 @@ class NutaqDiags(Device):
 
     Diag_IfwloadB = attribute(label='Diag_IfwloadB',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -3107,6 +3365,7 @@ class NutaqDiags(Device):
 
     Diag_QfwloadA = attribute(label='Diag_QfwloadA',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -3116,6 +3375,7 @@ class NutaqDiags(Device):
 
     Diag_QfwloadB = attribute(label='Diag_QfwloadB',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -3125,6 +3385,7 @@ class NutaqDiags(Device):
 
     Diag_AmpfwloadA = attribute(label='Diag_AmpfwloadA',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -3134,6 +3395,7 @@ class NutaqDiags(Device):
 
     Diag_AmpfwloadB = attribute(label='Diag_AmpfwloadB',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -3143,6 +3405,7 @@ class NutaqDiags(Device):
 
     Diag_PhfwloadA = attribute(label='Diag_PhfwloadA',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='degrees',
@@ -3152,6 +3415,7 @@ class NutaqDiags(Device):
 
     Diag_PhfwloadB = attribute(label='Diag_PhfwloadB',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='degrees',
@@ -3161,6 +3425,7 @@ class NutaqDiags(Device):
 
     Diag_IfwhybloadA = attribute(label='Diag_IfwhybloadA',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -3170,6 +3435,7 @@ class NutaqDiags(Device):
 
     Diag_IfwhybloadB = attribute(label='Diag_IfwhybloadB',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -3179,6 +3445,7 @@ class NutaqDiags(Device):
 
     Diag_QfwhybloadA = attribute(label='Diag_QfwhybloadA',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -3188,6 +3455,7 @@ class NutaqDiags(Device):
 
     Diag_QfwhybloadB = attribute(label='Diag_QfwhybloadB',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -3197,6 +3465,7 @@ class NutaqDiags(Device):
 
     Diag_AmpfwhybloadA = attribute(label='Diag_AmpfwhybloadA',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -3206,6 +3475,7 @@ class NutaqDiags(Device):
 
     Diag_AmpfwhybloadB = attribute(label='Diag_AmpfwhybloadB',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -3215,6 +3485,7 @@ class NutaqDiags(Device):
 
     Diag_PhfwhybloadA = attribute(label='Diag_PhfwhybloadA',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='degrees',
@@ -3224,6 +3495,7 @@ class NutaqDiags(Device):
 
     Diag_PhfwhybloadB = attribute(label='Diag_PhfwhybloadB',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='degrees',
@@ -3233,6 +3505,7 @@ class NutaqDiags(Device):
 
     Diag_IrvcavA = attribute(label='Diag_IrvcavA',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -3242,6 +3515,7 @@ class NutaqDiags(Device):
 
     Diag_IrvcavB = attribute(label='Diag_IrvcavB',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -3251,6 +3525,7 @@ class NutaqDiags(Device):
 
     Diag_QrvcavA = attribute(label='Diag_QrvcavA',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -3260,6 +3535,7 @@ class NutaqDiags(Device):
 
     Diag_QrvcavB = attribute(label='Diag_QrvcavB',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -3269,6 +3545,7 @@ class NutaqDiags(Device):
 
     Diag_AmprvcavA = attribute(label='Diag_AmprvcavA',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -3278,6 +3555,7 @@ class NutaqDiags(Device):
 
     Diag_AmprvcavB = attribute(label='Diag_AmprvcavB',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -3287,6 +3565,7 @@ class NutaqDiags(Device):
 
     Diag_PhrvcavA = attribute(label='Diag_PhrvcavA',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='degrees',
@@ -3296,6 +3575,7 @@ class NutaqDiags(Device):
 
     Diag_PhrvcavB = attribute(label='Diag_PhrvcavB',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='degrees',
@@ -3305,6 +3585,7 @@ class NutaqDiags(Device):
 
     Diag_ImoA = attribute(label='Diag_ImoA',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -3314,6 +3595,7 @@ class NutaqDiags(Device):
 
     Diag_ImoB = attribute(label='Diag_ImoB',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -3323,6 +3605,7 @@ class NutaqDiags(Device):
 
     Diag_QmoA = attribute(label='Diag_QmoA',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -3332,6 +3615,7 @@ class NutaqDiags(Device):
 
     Diag_QmoB = attribute(label='Diag_QmoB',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -3341,6 +3625,7 @@ class NutaqDiags(Device):
 
     Diag_AmpmoA = attribute(label='Diag_AmpmoA',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -3350,6 +3635,7 @@ class NutaqDiags(Device):
 
     Diag_AmpmoB = attribute(label='Diag_AmpmoB',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -3359,6 +3645,7 @@ class NutaqDiags(Device):
 
     Diag_PhmoA = attribute(label='Diag_PhmoA',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='degrees',
@@ -3368,6 +3655,7 @@ class NutaqDiags(Device):
 
     Diag_PhmoB = attribute(label='Diag_PhmoB',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='degrees',
@@ -3377,6 +3665,7 @@ class NutaqDiags(Device):
 
     Diag_IlandauA = attribute(label='Diag_IlandauA',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -3386,6 +3675,7 @@ class NutaqDiags(Device):
 
     Diag_IlandauB = attribute(label='Diag_IlandauB',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -3395,6 +3685,7 @@ class NutaqDiags(Device):
 
     Diag_QlandauA = attribute(label='Diag_QlandauA',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -3404,6 +3695,7 @@ class NutaqDiags(Device):
 
     Diag_QlandauB = attribute(label='Diag_QlandauB',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -3413,6 +3705,7 @@ class NutaqDiags(Device):
 
     Diag_AmplandauA = attribute(label='Diag_AmplandauA',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -3422,6 +3715,7 @@ class NutaqDiags(Device):
 
     Diag_AmplandauB = attribute(label='Diag_AmplandauB',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -3431,6 +3725,7 @@ class NutaqDiags(Device):
 
     Diag_PhlandauA = attribute(label='Diag_PhlandauA',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='degrees',
@@ -3440,6 +3735,7 @@ class NutaqDiags(Device):
 
     Diag_PhlandauB = attribute(label='Diag_PhlandauB',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='degrees',
@@ -3449,6 +3745,7 @@ class NutaqDiags(Device):
 
     Diag_PlungerMovingManualTuningA = attribute(label='Diag_PlungerMovingManualTuningA',
                                    dtype=bool,
+                                   polling_period=1000,
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='',
@@ -3458,6 +3755,7 @@ class NutaqDiags(Device):
 
     Diag_PlungerMovingManualTuningB = attribute(label='Diag_PlungerMovingManualTuningB',
                                    dtype=bool,
+                                   polling_period=1000,
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='',
@@ -3467,6 +3765,7 @@ class NutaqDiags(Device):
 
     Diag_PlungerMovingUpManualTuningA = attribute(label='Diag_PlungerMovingUpManualTuningA',
                                    dtype=bool,
+                                   polling_period=1000,
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='',
@@ -3476,6 +3775,7 @@ class NutaqDiags(Device):
 
     Diag_PlungerMovingUpManualTuningB = attribute(label='Diag_PlungerMovingUpManualTuningB',
                                    dtype=bool,
+                                   polling_period=1000,
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='',
@@ -3485,6 +3785,7 @@ class NutaqDiags(Device):
 
     Diag_PlungerMovingAutomaticTuningA = attribute(label='Diag_PlungerMovingAutomaticTuningA',
                                    dtype=bool,
+                                   polling_period=1000,
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='',
@@ -3494,6 +3795,7 @@ class NutaqDiags(Device):
 
     Diag_PlungerMovingAutomaticTuningB = attribute(label='Diag_PlungerMovingAutomaticTuningB',
                                    dtype=bool,
+                                   polling_period=1000,
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='',
@@ -3503,6 +3805,7 @@ class NutaqDiags(Device):
 
     Diag_PlungerMovingUpAutomaticTuningA = attribute(label='Diag_PlungerMovingUpAutomaticTuningA',
                                    dtype=bool,
+                                   polling_period=1000,
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='',
@@ -3512,6 +3815,7 @@ class NutaqDiags(Device):
 
     Diag_PlungerMovingUpAutomaticTuningB = attribute(label='Diag_PlungerMovingUpAutomaticTuningB',
                                    dtype=bool,
+                                   polling_period=1000,
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='',
@@ -3521,6 +3825,7 @@ class NutaqDiags(Device):
 
     Diag_DephaseMoLandauA = attribute(label='Diag_DephaseMoLandauA',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='degrees',
@@ -3530,6 +3835,7 @@ class NutaqDiags(Device):
 
     Diag_DephaseMoLandauB = attribute(label='Diag_DephaseMoLandauB',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='degrees',
@@ -3539,6 +3845,7 @@ class NutaqDiags(Device):
 
     Diag_Rvtet1A = attribute(label='Diag_Rvtet1A',
                                    dtype=bool,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='',
@@ -3548,6 +3855,7 @@ class NutaqDiags(Device):
 
     Diag_Rvtet1B = attribute(label='Diag_Rvtet1B',
                                    dtype=bool,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='',
@@ -3557,6 +3865,7 @@ class NutaqDiags(Device):
 
     Diag_Rvtet2A = attribute(label='Diag_Rvtet2A',
                                    dtype=bool,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='',
@@ -3566,6 +3875,7 @@ class NutaqDiags(Device):
 
     Diag_Rvtet2B = attribute(label='Diag_Rvtet2B',
                                    dtype=bool,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='',
@@ -3575,6 +3885,7 @@ class NutaqDiags(Device):
 
     Diag_RvcircA = attribute(label='Diag_RvcircA',
                                    dtype=bool,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='',
@@ -3584,6 +3895,7 @@ class NutaqDiags(Device):
 
     Diag_RvcircB = attribute(label='Diag_RvcircB',
                                    dtype=bool,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='',
@@ -3593,6 +3905,7 @@ class NutaqDiags(Device):
 
     Diag_FwloadA = attribute(label='Diag_FwloadA',
                                    dtype=bool,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='',
@@ -3602,6 +3915,7 @@ class NutaqDiags(Device):
 
     Diag_FwloadB = attribute(label='Diag_FwloadB',
                                    dtype=bool,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='',
@@ -3611,6 +3925,7 @@ class NutaqDiags(Device):
 
     Diag_FwhybloadA = attribute(label='Diag_FwhybloadA',
                                    dtype=bool,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='',
@@ -3620,6 +3935,7 @@ class NutaqDiags(Device):
 
     Diag_FwhybloadB = attribute(label='Diag_FwhybloadB',
                                    dtype=bool,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='',
@@ -3629,6 +3945,7 @@ class NutaqDiags(Device):
 
     Diag_RvcavA = attribute(label='Diag_RvcavA',
                                    dtype=bool,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='',
@@ -3638,6 +3955,7 @@ class NutaqDiags(Device):
 
     Diag_RvcavB = attribute(label='Diag_RvcavB',
                                    dtype=bool,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='',
@@ -3647,6 +3965,7 @@ class NutaqDiags(Device):
 
     Diag_ArcsA = attribute(label='Diag_ArcsA',
                                    dtype=bool,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='',
@@ -3656,6 +3975,7 @@ class NutaqDiags(Device):
 
     Diag_ArcsB = attribute(label='Diag_ArcsB',
                                    dtype=bool,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='',
@@ -3665,6 +3985,7 @@ class NutaqDiags(Device):
 
     Diag_VacuumA = attribute(label='Diag_VacuumA',
                                    dtype=bool,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='',
@@ -3674,6 +3995,7 @@ class NutaqDiags(Device):
 
     Diag_VacuumB = attribute(label='Diag_VacuumB',
                                    dtype=bool,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='',
@@ -3683,6 +4005,7 @@ class NutaqDiags(Device):
 
     Diag_ManualInterlockA = attribute(label='Diag_ManualInterlockA',
                                    dtype=bool,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='',
@@ -3692,6 +4015,7 @@ class NutaqDiags(Device):
 
     Diag_ManualInterlockB = attribute(label='Diag_ManualInterlockB',
                                    dtype=bool,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='',
@@ -3701,6 +4025,7 @@ class NutaqDiags(Device):
 
     Diag_ExternalItckA = attribute(label='Diag_ExternalItckA',
                                    dtype=bool,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='',
@@ -3710,6 +4035,7 @@ class NutaqDiags(Device):
 
     Diag_ExternalItckB = attribute(label='Diag_ExternalItckB',
                                    dtype=bool,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='',
@@ -3719,6 +4045,7 @@ class NutaqDiags(Device):
 
     Diag_PlungerEndSwitchUpA = attribute(label='Diag_PlungerEndSwitchUpA',
                                    dtype=bool,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='',
@@ -3728,6 +4055,7 @@ class NutaqDiags(Device):
 
     Diag_PlungerEndSwitchUpB = attribute(label='Diag_PlungerEndSwitchUpB',
                                    dtype=bool,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='',
@@ -3737,6 +4065,7 @@ class NutaqDiags(Device):
 
     Diag_PlungerEndSwitchDownA = attribute(label='Diag_PlungerEndSwitchDownA',
                                    dtype=bool,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='',
@@ -3746,6 +4075,7 @@ class NutaqDiags(Device):
 
     Diag_PlungerEndSwitchDownB = attribute(label='Diag_PlungerEndSwitchDownB',
                                    dtype=bool,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='',
@@ -3755,6 +4085,7 @@ class NutaqDiags(Device):
 
     Diag_Timestamp1A = attribute(label='Diag_Timestamp1A',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='',
@@ -3764,6 +4095,7 @@ class NutaqDiags(Device):
 
     Diag_Timestamp1B = attribute(label='Diag_Timestamp1B',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='',
@@ -3773,6 +4105,7 @@ class NutaqDiags(Device):
 
     Diag_Timestamp2A = attribute(label='Diag_Timestamp2A',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='',
@@ -3782,6 +4115,7 @@ class NutaqDiags(Device):
 
     Diag_Timestamp2B = attribute(label='Diag_Timestamp2B',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='',
@@ -3791,6 +4125,7 @@ class NutaqDiags(Device):
 
     Diag_Timestamp3A = attribute(label='Diag_Timestamp3A',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='',
@@ -3800,6 +4135,7 @@ class NutaqDiags(Device):
 
     Diag_Timestamp3B = attribute(label='Diag_Timestamp3B',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='',
@@ -3809,6 +4145,7 @@ class NutaqDiags(Device):
 
     Diag_Timestamp4A = attribute(label='Diag_Timestamp4A',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='',
@@ -3818,6 +4155,7 @@ class NutaqDiags(Device):
 
     Diag_Timestamp4B = attribute(label='Diag_Timestamp4B',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='',
@@ -3827,6 +4165,7 @@ class NutaqDiags(Device):
 
     Diag_Timestamp5A = attribute(label='Diag_Timestamp5A',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='',
@@ -3836,6 +4175,7 @@ class NutaqDiags(Device):
 
     Diag_Timestamp5B = attribute(label='Diag_Timestamp5B',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='',
@@ -3845,6 +4185,7 @@ class NutaqDiags(Device):
 
     Diag_Timestamp6A = attribute(label='Diag_Timestamp6A',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='',
@@ -3854,6 +4195,7 @@ class NutaqDiags(Device):
 
     Diag_Timestamp6B = attribute(label='Diag_Timestamp6B',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='',
@@ -3863,6 +4205,7 @@ class NutaqDiags(Device):
 
     Diag_Timestamp7A = attribute(label='Diag_Timestamp7A',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='',
@@ -3872,6 +4215,7 @@ class NutaqDiags(Device):
 
     Diag_Timestamp7B = attribute(label='Diag_Timestamp7B',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='',
@@ -3881,6 +4225,7 @@ class NutaqDiags(Device):
 
     Diag_DacsDisableCommandA = attribute(label='Diag_DacsDisableCommandA',
                                    dtype=bool,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='',
@@ -3890,6 +4235,7 @@ class NutaqDiags(Device):
 
     Diag_DacsDisableCommandB = attribute(label='Diag_DacsDisableCommandB',
                                    dtype=bool,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='',
@@ -3899,6 +4245,7 @@ class NutaqDiags(Device):
 
     Diag_PinSwitchA = attribute(label='Diag_PinSwitchA',
                                    dtype=bool,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='',
@@ -3908,6 +4255,7 @@ class NutaqDiags(Device):
 
     Diag_PinSwitchB = attribute(label='Diag_PinSwitchB',
                                    dtype=bool,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='',
@@ -3917,6 +4265,7 @@ class NutaqDiags(Device):
 
     Diag_FdlTriggerToLoopsdiagboardA = attribute(label='Diag_FdlTriggerToLoopsdiagboardA',
                                    dtype=bool,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='',
@@ -3926,6 +4275,7 @@ class NutaqDiags(Device):
 
     Diag_FdlTriggerToLoopsdiagboardB = attribute(label='Diag_FdlTriggerToLoopsdiagboardB',
                                    dtype=bool,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='',
@@ -3935,6 +4285,7 @@ class NutaqDiags(Device):
 
     Diag_OutputToPlcA = attribute(label='Diag_OutputToPlcA',
                                    dtype=bool,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='',
@@ -3944,6 +4295,7 @@ class NutaqDiags(Device):
 
     Diag_OutputToPlcB = attribute(label='Diag_OutputToPlcB',
                                    dtype=bool,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='',
@@ -3953,6 +4305,7 @@ class NutaqDiags(Device):
 
     Diag_OutputToMpsA = attribute(label='Diag_OutputToMpsA',
                                    dtype=bool,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='',
@@ -3962,6 +4315,7 @@ class NutaqDiags(Device):
 
     Diag_OutputToMpsB = attribute(label='Diag_OutputToMpsB',
                                    dtype=bool,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='',
@@ -3971,6 +4325,7 @@ class NutaqDiags(Device):
 
     Diag_AmpRvtet1b = attribute(label='Diag_AmpRvtet1b',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -3980,6 +4335,7 @@ class NutaqDiags(Device):
 
     Diag_AmpRvtet1a = attribute(label='Diag_AmpRvtet1a',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -3989,6 +4345,7 @@ class NutaqDiags(Device):
 
     Diag_AmpMoa = attribute(label='Diag_AmpMoa',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -3998,6 +4355,7 @@ class NutaqDiags(Device):
 
     Diag_AmpLandaua = attribute(label='Diag_AmpLandaua',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -4007,6 +4365,7 @@ class NutaqDiags(Device):
 
     Diag_AmpFwloada = attribute(label='Diag_AmpFwloada',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -4016,6 +4375,7 @@ class NutaqDiags(Device):
 
     Diag_AmpRvtet2b = attribute(label='Diag_AmpRvtet2b',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -4025,6 +4385,7 @@ class NutaqDiags(Device):
 
     Diag_AmpRvtet2a = attribute(label='Diag_AmpRvtet2a',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -4034,6 +4395,7 @@ class NutaqDiags(Device):
 
     Diag_AmpFwloadb = attribute(label='Diag_AmpFwloadb',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -4043,6 +4405,7 @@ class NutaqDiags(Device):
 
     Diag_AmpRvcavb = attribute(label='Diag_AmpRvcavb',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -4052,6 +4415,7 @@ class NutaqDiags(Device):
 
     Diag_AmpRvcava = attribute(label='Diag_AmpRvcava',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -4061,6 +4425,7 @@ class NutaqDiags(Device):
 
     Diag_AmpFwcircb = attribute(label='Diag_AmpFwcircb',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -4070,6 +4435,7 @@ class NutaqDiags(Device):
 
     Diag_AmpFwcirca = attribute(label='Diag_AmpFwcirca',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -4079,6 +4445,7 @@ class NutaqDiags(Device):
 
     Diag_AmpMob = attribute(label='Diag_AmpMob',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -4088,6 +4455,7 @@ class NutaqDiags(Device):
 
     Diag_AmpRvcirca = attribute(label='Diag_AmpRvcirca',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -4097,6 +4465,7 @@ class NutaqDiags(Device):
 
     Diag_AmpRvcircb = attribute(label='Diag_AmpRvcircb',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -4106,6 +4475,7 @@ class NutaqDiags(Device):
 
     Diag_AmpFwhybloadb = attribute(label='Diag_AmpFwhybloadb',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -4115,6 +4485,7 @@ class NutaqDiags(Device):
 
     Diag_AmpFwhybloada = attribute(label='Diag_AmpFwhybloada',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -4124,6 +4495,7 @@ class NutaqDiags(Device):
 
     Diag_AmpLandaub = attribute(label='Diag_AmpLandaub',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -4133,6 +4505,7 @@ class NutaqDiags(Device):
 
     Diag_PhRvtet1b = attribute(label='Diag_PhRvtet1b',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='degrees',
@@ -4142,6 +4515,7 @@ class NutaqDiags(Device):
 
     Diag_PhRvtet1a = attribute(label='Diag_PhRvtet1a',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='degrees',
@@ -4151,6 +4525,7 @@ class NutaqDiags(Device):
 
     Diag_PhMoa = attribute(label='Diag_PhMoa',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='degrees',
@@ -4160,6 +4535,7 @@ class NutaqDiags(Device):
 
     Diag_PhLandaua = attribute(label='Diag_PhLandaua',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='degrees',
@@ -4169,6 +4545,7 @@ class NutaqDiags(Device):
 
     Diag_PhFwloada = attribute(label='Diag_PhFwloada',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='degrees',
@@ -4178,6 +4555,7 @@ class NutaqDiags(Device):
 
     Diag_PhRvtet2b = attribute(label='Diag_PhRvtet2b',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='degrees',
@@ -4187,6 +4565,7 @@ class NutaqDiags(Device):
 
     Diag_PhRvtet2a = attribute(label='Diag_PhRvtet2a',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='degrees',
@@ -4196,6 +4575,7 @@ class NutaqDiags(Device):
 
     Diag_PhFwloadb = attribute(label='Diag_PhFwloadb',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='degrees',
@@ -4205,6 +4585,7 @@ class NutaqDiags(Device):
 
     Diag_PhRvcavb = attribute(label='Diag_PhRvcavb',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='degrees',
@@ -4214,6 +4595,7 @@ class NutaqDiags(Device):
 
     Diag_PhRvcava = attribute(label='Diag_PhRvcava',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='degrees',
@@ -4223,6 +4605,7 @@ class NutaqDiags(Device):
 
     Diag_PhFwcircb = attribute(label='Diag_PhFwcircb',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='degrees',
@@ -4232,6 +4615,7 @@ class NutaqDiags(Device):
 
     Diag_PhFwcirca = attribute(label='Diag_PhFwcirca',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='degrees',
@@ -4241,6 +4625,7 @@ class NutaqDiags(Device):
 
     Diag_PhMob = attribute(label='Diag_PhMob',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='degrees',
@@ -4250,6 +4635,7 @@ class NutaqDiags(Device):
 
     Diag_PhRvcirca = attribute(label='Diag_PhRvcirca',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='degrees',
@@ -4259,6 +4645,7 @@ class NutaqDiags(Device):
 
     Diag_PhRvcircb = attribute(label='Diag_PhRvcircb',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='degrees',
@@ -4268,6 +4655,7 @@ class NutaqDiags(Device):
 
     Diag_PhFwhybloadb = attribute(label='Diag_PhFwhybloadb',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='degrees',
@@ -4277,6 +4665,7 @@ class NutaqDiags(Device):
 
     Diag_PhFwhybloada = attribute(label='Diag_PhFwhybloada',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='degrees',
@@ -4286,6 +4675,7 @@ class NutaqDiags(Device):
 
     Diag_PhLandaub = attribute(label='Diag_PhLandaub',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='degrees',
@@ -4315,10 +4705,191 @@ class NutaqDiags(Device):
         Device.init_device(self)
         try:
             self.perseus = Perseus().new_perseus(self.perseusType, self.perseusIp)
+            self.set_events()
             self.set_state(DevState.ON)
         except Exception, e:
             print e
             self.set_state(DevState.FAULT)
+
+    def set_events(self):
+        self.set_change_event('Rvtet1A', True)
+        self.set_change_event('Rvtet1B', True)
+        self.set_change_event('Rvtet2A', True)
+        self.set_change_event('Rvtet2B', True)
+        self.set_change_event('RvcircA', True)
+        self.set_change_event('RvcircB', True)
+        self.set_change_event('FwloadA', True)
+        self.set_change_event('FwloadB', True)
+        self.set_change_event('FwhybloadA', True)
+        self.set_change_event('FwhybloadB', True)
+        self.set_change_event('RvcavA', True)
+        self.set_change_event('RvcavB', True)
+        self.set_change_event('DisableItckRvtet1A', True)
+        self.set_change_event('DisableItckRvtet1B', True)
+        self.set_change_event('DisableItckRvtet2A', True)
+        self.set_change_event('DisableItckRvtet2B', True)
+        self.set_change_event('DisableItckRvcircA', True)
+        self.set_change_event('DisableItckRvcircB', True)
+        self.set_change_event('DisableItckFwloadA', True)
+        self.set_change_event('DisableItckFwloadB', True)
+        self.set_change_event('DisableItckFwhybloadA', True)
+        self.set_change_event('DisableItckFwhybloadB', True)
+        self.set_change_event('DisableItckRvcavA', True)
+        self.set_change_event('DisableItckRvcavB', True)
+        self.set_change_event('DisableItckArcsA', True)
+        self.set_change_event('DisableItckArcsB', True)
+        self.set_change_event('DisableItckVaccumA', True)
+        self.set_change_event('DisableItckVaccumB', True)
+        self.set_change_event('DisableItckManualInterlockA', True)
+        self.set_change_event('DisableItckManualInterlockB', True)
+        self.set_change_event('DisableItckPlungerEndSwitchesUpA', True)
+        self.set_change_event('DisableItckPlungerEndSwitchesUpB', True)
+        self.set_change_event('DisableItckPlungerEndSwitchesDownA', True)
+        self.set_change_event('DisableItckPlungerEndSwitchesDownB', True)
+        self.set_change_event('DisableItckMpsA', True)
+        self.set_change_event('DisableItckMpsB', True)
+        self.set_change_event('SamplesToAverageA', True)
+        self.set_change_event('SamplesToAverageB', True)
+        self.set_change_event('EndSwitchesConnectedToNoNcContactA', True)
+        self.set_change_event('EndSwitchesConnectedToNoNcContactB', True)
+        self.set_change_event('QuadrefA', True)
+        self.set_change_event('QuadrefB', True)
+        self.set_change_event('NumstepsA', True)
+        self.set_change_event('NumstepsB', True)
+        self.set_change_event('LandauphaseoffsetA', True)
+        self.set_change_event('LandauphaseoffsetB', True)
+        self.set_change_event('LandaumarginupA', True)
+        self.set_change_event('LandaumarginupB', True)
+        self.set_change_event('LandauMarginLowA', True)
+        self.set_change_event('LandauMarginLowB', True)
+        self.set_change_event('MinimumLandauAmplitudeA', True)
+        self.set_change_event('MinimumLandauAmplitudeB', True)
+        self.set_change_event('LandauampsettingA', True)
+        self.set_change_event('LandauampsettingB', True)
+        self.set_change_event('Diag_Irvtet1A', True)
+        self.set_change_event('Diag_Irvtet1B', True)
+        self.set_change_event('Diag_Qrvtet1A', True)
+        self.set_change_event('Diag_Qrvtet1B', True)
+        self.set_change_event('Diag_Amprvtet1A', True)
+        self.set_change_event('Diag_Amprvtet1B', True)
+        self.set_change_event('Diag_Phrvtet1A', True)
+        self.set_change_event('Diag_Phrvtet1B', True)
+        self.set_change_event('Diag_Irvtet2A', True)
+        self.set_change_event('Diag_Irvtet2B', True)
+        self.set_change_event('Diag_Qrvtet2A', True)
+        self.set_change_event('Diag_Qrvtet2B', True)
+        self.set_change_event('Diag_Amprvtet2A', True)
+        self.set_change_event('Diag_Amprvtet2B', True)
+        self.set_change_event('Diag_Phrvtet2A', True)
+        self.set_change_event('Diag_Phrvtet2B', True)
+        self.set_change_event('Diag_IfwcircA', True)
+        self.set_change_event('Diag_IfwcircB', True)
+        self.set_change_event('Diag_QfwcircA', True)
+        self.set_change_event('Diag_QfwcircB', True)
+        self.set_change_event('Diag_AmpfwcircA', True)
+        self.set_change_event('Diag_AmpfwcircB', True)
+        self.set_change_event('Diag_PhfwcircA', True)
+        self.set_change_event('Diag_PhfwcircB', True)
+        self.set_change_event('Diag_IrvcircA', True)
+        self.set_change_event('Diag_IrvcircB', True)
+        self.set_change_event('Diag_QrvcircA', True)
+        self.set_change_event('Diag_QrvcircB', True)
+        self.set_change_event('Diag_AmprvcircA', True)
+        self.set_change_event('Diag_AmprvcircB', True)
+        self.set_change_event('Diag_PhrvcircA', True)
+        self.set_change_event('Diag_PhrvcircB', True)
+        self.set_change_event('Diag_IfwloadA', True)
+        self.set_change_event('Diag_IfwloadB', True)
+        self.set_change_event('Diag_QfwloadA', True)
+        self.set_change_event('Diag_QfwloadB', True)
+        self.set_change_event('Diag_AmpfwloadA', True)
+        self.set_change_event('Diag_AmpfwloadB', True)
+        self.set_change_event('Diag_PhfwloadA', True)
+        self.set_change_event('Diag_PhfwloadB', True)
+        self.set_change_event('Diag_IfwhybloadA', True)
+        self.set_change_event('Diag_IfwhybloadB', True)
+        self.set_change_event('Diag_QfwhybloadA', True)
+        self.set_change_event('Diag_QfwhybloadB', True)
+        self.set_change_event('Diag_AmpfwhybloadA', True)
+        self.set_change_event('Diag_AmpfwhybloadB', True)
+        self.set_change_event('Diag_PhfwhybloadA', True)
+        self.set_change_event('Diag_PhfwhybloadB', True)
+        self.set_change_event('Diag_IrvcavA', True)
+        self.set_change_event('Diag_IrvcavB', True)
+        self.set_change_event('Diag_QrvcavA', True)
+        self.set_change_event('Diag_QrvcavB', True)
+        self.set_change_event('Diag_AmprvcavA', True)
+        self.set_change_event('Diag_AmprvcavB', True)
+        self.set_change_event('Diag_PhrvcavA', True)
+        self.set_change_event('Diag_PhrvcavB', True)
+        self.set_change_event('Diag_ImoA', True)
+        self.set_change_event('Diag_ImoB', True)
+        self.set_change_event('Diag_QmoA', True)
+        self.set_change_event('Diag_QmoB', True)
+        self.set_change_event('Diag_AmpmoA', True)
+        self.set_change_event('Diag_AmpmoB', True)
+        self.set_change_event('Diag_PhmoA', True)
+        self.set_change_event('Diag_PhmoB', True)
+        self.set_change_event('Diag_IlandauA', True)
+        self.set_change_event('Diag_IlandauB', True)
+        self.set_change_event('Diag_QlandauA', True)
+        self.set_change_event('Diag_QlandauB', True)
+        self.set_change_event('Diag_AmplandauA', True)
+        self.set_change_event('Diag_AmplandauB', True)
+        self.set_change_event('Diag_PhlandauA', True)
+        self.set_change_event('Diag_PhlandauB', True)
+        self.set_change_event('Diag_DephaseMoLandauA', True)
+        self.set_change_event('Diag_DephaseMoLandauB', True)
+        self.set_change_event('Diag_Timestamp1A', True)
+        self.set_change_event('Diag_Timestamp1B', True)
+        self.set_change_event('Diag_Timestamp2A', True)
+        self.set_change_event('Diag_Timestamp2B', True)
+        self.set_change_event('Diag_Timestamp3A', True)
+        self.set_change_event('Diag_Timestamp3B', True)
+        self.set_change_event('Diag_Timestamp4A', True)
+        self.set_change_event('Diag_Timestamp4B', True)
+        self.set_change_event('Diag_Timestamp5A', True)
+        self.set_change_event('Diag_Timestamp5B', True)
+        self.set_change_event('Diag_Timestamp6A', True)
+        self.set_change_event('Diag_Timestamp6B', True)
+        self.set_change_event('Diag_Timestamp7A', True)
+        self.set_change_event('Diag_Timestamp7B', True)
+        self.set_change_event('Diag_AmpRvtet1b', True)
+        self.set_change_event('Diag_AmpRvtet1a', True)
+        self.set_change_event('Diag_AmpMoa', True)
+        self.set_change_event('Diag_AmpLandaua', True)
+        self.set_change_event('Diag_AmpFwloada', True)
+        self.set_change_event('Diag_AmpRvtet2b', True)
+        self.set_change_event('Diag_AmpRvtet2a', True)
+        self.set_change_event('Diag_AmpFwloadb', True)
+        self.set_change_event('Diag_AmpRvcavb', True)
+        self.set_change_event('Diag_AmpRvcava', True)
+        self.set_change_event('Diag_AmpFwcircb', True)
+        self.set_change_event('Diag_AmpFwcirca', True)
+        self.set_change_event('Diag_AmpMob', True)
+        self.set_change_event('Diag_AmpRvcirca', True)
+        self.set_change_event('Diag_AmpRvcircb', True)
+        self.set_change_event('Diag_AmpFwhybloadb', True)
+        self.set_change_event('Diag_AmpFwhybloada', True)
+        self.set_change_event('Diag_AmpLandaub', True)
+        self.set_change_event('Diag_PhRvtet1b', True)
+        self.set_change_event('Diag_PhRvtet1a', True)
+        self.set_change_event('Diag_PhMoa', True)
+        self.set_change_event('Diag_PhLandaua', True)
+        self.set_change_event('Diag_PhFwloada', True)
+        self.set_change_event('Diag_PhRvtet2b', True)
+        self.set_change_event('Diag_PhRvtet2a', True)
+        self.set_change_event('Diag_PhFwloadb', True)
+        self.set_change_event('Diag_PhRvcavb', True)
+        self.set_change_event('Diag_PhRvcava', True)
+        self.set_change_event('Diag_PhFwcircb', True)
+        self.set_change_event('Diag_PhFwcirca', True)
+        self.set_change_event('Diag_PhMob', True)
+        self.set_change_event('Diag_PhRvcirca', True)
+        self.set_change_event('Diag_PhRvcircb', True)
+        self.set_change_event('Diag_PhFwhybloadb', True)
+        self.set_change_event('Diag_PhFwhybloada', True)
+        self.set_change_event('Diag_PhLandaub', True)
 
     @DebugIt()
     def get_ItckNumber(self):
@@ -7813,289 +8384,289 @@ class NutaqDiags(Device):
         perseus_utils.start_reading_diagnostics(self.perseus, 'B')
 
         self._Diag_Irvtet1A = perseus_utils.read_diag_milivolts(self.perseus, 0, 'A')
-        self.push_change_event("Diag_Irvtet1A", Diag_Irvtet1A)
+        self.push_change_event("Diag_Irvtet1A", self._Diag_Irvtet1A)
         self._Diag_Irvtet1B = perseus_utils.read_diag_milivolts(self.perseus, 0, 'B')
-        self.push_change_event("Diag_Irvtet1B", Diag_Irvtet1B)
+        self.push_change_event("Diag_Irvtet1B", self._Diag_Irvtet1B)
         self._Diag_Qrvtet1A = perseus_utils.read_diag_milivolts(self.perseus, 1, 'A')
-        self.push_change_event("Diag_Qrvtet1A", Diag_Qrvtet1A)
+        self.push_change_event("Diag_Qrvtet1A", self._Diag_Qrvtet1A)
         self._Diag_Qrvtet1B = perseus_utils.read_diag_milivolts(self.perseus, 1, 'B')
-        self.push_change_event("Diag_Qrvtet1B", Diag_Qrvtet1B)
+        self.push_change_event("Diag_Qrvtet1B", self._Diag_Qrvtet1B)
         self._Diag_Amprvtet1A = perseus_utils.read_diag_milivolts(self.perseus, 2, 'A')
-        self.push_change_event("Diag_Amprvtet1A", Diag_Amprvtet1A)
+        self.push_change_event("Diag_Amprvtet1A", self._Diag_Amprvtet1A)
         self._Diag_Amprvtet1B = perseus_utils.read_diag_milivolts(self.perseus, 2, 'B')
-        self.push_change_event("Diag_Amprvtet1B", Diag_Amprvtet1B)
+        self.push_change_event("Diag_Amprvtet1B", self._Diag_Amprvtet1B)
         self._Diag_Phrvtet1A = perseus_utils.read_diag_angle(self.perseus, 3, 'A')
-        self.push_change_event("Diag_Phrvtet1A", Diag_Phrvtet1A)
+        self.push_change_event("Diag_Phrvtet1A", self._Diag_Phrvtet1A)
         self._Diag_Phrvtet1B = perseus_utils.read_diag_angle(self.perseus, 3, 'B')
-        self.push_change_event("Diag_Phrvtet1B", Diag_Phrvtet1B)
+        self.push_change_event("Diag_Phrvtet1B", self._Diag_Phrvtet1B)
         self._Diag_Irvtet2A = perseus_utils.read_diag_milivolts(self.perseus, 4, 'A')
-        self.push_change_event("Diag_Irvtet2A", Diag_Irvtet2A)
+        self.push_change_event("Diag_Irvtet2A", self._Diag_Irvtet2A)
         self._Diag_Irvtet2B = perseus_utils.read_diag_milivolts(self.perseus, 4, 'B')
-        self.push_change_event("Diag_Irvtet2B", Diag_Irvtet2B)
+        self.push_change_event("Diag_Irvtet2B", self._Diag_Irvtet2B)
         self._Diag_Qrvtet2A = perseus_utils.read_diag_milivolts(self.perseus, 5, 'A')
-        self.push_change_event("Diag_Qrvtet2A", Diag_Qrvtet2A)
+        self.push_change_event("Diag_Qrvtet2A", self._Diag_Qrvtet2A)
         self._Diag_Qrvtet2B = perseus_utils.read_diag_milivolts(self.perseus, 5, 'B')
-        self.push_change_event("Diag_Qrvtet2B", Diag_Qrvtet2B)
+        self.push_change_event("Diag_Qrvtet2B", self._Diag_Qrvtet2B)
         self._Diag_Amprvtet2A = perseus_utils.read_diag_milivolts(self.perseus, 6, 'A')
-        self.push_change_event("Diag_Amprvtet2A", Diag_Amprvtet2A)
+        self.push_change_event("Diag_Amprvtet2A", self._Diag_Amprvtet2A)
         self._Diag_Amprvtet2B = perseus_utils.read_diag_milivolts(self.perseus, 6, 'B')
-        self.push_change_event("Diag_Amprvtet2B", Diag_Amprvtet2B)
+        self.push_change_event("Diag_Amprvtet2B", self._Diag_Amprvtet2B)
         self._Diag_Phrvtet2A = perseus_utils.read_diag_angle(self.perseus, 7, 'A')
-        self.push_change_event("Diag_Phrvtet2A", Diag_Phrvtet2A)
+        self.push_change_event("Diag_Phrvtet2A", self._Diag_Phrvtet2A)
         self._Diag_Phrvtet2B = perseus_utils.read_diag_angle(self.perseus, 7, 'B')
-        self.push_change_event("Diag_Phrvtet2B", Diag_Phrvtet2B)
+        self.push_change_event("Diag_Phrvtet2B", self._Diag_Phrvtet2B)
         self._Diag_IfwcircA = perseus_utils.read_diag_milivolts(self.perseus, 8, 'A')
-        self.push_change_event("Diag_IfwcircA", Diag_IfwcircA)
+        self.push_change_event("Diag_IfwcircA", self._Diag_IfwcircA)
         self._Diag_IfwcircB = perseus_utils.read_diag_milivolts(self.perseus, 8, 'B')
-        self.push_change_event("Diag_IfwcircB", Diag_IfwcircB)
+        self.push_change_event("Diag_IfwcircB", self._Diag_IfwcircB)
         self._Diag_QfwcircA = perseus_utils.read_diag_milivolts(self.perseus, 9, 'A')
-        self.push_change_event("Diag_QfwcircA", Diag_QfwcircA)
+        self.push_change_event("Diag_QfwcircA", self._Diag_QfwcircA)
         self._Diag_QfwcircB = perseus_utils.read_diag_milivolts(self.perseus, 9, 'B')
-        self.push_change_event("Diag_QfwcircB", Diag_QfwcircB)
+        self.push_change_event("Diag_QfwcircB", self._Diag_QfwcircB)
         self._Diag_AmpfwcircA = perseus_utils.read_diag_milivolts(self.perseus, 10, 'A')
-        self.push_change_event("Diag_AmpfwcircA", Diag_AmpfwcircA)
+        self.push_change_event("Diag_AmpfwcircA", self._Diag_AmpfwcircA)
         self._Diag_AmpfwcircB = perseus_utils.read_diag_milivolts(self.perseus, 10, 'B')
-        self.push_change_event("Diag_AmpfwcircB", Diag_AmpfwcircB)
+        self.push_change_event("Diag_AmpfwcircB", self._Diag_AmpfwcircB)
         self._Diag_PhfwcircA = perseus_utils.read_diag_angle(self.perseus, 11, 'A')
-        self.push_change_event("Diag_PhfwcircA", Diag_PhfwcircA)
+        self.push_change_event("Diag_PhfwcircA", self._Diag_PhfwcircA)
         self._Diag_PhfwcircB = perseus_utils.read_diag_angle(self.perseus, 11, 'B')
-        self.push_change_event("Diag_PhfwcircB", Diag_PhfwcircB)
+        self.push_change_event("Diag_PhfwcircB", self._Diag_PhfwcircB)
         self._Diag_IrvcircA = perseus_utils.read_diag_milivolts(self.perseus, 12, 'A')
-        self.push_change_event("Diag_IrvcircA", Diag_IrvcircA)
+        self.push_change_event("Diag_IrvcircA", self._Diag_IrvcircA)
         self._Diag_IrvcircB = perseus_utils.read_diag_milivolts(self.perseus, 12, 'B')
-        self.push_change_event("Diag_IrvcircB", Diag_IrvcircB)
+        self.push_change_event("Diag_IrvcircB", self._Diag_IrvcircB)
         self._Diag_QrvcircA = perseus_utils.read_diag_milivolts(self.perseus, 13, 'A')
-        self.push_change_event("Diag_QrvcircA", Diag_QrvcircA)
+        self.push_change_event("Diag_QrvcircA", self._Diag_QrvcircA)
         self._Diag_QrvcircB = perseus_utils.read_diag_milivolts(self.perseus, 13, 'B')
-        self.push_change_event("Diag_QrvcircB", Diag_QrvcircB)
+        self.push_change_event("Diag_QrvcircB", self._Diag_QrvcircB)
         self._Diag_AmprvcircA = perseus_utils.read_diag_milivolts(self.perseus, 14, 'A')
-        self.push_change_event("Diag_AmprvcircA", Diag_AmprvcircA)
+        self.push_change_event("Diag_AmprvcircA", self._Diag_AmprvcircA)
         self._Diag_AmprvcircB = perseus_utils.read_diag_milivolts(self.perseus, 14, 'B')
-        self.push_change_event("Diag_AmprvcircB", Diag_AmprvcircB)
+        self.push_change_event("Diag_AmprvcircB", self._Diag_AmprvcircB)
         self._Diag_PhrvcircA = perseus_utils.read_diag_angle(self.perseus, 15, 'A')
-        self.push_change_event("Diag_PhrvcircA", Diag_PhrvcircA)
+        self.push_change_event("Diag_PhrvcircA", self._Diag_PhrvcircA)
         self._Diag_PhrvcircB = perseus_utils.read_diag_angle(self.perseus, 15, 'B')
-        self.push_change_event("Diag_PhrvcircB", Diag_PhrvcircB)
+        self.push_change_event("Diag_PhrvcircB", self._Diag_PhrvcircB)
         self._Diag_IfwloadA = perseus_utils.read_diag_milivolts(self.perseus, 16, 'A')
-        self.push_change_event("Diag_IfwloadA", Diag_IfwloadA)
+        self.push_change_event("Diag_IfwloadA", self._Diag_IfwloadA)
         self._Diag_IfwloadB = perseus_utils.read_diag_milivolts(self.perseus, 16, 'B')
-        self.push_change_event("Diag_IfwloadB", Diag_IfwloadB)
+        self.push_change_event("Diag_IfwloadB", self._Diag_IfwloadB)
         self._Diag_QfwloadA = perseus_utils.read_diag_milivolts(self.perseus, 17, 'A')
-        self.push_change_event("Diag_QfwloadA", Diag_QfwloadA)
+        self.push_change_event("Diag_QfwloadA", self._Diag_QfwloadA)
         self._Diag_QfwloadB = perseus_utils.read_diag_milivolts(self.perseus, 17, 'B')
-        self.push_change_event("Diag_QfwloadB", Diag_QfwloadB)
+        self.push_change_event("Diag_QfwloadB", self._Diag_QfwloadB)
         self._Diag_AmpfwloadA = perseus_utils.read_diag_milivolts(self.perseus, 18, 'A')
-        self.push_change_event("Diag_AmpfwloadA", Diag_AmpfwloadA)
+        self.push_change_event("Diag_AmpfwloadA", self._Diag_AmpfwloadA)
         self._Diag_AmpfwloadB = perseus_utils.read_diag_milivolts(self.perseus, 18, 'B')
-        self.push_change_event("Diag_AmpfwloadB", Diag_AmpfwloadB)
+        self.push_change_event("Diag_AmpfwloadB", self._Diag_AmpfwloadB)
         self._Diag_PhfwloadA = perseus_utils.read_diag_angle(self.perseus, 19, 'A')
-        self.push_change_event("Diag_PhfwloadA", Diag_PhfwloadA)
+        self.push_change_event("Diag_PhfwloadA", self._Diag_PhfwloadA)
         self._Diag_PhfwloadB = perseus_utils.read_diag_angle(self.perseus, 19, 'B')
-        self.push_change_event("Diag_PhfwloadB", Diag_PhfwloadB)
+        self.push_change_event("Diag_PhfwloadB", self._Diag_PhfwloadB)
         self._Diag_IfwhybloadA = perseus_utils.read_diag_milivolts(self.perseus, 20, 'A')
-        self.push_change_event("Diag_IfwhybloadA", Diag_IfwhybloadA)
+        self.push_change_event("Diag_IfwhybloadA", self._Diag_IfwhybloadA)
         self._Diag_IfwhybloadB = perseus_utils.read_diag_milivolts(self.perseus, 20, 'B')
-        self.push_change_event("Diag_IfwhybloadB", Diag_IfwhybloadB)
+        self.push_change_event("Diag_IfwhybloadB", self._Diag_IfwhybloadB)
         self._Diag_QfwhybloadA = perseus_utils.read_diag_milivolts(self.perseus, 21, 'A')
-        self.push_change_event("Diag_QfwhybloadA", Diag_QfwhybloadA)
+        self.push_change_event("Diag_QfwhybloadA", self._Diag_QfwhybloadA)
         self._Diag_QfwhybloadB = perseus_utils.read_diag_milivolts(self.perseus, 21, 'B')
-        self.push_change_event("Diag_QfwhybloadB", Diag_QfwhybloadB)
+        self.push_change_event("Diag_QfwhybloadB", self._Diag_QfwhybloadB)
         self._Diag_AmpfwhybloadA = perseus_utils.read_diag_milivolts(self.perseus, 22, 'A')
-        self.push_change_event("Diag_AmpfwhybloadA", Diag_AmpfwhybloadA)
+        self.push_change_event("Diag_AmpfwhybloadA", self._Diag_AmpfwhybloadA)
         self._Diag_AmpfwhybloadB = perseus_utils.read_diag_milivolts(self.perseus, 22, 'B')
-        self.push_change_event("Diag_AmpfwhybloadB", Diag_AmpfwhybloadB)
+        self.push_change_event("Diag_AmpfwhybloadB", self._Diag_AmpfwhybloadB)
         self._Diag_PhfwhybloadA = perseus_utils.read_diag_angle(self.perseus, 23, 'A')
-        self.push_change_event("Diag_PhfwhybloadA", Diag_PhfwhybloadA)
+        self.push_change_event("Diag_PhfwhybloadA", self._Diag_PhfwhybloadA)
         self._Diag_PhfwhybloadB = perseus_utils.read_diag_angle(self.perseus, 23, 'B')
-        self.push_change_event("Diag_PhfwhybloadB", Diag_PhfwhybloadB)
+        self.push_change_event("Diag_PhfwhybloadB", self._Diag_PhfwhybloadB)
         self._Diag_IrvcavA = perseus_utils.read_diag_milivolts(self.perseus, 24, 'A')
-        self.push_change_event("Diag_IrvcavA", Diag_IrvcavA)
+        self.push_change_event("Diag_IrvcavA", self._Diag_IrvcavA)
         self._Diag_IrvcavB = perseus_utils.read_diag_milivolts(self.perseus, 24, 'B')
-        self.push_change_event("Diag_IrvcavB", Diag_IrvcavB)
+        self.push_change_event("Diag_IrvcavB", self._Diag_IrvcavB)
         self._Diag_QrvcavA = perseus_utils.read_diag_milivolts(self.perseus, 25, 'A')
-        self.push_change_event("Diag_QrvcavA", Diag_QrvcavA)
+        self.push_change_event("Diag_QrvcavA", self._Diag_QrvcavA)
         self._Diag_QrvcavB = perseus_utils.read_diag_milivolts(self.perseus, 25, 'B')
-        self.push_change_event("Diag_QrvcavB", Diag_QrvcavB)
+        self.push_change_event("Diag_QrvcavB", self._Diag_QrvcavB)
         self._Diag_AmprvcavA = perseus_utils.read_diag_milivolts(self.perseus, 26, 'A')
-        self.push_change_event("Diag_AmprvcavA", Diag_AmprvcavA)
+        self.push_change_event("Diag_AmprvcavA", self._Diag_AmprvcavA)
         self._Diag_AmprvcavB = perseus_utils.read_diag_milivolts(self.perseus, 26, 'B')
-        self.push_change_event("Diag_AmprvcavB", Diag_AmprvcavB)
+        self.push_change_event("Diag_AmprvcavB", self._Diag_AmprvcavB)
         self._Diag_PhrvcavA = perseus_utils.read_diag_angle(self.perseus, 27, 'A')
-        self.push_change_event("Diag_PhrvcavA", Diag_PhrvcavA)
+        self.push_change_event("Diag_PhrvcavA", self._Diag_PhrvcavA)
         self._Diag_PhrvcavB = perseus_utils.read_diag_angle(self.perseus, 27, 'B')
-        self.push_change_event("Diag_PhrvcavB", Diag_PhrvcavB)
+        self.push_change_event("Diag_PhrvcavB", self._Diag_PhrvcavB)
         self._Diag_ImoA = perseus_utils.read_diag_milivolts(self.perseus, 28, 'A')
-        self.push_change_event("Diag_ImoA", Diag_ImoA)
+        self.push_change_event("Diag_ImoA", self._Diag_ImoA)
         self._Diag_ImoB = perseus_utils.read_diag_milivolts(self.perseus, 28, 'B')
-        self.push_change_event("Diag_ImoB", Diag_ImoB)
+        self.push_change_event("Diag_ImoB", self._Diag_ImoB)
         self._Diag_QmoA = perseus_utils.read_diag_milivolts(self.perseus, 29, 'A')
-        self.push_change_event("Diag_QmoA", Diag_QmoA)
+        self.push_change_event("Diag_QmoA", self._Diag_QmoA)
         self._Diag_QmoB = perseus_utils.read_diag_milivolts(self.perseus, 29, 'B')
-        self.push_change_event("Diag_QmoB", Diag_QmoB)
+        self.push_change_event("Diag_QmoB", self._Diag_QmoB)
         self._Diag_AmpmoA = perseus_utils.read_diag_milivolts(self.perseus, 30, 'A')
-        self.push_change_event("Diag_AmpmoA", Diag_AmpmoA)
+        self.push_change_event("Diag_AmpmoA", self._Diag_AmpmoA)
         self._Diag_AmpmoB = perseus_utils.read_diag_milivolts(self.perseus, 30, 'B')
-        self.push_change_event("Diag_AmpmoB", Diag_AmpmoB)
+        self.push_change_event("Diag_AmpmoB", self._Diag_AmpmoB)
         self._Diag_PhmoA = perseus_utils.read_diag_angle(self.perseus, 31, 'A')
-        self.push_change_event("Diag_PhmoA", Diag_PhmoA)
+        self.push_change_event("Diag_PhmoA", self._Diag_PhmoA)
         self._Diag_PhmoB = perseus_utils.read_diag_angle(self.perseus, 31, 'B')
-        self.push_change_event("Diag_PhmoB", Diag_PhmoB)
+        self.push_change_event("Diag_PhmoB", self._Diag_PhmoB)
         self._Diag_IlandauA = perseus_utils.read_diag_milivolts(self.perseus, 32, 'A')
-        self.push_change_event("Diag_IlandauA", Diag_IlandauA)
+        self.push_change_event("Diag_IlandauA", self._Diag_IlandauA)
         self._Diag_IlandauB = perseus_utils.read_diag_milivolts(self.perseus, 32, 'B')
-        self.push_change_event("Diag_IlandauB", Diag_IlandauB)
+        self.push_change_event("Diag_IlandauB", self._Diag_IlandauB)
         self._Diag_QlandauA = perseus_utils.read_diag_milivolts(self.perseus, 33, 'A')
-        self.push_change_event("Diag_QlandauA", Diag_QlandauA)
+        self.push_change_event("Diag_QlandauA", self._Diag_QlandauA)
         self._Diag_QlandauB = perseus_utils.read_diag_milivolts(self.perseus, 33, 'B')
-        self.push_change_event("Diag_QlandauB", Diag_QlandauB)
+        self.push_change_event("Diag_QlandauB", self._Diag_QlandauB)
         self._Diag_AmplandauA = perseus_utils.read_diag_milivolts(self.perseus, 34, 'A')
-        self.push_change_event("Diag_AmplandauA", Diag_AmplandauA)
+        self.push_change_event("Diag_AmplandauA", self._Diag_AmplandauA)
         self._Diag_AmplandauB = perseus_utils.read_diag_milivolts(self.perseus, 34, 'B')
-        self.push_change_event("Diag_AmplandauB", Diag_AmplandauB)
+        self.push_change_event("Diag_AmplandauB", self._Diag_AmplandauB)
         self._Diag_PhlandauA = perseus_utils.read_diag_angle(self.perseus, 35, 'A')
-        self.push_change_event("Diag_PhlandauA", Diag_PhlandauA)
+        self.push_change_event("Diag_PhlandauA", self._Diag_PhlandauA)
         self._Diag_PhlandauB = perseus_utils.read_diag_angle(self.perseus, 35, 'B')
-        self.push_change_event("Diag_PhlandauB", Diag_PhlandauB)
+        self.push_change_event("Diag_PhlandauB", self._Diag_PhlandauB)
         self._Diag_PlungerMovingManualTuningA = bool(perseus_utils.read_diag_direct(self.perseus, 60, 'A'))
-        self.push_change_event("Diag_PlungerMovingManualTuningA", Diag_PlungerMovingManualTuningA)
+        self.push_change_event("Diag_PlungerMovingManualTuningA", self._Diag_PlungerMovingManualTuningA)
         self._Diag_PlungerMovingManualTuningB = bool(perseus_utils.read_diag_direct(self.perseus, 60, 'B'))
-        self.push_change_event("Diag_PlungerMovingManualTuningB", Diag_PlungerMovingManualTuningB)
+        self.push_change_event("Diag_PlungerMovingManualTuningB", self._Diag_PlungerMovingManualTuningB)
         self._Diag_PlungerMovingUpManualTuningA = bool(perseus_utils.read_diag_direct(self.perseus, 61, 'A'))
-        self.push_change_event("Diag_PlungerMovingUpManualTuningA", Diag_PlungerMovingUpManualTuningA)
+        self.push_change_event("Diag_PlungerMovingUpManualTuningA", self._Diag_PlungerMovingUpManualTuningA)
         self._Diag_PlungerMovingUpManualTuningB = bool(perseus_utils.read_diag_direct(self.perseus, 61, 'B'))
-        self.push_change_event("Diag_PlungerMovingUpManualTuningB", Diag_PlungerMovingUpManualTuningB)
+        self.push_change_event("Diag_PlungerMovingUpManualTuningB", self._Diag_PlungerMovingUpManualTuningB)
         self._Diag_PlungerMovingAutomaticTuningA = bool(perseus_utils.read_diag_direct(self.perseus, 62, 'A'))
-        self.push_change_event("Diag_PlungerMovingAutomaticTuningA", Diag_PlungerMovingAutomaticTuningA)
+        self.push_change_event("Diag_PlungerMovingAutomaticTuningA", self._Diag_PlungerMovingAutomaticTuningA)
         self._Diag_PlungerMovingAutomaticTuningB = bool(perseus_utils.read_diag_direct(self.perseus, 62, 'B'))
-        self.push_change_event("Diag_PlungerMovingAutomaticTuningB", Diag_PlungerMovingAutomaticTuningB)
+        self.push_change_event("Diag_PlungerMovingAutomaticTuningB", self._Diag_PlungerMovingAutomaticTuningB)
         self._Diag_PlungerMovingUpAutomaticTuningA = bool(perseus_utils.read_diag_direct(self.perseus, 63, 'A'))
-        self.push_change_event("Diag_PlungerMovingUpAutomaticTuningA", Diag_PlungerMovingUpAutomaticTuningA)
+        self.push_change_event("Diag_PlungerMovingUpAutomaticTuningA", self._Diag_PlungerMovingUpAutomaticTuningA)
         self._Diag_PlungerMovingUpAutomaticTuningB = bool(perseus_utils.read_diag_direct(self.perseus, 63, 'B'))
-        self.push_change_event("Diag_PlungerMovingUpAutomaticTuningB", Diag_PlungerMovingUpAutomaticTuningB)
+        self.push_change_event("Diag_PlungerMovingUpAutomaticTuningB", self._Diag_PlungerMovingUpAutomaticTuningB)
         self._Diag_DephaseMoLandauA = perseus_utils.read_diag_angle(self.perseus, 64, 'A')
-        self.push_change_event("Diag_DephaseMoLandauA", Diag_DephaseMoLandauA)
+        self.push_change_event("Diag_DephaseMoLandauA", self._Diag_DephaseMoLandauA)
         self._Diag_DephaseMoLandauB = perseus_utils.read_diag_angle(self.perseus, 64, 'B')
-        self.push_change_event("Diag_DephaseMoLandauB", Diag_DephaseMoLandauB)
-        self.push_change_event("Diag_Rvtet1A", Diag_Rvtet1A)
-        self.push_change_event("Diag_Rvtet1B", Diag_Rvtet1B)
-        self.push_change_event("Diag_Rvtet2A", Diag_Rvtet2A)
-        self.push_change_event("Diag_Rvtet2B", Diag_Rvtet2B)
-        self.push_change_event("Diag_RvcircA", Diag_RvcircA)
-        self.push_change_event("Diag_RvcircB", Diag_RvcircB)
-        self.push_change_event("Diag_FwloadA", Diag_FwloadA)
-        self.push_change_event("Diag_FwloadB", Diag_FwloadB)
-        self.push_change_event("Diag_FwhybloadA", Diag_FwhybloadA)
-        self.push_change_event("Diag_FwhybloadB", Diag_FwhybloadB)
-        self.push_change_event("Diag_RvcavA", Diag_RvcavA)
-        self.push_change_event("Diag_RvcavB", Diag_RvcavB)
-        self.push_change_event("Diag_ArcsA", Diag_ArcsA)
-        self.push_change_event("Diag_ArcsB", Diag_ArcsB)
-        self.push_change_event("Diag_VacuumA", Diag_VacuumA)
-        self.push_change_event("Diag_VacuumB", Diag_VacuumB)
-        self.push_change_event("Diag_ManualInterlockA", Diag_ManualInterlockA)
-        self.push_change_event("Diag_ManualInterlockB", Diag_ManualInterlockB)
-        self.push_change_event("Diag_ExternalItckA", Diag_ExternalItckA)
-        self.push_change_event("Diag_ExternalItckB", Diag_ExternalItckB)
-        self.push_change_event("Diag_PlungerEndSwitchUpA", Diag_PlungerEndSwitchUpA)
-        self.push_change_event("Diag_PlungerEndSwitchUpB", Diag_PlungerEndSwitchUpB)
-        self.push_change_event("Diag_PlungerEndSwitchDownA", Diag_PlungerEndSwitchDownA)
-        self.push_change_event("Diag_PlungerEndSwitchDownB", Diag_PlungerEndSwitchDownB)
-        self.push_change_event("Diag_Timestamp1A", Diag_Timestamp1A)
-        self.push_change_event("Diag_Timestamp1B", Diag_Timestamp1B)
-        self.push_change_event("Diag_Timestamp2A", Diag_Timestamp2A)
-        self.push_change_event("Diag_Timestamp2B", Diag_Timestamp2B)
-        self.push_change_event("Diag_Timestamp3A", Diag_Timestamp3A)
-        self.push_change_event("Diag_Timestamp3B", Diag_Timestamp3B)
-        self.push_change_event("Diag_Timestamp4A", Diag_Timestamp4A)
-        self.push_change_event("Diag_Timestamp4B", Diag_Timestamp4B)
-        self.push_change_event("Diag_Timestamp5A", Diag_Timestamp5A)
-        self.push_change_event("Diag_Timestamp5B", Diag_Timestamp5B)
-        self.push_change_event("Diag_Timestamp6A", Diag_Timestamp6A)
-        self.push_change_event("Diag_Timestamp6B", Diag_Timestamp6B)
-        self.push_change_event("Diag_Timestamp7A", Diag_Timestamp7A)
-        self.push_change_event("Diag_Timestamp7B", Diag_Timestamp7B)
-        self.push_change_event("Diag_DacsDisableCommandA", Diag_DacsDisableCommandA)
-        self.push_change_event("Diag_DacsDisableCommandB", Diag_DacsDisableCommandB)
-        self.push_change_event("Diag_PinSwitchA", Diag_PinSwitchA)
-        self.push_change_event("Diag_PinSwitchB", Diag_PinSwitchB)
-        self.push_change_event("Diag_FdlTriggerToLoopsdiagboardA", Diag_FdlTriggerToLoopsdiagboardA)
-        self.push_change_event("Diag_FdlTriggerToLoopsdiagboardB", Diag_FdlTriggerToLoopsdiagboardB)
-        self.push_change_event("Diag_OutputToPlcA", Diag_OutputToPlcA)
-        self.push_change_event("Diag_OutputToPlcB", Diag_OutputToPlcB)
-        self.push_change_event("Diag_OutputToMpsA", Diag_OutputToMpsA)
-        self.push_change_event("Diag_OutputToMpsB", Diag_OutputToMpsB)
+        self.push_change_event("Diag_DephaseMoLandauB", self._Diag_DephaseMoLandauB)
+        self.push_change_event("Diag_Rvtet1A", self._Diag_Rvtet1A)
+        self.push_change_event("Diag_Rvtet1B", self._Diag_Rvtet1B)
+        self.push_change_event("Diag_Rvtet2A", self._Diag_Rvtet2A)
+        self.push_change_event("Diag_Rvtet2B", self._Diag_Rvtet2B)
+        self.push_change_event("Diag_RvcircA", self._Diag_RvcircA)
+        self.push_change_event("Diag_RvcircB", self._Diag_RvcircB)
+        self.push_change_event("Diag_FwloadA", self._Diag_FwloadA)
+        self.push_change_event("Diag_FwloadB", self._Diag_FwloadB)
+        self.push_change_event("Diag_FwhybloadA", self._Diag_FwhybloadA)
+        self.push_change_event("Diag_FwhybloadB", self._Diag_FwhybloadB)
+        self.push_change_event("Diag_RvcavA", self._Diag_RvcavA)
+        self.push_change_event("Diag_RvcavB", self._Diag_RvcavB)
+        self.push_change_event("Diag_ArcsA", self._Diag_ArcsA)
+        self.push_change_event("Diag_ArcsB", self._Diag_ArcsB)
+        self.push_change_event("Diag_VacuumA", self._Diag_VacuumA)
+        self.push_change_event("Diag_VacuumB", self._Diag_VacuumB)
+        self.push_change_event("Diag_ManualInterlockA", self._Diag_ManualInterlockA)
+        self.push_change_event("Diag_ManualInterlockB", self._Diag_ManualInterlockB)
+        self.push_change_event("Diag_ExternalItckA", self._Diag_ExternalItckA)
+        self.push_change_event("Diag_ExternalItckB", self._Diag_ExternalItckB)
+        self.push_change_event("Diag_PlungerEndSwitchUpA", self._Diag_PlungerEndSwitchUpA)
+        self.push_change_event("Diag_PlungerEndSwitchUpB", self._Diag_PlungerEndSwitchUpB)
+        self.push_change_event("Diag_PlungerEndSwitchDownA", self._Diag_PlungerEndSwitchDownA)
+        self.push_change_event("Diag_PlungerEndSwitchDownB", self._Diag_PlungerEndSwitchDownB)
+        self.push_change_event("Diag_Timestamp1A", self._Diag_Timestamp1A)
+        self.push_change_event("Diag_Timestamp1B", self._Diag_Timestamp1B)
+        self.push_change_event("Diag_Timestamp2A", self._Diag_Timestamp2A)
+        self.push_change_event("Diag_Timestamp2B", self._Diag_Timestamp2B)
+        self.push_change_event("Diag_Timestamp3A", self._Diag_Timestamp3A)
+        self.push_change_event("Diag_Timestamp3B", self._Diag_Timestamp3B)
+        self.push_change_event("Diag_Timestamp4A", self._Diag_Timestamp4A)
+        self.push_change_event("Diag_Timestamp4B", self._Diag_Timestamp4B)
+        self.push_change_event("Diag_Timestamp5A", self._Diag_Timestamp5A)
+        self.push_change_event("Diag_Timestamp5B", self._Diag_Timestamp5B)
+        self.push_change_event("Diag_Timestamp6A", self._Diag_Timestamp6A)
+        self.push_change_event("Diag_Timestamp6B", self._Diag_Timestamp6B)
+        self.push_change_event("Diag_Timestamp7A", self._Diag_Timestamp7A)
+        self.push_change_event("Diag_Timestamp7B", self._Diag_Timestamp7B)
+        self.push_change_event("Diag_DacsDisableCommandA", self._Diag_DacsDisableCommandA)
+        self.push_change_event("Diag_DacsDisableCommandB", self._Diag_DacsDisableCommandB)
+        self.push_change_event("Diag_PinSwitchA", self._Diag_PinSwitchA)
+        self.push_change_event("Diag_PinSwitchB", self._Diag_PinSwitchB)
+        self.push_change_event("Diag_FdlTriggerToLoopsdiagboardA", self._Diag_FdlTriggerToLoopsdiagboardA)
+        self.push_change_event("Diag_FdlTriggerToLoopsdiagboardB", self._Diag_FdlTriggerToLoopsdiagboardB)
+        self.push_change_event("Diag_OutputToPlcA", self._Diag_OutputToPlcA)
+        self.push_change_event("Diag_OutputToPlcB", self._Diag_OutputToPlcB)
+        self.push_change_event("Diag_OutputToMpsA", self._Diag_OutputToMpsA)
+        self.push_change_event("Diag_OutputToMpsB", self._Diag_OutputToMpsB)
         self._Diag_AmpRvtet1b = math.sqrt((self._Diag_Irvtet1B**2) + (self._Diag_Qrvtet1B**2))
-        self.push_change_event("Diag_AmpRvtet1b", Diag_AmpRvtet1b)
+        self.push_change_event("Diag_AmpRvtet1b", self._Diag_AmpRvtet1b)
         self._Diag_AmpRvtet1a = math.sqrt((self._Diag_Irvtet1A**2) + (self._Diag_Qrvtet1A**2))
-        self.push_change_event("Diag_AmpRvtet1a", Diag_AmpRvtet1a)
+        self.push_change_event("Diag_AmpRvtet1a", self._Diag_AmpRvtet1a)
         self._Diag_AmpMoa = math.sqrt((self._Diag_ImoA**2) + (self._Diag_QmoA**2))
-        self.push_change_event("Diag_AmpMoa", Diag_AmpMoa)
+        self.push_change_event("Diag_AmpMoa", self._Diag_AmpMoa)
         self._Diag_AmpLandaua = math.sqrt((self._Diag_IlandauA**2) + (self._Diag_QlandauA**2))
-        self.push_change_event("Diag_AmpLandaua", Diag_AmpLandaua)
+        self.push_change_event("Diag_AmpLandaua", self._Diag_AmpLandaua)
         self._Diag_AmpFwloada = math.sqrt((self._Diag_IfwloadA**2) + (self._Diag_QfwloadA**2))
-        self.push_change_event("Diag_AmpFwloada", Diag_AmpFwloada)
+        self.push_change_event("Diag_AmpFwloada", self._Diag_AmpFwloada)
         self._Diag_AmpRvtet2b = math.sqrt((self._Diag_Irvtet2B**2) + (self._Diag_Qrvtet2B**2))
-        self.push_change_event("Diag_AmpRvtet2b", Diag_AmpRvtet2b)
+        self.push_change_event("Diag_AmpRvtet2b", self._Diag_AmpRvtet2b)
         self._Diag_AmpRvtet2a = math.sqrt((self._Diag_Irvtet2A**2) + (self._Diag_Qrvtet2A**2))
-        self.push_change_event("Diag_AmpRvtet2a", Diag_AmpRvtet2a)
+        self.push_change_event("Diag_AmpRvtet2a", self._Diag_AmpRvtet2a)
         self._Diag_AmpFwloadb = math.sqrt((self._Diag_IfwloadB**2) + (self._Diag_QfwloadB**2))
-        self.push_change_event("Diag_AmpFwloadb", Diag_AmpFwloadb)
+        self.push_change_event("Diag_AmpFwloadb", self._Diag_AmpFwloadb)
         self._Diag_AmpRvcavb = math.sqrt((self._Diag_IrvcavB**2) + (self._Diag_QrvcavB**2))
-        self.push_change_event("Diag_AmpRvcavb", Diag_AmpRvcavb)
+        self.push_change_event("Diag_AmpRvcavb", self._Diag_AmpRvcavb)
         self._Diag_AmpRvcava = math.sqrt((self._Diag_IrvcavA**2) + (self._Diag_QrvcavA**2))
-        self.push_change_event("Diag_AmpRvcava", Diag_AmpRvcava)
+        self.push_change_event("Diag_AmpRvcava", self._Diag_AmpRvcava)
         self._Diag_AmpFwcircb = math.sqrt((self._Diag_IfwcircB**2) + (self._Diag_QfwcircB**2))
-        self.push_change_event("Diag_AmpFwcircb", Diag_AmpFwcircb)
+        self.push_change_event("Diag_AmpFwcircb", self._Diag_AmpFwcircb)
         self._Diag_AmpFwcirca = math.sqrt((self._Diag_IfwcircA**2) + (self._Diag_QfwcircA**2))
-        self.push_change_event("Diag_AmpFwcirca", Diag_AmpFwcirca)
+        self.push_change_event("Diag_AmpFwcirca", self._Diag_AmpFwcirca)
         self._Diag_AmpMob = math.sqrt((self._Diag_ImoB**2) + (self._Diag_QmoB**2))
-        self.push_change_event("Diag_AmpMob", Diag_AmpMob)
+        self.push_change_event("Diag_AmpMob", self._Diag_AmpMob)
         self._Diag_AmpRvcirca = math.sqrt((self._Diag_IrvcircA**2) + (self._Diag_QrvcircA**2))
-        self.push_change_event("Diag_AmpRvcirca", Diag_AmpRvcirca)
+        self.push_change_event("Diag_AmpRvcirca", self._Diag_AmpRvcirca)
         self._Diag_AmpRvcircb = math.sqrt((self._Diag_IrvcircB**2) + (self._Diag_QrvcircB**2))
-        self.push_change_event("Diag_AmpRvcircb", Diag_AmpRvcircb)
+        self.push_change_event("Diag_AmpRvcircb", self._Diag_AmpRvcircb)
         self._Diag_AmpFwhybloadb = math.sqrt((self._Diag_IfwhybloadB**2) + (self._Diag_QfwhybloadB**2))
-        self.push_change_event("Diag_AmpFwhybloadb", Diag_AmpFwhybloadb)
+        self.push_change_event("Diag_AmpFwhybloadb", self._Diag_AmpFwhybloadb)
         self._Diag_AmpFwhybloada = math.sqrt((self._Diag_IfwhybloadA**2) + (self._Diag_QfwhybloadA**2))
-        self.push_change_event("Diag_AmpFwhybloada", Diag_AmpFwhybloada)
+        self.push_change_event("Diag_AmpFwhybloada", self._Diag_AmpFwhybloada)
         self._Diag_AmpLandaub = math.sqrt((self._Diag_IlandauB**2) + (self._Diag_QlandauB**2))
-        self.push_change_event("Diag_AmpLandaub", Diag_AmpLandaub)
+        self.push_change_event("Diag_AmpLandaub", self._Diag_AmpLandaub)
         self._Diag_PhRvtet1b = math.degrees(math.atan2(self._Diag_Qrvtet1B, self._Diag_Irvtet1B))
-        self.push_change_event("Diag_PhRvtet1b", Diag_PhRvtet1b)
+        self.push_change_event("Diag_PhRvtet1b", self._Diag_PhRvtet1b)
         self._Diag_PhRvtet1a = math.degrees(math.atan2(self._Diag_Qrvtet1A, self._Diag_Irvtet1A))
-        self.push_change_event("Diag_PhRvtet1a", Diag_PhRvtet1a)
+        self.push_change_event("Diag_PhRvtet1a", self._Diag_PhRvtet1a)
         self._Diag_PhMoa = math.degrees(math.atan2(self._Diag_QmoA, self._Diag_ImoA))
-        self.push_change_event("Diag_PhMoa", Diag_PhMoa)
+        self.push_change_event("Diag_PhMoa", self._Diag_PhMoa)
         self._Diag_PhLandaua = math.degrees(math.atan2(self._Diag_QlandauA, self._Diag_IlandauA))
-        self.push_change_event("Diag_PhLandaua", Diag_PhLandaua)
+        self.push_change_event("Diag_PhLandaua", self._Diag_PhLandaua)
         self._Diag_PhFwloada = math.degrees(math.atan2(self._Diag_QfwloadA, self._Diag_IfwloadA))
-        self.push_change_event("Diag_PhFwloada", Diag_PhFwloada)
+        self.push_change_event("Diag_PhFwloada", self._Diag_PhFwloada)
         self._Diag_PhRvtet2b = math.degrees(math.atan2(self._Diag_Qrvtet2B, self._Diag_Irvtet2B))
-        self.push_change_event("Diag_PhRvtet2b", Diag_PhRvtet2b)
+        self.push_change_event("Diag_PhRvtet2b", self._Diag_PhRvtet2b)
         self._Diag_PhRvtet2a = math.degrees(math.atan2(self._Diag_Qrvtet2A, self._Diag_Irvtet2A))
-        self.push_change_event("Diag_PhRvtet2a", Diag_PhRvtet2a)
+        self.push_change_event("Diag_PhRvtet2a", self._Diag_PhRvtet2a)
         self._Diag_PhFwloadb = math.degrees(math.atan2(self._Diag_QfwloadB, self._Diag_IfwloadB))
-        self.push_change_event("Diag_PhFwloadb", Diag_PhFwloadb)
+        self.push_change_event("Diag_PhFwloadb", self._Diag_PhFwloadb)
         self._Diag_PhRvcavb = math.degrees(math.atan2(self._Diag_QrvcavB, self._Diag_IrvcavB))
-        self.push_change_event("Diag_PhRvcavb", Diag_PhRvcavb)
+        self.push_change_event("Diag_PhRvcavb", self._Diag_PhRvcavb)
         self._Diag_PhRvcava = math.degrees(math.atan2(self._Diag_QrvcavA, self._Diag_IrvcavA))
-        self.push_change_event("Diag_PhRvcava", Diag_PhRvcava)
+        self.push_change_event("Diag_PhRvcava", self._Diag_PhRvcava)
         self._Diag_PhFwcircb = math.degrees(math.atan2(self._Diag_QfwcircB, self._Diag_IfwcircB))
-        self.push_change_event("Diag_PhFwcircb", Diag_PhFwcircb)
+        self.push_change_event("Diag_PhFwcircb", self._Diag_PhFwcircb)
         self._Diag_PhFwcirca = math.degrees(math.atan2(self._Diag_QfwcircA, self._Diag_IfwcircA))
-        self.push_change_event("Diag_PhFwcirca", Diag_PhFwcirca)
+        self.push_change_event("Diag_PhFwcirca", self._Diag_PhFwcirca)
         self._Diag_PhMob = math.degrees(math.atan2(self._Diag_QmoB, self._Diag_ImoB))
-        self.push_change_event("Diag_PhMob", Diag_PhMob)
+        self.push_change_event("Diag_PhMob", self._Diag_PhMob)
         self._Diag_PhRvcirca = math.degrees(math.atan2(self._Diag_QrvcircA, self._Diag_IrvcircA))
-        self.push_change_event("Diag_PhRvcirca", Diag_PhRvcirca)
+        self.push_change_event("Diag_PhRvcirca", self._Diag_PhRvcirca)
         self._Diag_PhRvcircb = math.degrees(math.atan2(self._Diag_QrvcircB, self._Diag_IrvcircB))
-        self.push_change_event("Diag_PhRvcircb", Diag_PhRvcircb)
+        self.push_change_event("Diag_PhRvcircb", self._Diag_PhRvcircb)
         self._Diag_PhFwhybloadb = math.degrees(math.atan2(self._Diag_QfwhybloadB, self._Diag_IfwhybloadB))
-        self.push_change_event("Diag_PhFwhybloadb", Diag_PhFwhybloadb)
+        self.push_change_event("Diag_PhFwhybloadb", self._Diag_PhFwhybloadb)
         self._Diag_PhFwhybloada = math.degrees(math.atan2(self._Diag_QfwhybloadA, self._Diag_IfwhybloadA))
-        self.push_change_event("Diag_PhFwhybloada", Diag_PhFwhybloada)
+        self.push_change_event("Diag_PhFwhybloada", self._Diag_PhFwhybloada)
         self._Diag_PhLandaub = math.degrees(math.atan2(self._Diag_QlandauB, self._Diag_IlandauB))
-        self.push_change_event("Diag_PhLandaub", Diag_PhLandaub)
+        self.push_change_event("Diag_PhLandaub", self._Diag_PhLandaub)
 
     @command
     def init_hardware(self):
