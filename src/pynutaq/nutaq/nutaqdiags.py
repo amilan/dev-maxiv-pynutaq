@@ -4336,6 +4336,7 @@ class NutaqDiags(Device):
     @DebugIt()
     def set_Rvtet1A(self, Rvtet1A):
         perseus_utils.write_settings_diag_milivolts(self.perseus, Rvtet1A, 0, 'A')
+        self.push_change_event("Rvtet1A", Rvtet1A)
 
     @DebugIt()
     def get_Rvtet1B(self):
@@ -4344,6 +4345,7 @@ class NutaqDiags(Device):
     @DebugIt()
     def set_Rvtet1B(self, Rvtet1B):
         perseus_utils.write_settings_diag_milivolts(self.perseus, Rvtet1B, 0, 'B')
+        self.push_change_event("Rvtet1B", Rvtet1B)
 
     @DebugIt()
     def get_Rvtet2A(self):
@@ -4352,6 +4354,7 @@ class NutaqDiags(Device):
     @DebugIt()
     def set_Rvtet2A(self, Rvtet2A):
         perseus_utils.write_settings_diag_milivolts(self.perseus, Rvtet2A, 1, 'A')
+        self.push_change_event("Rvtet2A", Rvtet2A)
 
     @DebugIt()
     def get_Rvtet2B(self):
@@ -4360,6 +4363,7 @@ class NutaqDiags(Device):
     @DebugIt()
     def set_Rvtet2B(self, Rvtet2B):
         perseus_utils.write_settings_diag_milivolts(self.perseus, Rvtet2B, 1, 'B')
+        self.push_change_event("Rvtet2B", Rvtet2B)
 
     @DebugIt()
     def get_RvcircA(self):
@@ -4368,6 +4372,7 @@ class NutaqDiags(Device):
     @DebugIt()
     def set_RvcircA(self, RvcircA):
         perseus_utils.write_settings_diag_milivolts(self.perseus, RvcircA, 2, 'A')
+        self.push_change_event("RvcircA", RvcircA)
 
     @DebugIt()
     def get_RvcircB(self):
@@ -4376,6 +4381,7 @@ class NutaqDiags(Device):
     @DebugIt()
     def set_RvcircB(self, RvcircB):
         perseus_utils.write_settings_diag_milivolts(self.perseus, RvcircB, 2, 'B')
+        self.push_change_event("RvcircB", RvcircB)
 
     @DebugIt()
     def get_FwloadA(self):
@@ -4384,6 +4390,7 @@ class NutaqDiags(Device):
     @DebugIt()
     def set_FwloadA(self, FwloadA):
         perseus_utils.write_settings_diag_milivolts(self.perseus, FwloadA, 3, 'A')
+        self.push_change_event("FwloadA", FwloadA)
 
     @DebugIt()
     def get_FwloadB(self):
@@ -4392,6 +4399,7 @@ class NutaqDiags(Device):
     @DebugIt()
     def set_FwloadB(self, FwloadB):
         perseus_utils.write_settings_diag_milivolts(self.perseus, FwloadB, 3, 'B')
+        self.push_change_event("FwloadB", FwloadB)
 
     @DebugIt()
     def get_FwhybloadA(self):
@@ -4400,6 +4408,7 @@ class NutaqDiags(Device):
     @DebugIt()
     def set_FwhybloadA(self, FwhybloadA):
         perseus_utils.write_settings_diag_milivolts(self.perseus, FwhybloadA, 4, 'A')
+        self.push_change_event("FwhybloadA", FwhybloadA)
 
     @DebugIt()
     def get_FwhybloadB(self):
@@ -4408,6 +4417,7 @@ class NutaqDiags(Device):
     @DebugIt()
     def set_FwhybloadB(self, FwhybloadB):
         perseus_utils.write_settings_diag_milivolts(self.perseus, FwhybloadB, 4, 'B')
+        self.push_change_event("FwhybloadB", FwhybloadB)
 
     @DebugIt()
     def get_RvcavA(self):
@@ -4416,6 +4426,7 @@ class NutaqDiags(Device):
     @DebugIt()
     def set_RvcavA(self, RvcavA):
         perseus_utils.write_settings_diag_milivolts(self.perseus, RvcavA, 5, 'A')
+        self.push_change_event("RvcavA", RvcavA)
 
     @DebugIt()
     def get_RvcavB(self):
@@ -4424,6 +4435,7 @@ class NutaqDiags(Device):
     @DebugIt()
     def set_RvcavB(self, RvcavB):
         perseus_utils.write_settings_diag_milivolts(self.perseus, RvcavB, 5, 'B')
+        self.push_change_event("RvcavB", RvcavB)
 
     @DebugIt()
     def get_ManualInterlockA(self):
@@ -4432,6 +4444,7 @@ class NutaqDiags(Device):
     @DebugIt()
     def set_ManualInterlockA(self, ManualInterlockA):
         perseus_utils.write_direct(self.perseus, ManualInterlockA, 6, 'A')
+        self.push_change_event("ManualInterlockA", ManualInterlockA)
 
     @DebugIt()
     def get_ManualInterlockB(self):
@@ -4440,6 +4453,7 @@ class NutaqDiags(Device):
     @DebugIt()
     def set_ManualInterlockB(self, ManualInterlockB):
         perseus_utils.write_direct(self.perseus, ManualInterlockB, 6, 'B')
+        self.push_change_event("ManualInterlockB", ManualInterlockB)
 
     @DebugIt()
     def get_DisableItckRvtet1A(self):
@@ -4448,6 +4462,7 @@ class NutaqDiags(Device):
     @DebugIt()
     def set_DisableItckRvtet1A(self, DisableItckRvtet1A):
         perseus_utils.write_direct(self.perseus, DisableItckRvtet1A, 7, 'A')
+        self.push_change_event("DisableItckRvtet1A", DisableItckRvtet1A)
 
     @DebugIt()
     def get_DisableItckRvtet1B(self):
@@ -4456,6 +4471,7 @@ class NutaqDiags(Device):
     @DebugIt()
     def set_DisableItckRvtet1B(self, DisableItckRvtet1B):
         perseus_utils.write_direct(self.perseus, DisableItckRvtet1B, 7, 'B')
+        self.push_change_event("DisableItckRvtet1B", DisableItckRvtet1B)
 
     @DebugIt()
     def get_DisableItckRvtet2A(self):
@@ -4464,6 +4480,7 @@ class NutaqDiags(Device):
     @DebugIt()
     def set_DisableItckRvtet2A(self, DisableItckRvtet2A):
         perseus_utils.write_direct(self.perseus, DisableItckRvtet2A, 8, 'A')
+        self.push_change_event("DisableItckRvtet2A", DisableItckRvtet2A)
 
     @DebugIt()
     def get_DisableItckRvtet2B(self):
@@ -4472,6 +4489,7 @@ class NutaqDiags(Device):
     @DebugIt()
     def set_DisableItckRvtet2B(self, DisableItckRvtet2B):
         perseus_utils.write_direct(self.perseus, DisableItckRvtet2B, 8, 'B')
+        self.push_change_event("DisableItckRvtet2B", DisableItckRvtet2B)
 
     @DebugIt()
     def get_DisableItckRvcircA(self):
@@ -4480,6 +4498,7 @@ class NutaqDiags(Device):
     @DebugIt()
     def set_DisableItckRvcircA(self, DisableItckRvcircA):
         perseus_utils.write_direct(self.perseus, DisableItckRvcircA, 9, 'A')
+        self.push_change_event("DisableItckRvcircA", DisableItckRvcircA)
 
     @DebugIt()
     def get_DisableItckRvcircB(self):
@@ -4488,6 +4507,7 @@ class NutaqDiags(Device):
     @DebugIt()
     def set_DisableItckRvcircB(self, DisableItckRvcircB):
         perseus_utils.write_direct(self.perseus, DisableItckRvcircB, 9, 'B')
+        self.push_change_event("DisableItckRvcircB", DisableItckRvcircB)
 
     @DebugIt()
     def get_DisableItckFwloadA(self):
@@ -4496,6 +4516,7 @@ class NutaqDiags(Device):
     @DebugIt()
     def set_DisableItckFwloadA(self, DisableItckFwloadA):
         perseus_utils.write_direct(self.perseus, DisableItckFwloadA, 10, 'A')
+        self.push_change_event("DisableItckFwloadA", DisableItckFwloadA)
 
     @DebugIt()
     def get_DisableItckFwloadB(self):
@@ -4504,6 +4525,7 @@ class NutaqDiags(Device):
     @DebugIt()
     def set_DisableItckFwloadB(self, DisableItckFwloadB):
         perseus_utils.write_direct(self.perseus, DisableItckFwloadB, 10, 'B')
+        self.push_change_event("DisableItckFwloadB", DisableItckFwloadB)
 
     @DebugIt()
     def get_DisableItckFwhybloadA(self):
@@ -4512,6 +4534,7 @@ class NutaqDiags(Device):
     @DebugIt()
     def set_DisableItckFwhybloadA(self, DisableItckFwhybloadA):
         perseus_utils.write_direct(self.perseus, DisableItckFwhybloadA, 11, 'A')
+        self.push_change_event("DisableItckFwhybloadA", DisableItckFwhybloadA)
 
     @DebugIt()
     def get_DisableItckFwhybloadB(self):
@@ -4520,6 +4543,7 @@ class NutaqDiags(Device):
     @DebugIt()
     def set_DisableItckFwhybloadB(self, DisableItckFwhybloadB):
         perseus_utils.write_direct(self.perseus, DisableItckFwhybloadB, 11, 'B')
+        self.push_change_event("DisableItckFwhybloadB", DisableItckFwhybloadB)
 
     @DebugIt()
     def get_DisableItckRvcavA(self):
@@ -4528,6 +4552,7 @@ class NutaqDiags(Device):
     @DebugIt()
     def set_DisableItckRvcavA(self, DisableItckRvcavA):
         perseus_utils.write_direct(self.perseus, DisableItckRvcavA, 12, 'A')
+        self.push_change_event("DisableItckRvcavA", DisableItckRvcavA)
 
     @DebugIt()
     def get_DisableItckRvcavB(self):
@@ -4536,6 +4561,7 @@ class NutaqDiags(Device):
     @DebugIt()
     def set_DisableItckRvcavB(self, DisableItckRvcavB):
         perseus_utils.write_direct(self.perseus, DisableItckRvcavB, 12, 'B')
+        self.push_change_event("DisableItckRvcavB", DisableItckRvcavB)
 
     @DebugIt()
     def get_DisableItckArcsA(self):
@@ -4544,6 +4570,7 @@ class NutaqDiags(Device):
     @DebugIt()
     def set_DisableItckArcsA(self, DisableItckArcsA):
         perseus_utils.write_direct(self.perseus, DisableItckArcsA, 13, 'A')
+        self.push_change_event("DisableItckArcsA", DisableItckArcsA)
 
     @DebugIt()
     def get_DisableItckArcsB(self):
@@ -4552,6 +4579,7 @@ class NutaqDiags(Device):
     @DebugIt()
     def set_DisableItckArcsB(self, DisableItckArcsB):
         perseus_utils.write_direct(self.perseus, DisableItckArcsB, 13, 'B')
+        self.push_change_event("DisableItckArcsB", DisableItckArcsB)
 
     @DebugIt()
     def get_DisableItckVaccumA(self):
@@ -4560,6 +4588,7 @@ class NutaqDiags(Device):
     @DebugIt()
     def set_DisableItckVaccumA(self, DisableItckVaccumA):
         perseus_utils.write_direct(self.perseus, DisableItckVaccumA, 14, 'A')
+        self.push_change_event("DisableItckVaccumA", DisableItckVaccumA)
 
     @DebugIt()
     def get_DisableItckVaccumB(self):
@@ -4568,6 +4597,7 @@ class NutaqDiags(Device):
     @DebugIt()
     def set_DisableItckVaccumB(self, DisableItckVaccumB):
         perseus_utils.write_direct(self.perseus, DisableItckVaccumB, 14, 'B')
+        self.push_change_event("DisableItckVaccumB", DisableItckVaccumB)
 
     @DebugIt()
     def get_DisableItckManualInterlockA(self):
@@ -4576,6 +4606,7 @@ class NutaqDiags(Device):
     @DebugIt()
     def set_DisableItckManualInterlockA(self, DisableItckManualInterlockA):
         perseus_utils.write_direct(self.perseus, DisableItckManualInterlockA, 15, 'A')
+        self.push_change_event("DisableItckManualInterlockA", DisableItckManualInterlockA)
 
     @DebugIt()
     def get_DisableItckManualInterlockB(self):
@@ -4584,6 +4615,7 @@ class NutaqDiags(Device):
     @DebugIt()
     def set_DisableItckManualInterlockB(self, DisableItckManualInterlockB):
         perseus_utils.write_direct(self.perseus, DisableItckManualInterlockB, 15, 'B')
+        self.push_change_event("DisableItckManualInterlockB", DisableItckManualInterlockB)
 
     @DebugIt()
     def get_DisableItckPlungerEndSwitchesUpA(self):
@@ -4592,6 +4624,7 @@ class NutaqDiags(Device):
     @DebugIt()
     def set_DisableItckPlungerEndSwitchesUpA(self, DisableItckPlungerEndSwitchesUpA):
         perseus_utils.write_direct(self.perseus, DisableItckPlungerEndSwitchesUpA, 16, 'A')
+        self.push_change_event("DisableItckPlungerEndSwitchesUpA", DisableItckPlungerEndSwitchesUpA)
 
     @DebugIt()
     def get_DisableItckPlungerEndSwitchesUpB(self):
@@ -4600,6 +4633,7 @@ class NutaqDiags(Device):
     @DebugIt()
     def set_DisableItckPlungerEndSwitchesUpB(self, DisableItckPlungerEndSwitchesUpB):
         perseus_utils.write_direct(self.perseus, DisableItckPlungerEndSwitchesUpB, 16, 'B')
+        self.push_change_event("DisableItckPlungerEndSwitchesUpB", DisableItckPlungerEndSwitchesUpB)
 
     @DebugIt()
     def get_DisableItckPlungerEndSwitchesDownA(self):
@@ -4608,6 +4642,7 @@ class NutaqDiags(Device):
     @DebugIt()
     def set_DisableItckPlungerEndSwitchesDownA(self, DisableItckPlungerEndSwitchesDownA):
         perseus_utils.write_direct(self.perseus, DisableItckPlungerEndSwitchesDownA, 17, 'A')
+        self.push_change_event("DisableItckPlungerEndSwitchesDownA", DisableItckPlungerEndSwitchesDownA)
 
     @DebugIt()
     def get_DisableItckPlungerEndSwitchesDownB(self):
@@ -4616,6 +4651,7 @@ class NutaqDiags(Device):
     @DebugIt()
     def set_DisableItckPlungerEndSwitchesDownB(self, DisableItckPlungerEndSwitchesDownB):
         perseus_utils.write_direct(self.perseus, DisableItckPlungerEndSwitchesDownB, 17, 'B')
+        self.push_change_event("DisableItckPlungerEndSwitchesDownB", DisableItckPlungerEndSwitchesDownB)
 
     @DebugIt()
     def get_DisableItckMpsA(self):
@@ -4624,6 +4660,7 @@ class NutaqDiags(Device):
     @DebugIt()
     def set_DisableItckMpsA(self, DisableItckMpsA):
         perseus_utils.write_direct(self.perseus, DisableItckMpsA, 18, 'A')
+        self.push_change_event("DisableItckMpsA", DisableItckMpsA)
 
     @DebugIt()
     def get_DisableItckMpsB(self):
@@ -4632,6 +4669,7 @@ class NutaqDiags(Device):
     @DebugIt()
     def set_DisableItckMpsB(self, DisableItckMpsB):
         perseus_utils.write_direct(self.perseus, DisableItckMpsB, 18, 'B')
+        self.push_change_event("DisableItckMpsB", DisableItckMpsB)
 
     @DebugIt()
     def get_SamplesToAverageA(self):
@@ -4640,6 +4678,7 @@ class NutaqDiags(Device):
     @DebugIt()
     def set_SamplesToAverageA(self, SamplesToAverageA):
         perseus_utils.write_direct(self.perseus, SamplesToAverageA, 19, 'A')
+        self.push_change_event("SamplesToAverageA", SamplesToAverageA)
 
     @DebugIt()
     def get_SamplesToAverageB(self):
@@ -4648,6 +4687,7 @@ class NutaqDiags(Device):
     @DebugIt()
     def set_SamplesToAverageB(self, SamplesToAverageB):
         perseus_utils.write_direct(self.perseus, SamplesToAverageB, 19, 'B')
+        self.push_change_event("SamplesToAverageB", SamplesToAverageB)
 
     @DebugIt()
     def get_PulseupLogicInversionA(self):
@@ -4656,6 +4696,7 @@ class NutaqDiags(Device):
     @DebugIt()
     def set_PulseupLogicInversionA(self, PulseupLogicInversionA):
         perseus_utils.write_direct(self.perseus, PulseupLogicInversionA, 20, 'A')
+        self.push_change_event("PulseupLogicInversionA", PulseupLogicInversionA)
 
     @DebugIt()
     def get_PulseupLogicInversionB(self):
@@ -4664,6 +4705,7 @@ class NutaqDiags(Device):
     @DebugIt()
     def set_PulseupLogicInversionB(self, PulseupLogicInversionB):
         perseus_utils.write_direct(self.perseus, PulseupLogicInversionB, 20, 'B')
+        self.push_change_event("PulseupLogicInversionB", PulseupLogicInversionB)
 
     @DebugIt()
     def get_EndSwitchesConnectedToNoNcContactA(self):
@@ -4672,6 +4714,7 @@ class NutaqDiags(Device):
     @DebugIt()
     def set_EndSwitchesConnectedToNoNcContactA(self, EndSwitchesConnectedToNoNcContactA):
         perseus_utils.write_direct(self.perseus, EndSwitchesConnectedToNoNcContactA, 21, 'A')
+        self.push_change_event("EndSwitchesConnectedToNoNcContactA", EndSwitchesConnectedToNoNcContactA)
 
     @DebugIt()
     def get_EndSwitchesConnectedToNoNcContactB(self):
@@ -4680,6 +4723,7 @@ class NutaqDiags(Device):
     @DebugIt()
     def set_EndSwitchesConnectedToNoNcContactB(self, EndSwitchesConnectedToNoNcContactB):
         perseus_utils.write_direct(self.perseus, EndSwitchesConnectedToNoNcContactB, 21, 'B')
+        self.push_change_event("EndSwitchesConnectedToNoNcContactB", EndSwitchesConnectedToNoNcContactB)
 
     @DebugIt()
     def get_LookrefA(self):
@@ -4688,6 +4732,7 @@ class NutaqDiags(Device):
     @DebugIt()
     def set_LookrefA(self, LookrefA):
         perseus_utils.write_direct(self.perseus, LookrefA, 22, 'A')
+        self.push_change_event("LookrefA", LookrefA)
 
     @DebugIt()
     def get_LookrefB(self):
@@ -4696,6 +4741,7 @@ class NutaqDiags(Device):
     @DebugIt()
     def set_LookrefB(self, LookrefB):
         perseus_utils.write_direct(self.perseus, LookrefB, 22, 'B')
+        self.push_change_event("LookrefB", LookrefB)
 
     @DebugIt()
     def get_QuadrefA(self):
@@ -4704,6 +4750,7 @@ class NutaqDiags(Device):
     @DebugIt()
     def set_QuadrefA(self, QuadrefA):
         perseus_utils.write_direct(self.perseus, QuadrefA, 23, 'A')
+        self.push_change_event("QuadrefA", QuadrefA)
 
     @DebugIt()
     def get_QuadrefB(self):
@@ -4712,6 +4759,7 @@ class NutaqDiags(Device):
     @DebugIt()
     def set_QuadrefB(self, QuadrefB):
         perseus_utils.write_direct(self.perseus, QuadrefB, 23, 'B')
+        self.push_change_event("QuadrefB", QuadrefB)
 
     @DebugIt()
     def get_SpareDo1A(self):
@@ -4720,6 +4768,7 @@ class NutaqDiags(Device):
     @DebugIt()
     def set_SpareDo1A(self, SpareDo1A):
         perseus_utils.write_direct(self.perseus, SpareDo1A, 24, 'A')
+        self.push_change_event("SpareDo1A", SpareDo1A)
 
     @DebugIt()
     def get_SpareDo1B(self):
@@ -4728,6 +4777,7 @@ class NutaqDiags(Device):
     @DebugIt()
     def set_SpareDo1B(self, SpareDo1B):
         perseus_utils.write_direct(self.perseus, SpareDo1B, 24, 'B')
+        self.push_change_event("SpareDo1B", SpareDo1B)
 
     @DebugIt()
     def get_SpareDo2A(self):
@@ -4736,6 +4786,7 @@ class NutaqDiags(Device):
     @DebugIt()
     def set_SpareDo2A(self, SpareDo2A):
         perseus_utils.write_direct(self.perseus, SpareDo2A, 25, 'A')
+        self.push_change_event("SpareDo2A", SpareDo2A)
 
     @DebugIt()
     def get_SpareDo2B(self):
@@ -4744,6 +4795,7 @@ class NutaqDiags(Device):
     @DebugIt()
     def set_SpareDo2B(self, SpareDo2B):
         perseus_utils.write_direct(self.perseus, SpareDo2B, 25, 'B')
+        self.push_change_event("SpareDo2B", SpareDo2B)
 
     @DebugIt()
     def get_SpareDo3A(self):
@@ -4752,6 +4804,7 @@ class NutaqDiags(Device):
     @DebugIt()
     def set_SpareDo3A(self, SpareDo3A):
         perseus_utils.write_direct(self.perseus, SpareDo3A, 26, 'A')
+        self.push_change_event("SpareDo3A", SpareDo3A)
 
     @DebugIt()
     def get_SpareDo3B(self):
@@ -4760,6 +4813,7 @@ class NutaqDiags(Device):
     @DebugIt()
     def set_SpareDo3B(self, SpareDo3B):
         perseus_utils.write_direct(self.perseus, SpareDo3B, 26, 'B')
+        self.push_change_event("SpareDo3B", SpareDo3B)
 
     @DebugIt()
     def get_FdlSwTriggerA(self):
@@ -4768,6 +4822,7 @@ class NutaqDiags(Device):
     @DebugIt()
     def set_FdlSwTriggerA(self, FdlSwTriggerA):
         perseus_utils.write_direct(self.perseus, FdlSwTriggerA, 27, 'A')
+        self.push_change_event("FdlSwTriggerA", FdlSwTriggerA)
 
     @DebugIt()
     def get_FdlSwTriggerB(self):
@@ -4776,6 +4831,7 @@ class NutaqDiags(Device):
     @DebugIt()
     def set_FdlSwTriggerB(self, FdlSwTriggerB):
         perseus_utils.write_direct(self.perseus, FdlSwTriggerB, 27, 'B')
+        self.push_change_event("FdlSwTriggerB", FdlSwTriggerB)
 
     @DebugIt()
     def get_ResetInterlocksCavA(self):
@@ -4784,6 +4840,7 @@ class NutaqDiags(Device):
     @DebugIt()
     def set_ResetInterlocksCavA(self, ResetInterlocksCavA):
         perseus_utils.write_direct(self.perseus, ResetInterlocksCavA, 100, 'A')
+        self.push_change_event("ResetInterlocksCavA", ResetInterlocksCavA)
 
     @DebugIt()
     def get_ResetInterlocksCavB(self):
@@ -4792,6 +4849,7 @@ class NutaqDiags(Device):
     @DebugIt()
     def set_ResetInterlocksCavB(self, ResetInterlocksCavB):
         perseus_utils.write_direct(self.perseus, ResetInterlocksCavB, 100, 'B')
+        self.push_change_event("ResetInterlocksCavB", ResetInterlocksCavB)
 
     @DebugIt()
     def get_LandautuningenableA(self):
@@ -4800,6 +4858,7 @@ class NutaqDiags(Device):
     @DebugIt()
     def set_LandautuningenableA(self, LandautuningenableA):
         perseus_utils.write_direct(self.perseus, LandautuningenableA, 200, 'A')
+        self.push_change_event("LandautuningenableA", LandautuningenableA)
 
     @DebugIt()
     def get_LandautuningenableB(self):
@@ -4808,6 +4867,7 @@ class NutaqDiags(Device):
     @DebugIt()
     def set_LandautuningenableB(self, LandautuningenableB):
         perseus_utils.write_direct(self.perseus, LandautuningenableB, 200, 'B')
+        self.push_change_event("LandautuningenableB", LandautuningenableB)
 
     @DebugIt()
     def get_LandautuningresetA(self):
@@ -4816,6 +4876,7 @@ class NutaqDiags(Device):
     @DebugIt()
     def set_LandautuningresetA(self, LandautuningresetA):
         perseus_utils.write_direct(self.perseus, LandautuningresetA, 201, 'A')
+        self.push_change_event("LandautuningresetA", LandautuningresetA)
 
     @DebugIt()
     def get_LandautuningresetB(self):
@@ -4824,6 +4885,7 @@ class NutaqDiags(Device):
     @DebugIt()
     def set_LandautuningresetB(self, LandautuningresetB):
         perseus_utils.write_direct(self.perseus, LandautuningresetB, 201, 'B')
+        self.push_change_event("LandautuningresetB", LandautuningresetB)
 
     @DebugIt()
     def get_MovelandauupA(self):
@@ -4832,6 +4894,7 @@ class NutaqDiags(Device):
     @DebugIt()
     def set_MovelandauupA(self, MovelandauupA):
         perseus_utils.write_direct(self.perseus, MovelandauupA, 202, 'A')
+        self.push_change_event("MovelandauupA", MovelandauupA)
 
     @DebugIt()
     def get_MovelandauupB(self):
@@ -4840,6 +4903,7 @@ class NutaqDiags(Device):
     @DebugIt()
     def set_MovelandauupB(self, MovelandauupB):
         perseus_utils.write_direct(self.perseus, MovelandauupB, 202, 'B')
+        self.push_change_event("MovelandauupB", MovelandauupB)
 
     @DebugIt()
     def get_MovelandauplgA(self):
@@ -4848,6 +4912,7 @@ class NutaqDiags(Device):
     @DebugIt()
     def set_MovelandauplgA(self, MovelandauplgA):
         perseus_utils.write_direct(self.perseus, MovelandauplgA, 203, 'A')
+        self.push_change_event("MovelandauplgA", MovelandauplgA)
 
     @DebugIt()
     def get_MovelandauplgB(self):
@@ -4856,6 +4921,7 @@ class NutaqDiags(Device):
     @DebugIt()
     def set_MovelandauplgB(self, MovelandauplgB):
         perseus_utils.write_direct(self.perseus, MovelandauplgB, 203, 'B')
+        self.push_change_event("MovelandauplgB", MovelandauplgB)
 
     @DebugIt()
     def get_NumstepsA(self):
@@ -4864,6 +4930,7 @@ class NutaqDiags(Device):
     @DebugIt()
     def set_NumstepsA(self, NumstepsA):
         perseus_utils.write_direct(self.perseus, NumstepsA, 204, 'A')
+        self.push_change_event("NumstepsA", NumstepsA)
 
     @DebugIt()
     def get_NumstepsB(self):
@@ -4872,6 +4939,7 @@ class NutaqDiags(Device):
     @DebugIt()
     def set_NumstepsB(self, NumstepsB):
         perseus_utils.write_direct(self.perseus, NumstepsB, 204, 'B')
+        self.push_change_event("NumstepsB", NumstepsB)
 
     @DebugIt()
     def get_LandauphaseoffsetA(self):
@@ -4880,6 +4948,7 @@ class NutaqDiags(Device):
     @DebugIt()
     def set_LandauphaseoffsetA(self, LandauphaseoffsetA):
         perseus_utils.write_angle(self.perseus, LandauphaseoffsetA, 205, 'A')
+        self.push_change_event("LandauphaseoffsetA", LandauphaseoffsetA)
 
     @DebugIt()
     def get_LandauphaseoffsetB(self):
@@ -4888,6 +4957,7 @@ class NutaqDiags(Device):
     @DebugIt()
     def set_LandauphaseoffsetB(self, LandauphaseoffsetB):
         perseus_utils.write_angle(self.perseus, LandauphaseoffsetB, 205, 'B')
+        self.push_change_event("LandauphaseoffsetB", LandauphaseoffsetB)
 
     @DebugIt()
     def get_LandaumarginupA(self):
@@ -4896,6 +4966,7 @@ class NutaqDiags(Device):
     @DebugIt()
     def set_LandaumarginupA(self, LandaumarginupA):
         perseus_utils.write_settings_diag_percentage(self.perseus, LandaumarginupA, 206, 'A')
+        self.push_change_event("LandaumarginupA", LandaumarginupA)
 
     @DebugIt()
     def get_LandaumarginupB(self):
@@ -4904,6 +4975,7 @@ class NutaqDiags(Device):
     @DebugIt()
     def set_LandaumarginupB(self, LandaumarginupB):
         perseus_utils.write_settings_diag_percentage(self.perseus, LandaumarginupB, 206, 'B')
+        self.push_change_event("LandaumarginupB", LandaumarginupB)
 
     @DebugIt()
     def get_LandauMarginLowA(self):
@@ -4912,6 +4984,7 @@ class NutaqDiags(Device):
     @DebugIt()
     def set_LandauMarginLowA(self, LandauMarginLowA):
         perseus_utils.write_settings_diag_percentage(self.perseus, LandauMarginLowA, 207, 'A')
+        self.push_change_event("LandauMarginLowA", LandauMarginLowA)
 
     @DebugIt()
     def get_LandauMarginLowB(self):
@@ -4920,6 +4993,7 @@ class NutaqDiags(Device):
     @DebugIt()
     def set_LandauMarginLowB(self, LandauMarginLowB):
         perseus_utils.write_settings_diag_percentage(self.perseus, LandauMarginLowB, 207, 'B')
+        self.push_change_event("LandauMarginLowB", LandauMarginLowB)
 
     @DebugIt()
     def get_MinimumLandauAmplitudeA(self):
@@ -4928,6 +5002,7 @@ class NutaqDiags(Device):
     @DebugIt()
     def set_MinimumLandauAmplitudeA(self, MinimumLandauAmplitudeA):
         perseus_utils.write_settings_diag_milivolts(self.perseus, MinimumLandauAmplitudeA, 208, 'A')
+        self.push_change_event("MinimumLandauAmplitudeA", MinimumLandauAmplitudeA)
 
     @DebugIt()
     def get_MinimumLandauAmplitudeB(self):
@@ -4936,6 +5011,7 @@ class NutaqDiags(Device):
     @DebugIt()
     def set_MinimumLandauAmplitudeB(self, MinimumLandauAmplitudeB):
         perseus_utils.write_settings_diag_milivolts(self.perseus, MinimumLandauAmplitudeB, 208, 'B')
+        self.push_change_event("MinimumLandauAmplitudeB", MinimumLandauAmplitudeB)
 
     @DebugIt()
     def get_LandauPositiveEnableA(self):
@@ -4944,6 +5020,7 @@ class NutaqDiags(Device):
     @DebugIt()
     def set_LandauPositiveEnableA(self, LandauPositiveEnableA):
         perseus_utils.write_direct(self.perseus, LandauPositiveEnableA, 209, 'A')
+        self.push_change_event("LandauPositiveEnableA", LandauPositiveEnableA)
 
     @DebugIt()
     def get_LandauPositiveEnableB(self):
@@ -4952,6 +5029,7 @@ class NutaqDiags(Device):
     @DebugIt()
     def set_LandauPositiveEnableB(self, LandauPositiveEnableB):
         perseus_utils.write_direct(self.perseus, LandauPositiveEnableB, 209, 'B')
+        self.push_change_event("LandauPositiveEnableB", LandauPositiveEnableB)
 
     @DebugIt()
     def get_LandauampsettingA(self):
@@ -4960,6 +5038,7 @@ class NutaqDiags(Device):
     @DebugIt()
     def set_LandauampsettingA(self, LandauampsettingA):
         perseus_utils.write_settings_diag_milivolts(self.perseus, LandauampsettingA, 210, 'A')
+        self.push_change_event("LandauampsettingA", LandauampsettingA)
 
     @DebugIt()
     def get_LandauampsettingB(self):
@@ -4968,6 +5047,7 @@ class NutaqDiags(Device):
     @DebugIt()
     def set_LandauampsettingB(self, LandauampsettingB):
         perseus_utils.write_settings_diag_milivolts(self.perseus, LandauampsettingB, 210, 'B')
+        self.push_change_event("LandauampsettingB", LandauampsettingB)
 
     @DebugIt()
     def get_DisitckRvtet1DacsoffloopsstbyA(self):
@@ -4980,6 +5060,7 @@ class NutaqDiags(Device):
         self._DisitckRvtet1DacsoffloopsstbyA = DisitckRvtet1DacsoffloopsstbyA
         cavity = 'A'
         self.update_fim(cavity)
+        self.push_change_event("DisitckRvtet1DacsoffloopsstbyA", DisitckRvtet1DacsoffloopsstbyA)
 
     @DebugIt()
     def get_DisitckRvtet1DacsoffloopsstbyB(self):
@@ -4992,6 +5073,7 @@ class NutaqDiags(Device):
         self._DisitckRvtet1DacsoffloopsstbyB = DisitckRvtet1DacsoffloopsstbyB
         cavity = 'B'
         self.update_fim(cavity)
+        self.push_change_event("DisitckRvtet1DacsoffloopsstbyB", DisitckRvtet1DacsoffloopsstbyB)
 
     @DebugIt()
     def get_DisitckRvtet1PindiodeswitchA(self):
@@ -5004,6 +5086,7 @@ class NutaqDiags(Device):
         self._DisitckRvtet1PindiodeswitchA = DisitckRvtet1PindiodeswitchA
         cavity = 'A'
         self.update_fim(cavity)
+        self.push_change_event("DisitckRvtet1PindiodeswitchA", DisitckRvtet1PindiodeswitchA)
 
     @DebugIt()
     def get_DisitckRvtet1PindiodeswitchB(self):
@@ -5016,6 +5099,7 @@ class NutaqDiags(Device):
         self._DisitckRvtet1PindiodeswitchB = DisitckRvtet1PindiodeswitchB
         cavity = 'B'
         self.update_fim(cavity)
+        self.push_change_event("DisitckRvtet1PindiodeswitchB", DisitckRvtet1PindiodeswitchB)
 
     @DebugIt()
     def get_DisitckRvtet1FdltrgA(self):
@@ -5028,6 +5112,7 @@ class NutaqDiags(Device):
         self._DisitckRvtet1FdltrgA = DisitckRvtet1FdltrgA
         cavity = 'A'
         self.update_fim(cavity)
+        self.push_change_event("DisitckRvtet1FdltrgA", DisitckRvtet1FdltrgA)
 
     @DebugIt()
     def get_DisitckRvtet1FdltrgB(self):
@@ -5040,6 +5125,7 @@ class NutaqDiags(Device):
         self._DisitckRvtet1FdltrgB = DisitckRvtet1FdltrgB
         cavity = 'B'
         self.update_fim(cavity)
+        self.push_change_event("DisitckRvtet1FdltrgB", DisitckRvtet1FdltrgB)
 
     @DebugIt()
     def get_DisitckRvtet1PlctxoffA(self):
@@ -5052,6 +5138,7 @@ class NutaqDiags(Device):
         self._DisitckRvtet1PlctxoffA = DisitckRvtet1PlctxoffA
         cavity = 'A'
         self.update_fim(cavity)
+        self.push_change_event("DisitckRvtet1PlctxoffA", DisitckRvtet1PlctxoffA)
 
     @DebugIt()
     def get_DisitckRvtet1PlctxoffB(self):
@@ -5064,6 +5151,7 @@ class NutaqDiags(Device):
         self._DisitckRvtet1PlctxoffB = DisitckRvtet1PlctxoffB
         cavity = 'B'
         self.update_fim(cavity)
+        self.push_change_event("DisitckRvtet1PlctxoffB", DisitckRvtet1PlctxoffB)
 
     @DebugIt()
     def get_DisitckRvtet1MpsA(self):
@@ -5076,6 +5164,7 @@ class NutaqDiags(Device):
         self._DisitckRvtet1MpsA = DisitckRvtet1MpsA
         cavity = 'A'
         self.update_fim(cavity)
+        self.push_change_event("DisitckRvtet1MpsA", DisitckRvtet1MpsA)
 
     @DebugIt()
     def get_DisitckRvtet1MpsB(self):
@@ -5088,6 +5177,7 @@ class NutaqDiags(Device):
         self._DisitckRvtet1MpsB = DisitckRvtet1MpsB
         cavity = 'B'
         self.update_fim(cavity)
+        self.push_change_event("DisitckRvtet1MpsB", DisitckRvtet1MpsB)
 
     @DebugIt()
     def get_DisitckRvtet1DiagA(self):
@@ -5100,6 +5190,7 @@ class NutaqDiags(Device):
         self._DisitckRvtet1DiagA = DisitckRvtet1DiagA
         cavity = 'A'
         self.update_fim(cavity)
+        self.push_change_event("DisitckRvtet1DiagA", DisitckRvtet1DiagA)
 
     @DebugIt()
     def get_DisitckRvtet1DiagB(self):
@@ -5112,6 +5203,7 @@ class NutaqDiags(Device):
         self._DisitckRvtet1DiagB = DisitckRvtet1DiagB
         cavity = 'B'
         self.update_fim(cavity)
+        self.push_change_event("DisitckRvtet1DiagB", DisitckRvtet1DiagB)
 
     @DebugIt()
     def get_DisitckRvtet2DacsoffloopsstbyA(self):
@@ -5124,6 +5216,7 @@ class NutaqDiags(Device):
         self._DisitckRvtet2DacsoffloopsstbyA = DisitckRvtet2DacsoffloopsstbyA
         cavity = 'A'
         self.update_fim(cavity)
+        self.push_change_event("DisitckRvtet2DacsoffloopsstbyA", DisitckRvtet2DacsoffloopsstbyA)
 
     @DebugIt()
     def get_DisitckRvtet2DacsoffloopsstbyB(self):
@@ -5136,6 +5229,7 @@ class NutaqDiags(Device):
         self._DisitckRvtet2DacsoffloopsstbyB = DisitckRvtet2DacsoffloopsstbyB
         cavity = 'B'
         self.update_fim(cavity)
+        self.push_change_event("DisitckRvtet2DacsoffloopsstbyB", DisitckRvtet2DacsoffloopsstbyB)
 
     @DebugIt()
     def get_DisitckRvtet2PindiodeswitchA(self):
@@ -5148,6 +5242,7 @@ class NutaqDiags(Device):
         self._DisitckRvtet2PindiodeswitchA = DisitckRvtet2PindiodeswitchA
         cavity = 'A'
         self.update_fim(cavity)
+        self.push_change_event("DisitckRvtet2PindiodeswitchA", DisitckRvtet2PindiodeswitchA)
 
     @DebugIt()
     def get_DisitckRvtet2PindiodeswitchB(self):
@@ -5160,6 +5255,7 @@ class NutaqDiags(Device):
         self._DisitckRvtet2PindiodeswitchB = DisitckRvtet2PindiodeswitchB
         cavity = 'B'
         self.update_fim(cavity)
+        self.push_change_event("DisitckRvtet2PindiodeswitchB", DisitckRvtet2PindiodeswitchB)
 
     @DebugIt()
     def get_DisitckRvtet2FdltrgA(self):
@@ -5172,6 +5268,7 @@ class NutaqDiags(Device):
         self._DisitckRvtet2FdltrgA = DisitckRvtet2FdltrgA
         cavity = 'A'
         self.update_fim(cavity)
+        self.push_change_event("DisitckRvtet2FdltrgA", DisitckRvtet2FdltrgA)
 
     @DebugIt()
     def get_DisitckRvtet2FdltrgB(self):
@@ -5184,6 +5281,7 @@ class NutaqDiags(Device):
         self._DisitckRvtet2FdltrgB = DisitckRvtet2FdltrgB
         cavity = 'B'
         self.update_fim(cavity)
+        self.push_change_event("DisitckRvtet2FdltrgB", DisitckRvtet2FdltrgB)
 
     @DebugIt()
     def get_DisitckRvtet2PlctxoffA(self):
@@ -5196,6 +5294,7 @@ class NutaqDiags(Device):
         self._DisitckRvtet2PlctxoffA = DisitckRvtet2PlctxoffA
         cavity = 'A'
         self.update_fim(cavity)
+        self.push_change_event("DisitckRvtet2PlctxoffA", DisitckRvtet2PlctxoffA)
 
     @DebugIt()
     def get_DisitckRvtet2PlctxoffB(self):
@@ -5208,6 +5307,7 @@ class NutaqDiags(Device):
         self._DisitckRvtet2PlctxoffB = DisitckRvtet2PlctxoffB
         cavity = 'B'
         self.update_fim(cavity)
+        self.push_change_event("DisitckRvtet2PlctxoffB", DisitckRvtet2PlctxoffB)
 
     @DebugIt()
     def get_DisitckRvtet2MpsA(self):
@@ -5220,6 +5320,7 @@ class NutaqDiags(Device):
         self._DisitckRvtet2MpsA = DisitckRvtet2MpsA
         cavity = 'A'
         self.update_fim(cavity)
+        self.push_change_event("DisitckRvtet2MpsA", DisitckRvtet2MpsA)
 
     @DebugIt()
     def get_DisitckRvtet2MpsB(self):
@@ -5232,6 +5333,7 @@ class NutaqDiags(Device):
         self._DisitckRvtet2MpsB = DisitckRvtet2MpsB
         cavity = 'B'
         self.update_fim(cavity)
+        self.push_change_event("DisitckRvtet2MpsB", DisitckRvtet2MpsB)
 
     @DebugIt()
     def get_DisitckRvtet2DiagA(self):
@@ -5244,6 +5346,7 @@ class NutaqDiags(Device):
         self._DisitckRvtet2DiagA = DisitckRvtet2DiagA
         cavity = 'A'
         self.update_fim(cavity)
+        self.push_change_event("DisitckRvtet2DiagA", DisitckRvtet2DiagA)
 
     @DebugIt()
     def get_DisitckRvtet2DiagB(self):
@@ -5256,6 +5359,7 @@ class NutaqDiags(Device):
         self._DisitckRvtet2DiagB = DisitckRvtet2DiagB
         cavity = 'B'
         self.update_fim(cavity)
+        self.push_change_event("DisitckRvtet2DiagB", DisitckRvtet2DiagB)
 
     @DebugIt()
     def get_DisitckRvcircDacsoffloopsstbyA(self):
@@ -5268,6 +5372,7 @@ class NutaqDiags(Device):
         self._DisitckRvcircDacsoffloopsstbyA = DisitckRvcircDacsoffloopsstbyA
         cavity = 'A'
         self.update_fim(cavity)
+        self.push_change_event("DisitckRvcircDacsoffloopsstbyA", DisitckRvcircDacsoffloopsstbyA)
 
     @DebugIt()
     def get_DisitckRvcircDacsoffloopsstbyB(self):
@@ -5280,6 +5385,7 @@ class NutaqDiags(Device):
         self._DisitckRvcircDacsoffloopsstbyB = DisitckRvcircDacsoffloopsstbyB
         cavity = 'B'
         self.update_fim(cavity)
+        self.push_change_event("DisitckRvcircDacsoffloopsstbyB", DisitckRvcircDacsoffloopsstbyB)
 
     @DebugIt()
     def get_DisitckRvcircPindiodeswitchA(self):
@@ -5292,6 +5398,7 @@ class NutaqDiags(Device):
         self._DisitckRvcircPindiodeswitchA = DisitckRvcircPindiodeswitchA
         cavity = 'A'
         self.update_fim(cavity)
+        self.push_change_event("DisitckRvcircPindiodeswitchA", DisitckRvcircPindiodeswitchA)
 
     @DebugIt()
     def get_DisitckRvcircPindiodeswitchB(self):
@@ -5304,6 +5411,7 @@ class NutaqDiags(Device):
         self._DisitckRvcircPindiodeswitchB = DisitckRvcircPindiodeswitchB
         cavity = 'B'
         self.update_fim(cavity)
+        self.push_change_event("DisitckRvcircPindiodeswitchB", DisitckRvcircPindiodeswitchB)
 
     @DebugIt()
     def get_DisitckRvcircFdltrgA(self):
@@ -5316,6 +5424,7 @@ class NutaqDiags(Device):
         self._DisitckRvcircFdltrgA = DisitckRvcircFdltrgA
         cavity = 'A'
         self.update_fim(cavity)
+        self.push_change_event("DisitckRvcircFdltrgA", DisitckRvcircFdltrgA)
 
     @DebugIt()
     def get_DisitckRvcircFdltrgB(self):
@@ -5328,6 +5437,7 @@ class NutaqDiags(Device):
         self._DisitckRvcircFdltrgB = DisitckRvcircFdltrgB
         cavity = 'B'
         self.update_fim(cavity)
+        self.push_change_event("DisitckRvcircFdltrgB", DisitckRvcircFdltrgB)
 
     @DebugIt()
     def get_DisitckRvcircPlctxoffA(self):
@@ -5340,6 +5450,7 @@ class NutaqDiags(Device):
         self._DisitckRvcircPlctxoffA = DisitckRvcircPlctxoffA
         cavity = 'A'
         self.update_fim(cavity)
+        self.push_change_event("DisitckRvcircPlctxoffA", DisitckRvcircPlctxoffA)
 
     @DebugIt()
     def get_DisitckRvcircPlctxoffB(self):
@@ -5352,6 +5463,7 @@ class NutaqDiags(Device):
         self._DisitckRvcircPlctxoffB = DisitckRvcircPlctxoffB
         cavity = 'B'
         self.update_fim(cavity)
+        self.push_change_event("DisitckRvcircPlctxoffB", DisitckRvcircPlctxoffB)
 
     @DebugIt()
     def get_DisitckRvcircMpsA(self):
@@ -5364,6 +5476,7 @@ class NutaqDiags(Device):
         self._DisitckRvcircMpsA = DisitckRvcircMpsA
         cavity = 'A'
         self.update_fim(cavity)
+        self.push_change_event("DisitckRvcircMpsA", DisitckRvcircMpsA)
 
     @DebugIt()
     def get_DisitckRvcircMpsB(self):
@@ -5376,6 +5489,7 @@ class NutaqDiags(Device):
         self._DisitckRvcircMpsB = DisitckRvcircMpsB
         cavity = 'B'
         self.update_fim(cavity)
+        self.push_change_event("DisitckRvcircMpsB", DisitckRvcircMpsB)
 
     @DebugIt()
     def get_DisitckRvcircDiagA(self):
@@ -5388,6 +5502,7 @@ class NutaqDiags(Device):
         self._DisitckRvcircDiagA = DisitckRvcircDiagA
         cavity = 'A'
         self.update_fim(cavity)
+        self.push_change_event("DisitckRvcircDiagA", DisitckRvcircDiagA)
 
     @DebugIt()
     def get_DisitckRvcircDiagB(self):
@@ -5400,6 +5515,7 @@ class NutaqDiags(Device):
         self._DisitckRvcircDiagB = DisitckRvcircDiagB
         cavity = 'B'
         self.update_fim(cavity)
+        self.push_change_event("DisitckRvcircDiagB", DisitckRvcircDiagB)
 
     @DebugIt()
     def get_DisitckFwloadDacsoffloopsstbyA(self):
@@ -5412,6 +5528,7 @@ class NutaqDiags(Device):
         self._DisitckFwloadDacsoffloopsstbyA = DisitckFwloadDacsoffloopsstbyA
         cavity = 'A'
         self.update_fim(cavity)
+        self.push_change_event("DisitckFwloadDacsoffloopsstbyA", DisitckFwloadDacsoffloopsstbyA)
 
     @DebugIt()
     def get_DisitckFwloadDacsoffloopsstbyB(self):
@@ -5424,6 +5541,7 @@ class NutaqDiags(Device):
         self._DisitckFwloadDacsoffloopsstbyB = DisitckFwloadDacsoffloopsstbyB
         cavity = 'B'
         self.update_fim(cavity)
+        self.push_change_event("DisitckFwloadDacsoffloopsstbyB", DisitckFwloadDacsoffloopsstbyB)
 
     @DebugIt()
     def get_DisitckFwloadPindiodeswitchA(self):
@@ -5436,6 +5554,7 @@ class NutaqDiags(Device):
         self._DisitckFwloadPindiodeswitchA = DisitckFwloadPindiodeswitchA
         cavity = 'A'
         self.update_fim(cavity)
+        self.push_change_event("DisitckFwloadPindiodeswitchA", DisitckFwloadPindiodeswitchA)
 
     @DebugIt()
     def get_DisitckFwloadPindiodeswitchB(self):
@@ -5448,6 +5567,7 @@ class NutaqDiags(Device):
         self._DisitckFwloadPindiodeswitchB = DisitckFwloadPindiodeswitchB
         cavity = 'B'
         self.update_fim(cavity)
+        self.push_change_event("DisitckFwloadPindiodeswitchB", DisitckFwloadPindiodeswitchB)
 
     @DebugIt()
     def get_DisitckFwloadFdltrgA(self):
@@ -5460,6 +5580,7 @@ class NutaqDiags(Device):
         self._DisitckFwloadFdltrgA = DisitckFwloadFdltrgA
         cavity = 'A'
         self.update_fim(cavity)
+        self.push_change_event("DisitckFwloadFdltrgA", DisitckFwloadFdltrgA)
 
     @DebugIt()
     def get_DisitckFwloadFdltrgB(self):
@@ -5472,6 +5593,7 @@ class NutaqDiags(Device):
         self._DisitckFwloadFdltrgB = DisitckFwloadFdltrgB
         cavity = 'B'
         self.update_fim(cavity)
+        self.push_change_event("DisitckFwloadFdltrgB", DisitckFwloadFdltrgB)
 
     @DebugIt()
     def get_DisitckFwloadPlctxoffA(self):
@@ -5484,6 +5606,7 @@ class NutaqDiags(Device):
         self._DisitckFwloadPlctxoffA = DisitckFwloadPlctxoffA
         cavity = 'A'
         self.update_fim(cavity)
+        self.push_change_event("DisitckFwloadPlctxoffA", DisitckFwloadPlctxoffA)
 
     @DebugIt()
     def get_DisitckFwloadPlctxoffB(self):
@@ -5496,6 +5619,7 @@ class NutaqDiags(Device):
         self._DisitckFwloadPlctxoffB = DisitckFwloadPlctxoffB
         cavity = 'B'
         self.update_fim(cavity)
+        self.push_change_event("DisitckFwloadPlctxoffB", DisitckFwloadPlctxoffB)
 
     @DebugIt()
     def get_DisitckFwloadMpsA(self):
@@ -5508,6 +5632,7 @@ class NutaqDiags(Device):
         self._DisitckFwloadMpsA = DisitckFwloadMpsA
         cavity = 'A'
         self.update_fim(cavity)
+        self.push_change_event("DisitckFwloadMpsA", DisitckFwloadMpsA)
 
     @DebugIt()
     def get_DisitckFwloadMpsB(self):
@@ -5520,6 +5645,7 @@ class NutaqDiags(Device):
         self._DisitckFwloadMpsB = DisitckFwloadMpsB
         cavity = 'B'
         self.update_fim(cavity)
+        self.push_change_event("DisitckFwloadMpsB", DisitckFwloadMpsB)
 
     @DebugIt()
     def get_DisitckFwloadDiagA(self):
@@ -5532,6 +5658,7 @@ class NutaqDiags(Device):
         self._DisitckFwloadDiagA = DisitckFwloadDiagA
         cavity = 'A'
         self.update_fim(cavity)
+        self.push_change_event("DisitckFwloadDiagA", DisitckFwloadDiagA)
 
     @DebugIt()
     def get_DisitckFwloadDiagB(self):
@@ -5544,6 +5671,7 @@ class NutaqDiags(Device):
         self._DisitckFwloadDiagB = DisitckFwloadDiagB
         cavity = 'B'
         self.update_fim(cavity)
+        self.push_change_event("DisitckFwloadDiagB", DisitckFwloadDiagB)
 
     @DebugIt()
     def get_DisitckFwhybloadDacsoffloopsstbyA(self):
@@ -5556,6 +5684,7 @@ class NutaqDiags(Device):
         self._DisitckFwhybloadDacsoffloopsstbyA = DisitckFwhybloadDacsoffloopsstbyA
         cavity = 'A'
         self.update_fim(cavity)
+        self.push_change_event("DisitckFwhybloadDacsoffloopsstbyA", DisitckFwhybloadDacsoffloopsstbyA)
 
     @DebugIt()
     def get_DisitckFwhybloadDacsoffloopsstbyB(self):
@@ -5568,6 +5697,7 @@ class NutaqDiags(Device):
         self._DisitckFwhybloadDacsoffloopsstbyB = DisitckFwhybloadDacsoffloopsstbyB
         cavity = 'B'
         self.update_fim(cavity)
+        self.push_change_event("DisitckFwhybloadDacsoffloopsstbyB", DisitckFwhybloadDacsoffloopsstbyB)
 
     @DebugIt()
     def get_DisitckFwhybloadPindiodeswitchA(self):
@@ -5580,6 +5710,7 @@ class NutaqDiags(Device):
         self._DisitckFwhybloadPindiodeswitchA = DisitckFwhybloadPindiodeswitchA
         cavity = 'A'
         self.update_fim(cavity)
+        self.push_change_event("DisitckFwhybloadPindiodeswitchA", DisitckFwhybloadPindiodeswitchA)
 
     @DebugIt()
     def get_DisitckFwhybloadPindiodeswitchB(self):
@@ -5592,6 +5723,7 @@ class NutaqDiags(Device):
         self._DisitckFwhybloadPindiodeswitchB = DisitckFwhybloadPindiodeswitchB
         cavity = 'B'
         self.update_fim(cavity)
+        self.push_change_event("DisitckFwhybloadPindiodeswitchB", DisitckFwhybloadPindiodeswitchB)
 
     @DebugIt()
     def get_DisitckFwhybloadFdltrgA(self):
@@ -5604,6 +5736,7 @@ class NutaqDiags(Device):
         self._DisitckFwhybloadFdltrgA = DisitckFwhybloadFdltrgA
         cavity = 'A'
         self.update_fim(cavity)
+        self.push_change_event("DisitckFwhybloadFdltrgA", DisitckFwhybloadFdltrgA)
 
     @DebugIt()
     def get_DisitckFwhybloadFdltrgB(self):
@@ -5616,6 +5749,7 @@ class NutaqDiags(Device):
         self._DisitckFwhybloadFdltrgB = DisitckFwhybloadFdltrgB
         cavity = 'B'
         self.update_fim(cavity)
+        self.push_change_event("DisitckFwhybloadFdltrgB", DisitckFwhybloadFdltrgB)
 
     @DebugIt()
     def get_DisitckFwhybloadPlctxoffA(self):
@@ -5628,6 +5762,7 @@ class NutaqDiags(Device):
         self._DisitckFwhybloadPlctxoffA = DisitckFwhybloadPlctxoffA
         cavity = 'A'
         self.update_fim(cavity)
+        self.push_change_event("DisitckFwhybloadPlctxoffA", DisitckFwhybloadPlctxoffA)
 
     @DebugIt()
     def get_DisitckFwhybloadPlctxoffB(self):
@@ -5640,6 +5775,7 @@ class NutaqDiags(Device):
         self._DisitckFwhybloadPlctxoffB = DisitckFwhybloadPlctxoffB
         cavity = 'B'
         self.update_fim(cavity)
+        self.push_change_event("DisitckFwhybloadPlctxoffB", DisitckFwhybloadPlctxoffB)
 
     @DebugIt()
     def get_DisitckFwhybloadMpsA(self):
@@ -5652,6 +5788,7 @@ class NutaqDiags(Device):
         self._DisitckFwhybloadMpsA = DisitckFwhybloadMpsA
         cavity = 'A'
         self.update_fim(cavity)
+        self.push_change_event("DisitckFwhybloadMpsA", DisitckFwhybloadMpsA)
 
     @DebugIt()
     def get_DisitckFwhybloadMpsB(self):
@@ -5664,6 +5801,7 @@ class NutaqDiags(Device):
         self._DisitckFwhybloadMpsB = DisitckFwhybloadMpsB
         cavity = 'B'
         self.update_fim(cavity)
+        self.push_change_event("DisitckFwhybloadMpsB", DisitckFwhybloadMpsB)
 
     @DebugIt()
     def get_DisitckFwhybloadDiagA(self):
@@ -5676,6 +5814,7 @@ class NutaqDiags(Device):
         self._DisitckFwhybloadDiagA = DisitckFwhybloadDiagA
         cavity = 'A'
         self.update_fim(cavity)
+        self.push_change_event("DisitckFwhybloadDiagA", DisitckFwhybloadDiagA)
 
     @DebugIt()
     def get_DisitckFwhybloadDiagB(self):
@@ -5688,6 +5827,7 @@ class NutaqDiags(Device):
         self._DisitckFwhybloadDiagB = DisitckFwhybloadDiagB
         cavity = 'B'
         self.update_fim(cavity)
+        self.push_change_event("DisitckFwhybloadDiagB", DisitckFwhybloadDiagB)
 
     @DebugIt()
     def get_DisitckRvcavDacsoffloopsstbyA(self):
@@ -5700,6 +5840,7 @@ class NutaqDiags(Device):
         self._DisitckRvcavDacsoffloopsstbyA = DisitckRvcavDacsoffloopsstbyA
         cavity = 'A'
         self.update_fim(cavity)
+        self.push_change_event("DisitckRvcavDacsoffloopsstbyA", DisitckRvcavDacsoffloopsstbyA)
 
     @DebugIt()
     def get_DisitckRvcavDacsoffloopsstbyB(self):
@@ -5712,6 +5853,7 @@ class NutaqDiags(Device):
         self._DisitckRvcavDacsoffloopsstbyB = DisitckRvcavDacsoffloopsstbyB
         cavity = 'B'
         self.update_fim(cavity)
+        self.push_change_event("DisitckRvcavDacsoffloopsstbyB", DisitckRvcavDacsoffloopsstbyB)
 
     @DebugIt()
     def get_DisitckRvcavPindiodeswitchA(self):
@@ -5724,6 +5866,7 @@ class NutaqDiags(Device):
         self._DisitckRvcavPindiodeswitchA = DisitckRvcavPindiodeswitchA
         cavity = 'A'
         self.update_fim(cavity)
+        self.push_change_event("DisitckRvcavPindiodeswitchA", DisitckRvcavPindiodeswitchA)
 
     @DebugIt()
     def get_DisitckRvcavPindiodeswitchB(self):
@@ -5736,6 +5879,7 @@ class NutaqDiags(Device):
         self._DisitckRvcavPindiodeswitchB = DisitckRvcavPindiodeswitchB
         cavity = 'B'
         self.update_fim(cavity)
+        self.push_change_event("DisitckRvcavPindiodeswitchB", DisitckRvcavPindiodeswitchB)
 
     @DebugIt()
     def get_DisitckRvcavFdltrgA(self):
@@ -5748,6 +5892,7 @@ class NutaqDiags(Device):
         self._DisitckRvcavFdltrgA = DisitckRvcavFdltrgA
         cavity = 'A'
         self.update_fim(cavity)
+        self.push_change_event("DisitckRvcavFdltrgA", DisitckRvcavFdltrgA)
 
     @DebugIt()
     def get_DisitckRvcavFdltrgB(self):
@@ -5760,6 +5905,7 @@ class NutaqDiags(Device):
         self._DisitckRvcavFdltrgB = DisitckRvcavFdltrgB
         cavity = 'B'
         self.update_fim(cavity)
+        self.push_change_event("DisitckRvcavFdltrgB", DisitckRvcavFdltrgB)
 
     @DebugIt()
     def get_DisitckRvcavPlctxoffA(self):
@@ -5772,6 +5918,7 @@ class NutaqDiags(Device):
         self._DisitckRvcavPlctxoffA = DisitckRvcavPlctxoffA
         cavity = 'A'
         self.update_fim(cavity)
+        self.push_change_event("DisitckRvcavPlctxoffA", DisitckRvcavPlctxoffA)
 
     @DebugIt()
     def get_DisitckRvcavPlctxoffB(self):
@@ -5784,6 +5931,7 @@ class NutaqDiags(Device):
         self._DisitckRvcavPlctxoffB = DisitckRvcavPlctxoffB
         cavity = 'B'
         self.update_fim(cavity)
+        self.push_change_event("DisitckRvcavPlctxoffB", DisitckRvcavPlctxoffB)
 
     @DebugIt()
     def get_DisitckRvcavMpsA(self):
@@ -5796,6 +5944,7 @@ class NutaqDiags(Device):
         self._DisitckRvcavMpsA = DisitckRvcavMpsA
         cavity = 'A'
         self.update_fim(cavity)
+        self.push_change_event("DisitckRvcavMpsA", DisitckRvcavMpsA)
 
     @DebugIt()
     def get_DisitckRvcavMpsB(self):
@@ -5808,6 +5957,7 @@ class NutaqDiags(Device):
         self._DisitckRvcavMpsB = DisitckRvcavMpsB
         cavity = 'B'
         self.update_fim(cavity)
+        self.push_change_event("DisitckRvcavMpsB", DisitckRvcavMpsB)
 
     @DebugIt()
     def get_DisitckRvcavDiagA(self):
@@ -5820,6 +5970,7 @@ class NutaqDiags(Device):
         self._DisitckRvcavDiagA = DisitckRvcavDiagA
         cavity = 'A'
         self.update_fim(cavity)
+        self.push_change_event("DisitckRvcavDiagA", DisitckRvcavDiagA)
 
     @DebugIt()
     def get_DisitckRvcavDiagB(self):
@@ -5832,6 +5983,7 @@ class NutaqDiags(Device):
         self._DisitckRvcavDiagB = DisitckRvcavDiagB
         cavity = 'B'
         self.update_fim(cavity)
+        self.push_change_event("DisitckRvcavDiagB", DisitckRvcavDiagB)
 
     @DebugIt()
     def get_DisitckArcsDacsoffloopsstbyA(self):
@@ -5844,6 +5996,7 @@ class NutaqDiags(Device):
         self._DisitckArcsDacsoffloopsstbyA = DisitckArcsDacsoffloopsstbyA
         cavity = 'A'
         self.update_fim(cavity)
+        self.push_change_event("DisitckArcsDacsoffloopsstbyA", DisitckArcsDacsoffloopsstbyA)
 
     @DebugIt()
     def get_DisitckArcsDacsoffloopsstbyB(self):
@@ -5856,6 +6009,7 @@ class NutaqDiags(Device):
         self._DisitckArcsDacsoffloopsstbyB = DisitckArcsDacsoffloopsstbyB
         cavity = 'B'
         self.update_fim(cavity)
+        self.push_change_event("DisitckArcsDacsoffloopsstbyB", DisitckArcsDacsoffloopsstbyB)
 
     @DebugIt()
     def get_DisitckArcsPindiodeswitchA(self):
@@ -5868,6 +6022,7 @@ class NutaqDiags(Device):
         self._DisitckArcsPindiodeswitchA = DisitckArcsPindiodeswitchA
         cavity = 'A'
         self.update_fim(cavity)
+        self.push_change_event("DisitckArcsPindiodeswitchA", DisitckArcsPindiodeswitchA)
 
     @DebugIt()
     def get_DisitckArcsPindiodeswitchB(self):
@@ -5880,6 +6035,7 @@ class NutaqDiags(Device):
         self._DisitckArcsPindiodeswitchB = DisitckArcsPindiodeswitchB
         cavity = 'B'
         self.update_fim(cavity)
+        self.push_change_event("DisitckArcsPindiodeswitchB", DisitckArcsPindiodeswitchB)
 
     @DebugIt()
     def get_DisitckArcsFdltrgA(self):
@@ -5892,6 +6048,7 @@ class NutaqDiags(Device):
         self._DisitckArcsFdltrgA = DisitckArcsFdltrgA
         cavity = 'A'
         self.update_fim(cavity)
+        self.push_change_event("DisitckArcsFdltrgA", DisitckArcsFdltrgA)
 
     @DebugIt()
     def get_DisitckArcsFdltrgB(self):
@@ -5904,6 +6061,7 @@ class NutaqDiags(Device):
         self._DisitckArcsFdltrgB = DisitckArcsFdltrgB
         cavity = 'B'
         self.update_fim(cavity)
+        self.push_change_event("DisitckArcsFdltrgB", DisitckArcsFdltrgB)
 
     @DebugIt()
     def get_DisitckArcsPlctxoffA(self):
@@ -5916,6 +6074,7 @@ class NutaqDiags(Device):
         self._DisitckArcsPlctxoffA = DisitckArcsPlctxoffA
         cavity = 'A'
         self.update_fim(cavity)
+        self.push_change_event("DisitckArcsPlctxoffA", DisitckArcsPlctxoffA)
 
     @DebugIt()
     def get_DisitckArcsPlctxoffB(self):
@@ -5928,6 +6087,7 @@ class NutaqDiags(Device):
         self._DisitckArcsPlctxoffB = DisitckArcsPlctxoffB
         cavity = 'B'
         self.update_fim(cavity)
+        self.push_change_event("DisitckArcsPlctxoffB", DisitckArcsPlctxoffB)
 
     @DebugIt()
     def get_DisitckArcsMpsA(self):
@@ -5940,6 +6100,7 @@ class NutaqDiags(Device):
         self._DisitckArcsMpsA = DisitckArcsMpsA
         cavity = 'A'
         self.update_fim(cavity)
+        self.push_change_event("DisitckArcsMpsA", DisitckArcsMpsA)
 
     @DebugIt()
     def get_DisitckArcsMpsB(self):
@@ -5952,6 +6113,7 @@ class NutaqDiags(Device):
         self._DisitckArcsMpsB = DisitckArcsMpsB
         cavity = 'B'
         self.update_fim(cavity)
+        self.push_change_event("DisitckArcsMpsB", DisitckArcsMpsB)
 
     @DebugIt()
     def get_DisitckArcsDiagA(self):
@@ -5964,6 +6126,7 @@ class NutaqDiags(Device):
         self._DisitckArcsDiagA = DisitckArcsDiagA
         cavity = 'A'
         self.update_fim(cavity)
+        self.push_change_event("DisitckArcsDiagA", DisitckArcsDiagA)
 
     @DebugIt()
     def get_DisitckArcsDiagB(self):
@@ -5976,6 +6139,7 @@ class NutaqDiags(Device):
         self._DisitckArcsDiagB = DisitckArcsDiagB
         cavity = 'B'
         self.update_fim(cavity)
+        self.push_change_event("DisitckArcsDiagB", DisitckArcsDiagB)
 
     @DebugIt()
     def get_DisitckVacuumDacsoffloopsstbyA(self):
@@ -5988,6 +6152,7 @@ class NutaqDiags(Device):
         self._DisitckVacuumDacsoffloopsstbyA = DisitckVacuumDacsoffloopsstbyA
         cavity = 'A'
         self.update_fim(cavity)
+        self.push_change_event("DisitckVacuumDacsoffloopsstbyA", DisitckVacuumDacsoffloopsstbyA)
 
     @DebugIt()
     def get_DisitckVacuumDacsoffloopsstbyB(self):
@@ -6000,6 +6165,7 @@ class NutaqDiags(Device):
         self._DisitckVacuumDacsoffloopsstbyB = DisitckVacuumDacsoffloopsstbyB
         cavity = 'B'
         self.update_fim(cavity)
+        self.push_change_event("DisitckVacuumDacsoffloopsstbyB", DisitckVacuumDacsoffloopsstbyB)
 
     @DebugIt()
     def get_DisitckVacuumPindiodeswitchA(self):
@@ -6012,6 +6178,7 @@ class NutaqDiags(Device):
         self._DisitckVacuumPindiodeswitchA = DisitckVacuumPindiodeswitchA
         cavity = 'A'
         self.update_fim(cavity)
+        self.push_change_event("DisitckVacuumPindiodeswitchA", DisitckVacuumPindiodeswitchA)
 
     @DebugIt()
     def get_DisitckVacuumPindiodeswitchB(self):
@@ -6024,6 +6191,7 @@ class NutaqDiags(Device):
         self._DisitckVacuumPindiodeswitchB = DisitckVacuumPindiodeswitchB
         cavity = 'B'
         self.update_fim(cavity)
+        self.push_change_event("DisitckVacuumPindiodeswitchB", DisitckVacuumPindiodeswitchB)
 
     @DebugIt()
     def get_DisitckVacuumFdltrgA(self):
@@ -6036,6 +6204,7 @@ class NutaqDiags(Device):
         self._DisitckVacuumFdltrgA = DisitckVacuumFdltrgA
         cavity = 'A'
         self.update_fim(cavity)
+        self.push_change_event("DisitckVacuumFdltrgA", DisitckVacuumFdltrgA)
 
     @DebugIt()
     def get_DisitckVacuumFdltrgB(self):
@@ -6048,6 +6217,7 @@ class NutaqDiags(Device):
         self._DisitckVacuumFdltrgB = DisitckVacuumFdltrgB
         cavity = 'B'
         self.update_fim(cavity)
+        self.push_change_event("DisitckVacuumFdltrgB", DisitckVacuumFdltrgB)
 
     @DebugIt()
     def get_DisitckVacuumPlctxoffA(self):
@@ -6060,6 +6230,7 @@ class NutaqDiags(Device):
         self._DisitckVacuumPlctxoffA = DisitckVacuumPlctxoffA
         cavity = 'A'
         self.update_fim(cavity)
+        self.push_change_event("DisitckVacuumPlctxoffA", DisitckVacuumPlctxoffA)
 
     @DebugIt()
     def get_DisitckVacuumPlctxoffB(self):
@@ -6072,6 +6243,7 @@ class NutaqDiags(Device):
         self._DisitckVacuumPlctxoffB = DisitckVacuumPlctxoffB
         cavity = 'B'
         self.update_fim(cavity)
+        self.push_change_event("DisitckVacuumPlctxoffB", DisitckVacuumPlctxoffB)
 
     @DebugIt()
     def get_DisitckVacuumMpsA(self):
@@ -6084,6 +6256,7 @@ class NutaqDiags(Device):
         self._DisitckVacuumMpsA = DisitckVacuumMpsA
         cavity = 'A'
         self.update_fim(cavity)
+        self.push_change_event("DisitckVacuumMpsA", DisitckVacuumMpsA)
 
     @DebugIt()
     def get_DisitckVacuumMpsB(self):
@@ -6096,6 +6269,7 @@ class NutaqDiags(Device):
         self._DisitckVacuumMpsB = DisitckVacuumMpsB
         cavity = 'B'
         self.update_fim(cavity)
+        self.push_change_event("DisitckVacuumMpsB", DisitckVacuumMpsB)
 
     @DebugIt()
     def get_DisitckVacuumDiagA(self):
@@ -6108,6 +6282,7 @@ class NutaqDiags(Device):
         self._DisitckVacuumDiagA = DisitckVacuumDiagA
         cavity = 'A'
         self.update_fim(cavity)
+        self.push_change_event("DisitckVacuumDiagA", DisitckVacuumDiagA)
 
     @DebugIt()
     def get_DisitckVacuumDiagB(self):
@@ -6120,6 +6295,7 @@ class NutaqDiags(Device):
         self._DisitckVacuumDiagB = DisitckVacuumDiagB
         cavity = 'B'
         self.update_fim(cavity)
+        self.push_change_event("DisitckVacuumDiagB", DisitckVacuumDiagB)
 
     @DebugIt()
     def get_DisitckManualInterlockDacsoffloopsstbyA(self):
@@ -6132,6 +6308,7 @@ class NutaqDiags(Device):
         self._DisitckManualInterlockDacsoffloopsstbyA = DisitckManualInterlockDacsoffloopsstbyA
         cavity = 'A'
         self.update_fim(cavity)
+        self.push_change_event("DisitckManualInterlockDacsoffloopsstbyA", DisitckManualInterlockDacsoffloopsstbyA)
 
     @DebugIt()
     def get_DisitckManualInterlockDacsoffloopsstbyB(self):
@@ -6144,6 +6321,7 @@ class NutaqDiags(Device):
         self._DisitckManualInterlockDacsoffloopsstbyB = DisitckManualInterlockDacsoffloopsstbyB
         cavity = 'B'
         self.update_fim(cavity)
+        self.push_change_event("DisitckManualInterlockDacsoffloopsstbyB", DisitckManualInterlockDacsoffloopsstbyB)
 
     @DebugIt()
     def get_DisitckManualInterlockPindiodeswitchA(self):
@@ -6156,6 +6334,7 @@ class NutaqDiags(Device):
         self._DisitckManualInterlockPindiodeswitchA = DisitckManualInterlockPindiodeswitchA
         cavity = 'A'
         self.update_fim(cavity)
+        self.push_change_event("DisitckManualInterlockPindiodeswitchA", DisitckManualInterlockPindiodeswitchA)
 
     @DebugIt()
     def get_DisitckManualInterlockPindiodeswitchB(self):
@@ -6168,6 +6347,7 @@ class NutaqDiags(Device):
         self._DisitckManualInterlockPindiodeswitchB = DisitckManualInterlockPindiodeswitchB
         cavity = 'B'
         self.update_fim(cavity)
+        self.push_change_event("DisitckManualInterlockPindiodeswitchB", DisitckManualInterlockPindiodeswitchB)
 
     @DebugIt()
     def get_DisitckManualInterlockFdltrgA(self):
@@ -6180,6 +6360,7 @@ class NutaqDiags(Device):
         self._DisitckManualInterlockFdltrgA = DisitckManualInterlockFdltrgA
         cavity = 'A'
         self.update_fim(cavity)
+        self.push_change_event("DisitckManualInterlockFdltrgA", DisitckManualInterlockFdltrgA)
 
     @DebugIt()
     def get_DisitckManualInterlockFdltrgB(self):
@@ -6192,6 +6373,7 @@ class NutaqDiags(Device):
         self._DisitckManualInterlockFdltrgB = DisitckManualInterlockFdltrgB
         cavity = 'B'
         self.update_fim(cavity)
+        self.push_change_event("DisitckManualInterlockFdltrgB", DisitckManualInterlockFdltrgB)
 
     @DebugIt()
     def get_DisitckManualInterlockPlctxoffA(self):
@@ -6204,6 +6386,7 @@ class NutaqDiags(Device):
         self._DisitckManualInterlockPlctxoffA = DisitckManualInterlockPlctxoffA
         cavity = 'A'
         self.update_fim(cavity)
+        self.push_change_event("DisitckManualInterlockPlctxoffA", DisitckManualInterlockPlctxoffA)
 
     @DebugIt()
     def get_DisitckManualInterlockPlctxoffB(self):
@@ -6216,6 +6399,7 @@ class NutaqDiags(Device):
         self._DisitckManualInterlockPlctxoffB = DisitckManualInterlockPlctxoffB
         cavity = 'B'
         self.update_fim(cavity)
+        self.push_change_event("DisitckManualInterlockPlctxoffB", DisitckManualInterlockPlctxoffB)
 
     @DebugIt()
     def get_DisitckManualInterlockMpsA(self):
@@ -6228,6 +6412,7 @@ class NutaqDiags(Device):
         self._DisitckManualInterlockMpsA = DisitckManualInterlockMpsA
         cavity = 'A'
         self.update_fim(cavity)
+        self.push_change_event("DisitckManualInterlockMpsA", DisitckManualInterlockMpsA)
 
     @DebugIt()
     def get_DisitckManualInterlockMpsB(self):
@@ -6240,6 +6425,7 @@ class NutaqDiags(Device):
         self._DisitckManualInterlockMpsB = DisitckManualInterlockMpsB
         cavity = 'B'
         self.update_fim(cavity)
+        self.push_change_event("DisitckManualInterlockMpsB", DisitckManualInterlockMpsB)
 
     @DebugIt()
     def get_DisitckManualInterlockDiagA(self):
@@ -6252,6 +6438,7 @@ class NutaqDiags(Device):
         self._DisitckManualInterlockDiagA = DisitckManualInterlockDiagA
         cavity = 'A'
         self.update_fim(cavity)
+        self.push_change_event("DisitckManualInterlockDiagA", DisitckManualInterlockDiagA)
 
     @DebugIt()
     def get_DisitckManualInterlockDiagB(self):
@@ -6264,6 +6451,7 @@ class NutaqDiags(Device):
         self._DisitckManualInterlockDiagB = DisitckManualInterlockDiagB
         cavity = 'B'
         self.update_fim(cavity)
+        self.push_change_event("DisitckManualInterlockDiagB", DisitckManualInterlockDiagB)
 
     @DebugIt()
     def get_DisitckPlungerEndSwitchesUpDacsoffloopsstbyA(self):
@@ -6276,6 +6464,7 @@ class NutaqDiags(Device):
         self._DisitckPlungerEndSwitchesUpDacsoffloopsstbyA = DisitckPlungerEndSwitchesUpDacsoffloopsstbyA
         cavity = 'A'
         self.update_fim(cavity)
+        self.push_change_event("DisitckPlungerEndSwitchesUpDacsoffloopsstbyA", DisitckPlungerEndSwitchesUpDacsoffloopsstbyA)
 
     @DebugIt()
     def get_DisitckPlungerEndSwitchesUpDacsoffloopsstbyB(self):
@@ -6288,6 +6477,7 @@ class NutaqDiags(Device):
         self._DisitckPlungerEndSwitchesUpDacsoffloopsstbyB = DisitckPlungerEndSwitchesUpDacsoffloopsstbyB
         cavity = 'B'
         self.update_fim(cavity)
+        self.push_change_event("DisitckPlungerEndSwitchesUpDacsoffloopsstbyB", DisitckPlungerEndSwitchesUpDacsoffloopsstbyB)
 
     @DebugIt()
     def get_DisitckPlungerEndSwitchesUpPindiodeswitchA(self):
@@ -6300,6 +6490,7 @@ class NutaqDiags(Device):
         self._DisitckPlungerEndSwitchesUpPindiodeswitchA = DisitckPlungerEndSwitchesUpPindiodeswitchA
         cavity = 'A'
         self.update_fim(cavity)
+        self.push_change_event("DisitckPlungerEndSwitchesUpPindiodeswitchA", DisitckPlungerEndSwitchesUpPindiodeswitchA)
 
     @DebugIt()
     def get_DisitckPlungerEndSwitchesUpPindiodeswitchB(self):
@@ -6312,6 +6503,7 @@ class NutaqDiags(Device):
         self._DisitckPlungerEndSwitchesUpPindiodeswitchB = DisitckPlungerEndSwitchesUpPindiodeswitchB
         cavity = 'B'
         self.update_fim(cavity)
+        self.push_change_event("DisitckPlungerEndSwitchesUpPindiodeswitchB", DisitckPlungerEndSwitchesUpPindiodeswitchB)
 
     @DebugIt()
     def get_DisitckPlungerEndSwitchesUpFdltrgA(self):
@@ -6324,6 +6516,7 @@ class NutaqDiags(Device):
         self._DisitckPlungerEndSwitchesUpFdltrgA = DisitckPlungerEndSwitchesUpFdltrgA
         cavity = 'A'
         self.update_fim(cavity)
+        self.push_change_event("DisitckPlungerEndSwitchesUpFdltrgA", DisitckPlungerEndSwitchesUpFdltrgA)
 
     @DebugIt()
     def get_DisitckPlungerEndSwitchesUpFdltrgB(self):
@@ -6336,6 +6529,7 @@ class NutaqDiags(Device):
         self._DisitckPlungerEndSwitchesUpFdltrgB = DisitckPlungerEndSwitchesUpFdltrgB
         cavity = 'B'
         self.update_fim(cavity)
+        self.push_change_event("DisitckPlungerEndSwitchesUpFdltrgB", DisitckPlungerEndSwitchesUpFdltrgB)
 
     @DebugIt()
     def get_DisitckPlungerEndSwitchesUpPlctxoffA(self):
@@ -6348,6 +6542,7 @@ class NutaqDiags(Device):
         self._DisitckPlungerEndSwitchesUpPlctxoffA = DisitckPlungerEndSwitchesUpPlctxoffA
         cavity = 'A'
         self.update_fim(cavity)
+        self.push_change_event("DisitckPlungerEndSwitchesUpPlctxoffA", DisitckPlungerEndSwitchesUpPlctxoffA)
 
     @DebugIt()
     def get_DisitckPlungerEndSwitchesUpPlctxoffB(self):
@@ -6360,6 +6555,7 @@ class NutaqDiags(Device):
         self._DisitckPlungerEndSwitchesUpPlctxoffB = DisitckPlungerEndSwitchesUpPlctxoffB
         cavity = 'B'
         self.update_fim(cavity)
+        self.push_change_event("DisitckPlungerEndSwitchesUpPlctxoffB", DisitckPlungerEndSwitchesUpPlctxoffB)
 
     @DebugIt()
     def get_DisitckPlungerEndSwitchesUpMpsA(self):
@@ -6372,6 +6568,7 @@ class NutaqDiags(Device):
         self._DisitckPlungerEndSwitchesUpMpsA = DisitckPlungerEndSwitchesUpMpsA
         cavity = 'A'
         self.update_fim(cavity)
+        self.push_change_event("DisitckPlungerEndSwitchesUpMpsA", DisitckPlungerEndSwitchesUpMpsA)
 
     @DebugIt()
     def get_DisitckPlungerEndSwitchesUpMpsB(self):
@@ -6384,6 +6581,7 @@ class NutaqDiags(Device):
         self._DisitckPlungerEndSwitchesUpMpsB = DisitckPlungerEndSwitchesUpMpsB
         cavity = 'B'
         self.update_fim(cavity)
+        self.push_change_event("DisitckPlungerEndSwitchesUpMpsB", DisitckPlungerEndSwitchesUpMpsB)
 
     @DebugIt()
     def get_DisitckPlungerEndSwitchesUpDiagA(self):
@@ -6396,6 +6594,7 @@ class NutaqDiags(Device):
         self._DisitckPlungerEndSwitchesUpDiagA = DisitckPlungerEndSwitchesUpDiagA
         cavity = 'A'
         self.update_fim(cavity)
+        self.push_change_event("DisitckPlungerEndSwitchesUpDiagA", DisitckPlungerEndSwitchesUpDiagA)
 
     @DebugIt()
     def get_DisitckPlungerEndSwitchesUpDiagB(self):
@@ -6408,6 +6607,7 @@ class NutaqDiags(Device):
         self._DisitckPlungerEndSwitchesUpDiagB = DisitckPlungerEndSwitchesUpDiagB
         cavity = 'B'
         self.update_fim(cavity)
+        self.push_change_event("DisitckPlungerEndSwitchesUpDiagB", DisitckPlungerEndSwitchesUpDiagB)
 
     @DebugIt()
     def get_DisitckPlungerEndSwitchesDownDacsoffloopsstbyA(self):
@@ -6420,6 +6620,7 @@ class NutaqDiags(Device):
         self._DisitckPlungerEndSwitchesDownDacsoffloopsstbyA = DisitckPlungerEndSwitchesDownDacsoffloopsstbyA
         cavity = 'A'
         self.update_fim(cavity)
+        self.push_change_event("DisitckPlungerEndSwitchesDownDacsoffloopsstbyA", DisitckPlungerEndSwitchesDownDacsoffloopsstbyA)
 
     @DebugIt()
     def get_DisitckPlungerEndSwitchesDownDacsoffloopsstbyB(self):
@@ -6432,6 +6633,7 @@ class NutaqDiags(Device):
         self._DisitckPlungerEndSwitchesDownDacsoffloopsstbyB = DisitckPlungerEndSwitchesDownDacsoffloopsstbyB
         cavity = 'B'
         self.update_fim(cavity)
+        self.push_change_event("DisitckPlungerEndSwitchesDownDacsoffloopsstbyB", DisitckPlungerEndSwitchesDownDacsoffloopsstbyB)
 
     @DebugIt()
     def get_DisitckPlungerEndSwitchesDownPindiodeswitchA(self):
@@ -6444,6 +6646,7 @@ class NutaqDiags(Device):
         self._DisitckPlungerEndSwitchesDownPindiodeswitchA = DisitckPlungerEndSwitchesDownPindiodeswitchA
         cavity = 'A'
         self.update_fim(cavity)
+        self.push_change_event("DisitckPlungerEndSwitchesDownPindiodeswitchA", DisitckPlungerEndSwitchesDownPindiodeswitchA)
 
     @DebugIt()
     def get_DisitckPlungerEndSwitchesDownPindiodeswitchB(self):
@@ -6456,6 +6659,7 @@ class NutaqDiags(Device):
         self._DisitckPlungerEndSwitchesDownPindiodeswitchB = DisitckPlungerEndSwitchesDownPindiodeswitchB
         cavity = 'B'
         self.update_fim(cavity)
+        self.push_change_event("DisitckPlungerEndSwitchesDownPindiodeswitchB", DisitckPlungerEndSwitchesDownPindiodeswitchB)
 
     @DebugIt()
     def get_DisitckPlungerEndSwitchesDownFdltrgA(self):
@@ -6468,6 +6672,7 @@ class NutaqDiags(Device):
         self._DisitckPlungerEndSwitchesDownFdltrgA = DisitckPlungerEndSwitchesDownFdltrgA
         cavity = 'A'
         self.update_fim(cavity)
+        self.push_change_event("DisitckPlungerEndSwitchesDownFdltrgA", DisitckPlungerEndSwitchesDownFdltrgA)
 
     @DebugIt()
     def get_DisitckPlungerEndSwitchesDownFdltrgB(self):
@@ -6480,6 +6685,7 @@ class NutaqDiags(Device):
         self._DisitckPlungerEndSwitchesDownFdltrgB = DisitckPlungerEndSwitchesDownFdltrgB
         cavity = 'B'
         self.update_fim(cavity)
+        self.push_change_event("DisitckPlungerEndSwitchesDownFdltrgB", DisitckPlungerEndSwitchesDownFdltrgB)
 
     @DebugIt()
     def get_DisitckPlungerEndSwitchesDownPlctxoffA(self):
@@ -6492,6 +6698,7 @@ class NutaqDiags(Device):
         self._DisitckPlungerEndSwitchesDownPlctxoffA = DisitckPlungerEndSwitchesDownPlctxoffA
         cavity = 'A'
         self.update_fim(cavity)
+        self.push_change_event("DisitckPlungerEndSwitchesDownPlctxoffA", DisitckPlungerEndSwitchesDownPlctxoffA)
 
     @DebugIt()
     def get_DisitckPlungerEndSwitchesDownPlctxoffB(self):
@@ -6504,6 +6711,7 @@ class NutaqDiags(Device):
         self._DisitckPlungerEndSwitchesDownPlctxoffB = DisitckPlungerEndSwitchesDownPlctxoffB
         cavity = 'B'
         self.update_fim(cavity)
+        self.push_change_event("DisitckPlungerEndSwitchesDownPlctxoffB", DisitckPlungerEndSwitchesDownPlctxoffB)
 
     @DebugIt()
     def get_DisitckPlungerEndSwitchesDownMpsA(self):
@@ -6516,6 +6724,7 @@ class NutaqDiags(Device):
         self._DisitckPlungerEndSwitchesDownMpsA = DisitckPlungerEndSwitchesDownMpsA
         cavity = 'A'
         self.update_fim(cavity)
+        self.push_change_event("DisitckPlungerEndSwitchesDownMpsA", DisitckPlungerEndSwitchesDownMpsA)
 
     @DebugIt()
     def get_DisitckPlungerEndSwitchesDownMpsB(self):
@@ -6528,6 +6737,7 @@ class NutaqDiags(Device):
         self._DisitckPlungerEndSwitchesDownMpsB = DisitckPlungerEndSwitchesDownMpsB
         cavity = 'B'
         self.update_fim(cavity)
+        self.push_change_event("DisitckPlungerEndSwitchesDownMpsB", DisitckPlungerEndSwitchesDownMpsB)
 
     @DebugIt()
     def get_DisitckPlungerEndSwitchesDownDiagA(self):
@@ -6540,6 +6750,7 @@ class NutaqDiags(Device):
         self._DisitckPlungerEndSwitchesDownDiagA = DisitckPlungerEndSwitchesDownDiagA
         cavity = 'A'
         self.update_fim(cavity)
+        self.push_change_event("DisitckPlungerEndSwitchesDownDiagA", DisitckPlungerEndSwitchesDownDiagA)
 
     @DebugIt()
     def get_DisitckPlungerEndSwitchesDownDiagB(self):
@@ -6552,6 +6763,7 @@ class NutaqDiags(Device):
         self._DisitckPlungerEndSwitchesDownDiagB = DisitckPlungerEndSwitchesDownDiagB
         cavity = 'B'
         self.update_fim(cavity)
+        self.push_change_event("DisitckPlungerEndSwitchesDownDiagB", DisitckPlungerEndSwitchesDownDiagB)
 
     @DebugIt()
     def get_DisitckMpsDacsoffloopsstbyA(self):
@@ -6564,6 +6776,7 @@ class NutaqDiags(Device):
         self._DisitckMpsDacsoffloopsstbyA = DisitckMpsDacsoffloopsstbyA
         cavity = 'A'
         self.update_fim(cavity)
+        self.push_change_event("DisitckMpsDacsoffloopsstbyA", DisitckMpsDacsoffloopsstbyA)
 
     @DebugIt()
     def get_DisitckMpsDacsoffloopsstbyB(self):
@@ -6576,6 +6789,7 @@ class NutaqDiags(Device):
         self._DisitckMpsDacsoffloopsstbyB = DisitckMpsDacsoffloopsstbyB
         cavity = 'B'
         self.update_fim(cavity)
+        self.push_change_event("DisitckMpsDacsoffloopsstbyB", DisitckMpsDacsoffloopsstbyB)
 
     @DebugIt()
     def get_DisitckMpsPindiodeswitchA(self):
@@ -6588,6 +6802,7 @@ class NutaqDiags(Device):
         self._DisitckMpsPindiodeswitchA = DisitckMpsPindiodeswitchA
         cavity = 'A'
         self.update_fim(cavity)
+        self.push_change_event("DisitckMpsPindiodeswitchA", DisitckMpsPindiodeswitchA)
 
     @DebugIt()
     def get_DisitckMpsPindiodeswitchB(self):
@@ -6600,6 +6815,7 @@ class NutaqDiags(Device):
         self._DisitckMpsPindiodeswitchB = DisitckMpsPindiodeswitchB
         cavity = 'B'
         self.update_fim(cavity)
+        self.push_change_event("DisitckMpsPindiodeswitchB", DisitckMpsPindiodeswitchB)
 
     @DebugIt()
     def get_DisitckMpsFdltrgA(self):
@@ -6612,6 +6828,7 @@ class NutaqDiags(Device):
         self._DisitckMpsFdltrgA = DisitckMpsFdltrgA
         cavity = 'A'
         self.update_fim(cavity)
+        self.push_change_event("DisitckMpsFdltrgA", DisitckMpsFdltrgA)
 
     @DebugIt()
     def get_DisitckMpsFdltrgB(self):
@@ -6624,6 +6841,7 @@ class NutaqDiags(Device):
         self._DisitckMpsFdltrgB = DisitckMpsFdltrgB
         cavity = 'B'
         self.update_fim(cavity)
+        self.push_change_event("DisitckMpsFdltrgB", DisitckMpsFdltrgB)
 
     @DebugIt()
     def get_DisitckMpsPlctxoffA(self):
@@ -6636,6 +6854,7 @@ class NutaqDiags(Device):
         self._DisitckMpsPlctxoffA = DisitckMpsPlctxoffA
         cavity = 'A'
         self.update_fim(cavity)
+        self.push_change_event("DisitckMpsPlctxoffA", DisitckMpsPlctxoffA)
 
     @DebugIt()
     def get_DisitckMpsPlctxoffB(self):
@@ -6648,6 +6867,7 @@ class NutaqDiags(Device):
         self._DisitckMpsPlctxoffB = DisitckMpsPlctxoffB
         cavity = 'B'
         self.update_fim(cavity)
+        self.push_change_event("DisitckMpsPlctxoffB", DisitckMpsPlctxoffB)
 
     @DebugIt()
     def get_DisitckMpsMpsA(self):
@@ -6660,6 +6880,7 @@ class NutaqDiags(Device):
         self._DisitckMpsMpsA = DisitckMpsMpsA
         cavity = 'A'
         self.update_fim(cavity)
+        self.push_change_event("DisitckMpsMpsA", DisitckMpsMpsA)
 
     @DebugIt()
     def get_DisitckMpsMpsB(self):
@@ -6672,6 +6893,7 @@ class NutaqDiags(Device):
         self._DisitckMpsMpsB = DisitckMpsMpsB
         cavity = 'B'
         self.update_fim(cavity)
+        self.push_change_event("DisitckMpsMpsB", DisitckMpsMpsB)
 
     @DebugIt()
     def get_DisitckMpsDiagA(self):
@@ -6684,6 +6906,7 @@ class NutaqDiags(Device):
         self._DisitckMpsDiagA = DisitckMpsDiagA
         cavity = 'A'
         self.update_fim(cavity)
+        self.push_change_event("DisitckMpsDiagA", DisitckMpsDiagA)
 
     @DebugIt()
     def get_DisitckMpsDiagB(self):
@@ -6696,6 +6919,7 @@ class NutaqDiags(Device):
         self._DisitckMpsDiagB = DisitckMpsDiagB
         cavity = 'B'
         self.update_fim(cavity)
+        self.push_change_event("DisitckMpsDiagB", DisitckMpsDiagB)
 
     @DebugIt()
     def read_Diag_Irvtet1A(self):
@@ -7589,123 +7813,289 @@ class NutaqDiags(Device):
         perseus_utils.start_reading_diagnostics(self.perseus, 'B')
 
         self._Diag_Irvtet1A = perseus_utils.read_diag_milivolts(self.perseus, 0, 'A')
+        self.push_change_event("Diag_Irvtet1A", Diag_Irvtet1A)
         self._Diag_Irvtet1B = perseus_utils.read_diag_milivolts(self.perseus, 0, 'B')
+        self.push_change_event("Diag_Irvtet1B", Diag_Irvtet1B)
         self._Diag_Qrvtet1A = perseus_utils.read_diag_milivolts(self.perseus, 1, 'A')
+        self.push_change_event("Diag_Qrvtet1A", Diag_Qrvtet1A)
         self._Diag_Qrvtet1B = perseus_utils.read_diag_milivolts(self.perseus, 1, 'B')
+        self.push_change_event("Diag_Qrvtet1B", Diag_Qrvtet1B)
         self._Diag_Amprvtet1A = perseus_utils.read_diag_milivolts(self.perseus, 2, 'A')
+        self.push_change_event("Diag_Amprvtet1A", Diag_Amprvtet1A)
         self._Diag_Amprvtet1B = perseus_utils.read_diag_milivolts(self.perseus, 2, 'B')
+        self.push_change_event("Diag_Amprvtet1B", Diag_Amprvtet1B)
         self._Diag_Phrvtet1A = perseus_utils.read_diag_angle(self.perseus, 3, 'A')
+        self.push_change_event("Diag_Phrvtet1A", Diag_Phrvtet1A)
         self._Diag_Phrvtet1B = perseus_utils.read_diag_angle(self.perseus, 3, 'B')
+        self.push_change_event("Diag_Phrvtet1B", Diag_Phrvtet1B)
         self._Diag_Irvtet2A = perseus_utils.read_diag_milivolts(self.perseus, 4, 'A')
+        self.push_change_event("Diag_Irvtet2A", Diag_Irvtet2A)
         self._Diag_Irvtet2B = perseus_utils.read_diag_milivolts(self.perseus, 4, 'B')
+        self.push_change_event("Diag_Irvtet2B", Diag_Irvtet2B)
         self._Diag_Qrvtet2A = perseus_utils.read_diag_milivolts(self.perseus, 5, 'A')
+        self.push_change_event("Diag_Qrvtet2A", Diag_Qrvtet2A)
         self._Diag_Qrvtet2B = perseus_utils.read_diag_milivolts(self.perseus, 5, 'B')
+        self.push_change_event("Diag_Qrvtet2B", Diag_Qrvtet2B)
         self._Diag_Amprvtet2A = perseus_utils.read_diag_milivolts(self.perseus, 6, 'A')
+        self.push_change_event("Diag_Amprvtet2A", Diag_Amprvtet2A)
         self._Diag_Amprvtet2B = perseus_utils.read_diag_milivolts(self.perseus, 6, 'B')
+        self.push_change_event("Diag_Amprvtet2B", Diag_Amprvtet2B)
         self._Diag_Phrvtet2A = perseus_utils.read_diag_angle(self.perseus, 7, 'A')
+        self.push_change_event("Diag_Phrvtet2A", Diag_Phrvtet2A)
         self._Diag_Phrvtet2B = perseus_utils.read_diag_angle(self.perseus, 7, 'B')
+        self.push_change_event("Diag_Phrvtet2B", Diag_Phrvtet2B)
         self._Diag_IfwcircA = perseus_utils.read_diag_milivolts(self.perseus, 8, 'A')
+        self.push_change_event("Diag_IfwcircA", Diag_IfwcircA)
         self._Diag_IfwcircB = perseus_utils.read_diag_milivolts(self.perseus, 8, 'B')
+        self.push_change_event("Diag_IfwcircB", Diag_IfwcircB)
         self._Diag_QfwcircA = perseus_utils.read_diag_milivolts(self.perseus, 9, 'A')
+        self.push_change_event("Diag_QfwcircA", Diag_QfwcircA)
         self._Diag_QfwcircB = perseus_utils.read_diag_milivolts(self.perseus, 9, 'B')
+        self.push_change_event("Diag_QfwcircB", Diag_QfwcircB)
         self._Diag_AmpfwcircA = perseus_utils.read_diag_milivolts(self.perseus, 10, 'A')
+        self.push_change_event("Diag_AmpfwcircA", Diag_AmpfwcircA)
         self._Diag_AmpfwcircB = perseus_utils.read_diag_milivolts(self.perseus, 10, 'B')
+        self.push_change_event("Diag_AmpfwcircB", Diag_AmpfwcircB)
         self._Diag_PhfwcircA = perseus_utils.read_diag_angle(self.perseus, 11, 'A')
+        self.push_change_event("Diag_PhfwcircA", Diag_PhfwcircA)
         self._Diag_PhfwcircB = perseus_utils.read_diag_angle(self.perseus, 11, 'B')
+        self.push_change_event("Diag_PhfwcircB", Diag_PhfwcircB)
         self._Diag_IrvcircA = perseus_utils.read_diag_milivolts(self.perseus, 12, 'A')
+        self.push_change_event("Diag_IrvcircA", Diag_IrvcircA)
         self._Diag_IrvcircB = perseus_utils.read_diag_milivolts(self.perseus, 12, 'B')
+        self.push_change_event("Diag_IrvcircB", Diag_IrvcircB)
         self._Diag_QrvcircA = perseus_utils.read_diag_milivolts(self.perseus, 13, 'A')
+        self.push_change_event("Diag_QrvcircA", Diag_QrvcircA)
         self._Diag_QrvcircB = perseus_utils.read_diag_milivolts(self.perseus, 13, 'B')
+        self.push_change_event("Diag_QrvcircB", Diag_QrvcircB)
         self._Diag_AmprvcircA = perseus_utils.read_diag_milivolts(self.perseus, 14, 'A')
+        self.push_change_event("Diag_AmprvcircA", Diag_AmprvcircA)
         self._Diag_AmprvcircB = perseus_utils.read_diag_milivolts(self.perseus, 14, 'B')
+        self.push_change_event("Diag_AmprvcircB", Diag_AmprvcircB)
         self._Diag_PhrvcircA = perseus_utils.read_diag_angle(self.perseus, 15, 'A')
+        self.push_change_event("Diag_PhrvcircA", Diag_PhrvcircA)
         self._Diag_PhrvcircB = perseus_utils.read_diag_angle(self.perseus, 15, 'B')
+        self.push_change_event("Diag_PhrvcircB", Diag_PhrvcircB)
         self._Diag_IfwloadA = perseus_utils.read_diag_milivolts(self.perseus, 16, 'A')
+        self.push_change_event("Diag_IfwloadA", Diag_IfwloadA)
         self._Diag_IfwloadB = perseus_utils.read_diag_milivolts(self.perseus, 16, 'B')
+        self.push_change_event("Diag_IfwloadB", Diag_IfwloadB)
         self._Diag_QfwloadA = perseus_utils.read_diag_milivolts(self.perseus, 17, 'A')
+        self.push_change_event("Diag_QfwloadA", Diag_QfwloadA)
         self._Diag_QfwloadB = perseus_utils.read_diag_milivolts(self.perseus, 17, 'B')
+        self.push_change_event("Diag_QfwloadB", Diag_QfwloadB)
         self._Diag_AmpfwloadA = perseus_utils.read_diag_milivolts(self.perseus, 18, 'A')
+        self.push_change_event("Diag_AmpfwloadA", Diag_AmpfwloadA)
         self._Diag_AmpfwloadB = perseus_utils.read_diag_milivolts(self.perseus, 18, 'B')
+        self.push_change_event("Diag_AmpfwloadB", Diag_AmpfwloadB)
         self._Diag_PhfwloadA = perseus_utils.read_diag_angle(self.perseus, 19, 'A')
+        self.push_change_event("Diag_PhfwloadA", Diag_PhfwloadA)
         self._Diag_PhfwloadB = perseus_utils.read_diag_angle(self.perseus, 19, 'B')
+        self.push_change_event("Diag_PhfwloadB", Diag_PhfwloadB)
         self._Diag_IfwhybloadA = perseus_utils.read_diag_milivolts(self.perseus, 20, 'A')
+        self.push_change_event("Diag_IfwhybloadA", Diag_IfwhybloadA)
         self._Diag_IfwhybloadB = perseus_utils.read_diag_milivolts(self.perseus, 20, 'B')
+        self.push_change_event("Diag_IfwhybloadB", Diag_IfwhybloadB)
         self._Diag_QfwhybloadA = perseus_utils.read_diag_milivolts(self.perseus, 21, 'A')
+        self.push_change_event("Diag_QfwhybloadA", Diag_QfwhybloadA)
         self._Diag_QfwhybloadB = perseus_utils.read_diag_milivolts(self.perseus, 21, 'B')
+        self.push_change_event("Diag_QfwhybloadB", Diag_QfwhybloadB)
         self._Diag_AmpfwhybloadA = perseus_utils.read_diag_milivolts(self.perseus, 22, 'A')
+        self.push_change_event("Diag_AmpfwhybloadA", Diag_AmpfwhybloadA)
         self._Diag_AmpfwhybloadB = perseus_utils.read_diag_milivolts(self.perseus, 22, 'B')
+        self.push_change_event("Diag_AmpfwhybloadB", Diag_AmpfwhybloadB)
         self._Diag_PhfwhybloadA = perseus_utils.read_diag_angle(self.perseus, 23, 'A')
+        self.push_change_event("Diag_PhfwhybloadA", Diag_PhfwhybloadA)
         self._Diag_PhfwhybloadB = perseus_utils.read_diag_angle(self.perseus, 23, 'B')
+        self.push_change_event("Diag_PhfwhybloadB", Diag_PhfwhybloadB)
         self._Diag_IrvcavA = perseus_utils.read_diag_milivolts(self.perseus, 24, 'A')
+        self.push_change_event("Diag_IrvcavA", Diag_IrvcavA)
         self._Diag_IrvcavB = perseus_utils.read_diag_milivolts(self.perseus, 24, 'B')
+        self.push_change_event("Diag_IrvcavB", Diag_IrvcavB)
         self._Diag_QrvcavA = perseus_utils.read_diag_milivolts(self.perseus, 25, 'A')
+        self.push_change_event("Diag_QrvcavA", Diag_QrvcavA)
         self._Diag_QrvcavB = perseus_utils.read_diag_milivolts(self.perseus, 25, 'B')
+        self.push_change_event("Diag_QrvcavB", Diag_QrvcavB)
         self._Diag_AmprvcavA = perseus_utils.read_diag_milivolts(self.perseus, 26, 'A')
+        self.push_change_event("Diag_AmprvcavA", Diag_AmprvcavA)
         self._Diag_AmprvcavB = perseus_utils.read_diag_milivolts(self.perseus, 26, 'B')
+        self.push_change_event("Diag_AmprvcavB", Diag_AmprvcavB)
         self._Diag_PhrvcavA = perseus_utils.read_diag_angle(self.perseus, 27, 'A')
+        self.push_change_event("Diag_PhrvcavA", Diag_PhrvcavA)
         self._Diag_PhrvcavB = perseus_utils.read_diag_angle(self.perseus, 27, 'B')
+        self.push_change_event("Diag_PhrvcavB", Diag_PhrvcavB)
         self._Diag_ImoA = perseus_utils.read_diag_milivolts(self.perseus, 28, 'A')
+        self.push_change_event("Diag_ImoA", Diag_ImoA)
         self._Diag_ImoB = perseus_utils.read_diag_milivolts(self.perseus, 28, 'B')
+        self.push_change_event("Diag_ImoB", Diag_ImoB)
         self._Diag_QmoA = perseus_utils.read_diag_milivolts(self.perseus, 29, 'A')
+        self.push_change_event("Diag_QmoA", Diag_QmoA)
         self._Diag_QmoB = perseus_utils.read_diag_milivolts(self.perseus, 29, 'B')
+        self.push_change_event("Diag_QmoB", Diag_QmoB)
         self._Diag_AmpmoA = perseus_utils.read_diag_milivolts(self.perseus, 30, 'A')
+        self.push_change_event("Diag_AmpmoA", Diag_AmpmoA)
         self._Diag_AmpmoB = perseus_utils.read_diag_milivolts(self.perseus, 30, 'B')
+        self.push_change_event("Diag_AmpmoB", Diag_AmpmoB)
         self._Diag_PhmoA = perseus_utils.read_diag_angle(self.perseus, 31, 'A')
+        self.push_change_event("Diag_PhmoA", Diag_PhmoA)
         self._Diag_PhmoB = perseus_utils.read_diag_angle(self.perseus, 31, 'B')
+        self.push_change_event("Diag_PhmoB", Diag_PhmoB)
         self._Diag_IlandauA = perseus_utils.read_diag_milivolts(self.perseus, 32, 'A')
+        self.push_change_event("Diag_IlandauA", Diag_IlandauA)
         self._Diag_IlandauB = perseus_utils.read_diag_milivolts(self.perseus, 32, 'B')
+        self.push_change_event("Diag_IlandauB", Diag_IlandauB)
         self._Diag_QlandauA = perseus_utils.read_diag_milivolts(self.perseus, 33, 'A')
+        self.push_change_event("Diag_QlandauA", Diag_QlandauA)
         self._Diag_QlandauB = perseus_utils.read_diag_milivolts(self.perseus, 33, 'B')
+        self.push_change_event("Diag_QlandauB", Diag_QlandauB)
         self._Diag_AmplandauA = perseus_utils.read_diag_milivolts(self.perseus, 34, 'A')
+        self.push_change_event("Diag_AmplandauA", Diag_AmplandauA)
         self._Diag_AmplandauB = perseus_utils.read_diag_milivolts(self.perseus, 34, 'B')
+        self.push_change_event("Diag_AmplandauB", Diag_AmplandauB)
         self._Diag_PhlandauA = perseus_utils.read_diag_angle(self.perseus, 35, 'A')
+        self.push_change_event("Diag_PhlandauA", Diag_PhlandauA)
         self._Diag_PhlandauB = perseus_utils.read_diag_angle(self.perseus, 35, 'B')
+        self.push_change_event("Diag_PhlandauB", Diag_PhlandauB)
         self._Diag_PlungerMovingManualTuningA = bool(perseus_utils.read_diag_direct(self.perseus, 60, 'A'))
+        self.push_change_event("Diag_PlungerMovingManualTuningA", Diag_PlungerMovingManualTuningA)
         self._Diag_PlungerMovingManualTuningB = bool(perseus_utils.read_diag_direct(self.perseus, 60, 'B'))
+        self.push_change_event("Diag_PlungerMovingManualTuningB", Diag_PlungerMovingManualTuningB)
         self._Diag_PlungerMovingUpManualTuningA = bool(perseus_utils.read_diag_direct(self.perseus, 61, 'A'))
+        self.push_change_event("Diag_PlungerMovingUpManualTuningA", Diag_PlungerMovingUpManualTuningA)
         self._Diag_PlungerMovingUpManualTuningB = bool(perseus_utils.read_diag_direct(self.perseus, 61, 'B'))
+        self.push_change_event("Diag_PlungerMovingUpManualTuningB", Diag_PlungerMovingUpManualTuningB)
         self._Diag_PlungerMovingAutomaticTuningA = bool(perseus_utils.read_diag_direct(self.perseus, 62, 'A'))
+        self.push_change_event("Diag_PlungerMovingAutomaticTuningA", Diag_PlungerMovingAutomaticTuningA)
         self._Diag_PlungerMovingAutomaticTuningB = bool(perseus_utils.read_diag_direct(self.perseus, 62, 'B'))
+        self.push_change_event("Diag_PlungerMovingAutomaticTuningB", Diag_PlungerMovingAutomaticTuningB)
         self._Diag_PlungerMovingUpAutomaticTuningA = bool(perseus_utils.read_diag_direct(self.perseus, 63, 'A'))
+        self.push_change_event("Diag_PlungerMovingUpAutomaticTuningA", Diag_PlungerMovingUpAutomaticTuningA)
         self._Diag_PlungerMovingUpAutomaticTuningB = bool(perseus_utils.read_diag_direct(self.perseus, 63, 'B'))
+        self.push_change_event("Diag_PlungerMovingUpAutomaticTuningB", Diag_PlungerMovingUpAutomaticTuningB)
         self._Diag_DephaseMoLandauA = perseus_utils.read_diag_angle(self.perseus, 64, 'A')
+        self.push_change_event("Diag_DephaseMoLandauA", Diag_DephaseMoLandauA)
         self._Diag_DephaseMoLandauB = perseus_utils.read_diag_angle(self.perseus, 64, 'B')
+        self.push_change_event("Diag_DephaseMoLandauB", Diag_DephaseMoLandauB)
+        self.push_change_event("Diag_Rvtet1A", Diag_Rvtet1A)
+        self.push_change_event("Diag_Rvtet1B", Diag_Rvtet1B)
+        self.push_change_event("Diag_Rvtet2A", Diag_Rvtet2A)
+        self.push_change_event("Diag_Rvtet2B", Diag_Rvtet2B)
+        self.push_change_event("Diag_RvcircA", Diag_RvcircA)
+        self.push_change_event("Diag_RvcircB", Diag_RvcircB)
+        self.push_change_event("Diag_FwloadA", Diag_FwloadA)
+        self.push_change_event("Diag_FwloadB", Diag_FwloadB)
+        self.push_change_event("Diag_FwhybloadA", Diag_FwhybloadA)
+        self.push_change_event("Diag_FwhybloadB", Diag_FwhybloadB)
+        self.push_change_event("Diag_RvcavA", Diag_RvcavA)
+        self.push_change_event("Diag_RvcavB", Diag_RvcavB)
+        self.push_change_event("Diag_ArcsA", Diag_ArcsA)
+        self.push_change_event("Diag_ArcsB", Diag_ArcsB)
+        self.push_change_event("Diag_VacuumA", Diag_VacuumA)
+        self.push_change_event("Diag_VacuumB", Diag_VacuumB)
+        self.push_change_event("Diag_ManualInterlockA", Diag_ManualInterlockA)
+        self.push_change_event("Diag_ManualInterlockB", Diag_ManualInterlockB)
+        self.push_change_event("Diag_ExternalItckA", Diag_ExternalItckA)
+        self.push_change_event("Diag_ExternalItckB", Diag_ExternalItckB)
+        self.push_change_event("Diag_PlungerEndSwitchUpA", Diag_PlungerEndSwitchUpA)
+        self.push_change_event("Diag_PlungerEndSwitchUpB", Diag_PlungerEndSwitchUpB)
+        self.push_change_event("Diag_PlungerEndSwitchDownA", Diag_PlungerEndSwitchDownA)
+        self.push_change_event("Diag_PlungerEndSwitchDownB", Diag_PlungerEndSwitchDownB)
+        self.push_change_event("Diag_Timestamp1A", Diag_Timestamp1A)
+        self.push_change_event("Diag_Timestamp1B", Diag_Timestamp1B)
+        self.push_change_event("Diag_Timestamp2A", Diag_Timestamp2A)
+        self.push_change_event("Diag_Timestamp2B", Diag_Timestamp2B)
+        self.push_change_event("Diag_Timestamp3A", Diag_Timestamp3A)
+        self.push_change_event("Diag_Timestamp3B", Diag_Timestamp3B)
+        self.push_change_event("Diag_Timestamp4A", Diag_Timestamp4A)
+        self.push_change_event("Diag_Timestamp4B", Diag_Timestamp4B)
+        self.push_change_event("Diag_Timestamp5A", Diag_Timestamp5A)
+        self.push_change_event("Diag_Timestamp5B", Diag_Timestamp5B)
+        self.push_change_event("Diag_Timestamp6A", Diag_Timestamp6A)
+        self.push_change_event("Diag_Timestamp6B", Diag_Timestamp6B)
+        self.push_change_event("Diag_Timestamp7A", Diag_Timestamp7A)
+        self.push_change_event("Diag_Timestamp7B", Diag_Timestamp7B)
+        self.push_change_event("Diag_DacsDisableCommandA", Diag_DacsDisableCommandA)
+        self.push_change_event("Diag_DacsDisableCommandB", Diag_DacsDisableCommandB)
+        self.push_change_event("Diag_PinSwitchA", Diag_PinSwitchA)
+        self.push_change_event("Diag_PinSwitchB", Diag_PinSwitchB)
+        self.push_change_event("Diag_FdlTriggerToLoopsdiagboardA", Diag_FdlTriggerToLoopsdiagboardA)
+        self.push_change_event("Diag_FdlTriggerToLoopsdiagboardB", Diag_FdlTriggerToLoopsdiagboardB)
+        self.push_change_event("Diag_OutputToPlcA", Diag_OutputToPlcA)
+        self.push_change_event("Diag_OutputToPlcB", Diag_OutputToPlcB)
+        self.push_change_event("Diag_OutputToMpsA", Diag_OutputToMpsA)
+        self.push_change_event("Diag_OutputToMpsB", Diag_OutputToMpsB)
         self._Diag_AmpRvtet1b = math.sqrt((self._Diag_Irvtet1B**2) + (self._Diag_Qrvtet1B**2))
+        self.push_change_event("Diag_AmpRvtet1b", Diag_AmpRvtet1b)
         self._Diag_AmpRvtet1a = math.sqrt((self._Diag_Irvtet1A**2) + (self._Diag_Qrvtet1A**2))
+        self.push_change_event("Diag_AmpRvtet1a", Diag_AmpRvtet1a)
         self._Diag_AmpMoa = math.sqrt((self._Diag_ImoA**2) + (self._Diag_QmoA**2))
+        self.push_change_event("Diag_AmpMoa", Diag_AmpMoa)
         self._Diag_AmpLandaua = math.sqrt((self._Diag_IlandauA**2) + (self._Diag_QlandauA**2))
+        self.push_change_event("Diag_AmpLandaua", Diag_AmpLandaua)
         self._Diag_AmpFwloada = math.sqrt((self._Diag_IfwloadA**2) + (self._Diag_QfwloadA**2))
+        self.push_change_event("Diag_AmpFwloada", Diag_AmpFwloada)
         self._Diag_AmpRvtet2b = math.sqrt((self._Diag_Irvtet2B**2) + (self._Diag_Qrvtet2B**2))
+        self.push_change_event("Diag_AmpRvtet2b", Diag_AmpRvtet2b)
         self._Diag_AmpRvtet2a = math.sqrt((self._Diag_Irvtet2A**2) + (self._Diag_Qrvtet2A**2))
+        self.push_change_event("Diag_AmpRvtet2a", Diag_AmpRvtet2a)
         self._Diag_AmpFwloadb = math.sqrt((self._Diag_IfwloadB**2) + (self._Diag_QfwloadB**2))
+        self.push_change_event("Diag_AmpFwloadb", Diag_AmpFwloadb)
         self._Diag_AmpRvcavb = math.sqrt((self._Diag_IrvcavB**2) + (self._Diag_QrvcavB**2))
+        self.push_change_event("Diag_AmpRvcavb", Diag_AmpRvcavb)
         self._Diag_AmpRvcava = math.sqrt((self._Diag_IrvcavA**2) + (self._Diag_QrvcavA**2))
+        self.push_change_event("Diag_AmpRvcava", Diag_AmpRvcava)
         self._Diag_AmpFwcircb = math.sqrt((self._Diag_IfwcircB**2) + (self._Diag_QfwcircB**2))
+        self.push_change_event("Diag_AmpFwcircb", Diag_AmpFwcircb)
         self._Diag_AmpFwcirca = math.sqrt((self._Diag_IfwcircA**2) + (self._Diag_QfwcircA**2))
+        self.push_change_event("Diag_AmpFwcirca", Diag_AmpFwcirca)
         self._Diag_AmpMob = math.sqrt((self._Diag_ImoB**2) + (self._Diag_QmoB**2))
+        self.push_change_event("Diag_AmpMob", Diag_AmpMob)
         self._Diag_AmpRvcirca = math.sqrt((self._Diag_IrvcircA**2) + (self._Diag_QrvcircA**2))
+        self.push_change_event("Diag_AmpRvcirca", Diag_AmpRvcirca)
         self._Diag_AmpRvcircb = math.sqrt((self._Diag_IrvcircB**2) + (self._Diag_QrvcircB**2))
+        self.push_change_event("Diag_AmpRvcircb", Diag_AmpRvcircb)
         self._Diag_AmpFwhybloadb = math.sqrt((self._Diag_IfwhybloadB**2) + (self._Diag_QfwhybloadB**2))
+        self.push_change_event("Diag_AmpFwhybloadb", Diag_AmpFwhybloadb)
         self._Diag_AmpFwhybloada = math.sqrt((self._Diag_IfwhybloadA**2) + (self._Diag_QfwhybloadA**2))
+        self.push_change_event("Diag_AmpFwhybloada", Diag_AmpFwhybloada)
         self._Diag_AmpLandaub = math.sqrt((self._Diag_IlandauB**2) + (self._Diag_QlandauB**2))
+        self.push_change_event("Diag_AmpLandaub", Diag_AmpLandaub)
         self._Diag_PhRvtet1b = math.degrees(math.atan2(self._Diag_Qrvtet1B, self._Diag_Irvtet1B))
+        self.push_change_event("Diag_PhRvtet1b", Diag_PhRvtet1b)
         self._Diag_PhRvtet1a = math.degrees(math.atan2(self._Diag_Qrvtet1A, self._Diag_Irvtet1A))
+        self.push_change_event("Diag_PhRvtet1a", Diag_PhRvtet1a)
         self._Diag_PhMoa = math.degrees(math.atan2(self._Diag_QmoA, self._Diag_ImoA))
+        self.push_change_event("Diag_PhMoa", Diag_PhMoa)
         self._Diag_PhLandaua = math.degrees(math.atan2(self._Diag_QlandauA, self._Diag_IlandauA))
+        self.push_change_event("Diag_PhLandaua", Diag_PhLandaua)
         self._Diag_PhFwloada = math.degrees(math.atan2(self._Diag_QfwloadA, self._Diag_IfwloadA))
+        self.push_change_event("Diag_PhFwloada", Diag_PhFwloada)
         self._Diag_PhRvtet2b = math.degrees(math.atan2(self._Diag_Qrvtet2B, self._Diag_Irvtet2B))
+        self.push_change_event("Diag_PhRvtet2b", Diag_PhRvtet2b)
         self._Diag_PhRvtet2a = math.degrees(math.atan2(self._Diag_Qrvtet2A, self._Diag_Irvtet2A))
+        self.push_change_event("Diag_PhRvtet2a", Diag_PhRvtet2a)
         self._Diag_PhFwloadb = math.degrees(math.atan2(self._Diag_QfwloadB, self._Diag_IfwloadB))
+        self.push_change_event("Diag_PhFwloadb", Diag_PhFwloadb)
         self._Diag_PhRvcavb = math.degrees(math.atan2(self._Diag_QrvcavB, self._Diag_IrvcavB))
+        self.push_change_event("Diag_PhRvcavb", Diag_PhRvcavb)
         self._Diag_PhRvcava = math.degrees(math.atan2(self._Diag_QrvcavA, self._Diag_IrvcavA))
+        self.push_change_event("Diag_PhRvcava", Diag_PhRvcava)
         self._Diag_PhFwcircb = math.degrees(math.atan2(self._Diag_QfwcircB, self._Diag_IfwcircB))
+        self.push_change_event("Diag_PhFwcircb", Diag_PhFwcircb)
         self._Diag_PhFwcirca = math.degrees(math.atan2(self._Diag_QfwcircA, self._Diag_IfwcircA))
+        self.push_change_event("Diag_PhFwcirca", Diag_PhFwcirca)
         self._Diag_PhMob = math.degrees(math.atan2(self._Diag_QmoB, self._Diag_ImoB))
+        self.push_change_event("Diag_PhMob", Diag_PhMob)
         self._Diag_PhRvcirca = math.degrees(math.atan2(self._Diag_QrvcircA, self._Diag_IrvcircA))
+        self.push_change_event("Diag_PhRvcirca", Diag_PhRvcirca)
         self._Diag_PhRvcircb = math.degrees(math.atan2(self._Diag_QrvcircB, self._Diag_IrvcircB))
+        self.push_change_event("Diag_PhRvcircb", Diag_PhRvcircb)
         self._Diag_PhFwhybloadb = math.degrees(math.atan2(self._Diag_QfwhybloadB, self._Diag_IfwhybloadB))
+        self.push_change_event("Diag_PhFwhybloadb", Diag_PhFwhybloadb)
         self._Diag_PhFwhybloada = math.degrees(math.atan2(self._Diag_QfwhybloadA, self._Diag_IfwhybloadA))
+        self.push_change_event("Diag_PhFwhybloada", Diag_PhFwhybloada)
         self._Diag_PhLandaub = math.degrees(math.atan2(self._Diag_QlandauB, self._Diag_IlandauB))
+        self.push_change_event("Diag_PhLandaub", Diag_PhLandaub)
 
     @command
     def init_hardware(self):
