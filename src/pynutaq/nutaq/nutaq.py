@@ -65,6 +65,7 @@ class Nutaq(Device):
                                    format='%6.2f',
                                    min_value=0, max_value=10,
                                    rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_KpA",
                                    fset="set_KpA",
                                    doc=""
@@ -79,6 +80,7 @@ class Nutaq(Device):
                                    format='%6.2f',
                                    min_value=0, max_value=10,
                                    rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_KpB",
                                    fset="set_KpB",
                                    doc=""
@@ -93,6 +95,7 @@ class Nutaq(Device):
                                    format='%6.2f',
                                    min_value=0, max_value=32767,
                                    rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_KiA",
                                    fset="set_KiA",
                                    doc=""
@@ -107,6 +110,7 @@ class Nutaq(Device):
                                    format='%6.2f',
                                    min_value=0, max_value=32767,
                                    rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_KiB",
                                    fset="set_KiB",
                                    doc=""
@@ -121,6 +125,7 @@ class Nutaq(Device):
                                    format='%6.2f',
                                    min_value=-180, max_value=360,
                                    rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_PhaseShiftCavA",
                                    fset="set_PhaseShiftCavA",
                                    doc=""
@@ -135,6 +140,7 @@ class Nutaq(Device):
                                    format='%6.2f',
                                    min_value=-180, max_value=360,
                                    rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_PhaseShiftCavB",
                                    fset="set_PhaseShiftCavB",
                                    doc=""
@@ -149,6 +155,7 @@ class Nutaq(Device):
                                    format='%6.2f',
                                    min_value=-180, max_value=360,
                                    rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_PhaseShiftFwcavA",
                                    fset="set_PhaseShiftFwcavA",
                                    doc=""
@@ -163,6 +170,7 @@ class Nutaq(Device):
                                    format='%6.2f',
                                    min_value=-180, max_value=360,
                                    rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_PhaseShiftFwcavB",
                                    fset="set_PhaseShiftFwcavB",
                                    doc=""
@@ -177,6 +185,7 @@ class Nutaq(Device):
                                    format='%6.2f',
                                    min_value=-180, max_value=360,
                                    rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_PhaseShiftFwtet1A",
                                    fset="set_PhaseShiftFwtet1A",
                                    doc=""
@@ -191,6 +200,7 @@ class Nutaq(Device):
                                    format='%6.2f',
                                    min_value=-180, max_value=360,
                                    rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_PhaseShiftFwtet1B",
                                    fset="set_PhaseShiftFwtet1B",
                                    doc=""
@@ -205,6 +215,7 @@ class Nutaq(Device):
                                    format='%6.2f',
                                    min_value=-180, max_value=360,
                                    rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_PhaseShiftFwtet2A",
                                    fset="set_PhaseShiftFwtet2A",
                                    doc=""
@@ -219,6 +230,7 @@ class Nutaq(Device):
                                    format='%6.2f',
                                    min_value=-180, max_value=360,
                                    rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_PhaseShiftFwtet2B",
                                    fset="set_PhaseShiftFwtet2B",
                                    doc=""
@@ -233,6 +245,7 @@ class Nutaq(Device):
                                    format='%6.2f',
                                    min_value=0, max_value=1000,
                                    rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_PilimitA",
                                    fset="set_PilimitA",
                                    doc=""
@@ -247,6 +260,7 @@ class Nutaq(Device):
                                    format='%6.2f',
                                    min_value=0, max_value=1000,
                                    rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_PilimitB",
                                    fset="set_PilimitB",
                                    doc=""
@@ -261,6 +275,7 @@ class Nutaq(Device):
                                    format='%6.2f',
                                    min_value=0, max_value=7,
                                    rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_SamplesToAverageA",
                                    fset="set_SamplesToAverageA",
                                    doc=""
@@ -275,6 +290,7 @@ class Nutaq(Device):
                                    format='%6.2f',
                                    min_value=0, max_value=7,
                                    rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_SamplesToAverageB",
                                    fset="set_SamplesToAverageB",
                                    doc=""
@@ -289,6 +305,7 @@ class Nutaq(Device):
                                    format='%6.2f',
                                    min_value=0, max_value=3,
                                    rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_FilterStagesA",
                                    fset="set_FilterStagesA",
                                    doc=""
@@ -303,6 +320,7 @@ class Nutaq(Device):
                                    format='%6.2f',
                                    min_value=0, max_value=3,
                                    rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_FilterStagesB",
                                    fset="set_FilterStagesB",
                                    doc=""
@@ -317,6 +335,7 @@ class Nutaq(Device):
                                    format='%6.2f',
                                    min_value=-180, max_value=360,
                                    rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_PhaseShiftFwcircinA",
                                    fset="set_PhaseShiftFwcircinA",
                                    doc=""
@@ -331,6 +350,7 @@ class Nutaq(Device):
                                    format='%6.2f',
                                    min_value=-180, max_value=360,
                                    rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_PhaseShiftFwcircinB",
                                    fset="set_PhaseShiftFwcircinB",
                                    doc=""
@@ -345,6 +365,7 @@ class Nutaq(Device):
                                    format='%6.2f',
                                    min_value=-180, max_value=360,
                                    rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_PhaseShiftControlSignalTet1A",
                                    fset="set_PhaseShiftControlSignalTet1A",
                                    doc=""
@@ -359,6 +380,7 @@ class Nutaq(Device):
                                    format='%6.2f',
                                    min_value=-180, max_value=360,
                                    rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_PhaseShiftControlSignalTet1B",
                                    fset="set_PhaseShiftControlSignalTet1B",
                                    doc=""
@@ -373,6 +395,7 @@ class Nutaq(Device):
                                    format='%6.2f',
                                    min_value=-180, max_value=360,
                                    rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_PhaseShiftControlSignalTet2A",
                                    fset="set_PhaseShiftControlSignalTet2A",
                                    doc=""
@@ -387,6 +410,7 @@ class Nutaq(Device):
                                    format='%6.2f',
                                    min_value=-180, max_value=360,
                                    rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_PhaseShiftControlSignalTet2B",
                                    fset="set_PhaseShiftControlSignalTet2B",
                                    doc=""
@@ -401,6 +425,7 @@ class Nutaq(Device):
                                    format='%6.2f',
                                    min_value=0.1, max_value=1,
                                    rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_GainTetrode1A",
                                    fset="set_GainTetrode1A",
                                    doc=""
@@ -415,6 +440,7 @@ class Nutaq(Device):
                                    format='%6.2f',
                                    min_value=0.1, max_value=1,
                                    rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_GainTetrode1B",
                                    fset="set_GainTetrode1B",
                                    doc=""
@@ -429,6 +455,7 @@ class Nutaq(Device):
                                    format='%6.2f',
                                    min_value=0.1, max_value=1,
                                    rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_GainTetrode2A",
                                    fset="set_GainTetrode2A",
                                    doc=""
@@ -443,6 +470,7 @@ class Nutaq(Device):
                                    format='%6.2f',
                                    min_value=0.1, max_value=1,
                                    rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_GainTetrode2B",
                                    fset="set_GainTetrode2B",
                                    doc=""
@@ -455,6 +483,7 @@ class Nutaq(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   #polling_period=1000,
                                    polling_period=1000,
                                    fget="get_AutomaticStartupEnableA",
                                    fset="set_AutomaticStartupEnableA",
@@ -468,6 +497,7 @@ class Nutaq(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   #polling_period=1000,
                                    polling_period=1000,
                                    fget="get_AutomaticStartupEnableB",
                                    fset="set_AutomaticStartupEnableB",
@@ -483,6 +513,7 @@ class Nutaq(Device):
                                    format='%6.2f',
                                    min_value=0, max_value=7,
                                    rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_CommandStartA",
                                    fset="set_CommandStartA",
                                    doc=""
@@ -497,6 +528,7 @@ class Nutaq(Device):
                                    format='%6.2f',
                                    min_value=0, max_value=7,
                                    rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_CommandStartB",
                                    fset="set_CommandStartB",
                                    doc=""
@@ -511,6 +543,7 @@ class Nutaq(Device):
                                    format='%6.2f',
                                    min_value=0, max_value=1000,
                                    rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_AmprefinA",
                                    fset="set_AmprefinA",
                                    doc=""
@@ -525,6 +558,7 @@ class Nutaq(Device):
                                    format='%6.2f',
                                    min_value=0, max_value=1000,
                                    rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_AmprefinB",
                                    fset="set_AmprefinB",
                                    doc=""
@@ -539,6 +573,7 @@ class Nutaq(Device):
                                    format='%6.2f',
                                    min_value=-180, max_value=360,
                                    rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_PhrefinA",
                                    fset="set_PhrefinA",
                                    doc=""
@@ -553,6 +588,7 @@ class Nutaq(Device):
                                    format='%6.2f',
                                    min_value=-180, max_value=360,
                                    rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_PhrefinB",
                                    fset="set_PhrefinB",
                                    doc=""
@@ -567,6 +603,7 @@ class Nutaq(Device):
                                    format='%6.2f',
                                    min_value=0, max_value=1000,
                                    rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_AmprefminA",
                                    fset="set_AmprefminA",
                                    doc=""
@@ -581,6 +618,7 @@ class Nutaq(Device):
                                    format='%6.2f',
                                    min_value=0, max_value=1000,
                                    rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_AmprefminB",
                                    fset="set_AmprefminB",
                                    doc=""
@@ -595,6 +633,7 @@ class Nutaq(Device):
                                    format='%6.2f',
                                    min_value=-180, max_value=360,
                                    rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_PhrefminA",
                                    fset="set_PhrefminA",
                                    doc=""
@@ -609,6 +648,7 @@ class Nutaq(Device):
                                    format='%6.2f',
                                    min_value=-180, max_value=360,
                                    rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_PhrefminB",
                                    fset="set_PhrefminB",
                                    doc=""
@@ -623,6 +663,7 @@ class Nutaq(Device):
                                    format='%6.2f',
                                    min_value=0, max_value=7,
                                    rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_PhaseIncreaseRateA",
                                    fset="set_PhaseIncreaseRateA",
                                    doc=""
@@ -637,6 +678,7 @@ class Nutaq(Device):
                                    format='%6.2f',
                                    min_value=0, max_value=7,
                                    rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_PhaseIncreaseRateB",
                                    fset="set_PhaseIncreaseRateB",
                                    doc=""
@@ -651,6 +693,7 @@ class Nutaq(Device):
                                    format='%6.2f',
                                    min_value=0, max_value=7,
                                    rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_VoltageIncreaseRateA",
                                    fset="set_VoltageIncreaseRateA",
                                    doc=""
@@ -665,6 +708,7 @@ class Nutaq(Device):
                                    format='%6.2f',
                                    min_value=0, max_value=7,
                                    rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_VoltageIncreaseRateB",
                                    fset="set_VoltageIncreaseRateB",
                                    doc=""
@@ -679,6 +723,7 @@ class Nutaq(Device):
                                    format='%6.2f',
                                    min_value=0.5, max_value=2,
                                    rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_GainOlA",
                                    fset="set_GainOlA",
                                    doc=""
@@ -693,6 +738,7 @@ class Nutaq(Device):
                                    format='%6.2f',
                                    min_value=0.5, max_value=2,
                                    rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_GainOlB",
                                    fset="set_GainOlB",
                                    doc=""
@@ -705,6 +751,7 @@ class Nutaq(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   #polling_period=1000,
                                    polling_period=1000,
                                    fget="get_SpareGpioOutput01A",
                                    fset="set_SpareGpioOutput01A",
@@ -718,6 +765,7 @@ class Nutaq(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   #polling_period=1000,
                                    polling_period=1000,
                                    fget="get_SpareGpioOutput01B",
                                    fset="set_SpareGpioOutput01B",
@@ -731,6 +779,7 @@ class Nutaq(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   #polling_period=1000,
                                    polling_period=1000,
                                    fget="get_SpareGpioOutput02A",
                                    fset="set_SpareGpioOutput02A",
@@ -744,6 +793,7 @@ class Nutaq(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   #polling_period=1000,
                                    polling_period=1000,
                                    fget="get_SpareGpioOutput02B",
                                    fset="set_SpareGpioOutput02B",
@@ -757,6 +807,7 @@ class Nutaq(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   #polling_period=1000,
                                    polling_period=1000,
                                    fget="get_SpareGpioOutput03A",
                                    fset="set_SpareGpioOutput03A",
@@ -770,6 +821,7 @@ class Nutaq(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   #polling_period=1000,
                                    polling_period=1000,
                                    fget="get_SpareGpioOutput03B",
                                    fset="set_SpareGpioOutput03B",
@@ -783,6 +835,7 @@ class Nutaq(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   #polling_period=1000,
                                    polling_period=1000,
                                    fget="get_SpareGpioOutput04A",
                                    fset="set_SpareGpioOutput04A",
@@ -796,6 +849,7 @@ class Nutaq(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   #polling_period=1000,
                                    polling_period=1000,
                                    fget="get_SpareGpioOutput04B",
                                    fset="set_SpareGpioOutput04B",
@@ -809,6 +863,7 @@ class Nutaq(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   #polling_period=1000,
                                    polling_period=1000,
                                    fget="get_FdlSwTriggerA",
                                    fset="set_FdlSwTriggerA",
@@ -822,6 +877,7 @@ class Nutaq(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   #polling_period=1000,
                                    polling_period=1000,
                                    fget="get_FdlSwTriggerB",
                                    fset="set_FdlSwTriggerB",
@@ -835,6 +891,7 @@ class Nutaq(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   #polling_period=1000,
                                    polling_period=1000,
                                    fget="get_SlowIqLoopEnableA",
                                    fset="set_SlowIqLoopEnableA",
@@ -848,6 +905,7 @@ class Nutaq(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   #polling_period=1000,
                                    polling_period=1000,
                                    fget="get_SlowIqLoopEnableB",
                                    fset="set_SlowIqLoopEnableB",
@@ -861,6 +919,7 @@ class Nutaq(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   #polling_period=1000,
                                    polling_period=1000,
                                    fget="get_AdcsPhaseshiftEnableA",
                                    fset="set_AdcsPhaseshiftEnableA",
@@ -874,6 +933,7 @@ class Nutaq(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   #polling_period=1000,
                                    polling_period=1000,
                                    fget="get_AdcsPhaseshiftEnableB",
                                    fset="set_AdcsPhaseshiftEnableB",
@@ -887,6 +947,7 @@ class Nutaq(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   #polling_period=1000,
                                    polling_period=1000,
                                    fget="get_DacsPhaseShiftEnableA",
                                    fset="set_DacsPhaseShiftEnableA",
@@ -900,6 +961,7 @@ class Nutaq(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   #polling_period=1000,
                                    polling_period=1000,
                                    fget="get_DacsPhaseShiftEnableB",
                                    fset="set_DacsPhaseShiftEnableB",
@@ -913,6 +975,7 @@ class Nutaq(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   #polling_period=1000,
                                    polling_period=1000,
                                    fget="get_SquarerefEnableA",
                                    fset="set_SquarerefEnableA",
@@ -926,6 +989,7 @@ class Nutaq(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   #polling_period=1000,
                                    polling_period=1000,
                                    fget="get_SquarerefEnableB",
                                    fset="set_SquarerefEnableB",
@@ -941,6 +1005,7 @@ class Nutaq(Device):
                                    format='%6.2f',
                                    min_value=3, max_value=1000,
                                    rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_FreqsquareA",
                                    fset="set_FreqsquareA",
                                    doc=""
@@ -955,6 +1020,7 @@ class Nutaq(Device):
                                    format='%6.2f',
                                    min_value=3, max_value=1000,
                                    rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_FreqsquareB",
                                    fset="set_FreqsquareB",
                                    doc=""
@@ -967,6 +1033,7 @@ class Nutaq(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   #polling_period=1000,
                                    polling_period=1000,
                                    fget="get_LookRefA",
                                    fset="set_LookRefA",
@@ -980,6 +1047,7 @@ class Nutaq(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   #polling_period=1000,
                                    polling_period=1000,
                                    fget="get_LookRefB",
                                    fset="set_LookRefB",
@@ -995,6 +1063,7 @@ class Nutaq(Device):
                                    format='%6.2f',
                                    min_value=0, max_value=3,
                                    rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_QuadrantSelectionA",
                                    fset="set_QuadrantSelectionA",
                                    doc=""
@@ -1009,6 +1078,7 @@ class Nutaq(Device):
                                    format='%6.2f',
                                    min_value=0, max_value=3,
                                    rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_QuadrantSelectionB",
                                    fset="set_QuadrantSelectionB",
                                    doc=""
@@ -1023,6 +1093,7 @@ class Nutaq(Device):
                                    format='%6.2f',
                                    min_value=0, max_value=4,
                                    rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_SlowIqLoopInputSelectionA",
                                    fset="set_SlowIqLoopInputSelectionA",
                                    doc=""
@@ -1037,6 +1108,7 @@ class Nutaq(Device):
                                    format='%6.2f',
                                    min_value=0, max_value=4,
                                    rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_SlowIqLoopInputSelectionB",
                                    fset="set_SlowIqLoopInputSelectionB",
                                    doc=""
@@ -1051,6 +1123,7 @@ class Nutaq(Device):
                                    format='%6.2f',
                                    min_value=0, max_value=3,
                                    rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_FastIqLoopInputSelectionA",
                                    fset="set_FastIqLoopInputSelectionA",
                                    doc=""
@@ -1065,6 +1138,7 @@ class Nutaq(Device):
                                    format='%6.2f',
                                    min_value=0, max_value=3,
                                    rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_FastIqLoopInputSelectionB",
                                    fset="set_FastIqLoopInputSelectionB",
                                    doc=""
@@ -1079,6 +1153,7 @@ class Nutaq(Device):
                                    format='%6.2f',
                                    min_value=0, max_value=4,
                                    rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_AmplitudeLoopInputSelectionA",
                                    fset="set_AmplitudeLoopInputSelectionA",
                                    doc=""
@@ -1093,6 +1168,7 @@ class Nutaq(Device):
                                    format='%6.2f',
                                    min_value=0, max_value=4,
                                    rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_AmplitudeLoopInputSelectionB",
                                    fset="set_AmplitudeLoopInputSelectionB",
                                    doc=""
@@ -1107,6 +1183,7 @@ class Nutaq(Device):
                                    format='%6.2f',
                                    min_value=0, max_value=4,
                                    rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_PhaseLoopInputSelectionA",
                                    fset="set_PhaseLoopInputSelectionA",
                                    doc=""
@@ -1121,6 +1198,7 @@ class Nutaq(Device):
                                    format='%6.2f',
                                    min_value=0, max_value=4,
                                    rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_PhaseLoopInputSelectionB",
                                    fset="set_PhaseLoopInputSelectionB",
                                    doc=""
@@ -1133,6 +1211,7 @@ class Nutaq(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   #polling_period=1000,
                                    polling_period=1000,
                                    fget="get_PolarLoopsEnableA",
                                    fset="set_PolarLoopsEnableA",
@@ -1146,6 +1225,7 @@ class Nutaq(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   #polling_period=1000,
                                    polling_period=1000,
                                    fget="get_PolarLoopsEnableB",
                                    fset="set_PolarLoopsEnableB",
@@ -1159,6 +1239,7 @@ class Nutaq(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   #polling_period=1000,
                                    polling_period=1000,
                                    fget="get_FastIqLoopEnableA",
                                    fset="set_FastIqLoopEnableA",
@@ -1172,6 +1253,7 @@ class Nutaq(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   #polling_period=1000,
                                    polling_period=1000,
                                    fget="get_FastIqLoopEnableB",
                                    fset="set_FastIqLoopEnableB",
@@ -1185,6 +1267,7 @@ class Nutaq(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   #polling_period=1000,
                                    polling_period=1000,
                                    fget="get_AmplitudeLoopEnableA",
                                    fset="set_AmplitudeLoopEnableA",
@@ -1198,6 +1281,7 @@ class Nutaq(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   #polling_period=1000,
                                    polling_period=1000,
                                    fget="get_AmplitudeLoopEnableB",
                                    fset="set_AmplitudeLoopEnableB",
@@ -1211,6 +1295,7 @@ class Nutaq(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   #polling_period=1000,
                                    polling_period=1000,
                                    fget="get_PhaseLoopEnableA",
                                    fset="set_PhaseLoopEnableA",
@@ -1224,6 +1309,7 @@ class Nutaq(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   #polling_period=1000,
                                    polling_period=1000,
                                    fget="get_PhaseLoopEnableB",
                                    fset="set_PhaseLoopEnableB",
@@ -1239,6 +1325,7 @@ class Nutaq(Device):
                                    format='%6.2f',
                                    min_value=0, max_value=32767,
                                    rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_KpFastIqLoopA",
                                    fset="set_KpFastIqLoopA",
                                    doc=""
@@ -1253,6 +1340,7 @@ class Nutaq(Device):
                                    format='%6.2f',
                                    min_value=0, max_value=32767,
                                    rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_KpFastIqLoopB",
                                    fset="set_KpFastIqLoopB",
                                    doc=""
@@ -1267,6 +1355,7 @@ class Nutaq(Device):
                                    format='%6.2f',
                                    min_value=0, max_value=32767,
                                    rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_KiFastIqLoopA",
                                    fset="set_KiFastIqLoopA",
                                    doc=""
@@ -1281,6 +1370,7 @@ class Nutaq(Device):
                                    format='%6.2f',
                                    min_value=0, max_value=32767,
                                    rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_KiFastIqLoopB",
                                    fset="set_KiFastIqLoopB",
                                    doc=""
@@ -1295,6 +1385,7 @@ class Nutaq(Device):
                                    format='%6.2f',
                                    min_value=0, max_value=32767,
                                    rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_KpAmpLoopA",
                                    fset="set_KpAmpLoopA",
                                    doc=""
@@ -1309,6 +1400,7 @@ class Nutaq(Device):
                                    format='%6.2f',
                                    min_value=0, max_value=32767,
                                    rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_KpAmpLoopB",
                                    fset="set_KpAmpLoopB",
                                    doc=""
@@ -1323,6 +1415,7 @@ class Nutaq(Device):
                                    format='%6.2f',
                                    min_value=0, max_value=32767,
                                    rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_KiAmpLoopA",
                                    fset="set_KiAmpLoopA",
                                    doc=""
@@ -1337,6 +1430,7 @@ class Nutaq(Device):
                                    format='%6.2f',
                                    min_value=0, max_value=32767,
                                    rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_KiAmpLoopB",
                                    fset="set_KiAmpLoopB",
                                    doc=""
@@ -1351,6 +1445,7 @@ class Nutaq(Device):
                                    format='%6.2f',
                                    min_value=0, max_value=32767,
                                    rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_KpPhaseLoopA",
                                    fset="set_KpPhaseLoopA",
                                    doc=""
@@ -1365,6 +1460,7 @@ class Nutaq(Device):
                                    format='%6.2f',
                                    min_value=0, max_value=32767,
                                    rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_KpPhaseLoopB",
                                    fset="set_KpPhaseLoopB",
                                    doc=""
@@ -1379,6 +1475,7 @@ class Nutaq(Device):
                                    format='%6.2f',
                                    min_value=0, max_value=32767,
                                    rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_KiPhaseLoopA",
                                    fset="set_KiPhaseLoopA",
                                    doc=""
@@ -1393,6 +1490,7 @@ class Nutaq(Device):
                                    format='%6.2f',
                                    min_value=0, max_value=32767,
                                    rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_KiPhaseLoopB",
                                    fset="set_KiPhaseLoopB",
                                    doc=""
@@ -1407,6 +1505,7 @@ class Nutaq(Device):
                                    format='%6.2f',
                                    min_value=0, max_value=1000,
                                    rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_PiLimitFastPiIqA",
                                    fset="set_PiLimitFastPiIqA",
                                    doc=""
@@ -1421,6 +1520,7 @@ class Nutaq(Device):
                                    format='%6.2f',
                                    min_value=0, max_value=1000,
                                    rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_PiLimitFastPiIqB",
                                    fset="set_PiLimitFastPiIqB",
                                    doc=""
@@ -1433,6 +1533,7 @@ class Nutaq(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   #polling_period=1000,
                                    polling_period=1000,
                                    fget="get_PulseModeEnableA",
                                    fset="set_PulseModeEnableA",
@@ -1446,6 +1547,7 @@ class Nutaq(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   #polling_period=1000,
                                    polling_period=1000,
                                    fget="get_PulseModeEnableB",
                                    fset="set_PulseModeEnableB",
@@ -1459,6 +1561,7 @@ class Nutaq(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   #polling_period=1000,
                                    polling_period=1000,
                                    fget="get_AutomaticConditioningEnableA",
                                    fset="set_AutomaticConditioningEnableA",
@@ -1472,6 +1575,7 @@ class Nutaq(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   #polling_period=1000,
                                    polling_period=1000,
                                    fget="get_AutomaticConditioningEnableB",
                                    fset="set_AutomaticConditioningEnableB",
@@ -1487,6 +1591,7 @@ class Nutaq(Device):
                                    format='%6.2f',
                                    min_value=0, max_value=100,
                                    rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_ConditioningdutyCicleA",
                                    fset="set_ConditioningdutyCicleA",
                                    doc=""
@@ -1501,6 +1606,7 @@ class Nutaq(Device):
                                    format='%6.2f',
                                    min_value=0, max_value=100,
                                    rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_ConditioningdutyCicleB",
                                    fset="set_ConditioningdutyCicleB",
                                    doc=""
@@ -1513,6 +1619,7 @@ class Nutaq(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   #polling_period=1000,
                                    polling_period=1000,
                                    fget="get_TuningEnableA",
                                    fset="set_TuningEnableA",
@@ -1526,6 +1633,7 @@ class Nutaq(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   #polling_period=1000,
                                    polling_period=1000,
                                    fget="get_TuningEnableB",
                                    fset="set_TuningEnableB",
@@ -1539,6 +1647,7 @@ class Nutaq(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   #polling_period=1000,
                                    polling_period=1000,
                                    fget="get_TuningPosEnA",
                                    fset="set_TuningPosEnA",
@@ -1552,6 +1661,7 @@ class Nutaq(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   #polling_period=1000,
                                    polling_period=1000,
                                    fget="get_TuningPosEnB",
                                    fset="set_TuningPosEnB",
@@ -1567,6 +1677,7 @@ class Nutaq(Device):
                                    format='%6.2f',
                                    min_value=0, max_value=65535,
                                    rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_NumStepsA",
                                    fset="set_NumStepsA",
                                    doc=""
@@ -1581,6 +1692,7 @@ class Nutaq(Device):
                                    format='%6.2f',
                                    min_value=0, max_value=65535,
                                    rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_NumStepsB",
                                    fset="set_NumStepsB",
                                    doc=""
@@ -1595,6 +1707,7 @@ class Nutaq(Device):
                                    format='%6.2f',
                                    min_value=0, max_value=7,
                                    rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_PulsesFrequencyA",
                                    fset="set_PulsesFrequencyA",
                                    doc=""
@@ -1609,6 +1722,7 @@ class Nutaq(Device):
                                    format='%6.2f',
                                    min_value=0, max_value=7,
                                    rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_PulsesFrequencyB",
                                    fset="set_PulsesFrequencyB",
                                    doc=""
@@ -1623,6 +1737,7 @@ class Nutaq(Device):
                                    format='%6.2f',
                                    min_value=-180, max_value=360,
                                    rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_PhaseOffsetA",
                                    fset="set_PhaseOffsetA",
                                    doc=""
@@ -1637,6 +1752,7 @@ class Nutaq(Device):
                                    format='%6.2f',
                                    min_value=-180, max_value=360,
                                    rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_PhaseOffsetB",
                                    fset="set_PhaseOffsetB",
                                    doc=""
@@ -1649,6 +1765,7 @@ class Nutaq(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   #polling_period=1000,
                                    polling_period=1000,
                                    fget="get_MoveA",
                                    fset="set_MoveA",
@@ -1662,6 +1779,7 @@ class Nutaq(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   #polling_period=1000,
                                    polling_period=1000,
                                    fget="get_MoveB",
                                    fset="set_MoveB",
@@ -1675,6 +1793,7 @@ class Nutaq(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   #polling_period=1000,
                                    polling_period=1000,
                                    fget="get_MoveupA",
                                    fset="set_MoveupA",
@@ -1688,6 +1807,7 @@ class Nutaq(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   #polling_period=1000,
                                    polling_period=1000,
                                    fget="get_MoveupB",
                                    fset="set_MoveupB",
@@ -1701,6 +1821,7 @@ class Nutaq(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   #polling_period=1000,
                                    polling_period=1000,
                                    fget="get_TuningresetA",
                                    fset="set_TuningresetA",
@@ -1714,6 +1835,7 @@ class Nutaq(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   #polling_period=1000,
                                    polling_period=1000,
                                    fget="get_TuningresetB",
                                    fset="set_TuningresetB",
@@ -1729,6 +1851,7 @@ class Nutaq(Device):
                                    format='%6.2f',
                                    min_value=0, max_value=1000,
                                    rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_FwminA",
                                    fset="set_FwminA",
                                    doc=""
@@ -1743,6 +1866,7 @@ class Nutaq(Device):
                                    format='%6.2f',
                                    min_value=0, max_value=1000,
                                    rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_FwminB",
                                    fset="set_FwminB",
                                    doc=""
@@ -1757,6 +1881,7 @@ class Nutaq(Device):
                                    format='%6.2f',
                                    min_value=0, max_value=10,
                                    rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_MarginupA",
                                    fset="set_MarginupA",
                                    doc=""
@@ -1771,6 +1896,7 @@ class Nutaq(Device):
                                    format='%6.2f',
                                    min_value=0, max_value=10,
                                    rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_MarginupB",
                                    fset="set_MarginupB",
                                    doc=""
@@ -1785,6 +1911,7 @@ class Nutaq(Device):
                                    format='%6.2f',
                                    min_value=0, max_value=5,
                                    rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_MarginlowA",
                                    fset="set_MarginlowA",
                                    doc=""
@@ -1799,6 +1926,7 @@ class Nutaq(Device):
                                    format='%6.2f',
                                    min_value=0, max_value=5,
                                    rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_MarginlowB",
                                    fset="set_MarginlowB",
                                    doc=""
@@ -1813,6 +1941,7 @@ class Nutaq(Device):
                                    format='%6.2f',
                                    min_value=0, max_value=3,
                                    rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_TuningdelayA",
                                    fset="set_TuningdelayA",
                                    doc=""
@@ -1827,6 +1956,7 @@ class Nutaq(Device):
                                    format='%6.2f',
                                    min_value=0, max_value=3,
                                    rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_TuningdelayB",
                                    fset="set_TuningdelayB",
                                    doc=""
@@ -1839,6 +1969,7 @@ class Nutaq(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   #polling_period=1000,
                                    polling_period=1000,
                                    fget="get_TuningfilterenableA",
                                    fset="set_TuningfilterenableA",
@@ -1852,6 +1983,7 @@ class Nutaq(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   #polling_period=1000,
                                    polling_period=1000,
                                    fget="get_TuningfilterenableB",
                                    fset="set_TuningfilterenableB",
@@ -1865,6 +1997,7 @@ class Nutaq(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   #polling_period=1000,
                                    polling_period=1000,
                                    fget="get_TuningtriggerenableA",
                                    fset="set_TuningtriggerenableA",
@@ -1878,6 +2011,7 @@ class Nutaq(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   #polling_period=1000,
                                    polling_period=1000,
                                    fget="get_TuningtriggerenableB",
                                    fset="set_TuningtriggerenableB",
@@ -1891,6 +2025,7 @@ class Nutaq(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   #polling_period=1000,
                                    polling_period=1000,
                                    fget="get_EpsItckDisableA",
                                    fset="set_EpsItckDisableA",
@@ -1904,6 +2039,7 @@ class Nutaq(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   #polling_period=1000,
                                    polling_period=1000,
                                    fget="get_EpsItckDisableB",
                                    fset="set_EpsItckDisableB",
@@ -1917,6 +2053,7 @@ class Nutaq(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   #polling_period=1000,
                                    polling_period=1000,
                                    fget="get_FimItckDisableA",
                                    fset="set_FimItckDisableA",
@@ -1930,6 +2067,7 @@ class Nutaq(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   #polling_period=1000,
                                    polling_period=1000,
                                    fget="get_FimItckDisableB",
                                    fset="set_FimItckDisableB",
@@ -1945,6 +2083,7 @@ class Nutaq(Device):
                                    format='%6.2f',
                                    min_value=0, max_value=128,
                                    rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_MDividerA",
                                    fset="set_MDividerA",
                                    doc=""
@@ -1959,6 +2098,7 @@ class Nutaq(Device):
                                    format='%6.2f',
                                    min_value=0, max_value=128,
                                    rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_MDividerB",
                                    fset="set_MDividerB",
                                    doc=""
@@ -1973,6 +2113,7 @@ class Nutaq(Device):
                                    format='%6.2f',
                                    min_value=0, max_value=128,
                                    rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_NDividerA",
                                    fset="set_NDividerA",
                                    doc=""
@@ -1987,6 +2128,7 @@ class Nutaq(Device):
                                    format='%6.2f',
                                    min_value=0, max_value=128,
                                    rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_NDividerB",
                                    fset="set_NDividerB",
                                    doc=""
@@ -2001,6 +2143,7 @@ class Nutaq(Device):
                                    format='%6.2f',
                                    min_value=0, max_value=4,
                                    rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_MuxselA",
                                    fset="set_MuxselA",
                                    doc=""
@@ -2015,6 +2158,7 @@ class Nutaq(Device):
                                    format='%6.2f',
                                    min_value=0, max_value=4,
                                    rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_MuxselB",
                                    fset="set_MuxselB",
                                    doc=""
@@ -2029,6 +2173,7 @@ class Nutaq(Device):
                                    format='%6.2f',
                                    min_value=0, max_value=4,
                                    rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_Mux0DividerA",
                                    fset="set_Mux0DividerA",
                                    doc=""
@@ -2043,6 +2188,7 @@ class Nutaq(Device):
                                    format='%6.2f',
                                    min_value=0, max_value=4,
                                    rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_Mux0DividerB",
                                    fset="set_Mux0DividerB",
                                    doc=""
@@ -2057,6 +2203,7 @@ class Nutaq(Device):
                                    format='%6.2f',
                                    min_value=0, max_value=4,
                                    rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_Mux1DividerA",
                                    fset="set_Mux1DividerA",
                                    doc=""
@@ -2071,6 +2218,7 @@ class Nutaq(Device):
                                    format='%6.2f',
                                    min_value=0, max_value=4,
                                    rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_Mux1DividerB",
                                    fset="set_Mux1DividerB",
                                    doc=""
@@ -2085,6 +2233,7 @@ class Nutaq(Device):
                                    format='%6.2f',
                                    min_value=0, max_value=4,
                                    rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_Mux2DividerA",
                                    fset="set_Mux2DividerA",
                                    doc=""
@@ -2099,6 +2248,7 @@ class Nutaq(Device):
                                    format='%6.2f',
                                    min_value=0, max_value=4,
                                    rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_Mux2DividerB",
                                    fset="set_Mux2DividerB",
                                    doc=""
@@ -2113,6 +2263,7 @@ class Nutaq(Device):
                                    format='%6.2f',
                                    min_value=0, max_value=4,
                                    rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_Mux3DividerA",
                                    fset="set_Mux3DividerA",
                                    doc=""
@@ -2127,6 +2278,7 @@ class Nutaq(Device):
                                    format='%6.2f',
                                    min_value=0, max_value=4,
                                    rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_Mux3DividerB",
                                    fset="set_Mux3DividerB",
                                    doc=""
@@ -2141,6 +2293,7 @@ class Nutaq(Device):
                                    format='%6.2f',
                                    min_value=0, max_value=4,
                                    rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_Mux4DividerA",
                                    fset="set_Mux4DividerA",
                                    doc=""
@@ -2155,6 +2308,7 @@ class Nutaq(Device):
                                    format='%6.2f',
                                    min_value=0, max_value=4,
                                    rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_Mux4DividerB",
                                    fset="set_Mux4DividerB",
                                    doc=""
@@ -2167,6 +2321,7 @@ class Nutaq(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   #polling_period=1000,
                                    polling_period=1000,
                                    fget="get_SendWordA",
                                    fset="set_SendWordA",
@@ -2180,6 +2335,7 @@ class Nutaq(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   #polling_period=1000,
                                    polling_period=1000,
                                    fget="get_SendWordB",
                                    fset="set_SendWordB",
@@ -2193,6 +2349,7 @@ class Nutaq(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   #polling_period=1000,
                                    polling_period=1000,
                                    fget="get_CpdirA",
                                    fset="set_CpdirA",
@@ -2206,6 +2363,7 @@ class Nutaq(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   #polling_period=1000,
                                    polling_period=1000,
                                    fget="get_CpdirB",
                                    fset="set_CpdirB",
@@ -2219,6 +2377,7 @@ class Nutaq(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   #polling_period=1000,
                                    polling_period=1000,
                                    fget="get_VcxoOutputInversionA",
                                    fset="set_VcxoOutputInversionA",
@@ -2232,6 +2391,7 @@ class Nutaq(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   #polling_period=1000,
                                    polling_period=1000,
                                    fget="get_VcxoOutputInversionB",
                                    fset="set_VcxoOutputInversionB",
