@@ -10,6 +10,7 @@
     @DebugIt()
     def set_{{attribute.name}}(self, {{attribute.name}}):
         perseus_utils.write_milivolts(self.perseus, {{attribute.name}}, {{attribute.address}}, '{{attribute.cavity}}')
+        self.push_change_event("{{attribute.name}}", {{attribute.name}})
     {% endif %}
 
 {% elif attribute.type == "dmv" %}
@@ -21,6 +22,7 @@
     @DebugIt()
     def set_{{attribute.name}}(self, {{attribute.name}}):
         perseus_utils.write_settings_diag_milivolts(self.perseus, {{attribute.name}}, {{attribute.address}}, '{{attribute.cavity}}')
+        self.push_change_event("{{attribute.name}}", {{attribute.name}})
     {% endif %}
 
 {% elif attribute.type == "percentage" %}
@@ -32,6 +34,7 @@
     @DebugIt()
     def set_{{attribute.name}}(self, {{attribute.name}}):
         perseus_utils.write_settings_diag_percentage(self.perseus, {{attribute.name}}, {{attribute.address}}, '{{attribute.cavity}}')
+        self.push_change_event("{{attribute.name}}", {{attribute.name}})
     {% endif %}
 
 {% elif attribute.type == "angle" %}
@@ -43,6 +46,7 @@
     @DebugIt()
     def set_{{attribute.name}}(self, {{attribute.name}}):
         perseus_utils.write_angle(self.perseus, {{attribute.name}}, {{attribute.address}}, '{{attribute.cavity}}')
+        self.push_change_event("{{attribute.name}}", {{attribute.name}})
     {% endif %}
 
 {% elif attribute.type == "direct" %}
@@ -54,6 +58,7 @@
     @DebugIt()
     def set_{{attribute.name}}(self, {{attribute.name}}):
         perseus_utils.write_direct(self.perseus, {{attribute.name}}, {{attribute.address}}, '{{attribute.cavity}}')
+        self.push_change_event("{{attribute.name}}", {{attribute.name}})
     {% endif %}
 
 {% elif attribute.type == "special_fim" %}
@@ -69,6 +74,7 @@
         self._{{attribute.name}} = {{attribute.name}}
         cavity = '{{attribute.cavity}}'
         self.update_fim(cavity)
+        self.push_change_event("{{attribute.name}}", {{attribute.name}})
     {% endif %}
 
 {% else %}
@@ -86,6 +92,7 @@
         cavity = '{{attribute.cavity}}'
         #@todo: add this method to special methods library ...
         extra_func.set_{{attribute.name[:-1]}}(self.perseus, {{attribute.name}}, address, cavity)
+        self.push_change_event("{{attribute.name}}", {{attribute.name}})
     {% endif %}
 
 {% endif %}
@@ -137,5 +144,6 @@
         {% elif attribute.type == 'angle' and attribute.access == 'read_diag_ph' %}
         self._Diag_{{attribute.name}} = math.degrees(math.atan2(self._Diag_{{attribute.q_parent}}, self._Diag_{{attribute.i_parent}}))
         {% endif %}
+        self.push_change_event("Diag_{{attribute.name}}", self._Diag_{{attribute.name}})
 {% endfor %}
 {% endblock %}

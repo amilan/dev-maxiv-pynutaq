@@ -64,6 +64,8 @@ class Nutaq(Device):
                                    unit='',
                                    format='%6.2f',
                                    min_value=0, max_value=10,
+                                   rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_KpA",
                                    fset="set_KpA",
                                    doc=""
@@ -77,6 +79,8 @@ class Nutaq(Device):
                                    unit='',
                                    format='%6.2f',
                                    min_value=0, max_value=10,
+                                   rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_KpB",
                                    fset="set_KpB",
                                    doc=""
@@ -90,6 +94,8 @@ class Nutaq(Device):
                                    unit='',
                                    format='%6.2f',
                                    min_value=0, max_value=32767,
+                                   rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_KiA",
                                    fset="set_KiA",
                                    doc=""
@@ -103,6 +109,8 @@ class Nutaq(Device):
                                    unit='',
                                    format='%6.2f',
                                    min_value=0, max_value=32767,
+                                   rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_KiB",
                                    fset="set_KiB",
                                    doc=""
@@ -116,6 +124,8 @@ class Nutaq(Device):
                                    unit='degrees',
                                    format='%6.2f',
                                    min_value=-180, max_value=360,
+                                   rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_PhaseShiftCavA",
                                    fset="set_PhaseShiftCavA",
                                    doc=""
@@ -129,6 +139,8 @@ class Nutaq(Device):
                                    unit='degrees',
                                    format='%6.2f',
                                    min_value=-180, max_value=360,
+                                   rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_PhaseShiftCavB",
                                    fset="set_PhaseShiftCavB",
                                    doc=""
@@ -142,6 +154,8 @@ class Nutaq(Device):
                                    unit='degrees',
                                    format='%6.2f',
                                    min_value=-180, max_value=360,
+                                   rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_PhaseShiftFwcavA",
                                    fset="set_PhaseShiftFwcavA",
                                    doc=""
@@ -155,6 +169,8 @@ class Nutaq(Device):
                                    unit='degrees',
                                    format='%6.2f',
                                    min_value=-180, max_value=360,
+                                   rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_PhaseShiftFwcavB",
                                    fset="set_PhaseShiftFwcavB",
                                    doc=""
@@ -168,6 +184,8 @@ class Nutaq(Device):
                                    unit='degrees',
                                    format='%6.2f',
                                    min_value=-180, max_value=360,
+                                   rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_PhaseShiftFwtet1A",
                                    fset="set_PhaseShiftFwtet1A",
                                    doc=""
@@ -181,6 +199,8 @@ class Nutaq(Device):
                                    unit='degrees',
                                    format='%6.2f',
                                    min_value=-180, max_value=360,
+                                   rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_PhaseShiftFwtet1B",
                                    fset="set_PhaseShiftFwtet1B",
                                    doc=""
@@ -194,6 +214,8 @@ class Nutaq(Device):
                                    unit='degrees',
                                    format='%6.2f',
                                    min_value=-180, max_value=360,
+                                   rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_PhaseShiftFwtet2A",
                                    fset="set_PhaseShiftFwtet2A",
                                    doc=""
@@ -207,6 +229,8 @@ class Nutaq(Device):
                                    unit='degrees',
                                    format='%6.2f',
                                    min_value=-180, max_value=360,
+                                   rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_PhaseShiftFwtet2B",
                                    fset="set_PhaseShiftFwtet2B",
                                    doc=""
@@ -220,6 +244,8 @@ class Nutaq(Device):
                                    unit='',
                                    format='%6.2f',
                                    min_value=0, max_value=1000,
+                                   rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_PilimitA",
                                    fset="set_PilimitA",
                                    doc=""
@@ -233,6 +259,8 @@ class Nutaq(Device):
                                    unit='',
                                    format='%6.2f',
                                    min_value=0, max_value=1000,
+                                   rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_PilimitB",
                                    fset="set_PilimitB",
                                    doc=""
@@ -246,6 +274,8 @@ class Nutaq(Device):
                                    unit='',
                                    format='%6.2f',
                                    min_value=0, max_value=7,
+                                   rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_SamplesToAverageA",
                                    fset="set_SamplesToAverageA",
                                    doc=""
@@ -259,6 +289,8 @@ class Nutaq(Device):
                                    unit='',
                                    format='%6.2f',
                                    min_value=0, max_value=7,
+                                   rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_SamplesToAverageB",
                                    fset="set_SamplesToAverageB",
                                    doc=""
@@ -272,6 +304,8 @@ class Nutaq(Device):
                                    unit='',
                                    format='%6.2f',
                                    min_value=0, max_value=3,
+                                   rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_FilterStagesA",
                                    fset="set_FilterStagesA",
                                    doc=""
@@ -285,6 +319,8 @@ class Nutaq(Device):
                                    unit='',
                                    format='%6.2f',
                                    min_value=0, max_value=3,
+                                   rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_FilterStagesB",
                                    fset="set_FilterStagesB",
                                    doc=""
@@ -298,6 +334,8 @@ class Nutaq(Device):
                                    unit='degrees',
                                    format='%6.2f',
                                    min_value=-180, max_value=360,
+                                   rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_PhaseShiftFwcircinA",
                                    fset="set_PhaseShiftFwcircinA",
                                    doc=""
@@ -311,6 +349,8 @@ class Nutaq(Device):
                                    unit='degrees',
                                    format='%6.2f',
                                    min_value=-180, max_value=360,
+                                   rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_PhaseShiftFwcircinB",
                                    fset="set_PhaseShiftFwcircinB",
                                    doc=""
@@ -324,6 +364,8 @@ class Nutaq(Device):
                                    unit='degrees',
                                    format='%6.2f',
                                    min_value=-180, max_value=360,
+                                   rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_PhaseShiftControlSignalTet1A",
                                    fset="set_PhaseShiftControlSignalTet1A",
                                    doc=""
@@ -337,6 +379,8 @@ class Nutaq(Device):
                                    unit='degrees',
                                    format='%6.2f',
                                    min_value=-180, max_value=360,
+                                   rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_PhaseShiftControlSignalTet1B",
                                    fset="set_PhaseShiftControlSignalTet1B",
                                    doc=""
@@ -350,6 +394,8 @@ class Nutaq(Device):
                                    unit='degrees',
                                    format='%6.2f',
                                    min_value=-180, max_value=360,
+                                   rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_PhaseShiftControlSignalTet2A",
                                    fset="set_PhaseShiftControlSignalTet2A",
                                    doc=""
@@ -363,6 +409,8 @@ class Nutaq(Device):
                                    unit='degrees',
                                    format='%6.2f',
                                    min_value=-180, max_value=360,
+                                   rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_PhaseShiftControlSignalTet2B",
                                    fset="set_PhaseShiftControlSignalTet2B",
                                    doc=""
@@ -376,6 +424,8 @@ class Nutaq(Device):
                                    unit='',
                                    format='%6.2f',
                                    min_value=0.1, max_value=1,
+                                   rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_GainTetrode1A",
                                    fset="set_GainTetrode1A",
                                    doc=""
@@ -389,6 +439,8 @@ class Nutaq(Device):
                                    unit='',
                                    format='%6.2f',
                                    min_value=0.1, max_value=1,
+                                   rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_GainTetrode1B",
                                    fset="set_GainTetrode1B",
                                    doc=""
@@ -402,6 +454,8 @@ class Nutaq(Device):
                                    unit='',
                                    format='%6.2f',
                                    min_value=0.1, max_value=1,
+                                   rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_GainTetrode2A",
                                    fset="set_GainTetrode2A",
                                    doc=""
@@ -415,6 +469,8 @@ class Nutaq(Device):
                                    unit='',
                                    format='%6.2f',
                                    min_value=0.1, max_value=1,
+                                   rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_GainTetrode2B",
                                    fset="set_GainTetrode2B",
                                    doc=""
@@ -427,6 +483,8 @@ class Nutaq(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   #polling_period=1000,
+                                   polling_period=1000,
                                    fget="get_AutomaticStartupEnableA",
                                    fset="set_AutomaticStartupEnableA",
                                    doc=""
@@ -439,6 +497,8 @@ class Nutaq(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   #polling_period=1000,
+                                   polling_period=1000,
                                    fget="get_AutomaticStartupEnableB",
                                    fset="set_AutomaticStartupEnableB",
                                    doc=""
@@ -452,6 +512,8 @@ class Nutaq(Device):
                                    unit='',
                                    format='%6.2f',
                                    min_value=0, max_value=7,
+                                   rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_CommandStartA",
                                    fset="set_CommandStartA",
                                    doc=""
@@ -465,6 +527,8 @@ class Nutaq(Device):
                                    unit='',
                                    format='%6.2f',
                                    min_value=0, max_value=7,
+                                   rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_CommandStartB",
                                    fset="set_CommandStartB",
                                    doc=""
@@ -478,6 +542,8 @@ class Nutaq(Device):
                                    unit='mV',
                                    format='%6.2f',
                                    min_value=0, max_value=1000,
+                                   rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_AmprefinA",
                                    fset="set_AmprefinA",
                                    doc=""
@@ -491,6 +557,8 @@ class Nutaq(Device):
                                    unit='mV',
                                    format='%6.2f',
                                    min_value=0, max_value=1000,
+                                   rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_AmprefinB",
                                    fset="set_AmprefinB",
                                    doc=""
@@ -504,6 +572,8 @@ class Nutaq(Device):
                                    unit='degrees',
                                    format='%6.2f',
                                    min_value=-180, max_value=360,
+                                   rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_PhrefinA",
                                    fset="set_PhrefinA",
                                    doc=""
@@ -517,6 +587,8 @@ class Nutaq(Device):
                                    unit='degrees',
                                    format='%6.2f',
                                    min_value=-180, max_value=360,
+                                   rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_PhrefinB",
                                    fset="set_PhrefinB",
                                    doc=""
@@ -530,6 +602,8 @@ class Nutaq(Device):
                                    unit='mV',
                                    format='%6.2f',
                                    min_value=0, max_value=1000,
+                                   rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_AmprefminA",
                                    fset="set_AmprefminA",
                                    doc=""
@@ -543,6 +617,8 @@ class Nutaq(Device):
                                    unit='mV',
                                    format='%6.2f',
                                    min_value=0, max_value=1000,
+                                   rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_AmprefminB",
                                    fset="set_AmprefminB",
                                    doc=""
@@ -556,6 +632,8 @@ class Nutaq(Device):
                                    unit='degrees',
                                    format='%6.2f',
                                    min_value=-180, max_value=360,
+                                   rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_PhrefminA",
                                    fset="set_PhrefminA",
                                    doc=""
@@ -569,6 +647,8 @@ class Nutaq(Device):
                                    unit='degrees',
                                    format='%6.2f',
                                    min_value=-180, max_value=360,
+                                   rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_PhrefminB",
                                    fset="set_PhrefminB",
                                    doc=""
@@ -582,6 +662,8 @@ class Nutaq(Device):
                                    unit='',
                                    format='%6.2f',
                                    min_value=0, max_value=7,
+                                   rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_PhaseIncreaseRateA",
                                    fset="set_PhaseIncreaseRateA",
                                    doc=""
@@ -595,6 +677,8 @@ class Nutaq(Device):
                                    unit='',
                                    format='%6.2f',
                                    min_value=0, max_value=7,
+                                   rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_PhaseIncreaseRateB",
                                    fset="set_PhaseIncreaseRateB",
                                    doc=""
@@ -608,6 +692,8 @@ class Nutaq(Device):
                                    unit='',
                                    format='%6.2f',
                                    min_value=0, max_value=7,
+                                   rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_VoltageIncreaseRateA",
                                    fset="set_VoltageIncreaseRateA",
                                    doc=""
@@ -621,6 +707,8 @@ class Nutaq(Device):
                                    unit='',
                                    format='%6.2f',
                                    min_value=0, max_value=7,
+                                   rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_VoltageIncreaseRateB",
                                    fset="set_VoltageIncreaseRateB",
                                    doc=""
@@ -634,6 +722,8 @@ class Nutaq(Device):
                                    unit='',
                                    format='%6.2f',
                                    min_value=0.5, max_value=2,
+                                   rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_GainOlA",
                                    fset="set_GainOlA",
                                    doc=""
@@ -647,6 +737,8 @@ class Nutaq(Device):
                                    unit='',
                                    format='%6.2f',
                                    min_value=0.5, max_value=2,
+                                   rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_GainOlB",
                                    fset="set_GainOlB",
                                    doc=""
@@ -659,6 +751,8 @@ class Nutaq(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   #polling_period=1000,
+                                   polling_period=1000,
                                    fget="get_SpareGpioOutput01A",
                                    fset="set_SpareGpioOutput01A",
                                    doc=""
@@ -671,6 +765,8 @@ class Nutaq(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   #polling_period=1000,
+                                   polling_period=1000,
                                    fget="get_SpareGpioOutput01B",
                                    fset="set_SpareGpioOutput01B",
                                    doc=""
@@ -683,6 +779,8 @@ class Nutaq(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   #polling_period=1000,
+                                   polling_period=1000,
                                    fget="get_SpareGpioOutput02A",
                                    fset="set_SpareGpioOutput02A",
                                    doc=""
@@ -695,6 +793,8 @@ class Nutaq(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   #polling_period=1000,
+                                   polling_period=1000,
                                    fget="get_SpareGpioOutput02B",
                                    fset="set_SpareGpioOutput02B",
                                    doc=""
@@ -707,6 +807,8 @@ class Nutaq(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   #polling_period=1000,
+                                   polling_period=1000,
                                    fget="get_SpareGpioOutput03A",
                                    fset="set_SpareGpioOutput03A",
                                    doc=""
@@ -719,6 +821,8 @@ class Nutaq(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   #polling_period=1000,
+                                   polling_period=1000,
                                    fget="get_SpareGpioOutput03B",
                                    fset="set_SpareGpioOutput03B",
                                    doc=""
@@ -731,6 +835,8 @@ class Nutaq(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   #polling_period=1000,
+                                   polling_period=1000,
                                    fget="get_SpareGpioOutput04A",
                                    fset="set_SpareGpioOutput04A",
                                    doc=""
@@ -743,6 +849,8 @@ class Nutaq(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   #polling_period=1000,
+                                   polling_period=1000,
                                    fget="get_SpareGpioOutput04B",
                                    fset="set_SpareGpioOutput04B",
                                    doc=""
@@ -755,6 +863,8 @@ class Nutaq(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   #polling_period=1000,
+                                   polling_period=1000,
                                    fget="get_FdlSwTriggerA",
                                    fset="set_FdlSwTriggerA",
                                    doc=""
@@ -767,6 +877,8 @@ class Nutaq(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   #polling_period=1000,
+                                   polling_period=1000,
                                    fget="get_FdlSwTriggerB",
                                    fset="set_FdlSwTriggerB",
                                    doc=""
@@ -779,6 +891,8 @@ class Nutaq(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   #polling_period=1000,
+                                   polling_period=1000,
                                    fget="get_SlowIqLoopEnableA",
                                    fset="set_SlowIqLoopEnableA",
                                    doc=""
@@ -791,6 +905,8 @@ class Nutaq(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   #polling_period=1000,
+                                   polling_period=1000,
                                    fget="get_SlowIqLoopEnableB",
                                    fset="set_SlowIqLoopEnableB",
                                    doc=""
@@ -803,6 +919,8 @@ class Nutaq(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   #polling_period=1000,
+                                   polling_period=1000,
                                    fget="get_AdcsPhaseshiftEnableA",
                                    fset="set_AdcsPhaseshiftEnableA",
                                    doc=""
@@ -815,6 +933,8 @@ class Nutaq(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   #polling_period=1000,
+                                   polling_period=1000,
                                    fget="get_AdcsPhaseshiftEnableB",
                                    fset="set_AdcsPhaseshiftEnableB",
                                    doc=""
@@ -827,6 +947,8 @@ class Nutaq(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   #polling_period=1000,
+                                   polling_period=1000,
                                    fget="get_DacsPhaseShiftEnableA",
                                    fset="set_DacsPhaseShiftEnableA",
                                    doc=""
@@ -839,6 +961,8 @@ class Nutaq(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   #polling_period=1000,
+                                   polling_period=1000,
                                    fget="get_DacsPhaseShiftEnableB",
                                    fset="set_DacsPhaseShiftEnableB",
                                    doc=""
@@ -851,6 +975,8 @@ class Nutaq(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   #polling_period=1000,
+                                   polling_period=1000,
                                    fget="get_SquarerefEnableA",
                                    fset="set_SquarerefEnableA",
                                    doc=""
@@ -863,6 +989,8 @@ class Nutaq(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   #polling_period=1000,
+                                   polling_period=1000,
                                    fget="get_SquarerefEnableB",
                                    fset="set_SquarerefEnableB",
                                    doc=""
@@ -876,6 +1004,8 @@ class Nutaq(Device):
                                    unit='',
                                    format='%6.2f',
                                    min_value=3, max_value=1000,
+                                   rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_FreqsquareA",
                                    fset="set_FreqsquareA",
                                    doc=""
@@ -889,6 +1019,8 @@ class Nutaq(Device):
                                    unit='',
                                    format='%6.2f',
                                    min_value=3, max_value=1000,
+                                   rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_FreqsquareB",
                                    fset="set_FreqsquareB",
                                    doc=""
@@ -901,6 +1033,8 @@ class Nutaq(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   #polling_period=1000,
+                                   polling_period=1000,
                                    fget="get_LookRefA",
                                    fset="set_LookRefA",
                                    doc=""
@@ -913,6 +1047,8 @@ class Nutaq(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   #polling_period=1000,
+                                   polling_period=1000,
                                    fget="get_LookRefB",
                                    fset="set_LookRefB",
                                    doc=""
@@ -926,6 +1062,8 @@ class Nutaq(Device):
                                    unit='',
                                    format='%6.2f',
                                    min_value=0, max_value=3,
+                                   rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_QuadrantSelectionA",
                                    fset="set_QuadrantSelectionA",
                                    doc=""
@@ -939,6 +1077,8 @@ class Nutaq(Device):
                                    unit='',
                                    format='%6.2f',
                                    min_value=0, max_value=3,
+                                   rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_QuadrantSelectionB",
                                    fset="set_QuadrantSelectionB",
                                    doc=""
@@ -952,6 +1092,8 @@ class Nutaq(Device):
                                    unit='',
                                    format='%6.2f',
                                    min_value=0, max_value=4,
+                                   rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_SlowIqLoopInputSelectionA",
                                    fset="set_SlowIqLoopInputSelectionA",
                                    doc=""
@@ -965,6 +1107,8 @@ class Nutaq(Device):
                                    unit='',
                                    format='%6.2f',
                                    min_value=0, max_value=4,
+                                   rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_SlowIqLoopInputSelectionB",
                                    fset="set_SlowIqLoopInputSelectionB",
                                    doc=""
@@ -978,6 +1122,8 @@ class Nutaq(Device):
                                    unit='',
                                    format='%6.2f',
                                    min_value=0, max_value=3,
+                                   rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_FastIqLoopInputSelectionA",
                                    fset="set_FastIqLoopInputSelectionA",
                                    doc=""
@@ -991,6 +1137,8 @@ class Nutaq(Device):
                                    unit='',
                                    format='%6.2f',
                                    min_value=0, max_value=3,
+                                   rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_FastIqLoopInputSelectionB",
                                    fset="set_FastIqLoopInputSelectionB",
                                    doc=""
@@ -1004,6 +1152,8 @@ class Nutaq(Device):
                                    unit='',
                                    format='%6.2f',
                                    min_value=0, max_value=4,
+                                   rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_AmplitudeLoopInputSelectionA",
                                    fset="set_AmplitudeLoopInputSelectionA",
                                    doc=""
@@ -1017,6 +1167,8 @@ class Nutaq(Device):
                                    unit='',
                                    format='%6.2f',
                                    min_value=0, max_value=4,
+                                   rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_AmplitudeLoopInputSelectionB",
                                    fset="set_AmplitudeLoopInputSelectionB",
                                    doc=""
@@ -1030,6 +1182,8 @@ class Nutaq(Device):
                                    unit='',
                                    format='%6.2f',
                                    min_value=0, max_value=4,
+                                   rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_PhaseLoopInputSelectionA",
                                    fset="set_PhaseLoopInputSelectionA",
                                    doc=""
@@ -1043,6 +1197,8 @@ class Nutaq(Device):
                                    unit='',
                                    format='%6.2f',
                                    min_value=0, max_value=4,
+                                   rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_PhaseLoopInputSelectionB",
                                    fset="set_PhaseLoopInputSelectionB",
                                    doc=""
@@ -1055,6 +1211,8 @@ class Nutaq(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   #polling_period=1000,
+                                   polling_period=1000,
                                    fget="get_PolarLoopsEnableA",
                                    fset="set_PolarLoopsEnableA",
                                    doc=""
@@ -1067,6 +1225,8 @@ class Nutaq(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   #polling_period=1000,
+                                   polling_period=1000,
                                    fget="get_PolarLoopsEnableB",
                                    fset="set_PolarLoopsEnableB",
                                    doc=""
@@ -1079,6 +1239,8 @@ class Nutaq(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   #polling_period=1000,
+                                   polling_period=1000,
                                    fget="get_FastIqLoopEnableA",
                                    fset="set_FastIqLoopEnableA",
                                    doc=""
@@ -1091,6 +1253,8 @@ class Nutaq(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   #polling_period=1000,
+                                   polling_period=1000,
                                    fget="get_FastIqLoopEnableB",
                                    fset="set_FastIqLoopEnableB",
                                    doc=""
@@ -1103,6 +1267,8 @@ class Nutaq(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   #polling_period=1000,
+                                   polling_period=1000,
                                    fget="get_AmplitudeLoopEnableA",
                                    fset="set_AmplitudeLoopEnableA",
                                    doc=""
@@ -1115,6 +1281,8 @@ class Nutaq(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   #polling_period=1000,
+                                   polling_period=1000,
                                    fget="get_AmplitudeLoopEnableB",
                                    fset="set_AmplitudeLoopEnableB",
                                    doc=""
@@ -1127,6 +1295,8 @@ class Nutaq(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   #polling_period=1000,
+                                   polling_period=1000,
                                    fget="get_PhaseLoopEnableA",
                                    fset="set_PhaseLoopEnableA",
                                    doc=""
@@ -1139,6 +1309,8 @@ class Nutaq(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   #polling_period=1000,
+                                   polling_period=1000,
                                    fget="get_PhaseLoopEnableB",
                                    fset="set_PhaseLoopEnableB",
                                    doc=""
@@ -1152,6 +1324,8 @@ class Nutaq(Device):
                                    unit='',
                                    format='%6.2f',
                                    min_value=0, max_value=32767,
+                                   rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_KpFastIqLoopA",
                                    fset="set_KpFastIqLoopA",
                                    doc=""
@@ -1165,6 +1339,8 @@ class Nutaq(Device):
                                    unit='',
                                    format='%6.2f',
                                    min_value=0, max_value=32767,
+                                   rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_KpFastIqLoopB",
                                    fset="set_KpFastIqLoopB",
                                    doc=""
@@ -1178,6 +1354,8 @@ class Nutaq(Device):
                                    unit='',
                                    format='%6.2f',
                                    min_value=0, max_value=32767,
+                                   rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_KiFastIqLoopA",
                                    fset="set_KiFastIqLoopA",
                                    doc=""
@@ -1191,6 +1369,8 @@ class Nutaq(Device):
                                    unit='',
                                    format='%6.2f',
                                    min_value=0, max_value=32767,
+                                   rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_KiFastIqLoopB",
                                    fset="set_KiFastIqLoopB",
                                    doc=""
@@ -1204,6 +1384,8 @@ class Nutaq(Device):
                                    unit='',
                                    format='%6.2f',
                                    min_value=0, max_value=32767,
+                                   rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_KpAmpLoopA",
                                    fset="set_KpAmpLoopA",
                                    doc=""
@@ -1217,6 +1399,8 @@ class Nutaq(Device):
                                    unit='',
                                    format='%6.2f',
                                    min_value=0, max_value=32767,
+                                   rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_KpAmpLoopB",
                                    fset="set_KpAmpLoopB",
                                    doc=""
@@ -1230,6 +1414,8 @@ class Nutaq(Device):
                                    unit='',
                                    format='%6.2f',
                                    min_value=0, max_value=32767,
+                                   rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_KiAmpLoopA",
                                    fset="set_KiAmpLoopA",
                                    doc=""
@@ -1243,6 +1429,8 @@ class Nutaq(Device):
                                    unit='',
                                    format='%6.2f',
                                    min_value=0, max_value=32767,
+                                   rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_KiAmpLoopB",
                                    fset="set_KiAmpLoopB",
                                    doc=""
@@ -1256,6 +1444,8 @@ class Nutaq(Device):
                                    unit='',
                                    format='%6.2f',
                                    min_value=0, max_value=32767,
+                                   rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_KpPhaseLoopA",
                                    fset="set_KpPhaseLoopA",
                                    doc=""
@@ -1269,6 +1459,8 @@ class Nutaq(Device):
                                    unit='',
                                    format='%6.2f',
                                    min_value=0, max_value=32767,
+                                   rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_KpPhaseLoopB",
                                    fset="set_KpPhaseLoopB",
                                    doc=""
@@ -1282,6 +1474,8 @@ class Nutaq(Device):
                                    unit='',
                                    format='%6.2f',
                                    min_value=0, max_value=32767,
+                                   rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_KiPhaseLoopA",
                                    fset="set_KiPhaseLoopA",
                                    doc=""
@@ -1295,6 +1489,8 @@ class Nutaq(Device):
                                    unit='',
                                    format='%6.2f',
                                    min_value=0, max_value=32767,
+                                   rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_KiPhaseLoopB",
                                    fset="set_KiPhaseLoopB",
                                    doc=""
@@ -1308,6 +1504,8 @@ class Nutaq(Device):
                                    unit='mV',
                                    format='%6.2f',
                                    min_value=0, max_value=1000,
+                                   rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_PiLimitFastPiIqA",
                                    fset="set_PiLimitFastPiIqA",
                                    doc=""
@@ -1321,6 +1519,8 @@ class Nutaq(Device):
                                    unit='mV',
                                    format='%6.2f',
                                    min_value=0, max_value=1000,
+                                   rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_PiLimitFastPiIqB",
                                    fset="set_PiLimitFastPiIqB",
                                    doc=""
@@ -1333,6 +1533,8 @@ class Nutaq(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   #polling_period=1000,
+                                   polling_period=1000,
                                    fget="get_PulseModeEnableA",
                                    fset="set_PulseModeEnableA",
                                    doc=""
@@ -1345,6 +1547,8 @@ class Nutaq(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   #polling_period=1000,
+                                   polling_period=1000,
                                    fget="get_PulseModeEnableB",
                                    fset="set_PulseModeEnableB",
                                    doc=""
@@ -1357,6 +1561,8 @@ class Nutaq(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   #polling_period=1000,
+                                   polling_period=1000,
                                    fget="get_AutomaticConditioningEnableA",
                                    fset="set_AutomaticConditioningEnableA",
                                    doc=""
@@ -1369,6 +1575,8 @@ class Nutaq(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   #polling_period=1000,
+                                   polling_period=1000,
                                    fget="get_AutomaticConditioningEnableB",
                                    fset="set_AutomaticConditioningEnableB",
                                    doc=""
@@ -1382,6 +1590,8 @@ class Nutaq(Device):
                                    unit='',
                                    format='%6.2f',
                                    min_value=0, max_value=100,
+                                   rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_ConditioningdutyCicleA",
                                    fset="set_ConditioningdutyCicleA",
                                    doc=""
@@ -1395,6 +1605,8 @@ class Nutaq(Device):
                                    unit='',
                                    format='%6.2f',
                                    min_value=0, max_value=100,
+                                   rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_ConditioningdutyCicleB",
                                    fset="set_ConditioningdutyCicleB",
                                    doc=""
@@ -1407,6 +1619,8 @@ class Nutaq(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   #polling_period=1000,
+                                   polling_period=1000,
                                    fget="get_TuningEnableA",
                                    fset="set_TuningEnableA",
                                    doc=""
@@ -1419,6 +1633,8 @@ class Nutaq(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   #polling_period=1000,
+                                   polling_period=1000,
                                    fget="get_TuningEnableB",
                                    fset="set_TuningEnableB",
                                    doc=""
@@ -1431,6 +1647,8 @@ class Nutaq(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   #polling_period=1000,
+                                   polling_period=1000,
                                    fget="get_TuningPosEnA",
                                    fset="set_TuningPosEnA",
                                    doc=""
@@ -1443,6 +1661,8 @@ class Nutaq(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   #polling_period=1000,
+                                   polling_period=1000,
                                    fget="get_TuningPosEnB",
                                    fset="set_TuningPosEnB",
                                    doc=""
@@ -1456,6 +1676,8 @@ class Nutaq(Device):
                                    unit='',
                                    format='%6.2f',
                                    min_value=0, max_value=65535,
+                                   rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_NumStepsA",
                                    fset="set_NumStepsA",
                                    doc=""
@@ -1469,6 +1691,8 @@ class Nutaq(Device):
                                    unit='',
                                    format='%6.2f',
                                    min_value=0, max_value=65535,
+                                   rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_NumStepsB",
                                    fset="set_NumStepsB",
                                    doc=""
@@ -1482,6 +1706,8 @@ class Nutaq(Device):
                                    unit='',
                                    format='%6.2f',
                                    min_value=0, max_value=7,
+                                   rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_PulsesFrequencyA",
                                    fset="set_PulsesFrequencyA",
                                    doc=""
@@ -1495,6 +1721,8 @@ class Nutaq(Device):
                                    unit='',
                                    format='%6.2f',
                                    min_value=0, max_value=7,
+                                   rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_PulsesFrequencyB",
                                    fset="set_PulsesFrequencyB",
                                    doc=""
@@ -1508,6 +1736,8 @@ class Nutaq(Device):
                                    unit='degrees',
                                    format='%6.2f',
                                    min_value=-180, max_value=360,
+                                   rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_PhaseOffsetA",
                                    fset="set_PhaseOffsetA",
                                    doc=""
@@ -1521,6 +1751,8 @@ class Nutaq(Device):
                                    unit='degrees',
                                    format='%6.2f',
                                    min_value=-180, max_value=360,
+                                   rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_PhaseOffsetB",
                                    fset="set_PhaseOffsetB",
                                    doc=""
@@ -1533,6 +1765,8 @@ class Nutaq(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   #polling_period=1000,
+                                   polling_period=1000,
                                    fget="get_MoveA",
                                    fset="set_MoveA",
                                    doc=""
@@ -1545,6 +1779,8 @@ class Nutaq(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   #polling_period=1000,
+                                   polling_period=1000,
                                    fget="get_MoveB",
                                    fset="set_MoveB",
                                    doc=""
@@ -1557,6 +1793,8 @@ class Nutaq(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   #polling_period=1000,
+                                   polling_period=1000,
                                    fget="get_MoveupA",
                                    fset="set_MoveupA",
                                    doc=""
@@ -1569,6 +1807,8 @@ class Nutaq(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   #polling_period=1000,
+                                   polling_period=1000,
                                    fget="get_MoveupB",
                                    fset="set_MoveupB",
                                    doc=""
@@ -1581,6 +1821,8 @@ class Nutaq(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   #polling_period=1000,
+                                   polling_period=1000,
                                    fget="get_TuningresetA",
                                    fset="set_TuningresetA",
                                    doc=""
@@ -1593,6 +1835,8 @@ class Nutaq(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   #polling_period=1000,
+                                   polling_period=1000,
                                    fget="get_TuningresetB",
                                    fset="set_TuningresetB",
                                    doc=""
@@ -1606,6 +1850,8 @@ class Nutaq(Device):
                                    unit='',
                                    format='%6.2f',
                                    min_value=0, max_value=1000,
+                                   rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_FwminA",
                                    fset="set_FwminA",
                                    doc=""
@@ -1619,6 +1865,8 @@ class Nutaq(Device):
                                    unit='',
                                    format='%6.2f',
                                    min_value=0, max_value=1000,
+                                   rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_FwminB",
                                    fset="set_FwminB",
                                    doc=""
@@ -1632,6 +1880,8 @@ class Nutaq(Device):
                                    unit='degrees',
                                    format='%6.2f',
                                    min_value=0, max_value=10,
+                                   rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_MarginupA",
                                    fset="set_MarginupA",
                                    doc=""
@@ -1645,6 +1895,8 @@ class Nutaq(Device):
                                    unit='degrees',
                                    format='%6.2f',
                                    min_value=0, max_value=10,
+                                   rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_MarginupB",
                                    fset="set_MarginupB",
                                    doc=""
@@ -1658,6 +1910,8 @@ class Nutaq(Device):
                                    unit='degrees',
                                    format='%6.2f',
                                    min_value=0, max_value=5,
+                                   rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_MarginlowA",
                                    fset="set_MarginlowA",
                                    doc=""
@@ -1671,6 +1925,8 @@ class Nutaq(Device):
                                    unit='degrees',
                                    format='%6.2f',
                                    min_value=0, max_value=5,
+                                   rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_MarginlowB",
                                    fset="set_MarginlowB",
                                    doc=""
@@ -1684,6 +1940,8 @@ class Nutaq(Device):
                                    unit='',
                                    format='%6.2f',
                                    min_value=0, max_value=3,
+                                   rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_TuningdelayA",
                                    fset="set_TuningdelayA",
                                    doc=""
@@ -1697,6 +1955,8 @@ class Nutaq(Device):
                                    unit='',
                                    format='%6.2f',
                                    min_value=0, max_value=3,
+                                   rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_TuningdelayB",
                                    fset="set_TuningdelayB",
                                    doc=""
@@ -1709,6 +1969,8 @@ class Nutaq(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   #polling_period=1000,
+                                   polling_period=1000,
                                    fget="get_TuningfilterenableA",
                                    fset="set_TuningfilterenableA",
                                    doc=""
@@ -1721,6 +1983,8 @@ class Nutaq(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   #polling_period=1000,
+                                   polling_period=1000,
                                    fget="get_TuningfilterenableB",
                                    fset="set_TuningfilterenableB",
                                    doc=""
@@ -1733,6 +1997,8 @@ class Nutaq(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   #polling_period=1000,
+                                   polling_period=1000,
                                    fget="get_TuningtriggerenableA",
                                    fset="set_TuningtriggerenableA",
                                    doc=""
@@ -1745,6 +2011,8 @@ class Nutaq(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   #polling_period=1000,
+                                   polling_period=1000,
                                    fget="get_TuningtriggerenableB",
                                    fset="set_TuningtriggerenableB",
                                    doc=""
@@ -1757,6 +2025,8 @@ class Nutaq(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   #polling_period=1000,
+                                   polling_period=1000,
                                    fget="get_EpsItckDisableA",
                                    fset="set_EpsItckDisableA",
                                    doc=""
@@ -1769,6 +2039,8 @@ class Nutaq(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   #polling_period=1000,
+                                   polling_period=1000,
                                    fget="get_EpsItckDisableB",
                                    fset="set_EpsItckDisableB",
                                    doc=""
@@ -1781,6 +2053,8 @@ class Nutaq(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   #polling_period=1000,
+                                   polling_period=1000,
                                    fget="get_FimItckDisableA",
                                    fset="set_FimItckDisableA",
                                    doc=""
@@ -1793,6 +2067,8 @@ class Nutaq(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   #polling_period=1000,
+                                   polling_period=1000,
                                    fget="get_FimItckDisableB",
                                    fset="set_FimItckDisableB",
                                    doc=""
@@ -1806,6 +2082,8 @@ class Nutaq(Device):
                                    unit='',
                                    format='%6.2f',
                                    min_value=0, max_value=128,
+                                   rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_MDividerA",
                                    fset="set_MDividerA",
                                    doc=""
@@ -1819,6 +2097,8 @@ class Nutaq(Device):
                                    unit='',
                                    format='%6.2f',
                                    min_value=0, max_value=128,
+                                   rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_MDividerB",
                                    fset="set_MDividerB",
                                    doc=""
@@ -1832,6 +2112,8 @@ class Nutaq(Device):
                                    unit='',
                                    format='%6.2f',
                                    min_value=0, max_value=128,
+                                   rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_NDividerA",
                                    fset="set_NDividerA",
                                    doc=""
@@ -1845,6 +2127,8 @@ class Nutaq(Device):
                                    unit='',
                                    format='%6.2f',
                                    min_value=0, max_value=128,
+                                   rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_NDividerB",
                                    fset="set_NDividerB",
                                    doc=""
@@ -1858,6 +2142,8 @@ class Nutaq(Device):
                                    unit='',
                                    format='%6.2f',
                                    min_value=0, max_value=4,
+                                   rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_MuxselA",
                                    fset="set_MuxselA",
                                    doc=""
@@ -1871,6 +2157,8 @@ class Nutaq(Device):
                                    unit='',
                                    format='%6.2f',
                                    min_value=0, max_value=4,
+                                   rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_MuxselB",
                                    fset="set_MuxselB",
                                    doc=""
@@ -1884,6 +2172,8 @@ class Nutaq(Device):
                                    unit='',
                                    format='%6.2f',
                                    min_value=0, max_value=4,
+                                   rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_Mux0DividerA",
                                    fset="set_Mux0DividerA",
                                    doc=""
@@ -1897,6 +2187,8 @@ class Nutaq(Device):
                                    unit='',
                                    format='%6.2f',
                                    min_value=0, max_value=4,
+                                   rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_Mux0DividerB",
                                    fset="set_Mux0DividerB",
                                    doc=""
@@ -1910,6 +2202,8 @@ class Nutaq(Device):
                                    unit='',
                                    format='%6.2f',
                                    min_value=0, max_value=4,
+                                   rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_Mux1DividerA",
                                    fset="set_Mux1DividerA",
                                    doc=""
@@ -1923,6 +2217,8 @@ class Nutaq(Device):
                                    unit='',
                                    format='%6.2f',
                                    min_value=0, max_value=4,
+                                   rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_Mux1DividerB",
                                    fset="set_Mux1DividerB",
                                    doc=""
@@ -1936,6 +2232,8 @@ class Nutaq(Device):
                                    unit='',
                                    format='%6.2f',
                                    min_value=0, max_value=4,
+                                   rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_Mux2DividerA",
                                    fset="set_Mux2DividerA",
                                    doc=""
@@ -1949,6 +2247,8 @@ class Nutaq(Device):
                                    unit='',
                                    format='%6.2f',
                                    min_value=0, max_value=4,
+                                   rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_Mux2DividerB",
                                    fset="set_Mux2DividerB",
                                    doc=""
@@ -1962,6 +2262,8 @@ class Nutaq(Device):
                                    unit='',
                                    format='%6.2f',
                                    min_value=0, max_value=4,
+                                   rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_Mux3DividerA",
                                    fset="set_Mux3DividerA",
                                    doc=""
@@ -1975,6 +2277,8 @@ class Nutaq(Device):
                                    unit='',
                                    format='%6.2f',
                                    min_value=0, max_value=4,
+                                   rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_Mux3DividerB",
                                    fset="set_Mux3DividerB",
                                    doc=""
@@ -1988,6 +2292,8 @@ class Nutaq(Device):
                                    unit='',
                                    format='%6.2f',
                                    min_value=0, max_value=4,
+                                   rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_Mux4DividerA",
                                    fset="set_Mux4DividerA",
                                    doc=""
@@ -2001,6 +2307,8 @@ class Nutaq(Device):
                                    unit='',
                                    format='%6.2f',
                                    min_value=0, max_value=4,
+                                   rel_change='0.1',
+                                   polling_period=1000,
                                    fget="get_Mux4DividerB",
                                    fset="set_Mux4DividerB",
                                    doc=""
@@ -2013,6 +2321,8 @@ class Nutaq(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   #polling_period=1000,
+                                   polling_period=1000,
                                    fget="get_SendWordA",
                                    fset="set_SendWordA",
                                    doc=""
@@ -2025,6 +2335,8 @@ class Nutaq(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   #polling_period=1000,
+                                   polling_period=1000,
                                    fget="get_SendWordB",
                                    fset="set_SendWordB",
                                    doc=""
@@ -2037,6 +2349,8 @@ class Nutaq(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   #polling_period=1000,
+                                   polling_period=1000,
                                    fget="get_CpdirA",
                                    fset="set_CpdirA",
                                    doc=""
@@ -2049,6 +2363,8 @@ class Nutaq(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   #polling_period=1000,
+                                   polling_period=1000,
                                    fget="get_CpdirB",
                                    fset="set_CpdirB",
                                    doc=""
@@ -2061,6 +2377,8 @@ class Nutaq(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   #polling_period=1000,
+                                   polling_period=1000,
                                    fget="get_VcxoOutputInversionA",
                                    fset="set_VcxoOutputInversionA",
                                    doc=""
@@ -2073,6 +2391,8 @@ class Nutaq(Device):
                                    memorized=True,
                                    unit='',
                                    format='%6.2f',
+                                   #polling_period=1000,
+                                   polling_period=1000,
                                    fget="get_VcxoOutputInversionB",
                                    fset="set_VcxoOutputInversionB",
                                    doc=""
@@ -2080,6 +2400,7 @@ class Nutaq(Device):
 
     Diag_IcavLoopsA = attribute(label='Diag_IcavLoopsA',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -2089,6 +2410,7 @@ class Nutaq(Device):
 
     Diag_IcavLoopsB = attribute(label='Diag_IcavLoopsB',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -2098,6 +2420,7 @@ class Nutaq(Device):
 
     Diag_QcavLoopsA = attribute(label='Diag_QcavLoopsA',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -2107,6 +2430,7 @@ class Nutaq(Device):
 
     Diag_QcavLoopsB = attribute(label='Diag_QcavLoopsB',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -2116,6 +2440,7 @@ class Nutaq(Device):
 
     Diag_IcontrolA = attribute(label='Diag_IcontrolA',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -2125,6 +2450,7 @@ class Nutaq(Device):
 
     Diag_IcontrolB = attribute(label='Diag_IcontrolB',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -2134,6 +2460,7 @@ class Nutaq(Device):
 
     Diag_QcontrolA = attribute(label='Diag_QcontrolA',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -2143,6 +2470,7 @@ class Nutaq(Device):
 
     Diag_QcontrolB = attribute(label='Diag_QcontrolB',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -2152,6 +2480,7 @@ class Nutaq(Device):
 
     Diag_Icontrol1A = attribute(label='Diag_Icontrol1A',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -2161,6 +2490,7 @@ class Nutaq(Device):
 
     Diag_Icontrol1B = attribute(label='Diag_Icontrol1B',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -2170,6 +2500,7 @@ class Nutaq(Device):
 
     Diag_Qcontrol1A = attribute(label='Diag_Qcontrol1A',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -2179,6 +2510,7 @@ class Nutaq(Device):
 
     Diag_Qcontrol1B = attribute(label='Diag_Qcontrol1B',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -2188,6 +2520,7 @@ class Nutaq(Device):
 
     Diag_Icontrol2A = attribute(label='Diag_Icontrol2A',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -2197,6 +2530,7 @@ class Nutaq(Device):
 
     Diag_Icontrol2B = attribute(label='Diag_Icontrol2B',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -2206,6 +2540,7 @@ class Nutaq(Device):
 
     Diag_Qcontrol2A = attribute(label='Diag_Qcontrol2A',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -2215,6 +2550,7 @@ class Nutaq(Device):
 
     Diag_Qcontrol2B = attribute(label='Diag_Qcontrol2B',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -2224,6 +2560,7 @@ class Nutaq(Device):
 
     Diag_IerrorA = attribute(label='Diag_IerrorA',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -2233,6 +2570,7 @@ class Nutaq(Device):
 
     Diag_IerrorB = attribute(label='Diag_IerrorB',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -2242,6 +2580,7 @@ class Nutaq(Device):
 
     Diag_QerrorA = attribute(label='Diag_QerrorA',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -2251,6 +2590,7 @@ class Nutaq(Device):
 
     Diag_QerrorB = attribute(label='Diag_QerrorB',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -2260,6 +2600,7 @@ class Nutaq(Device):
 
     Diag_IerroraccumA = attribute(label='Diag_IerroraccumA',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -2269,6 +2610,7 @@ class Nutaq(Device):
 
     Diag_IerroraccumB = attribute(label='Diag_IerroraccumB',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -2278,6 +2620,7 @@ class Nutaq(Device):
 
     Diag_QerroraccumA = attribute(label='Diag_QerroraccumA',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -2287,6 +2630,7 @@ class Nutaq(Device):
 
     Diag_QerroraccumB = attribute(label='Diag_QerroraccumB',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -2296,6 +2640,7 @@ class Nutaq(Device):
 
     Diag_IrefA = attribute(label='Diag_IrefA',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -2305,6 +2650,7 @@ class Nutaq(Device):
 
     Diag_IrefB = attribute(label='Diag_IrefB',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -2314,6 +2660,7 @@ class Nutaq(Device):
 
     Diag_QrefA = attribute(label='Diag_QrefA',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -2323,6 +2670,7 @@ class Nutaq(Device):
 
     Diag_QrefB = attribute(label='Diag_QrefB',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -2332,6 +2680,7 @@ class Nutaq(Device):
 
     Diag_IFwCavLoopsA = attribute(label='Diag_IFwCavLoopsA',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -2341,6 +2690,7 @@ class Nutaq(Device):
 
     Diag_IFwCavLoopsB = attribute(label='Diag_IFwCavLoopsB',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -2350,6 +2700,7 @@ class Nutaq(Device):
 
     Diag_QFwCavLoopsA = attribute(label='Diag_QFwCavLoopsA',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -2359,6 +2710,7 @@ class Nutaq(Device):
 
     Diag_QFwCavLoopsB = attribute(label='Diag_QFwCavLoopsB',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -2368,6 +2720,7 @@ class Nutaq(Device):
 
     Diag_IFwTet1LoopsA = attribute(label='Diag_IFwTet1LoopsA',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -2377,6 +2730,7 @@ class Nutaq(Device):
 
     Diag_IFwTet1LoopsB = attribute(label='Diag_IFwTet1LoopsB',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -2386,6 +2740,7 @@ class Nutaq(Device):
 
     Diag_QFwTet1LoopsA = attribute(label='Diag_QFwTet1LoopsA',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -2395,6 +2750,7 @@ class Nutaq(Device):
 
     Diag_QFwTet1LoopsB = attribute(label='Diag_QFwTet1LoopsB',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -2404,6 +2760,7 @@ class Nutaq(Device):
 
     Diag_IFwTet2LoopsA = attribute(label='Diag_IFwTet2LoopsA',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -2413,6 +2770,7 @@ class Nutaq(Device):
 
     Diag_IFwTet2LoopsB = attribute(label='Diag_IFwTet2LoopsB',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -2422,6 +2780,7 @@ class Nutaq(Device):
 
     Diag_QFwTet2LoopsA = attribute(label='Diag_QFwTet2LoopsA',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -2431,6 +2790,7 @@ class Nutaq(Device):
 
     Diag_QFwTet2LoopsB = attribute(label='Diag_QFwTet2LoopsB',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -2440,6 +2800,7 @@ class Nutaq(Device):
 
     Diag_IFwCircInLoopsA = attribute(label='Diag_IFwCircInLoopsA',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -2449,6 +2810,7 @@ class Nutaq(Device):
 
     Diag_IFwCircInLoopsB = attribute(label='Diag_IFwCircInLoopsB',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -2458,6 +2820,7 @@ class Nutaq(Device):
 
     Diag_QFwCircInLoopsA = attribute(label='Diag_QFwCircInLoopsA',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -2467,6 +2830,7 @@ class Nutaq(Device):
 
     Diag_QFwCircInLoopsB = attribute(label='Diag_QFwCircInLoopsB',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -2476,6 +2840,7 @@ class Nutaq(Device):
 
     Diag_ImoA = attribute(label='Diag_ImoA',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -2485,6 +2850,7 @@ class Nutaq(Device):
 
     Diag_ImoB = attribute(label='Diag_ImoB',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -2494,6 +2860,7 @@ class Nutaq(Device):
 
     Diag_QmoA = attribute(label='Diag_QmoA',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -2503,6 +2870,7 @@ class Nutaq(Device):
 
     Diag_QmoB = attribute(label='Diag_QmoB',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -2512,6 +2880,7 @@ class Nutaq(Device):
 
     Diag_Ispare1A = attribute(label='Diag_Ispare1A',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -2521,6 +2890,7 @@ class Nutaq(Device):
 
     Diag_Ispare1B = attribute(label='Diag_Ispare1B',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -2530,6 +2900,7 @@ class Nutaq(Device):
 
     Diag_Qspare1A = attribute(label='Diag_Qspare1A',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -2539,6 +2910,7 @@ class Nutaq(Device):
 
     Diag_Qspare1B = attribute(label='Diag_Qspare1B',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -2548,6 +2920,7 @@ class Nutaq(Device):
 
     Diag_Ispare2A = attribute(label='Diag_Ispare2A',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -2557,6 +2930,7 @@ class Nutaq(Device):
 
     Diag_Ispare2B = attribute(label='Diag_Ispare2B',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -2566,6 +2940,7 @@ class Nutaq(Device):
 
     Diag_Qspare2A = attribute(label='Diag_Qspare2A',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -2575,6 +2950,7 @@ class Nutaq(Device):
 
     Diag_Qspare2B = attribute(label='Diag_Qspare2B',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -2584,6 +2960,7 @@ class Nutaq(Device):
 
     Diag_IMuxCavA = attribute(label='Diag_IMuxCavA',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -2593,6 +2970,7 @@ class Nutaq(Device):
 
     Diag_IMuxCavB = attribute(label='Diag_IMuxCavB',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -2602,6 +2980,7 @@ class Nutaq(Device):
 
     Diag_QMuxCavA = attribute(label='Diag_QMuxCavA',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -2611,6 +2990,7 @@ class Nutaq(Device):
 
     Diag_QMuxCavB = attribute(label='Diag_QMuxCavB',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -2620,6 +3000,7 @@ class Nutaq(Device):
 
     Diag_IMuxFwCavA = attribute(label='Diag_IMuxFwCavA',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -2629,6 +3010,7 @@ class Nutaq(Device):
 
     Diag_IMuxFwCavB = attribute(label='Diag_IMuxFwCavB',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -2638,6 +3020,7 @@ class Nutaq(Device):
 
     Diag_QMuxFwCavA = attribute(label='Diag_QMuxFwCavA',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -2647,6 +3030,7 @@ class Nutaq(Device):
 
     Diag_QMuxFwCavB = attribute(label='Diag_QMuxFwCavB',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -2656,6 +3040,7 @@ class Nutaq(Device):
 
     Diag_IMuxFwTet1A = attribute(label='Diag_IMuxFwTet1A',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -2665,6 +3050,7 @@ class Nutaq(Device):
 
     Diag_IMuxFwTet1B = attribute(label='Diag_IMuxFwTet1B',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -2674,6 +3060,7 @@ class Nutaq(Device):
 
     Diag_QMuxFwTet1A = attribute(label='Diag_QMuxFwTet1A',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -2683,6 +3070,7 @@ class Nutaq(Device):
 
     Diag_QMuxFwTet1B = attribute(label='Diag_QMuxFwTet1B',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -2692,6 +3080,7 @@ class Nutaq(Device):
 
     Diag_IMuxFwTet2A = attribute(label='Diag_IMuxFwTet2A',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -2701,6 +3090,7 @@ class Nutaq(Device):
 
     Diag_IMuxFwTet2B = attribute(label='Diag_IMuxFwTet2B',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -2710,6 +3100,7 @@ class Nutaq(Device):
 
     Diag_QMuxFwTet2A = attribute(label='Diag_QMuxFwTet2A',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -2719,6 +3110,7 @@ class Nutaq(Device):
 
     Diag_QMuxFwTet2B = attribute(label='Diag_QMuxFwTet2B',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -2728,6 +3120,7 @@ class Nutaq(Device):
 
     Diag_IMuxFwCircInA = attribute(label='Diag_IMuxFwCircInA',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -2737,6 +3130,7 @@ class Nutaq(Device):
 
     Diag_IMuxFwCircInB = attribute(label='Diag_IMuxFwCircInB',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -2746,6 +3140,7 @@ class Nutaq(Device):
 
     Diag_QMuxFwCircInA = attribute(label='Diag_QMuxFwCircInA',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -2755,6 +3150,7 @@ class Nutaq(Device):
 
     Diag_QMuxFwCircInB = attribute(label='Diag_QMuxFwCircInB',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -2764,6 +3160,7 @@ class Nutaq(Device):
 
     Diag_AmpCavA = attribute(label='Diag_AmpCavA',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -2773,6 +3170,7 @@ class Nutaq(Device):
 
     Diag_AmpCavB = attribute(label='Diag_AmpCavB',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -2782,6 +3180,7 @@ class Nutaq(Device):
 
     Diag_AmpFwA = attribute(label='Diag_AmpFwA',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -2791,6 +3190,7 @@ class Nutaq(Device):
 
     Diag_AmpFwB = attribute(label='Diag_AmpFwB',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -2800,6 +3200,7 @@ class Nutaq(Device):
 
     Diag_AngCavFwA = attribute(label='Diag_AngCavFwA',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='degrees',
@@ -2809,6 +3210,7 @@ class Nutaq(Device):
 
     Diag_AngCavFwB = attribute(label='Diag_AngCavFwB',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='degrees',
@@ -2818,6 +3220,7 @@ class Nutaq(Device):
 
     Diag_AngCavLA = attribute(label='Diag_AngCavLA',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='degrees',
@@ -2827,6 +3230,7 @@ class Nutaq(Device):
 
     Diag_AngCavLB = attribute(label='Diag_AngCavLB',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='degrees',
@@ -2836,6 +3240,7 @@ class Nutaq(Device):
 
     Diag_AngFwLA = attribute(label='Diag_AngFwLA',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='degrees',
@@ -2845,6 +3250,7 @@ class Nutaq(Device):
 
     Diag_AngFwLB = attribute(label='Diag_AngFwLB',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='degrees',
@@ -2854,6 +3260,7 @@ class Nutaq(Device):
 
     Diag_Vaccum1A = attribute(label='Diag_Vaccum1A',
                                    dtype=bool,
+                                   polling_period=1000,
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='',
@@ -2863,6 +3270,7 @@ class Nutaq(Device):
 
     Diag_Vaccum1B = attribute(label='Diag_Vaccum1B',
                                    dtype=bool,
+                                   polling_period=1000,
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='',
@@ -2872,6 +3280,7 @@ class Nutaq(Device):
 
     Diag_Vaccum2A = attribute(label='Diag_Vaccum2A',
                                    dtype=bool,
+                                   polling_period=1000,
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='',
@@ -2881,6 +3290,7 @@ class Nutaq(Device):
 
     Diag_Vaccum2B = attribute(label='Diag_Vaccum2B',
                                    dtype=bool,
+                                   polling_period=1000,
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='',
@@ -2890,6 +3300,7 @@ class Nutaq(Device):
 
     Diag_IcontrolSlowpiA = attribute(label='Diag_IcontrolSlowpiA',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -2899,6 +3310,7 @@ class Nutaq(Device):
 
     Diag_IcontrolSlowpiB = attribute(label='Diag_IcontrolSlowpiB',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -2908,6 +3320,7 @@ class Nutaq(Device):
 
     Diag_QcontrolSlowpiA = attribute(label='Diag_QcontrolSlowpiA',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -2917,6 +3330,7 @@ class Nutaq(Device):
 
     Diag_QcontrolSlowpiB = attribute(label='Diag_QcontrolSlowpiB',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -2926,6 +3340,7 @@ class Nutaq(Device):
 
     Diag_IcontrolFastpiA = attribute(label='Diag_IcontrolFastpiA',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -2935,6 +3350,7 @@ class Nutaq(Device):
 
     Diag_IcontrolFastpiB = attribute(label='Diag_IcontrolFastpiB',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -2944,6 +3360,7 @@ class Nutaq(Device):
 
     Diag_QcontrolFastpiA = attribute(label='Diag_QcontrolFastpiA',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -2953,6 +3370,7 @@ class Nutaq(Device):
 
     Diag_QcontrolFastpiB = attribute(label='Diag_QcontrolFastpiB',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -2962,6 +3380,7 @@ class Nutaq(Device):
 
     Diag_VcxoPoweredA = attribute(label='Diag_VcxoPoweredA',
                                    dtype=bool,
+                                   polling_period=1000,
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='',
@@ -2971,6 +3390,7 @@ class Nutaq(Device):
 
     Diag_VcxoPoweredB = attribute(label='Diag_VcxoPoweredB',
                                    dtype=bool,
+                                   polling_period=1000,
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='',
@@ -2980,6 +3400,7 @@ class Nutaq(Device):
 
     Diag_VcxoRefA = attribute(label='Diag_VcxoRefA',
                                    dtype=bool,
+                                   polling_period=1000,
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='',
@@ -2989,6 +3410,7 @@ class Nutaq(Device):
 
     Diag_VcxoRefB = attribute(label='Diag_VcxoRefB',
                                    dtype=bool,
+                                   polling_period=1000,
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='',
@@ -2998,6 +3420,7 @@ class Nutaq(Device):
 
     Diag_VcxoLockedA = attribute(label='Diag_VcxoLockedA',
                                    dtype=bool,
+                                   polling_period=1000,
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='',
@@ -3007,6 +3430,7 @@ class Nutaq(Device):
 
     Diag_VcxoLockedB = attribute(label='Diag_VcxoLockedB',
                                    dtype=bool,
+                                   polling_period=1000,
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='',
@@ -3016,6 +3440,7 @@ class Nutaq(Device):
 
     Diag_VcxoCableDisconnectedA = attribute(label='Diag_VcxoCableDisconnectedA',
                                    dtype=bool,
+                                   polling_period=1000,
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='',
@@ -3025,6 +3450,7 @@ class Nutaq(Device):
 
     Diag_VcxoCableDisconnectedB = attribute(label='Diag_VcxoCableDisconnectedB',
                                    dtype=bool,
+                                   polling_period=1000,
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='',
@@ -3034,6 +3460,7 @@ class Nutaq(Device):
 
     Diag_IpolarForAmplitudeLoopA = attribute(label='Diag_IpolarForAmplitudeLoopA',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -3043,6 +3470,7 @@ class Nutaq(Device):
 
     Diag_IpolarForAmplitudeLoopB = attribute(label='Diag_IpolarForAmplitudeLoopB',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -3052,6 +3480,7 @@ class Nutaq(Device):
 
     Diag_QpolarForAmplitudeLoopA = attribute(label='Diag_QpolarForAmplitudeLoopA',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -3061,6 +3490,7 @@ class Nutaq(Device):
 
     Diag_QpolarForAmplitudeLoopB = attribute(label='Diag_QpolarForAmplitudeLoopB',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -3070,6 +3500,7 @@ class Nutaq(Device):
 
     Diag_IpolarForPhaseLoopA = attribute(label='Diag_IpolarForPhaseLoopA',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -3079,6 +3510,7 @@ class Nutaq(Device):
 
     Diag_IpolarForPhaseLoopB = attribute(label='Diag_IpolarForPhaseLoopB',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -3088,6 +3520,7 @@ class Nutaq(Device):
 
     Diag_QpolarForPhaseLoopA = attribute(label='Diag_QpolarForPhaseLoopA',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -3097,6 +3530,7 @@ class Nutaq(Device):
 
     Diag_QpolarForPhaseLoopB = attribute(label='Diag_QpolarForPhaseLoopB',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -3106,6 +3540,7 @@ class Nutaq(Device):
 
     Diag_AmpInputOfAmpLoopA = attribute(label='Diag_AmpInputOfAmpLoopA',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -3115,6 +3550,7 @@ class Nutaq(Device):
 
     Diag_AmpInputOfAmpLoopB = attribute(label='Diag_AmpInputOfAmpLoopB',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -3124,6 +3560,7 @@ class Nutaq(Device):
 
     Diag_PhaseInputOfAmpLoopA = attribute(label='Diag_PhaseInputOfAmpLoopA',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -3133,6 +3570,7 @@ class Nutaq(Device):
 
     Diag_PhaseInputOfAmpLoopB = attribute(label='Diag_PhaseInputOfAmpLoopB',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -3142,6 +3580,7 @@ class Nutaq(Device):
 
     Diag_AmpInputOfPhaseLoopA = attribute(label='Diag_AmpInputOfPhaseLoopA',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -3151,6 +3590,7 @@ class Nutaq(Device):
 
     Diag_AmpInputOfPhaseLoopB = attribute(label='Diag_AmpInputOfPhaseLoopB',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -3160,6 +3600,7 @@ class Nutaq(Device):
 
     Diag_PhInputOfPhaseLoopA = attribute(label='Diag_PhInputOfPhaseLoopA',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -3169,6 +3610,7 @@ class Nutaq(Device):
 
     Diag_PhInputOfPhaseLoopB = attribute(label='Diag_PhInputOfPhaseLoopB',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -3178,6 +3620,7 @@ class Nutaq(Device):
 
     Diag_AmpLoopControlOutputA = attribute(label='Diag_AmpLoopControlOutputA',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -3187,6 +3630,7 @@ class Nutaq(Device):
 
     Diag_AmpLoopControlOutputB = attribute(label='Diag_AmpLoopControlOutputB',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -3196,6 +3640,7 @@ class Nutaq(Device):
 
     Diag_AmpLoopErrorA = attribute(label='Diag_AmpLoopErrorA',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -3205,6 +3650,7 @@ class Nutaq(Device):
 
     Diag_AmpLoopErrorB = attribute(label='Diag_AmpLoopErrorB',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -3214,6 +3660,7 @@ class Nutaq(Device):
 
     Diag_AmpLoopErrorAccumA = attribute(label='Diag_AmpLoopErrorAccumA',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -3223,6 +3670,7 @@ class Nutaq(Device):
 
     Diag_AmpLoopErrorAccumB = attribute(label='Diag_AmpLoopErrorAccumB',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -3232,6 +3680,7 @@ class Nutaq(Device):
 
     Diag_PhLoopControlOutputA = attribute(label='Diag_PhLoopControlOutputA',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -3241,6 +3690,7 @@ class Nutaq(Device):
 
     Diag_PhLoopControlOutputB = attribute(label='Diag_PhLoopControlOutputB',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -3250,6 +3700,7 @@ class Nutaq(Device):
 
     Diag_PhLoopErrorA = attribute(label='Diag_PhLoopErrorA',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -3259,6 +3710,7 @@ class Nutaq(Device):
 
     Diag_PhLoopErrorB = attribute(label='Diag_PhLoopErrorB',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -3268,6 +3720,7 @@ class Nutaq(Device):
 
     Diag_PhLoopErrorAccumA = attribute(label='Diag_PhLoopErrorAccumA',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -3277,6 +3730,7 @@ class Nutaq(Device):
 
     Diag_PhLoopErrorAccumB = attribute(label='Diag_PhLoopErrorAccumB',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -3286,6 +3740,7 @@ class Nutaq(Device):
 
     Diag_IpolarControlOutputA = attribute(label='Diag_IpolarControlOutputA',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -3295,6 +3750,7 @@ class Nutaq(Device):
 
     Diag_IpolarControlOutputB = attribute(label='Diag_IpolarControlOutputB',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -3304,6 +3760,7 @@ class Nutaq(Device):
 
     Diag_QpolarControlOutputA = attribute(label='Diag_QpolarControlOutputA',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -3313,6 +3770,7 @@ class Nutaq(Device):
 
     Diag_QpolarControlOutputB = attribute(label='Diag_QpolarControlOutputB',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -3322,6 +3780,7 @@ class Nutaq(Device):
 
     Diag_IcontrolSlowpiIqA = attribute(label='Diag_IcontrolSlowpiIqA',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -3331,6 +3790,7 @@ class Nutaq(Device):
 
     Diag_IcontrolSlowpiIqB = attribute(label='Diag_IcontrolSlowpiIqB',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -3340,6 +3800,7 @@ class Nutaq(Device):
 
     Diag_QcontrolSlowpiqA = attribute(label='Diag_QcontrolSlowpiqA',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -3349,6 +3810,7 @@ class Nutaq(Device):
 
     Diag_QcontrolSlowpiqB = attribute(label='Diag_QcontrolSlowpiqB',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -3358,6 +3820,7 @@ class Nutaq(Device):
 
     Diag_IcontrolFastpiIqA = attribute(label='Diag_IcontrolFastpiIqA',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -3367,6 +3830,7 @@ class Nutaq(Device):
 
     Diag_IcontrolFastpiIqB = attribute(label='Diag_IcontrolFastpiIqB',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -3376,6 +3840,7 @@ class Nutaq(Device):
 
     Diag_QcontrolFastpiIqA = attribute(label='Diag_QcontrolFastpiIqA',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -3385,6 +3850,7 @@ class Nutaq(Device):
 
     Diag_QcontrolFastpiIqB = attribute(label='Diag_QcontrolFastpiIqB',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -3394,6 +3860,7 @@ class Nutaq(Device):
 
     Diag_IloopinputSlowpiIqA = attribute(label='Diag_IloopinputSlowpiIqA',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -3403,6 +3870,7 @@ class Nutaq(Device):
 
     Diag_IloopinputSlowpiIqB = attribute(label='Diag_IloopinputSlowpiIqB',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -3412,6 +3880,7 @@ class Nutaq(Device):
 
     Diag_QloopinputSlowpiIqA = attribute(label='Diag_QloopinputSlowpiIqA',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -3421,6 +3890,7 @@ class Nutaq(Device):
 
     Diag_QloopinputSlowpiIqB = attribute(label='Diag_QloopinputSlowpiIqB',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -3430,6 +3900,7 @@ class Nutaq(Device):
 
     Diag_IloopinputFastpiIqA = attribute(label='Diag_IloopinputFastpiIqA',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -3439,6 +3910,7 @@ class Nutaq(Device):
 
     Diag_IloopinputFastpiIqB = attribute(label='Diag_IloopinputFastpiIqB',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -3448,6 +3920,7 @@ class Nutaq(Device):
 
     Diag_QloopinputFastpiIqA = attribute(label='Diag_QloopinputFastpiIqA',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -3457,6 +3930,7 @@ class Nutaq(Device):
 
     Diag_QloopinputFastpiIqB = attribute(label='Diag_QloopinputFastpiIqB',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -3466,6 +3940,7 @@ class Nutaq(Device):
 
     Diag_IrefloopinputFastpiIqA = attribute(label='Diag_IrefloopinputFastpiIqA',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -3475,6 +3950,7 @@ class Nutaq(Device):
 
     Diag_IrefloopinputFastpiIqB = attribute(label='Diag_IrefloopinputFastpiIqB',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -3484,6 +3960,7 @@ class Nutaq(Device):
 
     Diag_QrefloopinputFastpiIqA = attribute(label='Diag_QrefloopinputFastpiIqA',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -3493,6 +3970,7 @@ class Nutaq(Device):
 
     Diag_QrefloopinputFastpiIqB = attribute(label='Diag_QrefloopinputFastpiIqB',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -3502,6 +3980,7 @@ class Nutaq(Device):
 
     Diag_MovingPlungerAutoA = attribute(label='Diag_MovingPlungerAutoA',
                                    dtype=bool,
+                                   polling_period=1000,
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='',
@@ -3511,6 +3990,7 @@ class Nutaq(Device):
 
     Diag_MovingPlungerAutoB = attribute(label='Diag_MovingPlungerAutoB',
                                    dtype=bool,
+                                   polling_period=1000,
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='',
@@ -3520,6 +4000,7 @@ class Nutaq(Device):
 
     Diag_FreqUpA = attribute(label='Diag_FreqUpA',
                                    dtype=bool,
+                                   polling_period=1000,
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='',
@@ -3529,6 +4010,7 @@ class Nutaq(Device):
 
     Diag_FreqUpB = attribute(label='Diag_FreqUpB',
                                    dtype=bool,
+                                   polling_period=1000,
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='',
@@ -3538,6 +4020,7 @@ class Nutaq(Device):
 
     Diag_ManualTuningOnA = attribute(label='Diag_ManualTuningOnA',
                                    dtype=bool,
+                                   polling_period=1000,
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='',
@@ -3547,6 +4030,7 @@ class Nutaq(Device):
 
     Diag_ManualTuningOnB = attribute(label='Diag_ManualTuningOnB',
                                    dtype=bool,
+                                   polling_period=1000,
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='',
@@ -3556,6 +4040,7 @@ class Nutaq(Device):
 
     Diag_ManualTuningFreqUpA = attribute(label='Diag_ManualTuningFreqUpA',
                                    dtype=bool,
+                                   polling_period=1000,
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='',
@@ -3565,6 +4050,7 @@ class Nutaq(Device):
 
     Diag_ManualTuningFreqUpB = attribute(label='Diag_ManualTuningFreqUpB',
                                    dtype=bool,
+                                   polling_period=1000,
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='',
@@ -3574,6 +4060,7 @@ class Nutaq(Device):
 
     Diag_FwminA = attribute(label='Diag_FwminA',
                                    dtype=bool,
+                                   polling_period=1000,
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='',
@@ -3583,6 +4070,7 @@ class Nutaq(Device):
 
     Diag_FwminB = attribute(label='Diag_FwminB',
                                    dtype=bool,
+                                   polling_period=1000,
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='',
@@ -3592,6 +4080,7 @@ class Nutaq(Device):
 
     Diag_EpsItckDelayA = attribute(label='Diag_EpsItckDelayA',
                                    dtype=bool,
+                                   polling_period=1000,
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='',
@@ -3601,6 +4090,7 @@ class Nutaq(Device):
 
     Diag_EpsItckDelayB = attribute(label='Diag_EpsItckDelayB',
                                    dtype=bool,
+                                   polling_period=1000,
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='',
@@ -3610,6 +4100,7 @@ class Nutaq(Device):
 
     Diag_FimItckDelayA = attribute(label='Diag_FimItckDelayA',
                                    dtype=bool,
+                                   polling_period=1000,
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='',
@@ -3619,6 +4110,7 @@ class Nutaq(Device):
 
     Diag_FimItckDelayB = attribute(label='Diag_FimItckDelayB',
                                    dtype=bool,
+                                   polling_period=1000,
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='',
@@ -3628,6 +4120,7 @@ class Nutaq(Device):
 
     Diag_FdlTrigHwInputA = attribute(label='Diag_FdlTrigHwInputA',
                                    dtype=bool,
+                                   polling_period=1000,
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='',
@@ -3637,6 +4130,7 @@ class Nutaq(Device):
 
     Diag_FdlTrigHwInputB = attribute(label='Diag_FdlTrigHwInputB',
                                    dtype=bool,
+                                   polling_period=1000,
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='',
@@ -3646,6 +4140,7 @@ class Nutaq(Device):
 
     Diag_FdlTrigSwInputA = attribute(label='Diag_FdlTrigSwInputA',
                                    dtype=bool,
+                                   polling_period=1000,
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='',
@@ -3655,6 +4150,7 @@ class Nutaq(Device):
 
     Diag_FdlTrigSwInputB = attribute(label='Diag_FdlTrigSwInputB',
                                    dtype=bool,
+                                   polling_period=1000,
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='',
@@ -3664,6 +4160,7 @@ class Nutaq(Device):
 
     Diag_AmpMuxfwcircina = attribute(label='Diag_AmpMuxfwcircina',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -3673,6 +4170,7 @@ class Nutaq(Device):
 
     Diag_AmpSpare1a = attribute(label='Diag_AmpSpare1a',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -3682,6 +4180,7 @@ class Nutaq(Device):
 
     Diag_AmpMuxfwcircinb = attribute(label='Diag_AmpMuxfwcircinb',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -3691,6 +4190,7 @@ class Nutaq(Device):
 
     Diag_AmpSpare2a = attribute(label='Diag_AmpSpare2a',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -3700,6 +4200,7 @@ class Nutaq(Device):
 
     Diag_AmpSpare2b = attribute(label='Diag_AmpSpare2b',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -3709,6 +4210,7 @@ class Nutaq(Device):
 
     Diag_AmpErrora = attribute(label='Diag_AmpErrora',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -3718,6 +4220,7 @@ class Nutaq(Device):
 
     Diag_AmpErrorb = attribute(label='Diag_AmpErrorb',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -3727,6 +4230,7 @@ class Nutaq(Device):
 
     Diag_AmpSpare1b = attribute(label='Diag_AmpSpare1b',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -3736,6 +4240,7 @@ class Nutaq(Device):
 
     Diag_AmpErroraccumb = attribute(label='Diag_AmpErroraccumb',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -3745,6 +4250,7 @@ class Nutaq(Device):
 
     Diag_AmpErroraccuma = attribute(label='Diag_AmpErroraccuma',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -3754,6 +4260,7 @@ class Nutaq(Device):
 
     Diag_AmpControlfastpiiqb = attribute(label='Diag_AmpControlfastpiiqb',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -3763,6 +4270,7 @@ class Nutaq(Device):
 
     Diag_AmpControlfastpiiqa = attribute(label='Diag_AmpControlfastpiiqa',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -3772,6 +4280,7 @@ class Nutaq(Device):
 
     Diag_AmpControla = attribute(label='Diag_AmpControla',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -3781,6 +4290,7 @@ class Nutaq(Device):
 
     Diag_AmpPolarforamplitudeloopa = attribute(label='Diag_AmpPolarforamplitudeloopa',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -3790,6 +4300,7 @@ class Nutaq(Device):
 
     Diag_AmpPolarforamplitudeloopb = attribute(label='Diag_AmpPolarforamplitudeloopb',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -3799,6 +4310,7 @@ class Nutaq(Device):
 
     Diag_AmpControlb = attribute(label='Diag_AmpControlb',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -3808,6 +4320,7 @@ class Nutaq(Device):
 
     Diag_AmpMuxfwtet2b = attribute(label='Diag_AmpMuxfwtet2b',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -3817,6 +4330,7 @@ class Nutaq(Device):
 
     Diag_AmpLoopinputfastpiiqb = attribute(label='Diag_AmpLoopinputfastpiiqb',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -3826,6 +4340,7 @@ class Nutaq(Device):
 
     Diag_AmpLoopinputfastpiiqa = attribute(label='Diag_AmpLoopinputfastpiiqa',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -3835,6 +4350,7 @@ class Nutaq(Device):
 
     Diag_AmpRefa = attribute(label='Diag_AmpRefa',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -3844,6 +4360,7 @@ class Nutaq(Device):
 
     Diag_AmpMuxfwcava = attribute(label='Diag_AmpMuxfwcava',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -3853,6 +4370,7 @@ class Nutaq(Device):
 
     Diag_AmpMuxfwcavb = attribute(label='Diag_AmpMuxfwcavb',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -3862,6 +4380,7 @@ class Nutaq(Device):
 
     Diag_AmpRefb = attribute(label='Diag_AmpRefb',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -3871,6 +4390,7 @@ class Nutaq(Device):
 
     Diag_AmpControl2a = attribute(label='Diag_AmpControl2a',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -3880,6 +4400,7 @@ class Nutaq(Device):
 
     Diag_AmpControl2b = attribute(label='Diag_AmpControl2b',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -3889,6 +4410,7 @@ class Nutaq(Device):
 
     Diag_AmpFwtet1loopsb = attribute(label='Diag_AmpFwtet1loopsb',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -3898,6 +4420,7 @@ class Nutaq(Device):
 
     Diag_AmpFwtet1loopsa = attribute(label='Diag_AmpFwtet1loopsa',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -3907,6 +4430,7 @@ class Nutaq(Device):
 
     Diag_AmpPolarforphaseloopb = attribute(label='Diag_AmpPolarforphaseloopb',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -3916,6 +4440,7 @@ class Nutaq(Device):
 
     Diag_AmpPolarforphaseloopa = attribute(label='Diag_AmpPolarforphaseloopa',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -3925,6 +4450,7 @@ class Nutaq(Device):
 
     Diag_AmpPolarcontroloutputb = attribute(label='Diag_AmpPolarcontroloutputb',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -3934,6 +4460,7 @@ class Nutaq(Device):
 
     Diag_AmpPolarcontroloutputa = attribute(label='Diag_AmpPolarcontroloutputa',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -3943,6 +4470,7 @@ class Nutaq(Device):
 
     Diag_AmpFwtet2loopsa = attribute(label='Diag_AmpFwtet2loopsa',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -3952,6 +4480,7 @@ class Nutaq(Device):
 
     Diag_AmpCavloopsa = attribute(label='Diag_AmpCavloopsa',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -3961,6 +4490,7 @@ class Nutaq(Device):
 
     Diag_AmpCavloopsb = attribute(label='Diag_AmpCavloopsb',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -3970,6 +4500,7 @@ class Nutaq(Device):
 
     Diag_AmpFwtet2loopsb = attribute(label='Diag_AmpFwtet2loopsb',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -3979,6 +4510,7 @@ class Nutaq(Device):
 
     Diag_AmpLoopinputslowpiiqa = attribute(label='Diag_AmpLoopinputslowpiiqa',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -3988,6 +4520,7 @@ class Nutaq(Device):
 
     Diag_AmpLoopinputslowpiiqb = attribute(label='Diag_AmpLoopinputslowpiiqb',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -3997,6 +4530,7 @@ class Nutaq(Device):
 
     Diag_AmpRefloopinputfastpiiqb = attribute(label='Diag_AmpRefloopinputfastpiiqb',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -4006,6 +4540,7 @@ class Nutaq(Device):
 
     Diag_AmpRefloopinputfastpiiqa = attribute(label='Diag_AmpRefloopinputfastpiiqa',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -4015,6 +4550,7 @@ class Nutaq(Device):
 
     Diag_AmpControl1a = attribute(label='Diag_AmpControl1a',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -4024,6 +4560,7 @@ class Nutaq(Device):
 
     Diag_AmpControl1b = attribute(label='Diag_AmpControl1b',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -4033,6 +4570,7 @@ class Nutaq(Device):
 
     Diag_AmpMuxfwtet2a = attribute(label='Diag_AmpMuxfwtet2a',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -4042,6 +4580,7 @@ class Nutaq(Device):
 
     Diag_AmpMuxcavb = attribute(label='Diag_AmpMuxcavb',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -4051,6 +4590,7 @@ class Nutaq(Device):
 
     Diag_AmpMuxcava = attribute(label='Diag_AmpMuxcava',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -4060,6 +4600,7 @@ class Nutaq(Device):
 
     Diag_AmpMuxfwtet1b = attribute(label='Diag_AmpMuxfwtet1b',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -4069,6 +4610,7 @@ class Nutaq(Device):
 
     Diag_AmpControlfastpib = attribute(label='Diag_AmpControlfastpib',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -4078,6 +4620,7 @@ class Nutaq(Device):
 
     Diag_AmpFwcircinloopsa = attribute(label='Diag_AmpFwcircinloopsa',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -4087,6 +4630,7 @@ class Nutaq(Device):
 
     Diag_AmpFwcircinloopsb = attribute(label='Diag_AmpFwcircinloopsb',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -4096,6 +4640,7 @@ class Nutaq(Device):
 
     Diag_AmpControlfastpia = attribute(label='Diag_AmpControlfastpia',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -4105,6 +4650,7 @@ class Nutaq(Device):
 
     Diag_AmpFwcavloopsa = attribute(label='Diag_AmpFwcavloopsa',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -4114,6 +4660,7 @@ class Nutaq(Device):
 
     Diag_AmpMuxfwtet1a = attribute(label='Diag_AmpMuxfwtet1a',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -4123,6 +4670,7 @@ class Nutaq(Device):
 
     Diag_AmpFwcavloopsb = attribute(label='Diag_AmpFwcavloopsb',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -4132,6 +4680,7 @@ class Nutaq(Device):
 
     Diag_AmpMob = attribute(label='Diag_AmpMob',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -4141,6 +4690,7 @@ class Nutaq(Device):
 
     Diag_AmpMoa = attribute(label='Diag_AmpMoa',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -4150,6 +4700,7 @@ class Nutaq(Device):
 
     Diag_AmpControlslowpia = attribute(label='Diag_AmpControlslowpia',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -4159,6 +4710,7 @@ class Nutaq(Device):
 
     Diag_AmpControlslowpib = attribute(label='Diag_AmpControlslowpib',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='mV',
@@ -4168,6 +4720,7 @@ class Nutaq(Device):
 
     Diag_PhMuxfwcircina = attribute(label='Diag_PhMuxfwcircina',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='degrees',
@@ -4177,6 +4730,7 @@ class Nutaq(Device):
 
     Diag_PhSpare1a = attribute(label='Diag_PhSpare1a',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='degrees',
@@ -4186,6 +4740,7 @@ class Nutaq(Device):
 
     Diag_PhMuxfwcircinb = attribute(label='Diag_PhMuxfwcircinb',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='degrees',
@@ -4195,6 +4750,7 @@ class Nutaq(Device):
 
     Diag_PhSpare2a = attribute(label='Diag_PhSpare2a',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='degrees',
@@ -4204,6 +4760,7 @@ class Nutaq(Device):
 
     Diag_PhSpare2b = attribute(label='Diag_PhSpare2b',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='degrees',
@@ -4213,6 +4770,7 @@ class Nutaq(Device):
 
     Diag_PhErrora = attribute(label='Diag_PhErrora',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='degrees',
@@ -4222,6 +4780,7 @@ class Nutaq(Device):
 
     Diag_PhErrorb = attribute(label='Diag_PhErrorb',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='degrees',
@@ -4231,6 +4790,7 @@ class Nutaq(Device):
 
     Diag_PhSpare1b = attribute(label='Diag_PhSpare1b',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='degrees',
@@ -4240,6 +4800,7 @@ class Nutaq(Device):
 
     Diag_PhErroraccumb = attribute(label='Diag_PhErroraccumb',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='degrees',
@@ -4249,6 +4810,7 @@ class Nutaq(Device):
 
     Diag_PhErroraccuma = attribute(label='Diag_PhErroraccuma',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='degrees',
@@ -4258,6 +4820,7 @@ class Nutaq(Device):
 
     Diag_PhControlfastpiiqb = attribute(label='Diag_PhControlfastpiiqb',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='degrees',
@@ -4267,6 +4830,7 @@ class Nutaq(Device):
 
     Diag_PhControlfastpiiqa = attribute(label='Diag_PhControlfastpiiqa',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='degrees',
@@ -4276,6 +4840,7 @@ class Nutaq(Device):
 
     Diag_PhControla = attribute(label='Diag_PhControla',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='degrees',
@@ -4285,6 +4850,7 @@ class Nutaq(Device):
 
     Diag_PhPolarforamplitudeloopa = attribute(label='Diag_PhPolarforamplitudeloopa',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='degrees',
@@ -4294,6 +4860,7 @@ class Nutaq(Device):
 
     Diag_PhPolarforamplitudeloopb = attribute(label='Diag_PhPolarforamplitudeloopb',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='degrees',
@@ -4303,6 +4870,7 @@ class Nutaq(Device):
 
     Diag_PhControlb = attribute(label='Diag_PhControlb',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='degrees',
@@ -4312,6 +4880,7 @@ class Nutaq(Device):
 
     Diag_PhMuxfwtet2b = attribute(label='Diag_PhMuxfwtet2b',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='degrees',
@@ -4321,6 +4890,7 @@ class Nutaq(Device):
 
     Diag_PhLoopinputfastpiiqb = attribute(label='Diag_PhLoopinputfastpiiqb',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='degrees',
@@ -4330,6 +4900,7 @@ class Nutaq(Device):
 
     Diag_PhLoopinputfastpiiqa = attribute(label='Diag_PhLoopinputfastpiiqa',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='degrees',
@@ -4339,6 +4910,7 @@ class Nutaq(Device):
 
     Diag_PhRefa = attribute(label='Diag_PhRefa',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='degrees',
@@ -4348,6 +4920,7 @@ class Nutaq(Device):
 
     Diag_PhMuxfwcava = attribute(label='Diag_PhMuxfwcava',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='degrees',
@@ -4357,6 +4930,7 @@ class Nutaq(Device):
 
     Diag_PhMuxfwcavb = attribute(label='Diag_PhMuxfwcavb',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='degrees',
@@ -4366,6 +4940,7 @@ class Nutaq(Device):
 
     Diag_PhRefb = attribute(label='Diag_PhRefb',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='degrees',
@@ -4375,6 +4950,7 @@ class Nutaq(Device):
 
     Diag_PhControl2a = attribute(label='Diag_PhControl2a',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='degrees',
@@ -4384,6 +4960,7 @@ class Nutaq(Device):
 
     Diag_PhControl2b = attribute(label='Diag_PhControl2b',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='degrees',
@@ -4393,6 +4970,7 @@ class Nutaq(Device):
 
     Diag_PhFwtet1loopsb = attribute(label='Diag_PhFwtet1loopsb',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='degrees',
@@ -4402,6 +4980,7 @@ class Nutaq(Device):
 
     Diag_PhFwtet1loopsa = attribute(label='Diag_PhFwtet1loopsa',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='degrees',
@@ -4411,6 +4990,7 @@ class Nutaq(Device):
 
     Diag_PhPolarforphaseloopb = attribute(label='Diag_PhPolarforphaseloopb',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='degrees',
@@ -4420,6 +5000,7 @@ class Nutaq(Device):
 
     Diag_PhPolarforphaseloopa = attribute(label='Diag_PhPolarforphaseloopa',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='degrees',
@@ -4429,6 +5010,7 @@ class Nutaq(Device):
 
     Diag_PhPolarcontroloutputb = attribute(label='Diag_PhPolarcontroloutputb',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='degrees',
@@ -4438,6 +5020,7 @@ class Nutaq(Device):
 
     Diag_PhPolarcontroloutputa = attribute(label='Diag_PhPolarcontroloutputa',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='degrees',
@@ -4447,6 +5030,7 @@ class Nutaq(Device):
 
     Diag_PhFwtet2loopsa = attribute(label='Diag_PhFwtet2loopsa',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='degrees',
@@ -4456,6 +5040,7 @@ class Nutaq(Device):
 
     Diag_PhCavloopsa = attribute(label='Diag_PhCavloopsa',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='degrees',
@@ -4465,6 +5050,7 @@ class Nutaq(Device):
 
     Diag_PhCavloopsb = attribute(label='Diag_PhCavloopsb',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='degrees',
@@ -4474,6 +5060,7 @@ class Nutaq(Device):
 
     Diag_PhFwtet2loopsb = attribute(label='Diag_PhFwtet2loopsb',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='degrees',
@@ -4483,6 +5070,7 @@ class Nutaq(Device):
 
     Diag_PhLoopinputslowpiiqa = attribute(label='Diag_PhLoopinputslowpiiqa',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='degrees',
@@ -4492,6 +5080,7 @@ class Nutaq(Device):
 
     Diag_PhLoopinputslowpiiqb = attribute(label='Diag_PhLoopinputslowpiiqb',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='degrees',
@@ -4501,6 +5090,7 @@ class Nutaq(Device):
 
     Diag_PhRefloopinputfastpiiqb = attribute(label='Diag_PhRefloopinputfastpiiqb',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='degrees',
@@ -4510,6 +5100,7 @@ class Nutaq(Device):
 
     Diag_PhRefloopinputfastpiiqa = attribute(label='Diag_PhRefloopinputfastpiiqa',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='degrees',
@@ -4519,6 +5110,7 @@ class Nutaq(Device):
 
     Diag_PhControl1a = attribute(label='Diag_PhControl1a',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='degrees',
@@ -4528,6 +5120,7 @@ class Nutaq(Device):
 
     Diag_PhControl1b = attribute(label='Diag_PhControl1b',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='degrees',
@@ -4537,6 +5130,7 @@ class Nutaq(Device):
 
     Diag_PhMuxfwtet2a = attribute(label='Diag_PhMuxfwtet2a',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='degrees',
@@ -4546,6 +5140,7 @@ class Nutaq(Device):
 
     Diag_PhMuxcavb = attribute(label='Diag_PhMuxcavb',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='degrees',
@@ -4555,6 +5150,7 @@ class Nutaq(Device):
 
     Diag_PhMuxcava = attribute(label='Diag_PhMuxcava',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='degrees',
@@ -4564,6 +5160,7 @@ class Nutaq(Device):
 
     Diag_PhMuxfwtet1b = attribute(label='Diag_PhMuxfwtet1b',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='degrees',
@@ -4573,6 +5170,7 @@ class Nutaq(Device):
 
     Diag_PhControlfastpib = attribute(label='Diag_PhControlfastpib',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='degrees',
@@ -4582,6 +5180,7 @@ class Nutaq(Device):
 
     Diag_PhFwcircinloopsa = attribute(label='Diag_PhFwcircinloopsa',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='degrees',
@@ -4591,6 +5190,7 @@ class Nutaq(Device):
 
     Diag_PhFwcircinloopsb = attribute(label='Diag_PhFwcircinloopsb',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='degrees',
@@ -4600,6 +5200,7 @@ class Nutaq(Device):
 
     Diag_PhControlfastpia = attribute(label='Diag_PhControlfastpia',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='degrees',
@@ -4609,6 +5210,7 @@ class Nutaq(Device):
 
     Diag_PhFwcavloopsa = attribute(label='Diag_PhFwcavloopsa',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='degrees',
@@ -4618,6 +5220,7 @@ class Nutaq(Device):
 
     Diag_PhMuxfwtet1a = attribute(label='Diag_PhMuxfwtet1a',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='degrees',
@@ -4627,6 +5230,7 @@ class Nutaq(Device):
 
     Diag_PhFwcavloopsb = attribute(label='Diag_PhFwcavloopsb',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='degrees',
@@ -4636,6 +5240,7 @@ class Nutaq(Device):
 
     Diag_PhMob = attribute(label='Diag_PhMob',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='degrees',
@@ -4645,6 +5250,7 @@ class Nutaq(Device):
 
     Diag_PhMoa = attribute(label='Diag_PhMoa',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='degrees',
@@ -4654,6 +5260,7 @@ class Nutaq(Device):
 
     Diag_PhControlslowpia = attribute(label='Diag_PhControlslowpia',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='degrees',
@@ -4663,6 +5270,7 @@ class Nutaq(Device):
 
     Diag_PhControlslowpib = attribute(label='Diag_PhControlslowpib',
                                    dtype=float,
+                                   rel_change='0.1',
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
                                    unit='degrees',
@@ -4679,10 +5287,403 @@ class Nutaq(Device):
         Device.init_device(self)
         try:
             self.perseus = Perseus().new_perseus(self.perseusType, self.perseusIp)
+            self.set_events()
             self.set_state(DevState.ON)
         except Exception, e:
             print e
             self.set_state(DevState.FAULT)
+
+    def set_events(self):
+        self.set_change_event('KpA', True)
+        self.set_change_event('KpB', True)
+        self.set_change_event('KiA', True)
+        self.set_change_event('KiB', True)
+        self.set_change_event('PhaseShiftCavA', True)
+        self.set_change_event('PhaseShiftCavB', True)
+        self.set_change_event('PhaseShiftFwcavA', True)
+        self.set_change_event('PhaseShiftFwcavB', True)
+        self.set_change_event('PhaseShiftFwtet1A', True)
+        self.set_change_event('PhaseShiftFwtet1B', True)
+        self.set_change_event('PhaseShiftFwtet2A', True)
+        self.set_change_event('PhaseShiftFwtet2B', True)
+        self.set_change_event('PilimitA', True)
+        self.set_change_event('PilimitB', True)
+        self.set_change_event('SamplesToAverageA', True)
+        self.set_change_event('SamplesToAverageB', True)
+        self.set_change_event('FilterStagesA', True)
+        self.set_change_event('FilterStagesB', True)
+        self.set_change_event('PhaseShiftFwcircinA', True)
+        self.set_change_event('PhaseShiftFwcircinB', True)
+        self.set_change_event('PhaseShiftControlSignalTet1A', True)
+        self.set_change_event('PhaseShiftControlSignalTet1B', True)
+        self.set_change_event('PhaseShiftControlSignalTet2A', True)
+        self.set_change_event('PhaseShiftControlSignalTet2B', True)
+        self.set_change_event('GainTetrode1A', True)
+        self.set_change_event('GainTetrode1B', True)
+        self.set_change_event('GainTetrode2A', True)
+        self.set_change_event('GainTetrode2B', True)
+        self.set_change_event('CommandStartA', True)
+        self.set_change_event('CommandStartB', True)
+        self.set_change_event('AmprefinA', True)
+        self.set_change_event('AmprefinB', True)
+        self.set_change_event('PhrefinA', True)
+        self.set_change_event('PhrefinB', True)
+        self.set_change_event('AmprefminA', True)
+        self.set_change_event('AmprefminB', True)
+        self.set_change_event('PhrefminA', True)
+        self.set_change_event('PhrefminB', True)
+        self.set_change_event('PhaseIncreaseRateA', True)
+        self.set_change_event('PhaseIncreaseRateB', True)
+        self.set_change_event('VoltageIncreaseRateA', True)
+        self.set_change_event('VoltageIncreaseRateB', True)
+        self.set_change_event('GainOlA', True)
+        self.set_change_event('GainOlB', True)
+        self.set_change_event('FreqsquareA', True)
+        self.set_change_event('FreqsquareB', True)
+        self.set_change_event('QuadrantSelectionA', True)
+        self.set_change_event('QuadrantSelectionB', True)
+        self.set_change_event('SlowIqLoopInputSelectionA', True)
+        self.set_change_event('SlowIqLoopInputSelectionB', True)
+        self.set_change_event('FastIqLoopInputSelectionA', True)
+        self.set_change_event('FastIqLoopInputSelectionB', True)
+        self.set_change_event('AmplitudeLoopInputSelectionA', True)
+        self.set_change_event('AmplitudeLoopInputSelectionB', True)
+        self.set_change_event('PhaseLoopInputSelectionA', True)
+        self.set_change_event('PhaseLoopInputSelectionB', True)
+        self.set_change_event('KpFastIqLoopA', True)
+        self.set_change_event('KpFastIqLoopB', True)
+        self.set_change_event('KiFastIqLoopA', True)
+        self.set_change_event('KiFastIqLoopB', True)
+        self.set_change_event('KpAmpLoopA', True)
+        self.set_change_event('KpAmpLoopB', True)
+        self.set_change_event('KiAmpLoopA', True)
+        self.set_change_event('KiAmpLoopB', True)
+        self.set_change_event('KpPhaseLoopA', True)
+        self.set_change_event('KpPhaseLoopB', True)
+        self.set_change_event('KiPhaseLoopA', True)
+        self.set_change_event('KiPhaseLoopB', True)
+        self.set_change_event('PiLimitFastPiIqA', True)
+        self.set_change_event('PiLimitFastPiIqB', True)
+        self.set_change_event('ConditioningdutyCicleA', True)
+        self.set_change_event('ConditioningdutyCicleB', True)
+        self.set_change_event('NumStepsA', True)
+        self.set_change_event('NumStepsB', True)
+        self.set_change_event('PulsesFrequencyA', True)
+        self.set_change_event('PulsesFrequencyB', True)
+        self.set_change_event('PhaseOffsetA', True)
+        self.set_change_event('PhaseOffsetB', True)
+        self.set_change_event('FwminA', True)
+        self.set_change_event('FwminB', True)
+        self.set_change_event('MarginupA', True)
+        self.set_change_event('MarginupB', True)
+        self.set_change_event('MarginlowA', True)
+        self.set_change_event('MarginlowB', True)
+        self.set_change_event('TuningdelayA', True)
+        self.set_change_event('TuningdelayB', True)
+        self.set_change_event('MDividerA', True)
+        self.set_change_event('MDividerB', True)
+        self.set_change_event('NDividerA', True)
+        self.set_change_event('NDividerB', True)
+        self.set_change_event('MuxselA', True)
+        self.set_change_event('MuxselB', True)
+        self.set_change_event('Mux0DividerA', True)
+        self.set_change_event('Mux0DividerB', True)
+        self.set_change_event('Mux1DividerA', True)
+        self.set_change_event('Mux1DividerB', True)
+        self.set_change_event('Mux2DividerA', True)
+        self.set_change_event('Mux2DividerB', True)
+        self.set_change_event('Mux3DividerA', True)
+        self.set_change_event('Mux3DividerB', True)
+        self.set_change_event('Mux4DividerA', True)
+        self.set_change_event('Mux4DividerB', True)
+        self.set_change_event('Diag_IcavLoopsA', True)
+        self.set_change_event('Diag_IcavLoopsB', True)
+        self.set_change_event('Diag_QcavLoopsA', True)
+        self.set_change_event('Diag_QcavLoopsB', True)
+        self.set_change_event('Diag_IcontrolA', True)
+        self.set_change_event('Diag_IcontrolB', True)
+        self.set_change_event('Diag_QcontrolA', True)
+        self.set_change_event('Diag_QcontrolB', True)
+        self.set_change_event('Diag_Icontrol1A', True)
+        self.set_change_event('Diag_Icontrol1B', True)
+        self.set_change_event('Diag_Qcontrol1A', True)
+        self.set_change_event('Diag_Qcontrol1B', True)
+        self.set_change_event('Diag_Icontrol2A', True)
+        self.set_change_event('Diag_Icontrol2B', True)
+        self.set_change_event('Diag_Qcontrol2A', True)
+        self.set_change_event('Diag_Qcontrol2B', True)
+        self.set_change_event('Diag_IerrorA', True)
+        self.set_change_event('Diag_IerrorB', True)
+        self.set_change_event('Diag_QerrorA', True)
+        self.set_change_event('Diag_QerrorB', True)
+        self.set_change_event('Diag_IerroraccumA', True)
+        self.set_change_event('Diag_IerroraccumB', True)
+        self.set_change_event('Diag_QerroraccumA', True)
+        self.set_change_event('Diag_QerroraccumB', True)
+        self.set_change_event('Diag_IrefA', True)
+        self.set_change_event('Diag_IrefB', True)
+        self.set_change_event('Diag_QrefA', True)
+        self.set_change_event('Diag_QrefB', True)
+        self.set_change_event('Diag_IFwCavLoopsA', True)
+        self.set_change_event('Diag_IFwCavLoopsB', True)
+        self.set_change_event('Diag_QFwCavLoopsA', True)
+        self.set_change_event('Diag_QFwCavLoopsB', True)
+        self.set_change_event('Diag_IFwTet1LoopsA', True)
+        self.set_change_event('Diag_IFwTet1LoopsB', True)
+        self.set_change_event('Diag_QFwTet1LoopsA', True)
+        self.set_change_event('Diag_QFwTet1LoopsB', True)
+        self.set_change_event('Diag_IFwTet2LoopsA', True)
+        self.set_change_event('Diag_IFwTet2LoopsB', True)
+        self.set_change_event('Diag_QFwTet2LoopsA', True)
+        self.set_change_event('Diag_QFwTet2LoopsB', True)
+        self.set_change_event('Diag_IFwCircInLoopsA', True)
+        self.set_change_event('Diag_IFwCircInLoopsB', True)
+        self.set_change_event('Diag_QFwCircInLoopsA', True)
+        self.set_change_event('Diag_QFwCircInLoopsB', True)
+        self.set_change_event('Diag_ImoA', True)
+        self.set_change_event('Diag_ImoB', True)
+        self.set_change_event('Diag_QmoA', True)
+        self.set_change_event('Diag_QmoB', True)
+        self.set_change_event('Diag_Ispare1A', True)
+        self.set_change_event('Diag_Ispare1B', True)
+        self.set_change_event('Diag_Qspare1A', True)
+        self.set_change_event('Diag_Qspare1B', True)
+        self.set_change_event('Diag_Ispare2A', True)
+        self.set_change_event('Diag_Ispare2B', True)
+        self.set_change_event('Diag_Qspare2A', True)
+        self.set_change_event('Diag_Qspare2B', True)
+        self.set_change_event('Diag_IMuxCavA', True)
+        self.set_change_event('Diag_IMuxCavB', True)
+        self.set_change_event('Diag_QMuxCavA', True)
+        self.set_change_event('Diag_QMuxCavB', True)
+        self.set_change_event('Diag_IMuxFwCavA', True)
+        self.set_change_event('Diag_IMuxFwCavB', True)
+        self.set_change_event('Diag_QMuxFwCavA', True)
+        self.set_change_event('Diag_QMuxFwCavB', True)
+        self.set_change_event('Diag_IMuxFwTet1A', True)
+        self.set_change_event('Diag_IMuxFwTet1B', True)
+        self.set_change_event('Diag_QMuxFwTet1A', True)
+        self.set_change_event('Diag_QMuxFwTet1B', True)
+        self.set_change_event('Diag_IMuxFwTet2A', True)
+        self.set_change_event('Diag_IMuxFwTet2B', True)
+        self.set_change_event('Diag_QMuxFwTet2A', True)
+        self.set_change_event('Diag_QMuxFwTet2B', True)
+        self.set_change_event('Diag_IMuxFwCircInA', True)
+        self.set_change_event('Diag_IMuxFwCircInB', True)
+        self.set_change_event('Diag_QMuxFwCircInA', True)
+        self.set_change_event('Diag_QMuxFwCircInB', True)
+        self.set_change_event('Diag_AmpCavA', True)
+        self.set_change_event('Diag_AmpCavB', True)
+        self.set_change_event('Diag_AmpFwA', True)
+        self.set_change_event('Diag_AmpFwB', True)
+        self.set_change_event('Diag_AngCavFwA', True)
+        self.set_change_event('Diag_AngCavFwB', True)
+        self.set_change_event('Diag_AngCavLA', True)
+        self.set_change_event('Diag_AngCavLB', True)
+        self.set_change_event('Diag_AngFwLA', True)
+        self.set_change_event('Diag_AngFwLB', True)
+        self.set_change_event('Diag_Vaccum1A', True)
+        self.set_change_event('Diag_Vaccum1B', True)
+        self.set_change_event('Diag_Vaccum2A', True)
+        self.set_change_event('Diag_Vaccum2B', True)
+        self.set_change_event('Diag_IcontrolSlowpiA', True)
+        self.set_change_event('Diag_IcontrolSlowpiB', True)
+        self.set_change_event('Diag_QcontrolSlowpiA', True)
+        self.set_change_event('Diag_QcontrolSlowpiB', True)
+        self.set_change_event('Diag_IcontrolFastpiA', True)
+        self.set_change_event('Diag_IcontrolFastpiB', True)
+        self.set_change_event('Diag_QcontrolFastpiA', True)
+        self.set_change_event('Diag_QcontrolFastpiB', True)
+        self.set_change_event('Diag_VcxoPoweredA', True)
+        self.set_change_event('Diag_VcxoPoweredB', True)
+        self.set_change_event('Diag_VcxoRefA', True)
+        self.set_change_event('Diag_VcxoRefB', True)
+        self.set_change_event('Diag_VcxoLockedA', True)
+        self.set_change_event('Diag_VcxoLockedB', True)
+        self.set_change_event('Diag_VcxoCableDisconnectedA', True)
+        self.set_change_event('Diag_VcxoCableDisconnectedB', True)
+        self.set_change_event('Diag_IpolarForAmplitudeLoopA', True)
+        self.set_change_event('Diag_IpolarForAmplitudeLoopB', True)
+        self.set_change_event('Diag_QpolarForAmplitudeLoopA', True)
+        self.set_change_event('Diag_QpolarForAmplitudeLoopB', True)
+        self.set_change_event('Diag_IpolarForPhaseLoopA', True)
+        self.set_change_event('Diag_IpolarForPhaseLoopB', True)
+        self.set_change_event('Diag_QpolarForPhaseLoopA', True)
+        self.set_change_event('Diag_QpolarForPhaseLoopB', True)
+        self.set_change_event('Diag_AmpInputOfAmpLoopA', True)
+        self.set_change_event('Diag_AmpInputOfAmpLoopB', True)
+        self.set_change_event('Diag_PhaseInputOfAmpLoopA', True)
+        self.set_change_event('Diag_PhaseInputOfAmpLoopB', True)
+        self.set_change_event('Diag_AmpInputOfPhaseLoopA', True)
+        self.set_change_event('Diag_AmpInputOfPhaseLoopB', True)
+        self.set_change_event('Diag_PhInputOfPhaseLoopA', True)
+        self.set_change_event('Diag_PhInputOfPhaseLoopB', True)
+        self.set_change_event('Diag_AmpLoopControlOutputA', True)
+        self.set_change_event('Diag_AmpLoopControlOutputB', True)
+        self.set_change_event('Diag_AmpLoopErrorA', True)
+        self.set_change_event('Diag_AmpLoopErrorB', True)
+        self.set_change_event('Diag_AmpLoopErrorAccumA', True)
+        self.set_change_event('Diag_AmpLoopErrorAccumB', True)
+        self.set_change_event('Diag_PhLoopControlOutputA', True)
+        self.set_change_event('Diag_PhLoopControlOutputB', True)
+        self.set_change_event('Diag_PhLoopErrorA', True)
+        self.set_change_event('Diag_PhLoopErrorB', True)
+        self.set_change_event('Diag_PhLoopErrorAccumA', True)
+        self.set_change_event('Diag_PhLoopErrorAccumB', True)
+        self.set_change_event('Diag_IpolarControlOutputA', True)
+        self.set_change_event('Diag_IpolarControlOutputB', True)
+        self.set_change_event('Diag_QpolarControlOutputA', True)
+        self.set_change_event('Diag_QpolarControlOutputB', True)
+        self.set_change_event('Diag_IcontrolSlowpiIqA', True)
+        self.set_change_event('Diag_IcontrolSlowpiIqB', True)
+        self.set_change_event('Diag_QcontrolSlowpiqA', True)
+        self.set_change_event('Diag_QcontrolSlowpiqB', True)
+        self.set_change_event('Diag_IcontrolFastpiIqA', True)
+        self.set_change_event('Diag_IcontrolFastpiIqB', True)
+        self.set_change_event('Diag_QcontrolFastpiIqA', True)
+        self.set_change_event('Diag_QcontrolFastpiIqB', True)
+        self.set_change_event('Diag_IloopinputSlowpiIqA', True)
+        self.set_change_event('Diag_IloopinputSlowpiIqB', True)
+        self.set_change_event('Diag_QloopinputSlowpiIqA', True)
+        self.set_change_event('Diag_QloopinputSlowpiIqB', True)
+        self.set_change_event('Diag_IloopinputFastpiIqA', True)
+        self.set_change_event('Diag_IloopinputFastpiIqB', True)
+        self.set_change_event('Diag_QloopinputFastpiIqA', True)
+        self.set_change_event('Diag_QloopinputFastpiIqB', True)
+        self.set_change_event('Diag_IrefloopinputFastpiIqA', True)
+        self.set_change_event('Diag_IrefloopinputFastpiIqB', True)
+        self.set_change_event('Diag_QrefloopinputFastpiIqA', True)
+        self.set_change_event('Diag_QrefloopinputFastpiIqB', True)
+        self.set_change_event('Diag_MovingPlungerAutoA', True)
+        self.set_change_event('Diag_MovingPlungerAutoB', True)
+        self.set_change_event('Diag_FreqUpA', True)
+        self.set_change_event('Diag_FreqUpB', True)
+        self.set_change_event('Diag_ManualTuningOnA', True)
+        self.set_change_event('Diag_ManualTuningOnB', True)
+        self.set_change_event('Diag_ManualTuningFreqUpA', True)
+        self.set_change_event('Diag_ManualTuningFreqUpB', True)
+        self.set_change_event('Diag_FwminA', True)
+        self.set_change_event('Diag_FwminB', True)
+        self.set_change_event('Diag_EpsItckDelayA', True)
+        self.set_change_event('Diag_EpsItckDelayB', True)
+        self.set_change_event('Diag_FimItckDelayA', True)
+        self.set_change_event('Diag_FimItckDelayB', True)
+        self.set_change_event('Diag_FdlTrigHwInputA', True)
+        self.set_change_event('Diag_FdlTrigHwInputB', True)
+        self.set_change_event('Diag_FdlTrigSwInputA', True)
+        self.set_change_event('Diag_FdlTrigSwInputB', True)
+        self.set_change_event('Diag_AmpMuxfwcircina', True)
+        self.set_change_event('Diag_AmpSpare1a', True)
+        self.set_change_event('Diag_AmpMuxfwcircinb', True)
+        self.set_change_event('Diag_AmpSpare2a', True)
+        self.set_change_event('Diag_AmpSpare2b', True)
+        self.set_change_event('Diag_AmpErrora', True)
+        self.set_change_event('Diag_AmpErrorb', True)
+        self.set_change_event('Diag_AmpSpare1b', True)
+        self.set_change_event('Diag_AmpErroraccumb', True)
+        self.set_change_event('Diag_AmpErroraccuma', True)
+        self.set_change_event('Diag_AmpControlfastpiiqb', True)
+        self.set_change_event('Diag_AmpControlfastpiiqa', True)
+        self.set_change_event('Diag_AmpControla', True)
+        self.set_change_event('Diag_AmpPolarforamplitudeloopa', True)
+        self.set_change_event('Diag_AmpPolarforamplitudeloopb', True)
+        self.set_change_event('Diag_AmpControlb', True)
+        self.set_change_event('Diag_AmpMuxfwtet2b', True)
+        self.set_change_event('Diag_AmpLoopinputfastpiiqb', True)
+        self.set_change_event('Diag_AmpLoopinputfastpiiqa', True)
+        self.set_change_event('Diag_AmpRefa', True)
+        self.set_change_event('Diag_AmpMuxfwcava', True)
+        self.set_change_event('Diag_AmpMuxfwcavb', True)
+        self.set_change_event('Diag_AmpRefb', True)
+        self.set_change_event('Diag_AmpControl2a', True)
+        self.set_change_event('Diag_AmpControl2b', True)
+        self.set_change_event('Diag_AmpFwtet1loopsb', True)
+        self.set_change_event('Diag_AmpFwtet1loopsa', True)
+        self.set_change_event('Diag_AmpPolarforphaseloopb', True)
+        self.set_change_event('Diag_AmpPolarforphaseloopa', True)
+        self.set_change_event('Diag_AmpPolarcontroloutputb', True)
+        self.set_change_event('Diag_AmpPolarcontroloutputa', True)
+        self.set_change_event('Diag_AmpFwtet2loopsa', True)
+        self.set_change_event('Diag_AmpCavloopsa', True)
+        self.set_change_event('Diag_AmpCavloopsb', True)
+        self.set_change_event('Diag_AmpFwtet2loopsb', True)
+        self.set_change_event('Diag_AmpLoopinputslowpiiqa', True)
+        self.set_change_event('Diag_AmpLoopinputslowpiiqb', True)
+        self.set_change_event('Diag_AmpRefloopinputfastpiiqb', True)
+        self.set_change_event('Diag_AmpRefloopinputfastpiiqa', True)
+        self.set_change_event('Diag_AmpControl1a', True)
+        self.set_change_event('Diag_AmpControl1b', True)
+        self.set_change_event('Diag_AmpMuxfwtet2a', True)
+        self.set_change_event('Diag_AmpMuxcavb', True)
+        self.set_change_event('Diag_AmpMuxcava', True)
+        self.set_change_event('Diag_AmpMuxfwtet1b', True)
+        self.set_change_event('Diag_AmpControlfastpib', True)
+        self.set_change_event('Diag_AmpFwcircinloopsa', True)
+        self.set_change_event('Diag_AmpFwcircinloopsb', True)
+        self.set_change_event('Diag_AmpControlfastpia', True)
+        self.set_change_event('Diag_AmpFwcavloopsa', True)
+        self.set_change_event('Diag_AmpMuxfwtet1a', True)
+        self.set_change_event('Diag_AmpFwcavloopsb', True)
+        self.set_change_event('Diag_AmpMob', True)
+        self.set_change_event('Diag_AmpMoa', True)
+        self.set_change_event('Diag_AmpControlslowpia', True)
+        self.set_change_event('Diag_AmpControlslowpib', True)
+        self.set_change_event('Diag_PhMuxfwcircina', True)
+        self.set_change_event('Diag_PhSpare1a', True)
+        self.set_change_event('Diag_PhMuxfwcircinb', True)
+        self.set_change_event('Diag_PhSpare2a', True)
+        self.set_change_event('Diag_PhSpare2b', True)
+        self.set_change_event('Diag_PhErrora', True)
+        self.set_change_event('Diag_PhErrorb', True)
+        self.set_change_event('Diag_PhSpare1b', True)
+        self.set_change_event('Diag_PhErroraccumb', True)
+        self.set_change_event('Diag_PhErroraccuma', True)
+        self.set_change_event('Diag_PhControlfastpiiqb', True)
+        self.set_change_event('Diag_PhControlfastpiiqa', True)
+        self.set_change_event('Diag_PhControla', True)
+        self.set_change_event('Diag_PhPolarforamplitudeloopa', True)
+        self.set_change_event('Diag_PhPolarforamplitudeloopb', True)
+        self.set_change_event('Diag_PhControlb', True)
+        self.set_change_event('Diag_PhMuxfwtet2b', True)
+        self.set_change_event('Diag_PhLoopinputfastpiiqb', True)
+        self.set_change_event('Diag_PhLoopinputfastpiiqa', True)
+        self.set_change_event('Diag_PhRefa', True)
+        self.set_change_event('Diag_PhMuxfwcava', True)
+        self.set_change_event('Diag_PhMuxfwcavb', True)
+        self.set_change_event('Diag_PhRefb', True)
+        self.set_change_event('Diag_PhControl2a', True)
+        self.set_change_event('Diag_PhControl2b', True)
+        self.set_change_event('Diag_PhFwtet1loopsb', True)
+        self.set_change_event('Diag_PhFwtet1loopsa', True)
+        self.set_change_event('Diag_PhPolarforphaseloopb', True)
+        self.set_change_event('Diag_PhPolarforphaseloopa', True)
+        self.set_change_event('Diag_PhPolarcontroloutputb', True)
+        self.set_change_event('Diag_PhPolarcontroloutputa', True)
+        self.set_change_event('Diag_PhFwtet2loopsa', True)
+        self.set_change_event('Diag_PhCavloopsa', True)
+        self.set_change_event('Diag_PhCavloopsb', True)
+        self.set_change_event('Diag_PhFwtet2loopsb', True)
+        self.set_change_event('Diag_PhLoopinputslowpiiqa', True)
+        self.set_change_event('Diag_PhLoopinputslowpiiqb', True)
+        self.set_change_event('Diag_PhRefloopinputfastpiiqb', True)
+        self.set_change_event('Diag_PhRefloopinputfastpiiqa', True)
+        self.set_change_event('Diag_PhControl1a', True)
+        self.set_change_event('Diag_PhControl1b', True)
+        self.set_change_event('Diag_PhMuxfwtet2a', True)
+        self.set_change_event('Diag_PhMuxcavb', True)
+        self.set_change_event('Diag_PhMuxcava', True)
+        self.set_change_event('Diag_PhMuxfwtet1b', True)
+        self.set_change_event('Diag_PhControlfastpib', True)
+        self.set_change_event('Diag_PhFwcircinloopsa', True)
+        self.set_change_event('Diag_PhFwcircinloopsb', True)
+        self.set_change_event('Diag_PhControlfastpia', True)
+        self.set_change_event('Diag_PhFwcavloopsa', True)
+        self.set_change_event('Diag_PhMuxfwtet1a', True)
+        self.set_change_event('Diag_PhFwcavloopsb', True)
+        self.set_change_event('Diag_PhMob', True)
+        self.set_change_event('Diag_PhMoa', True)
+        self.set_change_event('Diag_PhControlslowpia', True)
+        self.set_change_event('Diag_PhControlslowpib', True)
 
 
     @DebugIt()
@@ -4692,6 +5693,7 @@ class Nutaq(Device):
     @DebugIt()
     def set_KpA(self, KpA):
         perseus_utils.write_direct(self.perseus, KpA, 0, 'A')
+        self.push_change_event("KpA", KpA)
 
     @DebugIt()
     def get_KpB(self):
@@ -4700,6 +5702,7 @@ class Nutaq(Device):
     @DebugIt()
     def set_KpB(self, KpB):
         perseus_utils.write_direct(self.perseus, KpB, 0, 'B')
+        self.push_change_event("KpB", KpB)
 
     @DebugIt()
     def get_KiA(self):
@@ -4708,6 +5711,7 @@ class Nutaq(Device):
     @DebugIt()
     def set_KiA(self, KiA):
         perseus_utils.write_direct(self.perseus, KiA, 1, 'A')
+        self.push_change_event("KiA", KiA)
 
     @DebugIt()
     def get_KiB(self):
@@ -4716,6 +5720,7 @@ class Nutaq(Device):
     @DebugIt()
     def set_KiB(self, KiB):
         perseus_utils.write_direct(self.perseus, KiB, 1, 'B')
+        self.push_change_event("KiB", KiB)
 
     @DebugIt()
     def get_PhaseShiftCavA(self):
@@ -4724,6 +5729,7 @@ class Nutaq(Device):
     @DebugIt()
     def set_PhaseShiftCavA(self, PhaseShiftCavA):
         perseus_utils.write_angle(self.perseus, PhaseShiftCavA, 2, 'A')
+        self.push_change_event("PhaseShiftCavA", PhaseShiftCavA)
 
     @DebugIt()
     def get_PhaseShiftCavB(self):
@@ -4732,6 +5738,7 @@ class Nutaq(Device):
     @DebugIt()
     def set_PhaseShiftCavB(self, PhaseShiftCavB):
         perseus_utils.write_angle(self.perseus, PhaseShiftCavB, 2, 'B')
+        self.push_change_event("PhaseShiftCavB", PhaseShiftCavB)
 
     @DebugIt()
     def get_PhaseShiftFwcavA(self):
@@ -4740,6 +5747,7 @@ class Nutaq(Device):
     @DebugIt()
     def set_PhaseShiftFwcavA(self, PhaseShiftFwcavA):
         perseus_utils.write_angle(self.perseus, PhaseShiftFwcavA, 3, 'A')
+        self.push_change_event("PhaseShiftFwcavA", PhaseShiftFwcavA)
 
     @DebugIt()
     def get_PhaseShiftFwcavB(self):
@@ -4748,6 +5756,7 @@ class Nutaq(Device):
     @DebugIt()
     def set_PhaseShiftFwcavB(self, PhaseShiftFwcavB):
         perseus_utils.write_angle(self.perseus, PhaseShiftFwcavB, 3, 'B')
+        self.push_change_event("PhaseShiftFwcavB", PhaseShiftFwcavB)
 
     @DebugIt()
     def get_PhaseShiftFwtet1A(self):
@@ -4756,6 +5765,7 @@ class Nutaq(Device):
     @DebugIt()
     def set_PhaseShiftFwtet1A(self, PhaseShiftFwtet1A):
         perseus_utils.write_angle(self.perseus, PhaseShiftFwtet1A, 4, 'A')
+        self.push_change_event("PhaseShiftFwtet1A", PhaseShiftFwtet1A)
 
     @DebugIt()
     def get_PhaseShiftFwtet1B(self):
@@ -4764,6 +5774,7 @@ class Nutaq(Device):
     @DebugIt()
     def set_PhaseShiftFwtet1B(self, PhaseShiftFwtet1B):
         perseus_utils.write_angle(self.perseus, PhaseShiftFwtet1B, 4, 'B')
+        self.push_change_event("PhaseShiftFwtet1B", PhaseShiftFwtet1B)
 
     @DebugIt()
     def get_PhaseShiftFwtet2A(self):
@@ -4772,6 +5783,7 @@ class Nutaq(Device):
     @DebugIt()
     def set_PhaseShiftFwtet2A(self, PhaseShiftFwtet2A):
         perseus_utils.write_angle(self.perseus, PhaseShiftFwtet2A, 5, 'A')
+        self.push_change_event("PhaseShiftFwtet2A", PhaseShiftFwtet2A)
 
     @DebugIt()
     def get_PhaseShiftFwtet2B(self):
@@ -4780,6 +5792,7 @@ class Nutaq(Device):
     @DebugIt()
     def set_PhaseShiftFwtet2B(self, PhaseShiftFwtet2B):
         perseus_utils.write_angle(self.perseus, PhaseShiftFwtet2B, 5, 'B')
+        self.push_change_event("PhaseShiftFwtet2B", PhaseShiftFwtet2B)
 
     @DebugIt()
     def get_PilimitA(self):
@@ -4794,6 +5807,7 @@ class Nutaq(Device):
         cavity = 'A'
         #@todo: add this method to special methods library ...
         extra_func.set_Pilimit(self.perseus, PilimitA, address, cavity)
+        self.push_change_event("PilimitA", PilimitA)
 
     @DebugIt()
     def get_PilimitB(self):
@@ -4808,6 +5822,7 @@ class Nutaq(Device):
         cavity = 'B'
         #@todo: add this method to special methods library ...
         extra_func.set_Pilimit(self.perseus, PilimitB, address, cavity)
+        self.push_change_event("PilimitB", PilimitB)
 
     @DebugIt()
     def get_SamplesToAverageA(self):
@@ -4816,6 +5831,7 @@ class Nutaq(Device):
     @DebugIt()
     def set_SamplesToAverageA(self, SamplesToAverageA):
         perseus_utils.write_direct(self.perseus, SamplesToAverageA, 7, 'A')
+        self.push_change_event("SamplesToAverageA", SamplesToAverageA)
 
     @DebugIt()
     def get_SamplesToAverageB(self):
@@ -4824,6 +5840,7 @@ class Nutaq(Device):
     @DebugIt()
     def set_SamplesToAverageB(self, SamplesToAverageB):
         perseus_utils.write_direct(self.perseus, SamplesToAverageB, 7, 'B')
+        self.push_change_event("SamplesToAverageB", SamplesToAverageB)
 
     @DebugIt()
     def get_FilterStagesA(self):
@@ -4832,6 +5849,7 @@ class Nutaq(Device):
     @DebugIt()
     def set_FilterStagesA(self, FilterStagesA):
         perseus_utils.write_direct(self.perseus, FilterStagesA, 8, 'A')
+        self.push_change_event("FilterStagesA", FilterStagesA)
 
     @DebugIt()
     def get_FilterStagesB(self):
@@ -4840,6 +5858,7 @@ class Nutaq(Device):
     @DebugIt()
     def set_FilterStagesB(self, FilterStagesB):
         perseus_utils.write_direct(self.perseus, FilterStagesB, 8, 'B')
+        self.push_change_event("FilterStagesB", FilterStagesB)
 
     @DebugIt()
     def get_PhaseShiftFwcircinA(self):
@@ -4848,6 +5867,7 @@ class Nutaq(Device):
     @DebugIt()
     def set_PhaseShiftFwcircinA(self, PhaseShiftFwcircinA):
         perseus_utils.write_angle(self.perseus, PhaseShiftFwcircinA, 9, 'A')
+        self.push_change_event("PhaseShiftFwcircinA", PhaseShiftFwcircinA)
 
     @DebugIt()
     def get_PhaseShiftFwcircinB(self):
@@ -4856,6 +5876,7 @@ class Nutaq(Device):
     @DebugIt()
     def set_PhaseShiftFwcircinB(self, PhaseShiftFwcircinB):
         perseus_utils.write_angle(self.perseus, PhaseShiftFwcircinB, 9, 'B')
+        self.push_change_event("PhaseShiftFwcircinB", PhaseShiftFwcircinB)
 
     @DebugIt()
     def get_PhaseShiftControlSignalTet1A(self):
@@ -4864,6 +5885,7 @@ class Nutaq(Device):
     @DebugIt()
     def set_PhaseShiftControlSignalTet1A(self, PhaseShiftControlSignalTet1A):
         perseus_utils.write_angle(self.perseus, PhaseShiftControlSignalTet1A, 10, 'A')
+        self.push_change_event("PhaseShiftControlSignalTet1A", PhaseShiftControlSignalTet1A)
 
     @DebugIt()
     def get_PhaseShiftControlSignalTet1B(self):
@@ -4872,6 +5894,7 @@ class Nutaq(Device):
     @DebugIt()
     def set_PhaseShiftControlSignalTet1B(self, PhaseShiftControlSignalTet1B):
         perseus_utils.write_angle(self.perseus, PhaseShiftControlSignalTet1B, 10, 'B')
+        self.push_change_event("PhaseShiftControlSignalTet1B", PhaseShiftControlSignalTet1B)
 
     @DebugIt()
     def get_PhaseShiftControlSignalTet2A(self):
@@ -4880,6 +5903,7 @@ class Nutaq(Device):
     @DebugIt()
     def set_PhaseShiftControlSignalTet2A(self, PhaseShiftControlSignalTet2A):
         perseus_utils.write_angle(self.perseus, PhaseShiftControlSignalTet2A, 11, 'A')
+        self.push_change_event("PhaseShiftControlSignalTet2A", PhaseShiftControlSignalTet2A)
 
     @DebugIt()
     def get_PhaseShiftControlSignalTet2B(self):
@@ -4888,6 +5912,7 @@ class Nutaq(Device):
     @DebugIt()
     def set_PhaseShiftControlSignalTet2B(self, PhaseShiftControlSignalTet2B):
         perseus_utils.write_angle(self.perseus, PhaseShiftControlSignalTet2B, 11, 'B')
+        self.push_change_event("PhaseShiftControlSignalTet2B", PhaseShiftControlSignalTet2B)
 
     @DebugIt()
     def get_GainTetrode1A(self):
@@ -4902,6 +5927,7 @@ class Nutaq(Device):
         cavity = 'A'
         #@todo: add this method to special methods library ...
         extra_func.set_GainTetrode1(self.perseus, GainTetrode1A, address, cavity)
+        self.push_change_event("GainTetrode1A", GainTetrode1A)
 
     @DebugIt()
     def get_GainTetrode1B(self):
@@ -4916,6 +5942,7 @@ class Nutaq(Device):
         cavity = 'B'
         #@todo: add this method to special methods library ...
         extra_func.set_GainTetrode1(self.perseus, GainTetrode1B, address, cavity)
+        self.push_change_event("GainTetrode1B", GainTetrode1B)
 
     @DebugIt()
     def get_GainTetrode2A(self):
@@ -4930,6 +5957,7 @@ class Nutaq(Device):
         cavity = 'A'
         #@todo: add this method to special methods library ...
         extra_func.set_GainTetrode2(self.perseus, GainTetrode2A, address, cavity)
+        self.push_change_event("GainTetrode2A", GainTetrode2A)
 
     @DebugIt()
     def get_GainTetrode2B(self):
@@ -4944,6 +5972,7 @@ class Nutaq(Device):
         cavity = 'B'
         #@todo: add this method to special methods library ...
         extra_func.set_GainTetrode2(self.perseus, GainTetrode2B, address, cavity)
+        self.push_change_event("GainTetrode2B", GainTetrode2B)
 
     @DebugIt()
     def get_AutomaticStartupEnableA(self):
@@ -4952,6 +5981,7 @@ class Nutaq(Device):
     @DebugIt()
     def set_AutomaticStartupEnableA(self, AutomaticStartupEnableA):
         perseus_utils.write_direct(self.perseus, AutomaticStartupEnableA, 15, 'A')
+        self.push_change_event("AutomaticStartupEnableA", AutomaticStartupEnableA)
 
     @DebugIt()
     def get_AutomaticStartupEnableB(self):
@@ -4960,6 +5990,7 @@ class Nutaq(Device):
     @DebugIt()
     def set_AutomaticStartupEnableB(self, AutomaticStartupEnableB):
         perseus_utils.write_direct(self.perseus, AutomaticStartupEnableB, 15, 'B')
+        self.push_change_event("AutomaticStartupEnableB", AutomaticStartupEnableB)
 
     @DebugIt()
     def get_CommandStartA(self):
@@ -4968,6 +5999,7 @@ class Nutaq(Device):
     @DebugIt()
     def set_CommandStartA(self, CommandStartA):
         perseus_utils.write_direct(self.perseus, CommandStartA, 16, 'A')
+        self.push_change_event("CommandStartA", CommandStartA)
 
     @DebugIt()
     def get_CommandStartB(self):
@@ -4976,6 +6008,7 @@ class Nutaq(Device):
     @DebugIt()
     def set_CommandStartB(self, CommandStartB):
         perseus_utils.write_direct(self.perseus, CommandStartB, 16, 'B')
+        self.push_change_event("CommandStartB", CommandStartB)
 
     @DebugIt()
     def get_AmprefinA(self):
@@ -4984,6 +6017,7 @@ class Nutaq(Device):
     @DebugIt()
     def set_AmprefinA(self, AmprefinA):
         perseus_utils.write_milivolts(self.perseus, AmprefinA, 19, 'A')
+        self.push_change_event("AmprefinA", AmprefinA)
 
     @DebugIt()
     def get_AmprefinB(self):
@@ -4992,6 +6026,7 @@ class Nutaq(Device):
     @DebugIt()
     def set_AmprefinB(self, AmprefinB):
         perseus_utils.write_milivolts(self.perseus, AmprefinB, 19, 'B')
+        self.push_change_event("AmprefinB", AmprefinB)
 
     @DebugIt()
     def get_PhrefinA(self):
@@ -5000,6 +6035,7 @@ class Nutaq(Device):
     @DebugIt()
     def set_PhrefinA(self, PhrefinA):
         perseus_utils.write_angle(self.perseus, PhrefinA, 20, 'A')
+        self.push_change_event("PhrefinA", PhrefinA)
 
     @DebugIt()
     def get_PhrefinB(self):
@@ -5008,6 +6044,7 @@ class Nutaq(Device):
     @DebugIt()
     def set_PhrefinB(self, PhrefinB):
         perseus_utils.write_angle(self.perseus, PhrefinB, 20, 'B')
+        self.push_change_event("PhrefinB", PhrefinB)
 
     @DebugIt()
     def get_AmprefminA(self):
@@ -5016,6 +6053,7 @@ class Nutaq(Device):
     @DebugIt()
     def set_AmprefminA(self, AmprefminA):
         perseus_utils.write_milivolts(self.perseus, AmprefminA, 21, 'A')
+        self.push_change_event("AmprefminA", AmprefminA)
 
     @DebugIt()
     def get_AmprefminB(self):
@@ -5024,6 +6062,7 @@ class Nutaq(Device):
     @DebugIt()
     def set_AmprefminB(self, AmprefminB):
         perseus_utils.write_milivolts(self.perseus, AmprefminB, 21, 'B')
+        self.push_change_event("AmprefminB", AmprefminB)
 
     @DebugIt()
     def get_PhrefminA(self):
@@ -5032,6 +6071,7 @@ class Nutaq(Device):
     @DebugIt()
     def set_PhrefminA(self, PhrefminA):
         perseus_utils.write_angle(self.perseus, PhrefminA, 22, 'A')
+        self.push_change_event("PhrefminA", PhrefminA)
 
     @DebugIt()
     def get_PhrefminB(self):
@@ -5040,6 +6080,7 @@ class Nutaq(Device):
     @DebugIt()
     def set_PhrefminB(self, PhrefminB):
         perseus_utils.write_angle(self.perseus, PhrefminB, 22, 'B')
+        self.push_change_event("PhrefminB", PhrefminB)
 
     @DebugIt()
     def get_PhaseIncreaseRateA(self):
@@ -5048,6 +6089,7 @@ class Nutaq(Device):
     @DebugIt()
     def set_PhaseIncreaseRateA(self, PhaseIncreaseRateA):
         perseus_utils.write_direct(self.perseus, PhaseIncreaseRateA, 23, 'A')
+        self.push_change_event("PhaseIncreaseRateA", PhaseIncreaseRateA)
 
     @DebugIt()
     def get_PhaseIncreaseRateB(self):
@@ -5056,6 +6098,7 @@ class Nutaq(Device):
     @DebugIt()
     def set_PhaseIncreaseRateB(self, PhaseIncreaseRateB):
         perseus_utils.write_direct(self.perseus, PhaseIncreaseRateB, 23, 'B')
+        self.push_change_event("PhaseIncreaseRateB", PhaseIncreaseRateB)
 
     @DebugIt()
     def get_VoltageIncreaseRateA(self):
@@ -5064,6 +6107,7 @@ class Nutaq(Device):
     @DebugIt()
     def set_VoltageIncreaseRateA(self, VoltageIncreaseRateA):
         perseus_utils.write_direct(self.perseus, VoltageIncreaseRateA, 24, 'A')
+        self.push_change_event("VoltageIncreaseRateA", VoltageIncreaseRateA)
 
     @DebugIt()
     def get_VoltageIncreaseRateB(self):
@@ -5072,6 +6116,7 @@ class Nutaq(Device):
     @DebugIt()
     def set_VoltageIncreaseRateB(self, VoltageIncreaseRateB):
         perseus_utils.write_direct(self.perseus, VoltageIncreaseRateB, 24, 'B')
+        self.push_change_event("VoltageIncreaseRateB", VoltageIncreaseRateB)
 
     @DebugIt()
     def get_GainOlA(self):
@@ -5086,6 +6131,7 @@ class Nutaq(Device):
         cavity = 'A'
         #@todo: add this method to special methods library ...
         extra_func.set_GainOl(self.perseus, GainOlA, address, cavity)
+        self.push_change_event("GainOlA", GainOlA)
 
     @DebugIt()
     def get_GainOlB(self):
@@ -5100,6 +6146,7 @@ class Nutaq(Device):
         cavity = 'B'
         #@todo: add this method to special methods library ...
         extra_func.set_GainOl(self.perseus, GainOlB, address, cavity)
+        self.push_change_event("GainOlB", GainOlB)
 
     @DebugIt()
     def get_SpareGpioOutput01A(self):
@@ -5108,6 +6155,7 @@ class Nutaq(Device):
     @DebugIt()
     def set_SpareGpioOutput01A(self, SpareGpioOutput01A):
         perseus_utils.write_direct(self.perseus, SpareGpioOutput01A, 28, 'A')
+        self.push_change_event("SpareGpioOutput01A", SpareGpioOutput01A)
 
     @DebugIt()
     def get_SpareGpioOutput01B(self):
@@ -5116,6 +6164,7 @@ class Nutaq(Device):
     @DebugIt()
     def set_SpareGpioOutput01B(self, SpareGpioOutput01B):
         perseus_utils.write_direct(self.perseus, SpareGpioOutput01B, 28, 'B')
+        self.push_change_event("SpareGpioOutput01B", SpareGpioOutput01B)
 
     @DebugIt()
     def get_SpareGpioOutput02A(self):
@@ -5124,6 +6173,7 @@ class Nutaq(Device):
     @DebugIt()
     def set_SpareGpioOutput02A(self, SpareGpioOutput02A):
         perseus_utils.write_direct(self.perseus, SpareGpioOutput02A, 29, 'A')
+        self.push_change_event("SpareGpioOutput02A", SpareGpioOutput02A)
 
     @DebugIt()
     def get_SpareGpioOutput02B(self):
@@ -5132,6 +6182,7 @@ class Nutaq(Device):
     @DebugIt()
     def set_SpareGpioOutput02B(self, SpareGpioOutput02B):
         perseus_utils.write_direct(self.perseus, SpareGpioOutput02B, 29, 'B')
+        self.push_change_event("SpareGpioOutput02B", SpareGpioOutput02B)
 
     @DebugIt()
     def get_SpareGpioOutput03A(self):
@@ -5140,6 +6191,7 @@ class Nutaq(Device):
     @DebugIt()
     def set_SpareGpioOutput03A(self, SpareGpioOutput03A):
         perseus_utils.write_direct(self.perseus, SpareGpioOutput03A, 30, 'A')
+        self.push_change_event("SpareGpioOutput03A", SpareGpioOutput03A)
 
     @DebugIt()
     def get_SpareGpioOutput03B(self):
@@ -5148,6 +6200,7 @@ class Nutaq(Device):
     @DebugIt()
     def set_SpareGpioOutput03B(self, SpareGpioOutput03B):
         perseus_utils.write_direct(self.perseus, SpareGpioOutput03B, 30, 'B')
+        self.push_change_event("SpareGpioOutput03B", SpareGpioOutput03B)
 
     @DebugIt()
     def get_SpareGpioOutput04A(self):
@@ -5156,6 +6209,7 @@ class Nutaq(Device):
     @DebugIt()
     def set_SpareGpioOutput04A(self, SpareGpioOutput04A):
         perseus_utils.write_direct(self.perseus, SpareGpioOutput04A, 31, 'A')
+        self.push_change_event("SpareGpioOutput04A", SpareGpioOutput04A)
 
     @DebugIt()
     def get_SpareGpioOutput04B(self):
@@ -5164,6 +6218,7 @@ class Nutaq(Device):
     @DebugIt()
     def set_SpareGpioOutput04B(self, SpareGpioOutput04B):
         perseus_utils.write_direct(self.perseus, SpareGpioOutput04B, 31, 'B')
+        self.push_change_event("SpareGpioOutput04B", SpareGpioOutput04B)
 
     @DebugIt()
     def get_FdlSwTriggerA(self):
@@ -5172,6 +6227,7 @@ class Nutaq(Device):
     @DebugIt()
     def set_FdlSwTriggerA(self, FdlSwTriggerA):
         perseus_utils.write_direct(self.perseus, FdlSwTriggerA, 32, 'A')
+        self.push_change_event("FdlSwTriggerA", FdlSwTriggerA)
 
     @DebugIt()
     def get_FdlSwTriggerB(self):
@@ -5180,6 +6236,7 @@ class Nutaq(Device):
     @DebugIt()
     def set_FdlSwTriggerB(self, FdlSwTriggerB):
         perseus_utils.write_direct(self.perseus, FdlSwTriggerB, 32, 'B')
+        self.push_change_event("FdlSwTriggerB", FdlSwTriggerB)
 
     @DebugIt()
     def get_SlowIqLoopEnableA(self):
@@ -5188,6 +6245,7 @@ class Nutaq(Device):
     @DebugIt()
     def set_SlowIqLoopEnableA(self, SlowIqLoopEnableA):
         perseus_utils.write_direct(self.perseus, SlowIqLoopEnableA, 100, 'A')
+        self.push_change_event("SlowIqLoopEnableA", SlowIqLoopEnableA)
 
     @DebugIt()
     def get_SlowIqLoopEnableB(self):
@@ -5196,6 +6254,7 @@ class Nutaq(Device):
     @DebugIt()
     def set_SlowIqLoopEnableB(self, SlowIqLoopEnableB):
         perseus_utils.write_direct(self.perseus, SlowIqLoopEnableB, 100, 'B')
+        self.push_change_event("SlowIqLoopEnableB", SlowIqLoopEnableB)
 
     @DebugIt()
     def get_AdcsPhaseshiftEnableA(self):
@@ -5204,6 +6263,7 @@ class Nutaq(Device):
     @DebugIt()
     def set_AdcsPhaseshiftEnableA(self, AdcsPhaseshiftEnableA):
         perseus_utils.write_direct(self.perseus, AdcsPhaseshiftEnableA, 101, 'A')
+        self.push_change_event("AdcsPhaseshiftEnableA", AdcsPhaseshiftEnableA)
 
     @DebugIt()
     def get_AdcsPhaseshiftEnableB(self):
@@ -5212,6 +6272,7 @@ class Nutaq(Device):
     @DebugIt()
     def set_AdcsPhaseshiftEnableB(self, AdcsPhaseshiftEnableB):
         perseus_utils.write_direct(self.perseus, AdcsPhaseshiftEnableB, 101, 'B')
+        self.push_change_event("AdcsPhaseshiftEnableB", AdcsPhaseshiftEnableB)
 
     @DebugIt()
     def get_DacsPhaseShiftEnableA(self):
@@ -5220,6 +6281,7 @@ class Nutaq(Device):
     @DebugIt()
     def set_DacsPhaseShiftEnableA(self, DacsPhaseShiftEnableA):
         perseus_utils.write_direct(self.perseus, DacsPhaseShiftEnableA, 102, 'A')
+        self.push_change_event("DacsPhaseShiftEnableA", DacsPhaseShiftEnableA)
 
     @DebugIt()
     def get_DacsPhaseShiftEnableB(self):
@@ -5228,6 +6290,7 @@ class Nutaq(Device):
     @DebugIt()
     def set_DacsPhaseShiftEnableB(self, DacsPhaseShiftEnableB):
         perseus_utils.write_direct(self.perseus, DacsPhaseShiftEnableB, 102, 'B')
+        self.push_change_event("DacsPhaseShiftEnableB", DacsPhaseShiftEnableB)
 
     @DebugIt()
     def get_SquarerefEnableA(self):
@@ -5236,6 +6299,7 @@ class Nutaq(Device):
     @DebugIt()
     def set_SquarerefEnableA(self, SquarerefEnableA):
         perseus_utils.write_direct(self.perseus, SquarerefEnableA, 103, 'A')
+        self.push_change_event("SquarerefEnableA", SquarerefEnableA)
 
     @DebugIt()
     def get_SquarerefEnableB(self):
@@ -5244,6 +6308,7 @@ class Nutaq(Device):
     @DebugIt()
     def set_SquarerefEnableB(self, SquarerefEnableB):
         perseus_utils.write_direct(self.perseus, SquarerefEnableB, 103, 'B')
+        self.push_change_event("SquarerefEnableB", SquarerefEnableB)
 
     @DebugIt()
     def get_FreqsquareA(self):
@@ -5258,6 +6323,7 @@ class Nutaq(Device):
         cavity = 'A'
         #@todo: add this method to special methods library ...
         extra_func.set_Freqsquare(self.perseus, FreqsquareA, address, cavity)
+        self.push_change_event("FreqsquareA", FreqsquareA)
 
     @DebugIt()
     def get_FreqsquareB(self):
@@ -5272,6 +6338,7 @@ class Nutaq(Device):
         cavity = 'B'
         #@todo: add this method to special methods library ...
         extra_func.set_Freqsquare(self.perseus, FreqsquareB, address, cavity)
+        self.push_change_event("FreqsquareB", FreqsquareB)
 
     @DebugIt()
     def get_LookRefA(self):
@@ -5280,6 +6347,7 @@ class Nutaq(Device):
     @DebugIt()
     def set_LookRefA(self, LookRefA):
         perseus_utils.write_direct(self.perseus, LookRefA, 106, 'A')
+        self.push_change_event("LookRefA", LookRefA)
 
     @DebugIt()
     def get_LookRefB(self):
@@ -5288,6 +6356,7 @@ class Nutaq(Device):
     @DebugIt()
     def set_LookRefB(self, LookRefB):
         perseus_utils.write_direct(self.perseus, LookRefB, 106, 'B')
+        self.push_change_event("LookRefB", LookRefB)
 
     @DebugIt()
     def get_QuadrantSelectionA(self):
@@ -5296,6 +6365,7 @@ class Nutaq(Device):
     @DebugIt()
     def set_QuadrantSelectionA(self, QuadrantSelectionA):
         perseus_utils.write_direct(self.perseus, QuadrantSelectionA, 107, 'A')
+        self.push_change_event("QuadrantSelectionA", QuadrantSelectionA)
 
     @DebugIt()
     def get_QuadrantSelectionB(self):
@@ -5304,6 +6374,7 @@ class Nutaq(Device):
     @DebugIt()
     def set_QuadrantSelectionB(self, QuadrantSelectionB):
         perseus_utils.write_direct(self.perseus, QuadrantSelectionB, 107, 'B')
+        self.push_change_event("QuadrantSelectionB", QuadrantSelectionB)
 
     @DebugIt()
     def get_SlowIqLoopInputSelectionA(self):
@@ -5312,6 +6383,7 @@ class Nutaq(Device):
     @DebugIt()
     def set_SlowIqLoopInputSelectionA(self, SlowIqLoopInputSelectionA):
         perseus_utils.write_direct(self.perseus, SlowIqLoopInputSelectionA, 110, 'A')
+        self.push_change_event("SlowIqLoopInputSelectionA", SlowIqLoopInputSelectionA)
 
     @DebugIt()
     def get_SlowIqLoopInputSelectionB(self):
@@ -5320,6 +6392,7 @@ class Nutaq(Device):
     @DebugIt()
     def set_SlowIqLoopInputSelectionB(self, SlowIqLoopInputSelectionB):
         perseus_utils.write_direct(self.perseus, SlowIqLoopInputSelectionB, 110, 'B')
+        self.push_change_event("SlowIqLoopInputSelectionB", SlowIqLoopInputSelectionB)
 
     @DebugIt()
     def get_FastIqLoopInputSelectionA(self):
@@ -5328,6 +6401,7 @@ class Nutaq(Device):
     @DebugIt()
     def set_FastIqLoopInputSelectionA(self, FastIqLoopInputSelectionA):
         perseus_utils.write_direct(self.perseus, FastIqLoopInputSelectionA, 111, 'A')
+        self.push_change_event("FastIqLoopInputSelectionA", FastIqLoopInputSelectionA)
 
     @DebugIt()
     def get_FastIqLoopInputSelectionB(self):
@@ -5336,6 +6410,7 @@ class Nutaq(Device):
     @DebugIt()
     def set_FastIqLoopInputSelectionB(self, FastIqLoopInputSelectionB):
         perseus_utils.write_direct(self.perseus, FastIqLoopInputSelectionB, 111, 'B')
+        self.push_change_event("FastIqLoopInputSelectionB", FastIqLoopInputSelectionB)
 
     @DebugIt()
     def get_AmplitudeLoopInputSelectionA(self):
@@ -5344,6 +6419,7 @@ class Nutaq(Device):
     @DebugIt()
     def set_AmplitudeLoopInputSelectionA(self, AmplitudeLoopInputSelectionA):
         perseus_utils.write_direct(self.perseus, AmplitudeLoopInputSelectionA, 112, 'A')
+        self.push_change_event("AmplitudeLoopInputSelectionA", AmplitudeLoopInputSelectionA)
 
     @DebugIt()
     def get_AmplitudeLoopInputSelectionB(self):
@@ -5352,6 +6428,7 @@ class Nutaq(Device):
     @DebugIt()
     def set_AmplitudeLoopInputSelectionB(self, AmplitudeLoopInputSelectionB):
         perseus_utils.write_direct(self.perseus, AmplitudeLoopInputSelectionB, 112, 'B')
+        self.push_change_event("AmplitudeLoopInputSelectionB", AmplitudeLoopInputSelectionB)
 
     @DebugIt()
     def get_PhaseLoopInputSelectionA(self):
@@ -5360,6 +6437,7 @@ class Nutaq(Device):
     @DebugIt()
     def set_PhaseLoopInputSelectionA(self, PhaseLoopInputSelectionA):
         perseus_utils.write_direct(self.perseus, PhaseLoopInputSelectionA, 113, 'A')
+        self.push_change_event("PhaseLoopInputSelectionA", PhaseLoopInputSelectionA)
 
     @DebugIt()
     def get_PhaseLoopInputSelectionB(self):
@@ -5368,6 +6446,7 @@ class Nutaq(Device):
     @DebugIt()
     def set_PhaseLoopInputSelectionB(self, PhaseLoopInputSelectionB):
         perseus_utils.write_direct(self.perseus, PhaseLoopInputSelectionB, 113, 'B')
+        self.push_change_event("PhaseLoopInputSelectionB", PhaseLoopInputSelectionB)
 
     @DebugIt()
     def get_PolarLoopsEnableA(self):
@@ -5376,6 +6455,7 @@ class Nutaq(Device):
     @DebugIt()
     def set_PolarLoopsEnableA(self, PolarLoopsEnableA):
         perseus_utils.write_direct(self.perseus, PolarLoopsEnableA, 114, 'A')
+        self.push_change_event("PolarLoopsEnableA", PolarLoopsEnableA)
 
     @DebugIt()
     def get_PolarLoopsEnableB(self):
@@ -5384,6 +6464,7 @@ class Nutaq(Device):
     @DebugIt()
     def set_PolarLoopsEnableB(self, PolarLoopsEnableB):
         perseus_utils.write_direct(self.perseus, PolarLoopsEnableB, 114, 'B')
+        self.push_change_event("PolarLoopsEnableB", PolarLoopsEnableB)
 
     @DebugIt()
     def get_FastIqLoopEnableA(self):
@@ -5392,6 +6473,7 @@ class Nutaq(Device):
     @DebugIt()
     def set_FastIqLoopEnableA(self, FastIqLoopEnableA):
         perseus_utils.write_direct(self.perseus, FastIqLoopEnableA, 115, 'A')
+        self.push_change_event("FastIqLoopEnableA", FastIqLoopEnableA)
 
     @DebugIt()
     def get_FastIqLoopEnableB(self):
@@ -5400,6 +6482,7 @@ class Nutaq(Device):
     @DebugIt()
     def set_FastIqLoopEnableB(self, FastIqLoopEnableB):
         perseus_utils.write_direct(self.perseus, FastIqLoopEnableB, 115, 'B')
+        self.push_change_event("FastIqLoopEnableB", FastIqLoopEnableB)
 
     @DebugIt()
     def get_AmplitudeLoopEnableA(self):
@@ -5408,6 +6491,7 @@ class Nutaq(Device):
     @DebugIt()
     def set_AmplitudeLoopEnableA(self, AmplitudeLoopEnableA):
         perseus_utils.write_direct(self.perseus, AmplitudeLoopEnableA, 116, 'A')
+        self.push_change_event("AmplitudeLoopEnableA", AmplitudeLoopEnableA)
 
     @DebugIt()
     def get_AmplitudeLoopEnableB(self):
@@ -5416,6 +6500,7 @@ class Nutaq(Device):
     @DebugIt()
     def set_AmplitudeLoopEnableB(self, AmplitudeLoopEnableB):
         perseus_utils.write_direct(self.perseus, AmplitudeLoopEnableB, 116, 'B')
+        self.push_change_event("AmplitudeLoopEnableB", AmplitudeLoopEnableB)
 
     @DebugIt()
     def get_PhaseLoopEnableA(self):
@@ -5424,6 +6509,7 @@ class Nutaq(Device):
     @DebugIt()
     def set_PhaseLoopEnableA(self, PhaseLoopEnableA):
         perseus_utils.write_direct(self.perseus, PhaseLoopEnableA, 117, 'A')
+        self.push_change_event("PhaseLoopEnableA", PhaseLoopEnableA)
 
     @DebugIt()
     def get_PhaseLoopEnableB(self):
@@ -5432,6 +6518,7 @@ class Nutaq(Device):
     @DebugIt()
     def set_PhaseLoopEnableB(self, PhaseLoopEnableB):
         perseus_utils.write_direct(self.perseus, PhaseLoopEnableB, 117, 'B')
+        self.push_change_event("PhaseLoopEnableB", PhaseLoopEnableB)
 
     @DebugIt()
     def get_KpFastIqLoopA(self):
@@ -5440,6 +6527,7 @@ class Nutaq(Device):
     @DebugIt()
     def set_KpFastIqLoopA(self, KpFastIqLoopA):
         perseus_utils.write_direct(self.perseus, KpFastIqLoopA, 118, 'A')
+        self.push_change_event("KpFastIqLoopA", KpFastIqLoopA)
 
     @DebugIt()
     def get_KpFastIqLoopB(self):
@@ -5448,6 +6536,7 @@ class Nutaq(Device):
     @DebugIt()
     def set_KpFastIqLoopB(self, KpFastIqLoopB):
         perseus_utils.write_direct(self.perseus, KpFastIqLoopB, 118, 'B')
+        self.push_change_event("KpFastIqLoopB", KpFastIqLoopB)
 
     @DebugIt()
     def get_KiFastIqLoopA(self):
@@ -5456,6 +6545,7 @@ class Nutaq(Device):
     @DebugIt()
     def set_KiFastIqLoopA(self, KiFastIqLoopA):
         perseus_utils.write_direct(self.perseus, KiFastIqLoopA, 119, 'A')
+        self.push_change_event("KiFastIqLoopA", KiFastIqLoopA)
 
     @DebugIt()
     def get_KiFastIqLoopB(self):
@@ -5464,6 +6554,7 @@ class Nutaq(Device):
     @DebugIt()
     def set_KiFastIqLoopB(self, KiFastIqLoopB):
         perseus_utils.write_direct(self.perseus, KiFastIqLoopB, 119, 'B')
+        self.push_change_event("KiFastIqLoopB", KiFastIqLoopB)
 
     @DebugIt()
     def get_KpAmpLoopA(self):
@@ -5472,6 +6563,7 @@ class Nutaq(Device):
     @DebugIt()
     def set_KpAmpLoopA(self, KpAmpLoopA):
         perseus_utils.write_direct(self.perseus, KpAmpLoopA, 120, 'A')
+        self.push_change_event("KpAmpLoopA", KpAmpLoopA)
 
     @DebugIt()
     def get_KpAmpLoopB(self):
@@ -5480,6 +6572,7 @@ class Nutaq(Device):
     @DebugIt()
     def set_KpAmpLoopB(self, KpAmpLoopB):
         perseus_utils.write_direct(self.perseus, KpAmpLoopB, 120, 'B')
+        self.push_change_event("KpAmpLoopB", KpAmpLoopB)
 
     @DebugIt()
     def get_KiAmpLoopA(self):
@@ -5488,6 +6581,7 @@ class Nutaq(Device):
     @DebugIt()
     def set_KiAmpLoopA(self, KiAmpLoopA):
         perseus_utils.write_direct(self.perseus, KiAmpLoopA, 121, 'A')
+        self.push_change_event("KiAmpLoopA", KiAmpLoopA)
 
     @DebugIt()
     def get_KiAmpLoopB(self):
@@ -5496,6 +6590,7 @@ class Nutaq(Device):
     @DebugIt()
     def set_KiAmpLoopB(self, KiAmpLoopB):
         perseus_utils.write_direct(self.perseus, KiAmpLoopB, 121, 'B')
+        self.push_change_event("KiAmpLoopB", KiAmpLoopB)
 
     @DebugIt()
     def get_KpPhaseLoopA(self):
@@ -5504,6 +6599,7 @@ class Nutaq(Device):
     @DebugIt()
     def set_KpPhaseLoopA(self, KpPhaseLoopA):
         perseus_utils.write_direct(self.perseus, KpPhaseLoopA, 122, 'A')
+        self.push_change_event("KpPhaseLoopA", KpPhaseLoopA)
 
     @DebugIt()
     def get_KpPhaseLoopB(self):
@@ -5512,6 +6608,7 @@ class Nutaq(Device):
     @DebugIt()
     def set_KpPhaseLoopB(self, KpPhaseLoopB):
         perseus_utils.write_direct(self.perseus, KpPhaseLoopB, 122, 'B')
+        self.push_change_event("KpPhaseLoopB", KpPhaseLoopB)
 
     @DebugIt()
     def get_KiPhaseLoopA(self):
@@ -5520,6 +6617,7 @@ class Nutaq(Device):
     @DebugIt()
     def set_KiPhaseLoopA(self, KiPhaseLoopA):
         perseus_utils.write_direct(self.perseus, KiPhaseLoopA, 123, 'A')
+        self.push_change_event("KiPhaseLoopA", KiPhaseLoopA)
 
     @DebugIt()
     def get_KiPhaseLoopB(self):
@@ -5528,6 +6626,7 @@ class Nutaq(Device):
     @DebugIt()
     def set_KiPhaseLoopB(self, KiPhaseLoopB):
         perseus_utils.write_direct(self.perseus, KiPhaseLoopB, 123, 'B')
+        self.push_change_event("KiPhaseLoopB", KiPhaseLoopB)
 
     @DebugIt()
     def get_PiLimitFastPiIqA(self):
@@ -5536,6 +6635,7 @@ class Nutaq(Device):
     @DebugIt()
     def set_PiLimitFastPiIqA(self, PiLimitFastPiIqA):
         perseus_utils.write_milivolts(self.perseus, PiLimitFastPiIqA, 124, 'A')
+        self.push_change_event("PiLimitFastPiIqA", PiLimitFastPiIqA)
 
     @DebugIt()
     def get_PiLimitFastPiIqB(self):
@@ -5544,6 +6644,7 @@ class Nutaq(Device):
     @DebugIt()
     def set_PiLimitFastPiIqB(self, PiLimitFastPiIqB):
         perseus_utils.write_milivolts(self.perseus, PiLimitFastPiIqB, 124, 'B')
+        self.push_change_event("PiLimitFastPiIqB", PiLimitFastPiIqB)
 
     @DebugIt()
     def get_PulseModeEnableA(self):
@@ -5552,6 +6653,7 @@ class Nutaq(Device):
     @DebugIt()
     def set_PulseModeEnableA(self, PulseModeEnableA):
         perseus_utils.write_direct(self.perseus, PulseModeEnableA, 200, 'A')
+        self.push_change_event("PulseModeEnableA", PulseModeEnableA)
 
     @DebugIt()
     def get_PulseModeEnableB(self):
@@ -5560,6 +6662,7 @@ class Nutaq(Device):
     @DebugIt()
     def set_PulseModeEnableB(self, PulseModeEnableB):
         perseus_utils.write_direct(self.perseus, PulseModeEnableB, 200, 'B')
+        self.push_change_event("PulseModeEnableB", PulseModeEnableB)
 
     @DebugIt()
     def get_AutomaticConditioningEnableA(self):
@@ -5568,6 +6671,7 @@ class Nutaq(Device):
     @DebugIt()
     def set_AutomaticConditioningEnableA(self, AutomaticConditioningEnableA):
         perseus_utils.write_direct(self.perseus, AutomaticConditioningEnableA, 201, 'A')
+        self.push_change_event("AutomaticConditioningEnableA", AutomaticConditioningEnableA)
 
     @DebugIt()
     def get_AutomaticConditioningEnableB(self):
@@ -5576,6 +6680,7 @@ class Nutaq(Device):
     @DebugIt()
     def set_AutomaticConditioningEnableB(self, AutomaticConditioningEnableB):
         perseus_utils.write_direct(self.perseus, AutomaticConditioningEnableB, 201, 'B')
+        self.push_change_event("AutomaticConditioningEnableB", AutomaticConditioningEnableB)
 
     @DebugIt()
     def get_ConditioningdutyCicleA(self):
@@ -5590,6 +6695,7 @@ class Nutaq(Device):
         cavity = 'A'
         #@todo: add this method to special methods library ...
         extra_func.set_ConditioningdutyCicle(self.perseus, ConditioningdutyCicleA, address, cavity)
+        self.push_change_event("ConditioningdutyCicleA", ConditioningdutyCicleA)
 
     @DebugIt()
     def get_ConditioningdutyCicleB(self):
@@ -5604,6 +6710,7 @@ class Nutaq(Device):
         cavity = 'B'
         #@todo: add this method to special methods library ...
         extra_func.set_ConditioningdutyCicle(self.perseus, ConditioningdutyCicleB, address, cavity)
+        self.push_change_event("ConditioningdutyCicleB", ConditioningdutyCicleB)
 
     @DebugIt()
     def get_TuningEnableA(self):
@@ -5612,6 +6719,7 @@ class Nutaq(Device):
     @DebugIt()
     def set_TuningEnableA(self, TuningEnableA):
         perseus_utils.write_direct(self.perseus, TuningEnableA, 300, 'A')
+        self.push_change_event("TuningEnableA", TuningEnableA)
 
     @DebugIt()
     def get_TuningEnableB(self):
@@ -5620,6 +6728,7 @@ class Nutaq(Device):
     @DebugIt()
     def set_TuningEnableB(self, TuningEnableB):
         perseus_utils.write_direct(self.perseus, TuningEnableB, 300, 'B')
+        self.push_change_event("TuningEnableB", TuningEnableB)
 
     @DebugIt()
     def get_TuningPosEnA(self):
@@ -5628,6 +6737,7 @@ class Nutaq(Device):
     @DebugIt()
     def set_TuningPosEnA(self, TuningPosEnA):
         perseus_utils.write_direct(self.perseus, TuningPosEnA, 301, 'A')
+        self.push_change_event("TuningPosEnA", TuningPosEnA)
 
     @DebugIt()
     def get_TuningPosEnB(self):
@@ -5636,6 +6746,7 @@ class Nutaq(Device):
     @DebugIt()
     def set_TuningPosEnB(self, TuningPosEnB):
         perseus_utils.write_direct(self.perseus, TuningPosEnB, 301, 'B')
+        self.push_change_event("TuningPosEnB", TuningPosEnB)
 
     @DebugIt()
     def get_NumStepsA(self):
@@ -5644,6 +6755,7 @@ class Nutaq(Device):
     @DebugIt()
     def set_NumStepsA(self, NumStepsA):
         perseus_utils.write_direct(self.perseus, NumStepsA, 302, 'A')
+        self.push_change_event("NumStepsA", NumStepsA)
 
     @DebugIt()
     def get_NumStepsB(self):
@@ -5652,6 +6764,7 @@ class Nutaq(Device):
     @DebugIt()
     def set_NumStepsB(self, NumStepsB):
         perseus_utils.write_direct(self.perseus, NumStepsB, 302, 'B')
+        self.push_change_event("NumStepsB", NumStepsB)
 
     @DebugIt()
     def get_PulsesFrequencyA(self):
@@ -5660,6 +6773,7 @@ class Nutaq(Device):
     @DebugIt()
     def set_PulsesFrequencyA(self, PulsesFrequencyA):
         perseus_utils.write_direct(self.perseus, PulsesFrequencyA, 303, 'A')
+        self.push_change_event("PulsesFrequencyA", PulsesFrequencyA)
 
     @DebugIt()
     def get_PulsesFrequencyB(self):
@@ -5668,6 +6782,7 @@ class Nutaq(Device):
     @DebugIt()
     def set_PulsesFrequencyB(self, PulsesFrequencyB):
         perseus_utils.write_direct(self.perseus, PulsesFrequencyB, 303, 'B')
+        self.push_change_event("PulsesFrequencyB", PulsesFrequencyB)
 
     @DebugIt()
     def get_PhaseOffsetA(self):
@@ -5676,6 +6791,7 @@ class Nutaq(Device):
     @DebugIt()
     def set_PhaseOffsetA(self, PhaseOffsetA):
         perseus_utils.write_angle(self.perseus, PhaseOffsetA, 304, 'A')
+        self.push_change_event("PhaseOffsetA", PhaseOffsetA)
 
     @DebugIt()
     def get_PhaseOffsetB(self):
@@ -5684,6 +6800,7 @@ class Nutaq(Device):
     @DebugIt()
     def set_PhaseOffsetB(self, PhaseOffsetB):
         perseus_utils.write_angle(self.perseus, PhaseOffsetB, 304, 'B')
+        self.push_change_event("PhaseOffsetB", PhaseOffsetB)
 
     @DebugIt()
     def get_MoveA(self):
@@ -5692,6 +6809,7 @@ class Nutaq(Device):
     @DebugIt()
     def set_MoveA(self, MoveA):
         perseus_utils.write_direct(self.perseus, MoveA, 305, 'A')
+        self.push_change_event("MoveA", MoveA)
 
     @DebugIt()
     def get_MoveB(self):
@@ -5700,6 +6818,7 @@ class Nutaq(Device):
     @DebugIt()
     def set_MoveB(self, MoveB):
         perseus_utils.write_direct(self.perseus, MoveB, 305, 'B')
+        self.push_change_event("MoveB", MoveB)
 
     @DebugIt()
     def get_MoveupA(self):
@@ -5708,6 +6827,7 @@ class Nutaq(Device):
     @DebugIt()
     def set_MoveupA(self, MoveupA):
         perseus_utils.write_direct(self.perseus, MoveupA, 306, 'A')
+        self.push_change_event("MoveupA", MoveupA)
 
     @DebugIt()
     def get_MoveupB(self):
@@ -5716,6 +6836,7 @@ class Nutaq(Device):
     @DebugIt()
     def set_MoveupB(self, MoveupB):
         perseus_utils.write_direct(self.perseus, MoveupB, 306, 'B')
+        self.push_change_event("MoveupB", MoveupB)
 
     @DebugIt()
     def get_TuningresetA(self):
@@ -5724,6 +6845,7 @@ class Nutaq(Device):
     @DebugIt()
     def set_TuningresetA(self, TuningresetA):
         perseus_utils.write_direct(self.perseus, TuningresetA, 307, 'A')
+        self.push_change_event("TuningresetA", TuningresetA)
 
     @DebugIt()
     def get_TuningresetB(self):
@@ -5732,6 +6854,7 @@ class Nutaq(Device):
     @DebugIt()
     def set_TuningresetB(self, TuningresetB):
         perseus_utils.write_direct(self.perseus, TuningresetB, 307, 'B')
+        self.push_change_event("TuningresetB", TuningresetB)
 
     @DebugIt()
     def get_FwminA(self):
@@ -5746,6 +6869,7 @@ class Nutaq(Device):
         cavity = 'A'
         #@todo: add this method to special methods library ...
         extra_func.set_Fwmin(self.perseus, FwminA, address, cavity)
+        self.push_change_event("FwminA", FwminA)
 
     @DebugIt()
     def get_FwminB(self):
@@ -5760,6 +6884,7 @@ class Nutaq(Device):
         cavity = 'B'
         #@todo: add this method to special methods library ...
         extra_func.set_Fwmin(self.perseus, FwminB, address, cavity)
+        self.push_change_event("FwminB", FwminB)
 
     @DebugIt()
     def get_MarginupA(self):
@@ -5768,6 +6893,7 @@ class Nutaq(Device):
     @DebugIt()
     def set_MarginupA(self, MarginupA):
         perseus_utils.write_angle(self.perseus, MarginupA, 309, 'A')
+        self.push_change_event("MarginupA", MarginupA)
 
     @DebugIt()
     def get_MarginupB(self):
@@ -5776,6 +6902,7 @@ class Nutaq(Device):
     @DebugIt()
     def set_MarginupB(self, MarginupB):
         perseus_utils.write_angle(self.perseus, MarginupB, 309, 'B')
+        self.push_change_event("MarginupB", MarginupB)
 
     @DebugIt()
     def get_MarginlowA(self):
@@ -5784,6 +6911,7 @@ class Nutaq(Device):
     @DebugIt()
     def set_MarginlowA(self, MarginlowA):
         perseus_utils.write_angle(self.perseus, MarginlowA, 310, 'A')
+        self.push_change_event("MarginlowA", MarginlowA)
 
     @DebugIt()
     def get_MarginlowB(self):
@@ -5792,6 +6920,7 @@ class Nutaq(Device):
     @DebugIt()
     def set_MarginlowB(self, MarginlowB):
         perseus_utils.write_angle(self.perseus, MarginlowB, 310, 'B')
+        self.push_change_event("MarginlowB", MarginlowB)
 
     @DebugIt()
     def get_TuningdelayA(self):
@@ -5806,6 +6935,7 @@ class Nutaq(Device):
         cavity = 'A'
         #@todo: add this method to special methods library ...
         extra_func.set_Tuningdelay(self.perseus, TuningdelayA, address, cavity)
+        self.push_change_event("TuningdelayA", TuningdelayA)
 
     @DebugIt()
     def get_TuningdelayB(self):
@@ -5820,6 +6950,7 @@ class Nutaq(Device):
         cavity = 'B'
         #@todo: add this method to special methods library ...
         extra_func.set_Tuningdelay(self.perseus, TuningdelayB, address, cavity)
+        self.push_change_event("TuningdelayB", TuningdelayB)
 
     @DebugIt()
     def get_TuningfilterenableA(self):
@@ -5828,6 +6959,7 @@ class Nutaq(Device):
     @DebugIt()
     def set_TuningfilterenableA(self, TuningfilterenableA):
         perseus_utils.write_direct(self.perseus, TuningfilterenableA, 312, 'A')
+        self.push_change_event("TuningfilterenableA", TuningfilterenableA)
 
     @DebugIt()
     def get_TuningfilterenableB(self):
@@ -5836,6 +6968,7 @@ class Nutaq(Device):
     @DebugIt()
     def set_TuningfilterenableB(self, TuningfilterenableB):
         perseus_utils.write_direct(self.perseus, TuningfilterenableB, 312, 'B')
+        self.push_change_event("TuningfilterenableB", TuningfilterenableB)
 
     @DebugIt()
     def get_TuningtriggerenableA(self):
@@ -5844,6 +6977,7 @@ class Nutaq(Device):
     @DebugIt()
     def set_TuningtriggerenableA(self, TuningtriggerenableA):
         perseus_utils.write_direct(self.perseus, TuningtriggerenableA, 313, 'A')
+        self.push_change_event("TuningtriggerenableA", TuningtriggerenableA)
 
     @DebugIt()
     def get_TuningtriggerenableB(self):
@@ -5852,6 +6986,7 @@ class Nutaq(Device):
     @DebugIt()
     def set_TuningtriggerenableB(self, TuningtriggerenableB):
         perseus_utils.write_direct(self.perseus, TuningtriggerenableB, 313, 'B')
+        self.push_change_event("TuningtriggerenableB", TuningtriggerenableB)
 
     @DebugIt()
     def get_EpsItckDisableA(self):
@@ -5860,6 +6995,7 @@ class Nutaq(Device):
     @DebugIt()
     def set_EpsItckDisableA(self, EpsItckDisableA):
         perseus_utils.write_direct(self.perseus, EpsItckDisableA, 400, 'A')
+        self.push_change_event("EpsItckDisableA", EpsItckDisableA)
 
     @DebugIt()
     def get_EpsItckDisableB(self):
@@ -5868,6 +7004,7 @@ class Nutaq(Device):
     @DebugIt()
     def set_EpsItckDisableB(self, EpsItckDisableB):
         perseus_utils.write_direct(self.perseus, EpsItckDisableB, 400, 'B')
+        self.push_change_event("EpsItckDisableB", EpsItckDisableB)
 
     @DebugIt()
     def get_FimItckDisableA(self):
@@ -5876,6 +7013,7 @@ class Nutaq(Device):
     @DebugIt()
     def set_FimItckDisableA(self, FimItckDisableA):
         perseus_utils.write_direct(self.perseus, FimItckDisableA, 401, 'A')
+        self.push_change_event("FimItckDisableA", FimItckDisableA)
 
     @DebugIt()
     def get_FimItckDisableB(self):
@@ -5884,6 +7022,7 @@ class Nutaq(Device):
     @DebugIt()
     def set_FimItckDisableB(self, FimItckDisableB):
         perseus_utils.write_direct(self.perseus, FimItckDisableB, 401, 'B')
+        self.push_change_event("FimItckDisableB", FimItckDisableB)
 
     @DebugIt()
     def get_MDividerA(self):
@@ -5898,6 +7037,7 @@ class Nutaq(Device):
         cavity = 'A'
         #@todo: add this method to special methods library ...
         extra_func.set_MDivider(self.perseus, MDividerA, address, cavity)
+        self.push_change_event("MDividerA", MDividerA)
 
     @DebugIt()
     def get_MDividerB(self):
@@ -5912,6 +7052,7 @@ class Nutaq(Device):
         cavity = 'B'
         #@todo: add this method to special methods library ...
         extra_func.set_MDivider(self.perseus, MDividerB, address, cavity)
+        self.push_change_event("MDividerB", MDividerB)
 
     @DebugIt()
     def get_NDividerA(self):
@@ -5926,6 +7067,7 @@ class Nutaq(Device):
         cavity = 'A'
         #@todo: add this method to special methods library ...
         extra_func.set_NDivider(self.perseus, NDividerA, address, cavity)
+        self.push_change_event("NDividerA", NDividerA)
 
     @DebugIt()
     def get_NDividerB(self):
@@ -5940,6 +7082,7 @@ class Nutaq(Device):
         cavity = 'B'
         #@todo: add this method to special methods library ...
         extra_func.set_NDivider(self.perseus, NDividerB, address, cavity)
+        self.push_change_event("NDividerB", NDividerB)
 
     @DebugIt()
     def get_MuxselA(self):
@@ -5948,6 +7091,7 @@ class Nutaq(Device):
     @DebugIt()
     def set_MuxselA(self, MuxselA):
         perseus_utils.write_direct(self.perseus, MuxselA, 502, 'A')
+        self.push_change_event("MuxselA", MuxselA)
 
     @DebugIt()
     def get_MuxselB(self):
@@ -5956,6 +7100,7 @@ class Nutaq(Device):
     @DebugIt()
     def set_MuxselB(self, MuxselB):
         perseus_utils.write_direct(self.perseus, MuxselB, 502, 'B')
+        self.push_change_event("MuxselB", MuxselB)
 
     @DebugIt()
     def get_Mux0DividerA(self):
@@ -5964,6 +7109,7 @@ class Nutaq(Device):
     @DebugIt()
     def set_Mux0DividerA(self, Mux0DividerA):
         perseus_utils.write_direct(self.perseus, Mux0DividerA, 503, 'A')
+        self.push_change_event("Mux0DividerA", Mux0DividerA)
 
     @DebugIt()
     def get_Mux0DividerB(self):
@@ -5972,6 +7118,7 @@ class Nutaq(Device):
     @DebugIt()
     def set_Mux0DividerB(self, Mux0DividerB):
         perseus_utils.write_direct(self.perseus, Mux0DividerB, 503, 'B')
+        self.push_change_event("Mux0DividerB", Mux0DividerB)
 
     @DebugIt()
     def get_Mux1DividerA(self):
@@ -5980,6 +7127,7 @@ class Nutaq(Device):
     @DebugIt()
     def set_Mux1DividerA(self, Mux1DividerA):
         perseus_utils.write_direct(self.perseus, Mux1DividerA, 504, 'A')
+        self.push_change_event("Mux1DividerA", Mux1DividerA)
 
     @DebugIt()
     def get_Mux1DividerB(self):
@@ -5988,6 +7136,7 @@ class Nutaq(Device):
     @DebugIt()
     def set_Mux1DividerB(self, Mux1DividerB):
         perseus_utils.write_direct(self.perseus, Mux1DividerB, 504, 'B')
+        self.push_change_event("Mux1DividerB", Mux1DividerB)
 
     @DebugIt()
     def get_Mux2DividerA(self):
@@ -5996,6 +7145,7 @@ class Nutaq(Device):
     @DebugIt()
     def set_Mux2DividerA(self, Mux2DividerA):
         perseus_utils.write_direct(self.perseus, Mux2DividerA, 505, 'A')
+        self.push_change_event("Mux2DividerA", Mux2DividerA)
 
     @DebugIt()
     def get_Mux2DividerB(self):
@@ -6004,6 +7154,7 @@ class Nutaq(Device):
     @DebugIt()
     def set_Mux2DividerB(self, Mux2DividerB):
         perseus_utils.write_direct(self.perseus, Mux2DividerB, 505, 'B')
+        self.push_change_event("Mux2DividerB", Mux2DividerB)
 
     @DebugIt()
     def get_Mux3DividerA(self):
@@ -6012,6 +7163,7 @@ class Nutaq(Device):
     @DebugIt()
     def set_Mux3DividerA(self, Mux3DividerA):
         perseus_utils.write_direct(self.perseus, Mux3DividerA, 506, 'A')
+        self.push_change_event("Mux3DividerA", Mux3DividerA)
 
     @DebugIt()
     def get_Mux3DividerB(self):
@@ -6020,6 +7172,7 @@ class Nutaq(Device):
     @DebugIt()
     def set_Mux3DividerB(self, Mux3DividerB):
         perseus_utils.write_direct(self.perseus, Mux3DividerB, 506, 'B')
+        self.push_change_event("Mux3DividerB", Mux3DividerB)
 
     @DebugIt()
     def get_Mux4DividerA(self):
@@ -6028,6 +7181,7 @@ class Nutaq(Device):
     @DebugIt()
     def set_Mux4DividerA(self, Mux4DividerA):
         perseus_utils.write_direct(self.perseus, Mux4DividerA, 507, 'A')
+        self.push_change_event("Mux4DividerA", Mux4DividerA)
 
     @DebugIt()
     def get_Mux4DividerB(self):
@@ -6036,6 +7190,7 @@ class Nutaq(Device):
     @DebugIt()
     def set_Mux4DividerB(self, Mux4DividerB):
         perseus_utils.write_direct(self.perseus, Mux4DividerB, 507, 'B')
+        self.push_change_event("Mux4DividerB", Mux4DividerB)
 
     @DebugIt()
     def get_SendWordA(self):
@@ -6044,6 +7199,7 @@ class Nutaq(Device):
     @DebugIt()
     def set_SendWordA(self, SendWordA):
         perseus_utils.write_direct(self.perseus, SendWordA, 508, 'A')
+        self.push_change_event("SendWordA", SendWordA)
 
     @DebugIt()
     def get_SendWordB(self):
@@ -6052,6 +7208,7 @@ class Nutaq(Device):
     @DebugIt()
     def set_SendWordB(self, SendWordB):
         perseus_utils.write_direct(self.perseus, SendWordB, 508, 'B')
+        self.push_change_event("SendWordB", SendWordB)
 
     @DebugIt()
     def get_CpdirA(self):
@@ -6060,6 +7217,7 @@ class Nutaq(Device):
     @DebugIt()
     def set_CpdirA(self, CpdirA):
         perseus_utils.write_direct(self.perseus, CpdirA, 509, 'A')
+        self.push_change_event("CpdirA", CpdirA)
 
     @DebugIt()
     def get_CpdirB(self):
@@ -6068,6 +7226,7 @@ class Nutaq(Device):
     @DebugIt()
     def set_CpdirB(self, CpdirB):
         perseus_utils.write_direct(self.perseus, CpdirB, 509, 'B')
+        self.push_change_event("CpdirB", CpdirB)
 
     @DebugIt()
     def get_VcxoOutputInversionA(self):
@@ -6076,6 +7235,7 @@ class Nutaq(Device):
     @DebugIt()
     def set_VcxoOutputInversionA(self, VcxoOutputInversionA):
         perseus_utils.write_direct(self.perseus, VcxoOutputInversionA, 510, 'A')
+        self.push_change_event("VcxoOutputInversionA", VcxoOutputInversionA)
 
     @DebugIt()
     def get_VcxoOutputInversionB(self):
@@ -6084,6 +7244,7 @@ class Nutaq(Device):
     @DebugIt()
     def set_VcxoOutputInversionB(self, VcxoOutputInversionB):
         perseus_utils.write_direct(self.perseus, VcxoOutputInversionB, 510, 'B')
+        self.push_change_event("VcxoOutputInversionB", VcxoOutputInversionB)
 
     @DebugIt()
     def read_Diag_IcavLoopsA(self):
@@ -7243,293 +8404,581 @@ class Nutaq(Device):
         perseus_utils.start_reading_diagnostics(self.perseus, 'B')
 
         self._Diag_IcavLoopsA = perseus_utils.read_diag_milivolts(self.perseus, 0, 'A')
+        self.push_change_event("Diag_IcavLoopsA", self._Diag_IcavLoopsA)
         self._Diag_IcavLoopsB = perseus_utils.read_diag_milivolts(self.perseus, 0, 'B')
+        self.push_change_event("Diag_IcavLoopsB", self._Diag_IcavLoopsB)
         self._Diag_QcavLoopsA = perseus_utils.read_diag_milivolts(self.perseus, 1, 'A')
+        self.push_change_event("Diag_QcavLoopsA", self._Diag_QcavLoopsA)
         self._Diag_QcavLoopsB = perseus_utils.read_diag_milivolts(self.perseus, 1, 'B')
+        self.push_change_event("Diag_QcavLoopsB", self._Diag_QcavLoopsB)
         self._Diag_IcontrolA = perseus_utils.read_diag_milivolts(self.perseus, 2, 'A')
+        self.push_change_event("Diag_IcontrolA", self._Diag_IcontrolA)
         self._Diag_IcontrolB = perseus_utils.read_diag_milivolts(self.perseus, 2, 'B')
+        self.push_change_event("Diag_IcontrolB", self._Diag_IcontrolB)
         self._Diag_QcontrolA = perseus_utils.read_diag_milivolts(self.perseus, 3, 'A')
+        self.push_change_event("Diag_QcontrolA", self._Diag_QcontrolA)
         self._Diag_QcontrolB = perseus_utils.read_diag_milivolts(self.perseus, 3, 'B')
+        self.push_change_event("Diag_QcontrolB", self._Diag_QcontrolB)
         self._Diag_Icontrol1A = perseus_utils.read_diag_milivolts(self.perseus, 4, 'A')
+        self.push_change_event("Diag_Icontrol1A", self._Diag_Icontrol1A)
         self._Diag_Icontrol1B = perseus_utils.read_diag_milivolts(self.perseus, 4, 'B')
+        self.push_change_event("Diag_Icontrol1B", self._Diag_Icontrol1B)
         self._Diag_Qcontrol1A = perseus_utils.read_diag_milivolts(self.perseus, 5, 'A')
+        self.push_change_event("Diag_Qcontrol1A", self._Diag_Qcontrol1A)
         self._Diag_Qcontrol1B = perseus_utils.read_diag_milivolts(self.perseus, 5, 'B')
+        self.push_change_event("Diag_Qcontrol1B", self._Diag_Qcontrol1B)
         self._Diag_Icontrol2A = perseus_utils.read_diag_milivolts(self.perseus, 6, 'A')
+        self.push_change_event("Diag_Icontrol2A", self._Diag_Icontrol2A)
         self._Diag_Icontrol2B = perseus_utils.read_diag_milivolts(self.perseus, 6, 'B')
+        self.push_change_event("Diag_Icontrol2B", self._Diag_Icontrol2B)
         self._Diag_Qcontrol2A = perseus_utils.read_diag_milivolts(self.perseus, 7, 'A')
+        self.push_change_event("Diag_Qcontrol2A", self._Diag_Qcontrol2A)
         self._Diag_Qcontrol2B = perseus_utils.read_diag_milivolts(self.perseus, 7, 'B')
+        self.push_change_event("Diag_Qcontrol2B", self._Diag_Qcontrol2B)
         self._Diag_IerrorA = perseus_utils.read_diag_milivolts(self.perseus, 8, 'A')
+        self.push_change_event("Diag_IerrorA", self._Diag_IerrorA)
         self._Diag_IerrorB = perseus_utils.read_diag_milivolts(self.perseus, 8, 'B')
+        self.push_change_event("Diag_IerrorB", self._Diag_IerrorB)
         self._Diag_QerrorA = perseus_utils.read_diag_milivolts(self.perseus, 9, 'A')
+        self.push_change_event("Diag_QerrorA", self._Diag_QerrorA)
         self._Diag_QerrorB = perseus_utils.read_diag_milivolts(self.perseus, 9, 'B')
+        self.push_change_event("Diag_QerrorB", self._Diag_QerrorB)
         self._Diag_IerroraccumA = perseus_utils.read_diag_milivolts(self.perseus, 10, 'A')
+        self.push_change_event("Diag_IerroraccumA", self._Diag_IerroraccumA)
         self._Diag_IerroraccumB = perseus_utils.read_diag_milivolts(self.perseus, 10, 'B')
+        self.push_change_event("Diag_IerroraccumB", self._Diag_IerroraccumB)
         self._Diag_QerroraccumA = perseus_utils.read_diag_milivolts(self.perseus, 11, 'A')
+        self.push_change_event("Diag_QerroraccumA", self._Diag_QerroraccumA)
         self._Diag_QerroraccumB = perseus_utils.read_diag_milivolts(self.perseus, 11, 'B')
+        self.push_change_event("Diag_QerroraccumB", self._Diag_QerroraccumB)
         self._Diag_IrefA = perseus_utils.read_diag_milivolts(self.perseus, 12, 'A')
+        self.push_change_event("Diag_IrefA", self._Diag_IrefA)
         self._Diag_IrefB = perseus_utils.read_diag_milivolts(self.perseus, 12, 'B')
+        self.push_change_event("Diag_IrefB", self._Diag_IrefB)
         self._Diag_QrefA = perseus_utils.read_diag_milivolts(self.perseus, 13, 'A')
+        self.push_change_event("Diag_QrefA", self._Diag_QrefA)
         self._Diag_QrefB = perseus_utils.read_diag_milivolts(self.perseus, 13, 'B')
+        self.push_change_event("Diag_QrefB", self._Diag_QrefB)
         self._Diag_IFwCavLoopsA = perseus_utils.read_diag_milivolts(self.perseus, 14, 'A')
+        self.push_change_event("Diag_IFwCavLoopsA", self._Diag_IFwCavLoopsA)
         self._Diag_IFwCavLoopsB = perseus_utils.read_diag_milivolts(self.perseus, 14, 'B')
+        self.push_change_event("Diag_IFwCavLoopsB", self._Diag_IFwCavLoopsB)
         self._Diag_QFwCavLoopsA = perseus_utils.read_diag_milivolts(self.perseus, 15, 'A')
+        self.push_change_event("Diag_QFwCavLoopsA", self._Diag_QFwCavLoopsA)
         self._Diag_QFwCavLoopsB = perseus_utils.read_diag_milivolts(self.perseus, 15, 'B')
+        self.push_change_event("Diag_QFwCavLoopsB", self._Diag_QFwCavLoopsB)
         self._Diag_IFwTet1LoopsA = perseus_utils.read_diag_milivolts(self.perseus, 16, 'A')
+        self.push_change_event("Diag_IFwTet1LoopsA", self._Diag_IFwTet1LoopsA)
         self._Diag_IFwTet1LoopsB = perseus_utils.read_diag_milivolts(self.perseus, 16, 'B')
+        self.push_change_event("Diag_IFwTet1LoopsB", self._Diag_IFwTet1LoopsB)
         self._Diag_QFwTet1LoopsA = perseus_utils.read_diag_milivolts(self.perseus, 17, 'A')
+        self.push_change_event("Diag_QFwTet1LoopsA", self._Diag_QFwTet1LoopsA)
         self._Diag_QFwTet1LoopsB = perseus_utils.read_diag_milivolts(self.perseus, 17, 'B')
+        self.push_change_event("Diag_QFwTet1LoopsB", self._Diag_QFwTet1LoopsB)
         self._Diag_IFwTet2LoopsA = perseus_utils.read_diag_milivolts(self.perseus, 18, 'A')
+        self.push_change_event("Diag_IFwTet2LoopsA", self._Diag_IFwTet2LoopsA)
         self._Diag_IFwTet2LoopsB = perseus_utils.read_diag_milivolts(self.perseus, 18, 'B')
+        self.push_change_event("Diag_IFwTet2LoopsB", self._Diag_IFwTet2LoopsB)
         self._Diag_QFwTet2LoopsA = perseus_utils.read_diag_milivolts(self.perseus, 19, 'A')
+        self.push_change_event("Diag_QFwTet2LoopsA", self._Diag_QFwTet2LoopsA)
         self._Diag_QFwTet2LoopsB = perseus_utils.read_diag_milivolts(self.perseus, 19, 'B')
+        self.push_change_event("Diag_QFwTet2LoopsB", self._Diag_QFwTet2LoopsB)
         self._Diag_IFwCircInLoopsA = perseus_utils.read_diag_milivolts(self.perseus, 20, 'A')
+        self.push_change_event("Diag_IFwCircInLoopsA", self._Diag_IFwCircInLoopsA)
         self._Diag_IFwCircInLoopsB = perseus_utils.read_diag_milivolts(self.perseus, 20, 'B')
+        self.push_change_event("Diag_IFwCircInLoopsB", self._Diag_IFwCircInLoopsB)
         self._Diag_QFwCircInLoopsA = perseus_utils.read_diag_milivolts(self.perseus, 21, 'A')
+        self.push_change_event("Diag_QFwCircInLoopsA", self._Diag_QFwCircInLoopsA)
         self._Diag_QFwCircInLoopsB = perseus_utils.read_diag_milivolts(self.perseus, 21, 'B')
+        self.push_change_event("Diag_QFwCircInLoopsB", self._Diag_QFwCircInLoopsB)
         self._Diag_ImoA = perseus_utils.read_diag_milivolts(self.perseus, 22, 'A')
+        self.push_change_event("Diag_ImoA", self._Diag_ImoA)
         self._Diag_ImoB = perseus_utils.read_diag_milivolts(self.perseus, 22, 'B')
+        self.push_change_event("Diag_ImoB", self._Diag_ImoB)
         self._Diag_QmoA = perseus_utils.read_diag_milivolts(self.perseus, 23, 'A')
+        self.push_change_event("Diag_QmoA", self._Diag_QmoA)
         self._Diag_QmoB = perseus_utils.read_diag_milivolts(self.perseus, 23, 'B')
+        self.push_change_event("Diag_QmoB", self._Diag_QmoB)
         self._Diag_Ispare1A = perseus_utils.read_diag_milivolts(self.perseus, 24, 'A')
+        self.push_change_event("Diag_Ispare1A", self._Diag_Ispare1A)
         self._Diag_Ispare1B = perseus_utils.read_diag_milivolts(self.perseus, 24, 'B')
+        self.push_change_event("Diag_Ispare1B", self._Diag_Ispare1B)
         self._Diag_Qspare1A = perseus_utils.read_diag_milivolts(self.perseus, 25, 'A')
+        self.push_change_event("Diag_Qspare1A", self._Diag_Qspare1A)
         self._Diag_Qspare1B = perseus_utils.read_diag_milivolts(self.perseus, 25, 'B')
+        self.push_change_event("Diag_Qspare1B", self._Diag_Qspare1B)
         self._Diag_Ispare2A = perseus_utils.read_diag_milivolts(self.perseus, 26, 'A')
+        self.push_change_event("Diag_Ispare2A", self._Diag_Ispare2A)
         self._Diag_Ispare2B = perseus_utils.read_diag_milivolts(self.perseus, 26, 'B')
+        self.push_change_event("Diag_Ispare2B", self._Diag_Ispare2B)
         self._Diag_Qspare2A = perseus_utils.read_diag_milivolts(self.perseus, 27, 'A')
+        self.push_change_event("Diag_Qspare2A", self._Diag_Qspare2A)
         self._Diag_Qspare2B = perseus_utils.read_diag_milivolts(self.perseus, 27, 'B')
+        self.push_change_event("Diag_Qspare2B", self._Diag_Qspare2B)
         self._Diag_IMuxCavA = perseus_utils.read_diag_milivolts(self.perseus, 28, 'A')
+        self.push_change_event("Diag_IMuxCavA", self._Diag_IMuxCavA)
         self._Diag_IMuxCavB = perseus_utils.read_diag_milivolts(self.perseus, 28, 'B')
+        self.push_change_event("Diag_IMuxCavB", self._Diag_IMuxCavB)
         self._Diag_QMuxCavA = perseus_utils.read_diag_milivolts(self.perseus, 29, 'A')
+        self.push_change_event("Diag_QMuxCavA", self._Diag_QMuxCavA)
         self._Diag_QMuxCavB = perseus_utils.read_diag_milivolts(self.perseus, 29, 'B')
+        self.push_change_event("Diag_QMuxCavB", self._Diag_QMuxCavB)
         self._Diag_IMuxFwCavA = perseus_utils.read_diag_milivolts(self.perseus, 30, 'A')
+        self.push_change_event("Diag_IMuxFwCavA", self._Diag_IMuxFwCavA)
         self._Diag_IMuxFwCavB = perseus_utils.read_diag_milivolts(self.perseus, 30, 'B')
+        self.push_change_event("Diag_IMuxFwCavB", self._Diag_IMuxFwCavB)
         self._Diag_QMuxFwCavA = perseus_utils.read_diag_milivolts(self.perseus, 31, 'A')
+        self.push_change_event("Diag_QMuxFwCavA", self._Diag_QMuxFwCavA)
         self._Diag_QMuxFwCavB = perseus_utils.read_diag_milivolts(self.perseus, 31, 'B')
+        self.push_change_event("Diag_QMuxFwCavB", self._Diag_QMuxFwCavB)
         self._Diag_IMuxFwTet1A = perseus_utils.read_diag_milivolts(self.perseus, 32, 'A')
+        self.push_change_event("Diag_IMuxFwTet1A", self._Diag_IMuxFwTet1A)
         self._Diag_IMuxFwTet1B = perseus_utils.read_diag_milivolts(self.perseus, 32, 'B')
+        self.push_change_event("Diag_IMuxFwTet1B", self._Diag_IMuxFwTet1B)
         self._Diag_QMuxFwTet1A = perseus_utils.read_diag_milivolts(self.perseus, 33, 'A')
+        self.push_change_event("Diag_QMuxFwTet1A", self._Diag_QMuxFwTet1A)
         self._Diag_QMuxFwTet1B = perseus_utils.read_diag_milivolts(self.perseus, 33, 'B')
+        self.push_change_event("Diag_QMuxFwTet1B", self._Diag_QMuxFwTet1B)
         self._Diag_IMuxFwTet2A = perseus_utils.read_diag_milivolts(self.perseus, 34, 'A')
+        self.push_change_event("Diag_IMuxFwTet2A", self._Diag_IMuxFwTet2A)
         self._Diag_IMuxFwTet2B = perseus_utils.read_diag_milivolts(self.perseus, 34, 'B')
+        self.push_change_event("Diag_IMuxFwTet2B", self._Diag_IMuxFwTet2B)
         self._Diag_QMuxFwTet2A = perseus_utils.read_diag_milivolts(self.perseus, 35, 'A')
+        self.push_change_event("Diag_QMuxFwTet2A", self._Diag_QMuxFwTet2A)
         self._Diag_QMuxFwTet2B = perseus_utils.read_diag_milivolts(self.perseus, 35, 'B')
+        self.push_change_event("Diag_QMuxFwTet2B", self._Diag_QMuxFwTet2B)
         self._Diag_IMuxFwCircInA = perseus_utils.read_diag_milivolts(self.perseus, 36, 'A')
+        self.push_change_event("Diag_IMuxFwCircInA", self._Diag_IMuxFwCircInA)
         self._Diag_IMuxFwCircInB = perseus_utils.read_diag_milivolts(self.perseus, 36, 'B')
+        self.push_change_event("Diag_IMuxFwCircInB", self._Diag_IMuxFwCircInB)
         self._Diag_QMuxFwCircInA = perseus_utils.read_diag_milivolts(self.perseus, 37, 'A')
+        self.push_change_event("Diag_QMuxFwCircInA", self._Diag_QMuxFwCircInA)
         self._Diag_QMuxFwCircInB = perseus_utils.read_diag_milivolts(self.perseus, 37, 'B')
+        self.push_change_event("Diag_QMuxFwCircInB", self._Diag_QMuxFwCircInB)
         self._Diag_AmpCavA = perseus_utils.read_diag_milivolts(self.perseus, 38, 'A')
+        self.push_change_event("Diag_AmpCavA", self._Diag_AmpCavA)
         self._Diag_AmpCavB = perseus_utils.read_diag_milivolts(self.perseus, 38, 'B')
+        self.push_change_event("Diag_AmpCavB", self._Diag_AmpCavB)
         self._Diag_AmpFwA = perseus_utils.read_diag_milivolts(self.perseus, 39, 'A')
+        self.push_change_event("Diag_AmpFwA", self._Diag_AmpFwA)
         self._Diag_AmpFwB = perseus_utils.read_diag_milivolts(self.perseus, 39, 'B')
+        self.push_change_event("Diag_AmpFwB", self._Diag_AmpFwB)
         self._Diag_AngCavFwA = perseus_utils.read_diag_angle(self.perseus, 40, 'A')
+        self.push_change_event("Diag_AngCavFwA", self._Diag_AngCavFwA)
         self._Diag_AngCavFwB = perseus_utils.read_diag_angle(self.perseus, 40, 'B')
+        self.push_change_event("Diag_AngCavFwB", self._Diag_AngCavFwB)
         self._Diag_AngCavLA = perseus_utils.read_diag_angle(self.perseus, 41, 'A')
+        self.push_change_event("Diag_AngCavLA", self._Diag_AngCavLA)
         self._Diag_AngCavLB = perseus_utils.read_diag_angle(self.perseus, 41, 'B')
+        self.push_change_event("Diag_AngCavLB", self._Diag_AngCavLB)
         self._Diag_AngFwLA = perseus_utils.read_diag_angle(self.perseus, 42, 'A')
+        self.push_change_event("Diag_AngFwLA", self._Diag_AngFwLA)
         self._Diag_AngFwLB = perseus_utils.read_diag_angle(self.perseus, 42, 'B')
+        self.push_change_event("Diag_AngFwLB", self._Diag_AngFwLB)
         self._Diag_Vaccum1A = bool(perseus_utils.read_diag_direct(self.perseus, 43, 'A'))
+        self.push_change_event("Diag_Vaccum1A", self._Diag_Vaccum1A)
         self._Diag_Vaccum1B = bool(perseus_utils.read_diag_direct(self.perseus, 43, 'B'))
+        self.push_change_event("Diag_Vaccum1B", self._Diag_Vaccum1B)
         self._Diag_Vaccum2A = bool(perseus_utils.read_diag_direct(self.perseus, 44, 'A'))
+        self.push_change_event("Diag_Vaccum2A", self._Diag_Vaccum2A)
         self._Diag_Vaccum2B = bool(perseus_utils.read_diag_direct(self.perseus, 44, 'B'))
+        self.push_change_event("Diag_Vaccum2B", self._Diag_Vaccum2B)
         self._Diag_IcontrolSlowpiA = perseus_utils.read_diag_milivolts(self.perseus, 45, 'A')
+        self.push_change_event("Diag_IcontrolSlowpiA", self._Diag_IcontrolSlowpiA)
         self._Diag_IcontrolSlowpiB = perseus_utils.read_diag_milivolts(self.perseus, 45, 'B')
+        self.push_change_event("Diag_IcontrolSlowpiB", self._Diag_IcontrolSlowpiB)
         self._Diag_QcontrolSlowpiA = perseus_utils.read_diag_milivolts(self.perseus, 46, 'A')
+        self.push_change_event("Diag_QcontrolSlowpiA", self._Diag_QcontrolSlowpiA)
         self._Diag_QcontrolSlowpiB = perseus_utils.read_diag_milivolts(self.perseus, 46, 'B')
+        self.push_change_event("Diag_QcontrolSlowpiB", self._Diag_QcontrolSlowpiB)
         self._Diag_IcontrolFastpiA = perseus_utils.read_diag_milivolts(self.perseus, 47, 'A')
+        self.push_change_event("Diag_IcontrolFastpiA", self._Diag_IcontrolFastpiA)
         self._Diag_IcontrolFastpiB = perseus_utils.read_diag_milivolts(self.perseus, 47, 'B')
+        self.push_change_event("Diag_IcontrolFastpiB", self._Diag_IcontrolFastpiB)
         self._Diag_QcontrolFastpiA = perseus_utils.read_diag_milivolts(self.perseus, 48, 'A')
+        self.push_change_event("Diag_QcontrolFastpiA", self._Diag_QcontrolFastpiA)
         self._Diag_QcontrolFastpiB = perseus_utils.read_diag_milivolts(self.perseus, 48, 'B')
+        self.push_change_event("Diag_QcontrolFastpiB", self._Diag_QcontrolFastpiB)
         self._Diag_VcxoPoweredA = bool(perseus_utils.read_diag_direct(self.perseus, 50, 'A'))
+        self.push_change_event("Diag_VcxoPoweredA", self._Diag_VcxoPoweredA)
         self._Diag_VcxoPoweredB = bool(perseus_utils.read_diag_direct(self.perseus, 50, 'B'))
+        self.push_change_event("Diag_VcxoPoweredB", self._Diag_VcxoPoweredB)
         self._Diag_VcxoRefA = bool(perseus_utils.read_diag_direct(self.perseus, 51, 'A'))
+        self.push_change_event("Diag_VcxoRefA", self._Diag_VcxoRefA)
         self._Diag_VcxoRefB = bool(perseus_utils.read_diag_direct(self.perseus, 51, 'B'))
+        self.push_change_event("Diag_VcxoRefB", self._Diag_VcxoRefB)
         self._Diag_VcxoLockedA = bool(perseus_utils.read_diag_direct(self.perseus, 52, 'A'))
+        self.push_change_event("Diag_VcxoLockedA", self._Diag_VcxoLockedA)
         self._Diag_VcxoLockedB = bool(perseus_utils.read_diag_direct(self.perseus, 52, 'B'))
+        self.push_change_event("Diag_VcxoLockedB", self._Diag_VcxoLockedB)
         self._Diag_VcxoCableDisconnectedA = bool(perseus_utils.read_diag_direct(self.perseus, 53, 'A'))
+        self.push_change_event("Diag_VcxoCableDisconnectedA", self._Diag_VcxoCableDisconnectedA)
         self._Diag_VcxoCableDisconnectedB = bool(perseus_utils.read_diag_direct(self.perseus, 53, 'B'))
+        self.push_change_event("Diag_VcxoCableDisconnectedB", self._Diag_VcxoCableDisconnectedB)
         self._Diag_IpolarForAmplitudeLoopA = perseus_utils.read_diag_milivolts(self.perseus, 100, 'A')
+        self.push_change_event("Diag_IpolarForAmplitudeLoopA", self._Diag_IpolarForAmplitudeLoopA)
         self._Diag_IpolarForAmplitudeLoopB = perseus_utils.read_diag_milivolts(self.perseus, 100, 'B')
+        self.push_change_event("Diag_IpolarForAmplitudeLoopB", self._Diag_IpolarForAmplitudeLoopB)
         self._Diag_QpolarForAmplitudeLoopA = perseus_utils.read_diag_milivolts(self.perseus, 101, 'A')
+        self.push_change_event("Diag_QpolarForAmplitudeLoopA", self._Diag_QpolarForAmplitudeLoopA)
         self._Diag_QpolarForAmplitudeLoopB = perseus_utils.read_diag_milivolts(self.perseus, 101, 'B')
+        self.push_change_event("Diag_QpolarForAmplitudeLoopB", self._Diag_QpolarForAmplitudeLoopB)
         self._Diag_IpolarForPhaseLoopA = perseus_utils.read_diag_milivolts(self.perseus, 102, 'A')
+        self.push_change_event("Diag_IpolarForPhaseLoopA", self._Diag_IpolarForPhaseLoopA)
         self._Diag_IpolarForPhaseLoopB = perseus_utils.read_diag_milivolts(self.perseus, 102, 'B')
+        self.push_change_event("Diag_IpolarForPhaseLoopB", self._Diag_IpolarForPhaseLoopB)
         self._Diag_QpolarForPhaseLoopA = perseus_utils.read_diag_milivolts(self.perseus, 103, 'A')
+        self.push_change_event("Diag_QpolarForPhaseLoopA", self._Diag_QpolarForPhaseLoopA)
         self._Diag_QpolarForPhaseLoopB = perseus_utils.read_diag_milivolts(self.perseus, 103, 'B')
+        self.push_change_event("Diag_QpolarForPhaseLoopB", self._Diag_QpolarForPhaseLoopB)
         self._Diag_AmpInputOfAmpLoopA = perseus_utils.read_diag_milivolts(self.perseus, 104, 'A')
+        self.push_change_event("Diag_AmpInputOfAmpLoopA", self._Diag_AmpInputOfAmpLoopA)
         self._Diag_AmpInputOfAmpLoopB = perseus_utils.read_diag_milivolts(self.perseus, 104, 'B')
+        self.push_change_event("Diag_AmpInputOfAmpLoopB", self._Diag_AmpInputOfAmpLoopB)
         self._Diag_PhaseInputOfAmpLoopA = perseus_utils.read_diag_milivolts(self.perseus, 105, 'A')
+        self.push_change_event("Diag_PhaseInputOfAmpLoopA", self._Diag_PhaseInputOfAmpLoopA)
         self._Diag_PhaseInputOfAmpLoopB = perseus_utils.read_diag_milivolts(self.perseus, 105, 'B')
+        self.push_change_event("Diag_PhaseInputOfAmpLoopB", self._Diag_PhaseInputOfAmpLoopB)
         self._Diag_AmpInputOfPhaseLoopA = perseus_utils.read_diag_milivolts(self.perseus, 106, 'A')
+        self.push_change_event("Diag_AmpInputOfPhaseLoopA", self._Diag_AmpInputOfPhaseLoopA)
         self._Diag_AmpInputOfPhaseLoopB = perseus_utils.read_diag_milivolts(self.perseus, 106, 'B')
+        self.push_change_event("Diag_AmpInputOfPhaseLoopB", self._Diag_AmpInputOfPhaseLoopB)
         self._Diag_PhInputOfPhaseLoopA = perseus_utils.read_diag_milivolts(self.perseus, 107, 'A')
+        self.push_change_event("Diag_PhInputOfPhaseLoopA", self._Diag_PhInputOfPhaseLoopA)
         self._Diag_PhInputOfPhaseLoopB = perseus_utils.read_diag_milivolts(self.perseus, 107, 'B')
+        self.push_change_event("Diag_PhInputOfPhaseLoopB", self._Diag_PhInputOfPhaseLoopB)
         self._Diag_AmpLoopControlOutputA = perseus_utils.read_diag_milivolts(self.perseus, 108, 'A')
+        self.push_change_event("Diag_AmpLoopControlOutputA", self._Diag_AmpLoopControlOutputA)
         self._Diag_AmpLoopControlOutputB = perseus_utils.read_diag_milivolts(self.perseus, 108, 'B')
+        self.push_change_event("Diag_AmpLoopControlOutputB", self._Diag_AmpLoopControlOutputB)
         self._Diag_AmpLoopErrorA = perseus_utils.read_diag_milivolts(self.perseus, 109, 'A')
+        self.push_change_event("Diag_AmpLoopErrorA", self._Diag_AmpLoopErrorA)
         self._Diag_AmpLoopErrorB = perseus_utils.read_diag_milivolts(self.perseus, 109, 'B')
+        self.push_change_event("Diag_AmpLoopErrorB", self._Diag_AmpLoopErrorB)
         self._Diag_AmpLoopErrorAccumA = perseus_utils.read_diag_milivolts(self.perseus, 110, 'A')
+        self.push_change_event("Diag_AmpLoopErrorAccumA", self._Diag_AmpLoopErrorAccumA)
         self._Diag_AmpLoopErrorAccumB = perseus_utils.read_diag_milivolts(self.perseus, 110, 'B')
+        self.push_change_event("Diag_AmpLoopErrorAccumB", self._Diag_AmpLoopErrorAccumB)
         self._Diag_PhLoopControlOutputA = perseus_utils.read_diag_milivolts(self.perseus, 111, 'A')
+        self.push_change_event("Diag_PhLoopControlOutputA", self._Diag_PhLoopControlOutputA)
         self._Diag_PhLoopControlOutputB = perseus_utils.read_diag_milivolts(self.perseus, 111, 'B')
+        self.push_change_event("Diag_PhLoopControlOutputB", self._Diag_PhLoopControlOutputB)
         self._Diag_PhLoopErrorA = perseus_utils.read_diag_milivolts(self.perseus, 112, 'A')
+        self.push_change_event("Diag_PhLoopErrorA", self._Diag_PhLoopErrorA)
         self._Diag_PhLoopErrorB = perseus_utils.read_diag_milivolts(self.perseus, 112, 'B')
+        self.push_change_event("Diag_PhLoopErrorB", self._Diag_PhLoopErrorB)
         self._Diag_PhLoopErrorAccumA = perseus_utils.read_diag_milivolts(self.perseus, 113, 'A')
+        self.push_change_event("Diag_PhLoopErrorAccumA", self._Diag_PhLoopErrorAccumA)
         self._Diag_PhLoopErrorAccumB = perseus_utils.read_diag_milivolts(self.perseus, 113, 'B')
+        self.push_change_event("Diag_PhLoopErrorAccumB", self._Diag_PhLoopErrorAccumB)
         self._Diag_IpolarControlOutputA = perseus_utils.read_diag_milivolts(self.perseus, 114, 'A')
+        self.push_change_event("Diag_IpolarControlOutputA", self._Diag_IpolarControlOutputA)
         self._Diag_IpolarControlOutputB = perseus_utils.read_diag_milivolts(self.perseus, 114, 'B')
+        self.push_change_event("Diag_IpolarControlOutputB", self._Diag_IpolarControlOutputB)
         self._Diag_QpolarControlOutputA = perseus_utils.read_diag_milivolts(self.perseus, 115, 'A')
+        self.push_change_event("Diag_QpolarControlOutputA", self._Diag_QpolarControlOutputA)
         self._Diag_QpolarControlOutputB = perseus_utils.read_diag_milivolts(self.perseus, 115, 'B')
+        self.push_change_event("Diag_QpolarControlOutputB", self._Diag_QpolarControlOutputB)
         self._Diag_IcontrolSlowpiIqA = perseus_utils.read_diag_milivolts(self.perseus, 116, 'A')
+        self.push_change_event("Diag_IcontrolSlowpiIqA", self._Diag_IcontrolSlowpiIqA)
         self._Diag_IcontrolSlowpiIqB = perseus_utils.read_diag_milivolts(self.perseus, 116, 'B')
+        self.push_change_event("Diag_IcontrolSlowpiIqB", self._Diag_IcontrolSlowpiIqB)
         self._Diag_QcontrolSlowpiqA = perseus_utils.read_diag_milivolts(self.perseus, 117, 'A')
+        self.push_change_event("Diag_QcontrolSlowpiqA", self._Diag_QcontrolSlowpiqA)
         self._Diag_QcontrolSlowpiqB = perseus_utils.read_diag_milivolts(self.perseus, 117, 'B')
+        self.push_change_event("Diag_QcontrolSlowpiqB", self._Diag_QcontrolSlowpiqB)
         self._Diag_IcontrolFastpiIqA = perseus_utils.read_diag_milivolts(self.perseus, 118, 'A')
+        self.push_change_event("Diag_IcontrolFastpiIqA", self._Diag_IcontrolFastpiIqA)
         self._Diag_IcontrolFastpiIqB = perseus_utils.read_diag_milivolts(self.perseus, 118, 'B')
+        self.push_change_event("Diag_IcontrolFastpiIqB", self._Diag_IcontrolFastpiIqB)
         self._Diag_QcontrolFastpiIqA = perseus_utils.read_diag_milivolts(self.perseus, 119, 'A')
+        self.push_change_event("Diag_QcontrolFastpiIqA", self._Diag_QcontrolFastpiIqA)
         self._Diag_QcontrolFastpiIqB = perseus_utils.read_diag_milivolts(self.perseus, 119, 'B')
+        self.push_change_event("Diag_QcontrolFastpiIqB", self._Diag_QcontrolFastpiIqB)
         self._Diag_IloopinputSlowpiIqA = perseus_utils.read_diag_milivolts(self.perseus, 120, 'A')
+        self.push_change_event("Diag_IloopinputSlowpiIqA", self._Diag_IloopinputSlowpiIqA)
         self._Diag_IloopinputSlowpiIqB = perseus_utils.read_diag_milivolts(self.perseus, 120, 'B')
+        self.push_change_event("Diag_IloopinputSlowpiIqB", self._Diag_IloopinputSlowpiIqB)
         self._Diag_QloopinputSlowpiIqA = perseus_utils.read_diag_milivolts(self.perseus, 121, 'A')
+        self.push_change_event("Diag_QloopinputSlowpiIqA", self._Diag_QloopinputSlowpiIqA)
         self._Diag_QloopinputSlowpiIqB = perseus_utils.read_diag_milivolts(self.perseus, 121, 'B')
+        self.push_change_event("Diag_QloopinputSlowpiIqB", self._Diag_QloopinputSlowpiIqB)
         self._Diag_IloopinputFastpiIqA = perseus_utils.read_diag_milivolts(self.perseus, 122, 'A')
+        self.push_change_event("Diag_IloopinputFastpiIqA", self._Diag_IloopinputFastpiIqA)
         self._Diag_IloopinputFastpiIqB = perseus_utils.read_diag_milivolts(self.perseus, 122, 'B')
+        self.push_change_event("Diag_IloopinputFastpiIqB", self._Diag_IloopinputFastpiIqB)
         self._Diag_QloopinputFastpiIqA = perseus_utils.read_diag_milivolts(self.perseus, 123, 'A')
+        self.push_change_event("Diag_QloopinputFastpiIqA", self._Diag_QloopinputFastpiIqA)
         self._Diag_QloopinputFastpiIqB = perseus_utils.read_diag_milivolts(self.perseus, 123, 'B')
+        self.push_change_event("Diag_QloopinputFastpiIqB", self._Diag_QloopinputFastpiIqB)
         self._Diag_IrefloopinputFastpiIqA = perseus_utils.read_diag_milivolts(self.perseus, 124, 'A')
+        self.push_change_event("Diag_IrefloopinputFastpiIqA", self._Diag_IrefloopinputFastpiIqA)
         self._Diag_IrefloopinputFastpiIqB = perseus_utils.read_diag_milivolts(self.perseus, 124, 'B')
+        self.push_change_event("Diag_IrefloopinputFastpiIqB", self._Diag_IrefloopinputFastpiIqB)
         self._Diag_QrefloopinputFastpiIqA = perseus_utils.read_diag_milivolts(self.perseus, 125, 'A')
+        self.push_change_event("Diag_QrefloopinputFastpiIqA", self._Diag_QrefloopinputFastpiIqA)
         self._Diag_QrefloopinputFastpiIqB = perseus_utils.read_diag_milivolts(self.perseus, 125, 'B')
+        self.push_change_event("Diag_QrefloopinputFastpiIqB", self._Diag_QrefloopinputFastpiIqB)
         self._Diag_MovingPlungerAutoA = bool(perseus_utils.read_diag_direct(self.perseus, 300, 'A'))
+        self.push_change_event("Diag_MovingPlungerAutoA", self._Diag_MovingPlungerAutoA)
         self._Diag_MovingPlungerAutoB = bool(perseus_utils.read_diag_direct(self.perseus, 300, 'B'))
+        self.push_change_event("Diag_MovingPlungerAutoB", self._Diag_MovingPlungerAutoB)
         self._Diag_FreqUpA = bool(perseus_utils.read_diag_direct(self.perseus, 301, 'A'))
+        self.push_change_event("Diag_FreqUpA", self._Diag_FreqUpA)
         self._Diag_FreqUpB = bool(perseus_utils.read_diag_direct(self.perseus, 301, 'B'))
+        self.push_change_event("Diag_FreqUpB", self._Diag_FreqUpB)
         self._Diag_ManualTuningOnA = bool(perseus_utils.read_diag_direct(self.perseus, 302, 'A'))
+        self.push_change_event("Diag_ManualTuningOnA", self._Diag_ManualTuningOnA)
         self._Diag_ManualTuningOnB = bool(perseus_utils.read_diag_direct(self.perseus, 302, 'B'))
+        self.push_change_event("Diag_ManualTuningOnB", self._Diag_ManualTuningOnB)
         self._Diag_ManualTuningFreqUpA = bool(perseus_utils.read_diag_direct(self.perseus, 303, 'A'))
+        self.push_change_event("Diag_ManualTuningFreqUpA", self._Diag_ManualTuningFreqUpA)
         self._Diag_ManualTuningFreqUpB = bool(perseus_utils.read_diag_direct(self.perseus, 303, 'B'))
+        self.push_change_event("Diag_ManualTuningFreqUpB", self._Diag_ManualTuningFreqUpB)
         self._Diag_FwminA = bool(perseus_utils.read_diag_direct(self.perseus, 307, 'A'))
+        self.push_change_event("Diag_FwminA", self._Diag_FwminA)
         self._Diag_FwminB = bool(perseus_utils.read_diag_direct(self.perseus, 307, 'B'))
+        self.push_change_event("Diag_FwminB", self._Diag_FwminB)
         self._Diag_EpsItckDelayA = bool(perseus_utils.read_diag_direct(self.perseus, 400, 'A'))
+        self.push_change_event("Diag_EpsItckDelayA", self._Diag_EpsItckDelayA)
         self._Diag_EpsItckDelayB = bool(perseus_utils.read_diag_direct(self.perseus, 400, 'B'))
+        self.push_change_event("Diag_EpsItckDelayB", self._Diag_EpsItckDelayB)
         self._Diag_FimItckDelayA = bool(perseus_utils.read_diag_direct(self.perseus, 401, 'A'))
+        self.push_change_event("Diag_FimItckDelayA", self._Diag_FimItckDelayA)
         self._Diag_FimItckDelayB = bool(perseus_utils.read_diag_direct(self.perseus, 401, 'B'))
+        self.push_change_event("Diag_FimItckDelayB", self._Diag_FimItckDelayB)
         self._Diag_FdlTrigHwInputA = bool(perseus_utils.read_diag_direct(self.perseus, 402, 'A'))
+        self.push_change_event("Diag_FdlTrigHwInputA", self._Diag_FdlTrigHwInputA)
         self._Diag_FdlTrigHwInputB = bool(perseus_utils.read_diag_direct(self.perseus, 402, 'B'))
+        self.push_change_event("Diag_FdlTrigHwInputB", self._Diag_FdlTrigHwInputB)
         self._Diag_FdlTrigSwInputA = bool(perseus_utils.read_diag_direct(self.perseus, 403, 'A'))
+        self.push_change_event("Diag_FdlTrigSwInputA", self._Diag_FdlTrigSwInputA)
         self._Diag_FdlTrigSwInputB = bool(perseus_utils.read_diag_direct(self.perseus, 403, 'B'))
+        self.push_change_event("Diag_FdlTrigSwInputB", self._Diag_FdlTrigSwInputB)
         self._Diag_AmpMuxfwcircina = math.sqrt((self._Diag_IMuxFwCircInA**2) + (self._Diag_QMuxFwCircInA**2))
+        self.push_change_event("Diag_AmpMuxfwcircina", self._Diag_AmpMuxfwcircina)
         self._Diag_AmpSpare1a = math.sqrt((self._Diag_Ispare1A**2) + (self._Diag_Qspare1A**2))
+        self.push_change_event("Diag_AmpSpare1a", self._Diag_AmpSpare1a)
         self._Diag_AmpMuxfwcircinb = math.sqrt((self._Diag_IMuxFwCircInB**2) + (self._Diag_QMuxFwCircInB**2))
+        self.push_change_event("Diag_AmpMuxfwcircinb", self._Diag_AmpMuxfwcircinb)
         self._Diag_AmpSpare2a = math.sqrt((self._Diag_Ispare2A**2) + (self._Diag_Qspare2A**2))
+        self.push_change_event("Diag_AmpSpare2a", self._Diag_AmpSpare2a)
         self._Diag_AmpSpare2b = math.sqrt((self._Diag_Ispare2B**2) + (self._Diag_Qspare2B**2))
+        self.push_change_event("Diag_AmpSpare2b", self._Diag_AmpSpare2b)
         self._Diag_AmpErrora = math.sqrt((self._Diag_IerrorA**2) + (self._Diag_QerrorA**2))
+        self.push_change_event("Diag_AmpErrora", self._Diag_AmpErrora)
         self._Diag_AmpErrorb = math.sqrt((self._Diag_IerrorB**2) + (self._Diag_QerrorB**2))
+        self.push_change_event("Diag_AmpErrorb", self._Diag_AmpErrorb)
         self._Diag_AmpSpare1b = math.sqrt((self._Diag_Ispare1B**2) + (self._Diag_Qspare1B**2))
+        self.push_change_event("Diag_AmpSpare1b", self._Diag_AmpSpare1b)
         self._Diag_AmpErroraccumb = math.sqrt((self._Diag_IerroraccumB**2) + (self._Diag_QerroraccumB**2))
+        self.push_change_event("Diag_AmpErroraccumb", self._Diag_AmpErroraccumb)
         self._Diag_AmpErroraccuma = math.sqrt((self._Diag_IerroraccumA**2) + (self._Diag_QerroraccumA**2))
+        self.push_change_event("Diag_AmpErroraccuma", self._Diag_AmpErroraccuma)
         self._Diag_AmpControlfastpiiqb = math.sqrt((self._Diag_IcontrolFastpiIqB**2) + (self._Diag_QcontrolFastpiIqB**2))
+        self.push_change_event("Diag_AmpControlfastpiiqb", self._Diag_AmpControlfastpiiqb)
         self._Diag_AmpControlfastpiiqa = math.sqrt((self._Diag_IcontrolFastpiIqA**2) + (self._Diag_QcontrolFastpiIqA**2))
+        self.push_change_event("Diag_AmpControlfastpiiqa", self._Diag_AmpControlfastpiiqa)
         self._Diag_AmpControla = math.sqrt((self._Diag_IcontrolA**2) + (self._Diag_QcontrolA**2))
+        self.push_change_event("Diag_AmpControla", self._Diag_AmpControla)
         self._Diag_AmpPolarforamplitudeloopa = math.sqrt((self._Diag_IpolarForAmplitudeLoopA**2) + (self._Diag_QpolarForAmplitudeLoopA**2))
+        self.push_change_event("Diag_AmpPolarforamplitudeloopa", self._Diag_AmpPolarforamplitudeloopa)
         self._Diag_AmpPolarforamplitudeloopb = math.sqrt((self._Diag_IpolarForAmplitudeLoopB**2) + (self._Diag_QpolarForAmplitudeLoopB**2))
+        self.push_change_event("Diag_AmpPolarforamplitudeloopb", self._Diag_AmpPolarforamplitudeloopb)
         self._Diag_AmpControlb = math.sqrt((self._Diag_IcontrolB**2) + (self._Diag_QcontrolB**2))
+        self.push_change_event("Diag_AmpControlb", self._Diag_AmpControlb)
         self._Diag_AmpMuxfwtet2b = math.sqrt((self._Diag_IMuxFwTet2B**2) + (self._Diag_QMuxFwTet2B**2))
+        self.push_change_event("Diag_AmpMuxfwtet2b", self._Diag_AmpMuxfwtet2b)
         self._Diag_AmpLoopinputfastpiiqb = math.sqrt((self._Diag_IloopinputFastpiIqB**2) + (self._Diag_QloopinputFastpiIqB**2))
+        self.push_change_event("Diag_AmpLoopinputfastpiiqb", self._Diag_AmpLoopinputfastpiiqb)
         self._Diag_AmpLoopinputfastpiiqa = math.sqrt((self._Diag_IloopinputFastpiIqA**2) + (self._Diag_QloopinputFastpiIqA**2))
+        self.push_change_event("Diag_AmpLoopinputfastpiiqa", self._Diag_AmpLoopinputfastpiiqa)
         self._Diag_AmpRefa = math.sqrt((self._Diag_IrefA**2) + (self._Diag_QrefA**2))
+        self.push_change_event("Diag_AmpRefa", self._Diag_AmpRefa)
         self._Diag_AmpMuxfwcava = math.sqrt((self._Diag_IMuxFwCavA**2) + (self._Diag_QMuxFwCavA**2))
+        self.push_change_event("Diag_AmpMuxfwcava", self._Diag_AmpMuxfwcava)
         self._Diag_AmpMuxfwcavb = math.sqrt((self._Diag_IMuxFwCavB**2) + (self._Diag_QMuxFwCavB**2))
+        self.push_change_event("Diag_AmpMuxfwcavb", self._Diag_AmpMuxfwcavb)
         self._Diag_AmpRefb = math.sqrt((self._Diag_IrefB**2) + (self._Diag_QrefB**2))
+        self.push_change_event("Diag_AmpRefb", self._Diag_AmpRefb)
         self._Diag_AmpControl2a = math.sqrt((self._Diag_Icontrol2A**2) + (self._Diag_Qcontrol2A**2))
+        self.push_change_event("Diag_AmpControl2a", self._Diag_AmpControl2a)
         self._Diag_AmpControl2b = math.sqrt((self._Diag_Icontrol2B**2) + (self._Diag_Qcontrol2B**2))
+        self.push_change_event("Diag_AmpControl2b", self._Diag_AmpControl2b)
         self._Diag_AmpFwtet1loopsb = math.sqrt((self._Diag_IFwTet1LoopsB**2) + (self._Diag_QFwTet1LoopsB**2))
+        self.push_change_event("Diag_AmpFwtet1loopsb", self._Diag_AmpFwtet1loopsb)
         self._Diag_AmpFwtet1loopsa = math.sqrt((self._Diag_IFwTet1LoopsA**2) + (self._Diag_QFwTet1LoopsA**2))
+        self.push_change_event("Diag_AmpFwtet1loopsa", self._Diag_AmpFwtet1loopsa)
         self._Diag_AmpPolarforphaseloopb = math.sqrt((self._Diag_IpolarForPhaseLoopB**2) + (self._Diag_QpolarForPhaseLoopB**2))
+        self.push_change_event("Diag_AmpPolarforphaseloopb", self._Diag_AmpPolarforphaseloopb)
         self._Diag_AmpPolarforphaseloopa = math.sqrt((self._Diag_IpolarForPhaseLoopA**2) + (self._Diag_QpolarForPhaseLoopA**2))
+        self.push_change_event("Diag_AmpPolarforphaseloopa", self._Diag_AmpPolarforphaseloopa)
         self._Diag_AmpPolarcontroloutputb = math.sqrt((self._Diag_IpolarControlOutputB**2) + (self._Diag_QpolarControlOutputB**2))
+        self.push_change_event("Diag_AmpPolarcontroloutputb", self._Diag_AmpPolarcontroloutputb)
         self._Diag_AmpPolarcontroloutputa = math.sqrt((self._Diag_IpolarControlOutputA**2) + (self._Diag_QpolarControlOutputA**2))
+        self.push_change_event("Diag_AmpPolarcontroloutputa", self._Diag_AmpPolarcontroloutputa)
         self._Diag_AmpFwtet2loopsa = math.sqrt((self._Diag_IFwTet2LoopsA**2) + (self._Diag_QFwTet2LoopsA**2))
+        self.push_change_event("Diag_AmpFwtet2loopsa", self._Diag_AmpFwtet2loopsa)
         self._Diag_AmpCavloopsa = math.sqrt((self._Diag_IcavLoopsA**2) + (self._Diag_QcavLoopsA**2))
+        self.push_change_event("Diag_AmpCavloopsa", self._Diag_AmpCavloopsa)
         self._Diag_AmpCavloopsb = math.sqrt((self._Diag_IcavLoopsB**2) + (self._Diag_QcavLoopsB**2))
+        self.push_change_event("Diag_AmpCavloopsb", self._Diag_AmpCavloopsb)
         self._Diag_AmpFwtet2loopsb = math.sqrt((self._Diag_IFwTet2LoopsB**2) + (self._Diag_QFwTet2LoopsB**2))
+        self.push_change_event("Diag_AmpFwtet2loopsb", self._Diag_AmpFwtet2loopsb)
         self._Diag_AmpLoopinputslowpiiqa = math.sqrt((self._Diag_IloopinputSlowpiIqA**2) + (self._Diag_QloopinputSlowpiIqA**2))
+        self.push_change_event("Diag_AmpLoopinputslowpiiqa", self._Diag_AmpLoopinputslowpiiqa)
         self._Diag_AmpLoopinputslowpiiqb = math.sqrt((self._Diag_IloopinputSlowpiIqB**2) + (self._Diag_QloopinputSlowpiIqB**2))
+        self.push_change_event("Diag_AmpLoopinputslowpiiqb", self._Diag_AmpLoopinputslowpiiqb)
         self._Diag_AmpRefloopinputfastpiiqb = math.sqrt((self._Diag_IrefloopinputFastpiIqB**2) + (self._Diag_QrefloopinputFastpiIqB**2))
+        self.push_change_event("Diag_AmpRefloopinputfastpiiqb", self._Diag_AmpRefloopinputfastpiiqb)
         self._Diag_AmpRefloopinputfastpiiqa = math.sqrt((self._Diag_IrefloopinputFastpiIqA**2) + (self._Diag_QrefloopinputFastpiIqA**2))
+        self.push_change_event("Diag_AmpRefloopinputfastpiiqa", self._Diag_AmpRefloopinputfastpiiqa)
         self._Diag_AmpControl1a = math.sqrt((self._Diag_Icontrol1A**2) + (self._Diag_Qcontrol1A**2))
+        self.push_change_event("Diag_AmpControl1a", self._Diag_AmpControl1a)
         self._Diag_AmpControl1b = math.sqrt((self._Diag_Icontrol1B**2) + (self._Diag_Qcontrol1B**2))
+        self.push_change_event("Diag_AmpControl1b", self._Diag_AmpControl1b)
         self._Diag_AmpMuxfwtet2a = math.sqrt((self._Diag_IMuxFwTet2A**2) + (self._Diag_QMuxFwTet2A**2))
+        self.push_change_event("Diag_AmpMuxfwtet2a", self._Diag_AmpMuxfwtet2a)
         self._Diag_AmpMuxcavb = math.sqrt((self._Diag_IMuxCavB**2) + (self._Diag_QMuxCavB**2))
+        self.push_change_event("Diag_AmpMuxcavb", self._Diag_AmpMuxcavb)
         self._Diag_AmpMuxcava = math.sqrt((self._Diag_IMuxCavA**2) + (self._Diag_QMuxCavA**2))
+        self.push_change_event("Diag_AmpMuxcava", self._Diag_AmpMuxcava)
         self._Diag_AmpMuxfwtet1b = math.sqrt((self._Diag_IMuxFwTet1B**2) + (self._Diag_QMuxFwTet1B**2))
+        self.push_change_event("Diag_AmpMuxfwtet1b", self._Diag_AmpMuxfwtet1b)
         self._Diag_AmpControlfastpib = math.sqrt((self._Diag_IcontrolFastpiB**2) + (self._Diag_QcontrolFastpiB**2))
+        self.push_change_event("Diag_AmpControlfastpib", self._Diag_AmpControlfastpib)
         self._Diag_AmpFwcircinloopsa = math.sqrt((self._Diag_IFwCircInLoopsA**2) + (self._Diag_QFwCircInLoopsA**2))
+        self.push_change_event("Diag_AmpFwcircinloopsa", self._Diag_AmpFwcircinloopsa)
         self._Diag_AmpFwcircinloopsb = math.sqrt((self._Diag_IFwCircInLoopsB**2) + (self._Diag_QFwCircInLoopsB**2))
+        self.push_change_event("Diag_AmpFwcircinloopsb", self._Diag_AmpFwcircinloopsb)
         self._Diag_AmpControlfastpia = math.sqrt((self._Diag_IcontrolFastpiA**2) + (self._Diag_QcontrolFastpiA**2))
+        self.push_change_event("Diag_AmpControlfastpia", self._Diag_AmpControlfastpia)
         self._Diag_AmpFwcavloopsa = math.sqrt((self._Diag_IFwCavLoopsA**2) + (self._Diag_QFwCavLoopsA**2))
+        self.push_change_event("Diag_AmpFwcavloopsa", self._Diag_AmpFwcavloopsa)
         self._Diag_AmpMuxfwtet1a = math.sqrt((self._Diag_IMuxFwTet1A**2) + (self._Diag_QMuxFwTet1A**2))
+        self.push_change_event("Diag_AmpMuxfwtet1a", self._Diag_AmpMuxfwtet1a)
         self._Diag_AmpFwcavloopsb = math.sqrt((self._Diag_IFwCavLoopsB**2) + (self._Diag_QFwCavLoopsB**2))
+        self.push_change_event("Diag_AmpFwcavloopsb", self._Diag_AmpFwcavloopsb)
         self._Diag_AmpMob = math.sqrt((self._Diag_ImoB**2) + (self._Diag_QmoB**2))
+        self.push_change_event("Diag_AmpMob", self._Diag_AmpMob)
         self._Diag_AmpMoa = math.sqrt((self._Diag_ImoA**2) + (self._Diag_QmoA**2))
+        self.push_change_event("Diag_AmpMoa", self._Diag_AmpMoa)
         self._Diag_AmpControlslowpia = math.sqrt((self._Diag_IcontrolSlowpiA**2) + (self._Diag_QcontrolSlowpiA**2))
+        self.push_change_event("Diag_AmpControlslowpia", self._Diag_AmpControlslowpia)
         self._Diag_AmpControlslowpib = math.sqrt((self._Diag_IcontrolSlowpiB**2) + (self._Diag_QcontrolSlowpiB**2))
+        self.push_change_event("Diag_AmpControlslowpib", self._Diag_AmpControlslowpib)
         self._Diag_PhMuxfwcircina = math.degrees(math.atan2(self._Diag_QMuxFwCircInA, self._Diag_IMuxFwCircInA))
+        self.push_change_event("Diag_PhMuxfwcircina", self._Diag_PhMuxfwcircina)
         self._Diag_PhSpare1a = math.degrees(math.atan2(self._Diag_Qspare1A, self._Diag_Ispare1A))
+        self.push_change_event("Diag_PhSpare1a", self._Diag_PhSpare1a)
         self._Diag_PhMuxfwcircinb = math.degrees(math.atan2(self._Diag_QMuxFwCircInB, self._Diag_IMuxFwCircInB))
+        self.push_change_event("Diag_PhMuxfwcircinb", self._Diag_PhMuxfwcircinb)
         self._Diag_PhSpare2a = math.degrees(math.atan2(self._Diag_Qspare2A, self._Diag_Ispare2A))
+        self.push_change_event("Diag_PhSpare2a", self._Diag_PhSpare2a)
         self._Diag_PhSpare2b = math.degrees(math.atan2(self._Diag_Qspare2B, self._Diag_Ispare2B))
+        self.push_change_event("Diag_PhSpare2b", self._Diag_PhSpare2b)
         self._Diag_PhErrora = math.degrees(math.atan2(self._Diag_QerrorA, self._Diag_IerrorA))
+        self.push_change_event("Diag_PhErrora", self._Diag_PhErrora)
         self._Diag_PhErrorb = math.degrees(math.atan2(self._Diag_QerrorB, self._Diag_IerrorB))
+        self.push_change_event("Diag_PhErrorb", self._Diag_PhErrorb)
         self._Diag_PhSpare1b = math.degrees(math.atan2(self._Diag_Qspare1B, self._Diag_Ispare1B))
+        self.push_change_event("Diag_PhSpare1b", self._Diag_PhSpare1b)
         self._Diag_PhErroraccumb = math.degrees(math.atan2(self._Diag_QerroraccumB, self._Diag_IerroraccumB))
+        self.push_change_event("Diag_PhErroraccumb", self._Diag_PhErroraccumb)
         self._Diag_PhErroraccuma = math.degrees(math.atan2(self._Diag_QerroraccumA, self._Diag_IerroraccumA))
+        self.push_change_event("Diag_PhErroraccuma", self._Diag_PhErroraccuma)
         self._Diag_PhControlfastpiiqb = math.degrees(math.atan2(self._Diag_QcontrolFastpiIqB, self._Diag_IcontrolFastpiIqB))
+        self.push_change_event("Diag_PhControlfastpiiqb", self._Diag_PhControlfastpiiqb)
         self._Diag_PhControlfastpiiqa = math.degrees(math.atan2(self._Diag_QcontrolFastpiIqA, self._Diag_IcontrolFastpiIqA))
+        self.push_change_event("Diag_PhControlfastpiiqa", self._Diag_PhControlfastpiiqa)
         self._Diag_PhControla = math.degrees(math.atan2(self._Diag_QcontrolA, self._Diag_IcontrolA))
+        self.push_change_event("Diag_PhControla", self._Diag_PhControla)
         self._Diag_PhPolarforamplitudeloopa = math.degrees(math.atan2(self._Diag_QpolarForAmplitudeLoopA, self._Diag_IpolarForAmplitudeLoopA))
+        self.push_change_event("Diag_PhPolarforamplitudeloopa", self._Diag_PhPolarforamplitudeloopa)
         self._Diag_PhPolarforamplitudeloopb = math.degrees(math.atan2(self._Diag_QpolarForAmplitudeLoopB, self._Diag_IpolarForAmplitudeLoopB))
+        self.push_change_event("Diag_PhPolarforamplitudeloopb", self._Diag_PhPolarforamplitudeloopb)
         self._Diag_PhControlb = math.degrees(math.atan2(self._Diag_QcontrolB, self._Diag_IcontrolB))
+        self.push_change_event("Diag_PhControlb", self._Diag_PhControlb)
         self._Diag_PhMuxfwtet2b = math.degrees(math.atan2(self._Diag_QMuxFwTet2B, self._Diag_IMuxFwTet2B))
+        self.push_change_event("Diag_PhMuxfwtet2b", self._Diag_PhMuxfwtet2b)
         self._Diag_PhLoopinputfastpiiqb = math.degrees(math.atan2(self._Diag_QloopinputFastpiIqB, self._Diag_IloopinputFastpiIqB))
+        self.push_change_event("Diag_PhLoopinputfastpiiqb", self._Diag_PhLoopinputfastpiiqb)
         self._Diag_PhLoopinputfastpiiqa = math.degrees(math.atan2(self._Diag_QloopinputFastpiIqA, self._Diag_IloopinputFastpiIqA))
+        self.push_change_event("Diag_PhLoopinputfastpiiqa", self._Diag_PhLoopinputfastpiiqa)
         self._Diag_PhRefa = math.degrees(math.atan2(self._Diag_QrefA, self._Diag_IrefA))
+        self.push_change_event("Diag_PhRefa", self._Diag_PhRefa)
         self._Diag_PhMuxfwcava = math.degrees(math.atan2(self._Diag_QMuxFwCavA, self._Diag_IMuxFwCavA))
+        self.push_change_event("Diag_PhMuxfwcava", self._Diag_PhMuxfwcava)
         self._Diag_PhMuxfwcavb = math.degrees(math.atan2(self._Diag_QMuxFwCavB, self._Diag_IMuxFwCavB))
+        self.push_change_event("Diag_PhMuxfwcavb", self._Diag_PhMuxfwcavb)
         self._Diag_PhRefb = math.degrees(math.atan2(self._Diag_QrefB, self._Diag_IrefB))
+        self.push_change_event("Diag_PhRefb", self._Diag_PhRefb)
         self._Diag_PhControl2a = math.degrees(math.atan2(self._Diag_Qcontrol2A, self._Diag_Icontrol2A))
+        self.push_change_event("Diag_PhControl2a", self._Diag_PhControl2a)
         self._Diag_PhControl2b = math.degrees(math.atan2(self._Diag_Qcontrol2B, self._Diag_Icontrol2B))
+        self.push_change_event("Diag_PhControl2b", self._Diag_PhControl2b)
         self._Diag_PhFwtet1loopsb = math.degrees(math.atan2(self._Diag_QFwTet1LoopsB, self._Diag_IFwTet1LoopsB))
+        self.push_change_event("Diag_PhFwtet1loopsb", self._Diag_PhFwtet1loopsb)
         self._Diag_PhFwtet1loopsa = math.degrees(math.atan2(self._Diag_QFwTet1LoopsA, self._Diag_IFwTet1LoopsA))
+        self.push_change_event("Diag_PhFwtet1loopsa", self._Diag_PhFwtet1loopsa)
         self._Diag_PhPolarforphaseloopb = math.degrees(math.atan2(self._Diag_QpolarForPhaseLoopB, self._Diag_IpolarForPhaseLoopB))
+        self.push_change_event("Diag_PhPolarforphaseloopb", self._Diag_PhPolarforphaseloopb)
         self._Diag_PhPolarforphaseloopa = math.degrees(math.atan2(self._Diag_QpolarForPhaseLoopA, self._Diag_IpolarForPhaseLoopA))
+        self.push_change_event("Diag_PhPolarforphaseloopa", self._Diag_PhPolarforphaseloopa)
         self._Diag_PhPolarcontroloutputb = math.degrees(math.atan2(self._Diag_QpolarControlOutputB, self._Diag_IpolarControlOutputB))
+        self.push_change_event("Diag_PhPolarcontroloutputb", self._Diag_PhPolarcontroloutputb)
         self._Diag_PhPolarcontroloutputa = math.degrees(math.atan2(self._Diag_QpolarControlOutputA, self._Diag_IpolarControlOutputA))
+        self.push_change_event("Diag_PhPolarcontroloutputa", self._Diag_PhPolarcontroloutputa)
         self._Diag_PhFwtet2loopsa = math.degrees(math.atan2(self._Diag_QFwTet2LoopsA, self._Diag_IFwTet2LoopsA))
+        self.push_change_event("Diag_PhFwtet2loopsa", self._Diag_PhFwtet2loopsa)
         self._Diag_PhCavloopsa = math.degrees(math.atan2(self._Diag_QcavLoopsA, self._Diag_IcavLoopsA))
+        self.push_change_event("Diag_PhCavloopsa", self._Diag_PhCavloopsa)
         self._Diag_PhCavloopsb = math.degrees(math.atan2(self._Diag_QcavLoopsB, self._Diag_IcavLoopsB))
+        self.push_change_event("Diag_PhCavloopsb", self._Diag_PhCavloopsb)
         self._Diag_PhFwtet2loopsb = math.degrees(math.atan2(self._Diag_QFwTet2LoopsB, self._Diag_IFwTet2LoopsB))
+        self.push_change_event("Diag_PhFwtet2loopsb", self._Diag_PhFwtet2loopsb)
         self._Diag_PhLoopinputslowpiiqa = math.degrees(math.atan2(self._Diag_QloopinputSlowpiIqA, self._Diag_IloopinputSlowpiIqA))
+        self.push_change_event("Diag_PhLoopinputslowpiiqa", self._Diag_PhLoopinputslowpiiqa)
         self._Diag_PhLoopinputslowpiiqb = math.degrees(math.atan2(self._Diag_QloopinputSlowpiIqB, self._Diag_IloopinputSlowpiIqB))
+        self.push_change_event("Diag_PhLoopinputslowpiiqb", self._Diag_PhLoopinputslowpiiqb)
         self._Diag_PhRefloopinputfastpiiqb = math.degrees(math.atan2(self._Diag_QrefloopinputFastpiIqB, self._Diag_IrefloopinputFastpiIqB))
+        self.push_change_event("Diag_PhRefloopinputfastpiiqb", self._Diag_PhRefloopinputfastpiiqb)
         self._Diag_PhRefloopinputfastpiiqa = math.degrees(math.atan2(self._Diag_QrefloopinputFastpiIqA, self._Diag_IrefloopinputFastpiIqA))
+        self.push_change_event("Diag_PhRefloopinputfastpiiqa", self._Diag_PhRefloopinputfastpiiqa)
         self._Diag_PhControl1a = math.degrees(math.atan2(self._Diag_Qcontrol1A, self._Diag_Icontrol1A))
+        self.push_change_event("Diag_PhControl1a", self._Diag_PhControl1a)
         self._Diag_PhControl1b = math.degrees(math.atan2(self._Diag_Qcontrol1B, self._Diag_Icontrol1B))
+        self.push_change_event("Diag_PhControl1b", self._Diag_PhControl1b)
         self._Diag_PhMuxfwtet2a = math.degrees(math.atan2(self._Diag_QMuxFwTet2A, self._Diag_IMuxFwTet2A))
+        self.push_change_event("Diag_PhMuxfwtet2a", self._Diag_PhMuxfwtet2a)
         self._Diag_PhMuxcavb = math.degrees(math.atan2(self._Diag_QMuxCavB, self._Diag_IMuxCavB))
+        self.push_change_event("Diag_PhMuxcavb", self._Diag_PhMuxcavb)
         self._Diag_PhMuxcava = math.degrees(math.atan2(self._Diag_QMuxCavA, self._Diag_IMuxCavA))
+        self.push_change_event("Diag_PhMuxcava", self._Diag_PhMuxcava)
         self._Diag_PhMuxfwtet1b = math.degrees(math.atan2(self._Diag_QMuxFwTet1B, self._Diag_IMuxFwTet1B))
+        self.push_change_event("Diag_PhMuxfwtet1b", self._Diag_PhMuxfwtet1b)
         self._Diag_PhControlfastpib = math.degrees(math.atan2(self._Diag_QcontrolFastpiB, self._Diag_IcontrolFastpiB))
+        self.push_change_event("Diag_PhControlfastpib", self._Diag_PhControlfastpib)
         self._Diag_PhFwcircinloopsa = math.degrees(math.atan2(self._Diag_QFwCircInLoopsA, self._Diag_IFwCircInLoopsA))
+        self.push_change_event("Diag_PhFwcircinloopsa", self._Diag_PhFwcircinloopsa)
         self._Diag_PhFwcircinloopsb = math.degrees(math.atan2(self._Diag_QFwCircInLoopsB, self._Diag_IFwCircInLoopsB))
+        self.push_change_event("Diag_PhFwcircinloopsb", self._Diag_PhFwcircinloopsb)
         self._Diag_PhControlfastpia = math.degrees(math.atan2(self._Diag_QcontrolFastpiA, self._Diag_IcontrolFastpiA))
+        self.push_change_event("Diag_PhControlfastpia", self._Diag_PhControlfastpia)
         self._Diag_PhFwcavloopsa = math.degrees(math.atan2(self._Diag_QFwCavLoopsA, self._Diag_IFwCavLoopsA))
+        self.push_change_event("Diag_PhFwcavloopsa", self._Diag_PhFwcavloopsa)
         self._Diag_PhMuxfwtet1a = math.degrees(math.atan2(self._Diag_QMuxFwTet1A, self._Diag_IMuxFwTet1A))
+        self.push_change_event("Diag_PhMuxfwtet1a", self._Diag_PhMuxfwtet1a)
         self._Diag_PhFwcavloopsb = math.degrees(math.atan2(self._Diag_QFwCavLoopsB, self._Diag_IFwCavLoopsB))
+        self.push_change_event("Diag_PhFwcavloopsb", self._Diag_PhFwcavloopsb)
         self._Diag_PhMob = math.degrees(math.atan2(self._Diag_QmoB, self._Diag_ImoB))
+        self.push_change_event("Diag_PhMob", self._Diag_PhMob)
         self._Diag_PhMoa = math.degrees(math.atan2(self._Diag_QmoA, self._Diag_ImoA))
+        self.push_change_event("Diag_PhMoa", self._Diag_PhMoa)
         self._Diag_PhControlslowpia = math.degrees(math.atan2(self._Diag_QcontrolSlowpiA, self._Diag_IcontrolSlowpiA))
+        self.push_change_event("Diag_PhControlslowpia", self._Diag_PhControlslowpia)
         self._Diag_PhControlslowpib = math.degrees(math.atan2(self._Diag_QcontrolSlowpiB, self._Diag_IcontrolSlowpiB))
+        self.push_change_event("Diag_PhControlslowpib", self._Diag_PhControlslowpib)
 
     @command
     def init_hardware(self):

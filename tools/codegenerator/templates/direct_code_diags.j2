@@ -83,10 +83,23 @@ class NutaqDiags(Device):
         Device.init_device(self)
         try:
             self.perseus = Perseus().new_perseus(self.perseusType, self.perseusIp)
+            self.set_events()
             self.set_state(DevState.ON)
         except Exception, e:
             print e
             self.set_state(DevState.FAULT)
+
+    def set_events(self):
+    {% for attribute in attributes %}
+    {% if attribute.dtype != 'bool' %}
+        self.set_change_event('{{attribute.name}}', True)
+    {% endif %}
+    {% endfor%}
+    {% for diag_attr in diags_attributes %}
+    {% if diag_attr.dtype != 'bool' %}
+        self.set_change_event('Diag_{{diag_attr.name}}', True)
+    {% endif %}
+    {% endfor%}
 
     @DebugIt()
     def get_ItckNumber(self):
