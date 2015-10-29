@@ -78,13 +78,13 @@ class Nutaq(Device):
     def set_events(self):
     {% for attribute in attributes %}
     {% if attribute.dtype != 'bool' %}
-        self.set_change_event('{{attribute.name}}', True)
     {% endif %}
+        self.set_change_event('{{attribute.name}}', True)
     {% endfor%}
     {% for diag_attr in diags_attributes %}
     {% if diag_attr.dtype != 'bool' %}
-        self.set_change_event('Diag_{{diag_attr.name}}', True)
     {% endif %}
+        self.set_change_event('Diag_{{diag_attr.name}}', True)
     {% endfor%}
 
 {% endblock %}

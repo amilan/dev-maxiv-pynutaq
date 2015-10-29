@@ -165,7 +165,7 @@ def get_Pilimit(perseus, address, cavity):
     try:
         value = read_direct(perseus, address, cavity)
         value = (value* 1000.0) / 32767
-        return  value
+        return value
     except Exception, e:
         raise e
 
@@ -180,7 +180,7 @@ def get_Fwmin(perseus, address, cavity):
     try:
         value = read_direct(perseus, address, cavity)
         value = (value* 1000.0) / 32767
-        return  value
+        return value
     except Exception, e:
         raise e
 
@@ -196,7 +196,7 @@ def get_Tuningdelay(perseus, address, cavity):
         # P100/80000000*2^12
         value = read_direct(perseus, address, cavity)
         value = (value/80000000.0) * (2**12)
-        return  value
+        return value
     except Exception, e:
         raise e
 
@@ -354,3 +354,21 @@ def read_diag_bit_direct(perseus, address, position, cavity):
         return bool((value >> position) & 1)
     except Exception, e:
         raise e
+
+
+def read_diag_timestamp(perseus, address, cavity):
+    try:
+        value = read_diag_direct(perseus, address, cavity)
+        value = (value*12.5) / 1000.0
+        return value
+    except Exception, e:
+        raise e
+
+
+read_Diag_Timestamp1 = read_diag_timestamp
+read_Diag_Timestamp2 = read_diag_timestamp
+read_Diag_Timestamp3 = read_diag_timestamp
+read_Diag_Timestamp4 = read_diag_timestamp
+read_Diag_Timestamp5 = read_diag_timestamp
+read_Diag_Timestamp6 = read_diag_timestamp
+read_Diag_Timestamp7 = read_diag_timestamp

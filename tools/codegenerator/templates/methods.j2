@@ -120,6 +120,14 @@
         cavity = '{{attribute.cavity}}'
         return extra_func.read_diag_bit_direct(self.perseus, address, {{attribute.pos}}, cavity)
 
+{% elif attribute.type == "special" %}
+    @DebugIt()
+    def read_Diag_{{attribute.name}}(self):
+        address = {{attribute.address}}
+        cavity = '{{attribute.cavity}}'
+        # @todo: add this method to special methods library ...
+        return extra_func.read_Diag_{{attribute.name[:-1]}}(self.perseus, address, cavity)
+
 {% else %}
     @DebugIt()
     def read_Diag_{{attribute.name}}(self):
@@ -143,7 +151,22 @@
         self._Diag_{{attribute.name}} = math.sqrt((self._Diag_{{attribute.i_parent}}**2) + (self._Diag_{{attribute.q_parent}}**2))
         {% elif attribute.type == 'angle' and attribute.access == 'read_diag_ph' %}
         self._Diag_{{attribute.name}} = math.degrees(math.atan2(self._Diag_{{attribute.q_parent}}, self._Diag_{{attribute.i_parent}}))
+        {% else%}
+        self._Diag_{{attribute.name}} = self.read_Diag_{{attribute.name}}()
         {% endif %}
         self.push_change_event("Diag_{{attribute.name}}", self._Diag_{{attribute.name}})
 {% endfor %}
+
+    @command
+    def read_attrs(self):
+
+{% for attribute in attributes%}
+{% if attribute.type == 'bool' or attribute.dtype == 'bool' %}
+        data = bool(self.get_{{attribute.name}}())
+{% else %}
+        data = self.get_{{attribute.name}}()
+{% endif %}
+        self.push_change_event("{{attribute.name}}", data)
+{% endfor %}
+
 {% endblock %}
