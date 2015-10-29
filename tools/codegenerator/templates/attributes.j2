@@ -26,11 +26,10 @@
                                    format='%6.2f',
                                    {% if attribute.dtype != 'bool' %}
                                    min_value={{attribute.min_value}}, max_value={{attribute.max_value}},
-                                   rel_change='0.1',
+                                   rel_change=DEFAULT_REL_CHANGE,
                                    {% else %}
-                                   #polling_period=1000,
+                                   # polling_period=DEFAULT_POLLING_PERIOD,
                                    {% endif %}
-                                   polling_period=1000,
                                    fget="get_{{attribute.name}}",
                                    fset="set_{{attribute.name}}",
                                    doc=""
@@ -41,12 +40,12 @@
 {% block diag_attrs_definition %}
 {% for attr in diags_attributes %}
     Diag_{{attr.name}} = attribute(label='Diag_{{attr.name}}',
-                                   {% if attr.type != 'bool' %}
+                                   {% if attr.type == 'bool' or attr.dtype == 'bool' %}
+                                   dtype=bool,
+                                   # polling_period=DEFAULT_POLLING_PERIOD,
+                                   {% else %}
                                    dtype={{attr.dtype}},
-                                   rel_change='0.1',
-                                   {% elif attr.type == 'bool' %}
-                                   dtype={{attr.type}},
-                                   polling_period=1000,
+                                   rel_change=DEFAULT_REL_CHANGE,
                                    {% endif %}
                                    display_level=DispLevel.OPERATOR,
                                    access=AttrWriteType.READ,
