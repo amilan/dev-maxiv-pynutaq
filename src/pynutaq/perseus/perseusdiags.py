@@ -58,7 +58,7 @@ class PerseusDiags(object):
         self.mi125 = Mi125(self._board_state, MI125_BOARD_NUMBER, MI125_CLK_SRC)
         print "DONE"
 
-        # self.configure_gpio_inputs_outputs()
+        self.configure_gpio_inputs_outputs()
         #
         # self.configure_vcxo()
         #
