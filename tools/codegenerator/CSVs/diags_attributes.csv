@@ -87,3 +87,4 @@ address;name;access;dtype;type;min_value;max_value
 401;FIM_ITCK_Delay;read_diag;float;bool;;
 402;FDL_trig_HW_input;read_diag;float;bool;;
 403;FDL_trig_SW_input;read_diag;float;bool;;
+404;EPS_ITCK;read_diag;float;bool;;

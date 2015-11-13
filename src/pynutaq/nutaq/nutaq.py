@@ -3998,6 +3998,26 @@ class Nutaq(Device):
                                    doc=""
                                    )
 
+    Diag_EpsItckA = attribute(label='Diag_EpsItckA',
+                                   dtype=bool,
+                                   # polling_period=DEFAULT_POLLING_PERIOD,
+                                   display_level=DispLevel.OPERATOR,
+                                   access=AttrWriteType.READ,
+                                   unit='',
+                                   format='%6.2f',
+                                   doc=""
+                                   )
+
+    Diag_EpsItckB = attribute(label='Diag_EpsItckB',
+                                   dtype=bool,
+                                   # polling_period=DEFAULT_POLLING_PERIOD,
+                                   display_level=DispLevel.OPERATOR,
+                                   access=AttrWriteType.READ,
+                                   unit='',
+                                   format='%6.2f',
+                                   doc=""
+                                   )
+
     Diag_AmpMuxfwcircina = attribute(label='Diag_AmpMuxfwcircina',
                                    dtype=float,
                                    rel_change=DEFAULT_REL_CHANGE,
@@ -5470,6 +5490,8 @@ class Nutaq(Device):
         self.set_change_event('Diag_FdlTrigHwInputB', True)
         self.set_change_event('Diag_FdlTrigSwInputA', True)
         self.set_change_event('Diag_FdlTrigSwInputB', True)
+        self.set_change_event('Diag_EpsItckA', True)
+        self.set_change_event('Diag_EpsItckB', True)
         self.set_change_event('Diag_AmpMuxfwcircina', True)
         self.set_change_event('Diag_AmpSpare1a', True)
         self.set_change_event('Diag_AmpMuxfwcircinb', True)
@@ -7849,6 +7871,14 @@ class Nutaq(Device):
         return self._Diag_FdlTrigSwInputB
 
     @DebugIt()
+    def read_Diag_EpsItckA(self):
+        return self._Diag_EpsItckA
+
+    @DebugIt()
+    def read_Diag_EpsItckB(self):
+        return self._Diag_EpsItckB
+
+    @DebugIt()
     def read_Diag_AmpMuxfwcircina(self):
         return self._Diag_AmpMuxfwcircina
 
@@ -8653,6 +8683,10 @@ class Nutaq(Device):
         self.push_change_event("Diag_FdlTrigSwInputA", self._Diag_FdlTrigSwInputA)
         self._Diag_FdlTrigSwInputB = bool(perseus_utils.read_diag_direct(self.perseus, 403, 'B'))
         self.push_change_event("Diag_FdlTrigSwInputB", self._Diag_FdlTrigSwInputB)
+        self._Diag_EpsItckA = bool(perseus_utils.read_diag_direct(self.perseus, 404, 'A'))
+        self.push_change_event("Diag_EpsItckA", self._Diag_EpsItckA)
+        self._Diag_EpsItckB = bool(perseus_utils.read_diag_direct(self.perseus, 404, 'B'))
+        self.push_change_event("Diag_EpsItckB", self._Diag_EpsItckB)
         self._Diag_AmpMuxfwcircina = math.sqrt((self._Diag_IMuxFwCircInA**2) + (self._Diag_QMuxFwCircInA**2))
         self.push_change_event("Diag_AmpMuxfwcircina", self._Diag_AmpMuxfwcircina)
         self._Diag_AmpSpare1a = math.sqrt((self._Diag_Ispare1A**2) + (self._Diag_Qspare1A**2))
