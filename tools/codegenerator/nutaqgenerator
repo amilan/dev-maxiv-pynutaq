@@ -1,7 +1,8 @@
 #!/bin/bash
 
 #CSVPATH=/home/antmil/Dropbox/0.-\ Lyrtech\ Registers\ Calculation\ and\ other\ excel\ files/CSVs\ Perseus\ Advanced
-CSVPATH="/home/antmil/Dropbox/0.- Lyrtech Registers Calculation and other excel files/CSVs Perseus Advanced"
+#CSVPATH="/home/antmil/Dropbox/0.- Lyrtech Registers Calculation and other excel files/CSVs Perseus Advanced"
+CSVPATH=./CSVs
 LOOPSFILENAME=loops_attributes.csv
 DIAGSFILENAME=diags_attributes.csv
 OUTPUTPATH=./build

@@ -1,0 +1,81 @@
+address;name;access;dtype;type;min_value;max_value
+0;kp;read_write;float;direct;0;10
+1;ki;read_write;float;direct;0;32767
+2;Phase Shift Cav;read_write;float;angle;-180;360
+3;Phase Shift FwCav;read_write;float;angle;-180;360
+4;Phase Shift FwTet1;read_write;float;angle;-180;360
+5;Phase Shift FwTet2;read_write;float;angle;-180;360
+6;PILimit;read_write;float;special;0;1000
+7;samples to average;read_write;int;direct;0;7
+8;filter stages;read_write;int;direct;0;3
+9;Phase Shift FwCircIn;read_write;float;angle;-180;360
+10;Phase Shift Control Signal Tet1;read_write;float;angle;-180;360
+11;Phase Shift Control Signal Tet2;read_write;float;angle;-180;360
+13;Gain Tetrode1;read_write;float;special;0.1;1
+14;Gain Tetrode2;read_write;float;special;0.1;1
+15;Automatic Startup Enable;read_write;bool;direct;0;1
+16;Command Start;read_write;int;direct;0;7
+19;AmpRefIn;read_write;float;mv;0;1000
+20;PhRefIn;read_write;float;angle;-180;360
+21;ampRefMin;read_write;float;mv;0;1000
+22;PhRefMin;read_write;float;angle;-180;360
+23;Phase increase rate;read_write;int;direct;0;7
+24;Voltage Increase Rate;read_write;int;direct;0;7
+25;Gain OL;read_write;float;special;0.5;2
+28;Spare GPIO Output 01;read_write;bool;direct;0;1
+29;Spare GPIO Output 02;read_write;bool;direct;0;1
+30;Spare GPIO Output 03;read_write;bool;direct;0;1
+31;Spare GPIO Output 04;read_write;bool;direct;0;1
+32;FDL Sw Trigger;read_write;bool;direct;0;1
+100;Slow IQ Loop Enable;read_write;bool;direct;0;1
+101;ADCs PhaseShift Enable;read_write;bool;direct;0;1
+102;DACs Phase Shift Enable;read_write;bool;direct;0;1
+103;SquareRef enable;read_write;bool;direct;0;1
+104;FreqSquare;read_write;float;special;3;1000
+106;Look ref;read_write;bool;direct;0;1
+107;Quadrant Selection;read_write;int;direct;0;3
+110;Slow IQ Loop Input Selection;read_write;int;direct;0;4
+111;Fast IQ Loop Input Selection;read_write;int;direct;0;3
+112;Amplitude Loop Input Selection;read_write;int;direct;0;4
+113;Phase Loop  Input Selection;read_write;int;direct;0;4
+114;Polar Loops Enable;read_write;bool;direct;0;1
+115;Fast IQ Loop Enable;read_write;bool;direct;0;1
+116;Amplitude Loop Enable;read_write;bool;direct;0;1
+117;Phase Loop Enable;read_write;bool;direct;0;1
+118;Kp Fast IQ Loop;read_write;float;direct;0;32767
+119;Ki Fast IQ Loop;read_write;float;direct;0;32767
+120;Kp Amp Loop;read_write;float;direct;0;32767
+121;Ki Amp Loop;read_write;float;direct;0;32767
+122;Kp Phase Loop;read_write;float;direct;0;32767
+123;Ki Phase Loop;read_write;float;direct;0;32767
+124;PI Limit Fast PI - IQ;read_write;float;mv;0;1000
+200;Pulse Mode Enable;read_write;bool;direct;0;1
+201;Automatic Conditioning enable;read_write;bool;direct;0;1
+202;ConditioningDuty Cicle;read_write;float;special;0;100
+300;Tuning Enable;read_write;bool;direct;0;1
+301;Tuning Pos En;read_write;bool;direct;0;1
+302;Num Steps;read_write;float;direct;0;65535
+303;Pulses Frequency;read_write;int;direct;0;7
+304;Phase Offset;read_write;float;angle;-180;360
+305;Move;read_write;bool;direct;0;1
+306;MoveUp;read_write;bool;direct;0;1
+307;TuningReset;read_write;bool;direct;0;1
+308;FwMin;read_write;float;mV;0;1000
+309;MarginUp;read_write;float;angle;0;10
+310;MarginLow;read_write;float;angle;0;5
+311;TuningDelay;read_write;float;special;0;3
+312;TuningFilterEnable;read_write;bool;direct;0;1
+313;TuningTriggerEnable;read_write;bool;direct;0;1
+400;EPS ITCK Disable;read_write;bool;direct;0;1
+401;FIM ITCK Disable;read_write;bool;direct;0;1
+500;M Divider;read_write;float;special;0;128
+501;N divider;read_write;float;special;0;128
+502;MuxSel;read_write;int;direct;0;4
+503;Mux0 Divider;read_write;int;direct;0;4
+504;Mux1 Divider;read_write;int;direct;0;4
+505;Mux2 Divider;read_write;int;direct;0;4
+506;Mux3 Divider;read_write;int;direct;0;4
+507;Mux4 Divider;read_write;int;direct;0;4
+508;Send Word;read_write;bool;direct;0;1
+509;CPDir;read_write;bool;direct;0;1
+510;VCXO Output inversion;read_write;bool;direct;0;1

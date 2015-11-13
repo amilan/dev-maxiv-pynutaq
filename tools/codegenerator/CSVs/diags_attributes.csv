@@ -1,0 +1,89 @@
+address;name;access;dtype;type;min_value;max_value
+0;Icav_loops;read_diag;float;mv;-1000;1000
+1;Qcav_loops;read_diag;float;mv;-1000;1000
+2;Icontrol;read_diag;float;mv;-1000;1000
+3;Qcontrol;read_diag;float;mv;-1000;1000
+4;IControl 1;read_diag;float;mv;-1000;1000
+5;QControl 1;read_diag;float;mv;-1000;1000
+6;IControl 2;read_diag;float;mv;-1000;1000
+7;QControl 2;read_diag;float;mv;-1000;1000
+8;Ierror;read_diag;float;mv;-1000;1000
+9;Qerror;read_diag;float;mv;-1000;1000
+10;IErrorAccum;read_diag;float;mv;-1000;1000
+11;QErrorAccum;read_diag;float;mv;-1000;1000
+12;Iref;read_diag;float;mv;0;1000
+13;Qref;read_diag;float;mv;0;1000
+14;I Fw Cav_loops;read_diag;float;mv;-1000;1000
+15;Q Fw Cav_loops;read_diag;float;mv;-1000;1000
+16;I Fw Tet1_loops;read_diag;float;mv;-1000;1000
+17;Q Fw Tet1_loops;read_diag;float;mv;-1000;1000
+18;I Fw Tet2_loops;read_diag;float;mv;-1000;1000
+19;Q Fw Tet2_loops;read_diag;float;mv;-1000;1000
+20;I Fw Circ In_loops;read_diag;float;mv;-1000;1000
+21;Q Fw Circ In_loops;read_diag;float;mv;-1000;1000
+22;IMO;read_diag;float;mv;-1000;1000
+23;QMO;read_diag;float;mv;-1000;1000
+24;ISpare1;read_diag;float;mv;-1000;1000
+25;QSpare1;read_diag;float;mv;-1000;1000
+26;ISpare2;read_diag;float;mv;-1000;1000
+27;QSpare2;read_diag;float;mv;-1000;1000
+28;I Mux Cav;read_diag;float;mv;-1000;1000
+29;Q Mux Cav;read_diag;float;mv;-1000;1000
+30;I Mux Fw Cav;read_diag;float;mv;-1000;1000
+31;Q Mux Fw Cav;read_diag;float;mv;-1000;1000
+32;I Mux Fw Tet1;read_diag;float;mv;-1000;1000
+33;Q Mux Fw Tet1;read_diag;float;mv;-1000;1000
+34;I Mux Fw Tet2;read_diag;float;mv;-1000;1000
+35;Q Mux Fw Tet2;read_diag;float;mv;-1000;1000
+36;I Mux Fw Circ In;read_diag;float;mv;-1000;1000
+37;Q Mux Fw Circ In;read_diag;float;mv;-1000;1000
+38;Amp Cav;read_diag;float;mv;0;1000
+39;Amp Fw;read_diag;float;mv;0;1000
+40;Ang Cav Fw;read_diag;float;angle;-180;180
+41;Ang Cav L;read_diag;float;angle;-180;180
+42;Ang Fw L;read_diag;float;angle;-180;180
+43;Vaccum1;read_diag;float;bool;0;1
+44;Vaccum2;read_diag;float;bool;0;1
+45;Icontrol_SlowPI;read_diag;float;mv;-1000;1000
+46;Qcontrol_SlowPI;read_diag;float;mv;-1000;1000
+47;Icontrol_FastPI;read_diag;float;mv;-1000;1000
+48;Qcontrol_FastPI;read_diag;float;mv;-1000;1000
+50;VCXO_Powered;read_diag;float;bool;0;1
+51;VCXO_Ref;read_diag;float;bool;0;1
+52;VCXO_Locked;read_diag;float;bool;0;1
+53;VCXO Cable disconnected;read_diag;float;bool;0;1
+100;Ipolar for Amplitude Loop;read_diag;float;mv;-1000;1000
+101;Qpolar for amplitude loop;read_diag;float;mv;-1000;1000
+102;Ipolar for phase loop;read_diag;float;mv;-1000;1000
+103;Qpolar for phase loop;read_diag;float;mv;-1000;1000
+104;Amp  Input of Amp loop;read_diag;float;mv;-1000;1000
+105;Phase input of Amp loop;read_diag;float;mv;-1000;1000
+106;Amp input of Phase loop;read_diag;float;mv;-1000;1000
+107;Ph input of phase loop;read_diag;float;mv;-1000;1000
+108;Amp Loop Control Output;read_diag;float;mv;-1000;1000
+109;Amp Loop Error;read_diag;float;mv;-1000;1000
+110;Amp Loop Error Accum;read_diag;float;mv;-1000;1000
+111;Ph Loop control output;read_diag;float;mv;-1000;1000
+112;Ph Loop Error;read_diag;float;mv;-1000;1000
+113;Ph Loop Error Accum;read_diag;float;mv;-1000;1000
+114;Ipolar Control Output;read_diag;float;mv;-1000;1000
+115;Qpolar Control Output;read_diag;float;mv;-1000;1000
+116;Icontrol_SlowPI_IQ;read_diag;float;mv;-1000;1000
+117;Qcontrol_SlowPIQ;read_diag;float;mv;-1000;1000
+118;Icontrol_FastPI_IQ;read_diag;float;mv;-1000;1000
+119;Qcontrol_FastPI_IQ;read_diag;float;mv;-1000;1000
+120;ILoopInput_SlowPI_IQ;read_diag;float;mv;-1000;1000
+121;QLoopInput_SlowPI_IQ;read_diag;float;mv;-1000;1000
+122;ILoopInput_FastPI_IQ;read_diag;float;mv;-1000;1000
+123;QLoopInput_FastPI_IQ;read_diag;float;mv;-1000;1000
+124;IRefLoopInput_FastPI_IQ;read_diag;float;mv;-1000;1000
+125;QRefLoopInput_FastPI_IQ;read_diag;float;mv;-1000;1000
+300;Moving Plunger Auto;read_diag;float;bool;;
+301;Freq Up;read_diag;float;bool;;
+302;Manual Tuning On;read_diag;float;bool;;
+303;Manual Tuning Freq Up;read_diag;float;bool;;
+307;FwMin;read_diag;float;bool;0;1
+400;EPS_ITCK_Delay;read_diag;float;bool;;
+401;FIM_ITCK_Delay;read_diag;float;bool;;
+402;FDL_trig_HW_input;read_diag;float;bool;;
+403;FDL_trig_SW_input;read_diag;float;bool;;

@@ -1,0 +1,113 @@
+address;name;access;dtype;type;min_value;max_value;pos
+0;RvTet1;read_write;float;dmv;0;1000;
+1;RvTet2;read_write;float;dmv;0;1000;
+2;RvCirc;read_write;float;dmv;0;1000;
+3;FwLoad;read_write;float;dmv;0;1000;
+4;FwHybLoad;read_write;float;dmv;0;1000;
+5;RvCav;read_write;float;dmv;0;1000;
+6;manual Interlock;read_write;bool;direct;;;
+7;Disable ITCK_RvTet1;read_write;int;direct;0;63;
+8;Disable ITCK_RvTet2;read_write;int;direct;0;63;
+9;Disable ITCK_RvCirc;read_write;int;direct;0;63;
+10;Disable ITCK_FwLoad;read_write;int;direct;0;63;
+11;Disable ITCK_FwHybLoad;read_write;int;direct;0;63;
+12;Disable ITCK_RvCav;read_write;int;direct;0;63;
+13;Disable ITCK Arcs;read_write;int;direct;0;63;
+14;Disable ITCK Vaccum;read_write;int;direct;0;63;
+15;Disable ITCK Manual Interlock;read_write;int;direct;0;63;
+16;Disable ITCK Plunger End Switches UP;read_write;int;direct;0;63;
+17;Disable ITCK Plunger End Switches Down;read_write;int;direct;0;63;
+18;Disable ITCK MPS;read_write;int;direct;0;63;
+19;Samples to average;read_write;int;direct;0;7;
+20;PulseUp Logic Inversion;read_write;bool;direct;;;
+21;End Switches Connected to NO_NC contact ;read_write;int;direct;0;1;
+22;LookRef;read_write;bool;direct;;;
+23;QuadRef;read_write;int;direct;0;3;
+24;Spare DO 1;read_write;bool;direct;;;
+25;Spare DO 2;read_write;bool;direct;;;
+26;Spare DO 3;read_write;bool;direct;;;
+27;FDL Sw Trigger;read_write;bool;direct;;;
+100;Reset Interlocks Cav;read_write;bool;direct;;;
+200;LandauTuningEnable;read_write;bool;direct;;;
+201;LandauTuningReset;read_write;bool;direct;;;
+202;MoveLandauUp;read_write;bool;direct;;;
+203;MoveLandauPLG;read_write;bool;direct;;;
+204;NumSteps;read_write;int;direct;0;10000;
+205;LandauPhaseOffset;read_write;float;angle;-180;180;
+206;LandauMarginUp;read_write;float;percentage;0;50;
+207;Landau Margin Low;read_write;float;percentage;0;10;
+208;Minimum Landau Amplitude;read_write;float;dmv;0;1000;
+209;Landau Positive Enable;read_write;bool;direct;;;
+210;LandauAmpSetting;read_write;float;dmv;0;1000;
+7;DisITCK_RvTet1_DACsOffLoopsStby;read_write;bool;special_fim;0;1;0
+7;DisITCK_RvTet1_PinDiodeSwitch;read_write;bool;special_fim;0;1;1
+7;DisITCK_RvTet1_FDLTrg;read_write;bool;special_fim;0;1;2
+7;DisITCK_RvTet1_PLCTxOff;read_write;bool;special_fim;0;1;3
+7;DisITCK_RvTet1_MPS;read_write;bool;special_fim;0;1;4
+7;DisITCK_RvTet1_Diag;read_write;bool;special_fim;0;1;5
+8;DisITCK_RvTet2_DACsOffLoopsStby;read_write;bool;special_fim;0;1;0
+8;DisITCK_RvTet2_PinDiodeSwitch;read_write;bool;special_fim;0;1;1
+8;DisITCK_RvTet2_FDLTrg;read_write;bool;special_fim;0;1;2
+8;DisITCK_RvTet2_PLCTxOff;read_write;bool;special_fim;0;1;3
+8;DisITCK_RvTet2_MPS;read_write;bool;special_fim;0;1;4
+8;DisITCK_RvTet2_Diag;read_write;bool;special_fim;0;1;5
+9;DisITCK_RvCirc_DACsOffLoopsStby;read_write;bool;special_fim;0;1;0
+9;DisITCK_RvCirc_PinDiodeSwitch;read_write;bool;special_fim;0;1;1
+9;DisITCK_RvCirc_FDLTrg;read_write;bool;special_fim;0;1;2
+9;DisITCK_RvCirc_PLCTxOff;read_write;bool;special_fim;0;1;3
+9;DisITCK_RvCirc_MPS;read_write;bool;special_fim;0;1;4
+9;DisITCK_RvCirc_Diag;read_write;bool;special_fim;0;1;5
+10;DisITCK_FwLoad_DACsOffLoopsStby;read_write;bool;special_fim;0;1;0
+10;DisITCK_FwLoad_PinDiodeSwitch;read_write;bool;special_fim;0;1;1
+10;DisITCK_FwLoad_FDLTrg;read_write;bool;special_fim;0;1;2
+10;DisITCK_FwLoad_PLCTxOff;read_write;bool;special_fim;0;1;3
+10;DisITCK_FwLoad_MPS;read_write;bool;special_fim;0;1;4
+10;DisITCK_FwLoad_Diag;read_write;bool;special_fim;0;1;5
+11;DisITCK_FwHybLoad_DACsOffLoopsStby;read_write;bool;special_fim;0;1;0
+11;DisITCK_FwHybLoad_PinDiodeSwitch;read_write;bool;special_fim;0;1;1
+11;DisITCK_FwHybLoad_FDLTrg;read_write;bool;special_fim;0;1;2
+11;DisITCK_FwHybLoad_PLCTxOff;read_write;bool;special_fim;0;1;3
+11;DisITCK_FwHybLoad_MPS;read_write;bool;special_fim;0;1;4
+11;DisITCK_FwHybLoad_Diag;read_write;bool;special_fim;0;1;5
+12;DisITCK_RvCav_DACsOffLoopsStby;read_write;bool;special_fim;0;1;0
+12;DisITCK_RvCav_PinDiodeSwitch;read_write;bool;special_fim;0;1;1
+12;DisITCK_RvCav_FDLTrg;read_write;bool;special_fim;0;1;2
+12;DisITCK_RvCav_PLCTxOff;read_write;bool;special_fim;0;1;3
+12;DisITCK_RvCav_MPS;read_write;bool;special_fim;0;1;4
+12;DisITCK_RvCav_Diag;read_write;bool;special_fim;0;1;5
+13;DisITCK_Arcs_DACsOffLoopsStby;read_write;bool;special_fim;0;1;0
+13;DisITCK_Arcs_PinDiodeSwitch;read_write;bool;special_fim;0;1;1
+13;DisITCK_Arcs_FDLTrg;read_write;bool;special_fim;0;1;2
+13;DisITCK_Arcs_PLCTxOff;read_write;bool;special_fim;0;1;3
+13;DisITCK_Arcs_MPS;read_write;bool;special_fim;0;1;4
+13;DisITCK_Arcs_Diag;read_write;bool;special_fim;0;1;5
+14;DisITCK_Vacuum_DACsOffLoopsStby;read_write;bool;special_fim;0;1;0
+14;DisITCK_Vacuum_PinDiodeSwitch;read_write;bool;special_fim;0;1;1
+14;DisITCK_Vacuum_FDLTrg;read_write;bool;special_fim;0;1;2
+14;DisITCK_Vacuum_PLCTxOff;read_write;bool;special_fim;0;1;3
+14;DisITCK_Vacuum_MPS;read_write;bool;special_fim;0;1;4
+14;DisITCK_Vacuum_Diag;read_write;bool;special_fim;0;1;5
+15;DisITCK_Manual Interlock_DACsOffLoopsStby;read_write;bool;special_fim;0;1;0
+15;DisITCK_Manual Interlock_PinDiodeSwitch;read_write;bool;special_fim;0;1;1
+15;DisITCK_Manual Interlock_FDLTrg;read_write;bool;special_fim;0;1;2
+15;DisITCK_Manual Interlock_PLCTxOff;read_write;bool;special_fim;0;1;3
+15;DisITCK_Manual Interlock_MPS;read_write;bool;special_fim;0;1;4
+15;DisITCK_Manual Interlock_Diag;read_write;bool;special_fim;0;1;5
+16;DisITCK_Plunger End Switches UP_DACsOffLoopsStby;read_write;bool;special_fim;0;1;0
+16;DisITCK_Plunger End Switches UP_PinDiodeSwitch;read_write;bool;special_fim;0;1;1
+16;DisITCK_Plunger End Switches UP_FDLTrg;read_write;bool;special_fim;0;1;2
+16;DisITCK_Plunger End Switches UP_PLCTxOff;read_write;bool;special_fim;0;1;3
+16;DisITCK_Plunger End Switches UP_MPS;read_write;bool;special_fim;0;1;4
+16;DisITCK_Plunger End Switches UP_Diag;read_write;bool;special_fim;0;1;5
+17;DisITCK_Plunger End Switches Down_DACsOffLoopsStby;read_write;bool;special_fim;0;1;0
+17;DisITCK_Plunger End Switches Down_PinDiodeSwitch;read_write;bool;special_fim;0;1;1
+17;DisITCK_Plunger End Switches Down_FDLTrg;read_write;bool;special_fim;0;1;2
+17;DisITCK_Plunger End Switches Down_PLCTxOff;read_write;bool;special_fim;0;1;3
+17;DisITCK_Plunger End Switches Down_MPS;read_write;bool;special_fim;0;1;4
+17;DisITCK_Plunger End Switches Down_Diag;read_write;bool;special_fim;0;1;5
+18;DisITCK_MPS_DACsOffLoopsStby;read_write;bool;special_fim;0;1;0
+18;DisITCK_MPS_PinDiodeSwitch;read_write;bool;special_fim;0;1;1
+18;DisITCK_MPS_FDLTrg;read_write;bool;special_fim;0;1;2
+18;DisITCK_MPS_PLCTxOff;read_write;bool;special_fim;0;1;3
+18;DisITCK_MPS_MPS;read_write;bool;special_fim;0;1;4
+18;DisITCK_MPS_Diag;read_write;bool;special_fim;0;1;5

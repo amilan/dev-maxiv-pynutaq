@@ -1,0 +1,4 @@
+#!/bin/bash
+
+meld build/nutaq.py ../../src/pynutaq/nutaq/nutaq.py
+meld build/nutaqdiags.py ../../src/pynutaq/nutaq/nutaqdiags.py

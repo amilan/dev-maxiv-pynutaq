@@ -1,0 +1,66 @@
+address;name;access;dtype;type;min_value;max_value;pos
+0;IRvTet1;read;float;mv;-1000;1000;
+1;QRvTet1;read;float;mv;-1000;1000;
+2;AmpRvTet1;read;float;mv;-1000;1000;
+3;PhRvTet1;read;float;angle;-180;360;
+4;IRvTet2;read;float;mv;-1000;1000;
+5;QRvTet2;read;float;mv;-1000;1000;
+6;AmpRvTet2;read;float;mv;-1000;1000;
+7;PhRvTet2;read;float;angle;-180;360;
+8;IFwCirc;read;float;mv;-1000;1000;
+9;QFwCirc;read;float;mv;-1000;1000;
+10;AmpFwCirc;read;float;mv;-1000;1000;
+11;PhFwCirc;read;float;angle;-180;360;
+12;IRvCirc;read;float;mv;-1000;1000;
+13;QRvCirc;read;float;mv;-1000;1000;
+14;AmpRvCirc;read;float;mv;-1000;1000;
+15;PhRvCirc;read;float;angle;-180;360;
+16;IFwLoad;read;float;mv;-1000;1000;
+17;QFwLoad;read;float;mv;-1000;1000;
+18;AmpFwLoad;read;float;mv;-1000;1000;
+19;PhFwLoad;read;float;angle;-180;360;
+20;IFwHybLoad;read;float;mv;-1000;1000;
+21;QFwHybLoad;read;float;mv;-1000;1000;
+22;AmpFwHybLoad;read;float;mv;-1000;1000;
+23;PhFwHybLoad;read;float;angle;-180;360;
+24;IRvCav;read;float;mv;-1000;1000;
+25;QRvCav;read;float;mv;-1000;1000;
+26;AmpRvCav;read;float;mv;-1000;1000;
+27;PhRvCav;read;float;angle;-180;360;
+28;IMO;read;float;mv;-1000;1000;
+29;QMO;read;float;mv;-1000;1000;
+30;AmpMO;read;float;mv;-1000;1000;
+31;PhMO;read;float;angle;-180;360;
+32;ILandau;read;float;mv;-1000;1000;
+33;Qlandau;read;float;mv;-1000;1000;
+34;Amplandau;read;float;mv;-1000;1000;
+35;Phlandau;read;float;angle;-180;360;
+60;Plunger Moving Manual Tuning;read;bool;bool;direct;0;1;
+61;Plunger Moving Up Manual Tuning;read;bool;bool;direct;0;1;
+62;Plunger Moving Automatic Tuning;read;bool;bool;direct;0;1;
+63;Plunger Moving Up Automatic tuning;read;bool;bool;direct;0;1;
+64;Dephase MO Landau;read;float;angle;-180;360;
+100;RvTet1;read;bool;special_itck;0;1;0
+100;RvTet2;read;bool;special_itck;0;1;1
+100;RvCirc;read;bool;special_itck;0;1;2
+100;FwLoad;read;bool;special_itck;0;1;3
+100;FwHybLoad;read;bool;special_itck;0;1;4
+100;RvCav;read;bool;special_itck;0;1;5
+100;Arcs;read;bool;special_itck;0;1;6
+100;Vacuum;read;bool;special_itck;0;1;7
+100;Manual Interlock;read;bool;special_itck;0;1;8
+100;External ITCK;read;bool;special_itck;0;1;9
+100;Plunger End Switch Up;read;bool;special_itck;0;1;10
+100;Plunger End Switch Down;read;bool;special_itck;0;1;11
+110;timestamp1;read;float;special;0;;
+111;timestamp2;read;float;special;;;
+112;timestamp3;read;float;special;;;
+113;timestamp4;read;float;special;;;
+114;timestamp5;read;float;special;;;
+115;timestamp6;read;float;special;;;
+116;timestamp7;read;float;special;;;
+152;DACs Disable command;read;bool;special_itck_out;;;0
+152;PIN SWITCH;read;bool;special_itck_out;;;1
+152;FDL trigger to LoopsDiagBoard;read;bool;special_itck_out;;;2
+152;Output to PLC;read;bool;special_itck_out;;;3
+152;Output to MPS;read;bool;special_itck_out;;;4
