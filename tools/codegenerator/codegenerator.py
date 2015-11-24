@@ -130,9 +130,10 @@ def generate_code(input_filename_loops, input_filename_diags, output_filename, n
     attributes_loops = _create_attributes_for_both_cavities(attributes_loops)
     attributes_diags = _create_attributes_for_both_cavities(attributes_diags)
 
-    # Extend list of attributes
-    attributes_diags = get_extended_list_of_attributes(attributes_diags)
-
+    # Extend list of attributes only for loops card
+    if nutaq_type == 'loops':
+        attributes_diags = get_extended_list_of_attributes(attributes_diags)
+    
     # Prepare environment
     env = Environment(loader=PackageLoader('codegenerator', 'templates'), trim_blocks=True, lstrip_blocks=True)
     template = env.get_template('methods.j2')
