@@ -208,6 +208,41 @@ def set_Tuningdelay(perseus, TuningDelay, address, cavity):
     except Exception, e:
         raise e
 
+def get_InterlocksDelay(perseus, address, cavity):
+    try:
+        # =+P39/80
+        value = read_direct(perseus, address, cavity)
+        value = value / 80.0
+        return value
+    except Exception, e:
+        raise e
+
+def set_InterlocksDelay(perseus, value, address, cavity):
+    try:
+        # =E39*80
+        value = value * 80.0
+        write_direct(perseus, value, address, cavity)
+    except Exception, e:
+        raise e
+
+def get_FdlTriggerDelay(perseus, address, cavity):
+    try:
+        # =+P40/80000*2^12
+        value = read_direct(perseus, address, cavity)
+        value = (value/80000.0) * (2**12)
+        return value
+    except Exception, e:
+        raise e
+
+def set_FdlTriggerDelay(perseus, value, address, cavity):
+    try:
+        # =E40*80000/2^12
+        value = (value*80000.0) / (2**12)
+        write_direct(perseus, value, address, cavity)
+    except Exception, e:
+        raise e
+
+
 # Diagnostics device methods
 # def get_Rvtet1(perseus, address, itck_number):
 #     try:

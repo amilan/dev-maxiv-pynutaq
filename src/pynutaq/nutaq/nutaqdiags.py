@@ -853,6 +853,88 @@ class NutaqDiags(Device):
                                    doc=""
                                    )
 
+    MpsSignalInversionA = attribute(label='MpsSignalInversionA',
+                                   dtype=bool,
+                                   display_level=DispLevel.OPERATOR,
+                                   access=AttrWriteType.READ_WRITE,
+                                   memorized=True,
+                                   unit='',
+                                   format='%6.2f',
+                                   # polling_period=DEFAULT_POLLING_PERIOD,
+                                   fget="get_MpsSignalInversionA",
+                                   fset="set_MpsSignalInversionA",
+                                   doc=""
+                                   )
+
+    MpsSignalInversionB = attribute(label='MpsSignalInversionB',
+                                   dtype=bool,
+                                   display_level=DispLevel.OPERATOR,
+                                   access=AttrWriteType.READ_WRITE,
+                                   memorized=True,
+                                   unit='',
+                                   format='%6.2f',
+                                   # polling_period=DEFAULT_POLLING_PERIOD,
+                                   fget="get_MpsSignalInversionB",
+                                   fset="set_MpsSignalInversionB",
+                                   doc=""
+                                   )
+
+    InterlocksDelayA = attribute(label='InterlocksDelayA',
+                                   dtype=float,
+                                   display_level=DispLevel.OPERATOR,
+                                   access=AttrWriteType.READ_WRITE,
+                                   memorized=True,
+                                   unit='',
+                                   format='%6.2f',
+                                   min_value=0, max_value=400,
+                                   rel_change=DEFAULT_REL_CHANGE,
+                                   fget="get_InterlocksDelayA",
+                                   fset="set_InterlocksDelayA",
+                                   doc=""
+                                   )
+
+    InterlocksDelayB = attribute(label='InterlocksDelayB',
+                                   dtype=float,
+                                   display_level=DispLevel.OPERATOR,
+                                   access=AttrWriteType.READ_WRITE,
+                                   memorized=True,
+                                   unit='',
+                                   format='%6.2f',
+                                   min_value=0, max_value=400,
+                                   rel_change=DEFAULT_REL_CHANGE,
+                                   fget="get_InterlocksDelayB",
+                                   fset="set_InterlocksDelayB",
+                                   doc=""
+                                   )
+
+    FdlTriggerDelayA = attribute(label='FdlTriggerDelayA',
+                                   dtype=float,
+                                   display_level=DispLevel.OPERATOR,
+                                   access=AttrWriteType.READ_WRITE,
+                                   memorized=True,
+                                   unit='',
+                                   format='%6.2f',
+                                   min_value=0, max_value=420,
+                                   rel_change=DEFAULT_REL_CHANGE,
+                                   fget="get_FdlTriggerDelayA",
+                                   fset="set_FdlTriggerDelayA",
+                                   doc=""
+                                   )
+
+    FdlTriggerDelayB = attribute(label='FdlTriggerDelayB',
+                                   dtype=float,
+                                   display_level=DispLevel.OPERATOR,
+                                   access=AttrWriteType.READ_WRITE,
+                                   memorized=True,
+                                   unit='',
+                                   format='%6.2f',
+                                   min_value=0, max_value=420,
+                                   rel_change=DEFAULT_REL_CHANGE,
+                                   fget="get_FdlTriggerDelayB",
+                                   fset="set_FdlTriggerDelayB",
+                                   doc=""
+                                   )
+
     LandautuningenableA = attribute(label='LandautuningenableA',
                                    dtype=bool,
                                    display_level=DispLevel.OPERATOR,
@@ -1148,6 +1230,58 @@ class NutaqDiags(Device):
                                    rel_change=DEFAULT_REL_CHANGE,
                                    fget="get_LandauampsettingB",
                                    fset="set_LandauampsettingB",
+                                   doc=""
+                                   )
+
+    Landau3gevRingEnableA = attribute(label='Landau3gevRingEnableA',
+                                   dtype=bool,
+                                   display_level=DispLevel.OPERATOR,
+                                   access=AttrWriteType.READ_WRITE,
+                                   memorized=True,
+                                   unit='',
+                                   format='%6.2f',
+                                   # polling_period=DEFAULT_POLLING_PERIOD,
+                                   fget="get_Landau3gevRingEnableA",
+                                   fset="set_Landau3gevRingEnableA",
+                                   doc=""
+                                   )
+
+    Landau3gevRingEnableB = attribute(label='Landau3gevRingEnableB',
+                                   dtype=bool,
+                                   display_level=DispLevel.OPERATOR,
+                                   access=AttrWriteType.READ_WRITE,
+                                   memorized=True,
+                                   unit='',
+                                   format='%6.2f',
+                                   # polling_period=DEFAULT_POLLING_PERIOD,
+                                   fget="get_Landau3gevRingEnableB",
+                                   fset="set_Landau3gevRingEnableB",
+                                   doc=""
+                                   )
+
+    LandauCavEnableA = attribute(label='LandauCavEnableA',
+                                   dtype=bool,
+                                   display_level=DispLevel.OPERATOR,
+                                   access=AttrWriteType.READ_WRITE,
+                                   memorized=True,
+                                   unit='',
+                                   format='%6.2f',
+                                   # polling_period=DEFAULT_POLLING_PERIOD,
+                                   fget="get_LandauCavEnableA",
+                                   fset="set_LandauCavEnableA",
+                                   doc=""
+                                   )
+
+    LandauCavEnableB = attribute(label='LandauCavEnableB',
+                                   dtype=bool,
+                                   display_level=DispLevel.OPERATOR,
+                                   access=AttrWriteType.READ_WRITE,
+                                   memorized=True,
+                                   unit='',
+                                   format='%6.2f',
+                                   # polling_period=DEFAULT_POLLING_PERIOD,
+                                   fget="get_LandauCavEnableB",
+                                   fset="set_LandauCavEnableB",
                                    doc=""
                                    )
 
@@ -3843,6 +3977,46 @@ class NutaqDiags(Device):
                                    doc=""
                                    )
 
+    Diag_EndSwitchDownA = attribute(label='Diag_EndSwitchDownA',
+                                   dtype=bool,
+                                   # polling_period=DEFAULT_POLLING_PERIOD,
+                                   display_level=DispLevel.OPERATOR,
+                                   access=AttrWriteType.READ,
+                                   unit='',
+                                   format='%6.2f',
+                                   doc=""
+                                   )
+
+    Diag_EndSwitchDownB = attribute(label='Diag_EndSwitchDownB',
+                                   dtype=bool,
+                                   # polling_period=DEFAULT_POLLING_PERIOD,
+                                   display_level=DispLevel.OPERATOR,
+                                   access=AttrWriteType.READ,
+                                   unit='',
+                                   format='%6.2f',
+                                   doc=""
+                                   )
+
+    Diag_EndSwitchUpA = attribute(label='Diag_EndSwitchUpA',
+                                   dtype=bool,
+                                   # polling_period=DEFAULT_POLLING_PERIOD,
+                                   display_level=DispLevel.OPERATOR,
+                                   access=AttrWriteType.READ,
+                                   unit='',
+                                   format='%6.2f',
+                                   doc=""
+                                   )
+
+    Diag_EndSwitchUpB = attribute(label='Diag_EndSwitchUpB',
+                                   dtype=bool,
+                                   # polling_period=DEFAULT_POLLING_PERIOD,
+                                   display_level=DispLevel.OPERATOR,
+                                   access=AttrWriteType.READ,
+                                   unit='',
+                                   format='%6.2f',
+                                   doc=""
+                                   )
+
     Diag_Rvtet1A = attribute(label='Diag_Rvtet1A',
                                    dtype=bool,
                                    # polling_period=DEFAULT_POLLING_PERIOD,
@@ -4410,6 +4584,12 @@ class NutaqDiags(Device):
         self.set_change_event('FdlSwTriggerB', True)
         self.set_change_event('ResetInterlocksCavA', True)
         self.set_change_event('ResetInterlocksCavB', True)
+        self.set_change_event('MpsSignalInversionA', True)
+        self.set_change_event('MpsSignalInversionB', True)
+        self.set_change_event('InterlocksDelayA', True)
+        self.set_change_event('InterlocksDelayB', True)
+        self.set_change_event('FdlTriggerDelayA', True)
+        self.set_change_event('FdlTriggerDelayB', True)
         self.set_change_event('LandautuningenableA', True)
         self.set_change_event('LandautuningenableB', True)
         self.set_change_event('LandautuningresetA', True)
@@ -4432,6 +4612,10 @@ class NutaqDiags(Device):
         self.set_change_event('LandauPositiveEnableB', True)
         self.set_change_event('LandauampsettingA', True)
         self.set_change_event('LandauampsettingB', True)
+        self.set_change_event('Landau3gevRingEnableA', True)
+        self.set_change_event('Landau3gevRingEnableB', True)
+        self.set_change_event('LandauCavEnableA', True)
+        self.set_change_event('LandauCavEnableB', True)
         self.set_change_event('DisitckRvtet1DacsoffloopsstbyA', True)
         self.set_change_event('DisitckRvtet1DacsoffloopsstbyB', True)
         self.set_change_event('DisitckRvtet1PindiodeswitchA', True)
@@ -4658,6 +4842,10 @@ class NutaqDiags(Device):
         self.set_change_event('Diag_PlungerMovingUpAutomaticTuningB', True)
         self.set_change_event('Diag_DephaseMoLandauA', True)
         self.set_change_event('Diag_DephaseMoLandauB', True)
+        self.set_change_event('Diag_EndSwitchDownA', True)
+        self.set_change_event('Diag_EndSwitchDownB', True)
+        self.set_change_event('Diag_EndSwitchUpA', True)
+        self.set_change_event('Diag_EndSwitchUpB', True)
         self.set_change_event('Diag_Rvtet1A', True)
         self.set_change_event('Diag_Rvtet1B', True)
         self.set_change_event('Diag_Rvtet2A', True)
@@ -5239,6 +5427,84 @@ class NutaqDiags(Device):
         self.push_change_event("ResetInterlocksCavB", ResetInterlocksCavB)
 
     @DebugIt()
+    def get_MpsSignalInversionA(self):
+        return perseus_utils.read_direct(self.perseus, 101, 'A')
+
+    @DebugIt()
+    def set_MpsSignalInversionA(self, MpsSignalInversionA):
+        perseus_utils.write_direct(self.perseus, MpsSignalInversionA, 101, 'A')
+        self.push_change_event("MpsSignalInversionA", MpsSignalInversionA)
+
+    @DebugIt()
+    def get_MpsSignalInversionB(self):
+        return perseus_utils.read_direct(self.perseus, 101, 'B')
+
+    @DebugIt()
+    def set_MpsSignalInversionB(self, MpsSignalInversionB):
+        perseus_utils.write_direct(self.perseus, MpsSignalInversionB, 101, 'B')
+        self.push_change_event("MpsSignalInversionB", MpsSignalInversionB)
+
+    @DebugIt()
+    def get_InterlocksDelayA(self):
+        address = 102
+        cavity = 'A'
+        #@todo: add this method to special methods library ...
+        return extra_func.get_InterlocksDelay(self.perseus, address, cavity)
+
+    @DebugIt()
+    def set_InterlocksDelayA(self, InterlocksDelayA):
+        address = 102
+        cavity = 'A'
+        #@todo: add this method to special methods library ...
+        extra_func.set_InterlocksDelay(self.perseus, InterlocksDelayA, address, cavity)
+        self.push_change_event("InterlocksDelayA", InterlocksDelayA)
+
+    @DebugIt()
+    def get_InterlocksDelayB(self):
+        address = 102
+        cavity = 'B'
+        #@todo: add this method to special methods library ...
+        return extra_func.get_InterlocksDelay(self.perseus, address, cavity)
+
+    @DebugIt()
+    def set_InterlocksDelayB(self, InterlocksDelayB):
+        address = 102
+        cavity = 'B'
+        #@todo: add this method to special methods library ...
+        extra_func.set_InterlocksDelay(self.perseus, InterlocksDelayB, address, cavity)
+        self.push_change_event("InterlocksDelayB", InterlocksDelayB)
+
+    @DebugIt()
+    def get_FdlTriggerDelayA(self):
+        address = 103
+        cavity = 'A'
+        #@todo: add this method to special methods library ...
+        return extra_func.get_FdlTriggerDelay(self.perseus, address, cavity)
+
+    @DebugIt()
+    def set_FdlTriggerDelayA(self, FdlTriggerDelayA):
+        address = 103
+        cavity = 'A'
+        #@todo: add this method to special methods library ...
+        extra_func.set_FdlTriggerDelay(self.perseus, FdlTriggerDelayA, address, cavity)
+        self.push_change_event("FdlTriggerDelayA", FdlTriggerDelayA)
+
+    @DebugIt()
+    def get_FdlTriggerDelayB(self):
+        address = 103
+        cavity = 'B'
+        #@todo: add this method to special methods library ...
+        return extra_func.get_FdlTriggerDelay(self.perseus, address, cavity)
+
+    @DebugIt()
+    def set_FdlTriggerDelayB(self, FdlTriggerDelayB):
+        address = 103
+        cavity = 'B'
+        #@todo: add this method to special methods library ...
+        extra_func.set_FdlTriggerDelay(self.perseus, FdlTriggerDelayB, address, cavity)
+        self.push_change_event("FdlTriggerDelayB", FdlTriggerDelayB)
+
+    @DebugIt()
     def get_LandautuningenableA(self):
         return perseus_utils.read_direct(self.perseus, 200, 'A')
 
@@ -5435,6 +5701,42 @@ class NutaqDiags(Device):
     def set_LandauampsettingB(self, LandauampsettingB):
         perseus_utils.write_settings_diag_milivolts(self.perseus, LandauampsettingB, 210, 'B')
         self.push_change_event("LandauampsettingB", LandauampsettingB)
+
+    @DebugIt()
+    def get_Landau3gevRingEnableA(self):
+        return perseus_utils.read_direct(self.perseus, 211, 'A')
+
+    @DebugIt()
+    def set_Landau3gevRingEnableA(self, Landau3gevRingEnableA):
+        perseus_utils.write_direct(self.perseus, Landau3gevRingEnableA, 211, 'A')
+        self.push_change_event("Landau3gevRingEnableA", Landau3gevRingEnableA)
+
+    @DebugIt()
+    def get_Landau3gevRingEnableB(self):
+        return perseus_utils.read_direct(self.perseus, 211, 'B')
+
+    @DebugIt()
+    def set_Landau3gevRingEnableB(self, Landau3gevRingEnableB):
+        perseus_utils.write_direct(self.perseus, Landau3gevRingEnableB, 211, 'B')
+        self.push_change_event("Landau3gevRingEnableB", Landau3gevRingEnableB)
+
+    @DebugIt()
+    def get_LandauCavEnableA(self):
+        return perseus_utils.read_direct(self.perseus, 212, 'A')
+
+    @DebugIt()
+    def set_LandauCavEnableA(self, LandauCavEnableA):
+        perseus_utils.write_direct(self.perseus, LandauCavEnableA, 212, 'A')
+        self.push_change_event("LandauCavEnableA", LandauCavEnableA)
+
+    @DebugIt()
+    def get_LandauCavEnableB(self):
+        return perseus_utils.read_direct(self.perseus, 212, 'B')
+
+    @DebugIt()
+    def set_LandauCavEnableB(self, LandauCavEnableB):
+        perseus_utils.write_direct(self.perseus, LandauCavEnableB, 212, 'B')
+        self.push_change_event("LandauCavEnableB", LandauCavEnableB)
 
     @DebugIt()
     def get_DisitckRvtet1DacsoffloopsstbyA(self):
@@ -7637,6 +7939,22 @@ class NutaqDiags(Device):
         return self._Diag_DephaseMoLandauB
 
     @DebugIt()
+    def read_Diag_EndSwitchDownA(self):
+        return self._Diag_EndSwitchDownA
+
+    @DebugIt()
+    def read_Diag_EndSwitchDownB(self):
+        return self._Diag_EndSwitchDownB
+
+    @DebugIt()
+    def read_Diag_EndSwitchUpA(self):
+        return self._Diag_EndSwitchUpA
+
+    @DebugIt()
+    def read_Diag_EndSwitchUpB(self):
+        return self._Diag_EndSwitchUpB
+
+    @DebugIt()
     def read_Diag_Rvtet1A(self):
         address = 100
         position = 0
@@ -8275,6 +8593,14 @@ class NutaqDiags(Device):
         self.push_change_event("Diag_DephaseMoLandauA", self._Diag_DephaseMoLandauA)
         self._Diag_DephaseMoLandauB = perseus_utils.read_diag_angle(self.perseus, 64, 'B')
         self.push_change_event("Diag_DephaseMoLandauB", self._Diag_DephaseMoLandauB)
+        self._Diag_EndSwitchDownA = bool(perseus_utils.read_diag_direct(self.perseus, 70, 'A'))
+        self.push_change_event("Diag_EndSwitchDownA", self._Diag_EndSwitchDownA)
+        self._Diag_EndSwitchDownB = bool(perseus_utils.read_diag_direct(self.perseus, 70, 'B'))
+        self.push_change_event("Diag_EndSwitchDownB", self._Diag_EndSwitchDownB)
+        self._Diag_EndSwitchUpA = bool(perseus_utils.read_diag_direct(self.perseus, 71, 'A'))
+        self.push_change_event("Diag_EndSwitchUpA", self._Diag_EndSwitchUpA)
+        self._Diag_EndSwitchUpB = bool(perseus_utils.read_diag_direct(self.perseus, 71, 'B'))
+        self.push_change_event("Diag_EndSwitchUpB", self._Diag_EndSwitchUpB)
         self._Diag_Rvtet1A = self.read_Diag_Rvtet1A()
         self.push_change_event("Diag_Rvtet1A", self._Diag_Rvtet1A)
         self._Diag_Rvtet1B = self.read_Diag_Rvtet1B()
@@ -8491,6 +8817,18 @@ class NutaqDiags(Device):
         self.push_change_event("ResetInterlocksCavA", data)
         data = bool(self.get_ResetInterlocksCavB())
         self.push_change_event("ResetInterlocksCavB", data)
+        data = bool(self.get_MpsSignalInversionA())
+        self.push_change_event("MpsSignalInversionA", data)
+        data = bool(self.get_MpsSignalInversionB())
+        self.push_change_event("MpsSignalInversionB", data)
+        data = self.get_InterlocksDelayA()
+        self.push_change_event("InterlocksDelayA", data)
+        data = self.get_InterlocksDelayB()
+        self.push_change_event("InterlocksDelayB", data)
+        data = self.get_FdlTriggerDelayA()
+        self.push_change_event("FdlTriggerDelayA", data)
+        data = self.get_FdlTriggerDelayB()
+        self.push_change_event("FdlTriggerDelayB", data)
         data = bool(self.get_LandautuningenableA())
         self.push_change_event("LandautuningenableA", data)
         data = bool(self.get_LandautuningenableB())
@@ -8535,6 +8873,14 @@ class NutaqDiags(Device):
         self.push_change_event("LandauampsettingA", data)
         data = self.get_LandauampsettingB()
         self.push_change_event("LandauampsettingB", data)
+        data = bool(self.get_Landau3gevRingEnableA())
+        self.push_change_event("Landau3gevRingEnableA", data)
+        data = bool(self.get_Landau3gevRingEnableB())
+        self.push_change_event("Landau3gevRingEnableB", data)
+        data = bool(self.get_LandauCavEnableA())
+        self.push_change_event("LandauCavEnableA", data)
+        data = bool(self.get_LandauCavEnableB())
+        self.push_change_event("LandauCavEnableB", data)
         data = bool(self.get_DisitckRvtet1DacsoffloopsstbyA())
         self.push_change_event("DisitckRvtet1DacsoffloopsstbyA", data)
         data = bool(self.get_DisitckRvtet1DacsoffloopsstbyB())

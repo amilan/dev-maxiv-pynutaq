@@ -28,6 +28,9 @@ address;name;access;dtype;type;min_value;max_value;pos
 26;Spare DO 3;read_write;bool;direct;;;
 27;FDL Sw Trigger;read_write;bool;direct;;;
 100;Reset Interlocks Cav;read_write;bool;direct;;;
+101;MPS Signal Inversion;read_write;bool;direct;;;
+102;Interlocks Delay;read_write;float;special;0;400;
+103;FDL Trigger Delay;read_write;float;special;0;420;
 200;LandauTuningEnable;read_write;bool;direct;;;
 201;LandauTuningReset;read_write;bool;direct;;;
 202;MoveLandauUp;read_write;bool;direct;;;
@@ -39,6 +42,8 @@ address;name;access;dtype;type;min_value;max_value;pos
 208;Minimum Landau Amplitude;read_write;float;dmv;0;1000;
 209;Landau Positive Enable;read_write;bool;direct;;;
 210;LandauAmpSetting;read_write;float;dmv;0;1000;
+211;Landau 3GeV Ring Enable;read_write;bool;direct;;;
+212;Landau Cav Enable;read_write;bool;direct;;;
 7;DisITCK_RvTet1_DACsOffLoopsStby;read_write;bool;special_fim;0;1;0
 7;DisITCK_RvTet1_PinDiodeSwitch;read_write;bool;special_fim;0;1;1
 7;DisITCK_RvTet1_FDLTrg;read_write;bool;special_fim;0;1;2

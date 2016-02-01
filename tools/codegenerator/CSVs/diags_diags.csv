@@ -40,6 +40,8 @@ address;name;access;dtype;type;min_value;max_value;pos
 62;Plunger Moving Automatic Tuning;read;bool;bool;direct;0;1;
 63;Plunger Moving Up Automatic tuning;read;bool;bool;direct;0;1;
 64;Dephase MO Landau;read;float;angle;-180;360;
+70;End Switch Down;read;bool;bool;direct;0;1;
+71;End Switch Up;read;bool;bool;direct;0;1;
 100;RvTet1;read;bool;special_itck;0;1;0
 100;RvTet2;read;bool;special_itck;0;1;1
 100;RvCirc;read;bool;special_itck;0;1;2
